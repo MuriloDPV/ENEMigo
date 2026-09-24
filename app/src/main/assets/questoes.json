@@ -43,13 +43,13 @@
               "texto": "Durante uma entrevista ao vivo, um apresentador de TV interrompeu um morador que disse “nós vai resolver isso juntos” e comentou: “Quem fala assim não sabe português”.",
               "enunciado": "Considerando os estudos sobre variação linguística, a atitude do apresentador",
               "alternativas": [
-                "é adequada, pois só existe uma forma correta de falar o português.",
+                "revela preconceito linguístico, pois a variedade usada pelo morador é legítima e cumpre sua função comunicativa.",
                 "é adequada, porque a televisão tem o dever de corrigir os cidadãos em público.",
                 "demonstra que as regras de concordância não existem na língua falada.",
                 "prova que a norma-padrão é a única variedade compreendida em todo o país.",
-                "revela preconceito linguístico, pois a variedade usada pelo morador é legítima e cumpre sua função comunicativa."
+                "é adequada, pois só existe uma forma correta de falar o português."
               ],
-              "correta": "E",
+              "correta": "A",
               "explicacao": "Todas as variedades da língua têm regras próprias e servem para comunicar. A frase do morador foi entendida por todos. Desqualificar alguém pela forma como fala é preconceito linguístico.",
               "fonte": "Autoral – estilo ENEM"
             },
@@ -111,11 +111,11 @@
               "alternativas": [
                 "informar um dado científico sobre as horas de sono.",
                 "criticar as pessoas que dormem pouco.",
-                "narrar uma experiência pessoal do dono da loja.",
+                "chamar a atenção do leitor e aproximá-lo do produto anunciado.",
                 "apresentar instruções de uso do produto.",
-                "chamar a atenção do leitor e aproximá-lo do produto anunciado."
+                "narrar uma experiência pessoal do dono da loja."
               ],
-              "correta": "E",
+              "correta": "C",
               "explicacao": "Anúncios publicitários querem convencer o consumidor. A pergunta direta ao leitor (“Perdeu o sono?”) prende a atenção e o faz se identificar com o problema que o produto promete resolver.",
               "fonte": "Autoral – estilo ENEM"
             },
@@ -155,12 +155,12 @@
               "enunciado": "Qual característica indica que o texto é uma mensagem pessoal?",
               "alternativas": [
                 "O uso de termos técnicos e de linguagem impessoal.",
-                "A presença de título, subtítulo e referências.",
-                "A organização em versos e estrofes.",
                 "A linguagem informal e a conversa direta com um destinatário próximo.",
+                "A organização em versos e estrofes.",
+                "A presença de título, subtítulo e referências.",
                 "A apresentação de argumentos e contra-argumentos."
               ],
-              "correta": "D",
+              "correta": "B",
               "explicacao": "Mensagens pessoais, como bilhetes e recados, são dirigidas a alguém próximo (“Oi, vó!”), usam linguagem informal e tratam de assuntos do dia a dia de quem escreve.",
               "fonte": "Autoral – estilo ENEM"
             }
@@ -223,10 +223,10 @@
                 "antítese.",
                 "hipérbole.",
                 "metonímia.",
-                "personificação.",
-                "paradoxo."
+                "paradoxo.",
+                "personificação."
               ],
-              "correta": "D",
+              "correta": "E",
               "explicacao": "Sussurrar segredos e concordar são ações humanas. Quando elas são atribuídas a seres inanimados, como o vento e as árvores, temos a personificação (ou prosopopeia).",
               "fonte": "Autoral – estilo ENEM"
             },
@@ -261,13 +261,13 @@
               "texto": "Nos séculos XVI e XVII, o litoral do Nordeste concentrou engenhos que produziam açúcar para o mercado europeu. Eram grandes propriedades, dedicadas a um único produto e movidas pelo trabalho de africanos escravizados.",
               "enunciado": "O modelo de produção descrito, conhecido como plantation, tinha como características",
               "alternativas": [
-                "latifúndio, monocultura, trabalho escravizado e produção voltada à exportação.",
+                "agricultura de subsistência praticada por famílias indígenas.",
                 "pequenas propriedades, policultura e trabalho assalariado.",
                 "produção para o mercado interno e mão de obra de imigrantes livres.",
-                "agricultura de subsistência praticada por famílias indígenas.",
+                "latifúndio, monocultura, trabalho escravizado e produção voltada à exportação.",
                 "indústria têxtil mecanizada e comércio com a Ásia."
               ],
-              "correta": "A",
+              "correta": "D",
               "explicacao": "A plantation combinava grandes propriedades (latifúndio), um só produto (monocultura), trabalho escravizado e venda para o exterior. O texto cita exatamente esses elementos.",
               "fonte": "Autoral – estilo ENEM"
             },
@@ -292,12 +292,12 @@
               "enunciado": "A existência de Palmares demonstra que",
               "alternativas": [
                 "os africanos escravizados aceitavam a escravidão sem reagir.",
-                "a escravidão foi abolida no Brasil ainda no século XVII.",
                 "os escravizados resistiram de forma organizada, criando comunidades autônomas.",
+                "a escravidão foi abolida no Brasil ainda no século XVII.",
                 "os quilombos eram aliados da Coroa portuguesa.",
                 "os indígenas foram a única mão de obra usada na colônia."
               ],
-              "correta": "C",
+              "correta": "B",
               "explicacao": "Os quilombos eram comunidades formadas por pessoas que fugiam da escravidão. Palmares, o maior deles, mostra que houve resistência ativa e organizada durante décadas.",
               "fonte": "Autoral – estilo ENEM"
             },
@@ -358,12 +358,12 @@
               "enunciado": "No Brasil, o voto é facultativo para jovens de 16 e 17 anos, para pessoas com mais de 70 anos e para analfabetos. Isso significa que essas pessoas",
               "alternativas": [
                 "estão proibidas de votar.",
-                "podem votar, mas não são obrigadas.",
+                "votam apenas em plebiscitos.",
                 "só podem votar em eleições municipais.",
                 "precisam de autorização judicial para votar.",
-                "votam apenas em plebiscitos."
+                "podem votar, mas não são obrigadas."
               ],
-              "correta": "B",
+              "correta": "E",
               "explicacao": "Facultativo quer dizer opcional. Esses grupos têm o direito de votar, mas não sofrem punição se não votarem. Para quem tem de 18 a 70 anos e é alfabetizado, o voto é obrigatório.",
               "fonte": "Autoral – estilo ENEM"
             },
@@ -485,11 +485,11 @@
               "alternativas": [
                 "eliminou completamente as tradições regionais.",
                 "impede o acesso a produtos culturais estrangeiros.",
-                "convive com a valorização das identidades locais, numa tensão entre o global e o local.",
+                "depende exclusivamente de jornais e revistas impressos.",
                 "acontece apenas nos países ricos.",
-                "depende exclusivamente de jornais e revistas impressos."
+                "convive com a valorização das identidades locais, numa tensão entre o global e o local."
               ],
-              "correta": "C",
+              "correta": "E",
               "explicacao": "O texto aponta dois movimentos ao mesmo tempo: o consumo de uma cultura mundial padronizada e a valorização das tradições locais. Um não elimina o outro.",
               "fonte": "Autoral – estilo ENEM"
             }
@@ -570,12 +570,12 @@
               "enunciado": "A temperatura ficou constante nesse intervalo porque",
               "alternativas": [
                 "o termômetro parou de funcionar durante a fusão.",
-                "a energia recebida foi usada para mudar o estado físico, e não para aumentar a temperatura.",
                 "o gelo perdeu calor para a chama.",
+                "a energia recebida foi usada para mudar o estado físico, e não para aumentar a temperatura.",
                 "a água líquida não é capaz de absorver calor.",
                 "a fusão só ocorre quando o aquecimento é interrompido."
               ],
-              "correta": "B",
+              "correta": "C",
               "explicacao": "Durante a mudança de estado de uma substância pura, a temperatura fica constante. O calor recebido (calor latente) é gasto para desfazer a estrutura do gelo, e não para aquecer.",
               "fonte": "Autoral – estilo ENEM"
             }
@@ -590,13 +590,13 @@
               "texto": "Em um campo, foi observada a seguinte cadeia alimentar:\ncapim → gafanhoto → sapo → cobra → gavião",
               "enunciado": "Nessa cadeia alimentar, o sapo ocupa o nível trófico de",
               "alternativas": [
-                "produtor.",
+                "consumidor secundário.",
                 "consumidor primário.",
                 "decompositor.",
                 "consumidor quaternário.",
-                "consumidor secundário."
+                "produtor."
               ],
-              "correta": "E",
+              "correta": "A",
               "explicacao": "O capim é o produtor; o gafanhoto, que come o capim, é consumidor primário; o sapo, que come o gafanhoto, é consumidor secundário.",
               "fonte": "Autoral – estilo ENEM"
             },
@@ -621,12 +621,12 @@
               "enunciado": "Em qual desses componentes se espera a maior concentração do inseticida por quilograma de tecido?",
               "alternativas": [
                 "Nas algas.",
-                "Nas aves que se alimentam de peixes.",
+                "Na água do lago.",
                 "Nos peixes pequenos.",
                 "Nos peixes maiores.",
-                "Na água do lago."
+                "Nas aves que se alimentam de peixes."
               ],
-              "correta": "B",
+              "correta": "E",
               "explicacao": "Substâncias que não se degradam se acumulam no corpo e passam de um nível trófico para o seguinte (magnificação trófica). Por isso a concentração é maior no topo da cadeia, nas aves.",
               "fonte": "Autoral – estilo ENEM"
             },
@@ -716,13 +716,13 @@
               "texto": "",
               "enunciado": "O disjuntor instalado no quadro de energia de uma residência tem a função de",
               "alternativas": [
-                "aumentar a tensão fornecida aos aparelhos.",
+                "interromper o circuito quando a corrente ultrapassa um valor seguro.",
                 "armazenar energia para quando faltar luz.",
                 "transformar corrente alternada em corrente contínua.",
                 "reduzir o valor da conta de luz.",
-                "interromper o circuito quando a corrente ultrapassa um valor seguro."
+                "aumentar a tensão fornecida aos aparelhos."
               ],
-              "correta": "E",
+              "correta": "A",
               "explicacao": "O disjuntor é um dispositivo de segurança. Se a corrente fica alta demais, por sobrecarga ou curto-circuito, ele desliga o circuito e evita o superaquecimento dos fios e risco de incêndio.",
               "fonte": "Autoral – estilo ENEM"
             },
@@ -775,10 +775,10 @@
                 "R$ 200,00, igual ao preço inicial.",
                 "R$ 202,00, 1% maior que o preço inicial.",
                 "R$ 180,00, 10% menor que o preço inicial.",
-                "R$ 220,00, 10% maior que o preço inicial.",
-                "R$ 198,00, 1% menor que o preço inicial."
+                "R$ 198,00, 1% menor que o preço inicial.",
+                "R$ 220,00, 10% maior que o preço inicial."
               ],
-              "correta": "E",
+              "correta": "D",
               "explicacao": "Aumento de 10%: 200 × 1,10 = 220. Redução de 10% sobre 220: 220 × 0,90 = 198. Os 10% de desconto incidem sobre um valor maior, por isso o preço não volta a R$ 200,00.",
               "fonte": "Autoral – estilo ENEM"
             },
@@ -838,13 +838,13 @@
               "texto": "Um gráfico de colunas mostra as vendas de sorvete de uma lanchonete, em unidades:\nJaneiro: 420\nFevereiro: 380\nMarço: 300\nAbril: 210\nMaio: 150",
               "enunciado": "Entre quais meses consecutivos ocorreu a maior queda nas vendas?",
               "alternativas": [
-                "Março e abril.",
+                "Abril e maio.",
                 "Janeiro e fevereiro.",
                 "Fevereiro e março.",
-                "Abril e maio.",
+                "Março e abril.",
                 "As quedas foram iguais em todos os meses."
               ],
-              "correta": "A",
+              "correta": "D",
               "explicacao": "As quedas foram: janeiro→fevereiro, 40; fevereiro→março, 80; março→abril, 90; abril→maio, 60. A maior foi entre março e abril.",
               "fonte": "Autoral – estilo ENEM"
             },
@@ -901,10 +901,10 @@
                 "O número de usuários cresceu todos os anos.",
                 "Em 2023, o número de usuários foi o dobro do de 2019.",
                 "A maior queda ocorreu entre 2022 e 2023.",
-                "De 2020 a 2023, o número de usuários aumentou 200 a cada ano.",
-                "Em 2021, o número de usuários foi a metade do de 2019."
+                "Em 2021, o número de usuários foi a metade do de 2019.",
+                "De 2020 a 2023, o número de usuários aumentou 200 a cada ano."
               ],
-              "correta": "D",
+              "correta": "E",
               "explicacao": "De 2020 a 2023: 600 → 800 → 1 000 → 1 200, sempre +200. As outras são falsas: houve queda em 2020, 2023 igualou 2019, e a metade de 1 200 (600) ocorreu em 2020, não em 2021.",
               "fonte": "Autoral – estilo ENEM"
             }
@@ -979,13 +979,13 @@
               "texto": "",
               "enunciado": "Em uma gráfica, o preço P, em reais, para imprimir n páginas é dado por P(n) = 0,20n + 3. Um estudante pagou R$ 11,00 pela impressão de um trabalho. Quantas páginas ele imprimiu?",
               "alternativas": [
-                "40",
                 "55",
+                "40",
                 "15",
                 "70",
                 "8"
               ],
-              "correta": "A",
+              "correta": "B",
               "explicacao": "11 = 0,20n + 3, então 0,20n = 8 e n = 8 ÷ 0,20 = 40 páginas.",
               "fonte": "Autoral – estilo ENEM"
             }
