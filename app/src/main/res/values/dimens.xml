@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margem_tela">16dp</dimen>
+    <dimen name="espaco_cards">12dp</dimen>
+    <dimen name="raio_card">16dp</dimen>
+    <dimen name="raio_botao">12dp</dimen>
+    <dimen name="altura_botao">56dp</dimen>
+    <dimen name="altura_card_area">140dp</dimen>
+    <dimen name="tamanho_circulo_licao">56dp</dimen>
+    <dimen name="tamanho_letra_alternativa">32dp</dimen>
+    <dimen name="icone_area">48dp</dimen>
+</resources>

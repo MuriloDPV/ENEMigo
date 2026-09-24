@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">ENEMigo</string>
+
+    <!-- Abas -->
+    <string name="aba_inicio">Início</string>
+    <string name="aba_revisao">Revisão</string>
+    <string name="aba_perfil">Perfil</string>
+
+    <!-- Áreas -->
+    <string name="area_linguagens">Linguagens</string>
+    <string name="area_humanas">Ciências Humanas</string>
+    <string name="area_natureza">Ciências da Natureza</string>
+    <string name="area_matematica">Matemática</string>
+
+    <!-- Botões -->
+    <string name="btn_verificar">VERIFICAR</string>
+    <string name="btn_continuar">CONTINUAR</string>
+    <string name="btn_comecar">COMEÇAR</string>
+    <string name="btn_salvar">SALVAR</string>
+    <string name="btn_refazer">REFAZER LIÇÃO</string>
+    <string name="btn_revisar_agora">REVISAR AGORA</string>
+    <string name="btn_resetar">RESETAR PROGRESSO</string>
+
+    <!-- Barra de status -->
+    <string name="status_ofensiva">🔥 %1$d</string>
+    <string name="status_xp">⭐ %1$d</string>
+    <string name="status_vidas">❤️ %1$d</string>
+
+    <!-- Início -->
+    <string name="saudacao">Oi, %1$s! Bora manter o ritmo?</string>
+    <string name="meta_diaria">Meta diária</string>
+    <string name="meta_progresso">%1$d / %2$d XP hoje</string>
+    <string name="areas_do_enem">Áreas do ENEM</string>
+    <string name="progresso_area">%1$d/%2$d lições</string>
+
+    <!-- Trilha -->
+    <string name="resumo_trilha">%1$d de %2$d lições concluídas</string>
+    <string name="licao_numero">Lição %1$d</string>
+    <string name="licao_comecar">Começar</string>
+    <string name="area_nao_encontrada">Área não encontrada</string>
+    <string name="voltar">Voltar</string>
+
+    <!-- Quiz -->
+    <string name="fechar">Fechar</string>
+    <string name="quiz_contador">Questão %1$d de %2$d</string>
+    <string name="quiz_fonte">Fonte: %1$s</string>
+
+    <!-- Em construção -->
+    <string name="em_construcao">Em construção 🚧</string>
+</resources>

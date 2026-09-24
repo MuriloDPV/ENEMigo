@@ -1,0 +1,25 @@
+<resources>
+    <style name="Base.Theme.ENEMigo" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/verde_primario</item>
+        <item name="colorOnPrimary">@color/branco</item>
+        <item name="colorSecondary">@color/azul_selecao</item>
+        <item name="android:windowBackground">@color/fundo</item>
+        <item name="android:statusBarColor">@color/fundo</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/fundo</item>
+        <item name="materialButtonStyle">@style/Widget.ENEMigo.Button</item>
+    </style>
+
+    <style name="Theme.ENEMigo" parent="Base.Theme.ENEMigo" />
+
+    <!-- Botão principal: 56dp, cantos 12dp, maiúsculas e negrito -->
+    <style name="Widget.ENEMigo.Button" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/altura_botao</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">@dimen/raio_botao</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+</resources>

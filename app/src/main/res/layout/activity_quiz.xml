@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo">
+
+    <!-- Topo: fechar, progresso e vidas -->
+    <LinearLayout
+        android:id="@+id/topo_quiz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_fechar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/fechar"
+            android:src="@drawable/ic_close"
+            app:tint="@color/cinza_bloqueado" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_quiz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:max="5"
+            app:indicatorColor="@color/verde_primario"
+            app:trackColor="@color/cinza_borda"
+            app:trackCornerRadius="8dp"
+            app:trackThickness="14dp" />
+
+        <TextView
+            android:id="@+id/txt_vidas_quiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/vermelho"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Conteúdo da questão -->
+    <ScrollView
+        android:id="@+id/scroll_quiz"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/area_inferior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topo_quiz">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margem_tela">
+
+            <TextView
+                android:id="@+id/txt_contador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/texto_secundario"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_texto_base"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_cards"
+                app:cardBackgroundColor="@color/cinza_fundo_texto"
+                app:cardCornerRadius="@dimen/raio_botao"
+                app:strokeWidth="0dp">
+
+                <TextView
+                    android:id="@+id/txt_texto_base"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/espaco_cards"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="15sp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/txt_enunciado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_cards"
+                android:textColor="@color/texto_principal"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/txt_fonte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/texto_secundario"
+                android:textSize="12sp" />
+
+            <include
+                android:id="@+id/alt_a"
+                layout="@layout/item_alternativa" />
+
+            <include
+                android:id="@+id/alt_b"
+                layout="@layout/item_alternativa" />
+
+            <include
+                android:id="@+id/alt_c"
+                layout="@layout/item_alternativa" />
+
+            <include
+                android:id="@+id/alt_d"
+                layout="@layout/item_alternativa" />
+
+            <include
+                android:id="@+id/alt_e"
+                layout="@layout/item_alternativa" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Área inferior: VERIFICAR ou painel de feedback -->
+    <LinearLayout
+        android:id="@+id/area_inferior"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_verificar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/altura_botao"
+            android:layout_margin="@dimen/margem_tela"
+            android:enabled="false"
+            android:text="@string/btn_verificar" />
+
+        <LinearLayout
+            android:id="@+id/painel_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/verde_claro"
+            android:orientation="vertical"
+            android:padding="@dimen/margem_tela"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txt_feedback_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/verde_escuro"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- A explicação rola se passar de 160dp -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_max="160dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/txt_explicacao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="15sp" />
+                </ScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_continuar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/altura_botao"
+                android:layout_marginTop="@dimen/espaco_cards"
+                android:text="@string/btn_continuar" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <!-- Desliga o edge-to-edge obrigatório do Android 15+ (targetSdk 35) para as telas não ficarem atrás da barra de status. -->
+    <style name="Theme.ENEMigo" parent="Base.Theme.ENEMigo">
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+    </style>
+</resources>

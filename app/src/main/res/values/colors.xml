@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="verde_primario">#58CC02</color>
+    <color name="verde_escuro">#58A700</color>
+    <color name="verde_claro">#D7FFB8</color>
+    <color name="vermelho">#FF4B4B</color>
+    <color name="vermelho_escuro">#EA2B2B</color>
+    <color name="vermelho_claro">#FFDFE0</color>
+    <color name="azul_selecao">#1CB0F6</color>
+    <color name="azul_claro">#DDF4FF</color>
+    <color name="cinza_borda">#E5E5E5</color>
+    <color name="cinza_bloqueado">#AFAFAF</color>
+    <color name="cinza_fundo_texto">#F7F7F7</color>
+    <color name="texto_principal">#3C3C3C</color>
+    <color name="texto_secundario">#777777</color>
+    <color name="fundo">#FFFFFF</color>
+    <color name="branco">#FFFFFF</color>
+    <color name="laranja_fogo">#FF9600</color>
+    <color name="amarelo_xp">#FFC800</color>
+    <color name="area_linguagens">#1CB0F6</color>
+    <color name="area_humanas">#FF9600</color>
+    <color name="area_natureza">#58CC02</color>
+    <color name="area_matematica">#CE82FF</color>
+</resources>

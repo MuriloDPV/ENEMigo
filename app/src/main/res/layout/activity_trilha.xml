@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationContentDescription="@string/voltar"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:navigationIconTint="@color/branco"
+        app:titleTextColor="@color/branco" />
+
+    <include
+        android:id="@+id/status"
+        layout="@layout/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margem_tela"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/txt_resumo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margem_tela"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/texto_secundario"
+        android:textSize="15sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_licoes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/margem_tela"
+        android:paddingVertical="8dp" />
+
+</LinearLayout>
