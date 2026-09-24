@@ -18,39 +18,46 @@ import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.murilo.enemigo.R;
+import com.murilo.enemigo.data.ProgressoManager;
 import com.murilo.enemigo.data.QuestaoRepository;
 import com.murilo.enemigo.model.Licao;
 import com.murilo.enemigo.model.Questao;
+import com.murilo.enemigo.model.ResultadoSessao;
 import com.murilo.enemigo.util.Constantes;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
- * Quiz no modo LICAO: responde as 5 questões, corrige e abre o Resultado.
- * Nada é salvo ainda (Aula 3).
+ * Quiz nos modos LICAO (5 questões da lição, erro tira vida) e REVISAO (até 5 questões do
+ * caderno de erros, acerto devolve vida). No fim registra a sessão e abre o Resultado.
  */
 public class QuizActivity extends AppCompatActivity {
-
-    // MOCK: vidas fixas. Na Aula 3 vêm do ProgressoManager.
-    private static final int VIDAS_MOCK = 5;
 
     private static final String ESTADO_INDICE = "indice";
     private static final String ESTADO_SELECIONADA = "selecionada";
     private static final String ESTADO_ACERTOS = "acertos";
     private static final String ESTADO_VERIFICADA = "verificada";
+    private static final String ESTADO_IDS_REVISAO = "ids_revisao";
+    private static final String ESTADO_VIDAS_RECUPERADAS = "vidas_recuperadas";
 
     private final MaterialCardView[] cardsAlternativas = new MaterialCardView[5];
 
-    private String licaoId;
+    private ProgressoManager progresso;
+    private boolean modoRevisao;
+    private Licao licao;
     private List<Questao> questoes;
     private int indiceAtual;
     private int selecionada = -1;
     private int acertos;
     private boolean verificada;
+    private int vidasRecuperadas;
 
     private ScrollView scroll;
     private LinearProgressIndicator progress;
     private TextView txtContador;
+    private TextView txtVidas;
     private View cardTextoBase;
     private TextView txtTextoBase;
     private TextView txtEnunciado;
@@ -66,18 +73,34 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        licaoId = getIntent().getStringExtra(Constantes.EXTRA_LICAO_ID);
-        Licao licao = QuestaoRepository.getInstance(this).getLicao(licaoId);
-        if (licao == null || licao.getQuestoes().isEmpty()) {
-            Toast.makeText(this, R.string.licao_nao_encontrada, Toast.LENGTH_SHORT).show();
-            finish();
-            return;
+        progresso = ProgressoManager.getInstance(this);
+        modoRevisao = Constantes.MODO_REVISAO.equals(getIntent().getStringExtra(Constantes.EXTRA_MODO));
+
+        if (modoRevisao) {
+            // Na recriação da tela, mantém as mesmas questões sorteadas.
+            ArrayList<String> ids = savedInstanceState == null
+                    ? null : savedInstanceState.getStringArrayList(ESTADO_IDS_REVISAO);
+            questoes = ids == null ? sortearRevisao() : buscarQuestoes(ids);
+            if (questoes.isEmpty()) {
+                Toast.makeText(this, R.string.caderno_vazio_toast, Toast.LENGTH_SHORT).show();
+                finish();
+                return;
+            }
+        } else {
+            licao = QuestaoRepository.getInstance(this)
+                    .getLicao(getIntent().getStringExtra(Constantes.EXTRA_LICAO_ID));
+            if (licao == null || licao.getQuestoes().isEmpty()) {
+                Toast.makeText(this, R.string.licao_nao_encontrada, Toast.LENGTH_SHORT).show();
+                finish();
+                return;
+            }
+            questoes = licao.getQuestoes();
         }
-        questoes = licao.getQuestoes();
 
         scroll = findViewById(R.id.scroll_quiz);
         progress = findViewById(R.id.progress_quiz);
         txtContador = findViewById(R.id.txt_contador);
+        txtVidas = findViewById(R.id.txt_vidas_quiz);
         cardTextoBase = findViewById(R.id.card_texto_base);
         txtTextoBase = findViewById(R.id.txt_texto_base);
         txtEnunciado = findViewById(R.id.txt_enunciado);
@@ -90,8 +113,9 @@ public class QuizActivity extends AppCompatActivity {
 
         progress.setMax(questoes.size());
 
-        TextView txtVidas = findViewById(R.id.txt_vidas_quiz);
-        txtVidas.setText(getString(R.string.status_vidas, VIDAS_MOCK));
+        // Na revisão errar não tira vida, então o contador fica escondido.
+        txtVidas.setVisibility(modoRevisao ? View.GONE : View.VISIBLE);
+        atualizarVidas();
 
         int[] ids = {R.id.alt_a, R.id.alt_b, R.id.alt_c, R.id.alt_d, R.id.alt_e};
         for (int i = 0; i < ids.length; i++) {
@@ -116,13 +140,14 @@ public class QuizActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
             indiceAtual = Math.min(savedInstanceState.getInt(ESTADO_INDICE, 0), questoes.size() - 1);
             acertos = savedInstanceState.getInt(ESTADO_ACERTOS, 0);
+            vidasRecuperadas = savedInstanceState.getInt(ESTADO_VIDAS_RECUPERADAS, 0);
             int salvaSelecionada = savedInstanceState.getInt(ESTADO_SELECIONADA, -1);
             boolean salvaVerificada = savedInstanceState.getBoolean(ESTADO_VERIFICADA, false);
             mostrarQuestao();
             if (salvaSelecionada >= 0) {
                 selecionar(salvaSelecionada);
                 if (salvaVerificada) {
-                    // Os acertos já contam esta questão; mostrarFeedback não soma de novo.
+                    // Acertos, vidas e caderno já foram atualizados; mostrarFeedback só pinta.
                     mostrarFeedback();
                 }
             }
@@ -138,6 +163,48 @@ public class QuizActivity extends AppCompatActivity {
         outState.putInt(ESTADO_SELECIONADA, selecionada);
         outState.putInt(ESTADO_ACERTOS, acertos);
         outState.putBoolean(ESTADO_VERIFICADA, verificada);
+        outState.putInt(ESTADO_VIDAS_RECUPERADAS, vidasRecuperadas);
+        if (modoRevisao && questoes != null) {
+            ArrayList<String> ids = new ArrayList<>();
+            for (Questao q : questoes) {
+                ids.add(q.getId());
+            }
+            outState.putStringArrayList(ESTADO_IDS_REVISAO, ids);
+        }
+    }
+
+    /** RN30: até 5 questões sorteadas do caderno. RN31: ids que não existem mais são descartados. */
+    private List<Questao> sortearRevisao() {
+        QuestaoRepository repositorio = QuestaoRepository.getInstance(this);
+        List<Questao> lista = new ArrayList<>();
+        for (String id : progresso.getCaderno()) {
+            Questao q = repositorio.getQuestao(id);
+            if (q == null) {
+                progresso.removerDoCaderno(id);
+            } else {
+                lista.add(q);
+            }
+        }
+        Collections.shuffle(lista);
+        return new ArrayList<>(lista.subList(0, Math.min(Constantes.QUESTOES_POR_REVISAO, lista.size())));
+    }
+
+    private List<Questao> buscarQuestoes(List<String> ids) {
+        QuestaoRepository repositorio = QuestaoRepository.getInstance(this);
+        List<Questao> lista = new ArrayList<>();
+        for (String id : ids) {
+            Questao q = repositorio.getQuestao(id);
+            if (q != null) {
+                lista.add(q);
+            }
+        }
+        return lista;
+    }
+
+    private void atualizarVidas() {
+        if (!modoRevisao) {
+            txtVidas.setText(getString(R.string.status_vidas, progresso.getVidas()));
+        }
     }
 
     /** Preenche a tela com a questão atual e volta tudo ao estado inicial. */
@@ -207,8 +274,22 @@ public class QuizActivity extends AppCompatActivity {
         }
         // Desabilita na hora para evitar clique duplo.
         btnVerificar.setEnabled(false);
-        if (questoes.get(indiceAtual).isCorreta(selecionada)) {
+        Questao questao = questoes.get(indiceAtual);
+        if (questao.isCorreta(selecionada)) {
             acertos++;
+            if (modoRevisao) {
+                // RN25: sai do caderno e devolve 1 vida (sem passar de 5).
+                progresso.removerDoCaderno(questao.getId());
+                if (progresso.getVidas() < Constantes.VIDAS_MAX) {
+                    progresso.ganharVida();
+                    vidasRecuperadas++;
+                }
+            }
+        } else if (!modoRevisao) {
+            // RN11: a vida sai na hora, para não dar para "fugir" fechando o app.
+            progresso.perderVida();
+            progresso.adicionarAoCaderno(questao.getId());
+            atualizarVidas();
         }
         mostrarFeedback();
     }
@@ -256,6 +337,11 @@ public class QuizActivity extends AppCompatActivity {
 
     private void continuar() {
         if (indiceAtual < questoes.size() - 1) {
+            // RN13: sem vidas no meio da lição, ela termina sem ser registrada (RN12).
+            if (!modoRevisao && progresso.getVidas() == 0) {
+                mostrarVidasAcabaram();
+                return;
+            }
             indiceAtual++;
             mostrarQuestao();
         } else {
@@ -264,18 +350,38 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
+    private void mostrarVidasAcabaram() {
+        new MaterialAlertDialogBuilder(this)
+                .setTitle(R.string.vidas_acabaram_titulo)
+                .setMessage(R.string.vidas_acabaram_mensagem)
+                .setCancelable(false)
+                .setPositiveButton(R.string.btn_ir_revisao, (dialog, which) -> {
+                    Dialogos.abrirRevisao(this);
+                    finish();
+                })
+                .setNegativeButton(R.string.sair_licao_sair, (dialog, which) -> finish())
+                .show();
+    }
+
+    /** Registra a sessão (XP, ofensiva, meta, desbloqueio) e passa o resumo para o Resultado. */
     private void abrirResultado() {
-        int total = questoes.size();
-        int xp = acertos * Constantes.XP_ACERTO;
-        int bonus = acertos == total ? Constantes.XP_BONUS_PERFEITA : 0;
+        ResultadoSessao resultado = modoRevisao
+                ? progresso.registrarRevisao(acertos, questoes.size(), vidasRecuperadas)
+                : progresso.registrarLicao(licao, acertos);
 
         Intent intent = new Intent(this, ResultadoActivity.class);
-        intent.putExtra(Constantes.EXTRA_LICAO_ID, licaoId);
-        intent.putExtra(Constantes.EXTRA_MODO, Constantes.MODO_LICAO);
-        intent.putExtra(Constantes.EXTRA_ACERTOS, acertos);
-        intent.putExtra(Constantes.EXTRA_TOTAL, total);
-        intent.putExtra(Constantes.EXTRA_XP, xp);
-        intent.putExtra(Constantes.EXTRA_BONUS, bonus);
+        if (licao != null) {
+            intent.putExtra(Constantes.EXTRA_LICAO_ID, licao.getId());
+        }
+        intent.putExtra(Constantes.EXTRA_MODO, resultado.getModo());
+        intent.putExtra(Constantes.EXTRA_ACERTOS, resultado.getAcertos());
+        intent.putExtra(Constantes.EXTRA_TOTAL, resultado.getTotal());
+        intent.putExtra(Constantes.EXTRA_XP, resultado.getXpGanho());
+        intent.putExtra(Constantes.EXTRA_BONUS, resultado.getBonus());
+        intent.putExtra(Constantes.EXTRA_OFENSIVA, resultado.getOfensiva());
+        intent.putExtra(Constantes.EXTRA_META_BATIDA, resultado.isMetaBatidaAgora());
+        intent.putExtra(Constantes.EXTRA_DESBLOQUEOU, resultado.isDesbloqueouProxima());
+        intent.putExtra(Constantes.EXTRA_VIDAS_RECUPERADAS, resultado.getVidasRecuperadas());
         startActivity(intent);
         finish();
     }

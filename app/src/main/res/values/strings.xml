@@ -32,10 +32,6 @@
     <string name="meta_progresso">%1$d / %2$d XP hoje</string>
     <string name="areas_do_enem">Áreas do ENEM</string>
     <string name="progresso_area">%1$d/%2$d lições</string>
-    <plurals name="total_licoes_area">
-        <item quantity="one">%1$d lição</item>
-        <item quantity="other">%1$d lições</item>
-    </plurals>
     <string name="area_em_breve">Em breve</string>
     <string name="erro_carregar_questoes">Não foi possível carregar as questões.</string>
 
@@ -70,6 +66,78 @@
     <string name="resultado_xp">⭐ +%1$d XP</string>
     <string name="resultado_bonus">+%1$d bônus de lição perfeita</string>
 
-    <!-- Em construção -->
-    <string name="em_construcao">Em construção 🚧</string>
+    <plurals name="resultado_ofensiva">
+        <item quantity="one">🔥 %1$d dia</item>
+        <item quantity="other">🔥 %1$d dias</item>
+    </plurals>
+    <string name="resultado_meta_batida">Meta diária batida! 🎯</string>
+    <string name="resultado_desbloqueou">Próxima lição desbloqueada! 🔓</string>
+    <string name="resultado_faca_acertos">Faça 3 acertos para liberar a próxima lição</string>
+    <string name="resultado_revisao">Você tirou %1$s do caderno e recuperou %2$s</string>
+    <string name="resultado_revisao_sem_vidas">Você tirou %1$s do caderno</string>
+    <string name="resultado_revisao_nenhuma">Nenhuma questão saiu do caderno desta vez</string>
+    <plurals name="qtd_questoes">
+        <item quantity="one">%1$d questão</item>
+        <item quantity="other">%1$d questões</item>
+    </plurals>
+    <plurals name="qtd_vidas">
+        <item quantity="one">%1$d vida</item>
+        <item quantity="other">%1$d vidas</item>
+    </plurals>
+
+    <!-- Onboarding -->
+    <string name="onboarding_titulo">Oi! Eu sou o ENEMigo 👋</string>
+    <string name="onboarding_subtitulo">Vou te ajudar a estudar pro ENEM um pouquinho todo dia.</string>
+    <string name="onboarding_hint_nome">Como você quer ser chamado?</string>
+    <string name="onboarding_pergunta_meta">Qual a sua meta diária?</string>
+    <string name="meta_casual">Casual — 20 XP por dia (≈ 2 lições)</string>
+    <string name="meta_regular">Regular — 50 XP por dia (≈ 5 lições)</string>
+    <string name="meta_intenso">Intenso — 100 XP por dia (≈ 10 lições)</string>
+    <string name="erro_nome_vazio">Digite seu nome</string>
+    <string name="erro_nome_curto">O nome precisa ter pelo menos 2 letras</string>
+    <string name="erro_nome_longo">Use no máximo 20 caracteres</string>
+    <string name="erro_nome_letras">Use apenas letras</string>
+    <string name="erro_meta">Escolha uma meta diária</string>
+
+    <!-- Início -->
+    <string name="meta_batida">Meta batida! 🎉</string>
+
+    <!-- Trilha: estados e vidas -->
+    <string name="licao_melhor">Melhor: %1$d/%2$d</string>
+    <string name="licao_bloqueada">Faça 3 acertos na lição anterior</string>
+    <string name="licao_bloqueada_toast">Complete a lição anterior com pelo menos 3 acertos</string>
+    <string name="circulo_concluida">✓</string>
+    <string name="circulo_bloqueada">🔒</string>
+    <string name="sem_vidas_titulo">Sem vidas 💔</string>
+    <string name="sem_vidas_mensagem">Próxima vida em %1$d min. Revise seus erros para recuperar vidas agora!</string>
+    <string name="btn_ir_revisao">Ir para Revisão</string>
+    <string name="btn_ok">OK</string>
+
+    <!-- Quiz: vidas e revisão -->
+    <string name="vidas_acabaram_titulo">Suas vidas acabaram 💔</string>
+    <string name="vidas_acabaram_mensagem">Revise seus erros para recuperar vidas.</string>
+
+    <!-- Revisão -->
+    <string name="caderno_titulo">Caderno de erros</string>
+    <plurals name="caderno_contador">
+        <item quantity="one">Você tem %1$d questão para revisar</item>
+        <item quantity="other">Você tem %1$d questões para revisar</item>
+    </plurals>
+    <string name="caderno_contador_vazio">Nenhuma questão para revisar</string>
+    <string name="caderno_apoio">Acerte na revisão e ganhe ❤️ +1</string>
+    <string name="caderno_vazio_emoji">🎉</string>
+    <string name="caderno_vazio">Nenhum erro por aqui! Continue fazendo lições.</string>
+    <string name="caderno_vazio_toast">Nenhum erro por aqui! 🎉</string>
+
+    <!-- Perfil -->
+    <string name="perfil_nivel">Nível %1$d</string>
+    <string name="perfil_xp_proximo">%1$d / %2$d XP para o nível %3$d</string>
+    <string name="stat_xp_total">XP total</string>
+    <string name="stat_ofensiva">Ofensiva atual</string>
+    <string name="stat_maior_ofensiva">Maior ofensiva</string>
+    <string name="stat_licoes">Lições concluídas</string>
+    <string name="stat_respondidas">Questões respondidas</string>
+    <string name="stat_taxa">Taxa de acerto</string>
+    <string name="stat_taxa_valor">%1$d%%</string>
+    <string name="stat_sem_valor">—</string>
 </resources>

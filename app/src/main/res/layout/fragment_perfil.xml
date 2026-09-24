@@ -1,27 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/margem_tela">
+    android:background="@color/fundo">
 
-    <TextView
-        android:id="@+id/txt_titulo"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textColor="@color/texto_principal"
-        android:textSize="22sp"
-        android:text="@string/aba_perfil"
-        android:textStyle="bold" />
+        android:orientation="vertical"
+        android:padding="@dimen/margem_tela">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:text="@string/em_construcao"
-        android:textColor="@color/texto_secundario"
-        android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aba_perfil"
+            android:textColor="@color/texto_principal"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/txt_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margem_tela"
+            android:textColor="@color/texto_principal"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_nivel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/verde_escuro"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_nivel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_cards"
+            android:max="100"
+            app:indicatorColor="@color/amarelo_xp"
+            app:trackColor="@color/cinza_borda"
+            app:trackCornerRadius="8dp"
+            app:trackThickness="12dp" />
+
+        <TextView
+            android:id="@+id/txt_xp_proximo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/texto_secundario"
+            android:textSize="14sp" />
+
+        <!-- Estatísticas: grade de 2 colunas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="-6dp"
+            android:layout_marginTop="@dimen/margem_tela"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/stat_xp"
+                layout="@layout/item_estatistica" />
+
+            <include
+                android:id="@+id/stat_ofensiva"
+                layout="@layout/item_estatistica" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="-6dp"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/stat_maior_ofensiva"
+                layout="@layout/item_estatistica" />
+
+            <include
+                android:id="@+id/stat_licoes"
+                layout="@layout/item_estatistica" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="-6dp"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/stat_respondidas"
+                layout="@layout/item_estatistica" />
+
+            <include
+                android:id="@+id/stat_taxa"
+                layout="@layout/item_estatistica" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

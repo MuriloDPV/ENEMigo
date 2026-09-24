@@ -64,7 +64,6 @@
                     android:textStyle="bold" />
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Ofensiva: só aparece quando o progresso for salvo (Aula 3) -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card_ofensiva"
                 style="@style/Widget.Material3.CardView.Outlined"
@@ -72,7 +71,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
-                android:visibility="gone"
                 app:cardBackgroundColor="@color/fundo"
                 app:cardCornerRadius="@dimen/raio_card"
                 app:strokeColor="@color/laranja_fogo"
