@@ -70,209 +70,228 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Aparece no lugar dos cartões se o questoes.json não puder ser lido -->
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/txt_erro_questoes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/areas_do_enem"
-            android:textColor="@color/texto_principal"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:gravity="center"
+            android:text="@string/erro_carregar_questoes"
+            android:textColor="@color/vermelho_escuro"
+            android:textSize="16sp"
+            android:visibility="gone" />
 
         <LinearLayout
+            android:id="@+id/grade_areas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/espaco_cards"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_linguagens"
-                style="@style/Widget.Material3.CardView.Filled"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/altura_card_area"
-                android:layout_weight="1"
-                android:layout_marginEnd="6dp"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardBackgroundColor="@color/area_linguagens"
-                app:cardCornerRadius="@dimen/raio_card"
-                app:strokeWidth="0dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/areas_do_enem"
+                android:textColor="@color/texto_principal"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_cards"
+                android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="@dimen/icone_area"
-                        android:layout_height="@dimen/icone_area"
-                        android:contentDescription="@string/area_linguagens"
-                        android:src="@drawable/ic_area_linguagens"
-                        app:tint="@color/branco" />
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_linguagens"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/altura_card_area"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/area_linguagens"
+                    app:cardCornerRadius="@dimen/raio_card"
+                    app:strokeWidth="0dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="@string/area_linguagens"
-                        android:textColor="@color/branco"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical"
+                        android:padding="12dp">
 
-                    <TextView
-                        android:id="@+id/txt_prog_linguagens"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/branco"
-                        android:textSize="13sp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_humanas"
-                style="@style/Widget.Material3.CardView.Filled"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/altura_card_area"
-                android:layout_weight="1"
-                android:layout_marginStart="6dp"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardBackgroundColor="@color/area_humanas"
-                app:cardCornerRadius="@dimen/raio_card"
-                app:strokeWidth="0dp">
+                        <ImageView
+                            android:layout_width="@dimen/icone_area"
+                            android:layout_height="@dimen/icone_area"
+                            android:contentDescription="@string/area_linguagens"
+                            android:src="@drawable/ic_area_linguagens"
+                            app:tint="@color/branco" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/area_linguagens"
+                            android:textColor="@color/branco"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
-                    <ImageView
-                        android:layout_width="@dimen/icone_area"
-                        android:layout_height="@dimen/icone_area"
-                        android:contentDescription="@string/area_humanas"
-                        android:src="@drawable/ic_area_humanas"
-                        app:tint="@color/branco" />
+                        <TextView
+                            android:id="@+id/txt_prog_linguagens"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/branco"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_humanas"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/altura_card_area"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/area_humanas"
+                    app:cardCornerRadius="@dimen/raio_card"
+                    app:strokeWidth="0dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="@string/area_humanas"
-                        android:textColor="@color/branco"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical"
+                        android:padding="12dp">
 
-                    <TextView
-                        android:id="@+id/txt_prog_humanas"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/branco"
-                        android:textSize="13sp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-        </LinearLayout>
+                        <ImageView
+                            android:layout_width="@dimen/icone_area"
+                            android:layout_height="@dimen/icone_area"
+                            android:contentDescription="@string/area_humanas"
+                            android:src="@drawable/ic_area_humanas"
+                            app:tint="@color/branco" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/espaco_cards"
-            android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/area_humanas"
+                            android:textColor="@color/branco"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_natureza"
-                style="@style/Widget.Material3.CardView.Filled"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/altura_card_area"
-                android:layout_weight="1"
-                android:layout_marginEnd="6dp"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardBackgroundColor="@color/area_natureza"
-                app:cardCornerRadius="@dimen/raio_card"
-                app:strokeWidth="0dp">
+                        <TextView
+                            android:id="@+id/txt_prog_humanas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/branco"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_cards"
+                android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="@dimen/icone_area"
-                        android:layout_height="@dimen/icone_area"
-                        android:contentDescription="@string/area_natureza"
-                        android:src="@drawable/ic_area_natureza"
-                        app:tint="@color/branco" />
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_natureza"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/altura_card_area"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/area_natureza"
+                    app:cardCornerRadius="@dimen/raio_card"
+                    app:strokeWidth="0dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="@string/area_natureza"
-                        android:textColor="@color/branco"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical"
+                        android:padding="12dp">
 
-                    <TextView
-                        android:id="@+id/txt_prog_natureza"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/branco"
-                        android:textSize="13sp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_matematica"
-                style="@style/Widget.Material3.CardView.Filled"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/altura_card_area"
-                android:layout_weight="1"
-                android:layout_marginStart="6dp"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardBackgroundColor="@color/area_matematica"
-                app:cardCornerRadius="@dimen/raio_card"
-                app:strokeWidth="0dp">
+                        <ImageView
+                            android:layout_width="@dimen/icone_area"
+                            android:layout_height="@dimen/icone_area"
+                            android:contentDescription="@string/area_natureza"
+                            android:src="@drawable/ic_area_natureza"
+                            app:tint="@color/branco" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/area_natureza"
+                            android:textColor="@color/branco"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
-                    <ImageView
-                        android:layout_width="@dimen/icone_area"
-                        android:layout_height="@dimen/icone_area"
-                        android:contentDescription="@string/area_matematica"
-                        android:src="@drawable/ic_area_matematica"
-                        app:tint="@color/branco" />
+                        <TextView
+                            android:id="@+id/txt_prog_natureza"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/branco"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_matematica"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/altura_card_area"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/area_matematica"
+                    app:cardCornerRadius="@dimen/raio_card"
+                    app:strokeWidth="0dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="@string/area_matematica"
-                        android:textColor="@color/branco"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical"
+                        android:padding="12dp">
 
-                    <TextView
-                        android:id="@+id/txt_prog_matematica"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/branco"
-                        android:textSize="13sp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+                        <ImageView
+                            android:layout_width="@dimen/icone_area"
+                            android:layout_height="@dimen/icone_area"
+                            android:contentDescription="@string/area_matematica"
+                            android:src="@drawable/ic_area_matematica"
+                            app:tint="@color/branco" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/area_matematica"
+                            android:textColor="@color/branco"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_prog_matematica"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/branco"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

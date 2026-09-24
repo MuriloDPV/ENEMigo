@@ -15,7 +15,7 @@ import com.murilo.enemigo.model.Licao;
 import java.util.List;
 
 /**
- * Lista as lições de uma trilha. Na Aula 1 todas aparecem como disponíveis.
+ * Lista as lições de uma trilha. Até a Aula 3, todas aparecem como disponíveis.
  */
 public class LicaoAdapter extends RecyclerView.Adapter<LicaoAdapter.LicaoViewHolder> {
 

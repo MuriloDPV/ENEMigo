@@ -32,18 +32,43 @@
     <string name="meta_progresso">%1$d / %2$d XP hoje</string>
     <string name="areas_do_enem">Áreas do ENEM</string>
     <string name="progresso_area">%1$d/%2$d lições</string>
+    <plurals name="total_licoes_area">
+        <item quantity="one">%1$d lição</item>
+        <item quantity="other">%1$d lições</item>
+    </plurals>
+    <string name="area_em_breve">Em breve</string>
+    <string name="erro_carregar_questoes">Não foi possível carregar as questões.</string>
 
     <!-- Trilha -->
     <string name="resumo_trilha">%1$d de %2$d lições concluídas</string>
     <string name="licao_numero">Lição %1$d</string>
     <string name="licao_comecar">Começar</string>
     <string name="area_nao_encontrada">Área não encontrada</string>
+    <string name="trilha_vazia">Nenhuma lição disponível ainda</string>
     <string name="voltar">Voltar</string>
 
     <!-- Quiz -->
     <string name="fechar">Fechar</string>
     <string name="quiz_contador">Questão %1$d de %2$d</string>
     <string name="quiz_fonte">Fonte: %1$s</string>
+    <string name="licao_nao_encontrada">Lição não encontrada</string>
+    <string name="feedback_acerto">Mandou bem! 🎉</string>
+    <string name="feedback_erro">Resposta correta: %1$s</string>
+    <string name="sair_licao_titulo">Sair da lição?</string>
+    <string name="sair_licao_mensagem">Você vai perder o progresso desta lição.</string>
+    <string name="sair_licao_sair">Sair</string>
+    <string name="sair_licao_ficar">Continuar estudando</string>
+
+    <!-- Resultado -->
+    <string name="resultado_emoji_perfeito">🏆</string>
+    <string name="resultado_emoji_concluida">✅</string>
+    <string name="resultado_emoji_quase">💪</string>
+    <string name="resultado_perfeito">Perfeito!</string>
+    <string name="resultado_concluida">Lição concluída!</string>
+    <string name="resultado_quase">Quase lá!</string>
+    <string name="resultado_acertos">Você acertou %1$d de %2$d</string>
+    <string name="resultado_xp">⭐ +%1$d XP</string>
+    <string name="resultado_bonus">+%1$d bônus de lição perfeita</string>
 
     <!-- Em construção -->
     <string name="em_construcao">Em construção 🚧</string>

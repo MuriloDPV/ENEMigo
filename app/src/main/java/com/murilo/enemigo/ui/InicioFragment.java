@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.murilo.enemigo.R;
+import com.murilo.enemigo.data.QuestaoRepository;
 import com.murilo.enemigo.model.Area;
 import com.murilo.enemigo.util.Constantes;
 
@@ -28,8 +29,6 @@ public class InicioFragment extends Fragment {
     private static final int VIDAS_MOCK = 5;
     private static final int XP_HOJE_MOCK = 32;
     private static final int META_MOCK = 50;
-    private static final int LICOES_CONCLUIDAS_MOCK = 0;
-    private static final int TOTAL_LICOES_MOCK = 3;
 
     @Nullable
     @Override
@@ -62,7 +61,12 @@ public class InicioFragment extends Fragment {
         progressMeta.setMax(META_MOCK);
         progressMeta.setProgress(XP_HOJE_MOCK);
 
-        // Cartões das áreas
+        // Cartões das áreas (ou o aviso de erro, se o JSON não pôde ser lido)
+        QuestaoRepository repositorio = QuestaoRepository.getInstance(requireContext());
+        boolean carregou = repositorio.isCarregadoComSucesso();
+        view.findViewById(R.id.grade_areas).setVisibility(carregou ? View.VISIBLE : View.GONE);
+        view.findViewById(R.id.txt_erro_questoes).setVisibility(carregou ? View.GONE : View.VISIBLE);
+
         configurarCard(view, R.id.card_linguagens, R.id.txt_prog_linguagens, Area.LINGUAGENS);
         configurarCard(view, R.id.card_humanas, R.id.txt_prog_humanas, Area.HUMANAS);
         configurarCard(view, R.id.card_natureza, R.id.txt_prog_natureza, Area.NATUREZA);
@@ -70,9 +74,14 @@ public class InicioFragment extends Fragment {
     }
 
     private void configurarCard(View raiz, int cardId, int progressoId, Area area) {
+        int total = QuestaoRepository.getInstance(requireContext()).getTotalLicoes(area);
         TextView txtProgresso = raiz.findViewById(progressoId);
-        txtProgresso.setText(getString(R.string.progresso_area,
-                LICOES_CONCLUIDAS_MOCK, TOTAL_LICOES_MOCK));
+        if (total == 0) {
+            txtProgresso.setText(R.string.area_em_breve);
+        } else {
+            txtProgresso.setText(getResources()
+                    .getQuantityString(R.plurals.total_licoes_area, total, total));
+        }
 
         raiz.findViewById(cardId).setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), TrilhaActivity.class);

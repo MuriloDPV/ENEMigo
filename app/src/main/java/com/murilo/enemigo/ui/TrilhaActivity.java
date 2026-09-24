@@ -13,17 +13,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.murilo.enemigo.R;
+import com.murilo.enemigo.data.QuestaoRepository;
 import com.murilo.enemigo.model.Area;
 import com.murilo.enemigo.model.Licao;
 import com.murilo.enemigo.ui.adapter.LicaoAdapter;
 import com.murilo.enemigo.util.Constantes;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 /**
- * Trilha de lições de uma área.
+ * Trilha de lições de uma área. Por enquanto todas aparecem como disponíveis (estados na Aula 3).
  */
 public class TrilhaActivity extends AppCompatActivity {
 
@@ -60,40 +59,24 @@ public class TrilhaActivity extends AppCompatActivity {
         ((TextView) status.findViewById(R.id.txt_vidas))
                 .setText(getString(R.string.status_vidas, VIDAS_MOCK));
 
-        List<Licao> licoes = criarLicoesFalsas(area);
+        List<Licao> licoes = QuestaoRepository.getInstance(this).getLicoes(area);
 
         TextView txtResumo = findViewById(R.id.txt_resumo);
-        txtResumo.setText(getString(R.string.resumo_trilha, LICOES_CONCLUIDAS_MOCK, licoes.size()));
+        if (licoes.isEmpty()) {
+            txtResumo.setText(R.string.trilha_vazia);
+        } else {
+            txtResumo.setText(getString(R.string.resumo_trilha, LICOES_CONCLUIDAS_MOCK, licoes.size()));
+        }
 
         RecyclerView rvLicoes = findViewById(R.id.rv_licoes);
         rvLicoes.setLayoutManager(new LinearLayoutManager(this));
-        rvLicoes.setAdapter(new LicaoAdapter(licoes, corArea, licao ->
-                startActivity(new Intent(this, QuizActivity.class))));
+        rvLicoes.setAdapter(new LicaoAdapter(licoes, corArea, this::abrirQuiz));
     }
 
-    /** MOCK (Aula 1): 3 lições sem questões. Na Aula 2 vêm do QuestaoRepository. */
-    private List<Licao> criarLicoesFalsas(Area area) {
-        String[] titulos;
-        switch (area) {
-            case LINGUAGENS:
-                titulos = new String[]{"Variação linguística", "Gêneros textuais", "Figuras de linguagem"};
-                break;
-            case HUMANAS:
-                titulos = new String[]{"Brasil Colônia", "Cidadania e direitos", "Globalização"};
-                break;
-            case NATUREZA:
-                titulos = new String[]{"Mudanças de estado físico", "Ecologia", "Eletricidade"};
-                break;
-            default:
-                titulos = new String[]{"Porcentagem", "Interpretação de gráficos", "Funções"};
-                break;
-        }
-
-        List<Licao> licoes = new ArrayList<>();
-        for (int i = 0; i < titulos.length; i++) {
-            String id = String.format(Locale.ROOT, "%s-%02d", area.getSigla(), i + 1);
-            licoes.add(new Licao(id, area, i, titulos[i], new ArrayList<>()));
-        }
-        return licoes;
+    private void abrirQuiz(Licao licao) {
+        Intent intent = new Intent(this, QuizActivity.class);
+        intent.putExtra(Constantes.EXTRA_LICAO_ID, licao.getId());
+        intent.putExtra(Constantes.EXTRA_MODO, Constantes.MODO_LICAO);
+        startActivity(intent);
     }
 }

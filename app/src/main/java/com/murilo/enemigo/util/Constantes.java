@@ -15,6 +15,10 @@ public final class Constantes {
     public static final String EXTRA_AREA_ID = "EXTRA_AREA_ID";
     public static final String EXTRA_LICAO_ID = "EXTRA_LICAO_ID";
     public static final String EXTRA_MODO = "EXTRA_MODO";
+    public static final String EXTRA_ACERTOS = "EXTRA_ACERTOS";
+    public static final String EXTRA_TOTAL = "EXTRA_TOTAL";
+    public static final String EXTRA_XP = "EXTRA_XP";
+    public static final String EXTRA_BONUS = "EXTRA_BONUS";
 
     // Modos do Quiz
     public static final String MODO_LICAO = "LICAO";
