@@ -1,0 +1,997 @@
+{
+  "versao": 1,
+  "areas": [
+    {
+      "id": "LINGUAGENS",
+      "licoes": [
+        {
+          "id": "LIN-01",
+          "titulo": "Variação linguística",
+          "questoes": [
+            {
+              "id": "LIN-01-01",
+              "texto": "Galera, amanhã a aula começa mais cedo! Bora chegar às 7h, que o professor vai fazer a revisão pro simulado. Não vacila, hein!",
+              "enunciado": "A mensagem acima foi enviada no grupo de conversa de uma turma do ensino médio. O uso de expressões como “galera”, “bora” e “não vacila” revela que o autor da mensagem",
+              "alternativas": [
+                "cometeu desvios que impedem a compreensão da mensagem pelos colegas.",
+                "deveria ter empregado a norma-padrão, já que o assunto tratado é escolar.",
+                "utilizou gírias de uma única região do país, desconhecidas pelos colegas.",
+                "adequou a linguagem à situação informal e ao grupo com quem se comunica.",
+                "demonstrou desconhecimento das regras gramaticais da língua portuguesa."
+              ],
+              "correta": "D",
+              "explicacao": "A linguagem deve ser adequada à situação de comunicação. Numa conversa entre colegas, o registro informal é o esperado e não atrapalha o entendimento. Seria inadequado usar gírias numa redação ou num documento oficial, não num grupo de amigos.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "LIN-01-02",
+              "texto": "— Ocê num vai trazê o balde, sô? A vaca já tá esperano faz tempo!\n(Fala de uma personagem de um conto ambientado numa fazenda do interior de Minas Gerais.)",
+              "enunciado": "No conto, a forma de falar atribuída à personagem tem a função de",
+              "alternativas": [
+                "caracterizar a personagem e o espaço regional em que a narrativa se passa.",
+                "ridicularizar os moradores do interior, mostrando que eles falam errado.",
+                "indicar que o autor do conto desconhece a norma-padrão da língua.",
+                "dificultar a leitura, já que textos literários precisam ser complexos.",
+                "registrar uma variedade linguística que já não existe no Brasil."
+              ],
+              "correta": "A",
+              "explicacao": "Na literatura, reproduzir a fala regional é um recurso expressivo: ajuda a construir a identidade da personagem e o lugar onde a história acontece. Não se trata de erro nem de deboche.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "LIN-01-03",
+              "texto": "Durante uma entrevista ao vivo, um apresentador de TV interrompeu um morador que disse “nós vai resolver isso juntos” e comentou: “Quem fala assim não sabe português”.",
+              "enunciado": "Considerando os estudos sobre variação linguística, a atitude do apresentador",
+              "alternativas": [
+                "é adequada, pois só existe uma forma correta de falar o português.",
+                "é adequada, porque a televisão tem o dever de corrigir os cidadãos em público.",
+                "demonstra que as regras de concordância não existem na língua falada.",
+                "prova que a norma-padrão é a única variedade compreendida em todo o país.",
+                "revela preconceito linguístico, pois a variedade usada pelo morador é legítima e cumpre sua função comunicativa."
+              ],
+              "correta": "E",
+              "explicacao": "Todas as variedades da língua têm regras próprias e servem para comunicar. A frase do morador foi entendida por todos. Desqualificar alguém pela forma como fala é preconceito linguístico.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "LIN-01-04",
+              "texto": "VENDE-SE uma pharmacia bem sortida, com todos os pertences. Tratar na rua Direita, n. 12.\n(Anúncio publicado em um jornal no ano de 1910.)",
+              "enunciado": "A grafia da palavra “pharmacia” no anúncio é um exemplo de variação",
+              "alternativas": [
+                "regional, pois essa escrita era típica apenas do Sul do país.",
+                "histórica, pois reflete regras ortográficas de outra época.",
+                "social, pois era usada somente por pessoas sem escolaridade.",
+                "situacional, pois só aparecia em conversas informais.",
+                "de gíria, pois indica um vocabulário restrito a um grupo."
+              ],
+              "correta": "B",
+              "explicacao": "A língua muda com o tempo, inclusive a escrita. O “ph” era usado em palavras de origem grega antes das reformas ortográficas do século XX, que o trocaram por “f”.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "LIN-01-05",
+              "texto": "Conversando com um colega de plantão, uma médica disse: “A paciente apresentou quadro de cefaleia e hipertensão arterial”. Logo depois, explicou à paciente: “A senhora teve dor de cabeça e está com a pressão alta”.",
+              "enunciado": "A diferença entre as duas falas da médica mostra que ela",
+              "alternativas": [
+                "usa termos técnicos para esconder informações da paciente.",
+                "domina apenas a linguagem científica da medicina.",
+                "ajusta o vocabulário ao interlocutor para garantir a compreensão.",
+                "comete um erro ao usar palavras do dia a dia com a paciente.",
+                "troca de variedade regional conforme o lugar em que está."
+              ],
+              "correta": "C",
+              "explicacao": "A médica diz a mesma coisa de dois jeitos: com o jargão técnico para o colega e com palavras comuns para a paciente. Adaptar a linguagem ao ouvinte é sinal de competência comunicativa.",
+              "fonte": "Autoral – estilo ENEM"
+            }
+          ]
+        },
+        {
+          "id": "LIN-02",
+          "titulo": "Gêneros textuais",
+          "questoes": [
+            {
+              "id": "LIN-02-01",
+              "texto": "Bolo de cenoura\nIngredientes: 3 cenouras médias, 3 ovos, 1 xícara de óleo, 2 xícaras de açúcar, 2 xícaras de farinha de trigo e 1 colher de sopa de fermento.\nModo de preparo: Bata no liquidificador as cenouras, os ovos e o óleo. Despeje em uma tigela, misture o açúcar e a farinha e, por último, o fermento. Leve ao forno médio por 40 minutos.",
+              "enunciado": "O uso de verbos no imperativo, como “bata”, “misture” e “leve”, é característico desse gênero porque",
+              "alternativas": [
+                "o texto conta uma história vivida por personagens.",
+                "o texto tem a finalidade de orientar o leitor a realizar uma tarefa.",
+                "o autor quer defender uma opinião sobre culinária.",
+                "o gênero exige linguagem poética e rimada.",
+                "o texto relata um fato que já aconteceu."
+              ],
+              "correta": "B",
+              "explicacao": "A receita é um texto instrucional: seu objetivo é ensinar a fazer algo. Por isso usa o imperativo, que dá ordens e orientações ao leitor, em passos organizados.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "LIN-02-02",
+              "texto": "PERDEU O SONO?\nA gente também: passamos noites pensando no seu conforto.\nColchões Sonhar. Em até 10x sem juros.",
+              "enunciado": "No anúncio, a pergunta inicial tem o objetivo de",
+              "alternativas": [
+                "informar um dado científico sobre as horas de sono.",
+                "criticar as pessoas que dormem pouco.",
+                "narrar uma experiência pessoal do dono da loja.",
+                "apresentar instruções de uso do produto.",
+                "chamar a atenção do leitor e aproximá-lo do produto anunciado."
+              ],
+              "correta": "E",
+              "explicacao": "Anúncios publicitários querem convencer o consumidor. A pergunta direta ao leitor (“Perdeu o sono?”) prende a atenção e o faz se identificar com o problema que o produto promete resolver.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "LIN-02-03",
+              "texto": "Uma forte chuva atingiu a cidade de Pedra Alta (MG) na noite desta terça-feira (12). Segundo a Defesa Civil, 40 famílias ficaram desalojadas e duas escolas suspenderam as aulas.",
+              "enunciado": "O trecho pertence ao gênero notícia porque",
+              "alternativas": [
+                "relata um fato recente de forma objetiva, indicando quando, onde e a fonte da informação.",
+                "apresenta a opinião do autor sobre as chuvas na região.",
+                "usa linguagem figurada e versos rimados.",
+                "orienta o leitor sobre como agir em caso de enchente.",
+                "conta uma história inventada, com narrador-personagem."
+              ],
+              "correta": "A",
+              "explicacao": "A notícia informa um acontecimento atual, em linguagem objetiva, respondendo a perguntas como o quê, onde e quando, e cita fontes (aqui, a Defesa Civil). Não traz a opinião de quem escreve.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "LIN-02-04",
+              "texto": "Proibir o celular nas salas de aula não resolve o problema da distração. Os estudantes continuarão conectados fora da escola. É preciso, portanto, ensinar os jovens a usar a tecnologia a favor do estudo.",
+              "enunciado": "O trecho tem características de um artigo de opinião porque",
+              "alternativas": [
+                "apresenta apenas dados estatísticos, sem interpretá-los.",
+                "narra uma sequência de acontecimentos em ordem cronológica.",
+                "defende um ponto de vista sobre um tema polêmico, com argumentos.",
+                "descreve em detalhes as partes de um objeto.",
+                "ensina o passo a passo de um procedimento."
+              ],
+              "correta": "C",
+              "explicacao": "O autor toma uma posição (proibir não resolve), dá um argumento (os alunos continuam conectados fora da escola) e conclui com uma proposta. Isso é típico do texto argumentativo, como o artigo de opinião.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "LIN-02-05",
+              "texto": "Oi, vó! Cheguei bem em Curitiba. A viagem foi tranquila, mas já estou com saudade do seu bolo de fubá. Te ligo no domingo. Beijos, Ana.",
+              "enunciado": "Qual característica indica que o texto é uma mensagem pessoal?",
+              "alternativas": [
+                "O uso de termos técnicos e de linguagem impessoal.",
+                "A presença de título, subtítulo e referências.",
+                "A organização em versos e estrofes.",
+                "A linguagem informal e a conversa direta com um destinatário próximo.",
+                "A apresentação de argumentos e contra-argumentos."
+              ],
+              "correta": "D",
+              "explicacao": "Mensagens pessoais, como bilhetes e recados, são dirigidas a alguém próximo (“Oi, vó!”), usam linguagem informal e tratam de assuntos do dia a dia de quem escreve.",
+              "fonte": "Autoral – estilo ENEM"
+            }
+          ]
+        },
+        {
+          "id": "LIN-03",
+          "titulo": "Figuras de linguagem",
+          "questoes": [
+            {
+              "id": "LIN-03-01",
+              "texto": "Minha saudade é um rio\nque nunca encontra o mar.",
+              "enunciado": "Nos versos, a figura de linguagem predominante é a",
+              "alternativas": [
+                "hipérbole.",
+                "ironia.",
+                "onomatopeia.",
+                "antítese.",
+                "metáfora."
+              ],
+              "correta": "E",
+              "explicacao": "A metáfora é uma comparação implícita, sem palavras como “como” ou “feito”. A saudade é apresentada diretamente como “um rio que nunca encontra o mar”, sugerindo algo que corre sem fim.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "LIN-03-02",
+              "texto": "— Já te pedi um milhão de vezes para arrumar esse quarto!",
+              "enunciado": "Na fala, o recurso expressivo utilizado para enfatizar a irritação de quem fala é a",
+              "alternativas": [
+                "metáfora.",
+                "eufemismo.",
+                "hipérbole.",
+                "catacrese.",
+                "pleonasmo."
+              ],
+              "correta": "C",
+              "explicacao": "A hipérbole é um exagero intencional. Ninguém pediu literalmente “um milhão de vezes”: o número exagerado mostra a insistência e a irritação de quem fala.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "LIN-03-03",
+              "texto": "Depois de ver seu time perder por 7 a 0, um torcedor comentou: “Que atuação brilhante da nossa defesa!”",
+              "enunciado": "O comentário do torcedor constrói sentido por meio da",
+              "alternativas": [
+                "metonímia, pois troca o nome do time pelo nome da defesa.",
+                "ironia, pois afirma o contrário do que realmente pensa.",
+                "comparação, pois aproxima dois elementos com a palavra “como”.",
+                "aliteração, pois repete sons consonantais.",
+                "personificação, pois atribui ações humanas a um objeto."
+              ],
+              "correta": "B",
+              "explicacao": "Uma defesa que sofre 7 gols não foi “brilhante”. O torcedor diz o oposto do que pensa para criticar: isso é ironia, que depende do contexto para ser entendida.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "LIN-03-04",
+              "texto": "O vento sussurrava segredos às árvores da praça, que balançavam os galhos como quem concorda.",
+              "enunciado": "No trecho, o autor atribui ações humanas a elementos da natureza. Essa figura de linguagem é a",
+              "alternativas": [
+                "antítese.",
+                "hipérbole.",
+                "metonímia.",
+                "personificação.",
+                "paradoxo."
+              ],
+              "correta": "D",
+              "explicacao": "Sussurrar segredos e concordar são ações humanas. Quando elas são atribuídas a seres inanimados, como o vento e as árvores, temos a personificação (ou prosopopeia).",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "LIN-03-05",
+              "texto": "— O que você fez nas férias?\n— Passei as tardes lendo Machado de Assis.",
+              "enunciado": "Ao dizer que leu “Machado de Assis”, o falante se refere às obras do escritor, e não à pessoa. Esse recurso é chamado de",
+              "alternativas": [
+                "metonímia.",
+                "metáfora.",
+                "eufemismo.",
+                "ironia.",
+                "hipérbole."
+              ],
+              "correta": "A",
+              "explicacao": "A metonímia substitui uma palavra por outra com a qual tem relação próxima. Aqui, o autor é citado no lugar da obra: “ler Machado de Assis” significa ler os livros dele.",
+              "fonte": "Autoral – estilo ENEM"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HUMANAS",
+      "licoes": [
+        {
+          "id": "HUM-01",
+          "titulo": "Brasil Colônia",
+          "questoes": [
+            {
+              "id": "HUM-01-01",
+              "texto": "Nos séculos XVI e XVII, o litoral do Nordeste concentrou engenhos que produziam açúcar para o mercado europeu. Eram grandes propriedades, dedicadas a um único produto e movidas pelo trabalho de africanos escravizados.",
+              "enunciado": "O modelo de produção descrito, conhecido como plantation, tinha como características",
+              "alternativas": [
+                "latifúndio, monocultura, trabalho escravizado e produção voltada à exportação.",
+                "pequenas propriedades, policultura e trabalho assalariado.",
+                "produção para o mercado interno e mão de obra de imigrantes livres.",
+                "agricultura de subsistência praticada por famílias indígenas.",
+                "indústria têxtil mecanizada e comércio com a Ásia."
+              ],
+              "correta": "A",
+              "explicacao": "A plantation combinava grandes propriedades (latifúndio), um só produto (monocultura), trabalho escravizado e venda para o exterior. O texto cita exatamente esses elementos.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "HUM-01-02",
+              "texto": "",
+              "enunciado": "Durante o período colonial, o Brasil só podia comercializar com Portugal. Essa regra, conhecida como exclusivo metropolitano ou pacto colonial, tinha como objetivo",
+              "alternativas": [
+                "estimular a industrialização da colônia.",
+                "garantir a autonomia política dos colonos.",
+                "permitir o livre comércio com outras nações europeias.",
+                "assegurar lucros à metrópole, que comprava barato da colônia e lhe vendia caro.",
+                "proteger os povos indígenas da exploração econômica."
+              ],
+              "correta": "D",
+              "explicacao": "Pelo pacto colonial, a colônia existia para enriquecer a metrópole. Com o monopólio do comércio, Portugal fixava preços baixos para os produtos coloniais e altos para os que vendia ao Brasil.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "HUM-01-03",
+              "texto": "O Quilombo dos Palmares, na serra da Barriga (atual Alagoas), reuniu milhares de pessoas ao longo do século XVII e resistiu por décadas às expedições enviadas para destruí-lo.",
+              "enunciado": "A existência de Palmares demonstra que",
+              "alternativas": [
+                "os africanos escravizados aceitavam a escravidão sem reagir.",
+                "a escravidão foi abolida no Brasil ainda no século XVII.",
+                "os escravizados resistiram de forma organizada, criando comunidades autônomas.",
+                "os quilombos eram aliados da Coroa portuguesa.",
+                "os indígenas foram a única mão de obra usada na colônia."
+              ],
+              "correta": "C",
+              "explicacao": "Os quilombos eram comunidades formadas por pessoas que fugiam da escravidão. Palmares, o maior deles, mostra que houve resistência ativa e organizada durante décadas.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "HUM-01-04",
+              "texto": "",
+              "enunciado": "A descoberta de ouro na região das Minas Gerais, no final do século XVII, provocou mudanças importantes na colônia, como",
+              "alternativas": [
+                "o fim imediato da escravidão africana.",
+                "a transferência da capital de Salvador para Recife.",
+                "o abandono da cobrança de impostos por Portugal.",
+                "a diminuição da população no interior da colônia.",
+                "o deslocamento do centro econômico para o Centro-Sul e o crescimento das cidades."
+              ],
+              "correta": "E",
+              "explicacao": "A mineração atraiu milhares de pessoas para o interior, fez surgir vilas e cidades e levou o centro econômico para o Centro-Sul. Por isso, em 1763, a capital passou de Salvador para o Rio de Janeiro.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "HUM-01-05",
+              "texto": "Os jesuítas fundaram aldeamentos onde reuniam indígenas de diferentes povos. Neles, ensinavam a doutrina cristã, organizavam o trabalho e combatiam costumes considerados “pagãos”.",
+              "enunciado": "Uma consequência dessa ação para os povos indígenas foi",
+              "alternativas": [
+                "a preservação integral de suas línguas e crenças tradicionais.",
+                "a imposição de valores culturais europeus, com perda de práticas tradicionais.",
+                "o fim das epidemias trazidas pelos europeus.",
+                "a garantia de posse definitiva de suas terras pela Coroa.",
+                "a transformação dos indígenas em donos de engenhos."
+              ],
+              "correta": "B",
+              "explicacao": "A catequese buscava substituir as crenças e os costumes indígenas pelos europeus e cristãos. Isso causou perda cultural, mesmo que os aldeamentos também protegessem os indígenas de parte da escravização.",
+              "fonte": "Autoral – estilo ENEM"
+            }
+          ]
+        },
+        {
+          "id": "HUM-02",
+          "titulo": "Cidadania e direitos",
+          "questoes": [
+            {
+              "id": "HUM-02-01",
+              "texto": "“Todos são iguais perante a lei, sem distinção de qualquer natureza [...].”\n(Constituição Federal de 1988, art. 5º)",
+              "enunciado": "O trecho da Constituição expressa o princípio da",
+              "alternativas": [
+                "soberania popular.",
+                "separação dos Poderes.",
+                "igualdade jurídica, ou isonomia.",
+                "propriedade privada.",
+                "liberdade de imprensa."
+              ],
+              "correta": "C",
+              "explicacao": "Isonomia significa que a lei vale igualmente para todos, sem privilégios ou discriminação por origem, cor, sexo, religião ou qualquer outra característica.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "HUM-02-02",
+              "texto": "",
+              "enunciado": "No Brasil, o voto é facultativo para jovens de 16 e 17 anos, para pessoas com mais de 70 anos e para analfabetos. Isso significa que essas pessoas",
+              "alternativas": [
+                "estão proibidas de votar.",
+                "podem votar, mas não são obrigadas.",
+                "só podem votar em eleições municipais.",
+                "precisam de autorização judicial para votar.",
+                "votam apenas em plebiscitos."
+              ],
+              "correta": "B",
+              "explicacao": "Facultativo quer dizer opcional. Esses grupos têm o direito de votar, mas não sofrem punição se não votarem. Para quem tem de 18 a 70 anos e é alfabetizado, o voto é obrigatório.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "HUM-02-03",
+              "texto": "",
+              "enunciado": "Os direitos à educação, à saúde, ao trabalho e à previdência social são classificados como direitos",
+              "alternativas": [
+                "políticos, pois garantem a participação nas eleições.",
+                "civis, pois protegem a liberdade individual diante do Estado.",
+                "difusos, pois pertencem apenas às empresas.",
+                "sociais, pois buscam garantir condições de vida digna à população.",
+                "militares, pois dependem das Forças Armadas."
+              ],
+              "correta": "D",
+              "explicacao": "Direitos sociais são aqueles que o Estado deve assegurar por meio de serviços e políticas públicas, como escola, saúde e aposentadoria. A Constituição os lista no artigo 6º.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "HUM-02-04",
+              "texto": "Moradores de um bairro organizaram um abaixo-assinado e participaram de audiências públicas na Câmara Municipal para pedir a construção de uma creche na região.",
+              "enunciado": "A atitude dos moradores é um exemplo de",
+              "alternativas": [
+                "exercício da cidadania ativa, pela participação e pela reivindicação de direitos.",
+                "prática ilegal, pois só os vereadores podem propor melhorias.",
+                "renúncia aos direitos políticos.",
+                "desobediência civil violenta.",
+                "substituição do voto pela participação popular."
+              ],
+              "correta": "A",
+              "explicacao": "Cidadania não se resume a votar. Abaixo-assinados e audiências públicas são formas legais de participar e cobrar do poder público a garantia de direitos, como o acesso à educação infantil.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "HUM-02-05",
+              "texto": "Algumas políticas públicas reservam vagas em universidades para estudantes de escolas públicas e para grupos historicamente discriminados.",
+              "enunciado": "Essas políticas, chamadas de ações afirmativas, baseiam-se na ideia de que",
+              "alternativas": [
+                "todos já possuem as mesmas oportunidades.",
+                "o esforço individual não deve ser considerado.",
+                "as universidades devem ser exclusivas de grupos minoritários.",
+                "a Constituição proíbe qualquer tratamento diferenciado.",
+                "é preciso tratar de forma diferente os desiguais para promover igualdade de oportunidades."
+              ],
+              "correta": "E",
+              "explicacao": "As ações afirmativas partem do princípio da equidade: como as condições de partida são desiguais, medidas específicas ajudam a equilibrar as oportunidades.",
+              "fonte": "Autoral – estilo ENEM"
+            }
+          ]
+        },
+        {
+          "id": "HUM-03",
+          "titulo": "Globalização",
+          "questoes": [
+            {
+              "id": "HUM-03-01",
+              "texto": "Um tênis é projetado nos Estados Unidos, fabricado com materiais vindos de vários países asiáticos, montado no Vietnã e vendido em lojas do mundo inteiro.",
+              "enunciado": "O processo descrito é característico",
+              "alternativas": [
+                "da produção artesanal da Idade Média.",
+                "do mercantilismo do século XVI.",
+                "da autossuficiência produtiva das nações.",
+                "da globalização, com a produção dividida entre vários países.",
+                "do isolamento econômico dos países em desenvolvimento."
+              ],
+              "correta": "D",
+              "explicacao": "Na globalização, as empresas espalham as etapas da produção por países diferentes, buscando custos menores. O produto final junta partes feitas em vários lugares.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "HUM-03-02",
+              "texto": "",
+              "enunciado": "A expansão da internet e das redes sociais acelerou a circulação de informações pelo planeta. Um efeito dessa mudança é",
+              "alternativas": [
+                "o fim das desigualdades de acesso à tecnologia entre os países.",
+                "o desaparecimento das culturas locais em todos os países.",
+                "o isolamento das pessoas em relação aos acontecimentos mundiais.",
+                "a redução da velocidade com que as notícias se espalham.",
+                "a sensação de encurtamento das distâncias, que permite acompanhar em tempo real fatos de lugares distantes."
+              ],
+              "correta": "E",
+              "explicacao": "Os geógrafos chamam esse efeito de compressão espaço-tempo: as informações atravessam o mundo em segundos. Ainda assim, o acesso à tecnologia continua desigual entre países e grupos sociais.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "HUM-03-03",
+              "texto": "",
+              "enunciado": "O Mercosul, criado em 1991 por Brasil, Argentina, Paraguai e Uruguai, tem como objetivo principal",
+              "alternativas": [
+                "integrar a economia dos países-membros, reduzindo barreiras ao comércio entre eles.",
+                "formar um exército único para defender a América do Sul.",
+                "adotar imediatamente uma moeda comum a todos os membros.",
+                "impedir que os membros façam comércio com países de fora do bloco.",
+                "unificar os governos dos países em um único Estado."
+              ],
+              "correta": "A",
+              "explicacao": "O Mercosul é um bloco econômico. Sua meta é facilitar o comércio entre os membros, diminuindo tarifas e burocracia. Os países continuam independentes e com moedas próprias.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "HUM-03-04",
+              "texto": "Enquanto grandes empresas transnacionais ampliam seus lucros, muitos trabalhadores de países periféricos recebem salários baixos em fábricas terceirizadas que produzem para essas empresas.",
+              "enunciado": "O texto apresenta uma crítica à globalização relacionada",
+              "alternativas": [
+                "ao aumento da autonomia dos trabalhadores.",
+                "à distribuição desigual dos ganhos econômicos entre países e grupos sociais.",
+                "ao fim das empresas transnacionais.",
+                "à valorização dos salários nos países periféricos.",
+                "à redução do comércio internacional."
+              ],
+              "correta": "B",
+              "explicacao": "O texto contrasta o lucro das grandes empresas com os salários baixos nos países periféricos. A crítica é que os benefícios da globalização não chegam a todos da mesma forma.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "HUM-03-05",
+              "texto": "Em várias cidades do mundo, jovens assistem às mesmas séries, ouvem as mesmas músicas e consomem as mesmas marcas. Ao mesmo tempo, cresce o interesse por festas tradicionais, comidas típicas e produtos locais.",
+              "enunciado": "O texto mostra que a globalização cultural",
+              "alternativas": [
+                "eliminou completamente as tradições regionais.",
+                "impede o acesso a produtos culturais estrangeiros.",
+                "convive com a valorização das identidades locais, numa tensão entre o global e o local.",
+                "acontece apenas nos países ricos.",
+                "depende exclusivamente de jornais e revistas impressos."
+              ],
+              "correta": "C",
+              "explicacao": "O texto aponta dois movimentos ao mesmo tempo: o consumo de uma cultura mundial padronizada e a valorização das tradições locais. Um não elimina o outro.",
+              "fonte": "Autoral – estilo ENEM"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NATUREZA",
+      "licoes": [
+        {
+          "id": "NAT-01",
+          "titulo": "Mudanças de estado físico",
+          "questoes": [
+            {
+              "id": "NAT-01-01",
+              "texto": "",
+              "enunciado": "Ao retirar uma lata de refrigerante da geladeira em um dia quente, uma pessoa percebe que, após alguns minutos, a superfície externa da lata fica coberta de gotículas de água. Esse fenômeno ocorre porque",
+              "alternativas": [
+                "o refrigerante atravessa as paredes de alumínio da lata.",
+                "o gás carbônico do refrigerante se transforma em água ao escapar da lata.",
+                "o vapor de água presente no ar se condensa ao entrar em contato com a superfície fria da lata.",
+                "o gelo acumulado na geladeira derrete quando a lata é exposta ao ambiente.",
+                "a lata libera a água que absorveu enquanto estava refrigerada."
+              ],
+              "correta": "C",
+              "explicacao": "O ar contém vapor de água. Ao encostar na lata gelada, esse vapor perde calor e passa para o estado líquido (condensação). A água vem do ar, e não de dentro da lata, que é impermeável.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "NAT-01-02",
+              "texto": "",
+              "enunciado": "Roupas molhadas estendidas no varal secam mais rápido em dias quentes e com vento. Isso acontece porque",
+              "alternativas": [
+                "o calor e o vento favorecem a evaporação da água presente no tecido.",
+                "o vento transforma a água em gelo, que se desprende do tecido.",
+                "a água passa direto do estado sólido para o gasoso ao receber luz do sol.",
+                "o tecido derrete a água e a elimina por fusão.",
+                "o calor provoca a condensação da água na roupa."
+              ],
+              "correta": "A",
+              "explicacao": "A secagem é evaporação: a água líquida vira vapor. O calor fornece energia às moléculas, e o vento leva embora o ar úmido perto do tecido, acelerando o processo.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "NAT-01-03",
+              "texto": "",
+              "enunciado": "Bolinhas de naftalina colocadas em armários diminuem de tamanho com o tempo, sem deixar nenhum resíduo líquido. A mudança de estado físico que explica esse fenômeno é a",
+              "alternativas": [
+                "fusão.",
+                "solidificação.",
+                "condensação.",
+                "vaporização.",
+                "sublimação."
+              ],
+              "correta": "E",
+              "explicacao": "Na sublimação, a substância passa direto do estado sólido para o gasoso, sem virar líquido. Por isso a naftalina “some” sem molhar nada e deixa o cheiro no armário.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "NAT-01-04",
+              "texto": "",
+              "enunciado": "Na panela de pressão, os alimentos cozinham mais rápido do que em uma panela comum porque",
+              "alternativas": [
+                "a água ferve a uma temperatura menor que 100 °C.",
+                "a pressão interna diminui, o que acelera a evaporação.",
+                "o vapor de água se transforma em gelo dentro da panela.",
+                "o aumento da pressão interna eleva a temperatura de ebulição da água.",
+                "a tampa impede que a água receba calor da chama."
+              ],
+              "correta": "D",
+              "explicacao": "Quanto maior a pressão sobre um líquido, maior a temperatura em que ele ferve. Na panela de pressão a água chega a cerca de 120 °C ainda líquida, e o alimento cozinha mais rápido.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "NAT-01-05",
+              "texto": "Um estudante aqueceu gelo a −10 °C até que ele virasse água líquida, anotando a temperatura a cada minuto. Ele percebeu que, enquanto havia gelo e água juntos no recipiente, o termômetro ficou marcando 0 °C, mesmo com o fogo aceso.",
+              "enunciado": "A temperatura ficou constante nesse intervalo porque",
+              "alternativas": [
+                "o termômetro parou de funcionar durante a fusão.",
+                "a energia recebida foi usada para mudar o estado físico, e não para aumentar a temperatura.",
+                "o gelo perdeu calor para a chama.",
+                "a água líquida não é capaz de absorver calor.",
+                "a fusão só ocorre quando o aquecimento é interrompido."
+              ],
+              "correta": "B",
+              "explicacao": "Durante a mudança de estado de uma substância pura, a temperatura fica constante. O calor recebido (calor latente) é gasto para desfazer a estrutura do gelo, e não para aquecer.",
+              "fonte": "Autoral – estilo ENEM"
+            }
+          ]
+        },
+        {
+          "id": "NAT-02",
+          "titulo": "Ecologia",
+          "questoes": [
+            {
+              "id": "NAT-02-01",
+              "texto": "Em um campo, foi observada a seguinte cadeia alimentar:\ncapim → gafanhoto → sapo → cobra → gavião",
+              "enunciado": "Nessa cadeia alimentar, o sapo ocupa o nível trófico de",
+              "alternativas": [
+                "produtor.",
+                "consumidor primário.",
+                "decompositor.",
+                "consumidor quaternário.",
+                "consumidor secundário."
+              ],
+              "correta": "E",
+              "explicacao": "O capim é o produtor; o gafanhoto, que come o capim, é consumidor primário; o sapo, que come o gafanhoto, é consumidor secundário.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "NAT-02-02",
+              "texto": "Os liquens são formados pela associação entre fungos e algas. A alga produz matéria orgânica pela fotossíntese, e o fungo protege a alga e retém água e sais minerais. Juntos, conseguem viver sobre rochas e troncos.",
+              "enunciado": "A relação ecológica entre a alga e o fungo nos liquens é um exemplo de",
+              "alternativas": [
+                "predatismo.",
+                "parasitismo.",
+                "competição.",
+                "mutualismo.",
+                "comensalismo."
+              ],
+              "correta": "D",
+              "explicacao": "No mutualismo as duas espécies se beneficiam e dependem uma da outra. A alga dá alimento ao fungo, e o fungo dá proteção e água à alga.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "NAT-02-03",
+              "texto": "Um inseticida pouco degradável foi aplicado em uma plantação próxima a um lago. Anos depois, a substância foi encontrada nas algas, nos peixes pequenos que comem algas, nos peixes maiores que comem os pequenos e nas aves que se alimentam desses peixes maiores.",
+              "enunciado": "Em qual desses componentes se espera a maior concentração do inseticida por quilograma de tecido?",
+              "alternativas": [
+                "Nas algas.",
+                "Nas aves que se alimentam de peixes.",
+                "Nos peixes pequenos.",
+                "Nos peixes maiores.",
+                "Na água do lago."
+              ],
+              "correta": "B",
+              "explicacao": "Substâncias que não se degradam se acumulam no corpo e passam de um nível trófico para o seguinte (magnificação trófica). Por isso a concentração é maior no topo da cadeia, nas aves.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "NAT-02-04",
+              "texto": "",
+              "enunciado": "Se todos os fungos e bactérias decompositores de um ecossistema desaparecessem, uma consequência esperada seria",
+              "alternativas": [
+                "o acúmulo de matéria orgânica morta e a falta de reciclagem de nutrientes para as plantas.",
+                "o aumento imediato da fotossíntese.",
+                "o crescimento acelerado das plantas por falta de competição.",
+                "a redução da quantidade de restos de seres vivos no solo.",
+                "o aumento da fertilidade do solo."
+              ],
+              "correta": "A",
+              "explicacao": "Os decompositores transformam restos de seres vivos em nutrientes minerais que voltam ao solo e são usados pelas plantas. Sem eles, os restos se acumulariam e os nutrientes deixariam de circular.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "NAT-02-05",
+              "texto": "O mexilhão-dourado, molusco originário da Ásia, chegou aos rios da América do Sul na água de lastro de navios. Espalhou-se rapidamente e passou a entupir tubulações de usinas e estações de tratamento de água.",
+              "enunciado": "A rápida expansão dessa espécie no novo ambiente está relacionada principalmente",
+              "alternativas": [
+                "à grande quantidade de predadores naturais no novo ambiente.",
+                "à incapacidade da espécie de se reproduzir fora da Ásia.",
+                "à ausência de controle natural, como predadores e competidores, no ambiente invadido.",
+                "à extinção da espécie em seu local de origem.",
+                "à preferência da espécie por ambientes com pouco alimento."
+              ],
+              "correta": "C",
+              "explicacao": "Espécies exóticas invasoras costumam se multiplicar sem controle porque, no novo ambiente, não encontram os predadores, parasitas e competidores que limitavam sua população no local de origem.",
+              "fonte": "Autoral – estilo ENEM"
+            }
+          ]
+        },
+        {
+          "id": "NAT-03",
+          "titulo": "Eletricidade",
+          "questoes": [
+            {
+              "id": "NAT-03-01",
+              "texto": "",
+              "enunciado": "Um chuveiro elétrico de 5 500 W é usado durante 30 minutos por dia. Em 30 dias, a energia elétrica consumida por esse chuveiro é de",
+              "alternativas": [
+                "16,5 kWh.",
+                "82,5 kWh.",
+                "165 kWh.",
+                "2 750 kWh.",
+                "165 000 kWh."
+              ],
+              "correta": "B",
+              "explicacao": "Energia = potência × tempo. A potência é 5,5 kW e o tempo total é 0,5 h × 30 = 15 h. Logo, 5,5 × 15 = 82,5 kWh.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "NAT-03-02",
+              "texto": "",
+              "enunciado": "Um ferro de passar roupa tem resistência elétrica de 22 Ω e é ligado a uma tomada de 220 V. A intensidade da corrente elétrica que percorre o aparelho é de",
+              "alternativas": [
+                "0,1 A.",
+                "5 A.",
+                "10 A.",
+                "242 A.",
+                "4 840 A."
+              ],
+              "correta": "C",
+              "explicacao": "Pela Lei de Ohm, U = R × i, então i = U ÷ R = 220 ÷ 22 = 10 A.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "NAT-03-03",
+              "texto": "",
+              "enunciado": "Em uma casa, quando uma lâmpada queima, os outros aparelhos continuam funcionando normalmente. Isso acontece porque as instalações elétricas residenciais são feitas em",
+              "alternativas": [
+                "paralelo, e cada aparelho recebe a mesma tensão de forma independente.",
+                "série, e a corrente passa por um aparelho de cada vez.",
+                "série, e a lâmpada queimada é isolada automaticamente.",
+                "paralelo, e a corrente elétrica é a mesma em todos os aparelhos.",
+                "curto-circuito, que distribui a energia igualmente."
+              ],
+              "correta": "A",
+              "explicacao": "No circuito em paralelo, cada aparelho fica ligado diretamente à rede e recebe a mesma tensão. Se um deixa de funcionar, os outros continuam. A corrente em cada um depende da sua potência, por isso não é a mesma.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "NAT-03-04",
+              "texto": "",
+              "enunciado": "O disjuntor instalado no quadro de energia de uma residência tem a função de",
+              "alternativas": [
+                "aumentar a tensão fornecida aos aparelhos.",
+                "armazenar energia para quando faltar luz.",
+                "transformar corrente alternada em corrente contínua.",
+                "reduzir o valor da conta de luz.",
+                "interromper o circuito quando a corrente ultrapassa um valor seguro."
+              ],
+              "correta": "E",
+              "explicacao": "O disjuntor é um dispositivo de segurança. Se a corrente fica alta demais, por sobrecarga ou curto-circuito, ele desliga o circuito e evita o superaquecimento dos fios e risco de incêndio.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "NAT-03-05",
+              "texto": "",
+              "enunciado": "Uma família trocou uma lâmpada incandescente de 60 W por uma lâmpada de LED de 9 W, que ilumina da mesma forma. A lâmpada fica acesa 5 horas por dia. Em 30 dias, a economia de energia obtida com a troca é de",
+              "alternativas": [
+                "1,35 kWh.",
+                "9 kWh.",
+                "0,255 kWh.",
+                "7,65 kWh.",
+                "51 kWh."
+              ],
+              "correta": "D",
+              "explicacao": "A diferença de potência é 60 − 9 = 51 W. O tempo total é 5 h × 30 = 150 h. Economia = 51 × 150 = 7 650 Wh = 7,65 kWh.",
+              "fonte": "Autoral – estilo ENEM"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MATEMATICA",
+      "licoes": [
+        {
+          "id": "MAT-01",
+          "titulo": "Porcentagem",
+          "questoes": [
+            {
+              "id": "MAT-01-01",
+              "texto": "",
+              "enunciado": "Uma loja anunciou uma promoção: todos os produtos com 20% de desconto e, para pagamento via Pix, mais 10% de desconto sobre o preço já promocional. Um cliente comprou, pagando via Pix, um tênis que custava R$ 250,00 antes da promoção. Quanto ele pagou pelo tênis?",
+              "alternativas": [
+                "R$ 175,00",
+                "R$ 180,00",
+                "R$ 187,50",
+                "R$ 195,00",
+                "R$ 225,00"
+              ],
+              "correta": "B",
+              "explicacao": "Descontos sucessivos se multiplicam: 250 × 0,80 = 200 e 200 × 0,90 = 180. O erro comum é somar os descontos (30%), o que daria R$ 175,00.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "MAT-01-02",
+              "texto": "",
+              "enunciado": "Uma mercadoria custava R$ 200,00. Em janeiro, seu preço aumentou 10%. Em fevereiro, o novo preço sofreu uma redução de 10%. Em relação ao preço inicial, o preço final da mercadoria é",
+              "alternativas": [
+                "R$ 200,00, igual ao preço inicial.",
+                "R$ 202,00, 1% maior que o preço inicial.",
+                "R$ 180,00, 10% menor que o preço inicial.",
+                "R$ 220,00, 10% maior que o preço inicial.",
+                "R$ 198,00, 1% menor que o preço inicial."
+              ],
+              "correta": "E",
+              "explicacao": "Aumento de 10%: 200 × 1,10 = 220. Redução de 10% sobre 220: 220 × 0,90 = 198. Os 10% de desconto incidem sobre um valor maior, por isso o preço não volta a R$ 200,00.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "MAT-01-03",
+              "texto": "",
+              "enunciado": "Uma pessoa aplicou R$ 1.500,00 a juros simples de 2% ao mês. Após 6 meses, o montante dessa aplicação será de",
+              "alternativas": [
+                "R$ 1.530,00",
+                "R$ 1.590,00",
+                "R$ 1.650,00",
+                "R$ 1.680,00",
+                "R$ 1.800,00"
+              ],
+              "correta": "D",
+              "explicacao": "Nos juros simples, os juros de cada mês são iguais: 2% de 1.500 = 30 por mês. Em 6 meses, 30 × 6 = 180 de juros. Montante = 1.500 + 180 = R$ 1.680,00.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "MAT-01-04",
+              "texto": "",
+              "enunciado": "Em uma escola com 800 alunos, 35% participam de alguma equipe esportiva. Quantos alunos dessa escola não participam de nenhuma equipe esportiva?",
+              "alternativas": [
+                "520",
+                "280",
+                "465",
+                "765",
+                "350"
+              ],
+              "correta": "A",
+              "explicacao": "Se 35% participam, 65% não participam. 65% de 800 = 0,65 × 800 = 520. Cuidado: 280 é o número dos que participam.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "MAT-01-05",
+              "texto": "",
+              "enunciado": "O preço de um lanche na cantina passou de R$ 40,00 para R$ 50,00. O aumento percentual no preço foi de",
+              "alternativas": [
+                "10%.",
+                "20%.",
+                "25%.",
+                "50%.",
+                "125%."
+              ],
+              "correta": "C",
+              "explicacao": "O aumento foi de R$ 10,00. A porcentagem é calculada sobre o valor inicial: 10 ÷ 40 = 0,25 = 25%. Dividir por 50 (o valor novo) daria 20%, que é o erro mais comum.",
+              "fonte": "Autoral – estilo ENEM"
+            }
+          ]
+        },
+        {
+          "id": "MAT-02",
+          "titulo": "Interpretação de gráficos",
+          "questoes": [
+            {
+              "id": "MAT-02-01",
+              "texto": "Um gráfico de colunas mostra as vendas de sorvete de uma lanchonete, em unidades:\nJaneiro: 420\nFevereiro: 380\nMarço: 300\nAbril: 210\nMaio: 150",
+              "enunciado": "Entre quais meses consecutivos ocorreu a maior queda nas vendas?",
+              "alternativas": [
+                "Março e abril.",
+                "Janeiro e fevereiro.",
+                "Fevereiro e março.",
+                "Abril e maio.",
+                "As quedas foram iguais em todos os meses."
+              ],
+              "correta": "A",
+              "explicacao": "As quedas foram: janeiro→fevereiro, 40; fevereiro→março, 80; março→abril, 90; abril→maio, 60. A maior foi entre março e abril.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "MAT-02-02",
+              "texto": "Um gráfico de linhas mostra as temperaturas máximas de uma cidade durante uma semana:\nSegunda: 28 °C\nTerça: 30 °C\nQuarta: 27 °C\nQuinta: 31 °C\nSexta: 29 °C\nSábado: 33 °C\nDomingo: 32 °C",
+              "enunciado": "A média das temperaturas máximas nessa semana foi de",
+              "alternativas": [
+                "28 °C.",
+                "29 °C.",
+                "30 °C.",
+                "31 °C.",
+                "33 °C."
+              ],
+              "correta": "C",
+              "explicacao": "Soma: 28 + 30 + 27 + 31 + 29 + 33 + 32 = 210. Média = 210 ÷ 7 = 30 °C.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "MAT-02-03",
+              "texto": "Em uma pesquisa com 400 estudantes sobre o meio de transporte usado para ir à escola, o resultado foi apresentado em um gráfico de setores:\nÔnibus: 45%\nA pé: 25%\nBicicleta: 15%\nCarro: 10%\nOutros: 5%",
+              "enunciado": "Quantos estudantes vão para a escola a pé ou de bicicleta?",
+              "alternativas": [
+                "40",
+                "60",
+                "100",
+                "140",
+                "160"
+              ],
+              "correta": "E",
+              "explicacao": "A pé ou de bicicleta: 25% + 15% = 40%. 40% de 400 = 0,40 × 400 = 160 estudantes.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "MAT-02-04",
+              "texto": "",
+              "enunciado": "Em um gráfico de setores (gráfico de pizza), o círculo inteiro representa 100% dos dados. A fatia que representa 25% do total corresponde a um ângulo central de",
+              "alternativas": [
+                "25°.",
+                "90°.",
+                "45°.",
+                "180°.",
+                "250°."
+              ],
+              "correta": "B",
+              "explicacao": "O círculo completo tem 360°. 25% de 360° = 0,25 × 360 = 90°, ou seja, um quarto do círculo.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "MAT-02-05",
+              "texto": "Um gráfico de linhas mostra o número de usuários de uma biblioteca pública, por ano:\n2019: 1 200\n2020: 600\n2021: 800\n2022: 1 000\n2023: 1 200",
+              "enunciado": "Com base nos dados, qual afirmação é correta?",
+              "alternativas": [
+                "O número de usuários cresceu todos os anos.",
+                "Em 2023, o número de usuários foi o dobro do de 2019.",
+                "A maior queda ocorreu entre 2022 e 2023.",
+                "De 2020 a 2023, o número de usuários aumentou 200 a cada ano.",
+                "Em 2021, o número de usuários foi a metade do de 2019."
+              ],
+              "correta": "D",
+              "explicacao": "De 2020 a 2023: 600 → 800 → 1 000 → 1 200, sempre +200. As outras são falsas: houve queda em 2020, 2023 igualou 2019, e a metade de 1 200 (600) ocorreu em 2020, não em 2021.",
+              "fonte": "Autoral – estilo ENEM"
+            }
+          ]
+        },
+        {
+          "id": "MAT-03",
+          "titulo": "Funções",
+          "questoes": [
+            {
+              "id": "MAT-03-01",
+              "texto": "",
+              "enunciado": "Em uma cidade, a corrida de táxi custa R$ 5,00 fixos (bandeirada) mais R$ 2,50 por quilômetro rodado. Quanto custa uma corrida de 12 km?",
+              "alternativas": [
+                "R$ 30,00",
+                "R$ 32,50",
+                "R$ 33,00",
+                "R$ 35,00",
+                "R$ 90,00"
+              ],
+              "correta": "D",
+              "explicacao": "O preço é P(x) = 5 + 2,50x. Para x = 12: 5 + 2,50 × 12 = 5 + 30 = R$ 35,00. Quem esquece a bandeirada chega a R$ 30,00.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "MAT-03-02",
+              "texto": "",
+              "enunciado": "Uma pequena fábrica de camisetas tem custo fixo mensal de R$ 2.000,00 e gasta R$ 15,00 para produzir cada camiseta, que é vendida por R$ 40,00. Quantas camisetas ela precisa vender por mês para não ter prejuízo (lucro igual a zero)?",
+              "alternativas": [
+                "50",
+                "80",
+                "100",
+                "134",
+                "200"
+              ],
+              "correta": "B",
+              "explicacao": "Receita = custo: 40x = 2.000 + 15x. Então 25x = 2.000 e x = 80. Cada camiseta deixa R$ 25,00 para pagar o custo fixo.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "MAT-03-03",
+              "texto": "",
+              "enunciado": "Um reservatório tem 1 200 litros de água e, por causa de um vazamento, perde 40 litros por hora, de forma constante. A expressão que representa o volume V, em litros, depois de t horas é",
+              "alternativas": [
+                "V = 40t − 1 200",
+                "V = 1 200 + 40t",
+                "V = 1 200 − 40t",
+                "V = 1 200t − 40",
+                "V = 40 − 1 200t"
+              ],
+              "correta": "C",
+              "explicacao": "O volume começa em 1 200 (valor inicial) e diminui 40 a cada hora (taxa negativa). Logo, V = 1 200 − 40t, uma função afim decrescente.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "MAT-03-04",
+              "texto": "",
+              "enunciado": "A altura h, em metros, de uma bola chutada verticalmente para cima é dada por h(t) = −5t² + 20t, em que t é o tempo em segundos. A altura máxima atingida pela bola é de",
+              "alternativas": [
+                "2 m.",
+                "5 m.",
+                "10 m.",
+                "15 m.",
+                "20 m."
+              ],
+              "correta": "E",
+              "explicacao": "A altura máxima está no vértice da parábola: t = −b ÷ 2a = −20 ÷ (−10) = 2 s. Então h(2) = −5 × 4 + 20 × 2 = −20 + 40 = 20 m.",
+              "fonte": "Autoral – estilo ENEM"
+            },
+            {
+              "id": "MAT-03-05",
+              "texto": "",
+              "enunciado": "Em uma gráfica, o preço P, em reais, para imprimir n páginas é dado por P(n) = 0,20n + 3. Um estudante pagou R$ 11,00 pela impressão de um trabalho. Quantas páginas ele imprimiu?",
+              "alternativas": [
+                "40",
+                "55",
+                "15",
+                "70",
+                "8"
+              ],
+              "correta": "A",
+              "explicacao": "11 = 0,20n + 3, então 0,20n = 8 e n = 8 ÷ 0,20 = 40 páginas.",
+              "fonte": "Autoral – estilo ENEM"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
