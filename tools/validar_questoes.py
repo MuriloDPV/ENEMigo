@@ -10,7 +10,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from montar_questoes import SAIDA, carregar_bruto, texto_puro  # noqa: E402
 
-AREAS = {"LINGUAGENS": "LIN", "HUMANAS": "HUM", "NATUREZA": "NAT", "MATEMATICA": "MAT"}
+AREAS = {"LINGUAGENS": "LIN", "HUMANAS": "HUM", "NATUREZA": "NAT"}  # Matemática fora de propósito
+LICOES_POR_AREA = 4
 CAMPOS = {"id", "texto", "enunciado", "alternativas", "correta", "explicacao", "fonte"}
 RESTO_MD = re.compile(r"\*\*|!\[|\]\(|\$|\\[a-zA-Z(\[]|^#", re.M)
 FONTE = re.compile(r"^ENEM (\d{4}) – Questão (\d+)$")
@@ -31,14 +32,14 @@ bruto = carregar_bruto()
 if set(dados) != {"versao", "areas"}:
     erro(f"raiz com chaves inesperadas: {set(dados)}")
 if sorted(a["id"] for a in dados["areas"]) != sorted(AREAS):
-    erro("as 4 áreas não estão presentes exatamente uma vez")
+    erro(f"áreas esperadas exatamente uma vez: {sorted(AREAS)}")
 
 ids_licao, ids_questao, fontes = set(), set(), set()
 total = 0
 for area in dados["areas"]:
     sigla = AREAS.get(area["id"])
-    if len(area["licoes"]) != 3:
-        erro(f"{area['id']}: {len(area['licoes'])} lições (esperado 3)")
+    if len(area["licoes"]) != LICOES_POR_AREA:
+        erro(f"{area['id']}: {len(area['licoes'])} lições (esperado {LICOES_POR_AREA})")
     for li, licao in enumerate(area["licoes"], start=1):
         lid = licao["id"]
         if lid != f"{sigla}-{li:02d}" or lid in ids_licao:

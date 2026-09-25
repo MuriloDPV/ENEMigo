@@ -1,5 +1,7 @@
 """Monta app/src/main/assets/questoes.json com questões reais do ENEM (API enem.dev).
 
+Matemática ficou de fora de propósito: o app mostra a área como "Em breve".
+
 Uso: python tools/montar_questoes.py
 Lê o bruto de tools/enem_raw/{ano}.json (gerado por baixar_enem.py).
 A letra "cega" de cada questão é a resposta dada antes de consultar o gabarito;
@@ -38,6 +40,13 @@ AREAS = [
             ("2022-33", "A", "O trecho é uma longa lista de objetos, pessoas e ações do funeral, separados por vírgulas. É essa enumeração que faz o narrador chamar o capítulo de “inventário”."),
             ("2023-31", "C", "O fim do amor, que pedia um cenário solene, acontece numa cena banal à mesa do café, recolhendo migalhas. A comoção do amor frustrado é diluída no cotidiano."),
         ]),
+        ("Esporte e práticas corporais", [
+            ("2020-35", "A", "O texto mostra que colocar seleções femininas no videogame ajuda a divulgar o futebol feminino, “um grande passo” na luta pela igualdade de gênero."),
+            ("2020-36", "D", "Pela definição, luta tem contato proposital, troca de ações de ataque e defesa e regras. A proposta deve ser um combate intencional com ações regulamentadas, sem agressão e sem vencedor definido antes."),
+            ("2021-31", "A", "As rodas de uretano deram aderência e facilitaram as manobras, e até iniciantes passaram a andar de skate. Com campeonatos, marcas e lojas, a prática se democratizou."),
+            ("2023-6", "D", "A palavra “juntos” entrou no lema “para ressaltar a solidariedade”. O lema olímpico passou a se associar à cooperação."),
+            ("2023-42", "E", "O lazer ativo se concentra nos mais ricos e a inatividade é maior entre quem tem menos renda. O fator central é a desigualdade entre classes sociais."),
+        ]),
     ]),
     ("HUMANAS", "HUM", [
         ("História do Brasil", [
@@ -60,6 +69,13 @@ AREAS = [
             ("2022-48", "A", "O relato mostra um guarda branco espancando e amarrando um homem negro, como no tempo da escravidão. É o racismo enraizado nas estruturas da sociedade."),
             ("2022-83", "B", "Apátrida é a pessoa sem nacionalidade reconhecida por nenhum país. As irmãs não puderam ser registradas nem no Líbano, onde nasceram, nem na Síria, país dos pais."),
             ("2023-60", "D", "Controlar o dinheiro, esconder documentos ou destruir pertences da mulher são formas de violência patrimonial, uma das previstas na Lei Maria da Penha."),
+        ]),
+        ("Geografia física", [
+            ("2019-89", "D", "Utqiagvik fica muito ao norte, acima do Círculo Polar Ártico. Nessa latitude, no inverno, o Sol passa semanas sem aparecer (é a noite polar)."),
+            ("2020-82", "A", "As cinzas e lavas dos vulcões deixam o solo rico em minerais e muito fértil. Por isso as pessoas continuam morando perto deles, mesmo com o risco."),
+            ("2020-84", "E", "Quando a placa oceânica mergulha sob a continental, as rochas são comprimidas e dobradas, formando cordilheiras jovens: os dobramentos modernos, como os Andes."),
+            ("2021-71", "A", "Rochas são desgastadas, os fragmentos são transportados e depositados nas partes baixas, formando novas rochas. Esse caminho é o ciclo sedimentar."),
+            ("2023-53", "B", "O Himalaia se formou, e ainda cresce, pelo choque entre as placas Indiana e Euroasiática. É o encontro de placas tectônicas."),
         ]),
     ]),
     ("NATUREZA", "NAT", [
@@ -84,28 +100,12 @@ AREAS = [
             ("2022-126", "B", "Depois da coagulação, a sujeira forma flocos pesados que descem para o fundo dos tanques. É na decantação que sai a maior parte dos sólidos."),
             ("2023-108", "D", "A bobina do fogão gera um campo magnético variável, que induz corrente elétrica no fundo metálico da panela (indução eletromagnética)."),
         ]),
-    ]),
-    ("MATEMATICA", "MAT", [
-        ("Porcentagem e proporção", [
-            ("2019-138", "E", "O transporte custa 1/5 do valor, ou seja, 20%. Como o gasto total não pode passar de 100%, a recompensa máxima é 100% − 20% = 80%."),
-            ("2022-154", "C", "Uma queda de 75% significa que 2013 teve só 25% do número de 2012. Então 28 900 = 0,25 × x, e x = 115 600."),
-            ("2023-143", "B", "A lista deste ano é 400 + 10% = 440. Ela deve cair 25%, para 330: são 110 crianças a mais atendidas. Com 10 por sala, 110 ÷ 10 = 11 salas."),
-            ("2021-159", "A", "Com 3 pessoas o pneu leva 4 s. Como o tempo é inversamente proporcional, com 2 pessoas leva 4 × 3/2 = 6 s. A troca só termina quando esse grupo acaba: 6 s."),
-            ("2022-164", "B", "60 dias têm 60 × 24 × 60 = 86 400 minutos; 86 400 ÷ 48 = 1 800 acionamentos. Então cada um libera 360 ÷ 1 800 = 0,2 mL."),
-        ]),
-        ("Geometria e escalas", [
-            ("2020-138", "B", "Real: 28 080 L = 28 080 000 cm³. Maquete: 2 × 3,51 × 4 = 28,08 cm³. A razão entre os volumes é 1 000 000 = 100³, logo a escala é 1 : 100."),
-            ("2022-139", "A", "Na escala 1 : 50, 3,8 cm viram 1,90 m e 1,6 cm viram 0,80 m. Tirando 10 cm em cima, sobra 1,80 m; tirando 10 cm de cada lado, sobram 0,60 m."),
-            ("2019-142", "E", "O novo diâmetro é 6 + 8 = 14 m (raio 7). Área nova: 3 × 7² = 147 m²; área antiga: 3 × 3² = 27 m². A ampliação é de 120 m², mais que os 100 m² do estoque."),
-            ("2021-166", "B", "Dobrando comprimento e largura e mantendo a altura, o perímetro dobra (paredes: o dobro de tinta) e a área do piso fica 2 × 2 = 4 vezes maior."),
-            ("2022-174", "D", "Cilindro: π × 4² × 50 = 800π cm³. Esfera de raio 0,5 cm: (4/3) × π × 0,5³ = π/6 cm³. Então cabem 800π ÷ (π/6) = 4 800 esferas."),
-        ]),
-        ("Probabilidade e média", [
-            ("2019-159", "D", "Com n placas, a chance de não ver nenhuma é (1/2)^n, que precisa ser menor que 1/100. Isso exige n = 7 placas. Como já existe 1, faltam 6 novas."),
-            ("2019-173", "E", "P(fraudulenta) = 0,20 × 0,25 + 0,80 × 0,0625 = 0,05 + 0,05 = 0,10. P(inconsistente, dado que é fraudulenta) = 0,05 ÷ 0,10 = 0,5."),
-            ("2023-138", "C", "É preciso 0,20 × P(preta em B) ≤ 0,01, ou seja, P ≤ 5%. Com 4 pretas, a urna B precisa ter 80 bolinhas. Hoje tem 16 (4 pretas são 25%), então faltam 64 brancas."),
-            ("2020-165", "D", "Soma atual: 15 × 1,93 = 28,95. Meta: 15 × 1,99 = 29,85. Tirando os quatro mais baixos (7,30) e pondo o de 2,02, a soma vai a 23,67. Os 3 novos somam 6,18: média 2,06 m."),
-            ("2023-180", "C", "Médias de dois meses seguidos: out-nov 200, nov-dez 175, dez-jan 325, jan-fev 275 e fev-mar 150 mm. A maior é dezembro-janeiro: plantar no início de dezembro."),
+        ("Corpo humano e saúde", [
+            ("2019-133", "A", "O rim filtra o sangue e elimina a ureia, resíduo tóxico do metabolismo. É isso que a hemodiálise faz hoje e que o rim biônico fará."),
+            ("2020-108", "C", "O revestimento só libera o remédio em pH perto do neutro. Assim ele atravessa intacto o estômago ácido e só se abre no intestino, sem ser afetado pelas secreções gástricas."),
+            ("2021-114", "B", "O reflexo patelar é um arco reflexo: o estímulo vai até a medula espinal, que manda a resposta direto ao músculo, sem passar pelo cérebro."),
+            ("2022-104", "E", "A eritropoietina estimula a produção de hemácias. Com mais hemácias, o sangue leva mais oxigênio aos músculos."),
+            ("2023-106", "C", "O RNAm entra nas células e é traduzido pelos ribossomos em uma proteína do vírus. O sistema imune reconhece essa proteína como antígeno e cria defesas."),
         ]),
     ]),
 ]

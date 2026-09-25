@@ -246,6 +246,87 @@
               "fonte": "ENEM 2023 – Questão 31"
             }
           ]
+        },
+        {
+          "id": "LIN-04",
+          "titulo": "Esporte e práticas corporais",
+          "questoes": [
+            {
+              "id": "LIN-04-01",
+              "texto": "Em 2000 tivemos a primeira experiência do futebol feminino em um jogo de videogame, o Mia Hamm Soccer. Doze anos depois, uma petição on-line pedia que a EA Sports incluísse o futebol feminino no Fifa 13. Contudo, só em 2015, com uma nova petição on-line, que arrecadou milhares de assinaturas, tivemos o futebol feminino incluído no Fifa 16. Vendo um nicho de mercado inexplorado, a EA Sports produziu o jogo com 12 seleções femininas e o apresentou como inovação. A empresa sabe que mais de 40% dos praticantes de futebol nos EUA são meninas. Para elas, ver o futebol feminino representado em um jogo de videogame é extremamente importante. Ter o futebol feminino no Fifa 16 é um grande passo para a sua popularização na luta pela igualdade de gênero, num contexto machista, sexista, misógino e homofóbico.\n\nDisponível em: www.ludopedio.com.br. Acesso em: 5 jun. 2018 (adaptado).",
+              "enunciado": "Os jogos eletrônicos presentes na cultura juvenil podem desempenhar uma relevante função na abordagem do futebol ao",
+              "alternativas": [
+                "Disseminarem uma modalidade, promovendo a igualdade de gênero.",
+                "Superarem jogos malsucedidos no mercado, lançados anteriormente.",
+                "Inovarem a modalidade com novas ofertas de jogos ao mercado.",
+                "Explorarem nichos de mercado antes ignorados, produzindo mais lucro.",
+                "Reforçarem estereótipos de gênero masculino ou feminino nos esportes."
+              ],
+              "correta": "A",
+              "explicacao": "O texto mostra que colocar seleções femininas no videogame ajuda a divulgar o futebol feminino, “um grande passo” na luta pela igualdade de gênero.",
+              "fonte": "ENEM 2020 – Questão 35"
+            },
+            {
+              "id": "LIN-04-02",
+              "texto": "LUTA: prática corporal imprevisível, caracterizada por determinado estado de contato proposital, que possibilita a duas ou mais pessoas se enfrentarem numa constante troca de ações ofensivas e/ou defensivas, regidas por regras, com o objetivo mútuo sobre um alvo móvel personificado no oponente.\n\nGOMES, M. S. P. et al. Ensino das lutas: dos princípios condicionais aos grupos situacionais.\n\nMovimento, n. 2, abr.-jun. 2010 (adaptado).",
+              "enunciado": "De acordo com o texto, podemos identificar uma abordagem das lutas nas aulas de educação física quando o professor realiza uma proposta envolvendo",
+              "alternativas": [
+                "Contato corporal intenso entre o aluno e seu oponente.",
+                "Contenda entre os alunos que se agridem fisicamente.",
+                "Confronto corporal em que os vencedores são previamente identificados.",
+                "Combate corporal intencional com ações regulamentadas entre os oponentes.",
+                "Conflito resolvido pelos alunos por meio de regras previamente estabelecidas."
+              ],
+              "correta": "D",
+              "explicacao": "Pela definição, luta tem contato proposital, troca de ações de ataque e defesa e regras. A proposta deve ser um combate intencional com ações regulamentadas, sem agressão e sem vencedor definido antes.",
+              "fonte": "ENEM 2020 – Questão 36"
+            },
+            {
+              "id": "LIN-04-03",
+              "texto": "O skate apareceu como forma de vivência no lazer em períodos de baixa nas ondas e ficou conhecido como “surfinho”. No início foram utilizados eixos e rodinhas de patins pregados numa madeira qualquer, para sua composição, sendo as rodas de borracha ou ferro. O grande marco na história do skate ocorreu em 1974, quando o engenheiro químico chamado Frank Nasworthy descobriu o uretano, material mais flexível, que oferecia mais aderência às rodas. A dependência dos skatistas em relação a esse novo material igualmente alavancou o surgimento de novas manobras e possibilitou a um maior número de pessoas inexperientes começar a prática dessa modalidade. O resultado foi a criação de campeonatos, marcas, fábricas e lojas especializadas.\n\nARMBRUST, I; LAURD, G, A, A. O skate e suas possibilidades educacionais. Motriz, jul-set, 2010 (adaptado).",
+              "enunciado": "De acordo com o texto, diversos fatores ao longo do tempo",
+              "alternativas": [
+                "Contribuíram para a democratização do skate.",
+                "Evidenciaram as demandas comerciais dos skatistas.",
+                "Definiram a carreira de skatista profissional.",
+                "Permitiram que a prática social do skate substituísse o surfe.",
+                "Indicaram a autonomia dos praticantes de skate."
+              ],
+              "correta": "A",
+              "explicacao": "As rodas de uretano deram aderência e facilitaram as manobras, e até iniciantes passaram a andar de skate. Com campeonatos, marcas e lojas, a prática se democratizou.",
+              "fonte": "ENEM 2021 – Questão 31"
+            },
+            {
+              "id": "LIN-04-04",
+              "texto": "",
+              "enunciado": "A sessão do Comitê Olímpico Internacional (COI) aprovou uma mudança histórica e inédita no lema olímpico, criado em 1894 pelo Barão Pierre de Coubertin para expressar os valores e a excelência do esporte. Mais de 120 anos depois, o lema tem sua primeira alteração para ressaltar a solidariedade e incluir a palavra “juntos” mais rápido, mais alto, mais forte – juntos. A mudança foi aprovada por unanimidade pelos membros do COI e celebrada pelo presidente da entidade.\nDisponível em: https://ge.globo.com Acesso em: 10 nov. 2021 (adaptado)\nDe acordo com o texto, a alteração do lema olímpico teve como objetivo a",
+              "alternativas": [
+                "Unificação do lema anterior ao atual.",
+                "Aproximação entre o lema olímpico e o COI.",
+                "Junção do lema olímpico com os princípios esportivos.",
+                "Associação entre o lema olímpico e a cooperatividade.",
+                "Vinculação entre o lema olímpico e os eventos atléticos."
+              ],
+              "correta": "D",
+              "explicacao": "A palavra “juntos” entrou no lema “para ressaltar a solidariedade”. O lema olímpico passou a se associar à cooperação.",
+              "fonte": "ENEM 2023 – Questão 6"
+            },
+            {
+              "id": "LIN-04-05",
+              "texto": "O acesso às Práticas Corporais/Atividades Físicas (PC/AF) é desigual no Brasil, à semelhança de outros indicadores sociais e de saúde. Em geral, PC/AF prazerosas, diversificadas, mais afeitas ao período de lazer estão concentradas nas populações mais abastadas. As atividades físicas de deslocamento, trajetos a pé ou de bicicleta para estudar ou trabalhar, por exemplo, são mais frequentes na classe social menos favorecida. Aqui, há uma relação inversa e perversa entre variáveis socioeconômicas de acesso às PC/AF. As maiores prevalências de inatividade física foram em mulheres, pessoas com 60 anos ou mais, negros, pessoas com autoavaliação de saúde ruim ou muito ruim, com renda familiar de até quatro salários mínimos por pessoa, pessoas que desconhecem programas públicos de PC/A e residentes em áreas sem locais públicos para a prática.\n\nKNUTH, A. G.; ANTUNES, P. C. Saúde e Sociedade, n. 2, 2021 (adaptado).",
+              "enunciado": "O fator central que impacta a realização de práticas corporais/atividades fisicas no tempo de lazer no Brasil é a",
+              "alternativas": [
+                "Diferença entre homens e mulheres.",
+                "Inexistência de políticas públicas.",
+                "Diversidade de faixa etária.",
+                "Variação de condição étnica.",
+                "Desigualdade entre classes sociais."
+              ],
+              "correta": "E",
+              "explicacao": "O lazer ativo se concentra nos mais ricos e a inatividade é maior entre quem tem menos renda. O fator central é a desigualdade entre classes sociais.",
+              "fonte": "ENEM 2023 – Questão 42"
+            }
+          ]
         }
       ]
     },
@@ -492,6 +573,87 @@
               "correta": "D",
               "explicacao": "Controlar o dinheiro, esconder documentos ou destruir pertences da mulher são formas de violência patrimonial, uma das previstas na Lei Maria da Penha.",
               "fonte": "ENEM 2023 – Questão 60"
+            }
+          ]
+        },
+        {
+          "id": "HUM-04",
+          "titulo": "Geografia física",
+          "questoes": [
+            {
+              "id": "HUM-04-01",
+              "texto": "Os moradores de Utqiagvik passaram dois meses quase totalmente na escuridão\n\nOs habitantes desta pequena cidade no Alasca – o estado dos Estados Unidos mais ao norte – já estão acostumados a longas noites sem ver a luz do dia. Em 18 de novembro de 2018, seus pouco mais de 4 mil habitantes viram o último pôr do sol do ano. A oportunidade seguinte para ver a luz do dia ocorreu no dia 23 de janeiro de 2019, às 13h04 min (horário local).\n\nDisponível em: www.bbc.com. Acesso em: 16 maio 2019 (adaptado).",
+              "enunciado": "O fenômeno descrito está relacionado ao fato de a cidade citada ter uma posição geográfica condicionada pela:",
+              "alternativas": [
+                "Continentalidade.",
+                "Maritimidade.",
+                "Longitude.",
+                "Latitude.",
+                "Altitude."
+              ],
+              "correta": "D",
+              "explicacao": "Utqiagvik fica muito ao norte, acima do Círculo Polar Ártico. Nessa latitude, no inverno, o Sol passa semanas sem aparecer (é a noite polar).",
+              "fonte": "ENEM 2019 – Questão 89"
+            },
+            {
+              "id": "HUM-04-02",
+              "texto": "As cidades de Puebla, no México, e Legazpi, nas Filipinas, não têm quase nada em comum. Estão muito longe uma da outra e são habitadas por povos muito diferentes. O que as une é um trágico detalhe de sua geografia. Elas foram erguidas na vizinhança de alguns dos vulcões mais perigosos do mundo: o mexicano Popocatepéti e  filipino Mayon. Seus habitantes precisam estar prontos para correr a qualquer hora. Eles fazem parte dos 550 milhões de indivíduos que moram em zonas de risco vulcânico no mundo. Ao contrário do que seria sensato, continuam ali, indiferentes ao perigo que os espreita.\n\nANGELO, C. Disponível em http://super.abril.com.br. Acesso em: 24 out. 2015 (adaptado).",
+              "enunciado": "A característica física que justifica a fixação do homem nos locais apresentados no texto é a ocorrência de",
+              "alternativas": [
+                "Solo fértil.",
+                "Encosta íngreme.",
+                "Vegetação diversificada.",
+                "Drenagem eficiente.",
+                "Clima ameno."
+              ],
+              "correta": "A",
+              "explicacao": "As cinzas e lavas dos vulcões deixam o solo rico em minerais e muito fértil. Por isso as pessoas continuam morando perto deles, mesmo com o risco.",
+              "fonte": "ENEM 2020 – Questão 82"
+            },
+            {
+              "id": "HUM-04-03",
+              "texto": "A colisão entre uma placa continental e uma oceânica provocará a subducção desta última sob a placa continental, que, a exemplo dos arcos e ilhas, produzirá um arco magmático na borda do continente, composto por rochas vulcânicas acompanhado de deformações e metamorfismo tanto de rochas preexistentes como de parte das rochas formadas no processo.\n\nTEIXEIRA, W. et al. (Org.). Decifrando a Terra. São Paulo: Oficina de Textos, 2000.",
+              "enunciado": "Qual feição fisiográfica é gerada pelo processo tectônico apresentado?",
+              "alternativas": [
+                "Planícies abissais.",
+                "Planaltos cristalinos.",
+                "Depressões absolutas.",
+                "Bacias sedimentares.",
+                "Dobramentos modernos."
+              ],
+              "correta": "E",
+              "explicacao": "Quando a placa oceânica mergulha sob a continental, as rochas são comprimidas e dobradas, formando cordilheiras jovens: os dobramentos modernos, como os Andes.",
+              "fonte": "ENEM 2020 – Questão 84"
+            },
+            {
+              "id": "HUM-04-04",
+              "texto": "Desde os primórdios da formação da crosta terrestre até os dias de hoje, as rochas formadas vêm sendo continuamente destruídas. Os produtos resultantes da destruição das rochas são transportados pela água, vento e gelo a toda superfície terrestre, acionados pelo calor e pela gravidade. Cessada a energia transportadora, são depositados nas regiões mais baixas da crosta, podendo formar pacotes rochosos.\n\nLEINZ, V. Geologia geral. São Paulo: Editora Nacional, 1989.",
+              "enunciado": "As transformações na superfície terrestre, conforme descritas no texto, compõem o seguinte processo geomorfológico:",
+              "alternativas": [
+                "Ciclo sedimentar.",
+                "Instabilidade sísmica.",
+                "Intemperismo biológico.",
+                "Derramamento basáltico.",
+                "Compactação superficial."
+              ],
+              "correta": "A",
+              "explicacao": "Rochas são desgastadas, os fragmentos são transportados e depositados nas partes baixas, formando novas rochas. Esse caminho é o ciclo sedimentar.",
+              "fonte": "ENEM 2021 – Questão 71"
+            },
+            {
+              "id": "HUM-04-05",
+              "texto": "A cordilheira do Himalaia tem mais de 50 milhões de anos., sendo classificada como a maior cordilheira do planeta. Originário da língua sânscrito, comum na região, seu nome quer dizer “morada da neve”. É possível encontrar nessa cordilheira as quinze maiores montanhas do mundo. Ao todo, existem mais de cem picos, que contam com altitudes bem maiores que 7 000 m. O Everest, considerado o ponto mais alto da Terra, tem nada menos que 8 848 m de altitude, e continua crescendo, aproximadamente, 0,8 mm a cada ano.\n\nDisponível em: https://meioambiente.culturamix.com. Acesso em: 12 nov. 2021 (adaptado).",
+              "enunciado": "Qual dinâmica natural é responsável pelo fenômeno apresentado?",
+              "alternativas": [
+                "Derrame de lava vulcânica.",
+                "Encontro de placas tectônicas.",
+                "Ação do intemperismo químico.",
+                "Sedimentação de erosão eólica.",
+                "Derretimento de geleiras glaciais."
+              ],
+              "correta": "B",
+              "explicacao": "O Himalaia se formou, e ainda cresce, pelo choque entre as placas Indiana e Euroasiática. É o encontro de placas tectônicas.",
+              "fonte": "ENEM 2023 – Questão 53"
             }
           ]
         }
@@ -742,252 +904,85 @@
               "fonte": "ENEM 2023 – Questão 108"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "MATEMATICA",
-      "licoes": [
-        {
-          "id": "MAT-01",
-          "titulo": "Porcentagem e proporção",
-          "questoes": [
-            {
-              "id": "MAT-01-01",
-              "texto": "Uma pessoa, que perdeu um objeto pessoal quando visitou uma cidade, pretende divulgar nos meios de comunicação informações a respeito da perda desse objeto e de seu contato para eventual devolução. No entanto, ela lembra que, de acordo com o Art. 1 234 do Código Civil, poderá ter que pagar pelas despesas do transporte desse objeto até sua cidade e poderá ter que recompensar a pessoa que lhe restituir o objeto em, pelo menos, 5% do valor do objeto.\n\nEla sabe que o custo com transporte será de um quinto do valor atual do objeto e, como ela tem muito interesse em reavê-lo, pretende ofertar o maior percentual possível de recompensa, desde que o gasto total com as despesas não ultrapasse o valor atual do objeto.",
-              "enunciado": "Nessas condições, o percentual sobre o valor do objeto, dado como recompensa, que ela deverá ofertar é igual a",
-              "alternativas": [
-                "20%",
-                "25%",
-                "40%",
-                "60%",
-                "80%"
-              ],
-              "correta": "E",
-              "explicacao": "O transporte custa 1/5 do valor, ou seja, 20%. Como o gasto total não pode passar de 100%, a recompensa máxima é 100% − 20% = 80%.",
-              "fonte": "ENEM 2019 – Questão 138"
-            },
-            {
-              "id": "MAT-01-02",
-              "texto": "Em janeiro de 2013, foram declaradas 1 794 272 admissões e 1 765 372 desligamentos no Brasil, ou seja,\nforam criadas 28 900 vagas de emprego, segundo dados do Cadastro Geral de Empregados e Desempregados (Caged), divulgados pelo Ministério do Trabalho e Emprego (MTE). Segundo o Caged, o número de vagas criadas em janeiro de 2013 sofreu uma queda de 75%, quando comparado com o mesmo período de 2012.\n\nDisponível em: http://portal.mte.gov.br. Acesso em: 23 fev. 2013 (adaptado).",
-              "enunciado": "De acordo com as informações dadas, o número de vagas criadas em janeiro de 2012 foi",
-              "alternativas": [
-                "16 514.",
-                "86 700.",
-                "115 600.",
-                "441 343.",
-                "448 568."
-              ],
-              "correta": "C",
-              "explicacao": "Uma queda de 75% significa que 2013 teve só 25% do número de 2012. Então 28 900 = 0,25 × x, e x = 115 600.",
-              "fonte": "ENEM 2022 – Questão 154"
-            },
-            {
-              "id": "MAT-01-03",
-              "texto": "Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%. A direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano.",
-              "enunciado": "O número mínimo de salas que deverão ser construídas é",
-              "alternativas": [
-                "10",
-                "11",
-                "12",
-                "30",
-                "33"
-              ],
-              "correta": "B",
-              "explicacao": "A lista deste ano é 400 + 10% = 440. Ela deve cair 25%, para 330: são 110 crianças a mais atendidas. Com 10 por sala, 110 ÷ 10 = 11 salas.",
-              "fonte": "ENEM 2023 – Questão 143"
-            },
-            {
-              "id": "MAT-01-04",
-              "texto": "Em uma corrida automobilística, os carros podem fazer paradas nos boxes para efetuar trocar de pneus. Nessas trocas, o trabalho é feito por um grupo de três pessoas em cada pneu. Considere que os grupos iniciam o trabalho no mesmo instante, trabalham à mesma velocidade e cada grupo trabalha em um único pneu. Com os quatro grupos completos, são necessários 4 segundos para que a troca seja efetuada. O tempo gasto por um grupo para trocar um pneu é inversamente proporcional ao número de pessoas trabalhando nele. Em uma dessas paradas, um dos trabalhadores passou mal, não pôde participar da troca e nem foi substituído, de forma que um dos quatro grupos de troca ficou reduzido.",
-              "enunciado": "Nessa parada específica, com um dos grupos reduzido, qual foi o tempo gasto, em segundo, para trocar os quatro pneus?",
-              "alternativas": [
-                "6,0",
-                "5,7",
-                "5,0",
-                "4,5",
-                "4,4"
-              ],
-              "correta": "A",
-              "explicacao": "Com 3 pessoas o pneu leva 4 s. Como o tempo é inversamente proporcional, com 2 pessoas leva 4 × 3/2 = 6 s. A troca só termina quando esse grupo acaba: 6 s.",
-              "fonte": "ENEM 2021 – Questão 159"
-            },
-            {
-              "id": "MAT-01-05",
-              "texto": "Um borrifador de atuação automática libera, a cada acionamento, uma mesma quantidade de inseticida. O recipiente desse produto, quando cheio, contém 360 mL de inseticida, que duram 60 dias se o borrifador permanecer ligado ininterruptamente e for acionado a cada 48 minutos.",
-              "enunciado": "A quantidade de inseticida que é liberada a cada acionamento do borrifador, em mililitro, é",
-              "alternativas": [
-                "0,125.",
-                "0,200.",
-                "4,800.",
-                "6,000.",
-                "12,000."
-              ],
-              "correta": "B",
-              "explicacao": "60 dias têm 60 × 24 × 60 = 86 400 minutos; 86 400 ÷ 48 = 1 800 acionamentos. Então cada um libera 360 ÷ 1 800 = 0,2 mL.",
-              "fonte": "ENEM 2022 – Questão 164"
-            }
-          ]
         },
         {
-          "id": "MAT-02",
-          "titulo": "Geometria e escalas",
+          "id": "NAT-04",
+          "titulo": "Corpo humano e saúde",
           "questoes": [
             {
-              "id": "MAT-02-01",
-              "texto": "A caixa-d’água de um edifício terá a forma de um paralelepípedo retângulo reto com volume igual a 28 080 litros. Em uma maquete que representa o edifício, a caixa d’água tem dimensões 2 cm x 3,51 cm x 4 cm.\n\nDado: 1 dm3 = 1 L",
-              "enunciado": "A escala usada pelo arquiteto foi",
+              "id": "NAT-04-01",
+              "texto": "O “The Kidney Project” é um projeto realizado por cientistas que pretendem desenvolver um rim biônico que executará a maioria das funções biológicas do órgão. O rim biônico possuirá duas partes que incorporam recentes avanços de nanotecnologia, filtração de membrana e biologia celular. Esse projeto significará uma grande melhoria na qualidade de vida para aquelas pessoas que dependem da hemodiálise para sobrevivência.\n\nDisponível em: https://pharm.ucsf.edu. Acesso em: 26 abr. 2019 (adaptado).",
+              "enunciado": "O dispositivo criado promoverá diretamente a",
               "alternativas": [
-                "1 : 10",
-                "1 : 100",
-                "1 : 1 000",
-                "1 : 10 000",
-                "1 : 100 000"
-              ],
-              "correta": "B",
-              "explicacao": "Real: 28 080 L = 28 080 000 cm³. Maquete: 2 × 3,51 × 4 = 28,08 cm³. A razão entre os volumes é 1 000 000 = 100³, logo a escala é 1 : 100.",
-              "fonte": "ENEM 2020 – Questão 138"
-            },
-            {
-              "id": "MAT-02-02",
-              "texto": "Um casal está reformando a cozinha de casa e decidiu comprar um refrigerador novo. Observando a planta da nova cozinha, desenhada na escala de 1: 50, notaram que o espaço destinado ao refrigerador tinha 3,8 cm de altura e 1,6 cm de largura. Eles sabem que os fabricantes de refrigeradores indicam que, para um bom funcionamento e fácil manejo na limpeza, esses eletrodomésticos devem ser colocados em espaços que permitam uma distância de, pelo menos, 10 cm de outros móveis ou paredes, tanto na parte superior quanto nas laterais. O casal comprou um refrigerador que caberia no local a ele destinado na nova cozinha, seguindo as instruções do fabricante.",
-              "enunciado": "Esse refrigerador tem altura e largura máximas, em metro, respectivamente, iguais a",
-              "alternativas": [
-                "1,80 e 0,60.",
-                "1,80 e 0,70.",
-                "1,90 e 0,80.",
-                "2,00 e 0,90.",
-                "2,00 e 1,00."
+                "Remoção de ureia.",
+                "Excreção de lipídios.",
+                "Síntese de vasopressina.",
+                "Transformação de amônia.",
+                "Fabricação de aldosterona."
               ],
               "correta": "A",
-              "explicacao": "Na escala 1 : 50, 3,8 cm viram 1,90 m e 1,6 cm viram 0,80 m. Tirando 10 cm em cima, sobra 1,80 m; tirando 10 cm de cada lado, sobram 0,60 m.",
-              "fonte": "ENEM 2022 – Questão 139"
+              "explicacao": "O rim filtra o sangue e elimina a ureia, resíduo tóxico do metabolismo. É isso que a hemodiálise faz hoje e que o rim biônico fará.",
+              "fonte": "ENEM 2019 – Questão 133"
             },
             {
-              "id": "MAT-02-03",
-              "texto": "Em um condomínio, uma área pavimentada, que tem a forma de um círculo com diâmetro medindo 6m, é cercado por grama. A administração do condomínio deseja ampliar essa área, mantendo seu formato circular, e aumentando, em 8m, o diâmetro dessa região, mantendo o revestimento da parte já existente. O condomínio dispõe, em estoque, de material suficiente para pavimentar mais 100 m² de área.\n\nO síndico do condomínio irá avaliar se esse material disponível será suficiente para pavimentar a região a ser ampliada.\n\nUtilize 3 como aproximação para π.",
-              "enunciado": "A conclusão correta a que o síndico deverá chegar, considerando a nova área a ser pavimentada, é a de que o material disponível em estoque:",
+              "id": "NAT-04-02",
+              "texto": "“Na indústria farmacêutica, é muito comum o emprego de substâncias de revestimento em medicamentos de uso oral, pois trazem uma série de benefícios como alteração de sabor em medicamentos que tenham gosto ruim, melhoria da assimilação do composto, entre outras ações. Alguns compostos poliméricos à base do polissacarídeo celulose são utilizados para garantir que o fármaco somente seja liberado quando em contato com soluções aquosas cujo pH se encontre próximo da faixa da neutralidade.”\n\n(BORTOLINI, K. et al. Análise de perfil de dissolução de cápsulas gastrorresistentes utilizando polímeros industriais com aplicação em farmácias magistrais, Revista da Unifebe, n. 12, 2013. Adaptado.)",
+              "enunciado": "Qual é a finalidade do uso desse revestimento à base de celulose?",
               "alternativas": [
-                "Será suficiente, pois a área da nova região a ser pavimentada mede 21 m².",
-                "Será suficiente, pois a área da nova região a ser pavimentada mede 24 m².",
-                "Será suficiente, pois a área da nova região a ser pavimentada mede 48 m².",
-                "Não será suficiente, pois a área da nova região a ser pavimentada mede 108 m².",
-                "Não será suficiente, pois a área da nova região a ser pavimentada mede 120 m²."
+                "Diminuir a absorção do princípio ativo no intestino.",
+                "Impedir que o fármaco seja solubilizado no intestino.",
+                "Garantir que o fármaco não seja afetado pelas secreções gástricas.",
+                "Permitir a liberação do princípio ativo pela ação das amilases salivares.",
+                "Facilitar a liberação do fármaco pela ação dos sais biliares sobre o revestimento."
               ],
-              "correta": "E",
-              "explicacao": "O novo diâmetro é 6 + 8 = 14 m (raio 7). Área nova: 3 × 7² = 147 m²; área antiga: 3 × 3² = 27 m². A ampliação é de 120 m², mais que os 100 m² do estoque.",
-              "fonte": "ENEM 2019 – Questão 142"
+              "correta": "C",
+              "explicacao": "O revestimento só libera o remédio em pH perto do neutro. Assim ele atravessa intacto o estômago ácido e só se abre no intestino, sem ser afetado pelas secreções gástricas.",
+              "fonte": "ENEM 2020 – Questão 108"
             },
             {
-              "id": "MAT-02-04",
-              "texto": "O projeto de um contêiner, em forma de paralelepípedo reto retangular, previa a pintura dos dois lados (interno e externo) de cada uma das quatro paredes com tinta acrílica e a pintura do piso interno com tinta epóxi. O construtor havia pedido, a cinco fornecedores diferentes, orçamentos das tintas necessárias, mas, antes de iniciar a obra, resolveu mudar o projeto original, alterando o comprimento e a largura para o dobro do originalmente previsto, mantendo inalterada a altura. Ao pedir novos orçamentos aos fornecedores, para as novas dimensões, cada um deu uma resposta diferente sobre as novas quantidades de tinta necessárias.\n\nEm relação ao previsto para o projeto original, as novas quantidades de tinta necessárias informadas pelos fornecedores foram as seguintes:\n\n–  Fornecedor I: “O dobro, tanto para as paredes quanto para o piso”.\n\n– Fornecedor II: “O dobro para as paredes e quatro vezes para o piso”.\n\n– Fornecedor III: “Quatro vezes, tanto para as paredes quanto para o piso.”\n\n– Fornecedor IV: “Quatro vezes para as paredes e o dobro para o piso.”\n\n– Fornecedor V: “Oito vezes para as paredes e quatro vezes para o piso.”\n\nAnalisando as informações dos fornecedores, o construtor providenciará a quantidade adequada de material. Considere a porta de acesso do contêiner como parte de uma das paredes.",
-              "enunciado": "Qual dos fornecedores prestou as informações adequadas, devendo ser o escolhido pelo construtor para aquisição do material?",
+              "id": "NAT-04-03",
+              "texto": "Um dos exames clínicos mais tradicionais para medir a capacidade reflexa dos indivíduos é o exame do reflexo patelar. Esse exame consiste na estimulação da patela, um pequeno osso localizado na parte anterior da articulação do joelho, com um pequeno martelo. A resposta reflexa ao estímulo é caracterizada pelo levantamento da perna em que o estímulo foi aplicado.",
+              "enunciado": "Qual região específica do sistema nervoso coordena essa resposta?",
               "alternativas": [
-                "I",
-                "II",
-                "III",
-                "IV",
-                "V"
+                "Ponte.",
+                "Medula.",
+                "Cerebelo.",
+                "Hipotálamo.",
+                "Neuro-hipófise."
               ],
               "correta": "B",
-              "explicacao": "Dobrando comprimento e largura e mantendo a altura, o perímetro dobra (paredes: o dobro de tinta) e a área do piso fica 2 × 2 = 4 vezes maior.",
-              "fonte": "ENEM 2021 – Questão 166"
+              "explicacao": "O reflexo patelar é um arco reflexo: o estímulo vai até a medula espinal, que manda a resposta direto ao músculo, sem passar pelo cérebro.",
+              "fonte": "ENEM 2021 – Questão 114"
             },
             {
-              "id": "MAT-02-05",
-              "texto": "Peças metálicas de aeronaves abandonadas em aeroportos serão recicladas. Uma dessas peças é maciça e tem o formato cilíndrico, com a medida do raio da base igual a 4 cm e a da altura igual a 50 cm. Ela será derretida, e o volume de metal resultante será utilizado para a fabricação de esferas maciças com diâmetro de 1 cm, a serem usadas para confeccionar rolamentos. Para estimar a quantidade de esferas que poderão ser produzidas a partir de cada uma das peças cilíndricas, admite-se que não ocorre perda de material durante o processo de derretimento.",
-              "enunciado": "Quantas dessas esferas poderão ser obtidas a partir de cada peça cilíndrica?",
+              "id": "NAT-04-04",
+              "texto": "Diversas substâncias são empregadas com a intenção de incrementar o desempenho esportivo de atletas de alto nível. O chamado doping sanguíneo, por exemplo, pela utilização da eritropoietina, é proibido pelas principais federações de esportes no mundo. A eritropoietina é um hormônio produzido pelos rins e fígado e sua principal ação é regular o processo de eritropoiese. Seu uso administrado intravenosamente em quantidades superiores àquelas presentes naturalmente no organismo permite que o indivíduo aumente a sua capacidade de realização de exercícios físicos.",
+              "enunciado": "Esse tipo de doping está diretamente relacionado ao aumento da",
               "alternativas": [
-                "800",
-                "1200",
-                "2400",
-                "4800",
-                "6400"
-              ],
-              "correta": "D",
-              "explicacao": "Cilindro: π × 4² × 50 = 800π cm³. Esfera de raio 0,5 cm: (4/3) × π × 0,5³ = π/6 cm³. Então cabem 800π ÷ (π/6) = 4 800 esferas.",
-              "fonte": "ENEM 2022 – Questão 174"
-            }
-          ]
-        },
-        {
-          "id": "MAT-03",
-          "titulo": "Probabilidade e média",
-          "questoes": [
-            {
-              "id": "MAT-03-01",
-              "texto": "O dono de um restaurante situado às margens de uma rodovia percebeu que, ao colocar uma placa de propaganda de seu restaurante ao longo da rodovia, as vendas aumentaram. Pesquisou junto aos seus clientes e concluiu que a probabilidade de um motorista perceber uma placa de anúncio é 1/2.\n\nCom isso, após autorização do órgão competente, decidiu instalar novas placas com anúncios de seu restaurante ao longo dessa rodovia, de maneira que a probabilidade de um motorista perceber pelo menos uma das placas instaladas fosse superior a 99/100.",
-              "enunciado": "A quantidade mínima de novas placas de propaganda a serem instaladas é",
-              "alternativas": [
-                "99",
-                "51",
-                "50",
-                "6",
-                "1"
-              ],
-              "correta": "D",
-              "explicacao": "Com n placas, a chance de não ver nenhuma é (1/2)^n, que precisa ser menor que 1/100. Isso exige n = 7 placas. Como já existe 1, faltam 6 novas.",
-              "fonte": "ENEM 2019 – Questão 159"
-            },
-            {
-              "id": "MAT-03-02",
-              "texto": "Em um determinado ano, os computadores da receita federal de um país identificaram como inconsistentes 20% das declarações de imposto de renda que lhe foram encaminhadas.\nUma declaração é classificada como inconsistente quando apresenta algum tipo de erro ou conflito nas informações prestadas. Essas declarações consideradas inconsistentes foram analisadas pelos auditores, que constataram que 25% delas eram fraudulentas.\n\nConstatou-se, ainda, que, dentre as declarações que não apresentaram inconsistências, 6,25% eram fraudulentas.",
-              "enunciado": "Qual é a probabilidade de, nesse ano, a declaração de um contribuinte ser considerada inconsistente, dado que ela era fraudulenta?",
-              "alternativas": [
-                "0,0500",
-                "0,1000",
-                "0,1125",
-                "0,3125",
-                "0,5000"
+                "Frequência cardíaca.",
+                "Capacidade pulmonar.",
+                "Massa muscular do indivíduo.",
+                "Atividade anaeróbica da musculatura.",
+                "Taxa de transporte de oxigênio pelo sangue."
               ],
               "correta": "E",
-              "explicacao": "P(fraudulenta) = 0,20 × 0,25 + 0,80 × 0,0625 = 0,05 + 0,05 = 0,10. P(inconsistente, dado que é fraudulenta) = 0,05 ÷ 0,10 = 0,5.",
-              "fonte": "ENEM 2019 – Questão 173"
+              "explicacao": "A eritropoietina estimula a produção de hemácias. Com mais hemácias, o sangue leva mais oxigênio aos músculos.",
+              "fonte": "ENEM 2022 – Questão 104"
             },
             {
-              "id": "MAT-03-03",
-              "texto": "Visando atrair mais clientes, o gerente de uma loja anunciou uma promoção em que cada cliente que realizar uma compra pode ganhar um voucher para ser usado em sua próxima compra. Para ganhar seu voucher, o cliente precisa retirar, ao acaso, uma bolinha de dentro de cada uma das duas urnas A e B disponibilizadas pelo gerente, nas quais há apenas bolinhas pretas e brancas. Atualmente, a probabilidade de se escolher, ao acaso, uma bolinha preta na urna A é igual a 20% e a probabilidade de se escolher uma bolinha preta na urna B é 25%. Ganha o voucher o cliente que retirar duas bolinhas pretas, uma de cada urna.\n\nCom o passar dos dias, o gerente percebeu que, para a promoção ser viável aos negócios, era preciso alterar a probabilidade de acerto do cliente sem alterar a regra da promoção. Para isso, resolveu alterar a quantidade de bolinhas brancas na urna B de forma que a probabilidade de um cliente ganhar o voucher passasse a ser menor ou igual a 1%. Sabe-se que a urna B tem 4 bolinhas pretas e que, em ambas as urnas, todas as bolinhas têm a mesma probabilidade de serem retiradas.",
-              "enunciado": "Qual é o número mínimo de bolinhas brancas que o gerente deve adicionar à urna B?",
+              "id": "NAT-04-05",
+              "texto": "A tecnologia de vacinas de RNA mensageiro (RNAm) é investigada há anos. Avanços científicos em genética molecular permitiram desenvolver uma vacina para controle da pandemia da covid-19 causada pelo vírus de RNA SARS-CoV-2. A vacina de RNAm tem sequências de genes do vírus. Entretanto, por ser muito instável, o RNAm deve ser recoberto por uma capa de lipídios que evita sua degradação e favorece sua ação. Dessa forma, o RNAm desempenhará sua função especifica atuando no mesmo compartimento celular de sempre.\n\nDisponível em: https://sbim.org.br. Acesso em: 29 nov. 2021 (adaptado).",
+              "enunciado": "A imunização produzida por esse tipo de vacina é alcançada por meio da",
               "alternativas": [
-                "20",
-                "60",
-                "64",
-                "68",
-                "80"
+                "Estimulação de leucócitos induzida pela capa lipídica contendo RNAm.",
+                "Atuação do RNAm como sequestrador do vírus para o meio extracelular.",
+                "Tradução do RNAm em proteína viral, desencadeando a resposta antigênica.",
+                "Competição entre o RNAm vacinal e o RNA viral pelos sítios dos ribossomos.",
+                "Incorporação do RNAm viral ao genoma do hospedeiro. gerando novo fenótipo."
               ],
               "correta": "C",
-              "explicacao": "É preciso 0,20 × P(preta em B) ≤ 0,01, ou seja, P ≤ 5%. Com 4 pretas, a urna B precisa ter 80 bolinhas. Hoje tem 16 (4 pretas são 25%), então faltam 64 brancas.",
-              "fonte": "ENEM 2023 – Questão 138"
-            },
-            {
-              "id": "MAT-03-04",
-              "texto": "O técnico de um time de basquete pretende aumentar a estatura média de sua equipe de 1,93 m para, no mínimo, 1,99 m. Para tanto, dentre os 15 jogadores que fazem parte de sua equipe, irá substituir os quatro mais baixos, de estaturas: 1,78 m, 1,82 m, 1,84 m e 1,86 m. Para isso, o técnico contratou um novo jogador de 2,02 m. Os outros três jogadores que ele ainda precisa contratar devem satisfazer à sua necessidade de aumentar a média das estaturas da equipe. Ele fixará a média das estaturas para os três jogadores que ainda precisa contratar dentro do critério inicialmente estabelecido.",
-              "enunciado": "Qual deverá ser a média mínima das estaturas, em metro, que ele deverá fixar para o grupo de três novos jogadores que ainda irá contratar?",
-              "alternativas": [
-                "1,96",
-                "1,98",
-                "2,05",
-                "2,06",
-                "2,08"
-              ],
-              "correta": "D",
-              "explicacao": "Soma atual: 15 × 1,93 = 28,95. Meta: 15 × 1,99 = 29,85. Tirando os quatro mais baixos (7,30) e pondo o de 2,02, a soma vai a 23,67. Os 3 novos somam 6,18: média 2,06 m.",
-              "fonte": "ENEM 2020 – Questão 165"
-            },
-            {
-              "id": "MAT-03-05",
-              "texto": "Um tipo de semente necessita de bastante água nos dois primeiros meses após o plantio. Um produtor pretende estabelecer o melhor momento para o plantio desse tipo de semente, nos meses de outubro a março. Após consultar a previsão do índice mensal de precipitação de chuva (ImPC) da região onde ocorrerá o plantio, para o período chuvoso de 2020-2021, ele obteve os seguintes dados:\n• outubro/2020: ImPC = 250 mm;\n• novembro/2020: ImPC = 150 mm;\n• dezembro/2020: ImPC = 200 mm;\n• janeiro/2021: ImPC = 450 mm;\n• fevereiro/2021: ImPC = 100 mm;\n• março/2021: ImPC = 200 mm.\n\nCom base nessas previsões, ele precisa escolher dois meses consecutivos em que a média mensal de precipitação seja a maior possível.",
-              "enunciado": "No início de qual desses meses o produtor deverá plantar esse tipo de semente?",
-              "alternativas": [
-                "Outubro.",
-                "Novembro.",
-                "Dezembro.",
-                "Janeiro.",
-                "Fevereiro."
-              ],
-              "correta": "C",
-              "explicacao": "Médias de dois meses seguidos: out-nov 200, nov-dez 175, dez-jan 325, jan-fev 275 e fev-mar 150 mm. A maior é dezembro-janeiro: plantar no início de dezembro.",
-              "fonte": "ENEM 2023 – Questão 180"
+              "explicacao": "O RNAm entra nas células e é traduzido pelos ribossomos em uma proteína do vírus. O sistema imune reconhece essa proteína como antígeno e cria defesas.",
+              "fonte": "ENEM 2023 – Questão 106"
             }
           ]
         }
