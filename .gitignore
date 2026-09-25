@@ -7,3 +7,6 @@ build/
 /captures
 .externalNativeBuild
 .cxx
+
+# Bruto baixado da API enem.dev (fora do app)
+tools/enem_raw/
