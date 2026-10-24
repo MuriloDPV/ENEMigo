@@ -17,9 +17,14 @@ import com.google.android.material.card.MaterialCardView;
 import com.murilo.enemigo.R;
 import com.murilo.enemigo.data.ProgressoManager;
 import com.murilo.enemigo.data.QuestaoRepository;
+import com.murilo.enemigo.model.Conquista;
 import com.murilo.enemigo.model.Licao;
 import com.murilo.enemigo.ui.componente.CartaoRelevo;
+import com.murilo.enemigo.util.Celebracoes;
+import com.murilo.enemigo.util.Celebracoes.Celebracao;
 import com.murilo.enemigo.util.Constantes;
+
+import java.util.List;
 
 /**
  * Resultado da sessão. Só exibe o que recebeu nos extras: o progresso já foi salvo pela Quiz.
@@ -88,6 +93,16 @@ public class ResultadoActivity extends AppCompatActivity {
         } else if (acertos < Constantes.ACERTOS_PARA_DESBLOQUEAR && temProximaLicao(licaoId)) {
             adicionarMensagem(getString(R.string.resultado_faca_acertos), R.drawable.ic_cadeado,
                     R.color.texto_secundario);
+        }
+        // Aviso das conquistas novas (RN33), uma linha para cada
+        List<Celebracao> celebracoes = Celebracoes.deTextos(
+                recebida.getStringArrayListExtra(Constantes.EXTRA_CELEBRACOES));
+        for (Celebracao c : celebracoes) {
+            Conquista conquista = c.tipo == Celebracoes.Tipo.CONQUISTA ? Conquista.fromId(c.valor) : null;
+            if (conquista != null) {
+                adicionarMensagem(getString(R.string.resultado_conquista,
+                        getString(conquista.getTituloRes())), R.drawable.ic_trofeu, R.color.marca_acento_texto);
+            }
         }
 
         // CONTINUAR e o Voltar do sistema fecham esta tela e voltam para a Trilha ou a Revisão.

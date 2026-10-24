@@ -18,6 +18,9 @@ public class ResultadoSessao {
     private boolean desbloqueouProxima;
     private int vidasRecuperadas;
     private ArrayList<String> novasConquistas = new ArrayList<>();
+    private int nivel;
+    private boolean subiuDeNivel;
+    private boolean ofensivaAumentou;
 
     public String getModo() {
         return modo;
@@ -93,12 +96,38 @@ public class ResultadoSessao {
         this.vidasRecuperadas = vidasRecuperadas;
     }
 
-    /** Ids das conquistas desta sessão. Fica vazia até a Aula 4. */
+    /** Ids das conquistas desbloqueadas nesta sessão (RN33). */
     public ArrayList<String> getNovasConquistas() {
         return novasConquistas;
     }
 
     public void setNovasConquistas(ArrayList<String> novasConquistas) {
         this.novasConquistas = novasConquistas;
+    }
+
+    /** Nível depois da sessão. */
+    public int getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+
+    public boolean isSubiuDeNivel() {
+        return subiuDeNivel;
+    }
+
+    public void setSubiuDeNivel(boolean subiuDeNivel) {
+        this.subiuDeNivel = subiuDeNivel;
+    }
+
+    /** true na primeira sessão do dia: a ofensiva mostrada antes era menor. */
+    public boolean isOfensivaAumentou() {
+        return ofensivaAumentou;
+    }
+
+    public void setOfensivaAumentou(boolean ofensivaAumentou) {
+        this.ofensivaAumentou = ofensivaAumentou;
     }
 }

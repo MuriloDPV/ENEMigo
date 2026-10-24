@@ -82,6 +82,7 @@
     <string name="resultado_revisao">Você tirou %1$s do caderno e recuperou %2$s</string>
     <string name="resultado_revisao_sem_vidas">Você tirou %1$s do caderno</string>
     <string name="resultado_revisao_nenhuma">Nenhuma questão saiu do caderno desta vez</string>
+    <string name="resultado_conquista">Conquista desbloqueada: %1$s</string>
     <plurals name="qtd_questoes">
         <item quantity="one">%1$d questão</item>
         <item quantity="other">%1$d questões</item>

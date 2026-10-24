@@ -28,6 +28,7 @@ import com.murilo.enemigo.model.Questao;
 import com.murilo.enemigo.model.ResultadoSessao;
 import com.murilo.enemigo.ui.componente.BotaoRelevo;
 import com.murilo.enemigo.ui.componente.CartaoRelevo;
+import com.murilo.enemigo.util.Celebracoes;
 import com.murilo.enemigo.util.Constantes;
 import com.murilo.enemigo.util.TextoRico;
 
@@ -431,6 +432,8 @@ public class QuizActivity extends AppCompatActivity {
         intent.putExtra(Constantes.EXTRA_META_BATIDA, resultado.isMetaBatidaAgora());
         intent.putExtra(Constantes.EXTRA_DESBLOQUEOU, resultado.isDesbloqueouProxima());
         intent.putExtra(Constantes.EXTRA_VIDAS_RECUPERADAS, resultado.getVidasRecuperadas());
+        intent.putStringArrayListExtra(Constantes.EXTRA_CELEBRACOES,
+                Celebracoes.paraTextos(Celebracoes.montar(resultado)));
         startActivity(intent);
         finish();
     }

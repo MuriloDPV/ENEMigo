@@ -44,6 +44,7 @@ public final class Constantes {
     public static final String EXTRA_META_BATIDA = "EXTRA_META_BATIDA";
     public static final String EXTRA_DESBLOQUEOU = "EXTRA_DESBLOQUEOU";
     public static final String EXTRA_VIDAS_RECUPERADAS = "EXTRA_VIDAS_RECUPERADAS";
+    public static final String EXTRA_CELEBRACOES = "EXTRA_CELEBRACOES";
     public static final String EXTRA_ABRIR_REVISAO = "ABRIR_REVISAO";
 
     // Modos do Quiz

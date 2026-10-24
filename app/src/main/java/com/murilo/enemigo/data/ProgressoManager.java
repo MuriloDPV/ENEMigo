@@ -4,14 +4,18 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.murilo.enemigo.model.Area;
+import com.murilo.enemigo.model.Conquista;
 import com.murilo.enemigo.model.EstadoLicao;
 import com.murilo.enemigo.model.Licao;
 import com.murilo.enemigo.model.ResultadoSessao;
+import com.murilo.enemigo.util.Celebracoes;
+import com.murilo.enemigo.util.Conquistas;
 import com.murilo.enemigo.util.Constantes;
 import com.murilo.enemigo.util.DataUtil;
 import com.murilo.enemigo.util.Gamificacao;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -259,6 +263,7 @@ public final class ProgressoManager {
         }
         editor.putString(Constantes.CHAVE_ULTIMA_AREA, licao.getArea().name());
         editor.apply();
+        resultado.setNovasConquistas(verificarConquistas());
         return resultado;
     }
 
@@ -276,6 +281,7 @@ public final class ProgressoManager {
         SharedPreferences.Editor editor = prefs.edit();
         registrarSessao(editor, resultado, xp, acertos, respondidas);
         editor.apply();
+        resultado.setNovasConquistas(verificarConquistas());
         return resultado;
     }
 
@@ -288,24 +294,75 @@ public final class ProgressoManager {
         int meta = getMetaDiaria();
         int xpHojeAntes = getXpHoje();
         int xpHojeDepois = xpHojeAntes + xpGanho;
-        editor.putInt(Constantes.CHAVE_XP_TOTAL, getXpTotal() + xpGanho);
+        int xpAntes = getXpTotal();
+        editor.putInt(Constantes.CHAVE_XP_TOTAL, xpAntes + xpGanho);
         editor.putInt(Constantes.CHAVE_XP_HOJE, xpHojeDepois);
         editor.putString(Constantes.CHAVE_DATA_XP_HOJE, DataUtil.paraTexto(hoje));
         resultado.setMetaBatidaAgora(Gamificacao.metaBatidaAgora(xpHojeAntes, xpHojeDepois, meta));
+        resultado.setNivel(Gamificacao.calcularNivel(xpAntes + xpGanho));
+        resultado.setSubiuDeNivel(Celebracoes.subiuDeNivel(xpAntes, xpAntes + xpGanho));
 
         // Ofensiva (RN26, RN27)
         LocalDate ultima = lerUltimaDataEstudo();
-        int ofensiva = Gamificacao.calcularNovaOfensiva(ultima, hoje,
-                prefs.getInt(Constantes.CHAVE_OFENSIVA, 0));
+        int ofensivaSalva = prefs.getInt(Constantes.CHAVE_OFENSIVA, 0);
+        int ofensiva = Gamificacao.calcularNovaOfensiva(ultima, hoje, ofensivaSalva);
         editor.putInt(Constantes.CHAVE_OFENSIVA, ofensiva);
         editor.putInt(Constantes.CHAVE_MAIOR_OFENSIVA, Math.max(getMaiorOfensiva(), ofensiva));
         editor.putString(Constantes.CHAVE_ULTIMA_DATA_ESTUDO,
                 DataUtil.paraTexto(Gamificacao.calcularNovaDataEstudo(ultima, hoje)));
         resultado.setOfensiva(ofensiva);
+        // Compara com a ofensiva que o aluno via antes da sessão (já zerada se pulou um dia).
+        resultado.setOfensivaAumentou(
+                ofensiva > Gamificacao.ofensivaParaExibir(ultima, hoje, ofensivaSalva));
 
         // Totais para as estatísticas
         editor.putInt(Constantes.CHAVE_TOTAL_RESPONDIDAS, getTotalRespondidas() + respondidas);
         editor.putInt(Constantes.CHAVE_TOTAL_ACERTOS, getTotalAcertos() + acertos);
+    }
+
+    // ---------------------------------------------------------------- Conquistas
+
+    /** Ids das conquistas desbloqueadas (cópia: pode alterar à vontade). */
+    public Set<String> getConquistas() {
+        return new HashSet<>(prefs.getStringSet(Constantes.CHAVE_CONQUISTAS, new HashSet<>()));
+    }
+
+    /**
+     * RN32/RN33: chamado no fim da sessão, depois de salvar XP e ofensiva. Salva as conquistas
+     * novas (uma conquista nunca é perdida) e devolve os ids delas.
+     */
+    private ArrayList<String> verificarConquistas() {
+        Set<String> desbloqueadas = getConquistas();
+        Conquistas.Estado estado = new Conquistas.Estado()
+                .licoesTerminadas(getTotalLicoesTerminadas())
+                .ofensiva(prefs.getInt(Constantes.CHAVE_OFENSIVA, 0))
+                .xpTotal(getXpTotal())
+                .licoesPerfeitas(prefs.getInt(Constantes.CHAVE_LICOES_PERFEITAS, 0))
+                .licoesMatematicaConcluidas(getLicoesConcluidas(Area.MATEMATICA))
+                .totalLicoesMatematica(repositorio.getTotalLicoes(Area.MATEMATICA));
+
+        ArrayList<String> novas = new ArrayList<>();
+        for (Conquista conquista : Conquistas.novas(estado, desbloqueadas)) {
+            novas.add(conquista.getId());
+        }
+        if (!novas.isEmpty()) {
+            desbloqueadas.addAll(novas);
+            prefs.edit().putStringSet(Constantes.CHAVE_CONQUISTAS, desbloqueadas).apply();
+        }
+        return novas;
+    }
+
+    /** Lições feitas pelo menos uma vez, com qualquer nota. */
+    private int getTotalLicoesTerminadas() {
+        int total = 0;
+        for (Area area : Area.values()) {
+            for (Licao licao : repositorio.getLicoes(area)) {
+                if (getMelhor(licao.getId()) >= 0) {
+                    total++;
+                }
+            }
+        }
+        return total;
     }
 
     /** RN34: apaga todas as chaves. As questões (assets) não são afetadas. */
