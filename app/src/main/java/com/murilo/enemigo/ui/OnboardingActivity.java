@@ -1,6 +1,5 @@
 package com.murilo.enemigo.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -89,8 +88,9 @@ public class OnboardingActivity extends AppCompatActivity {
         }
 
         ProgressoManager.getInstance(this).concluirOnboarding(nome, meta);
-        startActivity(new Intent(this, MainActivity.class));
-        // O Voltar da MainActivity não deve voltar para cá.
+        // Depois do nome e da meta, monta o avatar (dá para pular) e só então abre o app.
+        startActivity(AvatarActivity.criarIntent(this, true));
+        // O Voltar não deve voltar para cá.
         finish();
     }
 }

@@ -43,20 +43,43 @@
                 layout="@layout/layout_status" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/txt_saudacao"
-            style="@style/Texto.Titulo.Grande"
+        <!-- Saudação com o avatar do aluno (toque para abrir o Perfil) -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <TextView
-            style="@style/Texto.Secundario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:text="@string/saudacao_subtitulo"
-            android:textSize="16sp" />
+            <ImageView
+                android:id="@+id/img_avatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/cd_avatar_perfil" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_saudacao"
+                    style="@style/Texto.Titulo.Grande"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/Texto.Secundario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/saudacao_subtitulo"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
 
         <!-- Meta diária -->
         <com.murilo.enemigo.ui.componente.CartaoRelevo

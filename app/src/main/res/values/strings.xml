@@ -172,6 +172,55 @@
     <string name="celebracao_conquista_titulo">Conquista nova!</string>
     <string name="celebracao_conquista_fala">Mais uma pra coleção!</string>
 
+    <!-- Avatar -->
+    <string name="avatar_titulo">Seu avatar</string>
+    <string name="avatar_titulo_primeiro_acesso">Monte seu avatar</string>
+    <string name="avatar_subtitulo_primeiro_acesso">Dá para mudar quando quiser, no Perfil.</string>
+    <string name="avatar_pular">Pular</string>
+    <string name="avatar_salvo">Avatar salvo</string>
+    <string name="btn_sortear">SORTEAR</string>
+    <string name="btn_pronto">PRONTO</string>
+    <string name="cd_avatar_previa">Prévia do seu avatar</string>
+    <string name="cd_avatar_editar">Seu avatar. Toque para editar</string>
+    <string name="cd_avatar_perfil">Seu avatar. Toque para abrir o Perfil</string>
+    <string name="cd_avatar_opcao">%1$s: %2$s</string>
+    <string name="cd_avatar_opcao_cor">%1$s: cor %2$d</string>
+    <string name="cd_avatar_escolhida">%1$s, escolhida</string>
+    <string-array name="avatar_partes">
+        <item>Pele</item>
+        <item>Rosto</item>
+        <item>Cabelo</item>
+        <item>Cor do cabelo</item>
+        <item>Olhos</item>
+        <item>Acessório</item>
+        <item>Fundo</item>
+    </string-array>
+    <string-array name="avatar_rostos">
+        <item>Redondo</item>
+        <item>Oval</item>
+        <item>Quadrado</item>
+    </string-array>
+    <string-array name="avatar_cabelos">
+        <item>Curto</item>
+        <item>Cacheado</item>
+        <item>Crespo alto</item>
+        <item>Longo</item>
+        <item>Coque</item>
+        <item>Raspado</item>
+    </string-array>
+    <string-array name="avatar_olhos">
+        <item>Redondos</item>
+        <item>Sorridentes</item>
+        <item>Grandes</item>
+        <item>Com cílios</item>
+    </string-array>
+    <string-array name="avatar_acessorios">
+        <item>Nenhum</item>
+        <item>Óculos</item>
+        <item>Boné</item>
+        <item>Fone</item>
+    </string-array>
+
     <!-- Configurações (C5) -->
     <string name="configuracoes_titulo">Configurações</string>
     <string name="config_secao_nome">Seu nome</string>

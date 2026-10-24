@@ -44,6 +44,11 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name=".ui.AvatarActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".ui.CelebracaoActivity"
             android:exported="false"
             android:screenOrientation="portrait"

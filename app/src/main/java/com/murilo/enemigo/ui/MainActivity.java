@@ -81,6 +81,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /** Troca de aba por código (ex.: o avatar do Início abre o Perfil). */
+    public void abrirAba(int itemId) {
+        bottomNav.setSelectedItemId(itemId);
+    }
+
     private boolean consumirPedidoDeRevisao(Intent intent) {
         boolean abrir = intent.getBooleanExtra(Constantes.EXTRA_ABRIR_REVISAO, false);
         intent.removeExtra(Constantes.EXTRA_ABRIR_REVISAO);

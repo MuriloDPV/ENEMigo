@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Editor do avatar: prévia ao vivo, as partes em chips e as opções da parte escolhida. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    android:orientation="vertical">
+
+    <!-- Cabeçalho: voltar (ou "Pular" no primeiro acesso) e título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="8dp">
+
+        <ImageButton
+            android:id="@+id/btn_voltar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/voltar"
+            android:src="@drawable/ic_voltar"
+            app:tint="@color/texto_principal" />
+
+        <TextView
+            android:id="@+id/txt_titulo"
+            style="@style/Texto.Titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/avatar_titulo" />
+
+        <Button
+            android:id="@+id/btn_pular"
+            style="@style/Dialogo.Botao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/avatar_pular"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_subtitulo"
+        style="@style/Texto.Secundario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/margem_tela"
+        android:text="@string/avatar_subtitulo_primeiro_acesso"
+        android:visibility="gone" />
+
+    <!-- Prévia ao vivo -->
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="164dp"
+        android:layout_height="164dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/cd_avatar_previa" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/grupo_partes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/margem_tela"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true" />
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_opcoes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="14dp"
+        android:paddingBottom="8dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/largura_borda"
+        android:background="@color/superficie_borda" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <com.murilo.enemigo.ui.componente.BotaoRelevo
+            android:id="@+id/btn_sortear"
+            style="@style/Widget.ENEMigo.Botao.Neutro"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/altura_botao"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:text="@string/btn_sortear" />
+
+        <com.murilo.enemigo.ui.componente.BotaoRelevo
+            android:id="@+id/btn_salvar"
+            style="@style/Widget.ENEMigo.Botao.Primario"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/altura_botao"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:text="@string/btn_salvar" />
+    </LinearLayout>
+</LinearLayout>

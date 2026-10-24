@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uma opção do editor de avatar: um avatar pequeno com a opção aplicada, ou uma bolinha de cor.
+     A escolhida ganha o anel na cor da marca (fundo trocado no Java). -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_margin="4dp"
+    android:background="?attr/selectableItemBackground">
+
+    <FrameLayout
+        android:id="@+id/anel"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/img_opcao"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no" />
+    </FrameLayout>
+</FrameLayout>

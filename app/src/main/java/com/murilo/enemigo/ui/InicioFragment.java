@@ -18,9 +18,11 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.murilo.enemigo.R;
+import com.murilo.enemigo.data.PreferenciasManager;
 import com.murilo.enemigo.data.ProgressoManager;
 import com.murilo.enemigo.data.QuestaoRepository;
 import com.murilo.enemigo.model.Area;
+import com.murilo.enemigo.ui.componente.AvatarDrawable;
 import com.murilo.enemigo.ui.componente.CartaoRelevo;
 import com.murilo.enemigo.util.Constantes;
 
@@ -53,6 +55,10 @@ public class InicioFragment extends Fragment {
         for (int i = 0; i < CARTOES.length; i++) {
             configurarCartao(view.findViewById(CARTOES[i]), AREAS[i]);
         }
+
+        // O avatar leva para a aba Perfil.
+        view.findViewById(R.id.img_avatar).setOnClickListener(v ->
+                ((MainActivity) requireActivity()).abrirAba(R.id.nav_perfil));
     }
 
     @Override
@@ -66,6 +72,8 @@ public class InicioFragment extends Fragment {
 
         BarraStatus.atualizar(view.findViewById(R.id.status));
 
+        ((ImageView) view.findViewById(R.id.img_avatar)).setImageDrawable(AvatarDrawable.criar(
+                requireContext(), PreferenciasManager.getInstance(requireContext()).getAvatar()));
         ((TextView) view.findViewById(R.id.txt_saudacao))
                 .setText(getString(R.string.saudacao_titulo, progresso.getNome()));
 

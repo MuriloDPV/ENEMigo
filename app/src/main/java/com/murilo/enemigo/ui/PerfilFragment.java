@@ -20,9 +20,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.murilo.enemigo.R;
+import com.murilo.enemigo.data.PreferenciasManager;
 import com.murilo.enemigo.data.ProgressoManager;
 import com.murilo.enemigo.model.Conquista;
 import com.murilo.enemigo.ui.adapter.ConquistaAdapter;
+import com.murilo.enemigo.ui.componente.AvatarDrawable;
 import com.murilo.enemigo.util.Constantes;
 import com.murilo.enemigo.util.Gamificacao;
 
@@ -48,6 +50,8 @@ public class PerfilFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         view.findViewById(R.id.btn_configuracoes).setOnClickListener(v ->
                 startActivity(new Intent(requireContext(), ConfiguracoesActivity.class)));
+        view.findViewById(R.id.btn_avatar).setOnClickListener(v ->
+                startActivity(AvatarActivity.criarIntent(requireContext(), false)));
 
         RecyclerView rvConquistas = view.findViewById(R.id.rv_conquistas);
         rvConquistas.setLayoutManager(new GridLayoutManager(requireContext(), 3));
@@ -66,6 +70,8 @@ public class PerfilFragment extends Fragment {
         int nivel = progresso.getNivel();
         int xpNoNivel = Gamificacao.calcularXpNoNivel(xp);
 
+        ((ImageView) view.findViewById(R.id.img_avatar)).setImageDrawable(AvatarDrawable.criar(
+                requireContext(), PreferenciasManager.getInstance(requireContext()).getAvatar()));
         ((TextView) view.findViewById(R.id.txt_nome)).setText(progresso.getNome());
         ((TextView) view.findViewById(R.id.txt_nivel)).setText(getString(R.string.perfil_nivel, nivel));
         LinearProgressIndicator progressNivel = view.findViewById(R.id.progress_nivel);
