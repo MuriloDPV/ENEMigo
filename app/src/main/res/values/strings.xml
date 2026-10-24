@@ -175,6 +175,12 @@
     <string name="config_sobre">%1$s, versão %2$s. Questões retiradas das provas oficiais do ENEM, disponíveis publicamente no site do INEP. App educacional sem vínculo com o INEP.</string>
 
     <!-- Conquistas (C3) -->
+    <string name="perfil_conquistas">Conquistas (%1$d/%2$d)</string>
+    <string name="perfil_conquistas_vazio">Termine sua primeira lição para ganhar a primeira medalha.</string>
+    <string name="conquista_desbloqueada">Desbloqueada</string>
+    <string name="conquista_bloqueada">Ainda bloqueada</string>
+    <string name="cd_conquista_desbloqueada">Conquista desbloqueada: %1$s. %2$s</string>
+    <string name="cd_conquista_bloqueada">Conquista bloqueada: %1$s. %2$s</string>
     <string name="conquista_primeira_licao">Primeiro passo</string>
     <string name="conquista_primeira_licao_desc">Termine sua primeira lição</string>
     <string name="conquista_ofensiva_3">Pegando fogo</string>

@@ -1,5 +1,6 @@
 package com.murilo.enemigo.ui;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
@@ -13,17 +14,27 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.murilo.enemigo.R;
 import com.murilo.enemigo.data.ProgressoManager;
+import com.murilo.enemigo.model.Conquista;
+import com.murilo.enemigo.ui.adapter.ConquistaAdapter;
 import com.murilo.enemigo.util.Constantes;
 import com.murilo.enemigo.util.Gamificacao;
 
+import java.util.Set;
+
 /**
- * Aba Perfil (versão básica da Aula 3): nome, nível, barra de XP e estatísticas.
+ * Aba Perfil: nome, nível, barra de XP, estatísticas e a grade de conquistas.
+ * A engrenagem abre as Configurações.
  */
 public class PerfilFragment extends Fragment {
+
+    private final ConquistaAdapter adapterConquistas = new ConquistaAdapter(this::mostrarConquista);
 
     @Nullable
     @Override
@@ -37,6 +48,10 @@ public class PerfilFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         view.findViewById(R.id.btn_configuracoes).setOnClickListener(v ->
                 startActivity(new Intent(requireContext(), ConfiguracoesActivity.class)));
+
+        RecyclerView rvConquistas = view.findViewById(R.id.rv_conquistas);
+        rvConquistas.setLayoutManager(new GridLayoutManager(requireContext(), 3));
+        rvConquistas.setAdapter(adapterConquistas);
     }
 
     @Override
@@ -84,6 +99,38 @@ public class PerfilFragment extends Fragment {
         preencher(view, R.id.stat_minutos_hoje,
                 getString(R.string.stat_minutos_valor, progresso.getMinutosHoje()),
                 R.string.stat_minutos_hoje, R.drawable.ic_relogio, R.color.marca_acento_texto);
+
+        // Conquistas (C3): acesas as desbloqueadas, cinza as outras
+        Set<String> desbloqueadas = progresso.getConquistas();
+        int quantas = 0;
+        for (Conquista c : Conquista.values()) {
+            if (desbloqueadas.contains(c.getId())) {
+                quantas++;
+            }
+        }
+        ((TextView) view.findViewById(R.id.txt_conquistas_titulo)).setText(
+                getString(R.string.perfil_conquistas, quantas, Conquista.values().length));
+        view.findViewById(R.id.txt_conquistas_vazio).setVisibility(quantas == 0 ? View.VISIBLE : View.GONE);
+        adapterConquistas.setDesbloqueadas(desbloqueadas);
+    }
+
+    /** Medalha grande, título, descrição e se já foi desbloqueada. */
+    @SuppressLint("InflateParams") // o conteúdo de um diálogo não tem pai na hora de inflar
+    private void mostrarConquista(Conquista conquista, boolean desbloqueada) {
+        View conteudo = LayoutInflater.from(requireContext()).inflate(R.layout.dialogo_conquista, null);
+        ConquistaAdapter.pintarMedalha(conteudo.findViewById(R.id.img_medalha), conquista, desbloqueada);
+        ((TextView) conteudo.findViewById(R.id.txt_titulo)).setText(conquista.getTituloRes());
+        ((TextView) conteudo.findViewById(R.id.txt_descricao)).setText(conquista.getDescricaoRes());
+        TextView situacao = conteudo.findViewById(R.id.txt_situacao);
+        situacao.setText(desbloqueada ? R.string.conquista_desbloqueada : R.string.conquista_bloqueada);
+        situacao.setTextColor(ContextCompat.getColor(requireContext(),
+                desbloqueada ? R.color.marca_acerto_texto : R.color.texto_secundario));
+        situacao.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(requireContext(),
+                desbloqueada ? R.color.marca_acerto_suave : R.color.superficie_variante)));
+        new MaterialAlertDialogBuilder(requireContext())
+                .setView(conteudo)
+                .setPositiveButton(R.string.btn_ok, (d, which) -> d.dismiss())
+                .show();
     }
 
     /** @param corIconeRes 0 para manter as cores do próprio ícone */

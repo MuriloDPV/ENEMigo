@@ -165,5 +165,31 @@
                 android:id="@+id/stat_minutos_hoje"
                 layout="@layout/item_estatistica" />
         </LinearLayout>
+
+        <!-- Conquistas (C3): grade de 3 colunas com as medalhas -->
+        <TextView
+            android:id="@+id/txt_conquistas_titulo"
+            style="@style/Texto.Titulo.Medio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp" />
+
+        <TextView
+            android:id="@+id/txt_conquistas_vazio"
+            style="@style/Texto.Secundario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/perfil_conquistas_vazio"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_conquistas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="-5dp"
+            android:layout_marginTop="6dp"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never" />
     </LinearLayout>
 </ScrollView>
