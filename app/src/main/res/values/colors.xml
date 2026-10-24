@@ -78,20 +78,4 @@
     <color name="area_matematica">#7950F2</color>
     <color name="area_matematica_escura">#5732C9</color>
     <color name="area_matematica_sobre">#FFFFFF</color>
-
-    <!-- Legado: recursos das telas antigas, removidos quando a última tela migrar -->
-    <color name="verde_primario">#58CC02</color>
-    <color name="verde_escuro">#58A700</color>
-    <color name="verde_claro">#D7FFB8</color>
-    <color name="vermelho">#FF4B4B</color>
-    <color name="vermelho_escuro">#EA2B2B</color>
-    <color name="vermelho_claro">#FFDFE0</color>
-    <color name="azul_selecao">#1CB0F6</color>
-    <color name="azul_claro">#DDF4FF</color>
-    <color name="cinza_borda">#E5E5E5</color>
-    <color name="cinza_bloqueado">#AFAFAF</color>
-    <color name="cinza_fundo_texto">#F7F7F7</color>
-    <color name="branco">#FFFFFF</color>
-    <color name="laranja_fogo">#FF9600</color>
-    <color name="amarelo_xp">#FFC800</color>
 </resources>

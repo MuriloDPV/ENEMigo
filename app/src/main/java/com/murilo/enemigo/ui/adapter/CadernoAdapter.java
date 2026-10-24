@@ -1,5 +1,6 @@
 package com.murilo.enemigo.ui.adapter;
 
+import android.content.Context;
 import android.content.res.ColorStateList;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.murilo.enemigo.R;
+import com.murilo.enemigo.model.Area;
 import com.murilo.enemigo.model.Questao;
 import com.murilo.enemigo.util.TextoRico;
 
@@ -43,9 +45,12 @@ public class CadernoAdapter extends RecyclerView.Adapter<CadernoAdapter.CadernoV
     @Override
     public void onBindViewHolder(@NonNull CadernoViewHolder holder, int position) {
         Questao questao = questoes.get(position);
-        int cor = ContextCompat.getColor(holder.itemView.getContext(), questao.getArea().getCorRes());
-        holder.txtEtiqueta.setText(questao.getArea().getNome());
-        holder.txtEtiqueta.setBackgroundTintList(ColorStateList.valueOf(cor));
+        Context context = holder.itemView.getContext();
+        Area area = questao.getArea();
+        holder.txtEtiqueta.setText(area.getNome());
+        holder.txtEtiqueta.setBackgroundTintList(
+                ColorStateList.valueOf(ContextCompat.getColor(context, area.getCorRes())));
+        holder.txtEtiqueta.setTextColor(ContextCompat.getColor(context, area.getCorSobreRes()));
         holder.txtEnunciado.setText(TextoRico.semMarcadores(questao.getEnunciado()));
         holder.txtFonte.setText(questao.getFonte());
     }

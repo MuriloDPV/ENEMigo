@@ -1,48 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/Widget.Material3.CardView.Outlined"
+    style="@style/Widget.ENEMigo.Face.Contorno"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginVertical="6dp"
-    app:cardBackgroundColor="@color/fundo"
-    app:cardCornerRadius="@dimen/raio_card"
-    app:strokeColor="@color/cinza_borda"
-    app:strokeWidth="2dp">
+    app:cardCornerRadius="@dimen/raio_botao">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="12dp">
+        android:padding="14dp">
 
         <TextView
             android:id="@+id/txt_etiqueta"
+            style="@style/Texto.Destaque"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_etiqueta"
-            android:paddingHorizontal="8dp"
-            android:paddingVertical="2dp"
-            android:textColor="@color/branco"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+            android:paddingHorizontal="9dp"
+            android:paddingVertical="3dp"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/txt_enunciado"
+            style="@style/Texto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ellipsize="end"
             android:maxLines="2"
-            android:textColor="@color/texto_principal"
             android:textSize="15sp" />
 
         <TextView
             android:id="@+id/txt_fonte"
+            style="@style/Texto.Secundario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/texto_secundario"
+            android:layout_marginTop="6dp"
             android:textSize="12sp" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

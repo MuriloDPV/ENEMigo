@@ -9,61 +9,88 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="@dimen/margem_tela">
+        android:paddingHorizontal="@dimen/margem_tela"
+        android:paddingTop="20dp"
+        android:paddingBottom="28dp">
 
         <TextView
+            style="@style/Texto.Titulo.Grande"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/aba_perfil"
-            android:textColor="@color/texto_principal"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:text="@string/aba_perfil" />
 
-        <TextView
-            android:id="@+id/txt_nome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/margem_tela"
-            android:textColor="@color/texto_principal"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txt_nivel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/verde_escuro"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-
-        <com.google.android.material.progressindicator.LinearProgressIndicator
-            android:id="@+id/progress_nivel"
+        <!-- Nome, nível e barra de XP até o próximo nível -->
+        <com.murilo.enemigo.ui.componente.CartaoRelevo
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/espaco_cards"
-            android:max="100"
-            app:indicatorColor="@color/amarelo_xp"
-            app:trackColor="@color/cinza_borda"
-            app:trackCornerRadius="8dp"
-            app:trackThickness="12dp" />
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.ENEMigo.Face.Contorno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/txt_nome"
+                        style="@style/Texto.Titulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/txt_nivel"
+                        style="@style/Texto.Destaque"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_etiqueta"
+                        android:backgroundTint="@color/marca_primaria_suave"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="4dp"
+                        android:textColor="@color/marca_primaria_texto"
+                        android:textSize="14sp" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progress_nivel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:max="100"
+                        app:indicatorColor="@color/marca_acento"
+                        app:trackCornerRadius="7dp"
+                        app:trackThickness="14dp" />
+
+                    <TextView
+                        android:id="@+id/txt_xp_proximo"
+                        style="@style/Texto.Secundario"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </com.murilo.enemigo.ui.componente.CartaoRelevo>
 
         <TextView
-            android:id="@+id/txt_xp_proximo"
+            style="@style/Texto.Titulo.Medio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/texto_secundario"
-            android:textSize="14sp" />
+            android:layout_marginTop="28dp"
+            android:text="@string/perfil_estatisticas" />
 
         <!-- Estatísticas: grade de 2 colunas -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="-6dp"
-            android:layout_marginTop="@dimen/margem_tela"
+            android:layout_marginTop="6dp"
             android:orientation="horizontal">
 
             <include

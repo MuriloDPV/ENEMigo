@@ -1,36 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Cartão de estatística do Perfil (incluído 6 vezes). -->
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Cartão de estatística do Perfil (incluído 6 vezes): ícone, valor e rótulo. -->
+<com.murilo.enemigo.ui.componente.CartaoRelevo xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/Widget.Material3.CardView.Outlined"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_margin="6dp"
     android:layout_weight="1"
-    app:cardBackgroundColor="@color/fundo"
-    app:cardCornerRadius="@dimen/raio_card"
-    app:strokeColor="@color/cinza_borda"
-    app:strokeWidth="2dp">
+    app:raio="@dimen/raio_botao">
 
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.ENEMigo.Face.Contorno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="12dp">
+        app:cardCornerRadius="@dimen/raio_botao">
 
-        <TextView
-            android:id="@+id/txt_valor"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/texto_principal"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:gravity="center_vertical"
+            android:minHeight="76dp"
+            android:orientation="horizontal"
+            android:padding="12dp">
 
-        <TextView
-            android:id="@+id/txt_rotulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/texto_secundario"
-            android:textSize="13sp" />
-    </LinearLayout>
-</com.google.android.material.card.MaterialCardView>
+            <ImageView
+                android:id="@+id/img_icone"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:importantForAccessibility="no" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_valor"
+                    style="@style/Texto.Titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txt_rotulo"
+                    style="@style/Texto.Secundario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</com.murilo.enemigo.ui.componente.CartaoRelevo>

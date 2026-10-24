@@ -142,7 +142,4 @@
     <string name="stat_taxa">Taxa de acerto</string>
     <string name="stat_taxa_valor">%1$d%%</string>
     <string name="stat_sem_valor">—</string>
-
-    <!-- Legado: recursos das telas antigas, removidos quando a última tela migrar -->
-    <string name="caderno_vazio_emoji">🎉</string>
 </resources>

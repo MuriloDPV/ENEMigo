@@ -18,9 +18,4 @@
     <dimen name="deslocamento_no">64dp</dimen>
     <dimen name="tamanho_letra_alternativa">34dp</dimen>
     <dimen name="espessura_progresso">12dp</dimen>
-
-    <!-- Legado: recursos das telas antigas, removidos quando a última tela migrar -->
-    <dimen name="raio_card">16dp</dimen>
-    <dimen name="tamanho_circulo_licao">56dp</dimen>
-    <dimen name="icone_area">48dp</dimen>
 </resources>
