@@ -148,6 +148,10 @@
     <string name="stat_respondidas">Questões respondidas</string>
     <string name="stat_taxa">Taxa de acerto</string>
     <string name="stat_taxa_valor">%1$d%%</string>
+    <string name="stat_tempo_medio">Tempo médio por questão</string>
+    <string name="stat_segundos_valor">%1$d s</string>
+    <string name="stat_minutos_hoje">Minutos estudados hoje</string>
+    <string name="stat_minutos_valor">%1$d min</string>
     <string name="stat_sem_valor">—</string>
 
     <!-- Conquistas (C3) -->

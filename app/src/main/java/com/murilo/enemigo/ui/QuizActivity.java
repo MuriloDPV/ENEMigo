@@ -5,6 +5,7 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
@@ -48,6 +49,7 @@ public class QuizActivity extends AppCompatActivity {
     private static final String ESTADO_VERIFICADA = "verificada";
     private static final String ESTADO_IDS_REVISAO = "ids_revisao";
     private static final String ESTADO_VIDAS_RECUPERADAS = "vidas_recuperadas";
+    private static final String ESTADO_TEMPO_QUESTAO = "tempo_questao";
 
     // Estados visuais de uma alternativa
     private static final int NORMAL = 0;
@@ -68,6 +70,9 @@ public class QuizActivity extends AppCompatActivity {
     private int acertos;
     private boolean verificada;
     private int vidasRecuperadas;
+    // Cronômetro da questão atual (RN36): só conta com a tela aberta e para no VERIFICAR.
+    private long tempoQuestaoMs;
+    private long retomadoEm = -1;
 
     private ScrollView scroll;
     private LinearProgressIndicator progress;
@@ -167,6 +172,7 @@ public class QuizActivity extends AppCompatActivity {
             int salvaSelecionada = savedInstanceState.getInt(ESTADO_SELECIONADA, -1);
             boolean salvaVerificada = savedInstanceState.getBoolean(ESTADO_VERIFICADA, false);
             mostrarQuestao();
+            tempoQuestaoMs = savedInstanceState.getLong(ESTADO_TEMPO_QUESTAO, 0L);
             if (salvaSelecionada >= 0) {
                 selecionar(salvaSelecionada);
                 if (salvaVerificada) {
@@ -187,6 +193,7 @@ public class QuizActivity extends AppCompatActivity {
         outState.putInt(ESTADO_ACERTOS, acertos);
         outState.putBoolean(ESTADO_VERIFICADA, verificada);
         outState.putInt(ESTADO_VIDAS_RECUPERADAS, vidasRecuperadas);
+        outState.putLong(ESTADO_TEMPO_QUESTAO, tempoDaQuestao());
         if (modoRevisao && questoes != null) {
             ArrayList<String> ids = new ArrayList<>();
             for (Questao q : questoes) {
@@ -194,6 +201,28 @@ public class QuizActivity extends AppCompatActivity {
             }
             outState.putStringArrayList(ESTADO_IDS_REVISAO, ids);
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        retomadoEm = SystemClock.elapsedRealtime();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Em segundo plano o cronômetro para (RN36).
+        tempoQuestaoMs = tempoDaQuestao();
+        retomadoEm = -1;
+    }
+
+    /** Tempo de tela da questão atual até agora; depois do VERIFICAR fica parado. */
+    private long tempoDaQuestao() {
+        if (verificada || retomadoEm < 0) {
+            return tempoQuestaoMs;
+        }
+        return tempoQuestaoMs + SystemClock.elapsedRealtime() - retomadoEm;
     }
 
     /** RN30: até 5 questões sorteadas do caderno. RN31: ids que não existem mais são descartados. */
@@ -237,6 +266,10 @@ public class QuizActivity extends AppCompatActivity {
         Questao questao = questoes.get(indiceAtual);
         selecionada = -1;
         verificada = false;
+        tempoQuestaoMs = 0;
+        if (retomadoEm >= 0) {
+            retomadoEm = SystemClock.elapsedRealtime();
+        }
 
         progress.setProgressCompat(indiceAtual, true);
         txtContador.setText(getString(R.string.quiz_contador, indiceAtual + 1, questoes.size()));
@@ -307,6 +340,8 @@ public class QuizActivity extends AppCompatActivity {
         // Desabilita na hora para evitar clique duplo.
         btnVerificar.setEnabled(false);
         Questao questao = questoes.get(indiceAtual);
+        tempoQuestaoMs = tempoDaQuestao();
+        progresso.registrarTempoQuestao(questao, tempoQuestaoMs);
         if (questao.isCorreta(selecionada)) {
             acertos++;
             if (modoRevisao) {

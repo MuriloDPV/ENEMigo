@@ -193,10 +193,13 @@ public final class ProgressoManager {
                 licao.getQuestoes().size(), melhorAnterior, totalAnterior);
     }
 
-    /** Tempo estimado da lição em minutos, ou 0 se o JSON não tiver a estimativa. */
+    /**
+     * Tempo estimado da lição em minutos, já no ritmo do aluno depois de 10 questões medidas
+     * (RN37), ou 0 se o JSON não tiver a estimativa.
+     */
     public int getMinutosEstimados(Licao licao) {
         int segundos = licao.getSegundosEstimados();
-        return segundos <= 0 ? 0 : TempoEstudo.minutosEstimados(segundos);
+        return segundos <= 0 ? 0 : TempoEstudo.minutosEstimados(segundos, getFatorRitmo());
     }
 
     public int getLicoesConcluidas(Area area) {
@@ -246,6 +249,55 @@ public final class ProgressoManager {
 
     public int getTotalAcertos() {
         return Math.max(0, prefs.getInt(Constantes.CHAVE_TOTAL_ACERTOS, 0));
+    }
+
+    // ---------------------------------------------------------------- Tempo de estudo
+
+    /**
+     * RN36: soma o tempo de uma questão respondida (do aparecer ao VERIFICAR, sem o tempo em
+     * segundo plano). Tempo inválido, como mais de 10 min, é descartado.
+     */
+    public void registrarTempoQuestao(Questao questao, long ms) {
+        if (!TempoEstudo.isTempoValido(ms)) {
+            return;
+        }
+        prefs.edit()
+                .putLong(Constantes.CHAVE_TEMPO_TOTAL_MS, lerTempoTotalMs() + ms)
+                .putInt(Constantes.CHAVE_TEMPO_QUESTOES, lerQuestoesCronometradas() + 1)
+                .putLong(Constantes.CHAVE_TEMPO_ESTIMADO_S,
+                        prefs.getLong(Constantes.CHAVE_TEMPO_ESTIMADO_S, 0L) + questao.getSegundosEstimados())
+                .putLong(Constantes.CHAVE_TEMPO_HOJE_MS, getTempoHojeMs() + ms)
+                .putString(Constantes.CHAVE_DATA_TEMPO_HOJE, DataUtil.paraTexto(DataUtil.hoje()))
+                .apply();
+    }
+
+    /** Tempo médio por questão em segundos, ou -1 se nenhuma foi medida. */
+    public int getTempoMedioSegundos() {
+        return TempoEstudo.mediaSegundos(lerTempoTotalMs(), lerQuestoesCronometradas());
+    }
+
+    /** Minutos respondendo questões hoje (lições e revisões). */
+    public int getMinutosHoje() {
+        return TempoEstudo.minutos(getTempoHojeMs());
+    }
+
+    /** RN37: ritmo real / estimado (1 até ter 10 questões medidas). */
+    public double getFatorRitmo() {
+        return TempoEstudo.fatorRitmo(lerTempoTotalMs(),
+                prefs.getLong(Constantes.CHAVE_TEMPO_ESTIMADO_S, 0L), lerQuestoesCronometradas());
+    }
+
+    private long getTempoHojeMs() {
+        LocalDate data = DataUtil.deTexto(prefs.getString(Constantes.CHAVE_DATA_TEMPO_HOJE, ""));
+        return TempoEstudo.tempoHojeMs(data, DataUtil.hoje(), prefs.getLong(Constantes.CHAVE_TEMPO_HOJE_MS, 0L));
+    }
+
+    private long lerTempoTotalMs() {
+        return Math.max(0L, prefs.getLong(Constantes.CHAVE_TEMPO_TOTAL_MS, 0L));
+    }
+
+    private int lerQuestoesCronometradas() {
+        return Math.max(0, prefs.getInt(Constantes.CHAVE_TEMPO_QUESTOES, 0));
     }
 
     // ---------------------------------------------------------------- Sessões

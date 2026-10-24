@@ -67,6 +67,15 @@ public class PerfilFragment extends Fragment {
         preencher(view, R.id.stat_taxa,
                 taxa < 0 ? getString(R.string.stat_sem_valor) : getString(R.string.stat_taxa_valor, taxa),
                 R.string.stat_taxa, R.drawable.ic_alvo, R.color.marca_erro);
+
+        // Tempo real medido no quiz (RN36)
+        int media = progresso.getTempoMedioSegundos();
+        preencher(view, R.id.stat_tempo_medio,
+                media < 0 ? getString(R.string.stat_sem_valor) : getString(R.string.stat_segundos_valor, media),
+                R.string.stat_tempo_medio, R.drawable.ic_relogio, R.color.marca_ofensiva_texto);
+        preencher(view, R.id.stat_minutos_hoje,
+                getString(R.string.stat_minutos_valor, progresso.getMinutosHoje()),
+                R.string.stat_minutos_hoje, R.drawable.ic_relogio, R.color.marca_acento_texto);
     }
 
     /** @param corIconeRes 0 para manter as cores do próprio ícone */
