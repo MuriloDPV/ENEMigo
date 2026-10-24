@@ -1,5 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Paleta "caderno de estudo" (modo claro). O modo escuro fica em values-night/colors.xml.
+    Os nomes dizem a função da cor, não a cor em si: para trocar a marca, mude só os valores
+    (veja "Personalizar a marca" no README).
+-->
 <resources>
+    <!-- Marca -->
+    <color name="marca_primaria">#3B4CCA</color>
+    <color name="marca_primaria_escura">#2B3899</color>
+    <color name="marca_primaria_suave">#E7EAFB</color>
+    <color name="marca_primaria_texto">#3B4CCA</color>
+    <color name="marca_sobre_primaria">#FFFFFF</color>
+
+    <color name="marca_acento">#FFD43B</color>
+    <color name="marca_acento_escuro">#E3B310</color>
+    <color name="marca_acento_suave">#FFF5CC</color>
+    <color name="marca_acento_texto">#946800</color>
+    <color name="marca_sobre_acento">#3A2E00</color>
+
+    <color name="marca_acerto">#12B886</color>
+    <color name="marca_acerto_escuro">#0B8C66</color>
+    <color name="marca_acerto_suave">#DDF6EE</color>
+    <color name="marca_acerto_texto">#08765A</color>
+
+    <color name="marca_erro">#F0525A</color>
+    <color name="marca_erro_escuro">#C4343D</color>
+    <color name="marca_erro_suave">#FDE6E7</color>
+    <color name="marca_erro_texto">#B8262F</color>
+
+    <color name="marca_ofensiva">#FF8A1F</color>
+    <color name="marca_ofensiva_escura">#D96A0B</color>
+    <color name="marca_ofensiva_miolo">#FFD43B</color>
+    <color name="marca_ofensiva_texto">#B85A00</color>
+
+    <!-- Superfícies e texto -->
+    <color name="fundo">#F8F7F3</color>
+    <color name="superficie">#FFFFFF</color>
+    <color name="superficie_borda">#E6E3DA</color>
+    <color name="superficie_variante">#EFEDE6</color>
+    <color name="texto_principal">#1D2033</color>
+    <color name="texto_secundario">#6A6E80</color>
+    <color name="texto_sobre_cor">#FFFFFF</color>
+
+    <color name="desativado">#E6E3DA</color>
+    <color name="desativado_sombra">#D2CEC2</color>
+    <color name="texto_desativado">#A09D93</color>
+
+    <color name="bloqueado">#DEDBD2</color>
+    <color name="bloqueado_sombra">#C6C2B6</color>
+    <color name="bloqueado_icone">#A09D93</color>
+    <color name="linha_trilha">#D6D2C7</color>
+    <color name="balao_fundo">#FFFFFF</color>
+
+    <!--
+        Papel: texto-base e alternativas com figura/fórmula. Fica claro também no modo escuro,
+        porque as figuras são desenhadas com "multiplicar" e as fórmulas têm tinta escura.
+    -->
+    <color name="papel">#FFFDF7</color>
+    <color name="papel_borda">#E8E2D2</color>
+    <color name="papel_margem">#F5B3B0</color>
+    <color name="papel_texto">#1D2033</color>
+    <color name="papel_texto_secundario">#6A6E80</color>
+    <color name="papel_selecao">#E7EAFB</color>
+    <color name="papel_acerto">#DDF6EE</color>
+    <color name="papel_erro">#FDE6E7</color>
+
+    <!-- Áreas do ENEM: cor do cartão, sombra/texto escuro e conteúdo sobre a cor -->
+    <color name="area_linguagens">#F2594B</color>
+    <color name="area_linguagens_escura">#C8402F</color>
+    <color name="area_linguagens_sobre">#FFFFFF</color>
+    <color name="area_humanas">#F7A21B</color>
+    <color name="area_humanas_escura">#B86E00</color>
+    <color name="area_humanas_sobre">#3B2300</color>
+    <color name="area_natureza">#0E9F96</color>
+    <color name="area_natureza_escura">#0A7A73</color>
+    <color name="area_natureza_sobre">#FFFFFF</color>
+    <color name="area_matematica">#7950F2</color>
+    <color name="area_matematica_escura">#5732C9</color>
+    <color name="area_matematica_sobre">#FFFFFF</color>
+
+    <!-- Legado: recursos das telas antigas, removidos quando a última tela migrar -->
     <color name="verde_primario">#58CC02</color>
     <color name="verde_escuro">#58A700</color>
     <color name="verde_claro">#D7FFB8</color>
@@ -11,14 +91,7 @@
     <color name="cinza_borda">#E5E5E5</color>
     <color name="cinza_bloqueado">#AFAFAF</color>
     <color name="cinza_fundo_texto">#F7F7F7</color>
-    <color name="texto_principal">#3C3C3C</color>
-    <color name="texto_secundario">#777777</color>
-    <color name="fundo">#FFFFFF</color>
     <color name="branco">#FFFFFF</color>
     <color name="laranja_fogo">#FF9600</color>
     <color name="amarelo_xp">#FFC800</color>
-    <color name="area_linguagens">#1CB0F6</color>
-    <color name="area_humanas">#FF9600</color>
-    <color name="area_natureza">#58CC02</color>
-    <color name="area_matematica">#CE82FF</color>
 </resources>

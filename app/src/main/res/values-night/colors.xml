@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Paleta do modo escuro. Mesmos nomes de values/colors.xml. -->
+<resources>
+    <!-- Marca -->
+    <color name="marca_primaria">#5163E6</color>
+    <color name="marca_primaria_escura">#3443B5</color>
+    <color name="marca_primaria_suave">#262C5C</color>
+    <color name="marca_primaria_texto">#A3AEFF</color>
+    <color name="marca_sobre_primaria">#FFFFFF</color>
+
+    <color name="marca_acento">#FFD43B</color>
+    <color name="marca_acento_escuro">#C99A00</color>
+    <color name="marca_acento_suave">#3A3216</color>
+    <color name="marca_acento_texto">#FFD43B</color>
+    <color name="marca_sobre_acento">#3A2E00</color>
+
+    <color name="marca_acerto">#1BC593</color>
+    <color name="marca_acerto_escuro">#11936D</color>
+    <color name="marca_acerto_suave">#11302A</color>
+    <color name="marca_acerto_texto">#5EE3B8</color>
+
+    <color name="marca_erro">#FF6168</color>
+    <color name="marca_erro_escuro">#C7414A</color>
+    <color name="marca_erro_suave">#3B1C22</color>
+    <color name="marca_erro_texto">#FF9499</color>
+
+    <color name="marca_ofensiva">#FF9433</color>
+    <color name="marca_ofensiva_escura">#C76A1A</color>
+    <color name="marca_ofensiva_miolo">#FFD43B</color>
+    <color name="marca_ofensiva_texto">#FFA552</color>
+
+    <!-- Superfícies e texto -->
+    <color name="fundo">#11131C</color>
+    <color name="superficie">#1A1D29</color>
+    <color name="superficie_borda">#2C3042</color>
+    <color name="superficie_variante">#232736</color>
+    <color name="texto_principal">#ECEDF4</color>
+    <color name="texto_secundario">#A0A4B8</color>
+    <color name="texto_sobre_cor">#FFFFFF</color>
+
+    <color name="desativado">#2C3042</color>
+    <color name="desativado_sombra">#202332</color>
+    <color name="texto_desativado">#6B7086</color>
+
+    <color name="bloqueado">#2C3042</color>
+    <color name="bloqueado_sombra">#202332</color>
+    <color name="bloqueado_icone">#6B7086</color>
+    <color name="linha_trilha">#353A4F</color>
+    <color name="balao_fundo">#FFFFFF</color>
+
+    <!-- Papel: continua claro (um pouco menos branco, para não ofuscar) -->
+    <color name="papel">#F3EFE5</color>
+    <color name="papel_borda">#D9D1BD</color>
+    <color name="papel_margem">#E9A29E</color>
+    <color name="papel_texto">#1D2033</color>
+    <color name="papel_texto_secundario">#5E6274</color>
+    <color name="papel_selecao">#DCE0F8</color>
+    <color name="papel_acerto">#D3F0E6</color>
+    <color name="papel_erro">#F8DCDE</color>
+
+    <!-- Áreas: as mesmas cores, que já contrastam com o fundo escuro -->
+    <color name="area_linguagens">#F2594B</color>
+    <color name="area_linguagens_escura">#B8392A</color>
+    <color name="area_linguagens_sobre">#FFFFFF</color>
+    <color name="area_humanas">#F7A21B</color>
+    <color name="area_humanas_escura">#B06A00</color>
+    <color name="area_humanas_sobre">#3B2300</color>
+    <color name="area_natureza">#0E9F96</color>
+    <color name="area_natureza_escura">#08706A</color>
+    <color name="area_natureza_sobre">#FFFFFF</color>
+    <color name="area_matematica">#7950F2</color>
+    <color name="area_matematica_escura">#5230BD</color>
+    <color name="area_matematica_sobre">#FFFFFF</color>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cores e medidas dos componentes "em relevo" (ui/componente) -->
+    <attr name="corFace" format="color" />
+    <attr name="corBorda" format="color" />
+    <attr name="corSombra" format="color" />
+    <attr name="raio" format="dimension" />
+    <attr name="relevo" format="dimension" />
+
+    <declare-styleable name="BotaoRelevo">
+        <attr name="corFace" />
+        <attr name="corBorda" />
+        <attr name="corSombra" />
+        <attr name="raio" />
+        <attr name="relevo" />
+    </declare-styleable>
+
+    <declare-styleable name="CartaoRelevo">
+        <attr name="corSombra" />
+        <attr name="raio" />
+        <attr name="relevo" />
+    </declare-styleable>
+</resources>
