@@ -15,17 +15,12 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.murilo.enemigo.R;
 import com.murilo.enemigo.data.ProgressoManager;
 import com.murilo.enemigo.ui.componente.MascoteView;
-import com.murilo.enemigo.util.Constantes;
-
-import java.util.regex.Pattern;
+import com.murilo.enemigo.util.ValidacaoUtil;
 
 /**
  * Primeiro acesso: pede o nome e a meta diária. Só aparece uma vez (RN01).
  */
 public class OnboardingActivity extends AppCompatActivity {
-
-    /** Só letras (inclusive acentuadas) e espaços. */
-    private static final Pattern SO_LETRAS = Pattern.compile("^[\\p{L} ]+$");
 
     private TextInputLayout tilNome;
     private TextInputEditText edtNome;
@@ -79,7 +74,7 @@ public class OnboardingActivity extends AppCompatActivity {
         Editable texto = edtNome.getText();
         String nome = texto == null ? "" : texto.toString().trim();
 
-        int erro = validarNome(nome);
+        int erro = ValidacaoUtil.validarNome(nome);
         if (erro != 0) {
             tilNome.setError(getString(erro));
             mascote.setExpressao(MascoteView.Expressao.TRISTE);
@@ -87,7 +82,7 @@ public class OnboardingActivity extends AppCompatActivity {
             return;
         }
 
-        int meta = metaEscolhida();
+        int meta = OpcoesMeta.metaMarcada(rgMeta);
         if (meta == 0) {
             Toast.makeText(this, R.string.erro_meta, Toast.LENGTH_SHORT).show();
             return;
@@ -97,35 +92,5 @@ public class OnboardingActivity extends AppCompatActivity {
         startActivity(new Intent(this, MainActivity.class));
         // O Voltar da MainActivity não deve voltar para cá.
         finish();
-    }
-
-    /** Devolve o id da mensagem de erro, ou 0 se o nome (já sem espaços nas pontas) for válido. */
-    private int validarNome(String nome) {
-        if (nome.isEmpty()) {
-            return R.string.erro_nome_vazio;
-        }
-        if (nome.length() < Constantes.NOME_MIN) {
-            return R.string.erro_nome_curto;
-        }
-        if (nome.length() > Constantes.NOME_MAX) {
-            return R.string.erro_nome_longo;
-        }
-        if (!SO_LETRAS.matcher(nome).matches()) {
-            return R.string.erro_nome_letras;
-        }
-        return 0;
-    }
-
-    /** 20, 50 ou 100; 0 se nenhuma opção estiver marcada. */
-    private int metaEscolhida() {
-        int id = rgMeta.getCheckedRadioButtonId();
-        if (id == R.id.rb_casual) {
-            return Constantes.META_CASUAL;
-        } else if (id == R.id.rb_regular) {
-            return Constantes.META_REGULAR;
-        } else if (id == R.id.rb_intenso) {
-            return Constantes.META_INTENSO;
-        }
-        return 0;
     }
 }

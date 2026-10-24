@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- As 3 metas diárias (20, 50 e 100 XP), incluídas no Onboarding e nas Configurações (ver OpcoesMeta). -->
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rg_meta"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:checkedButton="@id/rb_regular">
+
+    <RadioButton
+        android:id="@+id/rb_casual"
+        style="@style/Widget.ENEMigo.OpcaoMeta"
+        android:text="@string/meta_casual" />
+
+    <RadioButton
+        android:id="@+id/rb_regular"
+        style="@style/Widget.ENEMigo.OpcaoMeta"
+        android:text="@string/meta_regular" />
+
+    <RadioButton
+        android:id="@+id/rb_intenso"
+        style="@style/Widget.ENEMigo.OpcaoMeta"
+        android:text="@string/meta_intenso" />
+</RadioGroup>

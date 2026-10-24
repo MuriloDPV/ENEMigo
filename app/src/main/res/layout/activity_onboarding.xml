@@ -92,28 +92,7 @@
             android:layout_marginTop="20dp"
             android:text="@string/onboarding_pergunta_meta" />
 
-        <RadioGroup
-            android:id="@+id/rg_meta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:checkedButton="@id/rb_regular">
-
-            <RadioButton
-                android:id="@+id/rb_casual"
-                style="@style/Widget.ENEMigo.OpcaoMeta"
-                android:text="@string/meta_casual" />
-
-            <RadioButton
-                android:id="@+id/rb_regular"
-                style="@style/Widget.ENEMigo.OpcaoMeta"
-                android:text="@string/meta_regular" />
-
-            <RadioButton
-                android:id="@+id/rb_intenso"
-                style="@style/Widget.ENEMigo.OpcaoMeta"
-                android:text="@string/meta_intenso" />
-        </RadioGroup>
+        <include layout="@layout/layout_opcoes_meta" />
 
         <Space
             android:layout_width="0dp"

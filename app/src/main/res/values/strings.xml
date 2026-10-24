@@ -146,6 +146,24 @@
     <string name="stat_taxa_valor">%1$d%%</string>
     <string name="stat_sem_valor">—</string>
 
+    <!-- Configurações (C5) -->
+    <string name="configuracoes_titulo">Configurações</string>
+    <string name="config_secao_nome">Seu nome</string>
+    <string name="config_secao_som">Som e vibração</string>
+    <string name="config_som">Sons</string>
+    <string name="config_som_desc">Acerto, erro e lição concluída</string>
+    <string name="config_vibracao">Vibrar ao errar</string>
+    <string name="config_vibracao_desc">Uma vibração curta quando a resposta está errada</string>
+    <string name="config_salvas">Configurações salvas</string>
+    <string name="config_secao_progresso">Progresso</string>
+    <string name="config_reset_explicacao">Apaga XP, ofensiva, lições, conquistas e o seu avatar. O app volta para o primeiro acesso.</string>
+    <string name="reset_titulo">Apagar todo o progresso?</string>
+    <string name="reset_mensagem">XP, ofensiva, lições e conquistas serão perdidos. Essa ação não pode ser desfeita.</string>
+    <string name="reset_cancelar">Cancelar</string>
+    <string name="reset_confirmar">Apagar tudo</string>
+    <string name="config_secao_sobre">Sobre</string>
+    <string name="config_sobre">%1$s, versão %2$s. Questões retiradas das provas oficiais do ENEM, disponíveis publicamente no site do INEP. App educacional sem vínculo com o INEP.</string>
+
     <!-- Conquistas (C3) -->
     <string name="conquista_primeira_licao">Primeiro passo</string>
     <string name="conquista_primeira_licao_desc">Termine sua primeira lição</string>

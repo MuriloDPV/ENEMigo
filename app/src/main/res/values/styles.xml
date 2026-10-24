@@ -123,6 +123,10 @@
         <item name="corFace">@color/marca_acerto</item>
         <item name="corSombra">@color/marca_acerto_escuro</item>
     </style>
+    <style name="Widget.ENEMigo.Botao.Erro">
+        <item name="corFace">@color/marca_erro</item>
+        <item name="corSombra">@color/marca_erro_escuro</item>
+    </style>
     <style name="Widget.ENEMigo.Botao.Neutro">
         <item name="corFace">@color/superficie</item>
         <item name="corBorda">@color/superficie_borda</item>
