@@ -13,7 +13,13 @@ Feito como projeto da disciplina de Programação do meu curso técnico, em Java
 
 ## Funcionalidades
 
-- Primeiro acesso com nome e meta diária de XP (20, 50 ou 100)
+- Primeiro acesso com nome, meta diária de XP (20, 50 ou 100) e avatar (dá para pular)
+- O **Grifo**, mascote do app (um marca-texto), com 5 expressões e animações: aparece no primeiro acesso, no feedback do quiz, no resultado, no caderno de erros vazio e quando as vidas acabam
+- **Avatar** montável: tom de pele, formato do rosto, cabelo e cor do cabelo, olhos, acessório (óculos, boné, fone) e cor de fundo, com prévia ao vivo e botão de sortear; aparece no Perfil e no Início
+- **8 conquistas** com medalhas: primeira lição, ofensiva de 3 e de 7 dias, 100 e 500 XP, lição perfeita e duas de Matemática (concluir uma lição e concluir todas). No Perfil, as bloqueadas ficam em cinza
+- **Celebrações em tela cheia**, com confete: lição perfeita, ofensiva aumentada, nível novo e conquista nova
+- Sons de acerto, erro e lição concluída, e vibração curta ao errar
+- Configurações: editar o nome, trocar a meta, ligar ou desligar som e vibração e resetar o progresso (com confirmação)
 - Trilhas por área com lições concluídas, disponíveis e bloqueadas
 - Quiz com feedback imediato e explicação de cada questão
 - Figuras e fórmulas nas questões de Matemática, com zoom ao tocar na figura
@@ -32,6 +38,18 @@ Feito como projeto da disciplina de Programação do meu curso técnico, em Java
 - Botões e cartões "em relevo", com uma sombra sólida embaixo, que afundam ao tocar (`ui/componente/`).
 - Trilha em zigue-zague, com a lição atual pulsando e as lições agrupadas em unidades.
 - O texto-base fica num cartão de papel, com a margem de caderno. No modo escuro esse papel, e as alternativas com figura ou fórmula, continuam claros: as figuras do ENEM são desenhadas com "multiplicar" e as fórmulas têm tinta escura, então sumiriam num fundo escuro. O teste `PapelModoEscuroTest` confere isso.
+
+## Mascote, avatar, conquistas e sons
+
+Tudo foi feito para o app, sem nada baixado da internet:
+
+- **Grifo** (`res/drawable/mascote_*.xml`): 5 VectorDrawables (neutro, feliz, comemorando, triste e pensando). O `MascoteView` troca a expressão e anima com os animators do Android: balançar, pular, comemorar e tremer. Sem vidas, ele fica desbotado, "sem tinta".
+- **Avatar** (`res/drawable/avatar_*.xml`): 24 peças vetoriais no mesmo quadro de 120x120. Pele e cabelo são peças brancas que recebem a cor com tint; o `AvatarDrawable` empilha as peças e recorta num círculo. O avatar é salvo como texto no SharedPreferences (`model/Avatar`).
+- **Medalhas** (`res/drawable/medalha_*.xml`): uma para cada conquista. As condições ficam em `util/Conquistas.java`, conferidas no fim de cada sessão.
+- **Confete**: o `ConfeteView` desenha os papeizinhos na própria View (sem Lottie), com gravidade, giro e o papel "virando" no ar. Com "remover animações" ligado no celular, nada se mexe.
+- **Sons** (`res/raw/som_*.wav`): gerados por `tools/gerar_sons.py`, que sintetiza as notas só com a biblioteca padrão do Python. Para mudar um som, edite as notas no script e rode `python tools/gerar_sons.py`.
+
+Mascote, medalhas e avatar usam só cores com nome (`@color/...`), e o teste `CoresDaMarcaTest` avisa se alguém colocar uma cor fixa num desses desenhos.
 
 ## Questões
 
@@ -57,6 +75,7 @@ As questões vêm da API pública [enem.dev](https://enem.dev), e os scripts que
 - `filtrar_enem.py`: separa as questões aproveitáveis (100% texto nas três primeiras áreas; em Matemática, também as com figura ou fórmula)
 - `montar_questoes.py`: gera o `app/src/main/assets/questoes.json` (com o tempo estimado de cada questão e as lições), baixa as figuras e renderiza as fórmulas
 - `validar_questoes.py`: confere o JSON, o tempo das lições e as imagens contra a especificação e contra o original da API
+- `gerar_sons.py`: gera os sons de acerto, erro e lição concluída em `app/src/main/res/raw/`
 
 ## Como rodar
 
@@ -78,13 +97,13 @@ python tools/validar_questoes.py
 
 ```text
 app/src/main/java/com/murilo/enemigo/
-├── data/    # leitura do questoes.json e progresso salvo (SharedPreferences)
-├── model/   # Area, Licao, Questao, ResultadoSessao
-├── ui/      # Activities, Fragments, Adapters e os componentes em relevo (ui/componente)
-└── util/    # regras de gamificação (XP, vidas, ofensiva) e constantes
+├── data/    # leitura do questoes.json, progresso e preferências salvos (SharedPreferences)
+├── model/   # Area, Licao, Questao, ResultadoSessao, Conquista e Avatar
+├── ui/      # Activities, Fragments, Adapters e componentes (ui/componente: relevo, mascote, avatar, confete)
+└── util/    # regras de gamificação (XP, vidas, ofensiva, conquistas, celebrações) e constantes
 ```
 
-As regras de gamificação ficam em `Gamificacao.java`, as de tempo em `TempoEstudo.java` e a migração do progresso em `Migracao.java`, todas com testes em `app/src/test`.
+As regras de gamificação ficam em `Gamificacao.java`, as das conquistas em `Conquistas.java`, a fila de celebrações em `Celebracoes.java`, as de tempo em `TempoEstudo.java` e a migração do progresso em `Migracao.java`, todas com testes em `app/src/test` (o `model/Avatar` também).
 
 ## Personalizar a marca
 
@@ -100,6 +119,7 @@ Dá para trocar a identidade visual sem mexer no código Java:
   - `papel*`: precisa continuar claro nos dois modos (o `PapelModoEscuroTest` avisa se não estiver).
 - **Fontes:** `app/src/main/res/font/marca_interface.xml` (interface), `marca_titulo.xml` (títulos) e `marca_leitura.xml` (texto-base). Para usar outra fonte do Google Fonts, ajuste e rode `tools/gerar_fontes.py`, que gera os arquivos de cada peso e recorta só os caracteres que o app usa.
 - **Ícone e abertura:** `app/src/main/res/drawable/ic_launcher_foreground.xml` (a abertura usa o mesmo desenho, sobre `marca_primaria`) e `marca_logo.xml` (logo dentro do app).
+- **Mascote:** o nome fica em `mascote_nome` (strings.xml) e as cores em `mascote_*` (colors.xml), que são apelidos das cores da marca. Trocando a marca, o Grifo, as medalhas e os fundos do avatar acompanham sozinhos.
 
 Depois de trocar, rode `./gradlew test` e confira as telas nos dois modos.
 
@@ -107,12 +127,14 @@ A especificação completa do app (telas, regras de negócio, plano das aulas) e
 
 ## Próximos passos
 
-- Conquistas
-- Tela de configurações (editar nome, trocar meta, resetar progresso)
-- Lembrete diário por notificação
+- Lembrete diário por notificação, com o Grifo
+- Conquistas para as outras áreas, como as de Matemática
+- Mais peças de avatar (roupas, cabelos), algumas liberadas por conquistas
+- Testes de interface (Espresso) para o quiz, o resultado e as celebrações
 
 ## Créditos e licença
 
 - Questões: provas do ENEM, elaboradas e publicadas pelo **INEP**. Obtidas pela API [enem.dev](https://enem.dev).
 - Fontes: [Plus Jakarta Sans](https://github.com/tokotype/PlusJakartaSans) e [Literata](https://github.com/googlefonts/literata), sob a SIL Open Font License 1.1 (textos das licenças em `app/src/main/assets/licencas/`).
+- Mascote, avatar, medalhas, confete e sons: feitos para o app (vetores desenhados à mão e sons sintetizados por script), sem assets de terceiros.
 - O código do app está sob a licença MIT (veja [LICENSE](LICENSE)). A licença não se aplica às questões do ENEM, que continuam pertencendo ao INEP.
