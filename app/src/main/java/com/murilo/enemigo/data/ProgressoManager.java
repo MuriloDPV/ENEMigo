@@ -195,7 +195,7 @@ public final class ProgressoManager {
 
     /**
      * Tempo estimado da lição em minutos, já no ritmo do aluno depois de 10 questões medidas
-     * (RN37), ou 0 se o JSON não tiver a estimativa.
+     * (RN39), ou 0 se o JSON não tiver a estimativa.
      */
     public int getMinutosEstimados(Licao licao) {
         int segundos = licao.getSegundosEstimados();
@@ -254,7 +254,7 @@ public final class ProgressoManager {
     // ---------------------------------------------------------------- Tempo de estudo
 
     /**
-     * RN36: soma o tempo de uma questão respondida (do aparecer ao VERIFICAR, sem o tempo em
+     * RN38: soma o tempo de uma questão respondida (do aparecer ao VERIFICAR, sem o tempo em
      * segundo plano). Tempo inválido, como mais de 10 min, é descartado.
      */
     public void registrarTempoQuestao(Questao questao, long ms) {
@@ -281,7 +281,7 @@ public final class ProgressoManager {
         return TempoEstudo.minutos(getTempoHojeMs());
     }
 
-    /** RN37: ritmo real / estimado (1 até ter 10 questões medidas). */
+    /** RN39: ritmo real / estimado (1 até ter 10 questões medidas). */
     public double getFatorRitmo() {
         return TempoEstudo.fatorRitmo(lerTempoTotalMs(),
                 prefs.getLong(Constantes.CHAVE_TEMPO_ESTIMADO_S, 0L), lerQuestoesCronometradas());
@@ -435,7 +435,7 @@ public final class ProgressoManager {
     // ---------------------------------------------------------------- Migração
 
     /**
-     * RN35: o progresso salvo com o banco da versão 1 (4 lições de 5) passa para as lições atuais.
+     * RN37: o progresso salvo com o banco da versão 1 (4 lições de 5) passa para as lições atuais.
      * Conta como concluída a lição nova cujas questões estavam todas em lições concluídas, com a
      * nota mínima (ex.: 2/3); o caderno troca os ids antigos pelos novos. Roda uma vez só.
      */

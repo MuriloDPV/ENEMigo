@@ -69,7 +69,7 @@ public class QuizActivity extends AppCompatActivity {
     private int acertos;
     private boolean verificada;
     private int vidasRecuperadas;
-    // Cronômetro da questão atual (RN36): só conta com a tela aberta e para no VERIFICAR.
+    // Cronômetro da questão atual (RN38): só conta com a tela aberta e para no VERIFICAR.
     private long tempoQuestaoMs;
     private long retomadoEm = -1;
 
@@ -220,7 +220,7 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        // Em segundo plano o cronômetro para (RN36).
+        // Em segundo plano o cronômetro para (RN38).
         tempoQuestaoMs = tempoDaQuestao();
         retomadoEm = -1;
     }
