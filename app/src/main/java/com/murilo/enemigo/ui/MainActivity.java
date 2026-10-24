@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.splashscreen.SplashScreen;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Tela de abertura com o ícone da marca (some sozinha quando a primeira tela fica pronta).
+        SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
 
         // RN01: primeiro acesso vai para o onboarding.

@@ -1,30 +1,87 @@
 <resources>
-    <style name="Base.Theme.ENEMigo" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">@color/verde_primario</item>
-        <item name="colorOnPrimary">@color/branco</item>
-        <item name="colorSecondary">@color/azul_selecao</item>
+    <!-- DayNight: as cores mudam sozinhas pelo values-night. values-v27 completa a barra de navegação. -->
+    <style name="Plataforma.Theme.ENEMigo" parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <style name="Base.Theme.ENEMigo" parent="Plataforma.Theme.ENEMigo">
+        <item name="colorPrimary">@color/marca_primaria</item>
+        <item name="colorOnPrimary">@color/marca_sobre_primaria</item>
+        <item name="colorPrimaryContainer">@color/marca_primaria_suave</item>
+        <item name="colorOnPrimaryContainer">@color/marca_primaria_texto</item>
+        <item name="colorSecondary">@color/marca_acento</item>
+        <item name="colorOnSecondary">@color/marca_sobre_acento</item>
+        <item name="colorSecondaryContainer">@color/marca_primaria_suave</item>
+        <item name="colorOnSecondaryContainer">@color/marca_primaria_texto</item>
+        <item name="colorTertiary">@color/marca_acerto</item>
+        <item name="colorError">@color/marca_erro</item>
+        <item name="android:colorBackground">@color/fundo</item>
+        <item name="colorOnBackground">@color/texto_principal</item>
+        <item name="colorSurface">@color/superficie</item>
+        <item name="colorOnSurface">@color/texto_principal</item>
+        <item name="colorSurfaceVariant">@color/superficie_variante</item>
+        <item name="colorOnSurfaceVariant">@color/texto_secundario</item>
+        <item name="colorSurfaceContainerLowest">@color/superficie</item>
+        <item name="colorSurfaceContainerLow">@color/superficie</item>
+        <item name="colorSurfaceContainer">@color/superficie</item>
+        <item name="colorSurfaceContainerHigh">@color/superficie</item>
+        <item name="colorSurfaceContainerHighest">@color/superficie_variante</item>
+        <item name="colorOutline">@color/superficie_borda</item>
+        <item name="colorOutlineVariant">@color/superficie_borda</item>
+        <item name="colorControlNormal">@color/texto_secundario</item>
+        <item name="android:textColorPrimary">@color/texto_principal</item>
+        <item name="android:textColorSecondary">@color/texto_secundario</item>
+
         <item name="android:windowBackground">@color/fundo</item>
         <item name="android:statusBarColor">@color/fundo</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:navigationBarColor">@color/fundo</item>
-        <item name="materialButtonStyle">@style/Widget.ENEMigo.Button</item>
+        <item name="android:windowLightStatusBar">@bool/barras_claras</item>
+
+        <!-- Fonte da marca em todo o app, inclusive nos componentes do Material.
+             Só android:fontFamily: o app:fontFamily no tema passaria por cima da fonte dos estilos. -->
+        <item name="android:fontFamily">@font/marca_interface</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.ENEMigo.HeadlineSmall</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.ENEMigo.TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.ENEMigo.TitleMedium</item>
+        <item name="textAppearanceTitleSmall">@style/TextAppearance.ENEMigo.TitleSmall</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.ENEMigo.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.ENEMigo.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.ENEMigo.BodySmall</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.ENEMigo.LabelLarge</item>
+        <item name="textAppearanceLabelMedium">@style/TextAppearance.ENEMigo.LabelMedium</item>
+        <item name="textAppearanceLabelSmall">@style/TextAppearance.ENEMigo.LabelSmall</item>
+
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.ENEMigo.Dialogo</item>
+        <item name="textInputStyle">@style/Widget.ENEMigo.CampoTexto</item>
+        <item name="bottomNavigationStyle">@style/Widget.ENEMigo.BarraInferior</item>
+        <item name="linearProgressIndicatorStyle">@style/Widget.ENEMigo.Progresso</item>
+        <item name="materialCardViewStyle">@style/Widget.ENEMigo.Face</item>
     </style>
 
     <style name="Theme.ENEMigo" parent="Base.Theme.ENEMigo" />
 
-    <!-- Figura ampliada (ImagemAmpliada): janela inteira, sem barra de status -->
-    <style name="Theme.ENEMigo.ImagemTelaCheia">
-        <item name="android:windowFullscreen">true</item>
+    <!-- Abertura (androidx core-splashscreen): ícone da marca sobre a cor primária -->
+    <style name="Theme.ENEMigo.Abertura" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/marca_primaria</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.ENEMigo</item>
     </style>
 
-    <!-- Botão principal: 56dp, cantos 12dp, maiúsculas e negrito -->
-    <style name="Widget.ENEMigo.Button" parent="Widget.Material3.Button">
-        <item name="android:minHeight">@dimen/altura_botao</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textSize">16sp</item>
-        <item name="cornerRadius">@dimen/raio_botao</item>
-        <item name="android:insetTop">0dp</item>
-        <item name="android:insetBottom">0dp</item>
+    <!-- Figura ampliada (ImagemAmpliada): janela inteira sobre papel, sem barra de status -->
+    <style name="Theme.ENEMigo.ImagemTelaCheia">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/papel</item>
+    </style>
+
+    <style name="ThemeOverlay.ENEMigo.Dialogo" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="materialAlertDialogTitleTextStyle">@style/Dialogo.Titulo</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/Dialogo.Corpo</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Dialogo.Botao</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Dialogo.Botao.Secundario</item>
+    </style>
+
+    <!-- Diálogo com ícone em cima do título (sem vidas) -->
+    <style name="ThemeOverlay.ENEMigo.Dialogo.Icone" parent="ThemeOverlay.Material3.MaterialAlertDialog.Centered">
+        <item name="materialAlertDialogTitleTextStyle">@style/Dialogo.Titulo.Centralizado</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/Dialogo.Corpo</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Dialogo.Botao</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Dialogo.Botao.Secundario</item>
     </style>
 </resources>

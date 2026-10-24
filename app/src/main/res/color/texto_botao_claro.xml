@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Texto dos botões coloridos: branco, ou apagado quando desabilitado. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/texto_desativado" android:state_enabled="false" />
+    <item android:color="@color/texto_sobre_cor" />
+</selector>

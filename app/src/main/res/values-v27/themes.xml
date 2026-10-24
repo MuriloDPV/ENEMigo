@@ -1,0 +1,7 @@
+<resources>
+    <!-- A partir do Android 8.1 a barra de navegação pode ter ícones escuros, então ela segue o fundo do app. -->
+    <style name="Plataforma.Theme.ENEMigo" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:navigationBarColor">@color/fundo</item>
+        <item name="android:windowLightNavigationBar">@bool/barras_claras</item>
+    </style>
+</resources>

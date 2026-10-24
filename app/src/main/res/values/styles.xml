@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===== Tipografia dos componentes do Material (todas com a fonte da marca) ===== -->
+    <style name="TextAppearance.ENEMigo.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:fontFamily">@font/marca_titulo</item>
+        <item name="fontFamily">@font/marca_titulo</item>
+    </style>
+    <style name="TextAppearance.ENEMigo.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">@font/marca_titulo</item>
+        <item name="fontFamily">@font/marca_titulo</item>
+    </style>
+    <style name="TextAppearance.ENEMigo.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:fontFamily">@font/marca_interface</item>
+        <item name="fontFamily">@font/marca_interface</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.ENEMigo.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:fontFamily">@font/marca_interface</item>
+        <item name="fontFamily">@font/marca_interface</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.ENEMigo.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:fontFamily">@font/marca_interface</item>
+        <item name="fontFamily">@font/marca_interface</item>
+    </style>
+    <style name="TextAppearance.ENEMigo.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">@font/marca_interface</item>
+        <item name="fontFamily">@font/marca_interface</item>
+    </style>
+    <style name="TextAppearance.ENEMigo.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:fontFamily">@font/marca_interface</item>
+        <item name="fontFamily">@font/marca_interface</item>
+    </style>
+    <style name="TextAppearance.ENEMigo.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:fontFamily">@font/marca_interface</item>
+        <item name="fontFamily">@font/marca_interface</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.ENEMigo.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">@font/marca_interface</item>
+        <item name="fontFamily">@font/marca_interface</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.ENEMigo.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:fontFamily">@font/marca_interface</item>
+        <item name="fontFamily">@font/marca_interface</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.ENEMigo.Aba" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">@font/marca_interface</item>
+        <item name="fontFamily">@font/marca_interface</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- ===== Estilos de texto do app ===== -->
+    <style name="Texto">
+        <item name="android:fontFamily">@font/marca_interface</item>
+        <item name="android:textColor">@color/texto_principal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="Texto.Titulo">
+        <item name="android:fontFamily">@font/marca_titulo</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+    <style name="Texto.Titulo.Grande">
+        <item name="android:textSize">28sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+    <style name="Texto.Titulo.Medio">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="Texto.Destaque">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Texto.Secundario">
+        <item name="android:textColor">@color/texto_secundario</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- Rótulo pequeno em maiúsculas (ex.: "QUESTÃO 2 DE 5") -->
+    <style name="Texto.Rotulo">
+        <item name="android:textColor">@color/texto_secundario</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+    <!-- Texto-base das questões, no cartão de papel -->
+    <style name="Texto.Leitura">
+        <item name="android:fontFamily">@font/marca_leitura</item>
+        <item name="android:textColor">@color/papel_texto</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingMultiplier">1.12</item>
+    </style>
+    <!-- Número das pílulas de status (ofensiva, XP, vidas) -->
+    <style name="Texto.Status">
+        <item name="android:fontFamily">@font/marca_titulo</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- ===== Botões em relevo (ui/componente/BotaoRelevo) ===== -->
+    <style name="Widget.ENEMigo.Botao" parent="">
+        <item name="android:minHeight">@dimen/altura_botao</item>
+        <item name="android:minWidth">88dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:fontFamily">@font/marca_titulo</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textColor">@color/texto_botao_claro</item>
+        <item name="raio">@dimen/raio_botao</item>
+        <item name="relevo">@dimen/relevo</item>
+        <item name="corFace">@color/marca_primaria</item>
+        <item name="corSombra">@color/marca_primaria_escura</item>
+    </style>
+    <style name="Widget.ENEMigo.Botao.Primario" />
+    <style name="Widget.ENEMigo.Botao.Acerto">
+        <item name="corFace">@color/marca_acerto</item>
+        <item name="corSombra">@color/marca_acerto_escuro</item>
+    </style>
+    <style name="Widget.ENEMigo.Botao.Neutro">
+        <item name="corFace">@color/superficie</item>
+        <item name="corBorda">@color/superficie_borda</item>
+        <item name="corSombra">@color/superficie_borda</item>
+        <item name="android:textColor">@color/texto_botao_neutro</item>
+    </style>
+
+    <!-- Opção da meta diária no onboarding: cartão em relevo com a bolinha à direita -->
+    <style name="Widget.ENEMigo.OpcaoMeta" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:minHeight">68dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/bg_opcao</item>
+        <item name="android:drawableEnd">@drawable/indicador_opcao</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:fontFamily">@font/marca_interface</item>
+        <item name="android:textColor">@color/texto_principal</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <!-- Face dos cartões em relevo: sem elevação nem borda do Material -->
+    <style name="Widget.ENEMigo.Face" parent="Widget.Material3.CardView.Filled">
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="cardBackgroundColor">@color/superficie</item>
+        <item name="cardCornerRadius">@dimen/raio_cartao</item>
+    </style>
+    <style name="Widget.ENEMigo.Face.Contorno">
+        <item name="strokeWidth">@dimen/largura_borda</item>
+        <item name="strokeColor">@color/superficie_borda</item>
+    </style>
+
+    <!-- Pílula de status (ofensiva, XP, vidas): ícone à esquerda e o número -->
+    <style name="Widget.ENEMigo.Pilula" parent="Texto.Status">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:background">@drawable/bg_pilula</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:paddingStart">7dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+
+    <!-- ===== Componentes do Material ===== -->
+    <style name="Widget.ENEMigo.Progresso" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="trackThickness">@dimen/espessura_progresso</item>
+        <item name="trackCornerRadius">6dp</item>
+        <item name="indicatorColor">@color/marca_primaria</item>
+        <item name="trackColor">@color/superficie_variante</item>
+        <item name="indicatorTrackGapSize">0dp</item>
+        <item name="trackStopIndicatorSize">0dp</item>
+    </style>
+
+    <style name="Widget.ENEMigo.CampoTexto" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxBackgroundColor">@color/superficie</item>
+        <item name="hintTextColor">@color/marca_primaria_texto</item>
+    </style>
+
+    <style name="Widget.ENEMigo.BarraInferior" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/fundo</item>
+        <item name="elevation">0dp</item>
+        <item name="itemIconTint">@color/nav_item</item>
+        <item name="itemTextColor">@color/nav_item</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.ENEMigo.BarraInferior.Indicador</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.ENEMigo.Aba</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.ENEMigo.Aba</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+    <style name="Widget.ENEMigo.BarraInferior.Indicador" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/marca_primaria_suave</item>
+    </style>
+
+    <!-- ===== Diálogos ===== -->
+    <style name="Dialogo.Titulo" parent="MaterialAlertDialog.Material3.Title.Text">
+        <item name="android:textAppearance">@style/TextAppearance.ENEMigo.HeadlineSmall</item>
+        <item name="android:textColor">@color/texto_principal</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="Dialogo.Titulo.Centralizado" parent="MaterialAlertDialog.Material3.Title.Text.CenterStacked">
+        <item name="android:textAppearance">@style/TextAppearance.ENEMigo.HeadlineSmall</item>
+        <item name="android:textColor">@color/texto_principal</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="Dialogo.Corpo" parent="MaterialAlertDialog.Material3.Body.Text">
+        <item name="android:textAppearance">@style/TextAppearance.ENEMigo.BodyMedium</item>
+        <item name="android:textColor">@color/texto_secundario</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="Dialogo.Botao" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/marca_primaria_texto</item>
+        <item name="android:textAppearance">@style/TextAppearance.ENEMigo.LabelLarge</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="Dialogo.Botao.Secundario">
+        <item name="android:textColor">@color/texto_secundario</item>
+    </style>
+</resources>

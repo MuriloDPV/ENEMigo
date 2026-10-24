@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Aba selecionada em verde, as outras em cinza. -->
+<!-- Aba selecionada na cor da marca, as outras em cinza. -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="@color/verde_primario" android:state_checked="true" />
-    <item android:color="@color/cinza_bloqueado" />
+    <item android:color="@color/marca_primaria_texto" android:state_checked="true" />
+    <item android:color="@color/texto_secundario" />
 </selector>

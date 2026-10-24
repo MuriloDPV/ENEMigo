@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Texto do botão neutro (branco com borda): cor da marca, ou apagado quando desabilitado. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/texto_desativado" android:state_enabled="false" />
+    <item android:color="@color/marca_primaria_texto" />
+</selector>
