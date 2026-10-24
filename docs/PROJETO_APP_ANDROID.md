@@ -3,6 +3,8 @@
 > Especificação do aplicativo Android desenvolvido na disciplina de Programação.
 > Ferramentas: Android Studio, Java, XML, Android SDK e GitHub Copilot.
 > Este documento **não contém código**. Ele é a base para a implementação guiada pelos prompts da seção 17.
+>
+> **Nota:** esta especificação foi escrita prevendo o uso do GitHub Copilot, mas a implementação acabou sendo feita com o Claude Code.
 
 **Ideia original do aluno:**
 
