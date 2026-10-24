@@ -105,9 +105,9 @@
     <string name="onboarding_subtitulo">O marca-texto do %1$s. Vou te ajudar a estudar pro ENEM um pouquinho todo dia.</string>
     <string name="onboarding_hint_nome">Como você quer ser chamado?</string>
     <string name="onboarding_pergunta_meta">Qual a sua meta diária?</string>
-    <string name="meta_casual"><b>Casual</b>\n20 XP por dia · cerca de 2 lições</string>
-    <string name="meta_regular"><b>Regular</b>\n50 XP por dia · cerca de 5 lições</string>
-    <string name="meta_intenso"><b>Intenso</b>\n100 XP por dia · cerca de 10 lições</string>
+    <string name="meta_casual"><b>Casual</b>\n20 XP por dia · cerca de 1 lição</string>
+    <string name="meta_regular"><b>Regular</b>\n50 XP por dia · 1 ou 2 lições</string>
+    <string name="meta_intenso"><b>Intenso</b>\n100 XP por dia · 2 ou 3 lições</string>
     <string name="erro_nome_vazio">Digite seu nome</string>
     <string name="erro_nome_curto">O nome precisa ter pelo menos 2 letras</string>
     <string name="erro_nome_longo">Use no máximo 20 caracteres</string>
