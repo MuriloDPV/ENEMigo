@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.murilo.enemigo.R;
 import com.murilo.enemigo.model.Questao;
+import com.murilo.enemigo.util.TextoRico;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +46,7 @@ public class CadernoAdapter extends RecyclerView.Adapter<CadernoAdapter.CadernoV
         int cor = ContextCompat.getColor(holder.itemView.getContext(), questao.getArea().getCorRes());
         holder.txtEtiqueta.setText(questao.getArea().getNome());
         holder.txtEtiqueta.setBackgroundTintList(ColorStateList.valueOf(cor));
-        holder.txtEnunciado.setText(questao.getEnunciado());
+        holder.txtEnunciado.setText(TextoRico.semMarcadores(questao.getEnunciado()));
         holder.txtFonte.setText(questao.getFonte());
     }
 

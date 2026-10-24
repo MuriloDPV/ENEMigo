@@ -24,6 +24,7 @@ import com.murilo.enemigo.model.Licao;
 import com.murilo.enemigo.model.Questao;
 import com.murilo.enemigo.model.ResultadoSessao;
 import com.murilo.enemigo.util.Constantes;
+import com.murilo.enemigo.util.TextoRico;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -60,6 +61,7 @@ public class QuizActivity extends AppCompatActivity {
     private TextView txtVidas;
     private View cardTextoBase;
     private TextView txtTextoBase;
+    private TextView txtDicaFigura;
     private TextView txtEnunciado;
     private TextView txtFonte;
     private MaterialButton btnVerificar;
@@ -103,6 +105,7 @@ public class QuizActivity extends AppCompatActivity {
         txtVidas = findViewById(R.id.txt_vidas_quiz);
         cardTextoBase = findViewById(R.id.card_texto_base);
         txtTextoBase = findViewById(R.id.txt_texto_base);
+        txtDicaFigura = findViewById(R.id.txt_dica_figura);
         txtEnunciado = findViewById(R.id.txt_enunciado);
         txtFonte = findViewById(R.id.txt_fonte);
         btnVerificar = findViewById(R.id.btn_verificar);
@@ -220,9 +223,12 @@ public class QuizActivity extends AppCompatActivity {
             cardTextoBase.setVisibility(View.GONE);
         } else {
             cardTextoBase.setVisibility(View.VISIBLE);
-            txtTextoBase.setText(questao.getTexto());
+            TextoComImagens.exibir(txtTextoBase, questao.getTexto(), false);
         }
-        txtEnunciado.setText(questao.getEnunciado());
+        TextoComImagens.exibir(txtEnunciado, questao.getEnunciado(), false);
+        boolean temFigura = TextoRico.temFigura(questao.getTexto())
+                || TextoRico.temFigura(questao.getEnunciado());
+        txtDicaFigura.setVisibility(temFigura ? View.VISIBLE : View.GONE);
         if (questao.getFonte().isEmpty()) {
             txtFonte.setVisibility(View.GONE);
         } else {
@@ -235,7 +241,7 @@ public class QuizActivity extends AppCompatActivity {
         int branco = ContextCompat.getColor(this, R.color.fundo);
         for (int i = 0; i < cardsAlternativas.length; i++) {
             MaterialCardView card = cardsAlternativas[i];
-            ((TextView) card.findViewById(R.id.txt_texto)).setText(alternativas[i]);
+            TextoComImagens.exibir(card.findViewById(R.id.txt_texto), alternativas[i], true);
             aplicarEstilo(card, cinza, branco);
             card.setClickable(true);
         }

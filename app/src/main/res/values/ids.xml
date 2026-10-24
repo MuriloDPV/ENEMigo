@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Guarda no TextView o último texto pedido (ver TextoComImagens) -->
+    <item name="tag_texto_rico" type="id" />
+</resources>

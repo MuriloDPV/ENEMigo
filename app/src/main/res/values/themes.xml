@@ -12,6 +12,11 @@
 
     <style name="Theme.ENEMigo" parent="Base.Theme.ENEMigo" />
 
+    <!-- Figura ampliada (ImagemAmpliada): janela inteira, sem barra de status -->
+    <style name="Theme.ENEMigo.ImagemTelaCheia">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
     <!-- Botão principal: 56dp, cantos 12dp, maiúsculas e negrito -->
     <style name="Widget.ENEMigo.Button" parent="Widget.Material3.Button">
         <item name="android:minHeight">@dimen/altura_botao</item>

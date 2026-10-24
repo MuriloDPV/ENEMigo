@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.murilo.enemigo.ui.ZoomImageView
+        android:id="@+id/img_ampliada"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/imagem_ampliada" />
+
+    <ImageButton
+        android:id="@+id/btn_fechar_imagem"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/fechar"
+        android:src="@drawable/ic_close"
+        app:tint="@color/texto_secundario" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:text="@string/imagem_dica_zoom"
+        android:textColor="@color/texto_secundario"
+        android:textSize="13sp" />
+</FrameLayout>

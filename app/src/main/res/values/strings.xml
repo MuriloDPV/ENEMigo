@@ -47,6 +47,9 @@
     <string name="fechar">Fechar</string>
     <string name="quiz_contador">Questão %1$d de %2$d</string>
     <string name="quiz_fonte">Fonte: %1$s</string>
+    <string name="quiz_dica_figura">Toque na figura para ampliar</string>
+    <string name="imagem_ampliada">Figura da questão ampliada</string>
+    <string name="imagem_dica_zoom">Afaste dois dedos ou toque duas vezes para dar zoom</string>
     <string name="licao_nao_encontrada">Lição não encontrada</string>
     <string name="feedback_acerto">Mandou bem! 🎉</string>
     <string name="feedback_erro">Resposta correta: %1$s</string>

@@ -92,6 +92,17 @@
                     android:textSize="15sp" />
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Só aparece quando a questão tem figura -->
+            <TextView
+                android:id="@+id/txt_dica_figura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/quiz_dica_figura"
+                android:textColor="@color/texto_secundario"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
             <TextView
                 android:id="@+id/txt_enunciado"
                 android:layout_width="match_parent"
