@@ -63,7 +63,7 @@ public class ResultadoActivity extends AppCompatActivity {
         boolean desbloqueou = recebida.getBooleanExtra(Constantes.EXTRA_DESBLOQUEOU, false);
         int vidasRecuperadas = recebida.getIntExtra(Constantes.EXTRA_VIDAS_RECUPERADAS, 0);
 
-        // O Grifo: comemorando (perfeito), feliz (concluída) ou pensando (quase lá)
+        // A Lia: comemorando (perfeito), feliz (concluída) ou pensando (quase lá)
         TextView txtTitulo = findViewById(R.id.txt_titulo);
         if (acertos == total) {
             txtTitulo.setText(R.string.resultado_perfeito);
@@ -162,7 +162,7 @@ public class ResultadoActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        // Escondido atrás de uma celebração, o Grifo descansa.
+        // Escondido atrás de uma celebração, a Lia descansa.
         mascote.parar();
     }
 

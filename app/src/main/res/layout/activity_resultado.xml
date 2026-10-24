@@ -6,7 +6,7 @@
     android:background="@color/fundo"
     android:fillViewport="true">
 
-    <!-- Sem recorte: o Grifo pula para fora do halo -->
+    <!-- Sem recorte: a Lia pula para fora do halo -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <!-- O Grifo num círculo com halo: comemorando (perfeito), feliz (concluída) ou pensando -->
+        <!-- A Lia num círculo com halo: comemorando (perfeito), feliz (concluída) ou pensando -->
         <FrameLayout
             android:id="@+id/halo_resultado"
             android:layout_width="156dp"

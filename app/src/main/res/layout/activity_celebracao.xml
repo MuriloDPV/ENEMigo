@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/marca_primaria">
 
-    <!-- Sem recorte: o Grifo pula para fora da própria linha -->
+    <!-- Sem recorte: a Lia pula para fora da própria linha -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -97,7 +97,7 @@
             android:layout_weight="1"
             android:minHeight="16dp" />
 
-        <!-- O Grifo comemora e fala num balão -->
+        <!-- A Lia comemora e fala num balão -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

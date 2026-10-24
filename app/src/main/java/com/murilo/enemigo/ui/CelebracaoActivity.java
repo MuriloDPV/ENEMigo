@@ -37,7 +37,7 @@ import java.util.List;
 
 /**
  * Celebrações em tela cheia, uma depois da outra: lição perfeita, ofensiva aumentada, nível novo
- * e conquista nova. Cada uma tem confete, o Grifo comemorando e um som. CONTINUAR vai para a
+ * e conquista nova. Cada uma tem confete, a Lia comemorando e um som. CONTINUAR vai para a
  * próxima; o Voltar pula todas. No fim, abre a tela "próxima" se ela veio na Intent.
  */
 public class CelebracaoActivity extends AppCompatActivity {

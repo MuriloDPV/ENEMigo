@@ -1,8 +1,8 @@
 <resources>
     <!-- Nome do app: usado no ícone, na abertura e nos textos que falam do app -->
     <string name="app_name">ENEMigo</string>
-    <!-- Nome do mascote (o marca-texto) -->
-    <string name="mascote_nome">Grifo</string>
+    <!-- Nome da mascote (a raposa) -->
+    <string name="mascote_nome">Lia</string>
 
     <!-- Abas -->
     <string name="aba_inicio">Início</string>
@@ -101,8 +101,8 @@
     </plurals>
 
     <!-- Onboarding (quem fala é o mascote) -->
-    <string name="onboarding_titulo">Oi! Eu sou o %1$s</string>
-    <string name="onboarding_subtitulo">O marca-texto do %1$s. Vou te ajudar a estudar pro ENEM um pouquinho todo dia.</string>
+    <string name="onboarding_titulo">Oi! Eu sou a %1$s</string>
+    <string name="onboarding_subtitulo">A raposa do %1$s. Eu farejo as pegadinhas do ENEM e te ajudo a estudar um pouquinho todo dia.</string>
     <string name="onboarding_hint_nome">Como você quer ser chamado?</string>
     <string name="onboarding_pergunta_meta">Qual a sua meta diária?</string>
     <string name="meta_casual"><b>Casual</b>\n20 XP por dia · cerca de 1 lição</string>
@@ -156,10 +156,10 @@
     <string name="stat_minutos_valor">%1$d min</string>
     <string name="stat_sem_valor">—</string>
 
-    <!-- Celebrações em tela cheia (a "fala" é do Grifo) -->
+    <!-- Celebrações em tela cheia (a "fala" é da Lia) -->
     <string name="celebracao_perfeita_titulo">Lição perfeita!</string>
     <string name="celebracao_perfeita_subtitulo">Você acertou todas as questões. +%1$d XP de bônus!</string>
-    <string name="celebracao_perfeita_fala">Gabaritou! Nem eu grifo tão certinho.</string>
+    <string name="celebracao_perfeita_fala">Gabaritou! Nenhuma pegadinha te pegou.</string>
     <plurals name="celebracao_ofensiva_titulo">
         <item quantity="one">Ofensiva de %1$d dia!</item>
         <item quantity="other">Ofensiva de %1$d dias!</item>

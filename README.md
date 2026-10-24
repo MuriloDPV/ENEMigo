@@ -14,7 +14,7 @@ Feito como projeto da disciplina de Programação do meu curso técnico, em Java
 ## Funcionalidades
 
 - Primeiro acesso com nome, meta diária de XP (20, 50 ou 100) e avatar (dá para pular)
-- O **Grifo**, mascote do app (um marca-texto), com 5 expressões e animações: aparece no primeiro acesso, no feedback do quiz, no resultado, no caderno de erros vazio e quando as vidas acabam
+- A **Lia**, mascote do app (uma raposa esperta, que fareja a pegadinha do enunciado), com 5 expressões e animações: aparece no primeiro acesso, no feedback do quiz, no resultado, no caderno de erros vazio e quando as vidas acabam
 - **Avatar** montável: tom de pele, formato do rosto, cabelo e cor do cabelo, olhos, acessório (óculos, boné, fone) e cor de fundo, com prévia ao vivo e botão de sortear; aparece no Perfil e no Início
 - **8 conquistas** com medalhas: primeira lição, ofensiva de 3 e de 7 dias, 100 e 500 XP, lição perfeita e duas de Matemática (concluir uma lição e concluir todas). No Perfil, as bloqueadas ficam em cinza
 - **Celebrações em tela cheia**, com confete: lição perfeita, ofensiva aumentada, nível novo e conquista nova
@@ -43,7 +43,7 @@ Feito como projeto da disciplina de Programação do meu curso técnico, em Java
 
 Tudo foi feito para o app, sem nada baixado da internet:
 
-- **Grifo** (`res/drawable/mascote_*.xml`): 5 VectorDrawables (neutro, feliz, comemorando, triste e pensando). O `MascoteView` troca a expressão e anima com os animators do Android: balançar, pular, comemorar e tremer. Sem vidas, ele fica desbotado, "sem tinta".
+- **Lia** (`res/drawable/mascote_*.xml`): VectorDrawables das 5 expressões (neutro, feliz, comemorando, triste e pensando) e da pose sem vidas. O `MascoteView` troca a expressão e anima com os animators do Android: balançar, pular, comemorar e tremer. Sem vidas, ela fica de orelhas caídas e desbotada. Os desenhos, o ícone e o logo saem de `tools/gerar_mascote.py`: para mudar a Lia, edite o script e rode `python tools/gerar_mascote.py`.
 - **Avatar** (`res/drawable/avatar_*.xml`): 24 peças vetoriais no mesmo quadro de 120x120. Pele e cabelo são peças brancas que recebem a cor com tint; o `AvatarDrawable` empilha as peças e recorta num círculo. O avatar é salvo como texto no SharedPreferences (`model/Avatar`).
 - **Medalhas** (`res/drawable/medalha_*.xml`): uma para cada conquista. As condições ficam em `util/Conquistas.java`, conferidas no fim de cada sessão.
 - **Confete**: o `ConfeteView` desenha os papeizinhos na própria View (sem Lottie), com gravidade, giro e o papel "virando" no ar. Com "remover animações" ligado no celular, nada se mexe.
@@ -118,8 +118,8 @@ Dá para trocar a identidade visual sem mexer no código Java:
   - `area_*` (cor de cada área, a versão `_escura` e a cor do texto `_sobre` ela)
   - `papel*`: precisa continuar claro nos dois modos (o `PapelModoEscuroTest` avisa se não estiver).
 - **Fontes:** `app/src/main/res/font/marca_interface.xml` (interface), `marca_titulo.xml` (títulos) e `marca_leitura.xml` (texto-base). Para usar outra fonte do Google Fonts, ajuste e rode `tools/gerar_fontes.py`, que gera os arquivos de cada peso e recorta só os caracteres que o app usa.
-- **Ícone e abertura:** `app/src/main/res/drawable/ic_launcher_foreground.xml` (a abertura usa o mesmo desenho, sobre `marca_primaria`) e `marca_logo.xml` (logo dentro do app).
-- **Mascote:** o nome fica em `mascote_nome` (strings.xml) e as cores em `mascote_*` (colors.xml), que são apelidos das cores da marca. Trocando a marca, o Grifo, as medalhas e os fundos do avatar acompanham sozinhos.
+- **Ícone e abertura:** a cabeça da Lia sobre `marca_primaria`. `app/src/main/res/drawable/ic_launcher_foreground.xml` (a abertura usa o mesmo desenho), `ic_launcher_monocromatico.xml` (ícone temático) e `marca_logo.xml` (logo dentro do app), todos gerados por `tools/gerar_mascote.py`.
+- **Mascote:** o nome fica em `mascote_nome` (strings.xml) e as cores em `mascote_*` (colors.xml), que são apelidos das cores da marca. Trocando a marca, a Lia, as medalhas e os fundos do avatar acompanham sozinhos (o pelo dela é `marca_ofensiva` e o lenço é `marca_primaria`).
 
 Depois de trocar, rode `./gradlew test` e confira as telas nos dois modos.
 
@@ -127,7 +127,7 @@ A especificação completa do app (telas, regras de negócio, plano das aulas) e
 
 ## Próximos passos
 
-- Lembrete diário por notificação, com o Grifo
+- Lembrete diário por notificação, com a Lia
 - Conquistas para as outras áreas, como as de Matemática
 - Mais peças de avatar (roupas, cabelos), algumas liberadas por conquistas
 - Testes de interface (Espresso) para o quiz, o resultado e as celebrações

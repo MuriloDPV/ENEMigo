@@ -76,7 +76,7 @@
         android:paddingHorizontal="16dp"
         android:visibility="gone">
 
-        <!-- O Grifo comemora o caderno limpo, num círculo verde -->
+        <!-- A Lia comemora o caderno limpo, num círculo verde -->
         <FrameLayout
             android:layout_width="136dp"
             android:layout_height="136dp"

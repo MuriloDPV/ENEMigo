@@ -31,7 +31,7 @@ public class OnboardingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding);
 
-        // O Grifo se apresenta e fala do app
+        // A Lia se apresenta e fala do app
         ((TextView) findViewById(R.id.txt_titulo))
                 .setText(getString(R.string.onboarding_titulo, getString(R.string.mascote_nome)));
         ((TextView) findViewById(R.id.txt_subtitulo))
@@ -42,7 +42,7 @@ public class OnboardingActivity extends AppCompatActivity {
         edtNome = findViewById(R.id.edt_nome);
         rgMeta = findViewById(R.id.rg_meta);
 
-        // Escolher a meta deixa o Grifo animado.
+        // Escolher a meta deixa a Lia animada.
         rgMeta.setOnCheckedChangeListener((grupo, id) -> {
             mascote.setExpressao(MascoteView.Expressao.FELIZ);
             mascote.pular();
@@ -71,7 +71,7 @@ public class OnboardingActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        // O Grifo balança enquanto espera, só com a tela à vista.
+        // A Lia balança enquanto espera, só com a tela à vista.
         mascote.balancar();
     }
 

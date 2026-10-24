@@ -415,6 +415,8 @@ Abertura do app
 ## 7. Interface
 
 > **Atualização (redesign visual):** a identidade visual foi refeita depois desta especificação. Hoje o app usa o tema "caderno de estudo" com **DayNight** (modo claro e escuro), as fontes **Plus Jakarta Sans** (interface) e **Literata** (texto-base), botões e cartões em relevo e ícones vetoriais próprios no lugar dos emojis 🔥⭐❤️. As cores têm nomes de função (`marca_primaria`, `marca_acento`...) em `values/colors.xml` e `values-night/colors.xml`. Veja "Personalizar a marca" no README. As seções 7.1 a 7.4 e 13 descrevem a versão original e ficam aqui como registro do projeto.
+>
+> **Atualização (mascote e ícone):** o app ganhou uma mascote própria, a **Lia**, uma raposa esperta que fareja a pegadinha do enunciado (laranja da ofensiva, máscara clara e lenço azul-tinta). Ela aparece no onboarding, no feedback do quiz, no resultado, nas celebrações, no caderno vazio e nos avisos de sem vidas (orelhas caídas e desbotada). O ícone do app, a abertura e o logo usam a cabeça dela sobre `marca_primaria`. Tudo é vetor desenhado para o app (`tools/gerar_mascote.py`), sem coruja, sem o verde do Duolingo e sem assets de terceiros.
 
 ### 7.1 Diretrizes gerais
 

@@ -181,7 +181,7 @@
             android:enabled="false"
             android:text="@string/btn_verificar" />
 
-        <!-- Sobe de baixo depois do VERIFICAR. Sem recorte: o Grifo pula para a margem de cima. -->
+        <!-- Sobe de baixo depois do VERIFICAR. Sem recorte: a Lia pula para a margem de cima. -->
         <LinearLayout
             android:id="@+id/painel_feedback"
             android:layout_width="match_parent"
@@ -201,7 +201,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <!-- O Grifo reage: feliz e pulando no acerto, triste e tremendo no erro -->
+                <!-- A Lia reage: feliz e pulando no acerto, triste e tremendo no erro -->
                 <com.murilo.enemigo.ui.componente.MascoteView
                     android:id="@+id/mascote_feedback"
                     android:layout_width="60dp"

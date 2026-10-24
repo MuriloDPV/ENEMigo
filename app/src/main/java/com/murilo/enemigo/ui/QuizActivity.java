@@ -420,7 +420,7 @@ public class QuizActivity extends AppCompatActivity {
         divisorInferior.setVisibility(View.GONE);
         painelFeedback.setVisibility(View.VISIBLE);
         if (animar) {
-            // O painel sobe de baixo da tela e, quando chega, o Grifo pula ou balança a cabeça.
+            // O painel sobe de baixo da tela e, quando chega, a Lia pula ou balança a cabeça.
             painelFeedback.post(() -> {
                 painelFeedback.setTranslationY(painelFeedback.getHeight());
                 painelFeedback.animate()
@@ -454,7 +454,7 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-    /** O Grifo fica desbotado, "sem tinta", como as vidas. */
+    /** A Lia fica sem energia (orelhas caídas e desbotada), como as vidas. */
     private void mostrarVidasAcabaram() {
         Dialogos.semVidas(this, getString(R.string.vidas_acabaram_titulo),
                         getString(R.string.vidas_acabaram_mensagem))
