@@ -150,8 +150,5 @@
     <string name="resultado_emoji_perfeito">🏆</string>
     <string name="resultado_emoji_concluida">✅</string>
     <string name="resultado_emoji_quase">💪</string>
-    <string name="circulo_concluida">✓</string>
-    <string name="circulo_bloqueada">🔒</string>
-    <string name="licao_comecar">Começar</string>
     <string name="caderno_vazio_emoji">🎉</string>
 </resources>

@@ -6,31 +6,66 @@
     android:background="@color/fundo"
     android:orientation="vertical">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:navigationContentDescription="@string/voltar"
-        app:navigationIcon="?attr/homeAsUpIndicator"
-        app:navigationIconTint="@color/branco"
-        app:titleTextColor="@color/branco" />
-
-    <include
-        android:id="@+id/status"
-        layout="@layout/layout_status"
+    <!-- Cabeçalho na cor da área (pintado no Java) -->
+    <LinearLayout
+        android:id="@+id/cabecalho"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margem_tela"
-        android:layout_marginTop="8dp" />
+        android:orientation="vertical"
+        android:paddingBottom="18dp">
 
-    <TextView
-        android:id="@+id/txt_resumo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margem_tela"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/texto_secundario"
-        android:textSize="15sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="4dp"
+            android:paddingEnd="@dimen/margem_tela">
+
+            <ImageButton
+                android:id="@+id/btn_voltar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/voltar"
+                android:src="@drawable/ic_voltar" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/status"
+                layout="@layout/layout_status" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_titulo"
+            style="@style/Texto.Titulo.Grande"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:paddingHorizontal="@dimen/margem_tela" />
+
+        <TextView
+            android:id="@+id/txt_resumo"
+            style="@style/Texto.Destaque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:paddingHorizontal="@dimen/margem_tela"
+            android:textSize="14sp" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_trilha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margem_tela"
+            android:layout_marginTop="10dp"
+            app:trackThickness="10dp"
+            app:trackCornerRadius="5dp" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_licoes"
@@ -38,7 +73,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:clipToPadding="false"
-        android:paddingHorizontal="@dimen/margem_tela"
-        android:paddingVertical="8dp" />
+        android:paddingTop="4dp"
+        android:paddingBottom="40dp" />
 
 </LinearLayout>

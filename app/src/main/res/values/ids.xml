@@ -2,4 +2,6 @@
 <resources>
     <!-- Guarda no TextView o último texto pedido (ver TextoComImagens) -->
     <item name="tag_texto_rico" type="id" />
+    <!-- Estado da lição guardado no nó da trilha (ver LinhaTrilha) -->
+    <item name="tag_estado_licao" type="id" />
 </resources>
