@@ -9,77 +9,141 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="@dimen/margem_tela">
+        android:paddingHorizontal="@dimen/margem_tela"
+        android:paddingTop="12dp"
+        android:paddingBottom="28dp">
 
-        <include
-            android:id="@+id/status"
-            layout="@layout/layout_status" />
+        <!-- Topo: marca e status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/marca_logo" />
+
+            <TextView
+                style="@style/Texto.Titulo.Medio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textColor="@color/marca_primaria_texto" />
+
+            <include
+                android:id="@+id/status"
+                layout="@layout/layout_status" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/txt_saudacao"
+            style="@style/Texto.Titulo.Grande"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/espaco_cards"
-            android:textColor="@color/texto_principal"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="20dp" />
 
-        <com.google.android.material.card.MaterialCardView
+        <TextView
+            style="@style/Texto.Secundario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/saudacao_subtitulo"
+            android:textSize="16sp" />
+
+        <!-- Meta diária -->
+        <com.murilo.enemigo.ui.componente.CartaoRelevo
             android:id="@+id/card_meta"
-            style="@style/Widget.Material3.CardView.Outlined"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/espaco_cards"
-            app:cardBackgroundColor="@color/fundo"
-            app:cardCornerRadius="@dimen/raio_card"
-            app:strokeColor="@color/cinza_borda"
-            app:strokeWidth="2dp">
+            android:layout_marginTop="20dp">
 
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.ENEMigo.Face.Contorno"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/margem_tela">
+                android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/meta_diaria"
-                    android:textColor="@color/texto_principal"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txt_meta"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:textColor="@color/texto_secundario"
-                    android:textSize="14sp" />
-
-                <com.google.android.material.progressindicator.LinearProgressIndicator
-                    android:id="@+id/progress_meta"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:max="50"
-                    app:indicatorColor="@color/amarelo_xp"
-                    app:trackColor="@color/cinza_borda"
-                    app:trackCornerRadius="8dp"
-                    app:trackThickness="12dp" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/circulo_meta"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_circulo"
+                            android:backgroundTint="@color/marca_acento_suave">
+
+                            <ImageView
+                                android:id="@+id/img_meta"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/ic_alvo"
+                                app:tint="@color/marca_acento_texto" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Texto.Destaque"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/meta_diaria" />
+
+                            <TextView
+                                android:id="@+id/txt_meta"
+                                style="@style/Texto.Secundario"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progress_meta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:max="50"
+                        app:indicatorColor="@color/marca_acento"
+                        app:trackThickness="14dp"
+                        app:trackCornerRadius="7dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </com.murilo.enemigo.ui.componente.CartaoRelevo>
 
         <!-- Aparece no lugar dos cartões se o questoes.json não puder ser lido -->
         <TextView
             android:id="@+id/txt_erro_questoes"
+            style="@style/Texto.Destaque"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
             android:gravity="center"
             android:text="@string/erro_carregar_questoes"
-            android:textColor="@color/vermelho_escuro"
-            android:textSize="16sp"
+            android:textColor="@color/marca_erro_texto"
             android:visibility="gone" />
 
         <LinearLayout
@@ -89,208 +153,58 @@
             android:orientation="vertical">
 
             <TextView
+                style="@style/Texto.Titulo.Medio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/areas_do_enem"
-                android:textColor="@color/texto_principal"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:layout_marginTop="28dp"
+                android:text="@string/areas_do_enem" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/espaco_cards"
+                android:baselineAligned="false"
                 android:orientation="horizontal">
 
-                <com.google.android.material.card.MaterialCardView
+                <include
                     android:id="@+id/card_linguagens"
-                    style="@style/Widget.Material3.CardView.Filled"
+                    layout="@layout/item_area"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/altura_card_area"
-                    android:layout_weight="1"
                     android:layout_marginEnd="6dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:cardBackgroundColor="@color/area_linguagens"
-                    app:cardCornerRadius="@dimen/raio_card"
-                    app:strokeWidth="0dp">
+                    android:layout_weight="1" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
-
-                        <ImageView
-                            android:layout_width="@dimen/icone_area"
-                            android:layout_height="@dimen/icone_area"
-                            android:contentDescription="@string/area_linguagens"
-                            android:src="@drawable/ic_area_linguagens"
-                            app:tint="@color/branco" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"
-                            android:text="@string/area_linguagens"
-                            android:textColor="@color/branco"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txt_prog_linguagens"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/branco"
-                            android:textSize="13sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-                <com.google.android.material.card.MaterialCardView
+                <include
                     android:id="@+id/card_humanas"
-                    style="@style/Widget.Material3.CardView.Filled"
+                    layout="@layout/item_area"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/altura_card_area"
-                    android:layout_weight="1"
                     android:layout_marginStart="6dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:cardBackgroundColor="@color/area_humanas"
-                    app:cardCornerRadius="@dimen/raio_card"
-                    app:strokeWidth="0dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
-
-                        <ImageView
-                            android:layout_width="@dimen/icone_area"
-                            android:layout_height="@dimen/icone_area"
-                            android:contentDescription="@string/area_humanas"
-                            android:src="@drawable/ic_area_humanas"
-                            app:tint="@color/branco" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"
-                            android:text="@string/area_humanas"
-                            android:textColor="@color/branco"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txt_prog_humanas"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/branco"
-                            android:textSize="13sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                    android:layout_weight="1" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/espaco_cards"
+                android:baselineAligned="false"
                 android:orientation="horizontal">
 
-                <com.google.android.material.card.MaterialCardView
+                <include
                     android:id="@+id/card_natureza"
-                    style="@style/Widget.Material3.CardView.Filled"
+                    layout="@layout/item_area"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/altura_card_area"
-                    android:layout_weight="1"
                     android:layout_marginEnd="6dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:cardBackgroundColor="@color/area_natureza"
-                    app:cardCornerRadius="@dimen/raio_card"
-                    app:strokeWidth="0dp">
+                    android:layout_weight="1" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
-
-                        <ImageView
-                            android:layout_width="@dimen/icone_area"
-                            android:layout_height="@dimen/icone_area"
-                            android:contentDescription="@string/area_natureza"
-                            android:src="@drawable/ic_area_natureza"
-                            app:tint="@color/branco" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"
-                            android:text="@string/area_natureza"
-                            android:textColor="@color/branco"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txt_prog_natureza"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/branco"
-                            android:textSize="13sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-                <com.google.android.material.card.MaterialCardView
+                <include
                     android:id="@+id/card_matematica"
-                    style="@style/Widget.Material3.CardView.Filled"
+                    layout="@layout/item_area"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/altura_card_area"
-                    android:layout_weight="1"
                     android:layout_marginStart="6dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:cardBackgroundColor="@color/area_matematica"
-                    app:cardCornerRadius="@dimen/raio_card"
-                    app:strokeWidth="0dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
-
-                        <ImageView
-                            android:layout_width="@dimen/icone_area"
-                            android:layout_height="@dimen/icone_area"
-                            android:contentDescription="@string/area_matematica"
-                            android:src="@drawable/ic_area_matematica"
-                            app:tint="@color/branco" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"
-                            android:text="@string/area_matematica"
-                            android:textColor="@color/branco"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txt_prog_matematica"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/branco"
-                            android:textSize="13sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                    android:layout_weight="1" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

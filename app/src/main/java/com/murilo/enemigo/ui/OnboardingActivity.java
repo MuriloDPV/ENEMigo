@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +34,9 @@ public class OnboardingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding);
+
+        ((TextView) findViewById(R.id.txt_titulo))
+                .setText(getString(R.string.onboarding_titulo, getString(R.string.app_name)));
 
         tilNome = findViewById(R.id.til_nome);
         edtNome = findViewById(R.id.edt_nome);

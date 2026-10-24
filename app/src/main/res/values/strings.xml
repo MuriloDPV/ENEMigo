@@ -1,16 +1,11 @@
 <resources>
+    <!-- Nome do app: usado no ícone, na abertura e nos textos que falam do app -->
     <string name="app_name">ENEMigo</string>
 
     <!-- Abas -->
     <string name="aba_inicio">Início</string>
     <string name="aba_revisao">Revisão</string>
     <string name="aba_perfil">Perfil</string>
-
-    <!-- Áreas -->
-    <string name="area_linguagens">Linguagens</string>
-    <string name="area_humanas">Ciências Humanas</string>
-    <string name="area_natureza">Ciências da Natureza</string>
-    <string name="area_matematica">Matemática</string>
 
     <!-- Botões -->
     <string name="btn_verificar">VERIFICAR</string>
@@ -21,15 +16,23 @@
     <string name="btn_revisar_agora">REVISAR AGORA</string>
     <string name="btn_resetar">RESETAR PROGRESSO</string>
 
-    <!-- Barra de status -->
-    <string name="status_ofensiva">🔥 %1$d</string>
-    <string name="status_xp">⭐ %1$d</string>
-    <string name="status_vidas">❤️ %1$d</string>
+    <!-- Barra de status (leitores de tela) -->
+    <plurals name="cd_ofensiva">
+        <item quantity="one">Ofensiva de %1$d dia</item>
+        <item quantity="other">Ofensiva de %1$d dias</item>
+    </plurals>
+    <string name="cd_xp">%1$d XP</string>
+    <plurals name="cd_vidas">
+        <item quantity="one">%1$d vida</item>
+        <item quantity="other">%1$d vidas</item>
+    </plurals>
 
     <!-- Início -->
-    <string name="saudacao">Oi, %1$s! Bora manter o ritmo?</string>
+    <string name="saudacao_titulo">Oi, %1$s!</string>
+    <string name="saudacao_subtitulo">Bora manter o ritmo?</string>
     <string name="meta_diaria">Meta diária</string>
     <string name="meta_progresso">%1$d / %2$d XP hoje</string>
+    <string name="meta_batida">Meta batida!</string>
     <string name="areas_do_enem">Áreas do ENEM</string>
     <string name="progresso_area">%1$d/%2$d lições</string>
     <string name="area_em_breve">Em breve</string>
@@ -37,8 +40,9 @@
 
     <!-- Trilha -->
     <string name="resumo_trilha">%1$d de %2$d lições concluídas</string>
+    <string name="unidade_titulo">Unidade %1$d</string>
     <string name="licao_numero">Lição %1$d</string>
-    <string name="licao_comecar">Começar</string>
+    <string name="cd_licao">Lição %1$d: %2$s</string>
     <string name="area_nao_encontrada">Área não encontrada</string>
     <string name="trilha_vazia">Nenhuma lição disponível ainda</string>
     <string name="voltar">Voltar</string>
@@ -51,7 +55,7 @@
     <string name="imagem_ampliada">Figura da questão ampliada</string>
     <string name="imagem_dica_zoom">Afaste dois dedos ou toque duas vezes para dar zoom</string>
     <string name="licao_nao_encontrada">Lição não encontrada</string>
-    <string name="feedback_acerto">Mandou bem! 🎉</string>
+    <string name="feedback_acerto">Mandou bem!</string>
     <string name="feedback_erro">Resposta correta: %1$s</string>
     <string name="sair_licao_titulo">Sair da lição?</string>
     <string name="sair_licao_mensagem">Você vai perder o progresso desta lição.</string>
@@ -59,22 +63,21 @@
     <string name="sair_licao_ficar">Continuar estudando</string>
 
     <!-- Resultado -->
-    <string name="resultado_emoji_perfeito">🏆</string>
-    <string name="resultado_emoji_concluida">✅</string>
-    <string name="resultado_emoji_quase">💪</string>
     <string name="resultado_perfeito">Perfeito!</string>
     <string name="resultado_concluida">Lição concluída!</string>
     <string name="resultado_quase">Quase lá!</string>
     <string name="resultado_acertos">Você acertou %1$d de %2$d</string>
-    <string name="resultado_xp">⭐ +%1$d XP</string>
+    <string name="resultado_rotulo_xp">XP ganho</string>
+    <string name="resultado_rotulo_ofensiva">Ofensiva</string>
+    <string name="resultado_xp">+%1$d</string>
     <string name="resultado_bonus">+%1$d bônus de lição perfeita</string>
 
     <plurals name="resultado_ofensiva">
-        <item quantity="one">🔥 %1$d dia</item>
-        <item quantity="other">🔥 %1$d dias</item>
+        <item quantity="one">%1$d dia</item>
+        <item quantity="other">%1$d dias</item>
     </plurals>
-    <string name="resultado_meta_batida">Meta diária batida! 🎯</string>
-    <string name="resultado_desbloqueou">Próxima lição desbloqueada! 🔓</string>
+    <string name="resultado_meta_batida">Meta diária batida!</string>
+    <string name="resultado_desbloqueou">Próxima lição desbloqueada!</string>
     <string name="resultado_faca_acertos">Faça 3 acertos para liberar a próxima lição</string>
     <string name="resultado_revisao">Você tirou %1$s do caderno e recuperou %2$s</string>
     <string name="resultado_revisao_sem_vidas">Você tirou %1$s do caderno</string>
@@ -89,35 +92,30 @@
     </plurals>
 
     <!-- Onboarding -->
-    <string name="onboarding_titulo">Oi! Eu sou o ENEMigo 👋</string>
+    <string name="onboarding_titulo">Oi! Eu sou o %1$s</string>
     <string name="onboarding_subtitulo">Vou te ajudar a estudar pro ENEM um pouquinho todo dia.</string>
     <string name="onboarding_hint_nome">Como você quer ser chamado?</string>
     <string name="onboarding_pergunta_meta">Qual a sua meta diária?</string>
-    <string name="meta_casual">Casual — 20 XP por dia (≈ 2 lições)</string>
-    <string name="meta_regular">Regular — 50 XP por dia (≈ 5 lições)</string>
-    <string name="meta_intenso">Intenso — 100 XP por dia (≈ 10 lições)</string>
+    <string name="meta_casual"><b>Casual</b>\n20 XP por dia · cerca de 2 lições</string>
+    <string name="meta_regular"><b>Regular</b>\n50 XP por dia · cerca de 5 lições</string>
+    <string name="meta_intenso"><b>Intenso</b>\n100 XP por dia · cerca de 10 lições</string>
     <string name="erro_nome_vazio">Digite seu nome</string>
     <string name="erro_nome_curto">O nome precisa ter pelo menos 2 letras</string>
     <string name="erro_nome_longo">Use no máximo 20 caracteres</string>
     <string name="erro_nome_letras">Use apenas letras</string>
     <string name="erro_meta">Escolha uma meta diária</string>
 
-    <!-- Início -->
-    <string name="meta_batida">Meta batida! 🎉</string>
-
     <!-- Trilha: estados e vidas -->
     <string name="licao_melhor">Melhor: %1$d/%2$d</string>
     <string name="licao_bloqueada">Faça 3 acertos na lição anterior</string>
     <string name="licao_bloqueada_toast">Complete a lição anterior com pelo menos 3 acertos</string>
-    <string name="circulo_concluida">✓</string>
-    <string name="circulo_bloqueada">🔒</string>
-    <string name="sem_vidas_titulo">Sem vidas 💔</string>
+    <string name="sem_vidas_titulo">Sem vidas</string>
     <string name="sem_vidas_mensagem">Próxima vida em %1$d min. Revise seus erros para recuperar vidas agora!</string>
     <string name="btn_ir_revisao">Ir para Revisão</string>
     <string name="btn_ok">OK</string>
 
     <!-- Quiz: vidas e revisão -->
-    <string name="vidas_acabaram_titulo">Suas vidas acabaram 💔</string>
+    <string name="vidas_acabaram_titulo">Suas vidas acabaram</string>
     <string name="vidas_acabaram_mensagem">Revise seus erros para recuperar vidas.</string>
 
     <!-- Revisão -->
@@ -127,14 +125,15 @@
         <item quantity="other">Você tem %1$d questões para revisar</item>
     </plurals>
     <string name="caderno_contador_vazio">Nenhuma questão para revisar</string>
-    <string name="caderno_apoio">Acerte na revisão e ganhe ❤️ +1</string>
-    <string name="caderno_vazio_emoji">🎉</string>
-    <string name="caderno_vazio">Nenhum erro por aqui! Continue fazendo lições.</string>
-    <string name="caderno_vazio_toast">Nenhum erro por aqui! 🎉</string>
+    <string name="caderno_apoio">Acerte na revisão e ganhe +1 vida</string>
+    <string name="caderno_vazio_titulo">Nenhum erro por aqui!</string>
+    <string name="caderno_vazio">Continue fazendo lições. O que você errar aparece aqui para revisar.</string>
+    <string name="caderno_vazio_toast">Nenhum erro por aqui!</string>
 
     <!-- Perfil -->
     <string name="perfil_nivel">Nível %1$d</string>
     <string name="perfil_xp_proximo">%1$d / %2$d XP para o nível %3$d</string>
+    <string name="perfil_estatisticas">Estatísticas</string>
     <string name="stat_xp_total">XP total</string>
     <string name="stat_ofensiva">Ofensiva atual</string>
     <string name="stat_maior_ofensiva">Maior ofensiva</string>
@@ -143,4 +142,16 @@
     <string name="stat_taxa">Taxa de acerto</string>
     <string name="stat_taxa_valor">%1$d%%</string>
     <string name="stat_sem_valor">—</string>
+
+    <!-- Legado: recursos das telas antigas, removidos quando a última tela migrar -->
+    <string name="status_ofensiva">🔥 %1$d</string>
+    <string name="status_xp">⭐ %1$d</string>
+    <string name="status_vidas">❤️ %1$d</string>
+    <string name="resultado_emoji_perfeito">🏆</string>
+    <string name="resultado_emoji_concluida">✅</string>
+    <string name="resultado_emoji_quase">💪</string>
+    <string name="circulo_concluida">✓</string>
+    <string name="circulo_bloqueada">🔒</string>
+    <string name="licao_comecar">Começar</string>
+    <string name="caderno_vazio_emoji">🎉</string>
 </resources>

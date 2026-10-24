@@ -1,42 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Barra 🔥 ⭐ ❤️ reaproveitada com <include> no Início e na Trilha. -->
+<!-- Pílulas de ofensiva, XP e vidas, reaproveitadas com <include> no Início e na Trilha. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:minHeight="48dp"
+    android:gravity="center_vertical"
     android:orientation="horizontal">
 
     <TextView
         android:id="@+id/txt_ofensiva"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textColor="@color/laranja_fogo"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        style="@style/Widget.ENEMigo.Pilula"
+        app:drawableStartCompat="@drawable/ic_fogo"
+        android:textColor="@color/marca_ofensiva_texto" />
 
     <TextView
         android:id="@+id/txt_xp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textColor="@color/amarelo_xp"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        style="@style/Widget.ENEMigo.Pilula"
+        android:layout_marginStart="6dp"
+        app:drawableStartCompat="@drawable/ic_estrela"
+        android:textColor="@color/marca_acento_texto" />
 
     <TextView
         android:id="@+id/txt_vidas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textColor="@color/vermelho"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        style="@style/Widget.ENEMigo.Pilula"
+        android:layout_marginStart="6dp"
+        app:drawableStartCompat="@drawable/ic_coracao"
+        android:textColor="@color/marca_erro_texto" />
 
 </LinearLayout>

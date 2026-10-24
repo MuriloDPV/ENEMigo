@@ -1,21 +1,27 @@
 package com.murilo.enemigo.ui;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+import androidx.core.graphics.ColorUtils;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.murilo.enemigo.R;
 import com.murilo.enemigo.data.ProgressoManager;
 import com.murilo.enemigo.data.QuestaoRepository;
 import com.murilo.enemigo.model.Area;
+import com.murilo.enemigo.ui.componente.CartaoRelevo;
 import com.murilo.enemigo.util.Constantes;
 
 /**
@@ -23,6 +29,10 @@ import com.murilo.enemigo.util.Constantes;
  * Tudo é atualizado no onResume, para refletir o que mudou numa lição.
  */
 public class InicioFragment extends Fragment {
+
+    private static final int[] CARTOES = {
+            R.id.card_linguagens, R.id.card_humanas, R.id.card_natureza, R.id.card_matematica};
+    private static final Area[] AREAS = {Area.LINGUAGENS, Area.HUMANAS, Area.NATUREZA, Area.MATEMATICA};
 
     @Nullable
     @Override
@@ -40,10 +50,9 @@ public class InicioFragment extends Fragment {
         view.findViewById(R.id.grade_areas).setVisibility(carregou ? View.VISIBLE : View.GONE);
         view.findViewById(R.id.txt_erro_questoes).setVisibility(carregou ? View.GONE : View.VISIBLE);
 
-        configurarClique(view, R.id.card_linguagens, Area.LINGUAGENS);
-        configurarClique(view, R.id.card_humanas, Area.HUMANAS);
-        configurarClique(view, R.id.card_natureza, Area.NATUREZA);
-        configurarClique(view, R.id.card_matematica, Area.MATEMATICA);
+        for (int i = 0; i < CARTOES.length; i++) {
+            configurarCartao(view.findViewById(CARTOES[i]), AREAS[i]);
+        }
     }
 
     @Override
@@ -58,44 +67,71 @@ public class InicioFragment extends Fragment {
         BarraStatus.atualizar(view.findViewById(R.id.status));
 
         ((TextView) view.findViewById(R.id.txt_saudacao))
-                .setText(getString(R.string.saudacao, progresso.getNome()));
+                .setText(getString(R.string.saudacao_titulo, progresso.getNome()));
 
         // Meta diária (RN18: o XP de hoje zera quando muda o dia)
         int meta = progresso.getMetaDiaria();
         int xpHoje = progresso.getXpHoje();
+        boolean batida = xpHoje >= meta;
         TextView txtMeta = view.findViewById(R.id.txt_meta);
-        if (xpHoje >= meta) {
+        if (batida) {
             txtMeta.setText(R.string.meta_batida);
         } else {
             txtMeta.setText(getString(R.string.meta_progresso, xpHoje, meta));
         }
+        // Meta batida: o alvo vira um check verde.
+        ImageView imgMeta = view.findViewById(R.id.img_meta);
+        imgMeta.setImageResource(batida ? R.drawable.ic_check : R.drawable.ic_alvo);
+        imgMeta.setImageTintList(ColorStateList.valueOf(cor(batida ? R.color.texto_sobre_cor
+                : R.color.marca_acento_texto)));
+        view.findViewById(R.id.circulo_meta).setBackgroundTintList(ColorStateList.valueOf(
+                cor(batida ? R.color.marca_acerto : R.color.marca_acento_suave)));
+
         LinearProgressIndicator progressMeta = view.findViewById(R.id.progress_meta);
         progressMeta.setMax(meta);
-        progressMeta.setProgress(Math.min(xpHoje, meta));
+        progressMeta.setProgressCompat(Math.min(xpHoje, meta), true);
 
-        atualizarCard(view, R.id.txt_prog_linguagens, Area.LINGUAGENS, progresso);
-        atualizarCard(view, R.id.txt_prog_humanas, Area.HUMANAS, progresso);
-        atualizarCard(view, R.id.txt_prog_natureza, Area.NATUREZA, progresso);
-        atualizarCard(view, R.id.txt_prog_matematica, Area.MATEMATICA, progresso);
+        for (int i = 0; i < CARTOES.length; i++) {
+            atualizarProgresso(view.findViewById(CARTOES[i]), AREAS[i], progresso);
+        }
     }
 
-    private void configurarClique(View raiz, int cardId, Area area) {
-        raiz.findViewById(cardId).setOnClickListener(v -> {
+    /** Cores, nome, ilustração e clique do cartão da área. */
+    private void configurarCartao(View cartao, Area area) {
+        int corSobre = cor(area.getCorSobreRes());
+        ((CartaoRelevo) cartao).setCorSombra(cor(area.getCorEscuraRes()));
+        ((MaterialCardView) cartao.findViewById(R.id.face)).setCardBackgroundColor(cor(area.getCorRes()));
+        ((ImageView) cartao.findViewById(R.id.img_ilustracao)).setImageResource(area.getIlustracaoRes());
+
+        TextView txtNome = cartao.findViewById(R.id.txt_nome);
+        txtNome.setText(area.getNome());
+        txtNome.setTextColor(corSobre);
+
+        // Etiqueta do progresso: a cor do conteúdo, bem transparente, por trás do texto.
+        TextView txtProgresso = cartao.findViewById(R.id.txt_progresso);
+        txtProgresso.setTextColor(corSobre);
+        txtProgresso.setBackgroundTintList(ColorStateList.valueOf(ColorUtils.setAlphaComponent(corSobre, 46)));
+
+        cartao.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), TrilhaActivity.class);
             intent.putExtra(Constantes.EXTRA_AREA_ID, area.name());
             startActivity(intent);
         });
     }
 
-    /** "2/3 lições" ou "Em breve" se a área não tiver lições. */
-    private void atualizarCard(View raiz, int progressoId, Area area, ProgressoManager progresso) {
+    /** "2/4 lições" ou "Em breve" se a área não tiver lições. */
+    private void atualizarProgresso(View cartao, Area area, ProgressoManager progresso) {
         int total = QuestaoRepository.getInstance(requireContext()).getTotalLicoes(area);
-        TextView txtProgresso = raiz.findViewById(progressoId);
+        TextView txtProgresso = cartao.findViewById(R.id.txt_progresso);
         if (total == 0) {
             txtProgresso.setText(R.string.area_em_breve);
         } else {
             txtProgresso.setText(getString(R.string.progresso_area,
                     progresso.getLicoesConcluidas(area), total));
         }
+    }
+
+    private int cor(int corRes) {
+        return ContextCompat.getColor(requireContext(), corRes);
     }
 }

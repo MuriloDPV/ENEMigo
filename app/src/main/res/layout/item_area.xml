@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cartão de uma área no Início (incluído 4 vezes). Cores, nome e ilustração vêm do enum Area. -->
+<com.murilo.enemigo.ui.componente.CartaoRelevo xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/altura_card_area"
+    android:clickable="true"
+    android:focusable="true"
+    app:relevo="5dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/face"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Passa da borda de propósito: o cartão corta a ilustração no canto -->
+            <ImageView
+                android:id="@+id/img_ilustracao"
+                android:layout_width="@dimen/ilustracao_area"
+                android:layout_height="@dimen/ilustracao_area"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="@dimen/ilustracao_corte"
+                android:layout_marginBottom="@dimen/ilustracao_corte"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/txt_nome"
+                style="@style/Texto.Titulo.Medio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:maxLines="3"
+                android:padding="14dp"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/txt_progresso"
+                style="@style/Texto.Destaque"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_margin="14dp"
+                android:background="@drawable/bg_etiqueta"
+                android:paddingHorizontal="9dp"
+                android:paddingVertical="3dp"
+                android:textSize="12sp" />
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+</com.murilo.enemigo.ui.componente.CartaoRelevo>

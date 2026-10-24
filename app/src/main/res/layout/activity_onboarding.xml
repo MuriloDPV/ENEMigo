@@ -9,42 +9,37 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:paddingHorizontal="24dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp">
 
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:importantForAccessibility="no"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/marca_logo" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/txt_titulo"
+            style="@style/Texto.Titulo.Grande"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:text="@string/onboarding_titulo"
-            android:textColor="@color/texto_principal"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="20dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            style="@style/Texto.Secundario"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
+            android:layout_marginTop="6dp"
             android:text="@string/onboarding_subtitulo"
-            android:textColor="@color/texto_secundario"
             android:textSize="16sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_nome"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="22dp"
             android:hint="@string/onboarding_hint_nome"
             app:counterEnabled="true"
             app:counterMaxLength="20">
@@ -59,13 +54,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
+            style="@style/Texto.Titulo.Medio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/onboarding_pergunta_meta"
-            android:textColor="@color/texto_principal"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="20dp"
+            android:text="@string/onboarding_pergunta_meta" />
 
         <RadioGroup
             android:id="@+id/rg_meta"
@@ -76,34 +69,31 @@
 
             <RadioButton
                 android:id="@+id/rb_casual"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="@string/meta_casual"
-                android:textColor="@color/texto_principal" />
+                style="@style/Widget.ENEMigo.OpcaoMeta"
+                android:text="@string/meta_casual" />
 
             <RadioButton
                 android:id="@+id/rb_regular"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="@string/meta_regular"
-                android:textColor="@color/texto_principal" />
+                style="@style/Widget.ENEMigo.OpcaoMeta"
+                android:text="@string/meta_regular" />
 
             <RadioButton
                 android:id="@+id/rb_intenso"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="@string/meta_intenso"
-                android:textColor="@color/texto_principal" />
+                style="@style/Widget.ENEMigo.OpcaoMeta"
+                android:text="@string/meta_intenso" />
         </RadioGroup>
 
-        <com.google.android.material.button.MaterialButton
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="24dp" />
+
+        <com.murilo.enemigo.ui.componente.BotaoRelevo
             android:id="@+id/btn_comecar"
+            style="@style/Widget.ENEMigo.Botao.Primario"
             android:layout_width="match_parent"
             android:layout_height="@dimen/altura_botao"
-            android:layout_marginTop="24dp"
             android:text="@string/btn_comecar" />
     </LinearLayout>
 </ScrollView>

@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_inicio"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/ic_inicio"
         android:title="@string/aba_inicio" />
     <item
         android:id="@+id/nav_revisao"
-        android:icon="@drawable/ic_revisao"
+        android:icon="@drawable/ic_caderno"
         android:title="@string/aba_revisao" />
     <item
         android:id="@+id/nav_perfil"
