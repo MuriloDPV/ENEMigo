@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.StyleSpan;
@@ -43,9 +44,11 @@ public class CelebracaoActivity extends AppCompatActivity {
 
     private static final String EXTRA_PROXIMA = "EXTRA_PROXIMA";
     private static final String ESTADO_INDICE = "indice";
+    private static final long INTERVALO_MINIMO_MS = 400;
 
     private List<Celebracao> fila;
     private int indice;
+    private long ultimoAvanco;
     private Retorno retorno;
     private ObjectAnimator giroRaios;
 
@@ -144,7 +147,32 @@ public class CelebracaoActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (giroRaios != null) {
+            giroRaios.resume();
+            mascote.comemorar();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Fora da tela, nada fica girando nem pulando.
+        if (giroRaios != null) {
+            giroRaios.pause();
+            mascote.parar();
+        }
+    }
+
     private void avancar() {
+        // Dois toques rápidos não pulam uma celebração.
+        long agora = SystemClock.uptimeMillis();
+        if (agora - ultimoAvanco < INTERVALO_MINIMO_MS) {
+            return;
+        }
+        ultimoAvanco = agora;
         if (indice < fila.size() - 1) {
             indice++;
             mostrar(fila.get(indice), true);
@@ -154,6 +182,10 @@ public class CelebracaoActivity extends AppCompatActivity {
     }
 
     private void terminar() {
+        // Só uma vez: um toque duplo no fim não abre a próxima tela duas vezes.
+        if (isFinishing()) {
+            return;
+        }
         Intent proxima = IntentCompat.getParcelableExtra(getIntent(), EXTRA_PROXIMA, Intent.class);
         if (proxima != null) {
             startActivity(proxima);

@@ -24,10 +24,18 @@ public final class Dialogos {
 
     /** "Sem vidas" com o tempo para a próxima vida (Trilha e Resultado). */
     public static void mostrarSemVidas(Activity activity) {
+        mostrarSemVidas(activity, () -> abrirRevisao(activity));
+    }
+
+    /**
+     * @param irParaRevisao o que o "Ir para Revisão" faz (o Resultado passa antes pelas
+     *                      celebrações que faltam)
+     */
+    public static void mostrarSemVidas(Activity activity, Runnable irParaRevisao) {
         int minutos = ProgressoManager.getInstance(activity).getMinutosParaProximaVida();
         semVidas(activity, activity.getString(R.string.sem_vidas_titulo),
                 activity.getString(R.string.sem_vidas_mensagem, minutos))
-                .setPositiveButton(R.string.btn_ir_revisao, (dialog, which) -> abrirRevisao(activity))
+                .setPositiveButton(R.string.btn_ir_revisao, (dialog, which) -> irParaRevisao.run())
                 .setNegativeButton(R.string.btn_ok, (dialog, which) -> dialog.dismiss())
                 .show();
     }
@@ -53,9 +61,13 @@ public final class Dialogos {
 
     /** Volta para a MainActivity já existente, na aba Revisão, fechando as telas acima dela. */
     public static void abrirRevisao(Context context) {
+        context.startActivity(intentRevisao(context));
+    }
+
+    public static Intent intentRevisao(Context context) {
         Intent intent = new Intent(context, MainActivity.class);
         intent.putExtra(Constantes.EXTRA_ABRIR_REVISAO, true);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        context.startActivity(intent);
+        return intent;
     }
 }

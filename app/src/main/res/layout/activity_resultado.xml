@@ -6,9 +6,12 @@
     android:background="@color/fundo"
     android:fillViewport="true">
 
+    <!-- Sem recorte: o Grifo pula para fora do halo -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="24dp">
@@ -23,7 +26,8 @@
             android:id="@+id/halo_resultado"
             android:layout_width="156dp"
             android:layout_height="156dp"
-            android:background="@drawable/bg_circulo">
+            android:background="@drawable/bg_circulo"
+            android:clipChildren="false">
 
             <com.murilo.enemigo.ui.componente.MascoteView
                 android:id="@+id/mascote_resultado"

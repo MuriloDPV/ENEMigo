@@ -37,7 +37,6 @@ public class OnboardingActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.txt_subtitulo))
                 .setText(getString(R.string.onboarding_subtitulo, getString(R.string.app_name)));
         mascote = findViewById(R.id.mascote);
-        mascote.balancar();
 
         tilNome = findViewById(R.id.til_nome);
         edtNome = findViewById(R.id.edt_nome);
@@ -67,6 +66,19 @@ public class OnboardingActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.btn_comecar).setOnClickListener(v -> comecar());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // O Grifo balança enquanto espera, só com a tela à vista.
+        mascote.balancar();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mascote.parar();
     }
 
     private void comecar() {

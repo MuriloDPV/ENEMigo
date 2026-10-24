@@ -7,9 +7,12 @@
     android:layout_height="match_parent"
     android:background="@color/marca_primaria">
 
+    <!-- Sem recorte: o Grifo pula para fora da própria linha -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:paddingHorizontal="24dp"
@@ -98,6 +101,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:clipChildren="false"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 

@@ -85,6 +85,16 @@ public class RevisaoFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        // Fora da tela, o Grifo do caderno vazio para de balançar.
+        View view = getView();
+        if (view != null) {
+            ((MascoteView) view.findViewById(R.id.mascote_vazio)).parar();
+        }
+    }
+
     /** Questões do caderno em ordem de id. RN31: ids que não existem mais saem do caderno. */
     private List<Questao> carregarCaderno() {
         ProgressoManager progresso = ProgressoManager.getInstance(requireContext());

@@ -179,6 +179,10 @@ public class ResultadoActivity extends AppCompatActivity {
 
     /** Fecha o Resultado passando pelas celebrações que faltam e, se houver, abre a próxima tela. */
     private void sair(Intent proxima) {
+        // Toque duplo (CONTINUAR + Voltar, por exemplo): a primeira saída já vale.
+        if (isFinishing()) {
+            return;
+        }
         if (celebracoesDepois.isEmpty()) {
             if (proxima != null) {
                 startActivity(proxima);
@@ -225,7 +229,8 @@ public class ResultadoActivity extends AppCompatActivity {
 
     private void refazer(String licaoId) {
         if (ProgressoManager.getInstance(this).getVidas() == 0) {
-            Dialogos.mostrarSemVidas(this);
+            // "Ir para Revisão" também passa pelas celebrações que faltam.
+            Dialogos.mostrarSemVidas(this, () -> sair(Dialogos.intentRevisao(this)));
             return;
         }
         findViewById(R.id.btn_refazer).setEnabled(false);
