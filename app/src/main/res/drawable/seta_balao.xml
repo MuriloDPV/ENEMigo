@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ponta do balão "COMEÇAR": borda por fora e o fundo do balão por dentro. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="18dp"
+    android:height="10dp"
+    android:viewportWidth="18"
+    android:viewportHeight="10">
+    <path
+        android:fillColor="@color/superficie_borda"
+        android:pathData="M0,0 L9,9.6 L18,0 Z" />
+    <path
+        android:fillColor="@color/balao_fundo"
+        android:pathData="M2.9,0 L9,6.5 L15.1,0 Z" />
+</vector>

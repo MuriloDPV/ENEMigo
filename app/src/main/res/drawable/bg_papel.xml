@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cartão de papel do texto-base: folha clara com a linha de margem do caderno.
+     Fica claro também no modo escuro (as figuras usam "multiplicar"). -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/papel" />
+            <stroke
+                android:width="@dimen/largura_borda"
+                android:color="@color/papel_borda" />
+            <corners android:radius="@dimen/raio_botao" />
+        </shape>
+    </item>
+    <item
+        android:width="2dp"
+        android:bottom="@dimen/largura_borda"
+        android:gravity="start|fill_vertical"
+        android:start="14dp"
+        android:top="@dimen/largura_borda">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/papel_margem" />
+        </shape>
+    </item>
+</layer-list>

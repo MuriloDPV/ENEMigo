@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Opção da meta diária no onboarding: cartão em relevo, azul quando marcado. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item android:top="@dimen/relevo">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/marca_primaria" />
+                    <corners android:radius="@dimen/raio_botao" />
+                </shape>
+            </item>
+            <item android:bottom="@dimen/relevo">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/marca_primaria_suave" />
+                    <stroke
+                        android:width="@dimen/largura_borda"
+                        android:color="@color/marca_primaria" />
+                    <corners android:radius="@dimen/raio_botao" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:top="@dimen/relevo">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/superficie_borda" />
+                    <corners android:radius="@dimen/raio_botao" />
+                </shape>
+            </item>
+            <item android:bottom="@dimen/relevo">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/superficie" />
+                    <stroke
+                        android:width="@dimen/largura_borda"
+                        android:color="@color/superficie_borda" />
+                    <corners android:radius="@dimen/raio_botao" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
