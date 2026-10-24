@@ -76,19 +76,19 @@
         android:paddingHorizontal="16dp"
         android:visibility="gone">
 
+        <!-- O Grifo comemora o caderno limpo, num círculo verde -->
         <FrameLayout
-            android:layout_width="112dp"
-            android:layout_height="112dp"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
             android:background="@drawable/bg_circulo"
             android:backgroundTint="@color/marca_acerto_suave">
 
-            <ImageView
-                android:layout_width="56dp"
-                android:layout_height="56dp"
+            <com.murilo.enemigo.ui.componente.MascoteView
+                android:id="@+id/mascote_vazio"
+                android:layout_width="112dp"
+                android:layout_height="112dp"
                 android:layout_gravity="center"
-                android:importantForAccessibility="no"
-                android:src="@drawable/ic_check"
-                app:tint="@color/marca_acerto" />
+                app:expressao="feliz" />
         </FrameLayout>
 
         <TextView

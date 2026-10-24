@@ -18,6 +18,7 @@ import com.murilo.enemigo.data.ProgressoManager;
 import com.murilo.enemigo.data.QuestaoRepository;
 import com.murilo.enemigo.model.Questao;
 import com.murilo.enemigo.ui.adapter.CadernoAdapter;
+import com.murilo.enemigo.ui.componente.MascoteView;
 import com.murilo.enemigo.util.Constantes;
 
 import java.util.ArrayList;
@@ -68,6 +69,12 @@ public class RevisaoFragment extends Fragment {
         view.findViewById(R.id.rv_caderno).setVisibility(vazio ? View.GONE : View.VISIBLE);
         view.findViewById(R.id.layout_vazio).setVisibility(vazio ? View.VISIBLE : View.GONE);
         view.findViewById(R.id.btn_revisar).setEnabled(!vazio);
+        MascoteView mascote = view.findViewById(R.id.mascote_vazio);
+        if (vazio) {
+            mascote.balancar();
+        } else {
+            mascote.parar();
+        }
 
         TextView txtContador = view.findViewById(R.id.txt_contador);
         if (vazio) {

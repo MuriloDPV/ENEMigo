@@ -225,6 +225,9 @@
         <item name="android:textColor">@color/texto_secundario</item>
         <item name="android:textSize">15sp</item>
     </style>
+    <style name="Dialogo.Corpo.Centralizado">
+        <item name="android:gravity">center_horizontal</item>
+    </style>
     <style name="Dialogo.Botao" parent="Widget.Material3.Button.TextButton.Dialog">
         <item name="android:textColor">@color/marca_primaria_texto</item>
         <item name="android:textAppearance">@style/TextAppearance.ENEMigo.LabelLarge</item>

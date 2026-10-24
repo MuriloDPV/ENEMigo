@@ -1,6 +1,8 @@
 <resources>
     <!-- Nome do app: usado no ícone, na abertura e nos textos que falam do app -->
     <string name="app_name">ENEMigo</string>
+    <!-- Nome do mascote (o marca-texto) -->
+    <string name="mascote_nome">Grifo</string>
 
     <!-- Abas -->
     <string name="aba_inicio">Início</string>
@@ -92,9 +94,9 @@
         <item quantity="other">%1$d vidas</item>
     </plurals>
 
-    <!-- Onboarding -->
+    <!-- Onboarding (quem fala é o mascote) -->
     <string name="onboarding_titulo">Oi! Eu sou o %1$s</string>
-    <string name="onboarding_subtitulo">Vou te ajudar a estudar pro ENEM um pouquinho todo dia.</string>
+    <string name="onboarding_subtitulo">O marca-texto do %1$s. Vou te ajudar a estudar pro ENEM um pouquinho todo dia.</string>
     <string name="onboarding_hint_nome">Como você quer ser chamado?</string>
     <string name="onboarding_pergunta_meta">Qual a sua meta diária?</string>
     <string name="meta_casual"><b>Casual</b>\n20 XP por dia · cerca de 2 lições</string>

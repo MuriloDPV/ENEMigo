@@ -14,6 +14,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.murilo.enemigo.R;
 import com.murilo.enemigo.data.ProgressoManager;
+import com.murilo.enemigo.ui.componente.MascoteView;
 import com.murilo.enemigo.util.Constantes;
 
 import java.util.regex.Pattern;
@@ -29,20 +30,32 @@ public class OnboardingActivity extends AppCompatActivity {
     private TextInputLayout tilNome;
     private TextInputEditText edtNome;
     private RadioGroup rgMeta;
+    private MascoteView mascote;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding);
 
+        // O Grifo se apresenta e fala do app
         ((TextView) findViewById(R.id.txt_titulo))
-                .setText(getString(R.string.onboarding_titulo, getString(R.string.app_name)));
+                .setText(getString(R.string.onboarding_titulo, getString(R.string.mascote_nome)));
+        ((TextView) findViewById(R.id.txt_subtitulo))
+                .setText(getString(R.string.onboarding_subtitulo, getString(R.string.app_name)));
+        mascote = findViewById(R.id.mascote);
+        mascote.balancar();
 
         tilNome = findViewById(R.id.til_nome);
         edtNome = findViewById(R.id.edt_nome);
         rgMeta = findViewById(R.id.rg_meta);
 
-        // Some com o erro assim que o aluno volta a digitar.
+        // Escolher a meta deixa o Grifo animado.
+        rgMeta.setOnCheckedChangeListener((grupo, id) -> {
+            mascote.setExpressao(MascoteView.Expressao.FELIZ);
+            mascote.pular();
+        });
+
+        // Some com o erro (e com a cara triste) assim que o aluno volta a digitar.
         edtNome.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -51,6 +64,7 @@ public class OnboardingActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 tilNome.setError(null);
+                mascote.setExpressao(MascoteView.Expressao.FELIZ);
             }
 
             @Override
@@ -68,6 +82,8 @@ public class OnboardingActivity extends AppCompatActivity {
         int erro = validarNome(nome);
         if (erro != 0) {
             tilNome.setError(getString(erro));
+            mascote.setExpressao(MascoteView.Expressao.TRISTE);
+            mascote.tremer();
             return;
         }
 

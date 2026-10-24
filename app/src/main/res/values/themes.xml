@@ -77,10 +77,10 @@
         <item name="buttonBarNegativeButtonStyle">@style/Dialogo.Botao.Secundario</item>
     </style>
 
-    <!-- Diálogo com ícone em cima do título (sem vidas) -->
+    <!-- Diálogo com o mascote em cima do título (sem vidas), tudo centralizado -->
     <style name="ThemeOverlay.ENEMigo.Dialogo.Icone" parent="ThemeOverlay.Material3.MaterialAlertDialog.Centered">
         <item name="materialAlertDialogTitleTextStyle">@style/Dialogo.Titulo.Centralizado</item>
-        <item name="materialAlertDialogBodyTextStyle">@style/Dialogo.Corpo</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/Dialogo.Corpo.Centralizado</item>
         <item name="buttonBarPositiveButtonStyle">@style/Dialogo.Botao</item>
         <item name="buttonBarNegativeButtonStyle">@style/Dialogo.Botao.Secundario</item>
     </style>

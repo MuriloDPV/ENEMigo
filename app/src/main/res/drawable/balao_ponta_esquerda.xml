@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ponta do balão de fala, apontando para o mascote: borda por fora e o fundo do balão por dentro.
+     Fica por cima da borda do balão (ver activity_onboarding). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="10dp"
+    android:height="18dp"
+    android:viewportWidth="10"
+    android:viewportHeight="18">
+    <path
+        android:fillColor="@color/superficie_borda"
+        android:pathData="M10,0 L0.4,9 L10,18 Z" />
+    <path
+        android:fillColor="@color/superficie"
+        android:pathData="M10,2.9 L3.5,9 L10,15.1 Z" />
+</vector>

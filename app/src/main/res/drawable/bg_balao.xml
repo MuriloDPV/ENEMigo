@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Balão de fala do mascote (a ponta fica em balao_ponta_esquerda). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/superficie" />
+    <stroke
+        android:width="@dimen/largura_borda"
+        android:color="@color/superficie_borda" />
+    <corners android:radius="18dp" />
+</shape>

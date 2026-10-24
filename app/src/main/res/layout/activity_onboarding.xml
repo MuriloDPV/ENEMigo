@@ -14,26 +14,58 @@
         android:paddingTop="24dp"
         android:paddingBottom="24dp">
 
-        <ImageView
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:importantForAccessibility="no"
-            android:src="@drawable/marca_logo" />
-
-        <TextView
-            android:id="@+id/txt_titulo"
-            style="@style/Texto.Titulo.Grande"
+        <!-- O Grifo se apresenta num balão de fala -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp" />
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <TextView
-            style="@style/Texto.Secundario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:text="@string/onboarding_subtitulo"
-            android:textSize="16sp" />
+            <com.murilo.enemigo.ui.componente.MascoteView
+                android:id="@+id/mascote"
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                app:expressao="feliz" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_balao"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp">
+
+                    <TextView
+                        android:id="@+id/txt_titulo"
+                        style="@style/Texto.Titulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txt_subtitulo"
+                        style="@style/Texto.Secundario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- Por cima da borda do balão, para a ponta "sair" dele -->
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/balao_ponta_esquerda" />
+            </FrameLayout>
+        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_nome"

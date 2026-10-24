@@ -1,5 +1,7 @@
 package com.murilo.enemigo.ui.componente;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
@@ -45,6 +47,8 @@ public class MascoteView extends AppCompatImageView {
 
     private Expressao expressao;
     private ObjectAnimator animacao;
+    /** Depois de um pulo ou tremida, volta a balançar se estava balançando antes. */
+    private boolean voltarABalancar;
 
     public MascoteView(@NonNull Context context) {
         this(context, null);
@@ -73,6 +77,11 @@ public class MascoteView extends AppCompatImageView {
 
     /** Balança de um lado para o outro e descansa um pouco. Repete até parar(). */
     public void balancar() {
+        voltarABalancar = true;
+        iniciar(criarBalanco());
+    }
+
+    private ObjectAnimator criarBalanco() {
         ObjectAnimator a = ObjectAnimator.ofPropertyValuesHolder(this, PropertyValuesHolder.ofKeyframe(
                 View.ROTATION,
                 Keyframe.ofFloat(0f, 0f),
@@ -83,16 +92,17 @@ public class MascoteView extends AppCompatImageView {
                 Keyframe.ofFloat(1f, 0f)));
         a.setDuration(2600);
         a.setRepeatCount(ValueAnimator.INFINITE);
-        iniciar(a);
+        return a;
     }
 
     /** Um pulinho, amassando ao tomar impulso e ao cair. */
     public void pular() {
-        iniciar(criarPulo());
+        iniciarUmaVez(criarPulo());
     }
 
     /** Pula sem parar (telas de comemoração). */
     public void comemorar() {
+        voltarABalancar = false;
         ObjectAnimator a = criarPulo();
         a.setRepeatCount(ValueAnimator.INFINITE);
         a.setStartDelay(150);
@@ -110,14 +120,20 @@ public class MascoteView extends AppCompatImageView {
                 Keyframe.ofFloat(0.75f, 3f),
                 Keyframe.ofFloat(1f, 0f)));
         a.setDuration(560);
-        iniciar(a);
+        iniciarUmaVez(a);
     }
 
     /** Para a animação e volta à posição normal. */
     public void parar() {
+        voltarABalancar = false;
+        cancelarAnimacao();
+    }
+
+    private void cancelarAnimacao() {
         if (animacao != null) {
-            animacao.cancel();
+            ObjectAnimator antiga = animacao;
             animacao = null;
+            antiga.cancel();
         }
         setRotation(0f);
         setTranslationY(0f);
@@ -162,13 +178,30 @@ public class MascoteView extends AppCompatImageView {
     }
 
     private void iniciar(ObjectAnimator nova) {
-        parar();
+        cancelarAnimacao();
         // Com "remover animações" ligado no celular, ele fica parado.
         if (!ValueAnimator.areAnimatorsEnabled()) {
             return;
         }
         animacao = nova;
         nova.start();
+    }
+
+    /** Animação de uma vez só; no fim, volta a balançar se estava balançando. */
+    private void iniciarUmaVez(ObjectAnimator nova) {
+        nova.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                // Cancelada por outra animação: a nova é que manda.
+                if (animacao == animation) {
+                    animacao = null;
+                    if (voltarABalancar) {
+                        iniciar(criarBalanco());
+                    }
+                }
+            }
+        });
+        iniciar(nova);
     }
 
     @Override
