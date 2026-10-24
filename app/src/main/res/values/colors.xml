@@ -66,17 +66,25 @@
     <color name="papel_erro">#FDE6E7</color>
 
     <!--
-        Mascote (Grifo, o marca-texto). São apelidos das cores da marca: trocando a marca, o
-        mascote acompanha, e no modo escuro ele usa as versões de values-night sozinho.
-        A tinta (olhos e boca) fica escura nos dois modos, porque é desenhada sobre o corpo claro.
+        Mascote (Lia, a raposa). São apelidos das cores da marca: trocando a marca, a Lia
+        acompanha, e no modo escuro ela usa as versões de values-night sozinha. O pelo é o laranja
+        da ofensiva e o lenço é o azul-tinta. A tinta (olhos e boca) fica escura nos dois modos,
+        porque é desenhada sobre o pelo e a máscara claros. Desenhos: tools/gerar_mascote.py.
     -->
-    <color name="mascote_corpo">@color/marca_acento</color>
-    <color name="mascote_corpo_sombra">@color/marca_acento_escuro</color>
-    <color name="mascote_tampa">@color/marca_primaria</color>
-    <color name="mascote_tampa_sombra">@color/marca_primaria_escura</color>
+    <color name="mascote_pelo">@color/marca_ofensiva</color>
+    <color name="mascote_pelo_sombra">@color/marca_ofensiva_escura</color>
+    <color name="mascote_mascara">@color/papel</color>
+    <color name="mascote_lenco">@color/marca_primaria</color>
+    <color name="mascote_lenco_sombra">@color/marca_primaria_escura</color>
     <color name="mascote_tinta">@color/papel_texto</color>
     <color name="mascote_brilho">@color/texto_sobre_cor</color>
     <color name="mascote_bochecha">@color/marca_erro</color>
+    <color name="mascote_lingua">@color/marca_erro</color>
+    <color name="mascote_lagrima">@color/marca_primaria</color>
+    <color name="mascote_estrela">@color/marca_acento</color>
+    <color name="mascote_estrela_borda">@color/marca_acento_escuro</color>
+    <!-- Bolinhas de pensamento e "zzz": ficam fora do corpo, então seguem o texto da tela -->
+    <color name="mascote_pensamento">@color/texto_secundario</color>
 
     <!--
         Avatar. Pele e cabelo são cores de pessoa (não mudam com a marca nem no modo escuro);

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Lia sem vidas: orelhas caídas, olhos fechados e cauda no chão. O MascoteView ainda a deixa desbotada.
+     Gerado por tools/gerar_mascote.py: mude lá e rode de novo. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Sombra no chão -->
+    <path
+        android:fillColor="@color/mascote_tinta"
+        android:fillAlpha="0.12"
+        android:pathData="M36,112 a24,4 0 1,0 48,0 a24,4 0 1,0 -48,0 Z" />
+    <!-- Cauda caída no chão -->
+    <path
+        android:fillColor="@color/mascote_pelo"
+        android:pathData="M70,104 C84,109 100,109 110,103 C114,99 110,94 104,95 C94,97 82,98 72,96 Z" />
+    <group>
+        <clip-path android:pathData="M70,104 C84,109 100,109 110,103 C114,99 110,94 104,95 C94,97 82,98 72,96 Z" />
+        <path
+            android:fillColor="@color/mascote_mascara"
+            android:pathData="M99,99 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0 Z" />
+    </group>
+    <path
+        android:pathData="M70,104 C84,109 100,109 110,103 C114,99 110,94 104,95 C94,97 82,98 72,96 Z"
+        android:strokeColor="@color/mascote_pelo_sombra"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2.5" />
+    <path
+        android:pathData="M44,79 Q39,89 41,98"
+        android:strokeColor="@color/mascote_pelo_sombra"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="7" />
+    <path
+        android:pathData="M44,79 Q39,89 41,98"
+        android:strokeColor="@color/mascote_pelo"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="4" />
+    <path
+        android:pathData="M76,79 Q81,89 79,98"
+        android:strokeColor="@color/mascote_pelo_sombra"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="7" />
+    <path
+        android:pathData="M76,79 Q81,89 79,98"
+        android:strokeColor="@color/mascote_pelo"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="4" />
+    <!-- Pés -->
+    <path
+        android:fillColor="@color/mascote_pelo_sombra"
+        android:pathData="M44.5,107.5 a6.5,4.5 0 1,0 13,0 a6.5,4.5 0 1,0 -13,0 Z" />
+    <path
+        android:fillColor="@color/mascote_pelo_sombra"
+        android:pathData="M62.5,107.5 a6.5,4.5 0 1,0 13,0 a6.5,4.5 0 1,0 -13,0 Z" />
+    <!-- Corpo, peito claro e lenço azul-tinta -->
+    <path
+        android:fillColor="@color/mascote_pelo"
+        android:pathData="M56,68 H64 A16,16 0 0 1 80,84 V91 A16,16 0 0 1 64,107 H56 A16,16 0 0 1 40,91 V84 A16,16 0 0 1 56,68 Z"
+        android:strokeColor="@color/mascote_pelo_sombra"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2.5" />
+    <path
+        android:fillColor="@color/mascote_mascara"
+        android:pathData="M49,91 a11,13 0 1,0 22,0 a11,13 0 1,0 -22,0 Z" />
+    <path
+        android:fillColor="@color/mascote_lenco"
+        android:pathData="M41,67 Q60,75 79,67 L79.5,73.5 Q60,81.5 40.5,73.5 Z" />
+    <path
+        android:fillColor="@color/mascote_lenco_sombra"
+        android:pathData="M63,74.5 L71,88 L59,84.5 Z" />
+    <!-- Cabeça um pouco tombada -->
+    <group
+        android:rotation="6"
+        android:pivotX="60"
+        android:pivotY="70"
+        android:translateY="3">
+        <!-- Orelhas caídas, sem energia -->
+        <group
+            android:rotation="-28"
+            android:pivotX="40"
+            android:pivotY="34">
+            <path
+                android:fillColor="@color/mascote_pelo"
+                android:pathData="M30,40 L33,9 Q34,6 36.5,8 L56,28 Z"
+                android:strokeColor="@color/mascote_pelo_sombra"
+                android:strokeLineJoin="round"
+                android:strokeWidth="2.5" />
+            <path
+                android:fillColor="@color/mascote_tinta"
+                android:fillAlpha="0.85"
+                android:pathData="M35.5,33 L36.8,15.5 L48.5,27.5 Z" />
+        </group>
+        <group
+            android:rotation="28"
+            android:pivotX="80"
+            android:pivotY="34">
+            <path
+                android:fillColor="@color/mascote_pelo"
+                android:pathData="M90,40 L87,9 Q86,6 83.5,8 L64,28 Z"
+                android:strokeColor="@color/mascote_pelo_sombra"
+                android:strokeLineJoin="round"
+                android:strokeWidth="2.5" />
+            <path
+                android:fillColor="@color/mascote_tinta"
+                android:fillAlpha="0.85"
+                android:pathData="M84.5,33 L83.2,15.5 L71.5,27.5 Z" />
+        </group>
+        <!-- Cabeça -->
+        <path
+            android:fillColor="@color/mascote_pelo"
+            android:pathData="M60,78 C52,78 44,70 36,62 C28,54 24,46 26,38 C28,28 40,24 60,24 C80,24 92,28 94,38 C96,46 92,54 84,62 C76,70 68,78 60,78 Z"
+            android:strokeColor="@color/mascote_pelo_sombra"
+            android:strokeLineJoin="round"
+            android:strokeWidth="2.5" />
+        <!-- Máscara clara do focinho -->
+        <path
+            android:fillColor="@color/mascote_mascara"
+            android:pathData="M29,47 C40,45 52,50 60,59 C68,50 80,45 91,47 C89,55 81,62 73,69 C69,73 64,76.5 60,76.5 C56,76.5 51,73 47,69 C39,62 31,55 29,47 Z" />
+        <path
+            android:fillColor="@color/mascote_bochecha"
+            android:fillAlpha="0.3"
+            android:pathData="M31,53 a4,2.6 0 1,0 8,0 a4,2.6 0 1,0 -8,0 Z" />
+        <path
+            android:fillColor="@color/mascote_bochecha"
+            android:fillAlpha="0.3"
+            android:pathData="M81,53 a4,2.6 0 1,0 8,0 a4,2.6 0 1,0 -8,0 Z" />
+        <!-- Rosto -->
+        <path
+            android:pathData="M41.6,41 Q46,44.6 50.4,41"
+            android:strokeColor="@color/mascote_tinta"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="2.6" />
+        <path
+            android:pathData="M69.6,41 Q74,44.6 78.4,41"
+            android:strokeColor="@color/mascote_tinta"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="2.6" />
+        <path
+            android:fillColor="@color/mascote_tinta"
+            android:pathData="M55.2,63.5 a4.8,3.5 0 1,0 9.6,0 a4.8,3.5 0 1,0 -9.6,0 Z" />
+        <path
+            android:fillColor="@color/mascote_brilho"
+            android:fillAlpha="0.6"
+            android:pathData="M57,62.4 a1.4,1 0 1,0 2.8,0 a1.4,1 0 1,0 -2.8,0 Z" />
+        <path
+            android:pathData="M60,67 V69 M56.5,71 H63.5"
+            android:strokeColor="@color/mascote_tinta"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="2.1" />
+    </group>
+    <!-- Zzz -->
+    <path
+        android:pathData="M92,26 h5 l-5,5 h5"
+        android:strokeColor="@color/mascote_pensamento"
+        android:strokeAlpha="0.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="1.8" />
+    <path
+        android:pathData="M100,14 h7 l-7,7 h7"
+        android:strokeColor="@color/mascote_pensamento"
+        android:strokeAlpha="0.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="1.8" />
+</vector>

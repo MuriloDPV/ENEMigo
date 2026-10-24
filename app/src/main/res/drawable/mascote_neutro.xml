@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Grifo neutro: olhos abertos, sorriso pequeno e braços para baixo.
-     Cores: mascote_* em values/colors.xml (apelidos da marca). -->
+<!-- Lia neutra: olhos abertos, sorriso pequeno e braços para baixo. Cores: mascote_* em values/colors.xml.
+     Gerado por tools/gerar_mascote.py: mude lá e rode de novo. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="120dp"
     android:height="120dp"
@@ -11,99 +11,139 @@
         android:fillColor="@color/mascote_tinta"
         android:fillAlpha="0.12"
         android:pathData="M36,112 a24,4 0 1,0 48,0 a24,4 0 1,0 -48,0 Z" />
-    <!-- Pés -->
+    <!-- Cauda, com a ponta clara -->
     <path
-        android:fillColor="@color/mascote_tampa_sombra"
-        android:pathData="M43,107.5 a7,4.5 0 1,0 14,0 a7,4.5 0 1,0 -14,0 Z" />
-    <path
-        android:fillColor="@color/mascote_tampa_sombra"
-        android:pathData="M63,107.5 a7,4.5 0 1,0 14,0 a7,4.5 0 1,0 -14,0 Z" />
-    <!-- Braços (atrás do corpo) -->
-    <path
-        android:pathData="M43,80 Q33,85 31,95"
-        android:strokeColor="@color/mascote_tampa"
-        android:strokeLineCap="round"
-        android:strokeLineJoin="round"
-        android:strokeWidth="4.2" />
-    <path
-        android:fillColor="@color/mascote_tampa"
-        android:pathData="M27.6,95 a3.4,3.4 0 1,0 6.8,0 a3.4,3.4 0 1,0 -6.8,0 Z" />
-    <path
-        android:pathData="M77,80 Q87,85 89,95"
-        android:strokeColor="@color/mascote_tampa"
-        android:strokeLineCap="round"
-        android:strokeLineJoin="round"
-        android:strokeWidth="4.2" />
-    <path
-        android:fillColor="@color/mascote_tampa"
-        android:pathData="M85.6,95 a3.4,3.4 0 1,0 6.8,0 a3.4,3.4 0 1,0 -6.8,0 Z" />
-    <!-- Corpo amarelo, com sombra do lado direito e reflexo do plástico -->
-    <path
-        android:fillColor="@color/mascote_corpo"
-        android:pathData="M53,36 H67 A15,15 0 0 1 82,51 V91 A15,15 0 0 1 67,106 H53 A15,15 0 0 1 38,91 V51 A15,15 0 0 1 53,36 Z"
-        android:strokeColor="@color/mascote_corpo_sombra"
-        android:strokeWidth="2.5" />
+        android:fillColor="@color/mascote_pelo"
+        android:pathData="M70,100 C92,106 108,92 104,72 C102,60 94,52 86,52 C92,62 92,74 84,84 C80,90 74,94 70,96 Z" />
     <group>
-        <clip-path android:pathData="M53,36 H67 A15,15 0 0 1 82,51 V91 A15,15 0 0 1 67,106 H53 A15,15 0 0 1 38,91 V51 A15,15 0 0 1 53,36 Z" />
-        <path
-            android:fillColor="@color/mascote_corpo_sombra"
-            android:fillAlpha="0.4"
-            android:pathData="M74,30 Q70,70 74,110 H92 V30 Z" />
+        <clip-path android:pathData="M70,100 C92,106 108,92 104,72 C102,60 94,52 86,52 C92,62 92,74 84,84 C80,90 74,94 70,96 Z" />
+        <group
+            android:rotation="30"
+            android:pivotX="98"
+            android:pivotY="56">
+            <path
+                android:fillColor="@color/mascote_mascara"
+                android:pathData="M85,56 a13,9 0 1,0 26,0 a13,9 0 1,0 -26,0 Z" />
+        </group>
     </group>
     <path
-        android:pathData="M45.5,55 V82"
-        android:strokeColor="@color/mascote_brilho"
-        android:strokeAlpha="0.55"
+        android:pathData="M70,100 C92,106 108,92 104,72 C102,60 94,52 86,52 C92,62 92,74 84,84 C80,90 74,94 70,96 Z"
+        android:strokeColor="@color/mascote_pelo_sombra"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2.5" />
+    <!-- Braços (atrás do corpo) -->
+    <path
+        android:pathData="M43,77 Q36,85 36,94"
+        android:strokeColor="@color/mascote_pelo_sombra"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="7" />
+    <path
+        android:pathData="M43,77 Q36,85 36,94"
+        android:strokeColor="@color/mascote_pelo"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
         android:strokeWidth="4" />
-    <!-- Tampa (azul da marca), com a ponta chanfrada do marca-texto por baixo -->
-    <group
-        android:pivotX="60"
-        android:pivotY="44"
-        android:rotation="0">
-        <path
-            android:fillColor="@color/mascote_tampa"
-            android:pathData="M40,19 L79,11.5 Q84,10.6 84,15.5 V39 A5,5 0 0 1 79,44 H41 A5,5 0 0 1 36,39 V23 Q36,19.8 40,19 Z" />
-        <path
-            android:fillColor="@color/mascote_tampa_sombra"
-            android:pathData="M36,36.5 H84 V39 A5,5 0 0 1 79,44 H41 A5,5 0 0 1 36,39 Z" />
-        <path
-            android:fillColor="@color/mascote_tampa_sombra"
-            android:pathData="M74,12.6 L79,11.7 V50 A2.5,2.5 0 0 1 74,50 Z" />
-        <path
-            android:pathData="M42,31 V25 Q42,22.6 44.4,22.1 L53,20.4"
-            android:strokeColor="@color/mascote_brilho"
-            android:strokeAlpha="0.4"
-            android:strokeLineCap="round"
-            android:strokeLineJoin="round"
-            android:strokeWidth="3" />
-    </group>
+    <path
+        android:pathData="M77,77 Q84,85 84,94"
+        android:strokeColor="@color/mascote_pelo_sombra"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="7" />
+    <path
+        android:pathData="M77,77 Q84,85 84,94"
+        android:strokeColor="@color/mascote_pelo"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="4" />
+    <!-- Pés -->
+    <path
+        android:fillColor="@color/mascote_pelo_sombra"
+        android:pathData="M44.5,107.5 a6.5,4.5 0 1,0 13,0 a6.5,4.5 0 1,0 -13,0 Z" />
+    <path
+        android:fillColor="@color/mascote_pelo_sombra"
+        android:pathData="M62.5,107.5 a6.5,4.5 0 1,0 13,0 a6.5,4.5 0 1,0 -13,0 Z" />
+    <!-- Corpo, peito claro e lenço azul-tinta -->
+    <path
+        android:fillColor="@color/mascote_pelo"
+        android:pathData="M56,68 H64 A16,16 0 0 1 80,84 V91 A16,16 0 0 1 64,107 H56 A16,16 0 0 1 40,91 V84 A16,16 0 0 1 56,68 Z"
+        android:strokeColor="@color/mascote_pelo_sombra"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2.5" />
+    <path
+        android:fillColor="@color/mascote_mascara"
+        android:pathData="M49,91 a11,13 0 1,0 22,0 a11,13 0 1,0 -22,0 Z" />
+    <path
+        android:fillColor="@color/mascote_lenco"
+        android:pathData="M41,67 Q60,75 79,67 L79.5,73.5 Q60,81.5 40.5,73.5 Z" />
+    <path
+        android:fillColor="@color/mascote_lenco_sombra"
+        android:pathData="M63,74.5 L71,88 L59,84.5 Z" />
+    <!-- Orelhas -->
+    <path
+        android:fillColor="@color/mascote_pelo"
+        android:pathData="M30,40 L33,9 Q34,6 36.5,8 L56,28 Z"
+        android:strokeColor="@color/mascote_pelo_sombra"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2.5" />
+    <path
+        android:fillColor="@color/mascote_tinta"
+        android:fillAlpha="0.85"
+        android:pathData="M35.5,33 L36.8,15.5 L48.5,27.5 Z" />
+    <path
+        android:fillColor="@color/mascote_pelo"
+        android:pathData="M90,40 L87,9 Q86,6 83.5,8 L64,28 Z"
+        android:strokeColor="@color/mascote_pelo_sombra"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2.5" />
+    <path
+        android:fillColor="@color/mascote_tinta"
+        android:fillAlpha="0.85"
+        android:pathData="M84.5,33 L83.2,15.5 L71.5,27.5 Z" />
+    <!-- Cabeça -->
+    <path
+        android:fillColor="@color/mascote_pelo"
+        android:pathData="M60,78 C52,78 44,70 36,62 C28,54 24,46 26,38 C28,28 40,24 60,24 C80,24 92,28 94,38 C96,46 92,54 84,62 C76,70 68,78 60,78 Z"
+        android:strokeColor="@color/mascote_pelo_sombra"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2.5" />
+    <!-- Máscara clara do focinho -->
+    <path
+        android:fillColor="@color/mascote_mascara"
+        android:pathData="M29,47 C40,45 52,50 60,59 C68,50 80,45 91,47 C89,55 81,62 73,69 C69,73 64,76.5 60,76.5 C56,76.5 51,73 47,69 C39,62 31,55 29,47 Z" />
+    <path
+        android:fillColor="@color/mascote_bochecha"
+        android:fillAlpha="0.3"
+        android:pathData="M31,53 a4,2.6 0 1,0 8,0 a4,2.6 0 1,0 -8,0 Z" />
+    <path
+        android:fillColor="@color/mascote_bochecha"
+        android:fillAlpha="0.3"
+        android:pathData="M81,53 a4,2.6 0 1,0 8,0 a4,2.6 0 1,0 -8,0 Z" />
     <!-- Rosto -->
     <path
         android:fillColor="@color/mascote_tinta"
-        android:pathData="M46,63 a5,6.5 0 1,0 10,0 a5,6.5 0 1,0 -10,0 Z" />
+        android:pathData="M41.6,41 a4.4,5.2 0 1,0 8.8,0 a4.4,5.2 0 1,0 -8.8,0 Z" />
+    <path
+        android:fillColor="@color/mascote_brilho"
+        android:pathData="M46,39.1 a1.6,1.6 0 1,0 3.2,0 a1.6,1.6 0 1,0 -3.2,0 Z" />
     <path
         android:fillColor="@color/mascote_tinta"
-        android:pathData="M64,63 a5,6.5 0 1,0 10,0 a5,6.5 0 1,0 -10,0 Z" />
+        android:pathData="M69.6,41 a4.4,5.2 0 1,0 8.8,0 a4.4,5.2 0 1,0 -8.8,0 Z" />
     <path
         android:fillColor="@color/mascote_brilho"
-        android:pathData="M50.9,60.3 a1.7,1.7 0 1,0 3.4,0 a1.7,1.7 0 1,0 -3.4,0 Z" />
+        android:pathData="M74,39.1 a1.6,1.6 0 1,0 3.2,0 a1.6,1.6 0 1,0 -3.2,0 Z" />
+    <path
+        android:fillColor="@color/mascote_tinta"
+        android:pathData="M55.2,63.5 a4.8,3.5 0 1,0 9.6,0 a4.8,3.5 0 1,0 -9.6,0 Z" />
     <path
         android:fillColor="@color/mascote_brilho"
-        android:pathData="M68.9,60.3 a1.7,1.7 0 1,0 3.4,0 a1.7,1.7 0 1,0 -3.4,0 Z" />
+        android:fillAlpha="0.6"
+        android:pathData="M57,62.4 a1.4,1 0 1,0 2.8,0 a1.4,1 0 1,0 -2.8,0 Z" />
     <path
-        android:fillColor="@color/mascote_bochecha"
-        android:fillAlpha="0.3"
-        android:pathData="M40.5,73 a4,2.6 0 1,0 8,0 a4,2.6 0 1,0 -8,0 Z" />
-    <path
-        android:fillColor="@color/mascote_bochecha"
-        android:fillAlpha="0.3"
-        android:pathData="M71.5,73 a4,2.6 0 1,0 8,0 a4,2.6 0 1,0 -8,0 Z" />
-    <path
-        android:pathData="M55,75.5 Q60,79.5 65,75.5"
+        android:pathData="M60,67 V69 M55.5,68.8 Q57.8,71.6 60,69 Q62.2,71.6 64.5,68.8"
         android:strokeColor="@color/mascote_tinta"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
-        android:strokeWidth="2.6" />
+        android:strokeWidth="2.1" />
 </vector>
