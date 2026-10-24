@@ -1,20 +1,37 @@
 """Monta app/src/main/assets/questoes.json com questões reais do ENEM (API enem.dev).
 
-Matemática ficou de fora de propósito: o app mostra a área como "Em breve".
-
 Uso: python tools/montar_questoes.py
 Lê o bruto de tools/enem_raw/{ano}.json (gerado por baixar_enem.py).
 A letra "cega" de cada questão é a resposta dada antes de consultar o gabarito;
 o script avisa quando ela diverge do gabarito oficial e não grava nada nesse caso.
+
+Imagens e fórmulas (Matemática):
+- As figuras da API são baixadas para app/src/main/assets/imagens/ e o texto ganha
+  um marcador [[imagem:arquivo.png]] no lugar delas.
+- A API não tem LaTeX: as fórmulas vêm como PNGs minúsculos (uns 90 x 70 px) que
+  ficam borrados no celular. Por isso as alternativas que são fórmula foram
+  redigitadas em LaTeX (FORMULAS) e são renderizadas aqui em alta resolução com o
+  matplotlib, virando [[formula:arquivo.png]]. Precisa de: pip install -r tools/requirements.txt
 """
 import json
 import re
 import sys
+import urllib.request
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 RAW = Path(__file__).parent / "enem_raw"
-SAIDA = RAIZ / "app" / "src" / "main" / "assets" / "questoes.json"
+ASSETS = RAIZ / "app" / "src" / "main" / "assets"
+SAIDA = ASSETS / "questoes.json"
+IMAGENS = ASSETS / "imagens"
+
+IMAGEM_MD = re.compile(r"!\[[^\]]*\]\(([^)\s]+)\)")
+# 16 pt a 288 dpi: 1 em = 64 px. O app escala a fórmula pelo tamanho da fonte do texto
+# (TextoRico.PX_POR_EM), então ela fica nítida até em telas de 4x.
+FORMULA_PT = 16
+FORMULA_DPI = 288
+FORMULA_FONTE = "stixsans"
+COR_TEXTO = (0x3C, 0x3C, 0x3C)  # @color/texto_principal
 
 # área -> [(sigla-lição, título, [(ano-index, letra_cega, explicação), ...]), ...]
 AREAS = [
@@ -108,7 +125,65 @@ AREAS = [
             ("2023-106", "C", "O RNAm entra nas células e é traduzido pelos ribossomos em uma proteína do vírus. O sistema imune reconhece essa proteína como antígeno e cria defesas."),
         ]),
     ]),
+    ("MATEMATICA", "MAT", [
+        ("Porcentagem e proporção", [
+            ("2019-138", "E", "O transporte custa um quinto do valor do objeto, ou seja, 20%. Para o gasto total não passar de 100% do valor, sobram no máximo 80% para a recompensa."),
+            ("2022-164", "B", "Em 60 dias há 60 × 1 440 = 86 400 minutos, o que dá 86 400 ÷ 48 = 1 800 acionamentos. Cada um libera 360 ÷ 1 800 = 0,2 mL."),
+            ("2020-170", "C", "São 4 + 6 + 6 = 16 partes, e cada sócio deve ficar com 16/3. Antônio precisa de 16/3 − 4 = 4/3 de parte, 2/3 vindos de cada sócio. Como cada um tem 6 partes, isso é (2/3) ÷ 6 = 1/9 do capital dele."),
+            ("2022-161", "A", "No desenho, a varanda tem 16 × 5 + 13,4 × 4 = 133,6 cm². Na escala 1 : 50, as áreas ficam 50² = 2 500 vezes maiores: 334 000 cm² = 33,4 m²."),
+            ("2023-161", "D", "Cada parcela é 1 800 ÷ 3 = 600, e a primeira é paga na hora. Sobram 900 financiados: 900 = 600/x + 600/x², com x = 1 + i. Daí 3x² − 2x − 2 = 0 e x = (2 + √28)/6 ≈ 1,215, ou seja, 21,5% ao mês."),
+        ]),
+        ("Geometria", [
+            ("2023-155", "D", "A piscina tem lado √400 = 20 m. Com 5 m de calçada de cada lado, o quadrado todo tem 30 m de lado e 900 m². A calçada ocupa 900 − 400 = 500 m²."),
+            ("2019-147", "B", "Cada placa é meio círculo de raio 20 cm sobre um quadrado de 40 cm de lado: 3,14 × 20² ÷ 2 + 40² = 628 + 1 600 = 2 228 cm². As dez placas somam 22 280 cm²."),
+            ("2020-161", "B", "Volumes iguais: πR²h = πr²(h/4). Então r² = 4R² e r = 2R. Altura quatro vezes menor pede um raio duas vezes maior."),
+            ("2021-170", "C", "A caneca é um tronco de cone: V = πh(R² + Rr + r²)/3 = 3 × 12 × (25 + 20 + 16)/3 = 12 × 61 = 732 cm³, ou seja, 732 mL."),
+            ("2023-165", "E", "Pisos: 3 × 1,0 × 0,25 = 0,75 m². Espelhos: 3 × 1,0 × 0,20 = 0,60 m². Cada parede lateral tem 0,25 × (0,60 + 0,40 + 0,20) = 0,30 m², e são duas. Total: 0,75 + 0,60 + 0,60 = 1,95 m²."),
+        ]),
+        ("Estatística e probabilidade", [
+            ("2023-137", "C", "Média ponderada pelo número de funcionários: (75 × 2 000 + 25 × 7 000) ÷ 100 = 325 000 ÷ 100 = 3 250 reais."),
+            ("2022-149", "B", "São 1 000 famílias, então a mediana é a média entre a 500ª e a 501ª. Acumulando, até 1 criança há exatamente 500 famílias, e a 501ª já tem 2. Mediana: (1 + 2) ÷ 2 = 1,5."),
+            ("2022-138", "D", "Só entram os meses com lucro: jan. 3, mar. 1, maio 5, jun. 3, jul. 2, set. 4, nov. 1 e dez. 4. Em ordem: 1, 1, 2, 3, 3, 4, 4, 5. A mediana é (3 + 3) ÷ 2 = 3."),
+            ("2023-168", "A", "Para o 50: a unidade 0 sai com chance 1/10 e restam as dezenas 1 a 5 (5 bolas), então 1/10 × 1/5 = 1/50. Para o 02: a unidade 2 sai com 1/10 e restam as dezenas 0 a 5 (6 bolas), então 1/10 × 1/6 = 1/60."),
+            ("2022-141", "E", "Restam 46 números. Na próxima rodada Pedro só ganha se sair o 12 (1/46). Na outra, ganha se sair o 12 depois de outro número (45 casos), ou 05 e 45, ou 11 e 19, em qualquer ordem (2 + 2 casos): 49/(46 × 45)."),
+        ]),
+        ("Funções e gráficos", [
+            ("2019-168", "D", "Além do gerente, há X − 1 diaristas, e cada um recebe 2 × 80 = 160 reais por semana. Y = 1 000 + 160(X − 1) = 160X + 840."),
+            ("2021-173", "C", "O menor número de lavagens sai quando todas são completas: 300 ÷ 35 ≈ 8,6. Oito lavagens dão só 280 reais, então são necessárias 9."),
+            ("2019-139", "A", "Até 6 m³ o valor é fixo (12 reais): trecho horizontal. De 6 a 10 m³ sobe 3 reais por m³ e, de 10 a 15 m³, 6 reais por m³, então o último trecho é o mais inclinado."),
+            ("2021-162", "A", "Até 5 000 o imposto é zero. Em 10 000 ele vale 10% de 5 000 = 500 e, em 15 000, 500 + 30% de 5 000 = 2 000. O segundo trecho de subida é bem mais íngreme."),
+            ("2019-165", "E", "O volume de sangue é 8% da massa, ou seja, 0,08m litros. A concentração é q ÷ 0,08m, e ela prejudica a saúde quando passa de 0,4."),
+        ]),
+    ]),
 ]
+
+# Alternativas que na API são imagem de fórmula, redigitadas em LaTeX (mathtext do matplotlib).
+# Conferidas uma a uma contra as imagens originais.
+FORMULAS = {
+    "2020-170": [r"\dfrac{1}{2}", r"\dfrac{1}{3}", r"\dfrac{1}{9}", r"\dfrac{2}{3}", r"\dfrac{4}{3}"],
+    "2020-161": [r"\dfrac{R}{2}", r"2R", r"4R", r"5R", r"16R"],
+    "2023-168": [rf"\dfrac{{1}}{{{a}}}\ \mathrm{{e}}\ \dfrac{{1}}{{{b}}}"
+                 for a, b in [(50, 60), (50, 50), (50, 10), (55, 54), (100, 100)]],
+    "2022-141": [r"\dfrac{1}{46}+\dfrac{1}{45}"] + [rf"\dfrac{{1}}{{46}}+\dfrac{{{n}}}{{46\times 45}}"
+                                                   for n in (2, 8, 43, 49)],
+    "2019-165": [r"\dfrac{q}{0{,}8m} > 0{,}4", r"\dfrac{0{,}4m}{q} > 0{,}8", r"\dfrac{q}{0{,}4m} > 0{,}8",
+                 r"\dfrac{0{,}08m}{q} > 0{,}4", r"\dfrac{q}{0{,}08m} > 0{,}4"],
+}
+
+# Erros de OCR da API (símbolo perdido, unidade trocada, palavra cortada, parágrafo
+# grudado). Cada trecho antigo precisa aparecer exatamente uma vez no campo.
+CORRECOES = {
+    "2019-139": [("context", "consumo de até 6 m²", "consumo de até 6 m³"),
+                 ("context", "15 m² por mês", "15 m³ por mês"),
+                 ("context", "a 10 m³. Sabe-se", "a 10 m³.\n\nSabe-se")],
+    "2019-147": [("context", "seu patio", "seu pátio"),
+                 ("context", "conforme lustrado", "conforme ilustrado")],
+    "2021-162": [("context", "imposto devido (l)", "imposto devido (I)")],
+    "2021-170": [("alternativesIntroduction", "em milimitro", "em mililitro")],
+    "2021-173": [("alternativesIntroduction", "o lava rápido", "o lava-rápido")],
+    "2022-138": [("context", "no  \ndecorrer", "no decorrer")],
+    "2023-161": [("context", "aproximação para 28.", "aproximação para √28.")],
+}
 
 
 def texto_puro(md):
@@ -135,9 +210,88 @@ def carregar_bruto():
     return bruto
 
 
+def corrigido(q, chave, campo):
+    """Campo do bruto com as CORRECOES de OCR aplicadas."""
+    valor = q.get(campo) or ""
+    for c, antigo, novo in CORRECOES.get(chave, []):
+        if c == campo:
+            if valor.count(antigo) != 1:
+                raise ValueError(f"{chave}: correção {antigo!r} aparece {valor.count(antigo)} vez(es)")
+            valor = valor.replace(antigo, novo)
+    return valor
+
+
+def converter(md, nome_base, recursos):
+    """texto_puro() que troca cada ![](url) por [[imagem:{nome_base}N.ext]]."""
+    urls = []
+
+    def guardar(m):
+        urls.append(m.group(1))
+        return f"\x00{len(urls) - 1}\x00"
+
+    t = texto_puro(IMAGEM_MD.sub(guardar, md))
+    for i, url in enumerate(urls):
+        arquivo = f"{nome_base}{i + 1}{Path(url).suffix.lower()}"
+        recursos.append(("imagem", arquivo, url))
+        t = t.replace(f"\x00{i}\x00", f"[[imagem:{arquivo}]]")
+    return t
+
+
+def campos(q, chave):
+    """Texto, enunciado e alternativas como o app recebe, mais as imagens/fórmulas a gerar.
+
+    Recursos: ("imagem", arquivo, url) para baixar ou ("formula", arquivo, latex) para renderizar.
+    """
+    recursos = []
+    texto = converter(corrigido(q, chave, "context"), f"{chave}-t", recursos)
+    enunciado = converter(corrigido(q, chave, "alternativesIntroduction"), f"{chave}-e", recursos)
+    formulas = FORMULAS.get(chave)
+    alternativas = []
+    for i, a in enumerate(q["alternatives"]):
+        if not a.get("file"):
+            if formulas:
+                raise ValueError(f"{chave}: FORMULAS para alternativa que já é texto")
+            alternativas.append(texto_puro(a["text"]))
+        elif formulas:
+            arquivo = f"{chave}-{a['letter'].lower()}.png"
+            recursos.append(("formula", arquivo, formulas[i]))
+            alternativas.append(f"[[formula:{arquivo}]]")
+        else:
+            arquivo = f"{chave}-{a['letter'].lower()}{Path(a['file']).suffix.lower()}"
+            recursos.append(("imagem", arquivo, a["file"]))
+            alternativas.append(f"[[imagem:{arquivo}]]")
+    return {"texto": texto, "enunciado": enunciado, "alternativas": alternativas}, recursos
+
+
+def baixar_imagem(url, destino):
+    if destino.exists():
+        return
+    req = urllib.request.Request(url, headers={"User-Agent": "ENEMigo-escolar"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        destino.write_bytes(r.read())
+    print(f"  baixada {destino.name}")
+
+
+def renderizar_formula(latex, destino):
+    """LaTeX -> PNG transparente na cor do texto do app, com 2 px de folga nas bordas."""
+    import numpy as np  # só quem regenera as fórmulas precisa do matplotlib
+    from matplotlib import mathtext
+    from matplotlib.font_manager import FontProperties
+    from PIL import Image
+
+    fonte = FontProperties(size=FORMULA_PT, math_fontfamily=FORMULA_FONTE)
+    raster = mathtext.MathTextParser("agg").parse(f"${latex}$", dpi=FORMULA_DPI, prop=fonte)
+    alfa = np.pad(np.asarray(raster.image), 2)
+    rgba = np.zeros((*alfa.shape, 4), np.uint8)
+    rgba[..., :3] = COR_TEXTO
+    rgba[..., 3] = alfa
+    Image.fromarray(rgba).save(destino, optimize=True)
+
+
 def main():
+    sys.stdout.reconfigure(encoding="utf-8")  # o console do Windows não é UTF-8
     bruto = carregar_bruto()
-    divergentes, areas = [], []
+    divergentes, areas, recursos = [], [], []
     for area_id, sigla, licoes in AREAS:
         area = {"id": area_id, "licoes": []}
         for li, (titulo, questoes) in enumerate(licoes, start=1):
@@ -147,11 +301,11 @@ def main():
                 q = bruto[chave]
                 if cega != q["correctAlternative"]:
                     divergentes.append(f"{chave}: cega {cega}, oficial {q['correctAlternative']}")
+                dados, rec = campos(q, chave)
+                recursos += rec
                 licao["questoes"].append({
                     "id": f"{licao_id}-{qi:02d}",
-                    "texto": texto_puro(q.get("context")),
-                    "enunciado": texto_puro(q["alternativesIntroduction"]),
-                    "alternativas": [texto_puro(a["text"]) for a in q["alternatives"]],
+                    **dados,
                     "correta": q["correctAlternative"],
                     "explicacao": explicacao,
                     "fonte": f"ENEM {q['year']} – Questão {q['index']}",
@@ -163,9 +317,15 @@ def main():
         print("DIVERGÊNCIAS com o gabarito oficial (nada foi gravado):")
         print("\n".join(divergentes))
         sys.exit(1)
+    IMAGENS.mkdir(exist_ok=True)
+    for tipo, arquivo, origem in recursos:
+        if tipo == "imagem":
+            baixar_imagem(origem, IMAGENS / arquivo)
+        else:
+            renderizar_formula(origem, IMAGENS / arquivo)
     SAIDA.write_text(json.dumps({"versao": 1, "areas": areas}, ensure_ascii=False, indent=2) + "\n",
                      encoding="utf-8")
-    print(f"OK: {SAIDA}")
+    print(f"OK: {SAIDA} ({len(recursos)} imagens/fórmulas em {IMAGENS.name}/)")
 
 
 if __name__ == "__main__":
