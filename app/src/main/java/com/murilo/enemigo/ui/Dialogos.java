@@ -17,10 +17,11 @@ public final class Dialogos {
     private Dialogos() {
     }
 
-    /** "Sem vidas 💔" com o tempo para a próxima vida (Trilha e Resultado). */
+    /** "Sem vidas" com o tempo para a próxima vida (Trilha e Resultado). */
     public static void mostrarSemVidas(Activity activity) {
         int minutos = ProgressoManager.getInstance(activity).getMinutosParaProximaVida();
-        new MaterialAlertDialogBuilder(activity)
+        new MaterialAlertDialogBuilder(activity, R.style.ThemeOverlay_ENEMigo_Dialogo_Icone)
+                .setIcon(R.drawable.ic_coracao)
                 .setTitle(R.string.sem_vidas_titulo)
                 .setMessage(activity.getString(R.string.sem_vidas_mensagem, minutos))
                 .setPositiveButton(R.string.btn_ir_revisao, (dialog, which) -> abrirRevisao(activity))

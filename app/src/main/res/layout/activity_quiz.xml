@@ -13,7 +13,7 @@
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingHorizontal="8dp"
-        android:paddingVertical="4dp"
+        android:paddingVertical="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,8 +24,8 @@
             android:layout_height="48dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/fechar"
-            android:src="@drawable/ic_close"
-            app:tint="@color/cinza_bloqueado" />
+            android:src="@drawable/ic_fechar"
+            app:tint="@color/texto_secundario" />
 
         <com.google.android.material.progressindicator.LinearProgressIndicator
             android:id="@+id/progress_quiz"
@@ -34,19 +34,20 @@
             android:layout_marginHorizontal="8dp"
             android:layout_weight="1"
             android:max="5"
-            app:indicatorColor="@color/verde_primario"
-            app:trackColor="@color/cinza_borda"
-            app:trackCornerRadius="8dp"
-            app:trackThickness="14dp" />
+            app:trackCornerRadius="5dp"
+            app:trackThickness="10dp" />
 
         <TextView
             android:id="@+id/txt_vidas_quiz"
+            style="@style/Texto.Status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:textColor="@color/vermelho"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_marginEnd="10dp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/marca_erro_texto"
+            android:textSize="17sp"
+            app:drawableStartCompat="@drawable/ic_coracao" />
     </LinearLayout>
 
     <!-- Conteúdo da questão -->
@@ -63,62 +64,75 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="@dimen/margem_tela">
+            android:paddingHorizontal="@dimen/margem_tela"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp">
 
-            <TextView
-                android:id="@+id/txt_contador"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/texto_secundario"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_texto_base"
-                style="@style/Widget.Material3.CardView.Filled"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/espaco_cards"
-                app:cardBackgroundColor="@color/cinza_fundo_texto"
-                app:cardCornerRadius="@dimen/raio_botao"
-                app:strokeWidth="0dp">
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_contador"
+                    style="@style/Texto.Rotulo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/txt_fonte"
+                    style="@style/Texto.Secundario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_fonte"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="3dp"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Texto-base no cartão de papel (claro também no modo escuro) -->
+            <FrameLayout
+                android:id="@+id/card_texto_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_papel"
+                android:paddingStart="28dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp">
 
                 <TextView
                     android:id="@+id/txt_texto_base"
+                    style="@style/Texto.Leitura"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/espaco_cards"
-                    android:textColor="@color/texto_principal"
-                    android:textSize="15sp" />
-            </com.google.android.material.card.MaterialCardView>
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
 
             <!-- Só aparece quando a questão tem figura -->
             <TextView
                 android:id="@+id/txt_dica_figura"
+                style="@style/Texto.Secundario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="6dp"
                 android:text="@string/quiz_dica_figura"
-                android:textColor="@color/texto_secundario"
                 android:textSize="12sp"
                 android:visibility="gone" />
 
             <TextView
                 android:id="@+id/txt_enunciado"
+                style="@style/Texto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/espaco_cards"
-                android:textColor="@color/texto_principal"
-                android:textSize="17sp" />
-
-            <TextView
-                android:id="@+id/txt_fonte"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
-                android:textColor="@color/texto_secundario"
-                android:textSize="12sp" />
+                android:lineSpacingMultiplier="1.2"
+                android:textSize="17sp" />
 
             <include
                 android:id="@+id/alt_a"
@@ -152,36 +166,67 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <com.google.android.material.button.MaterialButton
+        <View
+            android:id="@+id/divisor_inferior"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/largura_borda"
+            android:background="@color/superficie_borda" />
+
+        <com.murilo.enemigo.ui.componente.BotaoRelevo
             android:id="@+id/btn_verificar"
+            style="@style/Widget.ENEMigo.Botao.Primario"
             android:layout_width="match_parent"
             android:layout_height="@dimen/altura_botao"
-            android:layout_margin="@dimen/margem_tela"
+            android:layout_margin="16dp"
             android:enabled="false"
             android:text="@string/btn_verificar" />
 
+        <!-- Sobe de baixo depois do VERIFICAR -->
         <LinearLayout
             android:id="@+id/painel_feedback"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/verde_claro"
             android:orientation="vertical"
-            android:padding="@dimen/margem_tela"
+            android:paddingHorizontal="@dimen/margem_tela"
+            android:paddingTop="18dp"
+            android:paddingBottom="16dp"
             android:visibility="gone">
 
-            <TextView
-                android:id="@+id/txt_feedback_titulo"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/verde_escuro"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/circulo_feedback"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_circulo">
+
+                    <ImageView
+                        android:id="@+id/img_feedback"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/txt_feedback_titulo"
+                    style="@style/Texto.Titulo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:accessibilityLiveRegion="polite" />
+            </LinearLayout>
 
             <!-- A explicação rola se passar de 160dp -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="10dp">
 
                 <ScrollView
                     android:layout_width="0dp"
@@ -194,18 +239,20 @@
 
                     <TextView
                         android:id="@+id/txt_explicacao"
+                        style="@style/Texto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/texto_principal"
+                        android:lineSpacingMultiplier="1.2"
                         android:textSize="15sp" />
                 </ScrollView>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.google.android.material.button.MaterialButton
+            <com.murilo.enemigo.ui.componente.BotaoRelevo
                 android:id="@+id/btn_continuar"
+                style="@style/Widget.ENEMigo.Botao.Acerto"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/altura_botao"
-                android:layout_marginTop="@dimen/espaco_cards"
+                android:layout_marginTop="16dp"
                 android:text="@string/btn_continuar" />
         </LinearLayout>
     </LinearLayout>

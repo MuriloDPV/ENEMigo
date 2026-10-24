@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cartão de um número do resultado (XP ganho, ofensiva): faixa colorida com o rótulo e o valor embaixo. -->
+<com.murilo.enemigo.ui.componente.CartaoRelevo xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:raio="@dimen/raio_botao">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/face"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/raio_botao">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_rotulo"
+                style="@style/Texto.Rotulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="6dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:layout_marginBottom="3dp"
+                app:cardCornerRadius="13dp">
+
+                <!-- O ícone entra como drawable do texto (no Java) -->
+                <TextView
+                    android:id="@+id/txt_valor"
+                    style="@style/Texto.Titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="14dp" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</com.murilo.enemigo.ui.componente.CartaoRelevo>

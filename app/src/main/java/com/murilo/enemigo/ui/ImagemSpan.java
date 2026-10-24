@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.text.style.ReplacementSpan;
@@ -15,7 +16,8 @@ import com.murilo.enemigo.util.TextoRico;
 
 /**
  * Desenha uma figura ou fórmula no meio do texto de um TextView.
- * - Fórmula: escalada pelo tamanho da fonte (um pouco maior) e centralizada na linha do texto.
+ * - Fórmula: escalada pelo tamanho da fonte (um pouco maior), centralizada na linha do texto e
+ *   pintada com a cor do texto.
  * - Figura: 1 px da imagem = 1 dp (sem passar da largura do TextView), apoiada na linha de base;
  *   com preencherLargura, ocupa a largura toda do TextView.
  */
@@ -28,6 +30,7 @@ class ImagemSpan extends ReplacementSpan {
     private final int larguraMax;
     private final Paint pincel = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.FILTER_BITMAP_FLAG);
     private final RectF destino = new RectF();
+    private int corFormula;
 
     ImagemSpan(Bitmap bitmap, boolean formula, boolean preencherLargura, float densidade, int larguraMax) {
         this.bitmap = bitmap;
@@ -86,6 +89,11 @@ class ImagemSpan extends ReplacementSpan {
         float altura = bitmap.getHeight() * escala;
         float topo = y + topo(paint, altura);
         destino.set(x, topo, x + bitmap.getWidth() * escala, topo + altura);
+        if (formula && paint.getColor() != corFormula) {
+            // A fórmula é só tinta (fundo transparente): pinta com a cor do texto em volta.
+            corFormula = paint.getColor();
+            pincel.setColorFilter(new PorterDuffColorFilter(corFormula, PorterDuff.Mode.SRC_IN));
+        }
         canvas.drawBitmap(bitmap, null, destino, pincel);
     }
 }

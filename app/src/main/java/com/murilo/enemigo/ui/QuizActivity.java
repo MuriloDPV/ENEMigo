@@ -2,8 +2,12 @@ package com.murilo.enemigo.ui;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,7 +17,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
@@ -23,6 +26,8 @@ import com.murilo.enemigo.data.QuestaoRepository;
 import com.murilo.enemigo.model.Licao;
 import com.murilo.enemigo.model.Questao;
 import com.murilo.enemigo.model.ResultadoSessao;
+import com.murilo.enemigo.ui.componente.BotaoRelevo;
+import com.murilo.enemigo.ui.componente.CartaoRelevo;
 import com.murilo.enemigo.util.Constantes;
 import com.murilo.enemigo.util.TextoRico;
 
@@ -43,7 +48,15 @@ public class QuizActivity extends AppCompatActivity {
     private static final String ESTADO_IDS_REVISAO = "ids_revisao";
     private static final String ESTADO_VIDAS_RECUPERADAS = "vidas_recuperadas";
 
-    private final MaterialCardView[] cardsAlternativas = new MaterialCardView[5];
+    // Estados visuais de uma alternativa
+    private static final int NORMAL = 0;
+    private static final int SELECIONADA = 1;
+    private static final int CORRETA = 2;
+    private static final int ERRADA = 3;
+
+    private final CartaoRelevo[] cardsAlternativas = new CartaoRelevo[5];
+    /** Alternativas com figura ou fórmula ficam sempre em "papel" claro (inclusive no modo escuro). */
+    private final boolean[] alternativaEmPapel = new boolean[5];
 
     private ProgressoManager progresso;
     private boolean modoRevisao;
@@ -64,11 +77,14 @@ public class QuizActivity extends AppCompatActivity {
     private TextView txtDicaFigura;
     private TextView txtEnunciado;
     private TextView txtFonte;
-    private MaterialButton btnVerificar;
+    private BotaoRelevo btnVerificar;
+    private View divisorInferior;
     private View painelFeedback;
+    private View circuloFeedback;
+    private ImageView imgFeedback;
     private TextView txtFeedbackTitulo;
     private TextView txtExplicacao;
-    private MaterialButton btnContinuar;
+    private BotaoRelevo btnContinuar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,7 +125,10 @@ public class QuizActivity extends AppCompatActivity {
         txtEnunciado = findViewById(R.id.txt_enunciado);
         txtFonte = findViewById(R.id.txt_fonte);
         btnVerificar = findViewById(R.id.btn_verificar);
+        divisorInferior = findViewById(R.id.divisor_inferior);
         painelFeedback = findViewById(R.id.painel_feedback);
+        circuloFeedback = findViewById(R.id.circulo_feedback);
+        imgFeedback = findViewById(R.id.img_feedback);
         txtFeedbackTitulo = findViewById(R.id.txt_feedback_titulo);
         txtExplicacao = findViewById(R.id.txt_explicacao);
         btnContinuar = findViewById(R.id.btn_continuar);
@@ -122,7 +141,7 @@ public class QuizActivity extends AppCompatActivity {
 
         int[] ids = {R.id.alt_a, R.id.alt_b, R.id.alt_c, R.id.alt_d, R.id.alt_e};
         for (int i = 0; i < ids.length; i++) {
-            MaterialCardView card = findViewById(ids[i]);
+            CartaoRelevo card = findViewById(ids[i]);
             ((TextView) card.findViewById(R.id.txt_letra)).setText(String.valueOf((char) ('A' + i)));
             final int indice = i;
             card.setOnClickListener(v -> selecionar(indice));
@@ -151,7 +170,7 @@ public class QuizActivity extends AppCompatActivity {
                 selecionar(salvaSelecionada);
                 if (salvaVerificada) {
                     // Acertos, vidas e caderno já foram atualizados; mostrarFeedback só pinta.
-                    mostrarFeedback();
+                    mostrarFeedback(false);
                 }
             }
         } else {
@@ -206,7 +225,9 @@ public class QuizActivity extends AppCompatActivity {
 
     private void atualizarVidas() {
         if (!modoRevisao) {
-            txtVidas.setText(getString(R.string.status_vidas, progresso.getVidas()));
+            int vidas = progresso.getVidas();
+            txtVidas.setText(String.valueOf(vidas));
+            txtVidas.setContentDescription(getResources().getQuantityString(R.plurals.cd_vidas, vidas, vidas));
         }
     }
 
@@ -216,7 +237,7 @@ public class QuizActivity extends AppCompatActivity {
         selecionada = -1;
         verificada = false;
 
-        progress.setProgress(indiceAtual);
+        progress.setProgressCompat(indiceAtual, true);
         txtContador.setText(getString(R.string.quiz_contador, indiceAtual + 1, questoes.size()));
 
         if (questao.getTexto().isEmpty()) {
@@ -226,6 +247,17 @@ public class QuizActivity extends AppCompatActivity {
             TextoComImagens.exibir(txtTextoBase, questao.getTexto(), false);
         }
         TextoComImagens.exibir(txtEnunciado, questao.getEnunciado(), false);
+        // Enunciado com figura/fórmula também vai para o papel, para a tinta escura aparecer.
+        if (TextoRico.temMarcador(questao.getEnunciado())) {
+            txtEnunciado.setBackgroundResource(R.drawable.bg_papel);
+            txtEnunciado.setTextColor(cor(R.color.papel_texto));
+            int p = getResources().getDimensionPixelSize(R.dimen.espaco_cards);
+            txtEnunciado.setPadding(p, p, p, p);
+        } else {
+            txtEnunciado.setBackground(null);
+            txtEnunciado.setTextColor(cor(R.color.texto_principal));
+            txtEnunciado.setPadding(0, 0, 0, 0);
+        }
         boolean temFigura = TextoRico.temFigura(questao.getTexto())
                 || TextoRico.temFigura(questao.getEnunciado());
         txtDicaFigura.setVisibility(temFigura ? View.VISIBLE : View.GONE);
@@ -233,43 +265,36 @@ public class QuizActivity extends AppCompatActivity {
             txtFonte.setVisibility(View.GONE);
         } else {
             txtFonte.setVisibility(View.VISIBLE);
-            txtFonte.setText(getString(R.string.quiz_fonte, questao.getFonte()));
+            txtFonte.setText(questao.getFonte());
+            txtFonte.setContentDescription(getString(R.string.quiz_fonte, questao.getFonte()));
         }
 
         String[] alternativas = questao.getAlternativas();
-        int cinza = ContextCompat.getColor(this, R.color.cinza_borda);
-        int branco = ContextCompat.getColor(this, R.color.fundo);
         for (int i = 0; i < cardsAlternativas.length; i++) {
-            MaterialCardView card = cardsAlternativas[i];
+            CartaoRelevo card = cardsAlternativas[i];
+            alternativaEmPapel[i] = TextoRico.temMarcador(alternativas[i]);
             TextoComImagens.exibir(card.findViewById(R.id.txt_texto), alternativas[i], true);
-            aplicarEstilo(card, cinza, branco);
+            pintar(i, NORMAL);
+            card.setAlpha(1f);
             card.setClickable(true);
         }
 
         painelFeedback.setVisibility(View.GONE);
+        divisorInferior.setVisibility(View.VISIBLE);
         btnVerificar.setVisibility(View.VISIBLE);
         btnVerificar.setEnabled(false);
         btnContinuar.setEnabled(true);
         scroll.scrollTo(0, 0);
     }
 
-    /** Pinta a alternativa escolhida de azul e volta as outras ao normal. */
+    /** Destaca a alternativa escolhida e volta as outras ao normal. */
     private void selecionar(int indice) {
         if (verificada) {
             return;
         }
         selecionada = indice;
-        int cinza = ContextCompat.getColor(this, R.color.cinza_borda);
-        int branco = ContextCompat.getColor(this, R.color.fundo);
-        int azul = ContextCompat.getColor(this, R.color.azul_selecao);
-        int azulClaro = ContextCompat.getColor(this, R.color.azul_claro);
-
         for (int i = 0; i < cardsAlternativas.length; i++) {
-            if (i == selecionada) {
-                aplicarEstilo(cardsAlternativas[i], azul, azulClaro);
-            } else {
-                aplicarEstilo(cardsAlternativas[i], cinza, branco);
-            }
+            pintar(i, i == selecionada ? SELECIONADA : NORMAL);
         }
         btnVerificar.setEnabled(true);
     }
@@ -297,48 +322,65 @@ public class QuizActivity extends AppCompatActivity {
             progresso.adicionarAoCaderno(questao.getId());
             atualizarVidas();
         }
-        mostrarFeedback();
+        mostrarFeedback(true);
     }
 
     /** Trava as alternativas, pinta certo/errado e mostra o painel com a explicação. */
-    private void mostrarFeedback() {
+    private void mostrarFeedback(boolean animar) {
         verificada = true;
         Questao questao = questoes.get(indiceAtual);
         boolean acertou = questao.isCorreta(selecionada);
 
-        for (MaterialCardView card : cardsAlternativas) {
+        for (int i = 0; i < cardsAlternativas.length; i++) {
+            CartaoRelevo card = cardsAlternativas[i];
             card.setClickable(false);
+            // As alternativas que não importam mais ficam apagadas (menos as de figura/fórmula,
+            // que precisam continuar legíveis no papel claro).
+            boolean envolvida = i == questao.getCorreta() || i == selecionada;
+            card.setAlpha(envolvida || alternativaEmPapel[i] ? 1f : 0.55f);
         }
+        pintar(questao.getCorreta(), CORRETA);
 
-        int verde = ContextCompat.getColor(this, R.color.verde_primario);
-        int verdeClaro = ContextCompat.getColor(this, R.color.verde_claro);
-        aplicarEstilo(cardsAlternativas[questao.getCorreta()], verde, verdeClaro);
-
+        int corForte;
         int corPainel;
         int corTitulo;
-        int corBotao;
         if (acertou) {
-            corPainel = verdeClaro;
-            corTitulo = ContextCompat.getColor(this, R.color.verde_escuro);
-            corBotao = verde;
+            corForte = cor(R.color.marca_acerto);
+            corPainel = cor(R.color.marca_acerto_suave);
+            corTitulo = cor(R.color.marca_acerto_texto);
             txtFeedbackTitulo.setText(R.string.feedback_acerto);
+            imgFeedback.setImageResource(R.drawable.ic_check);
+            btnContinuar.setCores(corForte, Color.TRANSPARENT, cor(R.color.marca_acerto_escuro));
         } else {
-            int vermelho = ContextCompat.getColor(this, R.color.vermelho);
-            int vermelhoClaro = ContextCompat.getColor(this, R.color.vermelho_claro);
-            aplicarEstilo(cardsAlternativas[selecionada], vermelho, vermelhoClaro);
-            corPainel = vermelhoClaro;
-            corTitulo = ContextCompat.getColor(this, R.color.vermelho_escuro);
-            corBotao = vermelho;
+            pintar(selecionada, ERRADA);
+            corForte = cor(R.color.marca_erro);
+            corPainel = cor(R.color.marca_erro_suave);
+            corTitulo = cor(R.color.marca_erro_texto);
             txtFeedbackTitulo.setText(getString(R.string.feedback_erro, questao.getLetraCorreta()));
+            imgFeedback.setImageResource(R.drawable.ic_fechar);
+            btnContinuar.setCores(corForte, Color.TRANSPARENT, cor(R.color.marca_erro_escuro));
         }
 
         painelFeedback.setBackgroundColor(corPainel);
+        circuloFeedback.setBackgroundTintList(ColorStateList.valueOf(corForte));
+        imgFeedback.setImageTintList(ColorStateList.valueOf(cor(R.color.texto_sobre_cor)));
         txtFeedbackTitulo.setTextColor(corTitulo);
-        btnContinuar.setBackgroundTintList(ColorStateList.valueOf(corBotao));
         txtExplicacao.setText(questao.getExplicacao());
 
         btnVerificar.setVisibility(View.GONE);
+        divisorInferior.setVisibility(View.GONE);
         painelFeedback.setVisibility(View.VISIBLE);
+        if (animar) {
+            // O painel sobe de baixo da tela.
+            painelFeedback.post(() -> {
+                painelFeedback.setTranslationY(painelFeedback.getHeight());
+                painelFeedback.animate()
+                        .translationY(0f)
+                        .setDuration(260)
+                        .setInterpolator(new DecelerateInterpolator(1.6f))
+                        .start();
+            });
+        }
     }
 
     private void continuar() {
@@ -357,7 +399,8 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void mostrarVidasAcabaram() {
-        new MaterialAlertDialogBuilder(this)
+        new MaterialAlertDialogBuilder(this, R.style.ThemeOverlay_ENEMigo_Dialogo_Icone)
+                .setIcon(R.drawable.ic_coracao)
                 .setTitle(R.string.vidas_acabaram_titulo)
                 .setMessage(R.string.vidas_acabaram_mensagem)
                 .setCancelable(false)
@@ -401,8 +444,53 @@ public class QuizActivity extends AppCompatActivity {
                 .show();
     }
 
-    private void aplicarEstilo(MaterialCardView card, int corBorda, int corFundo) {
-        card.setStrokeColor(corBorda);
-        card.setCardBackgroundColor(corFundo);
+    /**
+     * Cores da alternativa em cada estado. As que têm figura ou fórmula usam a versão "papel",
+     * que continua clara no modo escuro (a tinta das imagens é escura).
+     */
+    private void pintar(int indice, int estado) {
+        boolean papel = alternativaEmPapel[indice];
+        int face;
+        int borda;
+        if (estado == SELECIONADA) {
+            face = cor(papel ? R.color.papel_selecao : R.color.marca_primaria_suave);
+            borda = cor(R.color.marca_primaria);
+        } else if (estado == CORRETA) {
+            face = cor(papel ? R.color.papel_acerto : R.color.marca_acerto_suave);
+            borda = cor(R.color.marca_acerto);
+        } else if (estado == ERRADA) {
+            face = cor(papel ? R.color.papel_erro : R.color.marca_erro_suave);
+            borda = cor(R.color.marca_erro);
+        } else {
+            face = cor(papel ? R.color.papel : R.color.superficie);
+            borda = cor(papel ? R.color.papel_borda : R.color.superficie_borda);
+        }
+
+        CartaoRelevo card = cardsAlternativas[indice];
+        MaterialCardView faceAlt = card.findViewById(R.id.face_alt);
+        faceAlt.setCardBackgroundColor(face);
+        faceAlt.setStrokeColor(borda);
+        card.setCorSombra(borda);
+
+        ((TextView) card.findViewById(R.id.txt_texto))
+                .setTextColor(cor(papel ? R.color.papel_texto : R.color.texto_principal));
+
+        // Letra: círculo vazado no normal, preenchido com a cor do estado nos outros.
+        TextView letra = card.findViewById(R.id.txt_letra);
+        GradientDrawable circulo = new GradientDrawable();
+        circulo.setShape(GradientDrawable.OVAL);
+        if (estado == NORMAL) {
+            circulo.setColor(Color.TRANSPARENT);
+            circulo.setStroke(getResources().getDimensionPixelSize(R.dimen.largura_borda), borda);
+            letra.setTextColor(cor(papel ? R.color.papel_texto_secundario : R.color.texto_secundario));
+        } else {
+            circulo.setColor(borda);
+            letra.setTextColor(cor(R.color.texto_sobre_cor));
+        }
+        letra.setBackground(circulo);
+    }
+
+    private int cor(int corRes) {
+        return ContextCompat.getColor(this, corRes);
     }
 }

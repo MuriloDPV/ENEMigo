@@ -9,111 +9,110 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="24dp">
 
-        <TextView
-            android:id="@+id/txt_emoji"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="64sp" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Selo do resultado: troféu, check ou alvo, num círculo com halo -->
+        <FrameLayout
+            android:id="@+id/halo_resultado"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:background="@drawable/bg_circulo">
+
+            <FrameLayout
+                android:id="@+id/circulo_resultado"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_circulo">
+
+                <ImageView
+                    android:id="@+id/img_resultado"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no" />
+            </FrameLayout>
+        </FrameLayout>
 
         <TextView
             android:id="@+id/txt_titulo"
+            style="@style/Texto.Titulo.Grande"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/texto_principal"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="20dp"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/txt_acertos"
+            style="@style/Texto.Secundario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/texto_secundario"
+            android:layout_marginTop="4dp"
             android:textSize="17sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="28dp"
+            android:baselineAligned="false"
             android:orientation="horizontal">
 
-            <com.google.android.material.card.MaterialCardView
-                style="@style/Widget.Material3.CardView.Outlined"
+            <include
+                android:id="@+id/card_xp"
+                layout="@layout/item_resultado_stat"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="6dp"
-                android:layout_weight="1"
-                app:cardBackgroundColor="@color/fundo"
-                app:cardCornerRadius="@dimen/raio_card"
-                app:strokeColor="@color/amarelo_xp"
-                app:strokeWidth="2dp">
+                android:layout_weight="1" />
 
-                <TextView
-                    android:id="@+id/txt_xp_ganho"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="@dimen/margem_tela"
-                    android:textColor="@color/texto_principal"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
+            <include
                 android:id="@+id/card_ofensiva"
-                style="@style/Widget.Material3.CardView.Outlined"
+                layout="@layout/item_resultado_stat"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
-                android:layout_weight="1"
-                app:cardBackgroundColor="@color/fundo"
-                app:cardCornerRadius="@dimen/raio_card"
-                app:strokeColor="@color/laranja_fogo"
-                app:strokeWidth="2dp">
-
-                <TextView
-                    android:id="@+id/txt_ofensiva_resultado"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="@dimen/margem_tela"
-                    android:textColor="@color/texto_principal"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-            </com.google.android.material.card.MaterialCardView>
+                android:layout_weight="1" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/txt_mensagens"
+        <!-- Meta batida, desbloqueio, bônus e revisão: uma linha com ícone para cada -->
+        <LinearLayout
+            android:id="@+id/lista_mensagens"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margem_tela"
-            android:gravity="center"
-            android:lineSpacingExtra="4dp"
-            android:textColor="@color/texto_principal"
-            android:textSize="15sp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_contorno"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="6dp"
             android:visibility="gone" />
 
-        <com.google.android.material.button.MaterialButton
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="32dp" />
+
+        <com.murilo.enemigo.ui.componente.BotaoRelevo
             android:id="@+id/btn_continuar"
+            style="@style/Widget.ENEMigo.Botao.Primario"
             android:layout_width="match_parent"
             android:layout_height="@dimen/altura_botao"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="24dp"
             android:text="@string/btn_continuar" />
 
-        <com.google.android.material.button.MaterialButton
+        <com.murilo.enemigo.ui.componente.BotaoRelevo
             android:id="@+id/btn_refazer"
-            style="@style/Widget.Material3.Button.OutlinedButton"
+            style="@style/Widget.ENEMigo.Botao.Neutro"
             android:layout_width="match_parent"
             android:layout_height="@dimen/altura_botao"
             android:layout_marginTop="@dimen/espaco_cards"
-            android:text="@string/btn_refazer"
-            android:textStyle="bold"
-            app:cornerRadius="@dimen/raio_botao" />
+            android:text="@string/btn_refazer" />
     </LinearLayout>
 </ScrollView>

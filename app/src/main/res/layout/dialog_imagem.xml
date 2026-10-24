@@ -18,15 +18,16 @@
         android:layout_margin="8dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/fechar"
-        android:src="@drawable/ic_close"
-        app:tint="@color/texto_secundario" />
+        android:src="@drawable/ic_fechar"
+        app:tint="@color/papel_texto_secundario" />
 
     <TextView
+        style="@style/Texto.Secundario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="24dp"
         android:text="@string/imagem_dica_zoom"
-        android:textColor="@color/texto_secundario"
+        android:textColor="@color/papel_texto_secundario"
         android:textSize="13sp" />
 </FrameLayout>

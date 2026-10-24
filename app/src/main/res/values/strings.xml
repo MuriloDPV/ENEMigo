@@ -144,11 +144,5 @@
     <string name="stat_sem_valor">—</string>
 
     <!-- Legado: recursos das telas antigas, removidos quando a última tela migrar -->
-    <string name="status_ofensiva">🔥 %1$d</string>
-    <string name="status_xp">⭐ %1$d</string>
-    <string name="status_vidas">❤️ %1$d</string>
-    <string name="resultado_emoji_perfeito">🏆</string>
-    <string name="resultado_emoji_concluida">✅</string>
-    <string name="resultado_emoji_quase">💪</string>
     <string name="caderno_vazio_emoji">🎉</string>
 </resources>
