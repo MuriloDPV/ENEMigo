@@ -2,14 +2,16 @@ package com.murilo.enemigo.ui;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.content.ContextCompat;
 import androidx.core.widget.TextViewCompat;
 
@@ -20,6 +22,7 @@ import com.murilo.enemigo.data.QuestaoRepository;
 import com.murilo.enemigo.model.Conquista;
 import com.murilo.enemigo.model.Licao;
 import com.murilo.enemigo.ui.componente.CartaoRelevo;
+import com.murilo.enemigo.ui.componente.MascoteView;
 import com.murilo.enemigo.util.Celebracoes;
 import com.murilo.enemigo.util.Celebracoes.Celebracao;
 import com.murilo.enemigo.util.Constantes;
@@ -29,13 +32,22 @@ import java.util.List;
 
 /**
  * Resultado da sessão. Só exibe o que recebeu nos extras: o progresso já foi salvo pela Quiz.
+ * A lição perfeita é celebrada em tela cheia logo que ele abre; ofensiva, nível e conquistas
+ * são celebrados ao sair (CONTINUAR, Voltar ou REFAZER).
  */
 public class ResultadoActivity extends AppCompatActivity {
+
+    private MascoteView mascote;
+    private Retorno retorno;
+    private List<Celebracao> celebracoesDepois;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultado);
+
+        mascote = findViewById(R.id.mascote_resultado);
+        retorno = new Retorno(this);
 
         Intent recebida = getIntent();
         boolean modoRevisao = Constantes.MODO_REVISAO.equals(
@@ -51,20 +63,17 @@ public class ResultadoActivity extends AppCompatActivity {
         boolean desbloqueou = recebida.getBooleanExtra(Constantes.EXTRA_DESBLOQUEOU, false);
         int vidasRecuperadas = recebida.getIntExtra(Constantes.EXTRA_VIDAS_RECUPERADAS, 0);
 
-        // Selo: troféu (perfeito), check (concluída) ou alvo (quase lá)
+        // O Grifo: comemorando (perfeito), feliz (concluída) ou pensando (quase lá)
         TextView txtTitulo = findViewById(R.id.txt_titulo);
         if (acertos == total) {
             txtTitulo.setText(R.string.resultado_perfeito);
-            mostrarSelo(R.drawable.ic_trofeu, R.color.marca_acento, R.color.marca_acento_suave,
-                    R.color.marca_sobre_acento);
+            mostrarMascote(MascoteView.Expressao.COMEMORANDO, R.color.marca_acento_suave);
         } else if (concluiu) {
             txtTitulo.setText(R.string.resultado_concluida);
-            mostrarSelo(R.drawable.ic_check, R.color.marca_acerto, R.color.marca_acerto_suave,
-                    R.color.texto_sobre_cor);
+            mostrarMascote(MascoteView.Expressao.FELIZ, R.color.marca_acerto_suave);
         } else {
             txtTitulo.setText(R.string.resultado_quase);
-            mostrarSelo(R.drawable.ic_alvo, R.color.marca_primaria, R.color.marca_primaria_suave,
-                    R.color.texto_sobre_cor);
+            mostrarMascote(MascoteView.Expressao.PENSANDO, R.color.marca_primaria_suave);
         }
 
         ((TextView) findViewById(R.id.txt_acertos))
@@ -97,19 +106,37 @@ public class ResultadoActivity extends AppCompatActivity {
                             Gamificacao.acertosParaConcluir(total), total),
                     R.drawable.ic_cadeado, R.color.texto_secundario);
         }
-        // Aviso das conquistas novas (RN33), uma linha para cada
+        // Aviso das conquistas novas (RN33), uma linha para cada, com a medalha
         List<Celebracao> celebracoes = Celebracoes.deTextos(
                 recebida.getStringArrayListExtra(Constantes.EXTRA_CELEBRACOES));
         for (Celebracao c : celebracoes) {
             Conquista conquista = c.tipo == Celebracoes.Tipo.CONQUISTA ? Conquista.fromId(c.valor) : null;
             if (conquista != null) {
                 adicionarMensagem(getString(R.string.resultado_conquista,
-                        getString(conquista.getTituloRes())), R.drawable.ic_trofeu, R.color.marca_acento_texto);
+                        getString(conquista.getTituloRes())), conquista.getMedalhaRes(), 0);
             }
         }
 
-        // CONTINUAR e o Voltar do sistema fecham esta tela e voltam para a Trilha ou a Revisão.
-        findViewById(R.id.btn_continuar).setOnClickListener(v -> finish());
+        // A lição perfeita é celebrada já (com o som de lição concluída); sem ela, o som toca aqui.
+        celebracoesDepois = Celebracoes.depoisDoResultado(celebracoes);
+        if (savedInstanceState == null) {
+            List<Celebracao> antes = Celebracoes.antesDoResultado(celebracoes);
+            if (antes.isEmpty()) {
+                retorno.licaoConcluida();
+            } else {
+                CelebracaoActivity.abrir(this, antes, null);
+            }
+        }
+
+        // CONTINUAR e o Voltar do sistema fecham esta tela e voltam para a Trilha ou a Revisão,
+        // passando antes pelas celebrações que faltam.
+        findViewById(R.id.btn_continuar).setOnClickListener(v -> sair(null));
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                sair(null);
+            }
+        });
 
         View btnRefazer = findViewById(R.id.btn_refazer);
         if (modoRevisao || licaoId == null) {
@@ -119,12 +146,47 @@ public class ResultadoActivity extends AppCompatActivity {
         }
     }
 
-    private void mostrarSelo(int icone, int corRes, int corHaloRes, int corIconeRes) {
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // A animação começa quando a tela aparece (a lição perfeita pode ter aberto por cima).
+        if (mascote.getExpressao() == MascoteView.Expressao.COMEMORANDO) {
+            mascote.comemorar();
+        } else if (mascote.getExpressao() == MascoteView.Expressao.FELIZ) {
+            mascote.pular();
+        } else {
+            mascote.balancar();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Escondido atrás de uma celebração, o Grifo descansa.
+        mascote.parar();
+    }
+
+    @Override
+    protected void onDestroy() {
+        retorno.liberar();
+        super.onDestroy();
+    }
+
+    private void mostrarMascote(MascoteView.Expressao expressao, int corHaloRes) {
         findViewById(R.id.halo_resultado).setBackgroundTintList(ColorStateList.valueOf(cor(corHaloRes)));
-        findViewById(R.id.circulo_resultado).setBackgroundTintList(ColorStateList.valueOf(cor(corRes)));
-        ImageView img = findViewById(R.id.img_resultado);
-        img.setImageResource(icone);
-        img.setImageTintList(ColorStateList.valueOf(cor(corIconeRes)));
+        mascote.setExpressao(expressao);
+    }
+
+    /** Fecha o Resultado passando pelas celebrações que faltam e, se houver, abre a próxima tela. */
+    private void sair(Intent proxima) {
+        if (celebracoesDepois.isEmpty()) {
+            if (proxima != null) {
+                startActivity(proxima);
+            }
+        } else {
+            CelebracaoActivity.abrir(this, celebracoesDepois, proxima);
+        }
+        finish();
     }
 
     private void preencherCartao(View cartao, int rotulo, String valor, int icone, int corRes,
@@ -146,7 +208,14 @@ public class ResultadoActivity extends AppCompatActivity {
         TextView linha = (TextView) LayoutInflater.from(this)
                 .inflate(R.layout.item_mensagem_resultado, lista, false);
         linha.setText(texto);
-        linha.setCompoundDrawablesRelativeWithIntrinsicBounds(icone, 0, 0, 0);
+        // Ícones de 24dp ficam como são; as medalhas (96dp) encolhem para caber na linha.
+        Drawable desenho = AppCompatResources.getDrawable(this, icone);
+        if (desenho != null) {
+            int lado = Math.min(desenho.getIntrinsicWidth(),
+                    Math.round(30 * getResources().getDisplayMetrics().density));
+            desenho.setBounds(0, 0, lado, lado);
+        }
+        linha.setCompoundDrawablesRelative(desenho, null, null, null);
         if (corIconeRes != 0) {
             TextViewCompat.setCompoundDrawableTintList(linha, ColorStateList.valueOf(cor(corIconeRes)));
         }
@@ -163,8 +232,8 @@ public class ResultadoActivity extends AppCompatActivity {
         Intent intent = new Intent(this, QuizActivity.class);
         intent.putExtra(Constantes.EXTRA_LICAO_ID, licaoId);
         intent.putExtra(Constantes.EXTRA_MODO, Constantes.MODO_LICAO);
-        startActivity(intent);
-        finish();
+        // As celebrações que faltam aparecem antes de a lição recomeçar.
+        sair(intent);
     }
 
     private String mensagemRevisao(int removidas, int vidas) {

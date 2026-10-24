@@ -18,27 +18,18 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <!-- Selo do resultado: troféu, check ou alvo, num círculo com halo -->
+        <!-- O Grifo num círculo com halo: comemorando (perfeito), feliz (concluída) ou pensando -->
         <FrameLayout
             android:id="@+id/halo_resultado"
-            android:layout_width="132dp"
-            android:layout_height="132dp"
+            android:layout_width="156dp"
+            android:layout_height="156dp"
             android:background="@drawable/bg_circulo">
 
-            <FrameLayout
-                android:id="@+id/circulo_resultado"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:background="@drawable/bg_circulo">
-
-                <ImageView
-                    android:id="@+id/img_resultado"
-                    android:layout_width="54dp"
-                    android:layout_height="54dp"
-                    android:layout_gravity="center"
-                    android:importantForAccessibility="no" />
-            </FrameLayout>
+            <com.murilo.enemigo.ui.componente.MascoteView
+                android:id="@+id/mascote_resultado"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_gravity="center" />
         </FrameLayout>
 
         <TextView
