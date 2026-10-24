@@ -15,6 +15,7 @@ import com.murilo.enemigo.util.Constantes;
 import com.murilo.enemigo.util.DataUtil;
 import com.murilo.enemigo.util.Gamificacao;
 import com.murilo.enemigo.util.Migracao;
+import com.murilo.enemigo.util.TempoEstudo;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -190,6 +191,12 @@ public final class ProgressoManager {
         }
         return Gamificacao.calcularEstado(licao.getOrdem(), getMelhor(licao.getId()),
                 licao.getQuestoes().size(), melhorAnterior, totalAnterior);
+    }
+
+    /** Tempo estimado da lição em minutos, ou 0 se o JSON não tiver a estimativa. */
+    public int getMinutosEstimados(Licao licao) {
+        int segundos = licao.getSegundosEstimados();
+        return segundos <= 0 ? 0 : TempoEstudo.minutosEstimados(segundos);
     }
 
     public int getLicoesConcluidas(Area area) {

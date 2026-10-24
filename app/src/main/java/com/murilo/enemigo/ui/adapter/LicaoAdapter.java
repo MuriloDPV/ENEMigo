@@ -148,7 +148,10 @@ public class LicaoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         h.txtTitulo.setTextAlignment(alinhamento);
         h.txtDetalhe.setTextAlignment(alinhamento);
 
-        h.txtNumero.setText(c.getString(R.string.licao_numero, numero));
+        int minutos = progresso.getMinutosEstimados(licao);
+        h.txtNumero.setText(minutos > 0
+                ? c.getString(R.string.licao_numero_tempo, numero, minutos)
+                : c.getString(R.string.licao_numero, numero));
         h.txtTitulo.setText(licao.getTitulo());
 
         int face;
@@ -194,6 +197,10 @@ public class LicaoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         // A linha pontilhada usa o estado para pintar o caminho já percorrido.
         h.no.setTag(R.id.tag_estado_licao, estado);
         String descricao = c.getString(R.string.cd_licao, numero, licao.getTitulo());
+        if (minutos > 0) {
+            descricao += ", " + c.getResources().getQuantityString(R.plurals.cd_tempo_estimado,
+                    minutos, minutos);
+        }
         h.no.setContentDescription(detalhe == null ? descricao : descricao + ". " + detalhe);
         h.no.setOnClickListener(v -> listener.onLicaoClick(licao, estado));
     }

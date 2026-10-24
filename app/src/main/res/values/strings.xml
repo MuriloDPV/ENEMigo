@@ -42,7 +42,13 @@
     <string name="resumo_trilha">%1$d de %2$d lições concluídas</string>
     <string name="unidade_titulo">Unidade %1$d</string>
     <string name="licao_numero">Lição %1$d</string>
+    <!-- Número da lição com o tempo estimado (o rótulo fica em caixa alta: "LIÇÃO 1 · ~4 MIN") -->
+    <string name="licao_numero_tempo">Lição %1$d · ~%2$d min</string>
     <string name="cd_licao">Lição %1$d: %2$s</string>
+    <plurals name="cd_tempo_estimado">
+        <item quantity="one">cerca de %1$d minuto</item>
+        <item quantity="other">cerca de %1$d minutos</item>
+    </plurals>
     <string name="area_nao_encontrada">Área não encontrada</string>
     <string name="trilha_vazia">Nenhuma lição disponível ainda</string>
     <string name="voltar">Voltar</string>
