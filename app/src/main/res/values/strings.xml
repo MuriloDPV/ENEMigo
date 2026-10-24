@@ -84,7 +84,7 @@
     </plurals>
     <string name="resultado_meta_batida">Meta diária batida!</string>
     <string name="resultado_desbloqueou">Próxima lição desbloqueada!</string>
-    <string name="resultado_faca_acertos">Acerte %1$d de %2$d para liberar a próxima lição</string>
+    <string name="resultado_faca_acertos">Para liberar a próxima lição, acerte %1$d de %2$d</string>
     <string name="resultado_revisao">Você tirou %1$s do caderno e recuperou %2$s</string>
     <string name="resultado_revisao_sem_vidas">Você tirou %1$s do caderno</string>
     <string name="resultado_revisao_nenhuma">Nenhuma questão saiu do caderno desta vez</string>
