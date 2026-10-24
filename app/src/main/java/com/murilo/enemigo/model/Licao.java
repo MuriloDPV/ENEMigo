@@ -42,4 +42,13 @@ public class Licao {
     public List<Questao> getQuestoes() {
         return questoes;
     }
+
+    /** Soma do tempo estimado das questões. */
+    public int getSegundosEstimados() {
+        int soma = 0;
+        for (Questao q : questoes) {
+            soma += q.getSegundosEstimados();
+        }
+        return soma;
+    }
 }

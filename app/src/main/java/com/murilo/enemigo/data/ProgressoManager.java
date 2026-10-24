@@ -7,17 +7,21 @@ import com.murilo.enemigo.model.Area;
 import com.murilo.enemigo.model.Conquista;
 import com.murilo.enemigo.model.EstadoLicao;
 import com.murilo.enemigo.model.Licao;
+import com.murilo.enemigo.model.Questao;
 import com.murilo.enemigo.model.ResultadoSessao;
 import com.murilo.enemigo.util.Celebracoes;
 import com.murilo.enemigo.util.Conquistas;
 import com.murilo.enemigo.util.Constantes;
 import com.murilo.enemigo.util.DataUtil;
 import com.murilo.enemigo.util.Gamificacao;
+import com.murilo.enemigo.util.Migracao;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -35,6 +39,7 @@ public final class ProgressoManager {
     private ProgressoManager(Context context) {
         prefs = context.getSharedPreferences(Constantes.PREFS_NOME, Context.MODE_PRIVATE);
         repositorio = QuestaoRepository.getInstance(context);
+        migrarProgresso();
     }
 
     public static synchronized ProgressoManager getInstance(Context context) {
@@ -368,8 +373,61 @@ public final class ProgressoManager {
         return total;
     }
 
+    // ---------------------------------------------------------------- Migração
+
+    /**
+     * RN35: o progresso salvo com o banco da versão 1 (4 lições de 5) passa para as lições atuais.
+     * Conta como concluída a lição nova cujas questões estavam todas em lições concluídas, com a
+     * nota mínima (ex.: 2/3); o caderno troca os ids antigos pelos novos. Roda uma vez só.
+     */
+    private void migrarProgresso() {
+        if (prefs.getInt(Constantes.CHAVE_VERSAO_PROGRESSO, 1) >= Constantes.VERSAO_PROGRESSO) {
+            return;
+        }
+        Map<String, String> idsV1 = repositorio.getIdsV1();
+        if (idsV1.isEmpty()) {
+            return; // o banco não carregou: tenta de novo na próxima abertura
+        }
+        Map<String, Integer> melhorV1 = new HashMap<>();
+        for (String licao : Migracao.licoesV1(idsV1)) {
+            if (prefs.contains(Constantes.PREFIXO_MELHOR + licao)) {
+                melhorV1.put(licao, prefs.getInt(Constantes.PREFIXO_MELHOR + licao, -1));
+            }
+        }
+        Map<String, Licao> licoes = new HashMap<>();
+        Map<String, List<String>> questoesPorLicao = new HashMap<>();
+        for (Area area : Area.values()) {
+            for (Licao licao : repositorio.getLicoes(area)) {
+                List<String> ids = new ArrayList<>();
+                for (Questao q : licao.getQuestoes()) {
+                    ids.add(q.getId());
+                }
+                licoes.put(licao.getId(), licao);
+                questoesPorLicao.put(licao.getId(), ids);
+            }
+        }
+
+        // No mesmo editor vale a última operação de cada chave: os remove() vêm antes, então uma
+        // lição nova com o mesmo id de uma antiga ("LIN-01") fica com o valor do put().
+        SharedPreferences.Editor editor = prefs.edit();
+        for (String licao : melhorV1.keySet()) {
+            editor.remove(Constantes.PREFIXO_MELHOR + licao);
+        }
+        for (String id : Migracao.licoesConcluidas(idsV1, melhorV1, questoesPorLicao)) {
+            editor.putInt(Constantes.PREFIXO_MELHOR + id,
+                    Gamificacao.acertosParaConcluir(licoes.get(id).getQuestoes().size()));
+        }
+        Set<String> caderno = getCaderno();
+        if (!caderno.isEmpty()) {
+            editor.putStringSet(Constantes.CHAVE_CADERNO_ERROS, Migracao.converterCaderno(caderno, idsV1));
+        }
+        editor.putInt(Constantes.CHAVE_VERSAO_PROGRESSO, Constantes.VERSAO_PROGRESSO);
+        editor.apply();
+    }
+
     /** RN34: apaga todas as chaves. As questões (assets) não são afetadas. */
     public void resetarTudo() {
-        prefs.edit().clear().apply();
+        // Sem a versão, a próxima abertura acharia que o progresso novo é da versão 1.
+        prefs.edit().clear().putInt(Constantes.CHAVE_VERSAO_PROGRESSO, Constantes.VERSAO_PROGRESSO).apply();
     }
 }

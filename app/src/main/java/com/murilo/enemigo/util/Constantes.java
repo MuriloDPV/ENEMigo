@@ -31,6 +31,9 @@ public final class Constantes {
     public static final String CHAVE_TOTAL_ACERTOS = "total_acertos";
     public static final String CHAVE_ULTIMA_AREA = "ultima_area";
     public static final String CHAVE_VIBRACAO = "vibracao";
+    /** Versão do formato do progresso salvo: abaixo de VERSAO_PROGRESSO, roda a migração (RN35). */
+    public static final String CHAVE_VERSAO_PROGRESSO = "versao_progresso";
+    public static final int VERSAO_PROGRESSO = 2;
 
     // Extras das Intents
     public static final String EXTRA_AREA_ID = "EXTRA_AREA_ID";
