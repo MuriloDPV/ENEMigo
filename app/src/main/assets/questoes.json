@@ -987,6 +987,335 @@
           ]
         }
       ]
+    },
+    {
+      "id": "MATEMATICA",
+      "licoes": [
+        {
+          "id": "MAT-01",
+          "titulo": "Porcentagem e proporção",
+          "questoes": [
+            {
+              "id": "MAT-01-01",
+              "texto": "Uma pessoa, que perdeu um objeto pessoal quando visitou uma cidade, pretende divulgar nos meios de comunicação informações a respeito da perda desse objeto e de seu contato para eventual devolução. No entanto, ela lembra que, de acordo com o Art. 1 234 do Código Civil, poderá ter que pagar pelas despesas do transporte desse objeto até sua cidade e poderá ter que recompensar a pessoa que lhe restituir o objeto em, pelo menos, 5% do valor do objeto.\n\nEla sabe que o custo com transporte será de um quinto do valor atual do objeto e, como ela tem muito interesse em reavê-lo, pretende ofertar o maior percentual possível de recompensa, desde que o gasto total com as despesas não ultrapasse o valor atual do objeto.",
+              "enunciado": "Nessas condições, o percentual sobre o valor do objeto, dado como recompensa, que ela deverá ofertar é igual a",
+              "alternativas": [
+                "20%",
+                "25%",
+                "40%",
+                "60%",
+                "80%"
+              ],
+              "correta": "E",
+              "explicacao": "O transporte custa um quinto do valor do objeto, ou seja, 20%. Para o gasto total não passar de 100% do valor, sobram no máximo 80% para a recompensa.",
+              "fonte": "ENEM 2019 – Questão 138"
+            },
+            {
+              "id": "MAT-01-02",
+              "texto": "Um borrifador de atuação automática libera, a cada acionamento, uma mesma quantidade de inseticida. O recipiente desse produto, quando cheio, contém 360 mL de inseticida, que duram 60 dias se o borrifador permanecer ligado ininterruptamente e for acionado a cada 48 minutos.",
+              "enunciado": "A quantidade de inseticida que é liberada a cada acionamento do borrifador, em mililitro, é",
+              "alternativas": [
+                "0,125.",
+                "0,200.",
+                "4,800.",
+                "6,000.",
+                "12,000."
+              ],
+              "correta": "B",
+              "explicacao": "Em 60 dias há 60 × 1 440 = 86 400 minutos, o que dá 86 400 ÷ 48 = 1 800 acionamentos. Cada um libera 360 ÷ 1 800 = 0,2 mL.",
+              "fonte": "ENEM 2022 – Questão 164"
+            },
+            {
+              "id": "MAT-01-03",
+              "texto": "Antônio, Joaquim e José são sócios de uma empresa cujo capital é dividido, entre os três, em partes proporcionais a: 4, 6 e 6, respectivamente. Com a intenção de igualar a participação dos três sócios no capital da empresa, Antônio pretende adquirir uma fração do capital de cada um dos outros dois sócios.",
+              "enunciado": "A fração do capital de cada sócio que Antônio deverá adquirir é",
+              "alternativas": [
+                "[[formula:2020-170-a.png]]",
+                "[[formula:2020-170-b.png]]",
+                "[[formula:2020-170-c.png]]",
+                "[[formula:2020-170-d.png]]",
+                "[[formula:2020-170-e.png]]"
+              ],
+              "correta": "C",
+              "explicacao": "São 4 + 6 + 6 = 16 partes, e cada sócio deve ficar com 16/3. Antônio precisa de 16/3 − 4 = 4/3 de parte, 2/3 vindos de cada sócio. Como cada um tem 6 partes, isso é (2/3) ÷ 6 = 1/9 do capital dele.",
+              "fonte": "ENEM 2020 – Questão 170"
+            },
+            {
+              "id": "MAT-01-04",
+              "texto": "Uma empresa de engenharia projetou uma casa com a forma de um retângulo para um de seus clientes. Esse cliente solicitou a inclusão de uma varanda em forma de L. A figura apresenta a planta baixa desenhada pela empresa, já com a varanda incluída, cujas medidas, indicadas em centímetro, representam os valores das dimensões da varanda na escala de 1 : 50.\n\n[[imagem:2022-161-t1.png]]",
+              "enunciado": "A medida real da área da varanda, em metro quadrado, é",
+              "alternativas": [
+                "33,40",
+                "66,80",
+                "89,24",
+                "133,60",
+                "534,40"
+              ],
+              "correta": "A",
+              "explicacao": "No desenho, a varanda tem 16 × 5 + 13,4 × 4 = 133,6 cm². Na escala 1 : 50, as áreas ficam 50² = 2 500 vezes maiores: 334 000 cm² = 33,4 m².",
+              "fonte": "ENEM 2022 – Questão 161"
+            },
+            {
+              "id": "MAT-01-05",
+              "texto": "Uma loja vende seus produtos de duas formas: à vista ou financiado em três parcelas mensais iguais. Para definir o valor dessas parcelas nas vendas financiadas, a loja aumenta em 20% o valor do produto à vista e divide esse novo valor por 3. A primeira parcela deve ser paga no ato da compra, e as duas últimas, em 30 e 60 dias após a compra.\n\nUm cliente da loja decidiu comprar, de forma financiada, um produto cujo valor à vista é R$ 1 500,00.\n\nUtilize 5,29 como aproximação para √28.",
+              "enunciado": "A taxa mensal de juros compostos praticada nesse financiamento é de",
+              "alternativas": [
+                "6,7%",
+                "10%",
+                "20%",
+                "21,5%",
+                "23,3%"
+              ],
+              "correta": "D",
+              "explicacao": "Cada parcela é 1 800 ÷ 3 = 600, e a primeira é paga na hora. Sobram 900 financiados: 900 = 600/x + 600/x², com x = 1 + i. Daí 3x² − 2x − 2 = 0 e x = (2 + √28)/6 ≈ 1,215, ou seja, 21,5% ao mês.",
+              "fonte": "ENEM 2023 – Questão 161"
+            }
+          ]
+        },
+        {
+          "id": "MAT-02",
+          "titulo": "Geometria",
+          "questoes": [
+            {
+              "id": "MAT-02-01",
+              "texto": "Na planta baixa de um clube, a piscina é representada por um quadrado cuja área real mede 400 m². Ao redor dessa piscina, será construída uma calçada, de largura constante igual a 5 m.\n\n[[imagem:2023-155-t1.png]]",
+              "enunciado": "Qual é a medida da área, em metro quadrado, ocupada pela calçada?",
+              "alternativas": [
+                "1.000",
+                "900",
+                "600",
+                "500",
+                "400"
+              ],
+              "correta": "D",
+              "explicacao": "A piscina tem lado √400 = 20 m. Com 5 m de calçada de cada lado, o quadrado todo tem 30 m de lado e 900 m². A calçada ocupa 900 − 400 = 500 m².",
+              "fonte": "ENEM 2023 – Questão 155"
+            },
+            {
+              "id": "MAT-02-02",
+              "texto": "Uma administração municipal encomendou a pintura de dez placas de sinalização para colocar em seu pátio de estacionamento.\n\nO profissional contratado para o serviço inicial pintará o fundo de dez placas e cobrará um valor de acordo com a área total dessas placas. O formato de cada placa é um círculo de diâmetro d = 40 cm, que tangencia lados de um retângulo, sendo que o comprimento total da placa é h = 60 cm, conforme ilustrado na figura. Use 3,14 como aproximação para π.\n\n[[imagem:2019-147-t1.png]]",
+              "enunciado": "Qual é a soma das medidas das áreas, em centímetros quadrados, das dez placas?",
+              "alternativas": [
+                "16 628",
+                "22 280",
+                "28 560",
+                "41 120",
+                "66 240"
+              ],
+              "correta": "B",
+              "explicacao": "Cada placa é meio círculo de raio 20 cm sobre um quadrado de 40 cm de lado: 3,14 × 20² ÷ 2 + 40² = 628 + 1 600 = 2 228 cm². As dez placas somam 22 280 cm².",
+              "fonte": "ENEM 2019 – Questão 147"
+            },
+            {
+              "id": "MAT-02-03",
+              "texto": "Uma loja de materiais de construção vende dois tipos de caixas-d’água: tipo A e tipo B. Ambas têm formato cilíndrico e possuem o mesmo volume, e a altura da caixa-d’água do tipo B é igual a 25% da altura da caixa-d’água do tipo A.",
+              "enunciado": "Se R denota o raio da caixa-d’água do tipo A, então o raio da caixa-d’água do tipo B é",
+              "alternativas": [
+                "[[formula:2020-161-a.png]]",
+                "[[formula:2020-161-b.png]]",
+                "[[formula:2020-161-c.png]]",
+                "[[formula:2020-161-d.png]]",
+                "[[formula:2020-161-e.png]]"
+              ],
+              "correta": "B",
+              "explicacao": "Volumes iguais: πR²h = πr²(h/4). Então r² = 4R² e r = 2R. Altura quatro vezes menor pede um raio duas vezes maior.",
+              "fonte": "ENEM 2020 – Questão 161"
+            },
+            {
+              "id": "MAT-02-04",
+              "texto": "Uma pessoa comprou uma caneca para tomar sopa, conforme ilustração.\n\n[[imagem:2021-170-t1.png]]\n\nSabe-se que 1 cm³ = 1 mL e que o topo da caneca é uma circunferência de diâmetro (D) medindo 10 cm, e a base é um círculo de diâmetro (d) medindo 8 cm. Além disso, sabe-se que a altura (h) dessa caneca mede 12 cm (distância entre o centro das circunferências do topo e da base).\n\nUtilize 3 como aproximação para π.",
+              "enunciado": "Qual é a capacidade volumétrica, em mililitro, dessa caneca?",
+              "alternativas": [
+                "216",
+                "408",
+                "732",
+                "2196",
+                "2928"
+              ],
+              "correta": "C",
+              "explicacao": "A caneca é um tronco de cone: V = πh(R² + Rr + r²)/3 = 3 × 12 × (25 + 20 + 16)/3 = 12 × 61 = 732 cm³, ou seja, 732 mL.",
+              "fonte": "ENEM 2021 – Questão 170"
+            },
+            {
+              "id": "MAT-02-05",
+              "texto": "A figura representa uma escada com três degraus, construída em concreto maciço, com suas medidas especificadas.\n\n[[imagem:2023-165-t1.png]]\n\nNessa escada, pisos e espelhos têm formato retangular, e as paredes laterais têm formato de um polígono cujos lados adjacentes são perpendiculares. Pisos, espelhos e paredes laterais serão revestidos em cerâmica.",
+              "enunciado": "A área a ser revestida em cerâmica, em metro quadrado, mede",
+              "alternativas": [
+                "1,20.",
+                "1,35.",
+                "1,65.",
+                "1,80.",
+                "1,95."
+              ],
+              "correta": "E",
+              "explicacao": "Pisos: 3 × 1,0 × 0,25 = 0,75 m². Espelhos: 3 × 1,0 × 0,20 = 0,60 m². Cada parede lateral tem 0,25 × (0,60 + 0,40 + 0,20) = 0,30 m², e são duas. Total: 0,75 + 0,60 + 0,60 = 1,95 m².",
+              "fonte": "ENEM 2023 – Questão 165"
+            }
+          ]
+        },
+        {
+          "id": "MAT-03",
+          "titulo": "Estatística e probabilidade",
+          "questoes": [
+            {
+              "id": "MAT-03-01",
+              "texto": "Os 100 funcionários de uma empresa estão distribuídos em dois setores: Produção e Administração.\n\nOs funcionários de um mesmo setor recebem salários com valores iguais. O quadro apresenta a quantidade de funcionários por setor e seus respectivos salários.\n\n[[imagem:2023-137-t1.png]]",
+              "enunciado": "A média dos salários dos 100 funcionários dessa empresa, em real, é",
+              "alternativas": [
+                "2.000,00.",
+                "2.500,00.",
+                "3.250,00.",
+                "4.500,00.",
+                "9.000,00."
+              ],
+              "correta": "C",
+              "explicacao": "Média ponderada pelo número de funcionários: (75 × 2 000 + 25 × 7 000) ÷ 100 = 325 000 ÷ 100 = 3 250 reais.",
+              "fonte": "ENEM 2023 – Questão 137"
+            },
+            {
+              "id": "MAT-03-02",
+              "texto": "Uma das informações que pode auxiliar no dimensionamento do número de pediatras que devem atender em uma Unidade Básica de Saúde (UBS) é o número que representa a mediana da quantidade de crianças por família existente na região sob sua responsabilidade. O quadro mostra a distribuição das frequências do número de crianças por família na região de responsabilidade de uma UBS.\n\n[[imagem:2022-149-t1.png]]",
+              "enunciado": "O número que representa a mediana da quantidade de crianças por família nessa região é",
+              "alternativas": [
+                "1,0.",
+                "1,5.",
+                "1,9.",
+                "2,1.",
+                "2,5."
+              ],
+              "correta": "B",
+              "explicacao": "São 1 000 famílias, então a mediana é a média entre a 500ª e a 501ª. Acumulando, até 1 criança há exatamente 500 famílias, e a 501ª já tem 2. Mediana: (1 + 2) ÷ 2 = 1,5.",
+              "fonte": "ENEM 2022 – Questão 149"
+            },
+            {
+              "id": "MAT-03-03",
+              "texto": "O gráfico apresenta os totais de receitas e despesas de uma empresa, expressos em milhão de reais, no decorrer dos meses de um determinado ano. A empresa obtém lucro quando a diferença entre receita e despesa é positiva e tem prejuízo quando essa diferença é negativa.\n\n[[imagem:2022-138-t1.png]]",
+              "enunciado": "Qual é a mediana, em milhão de reais, dos valores dos lucros apurados pela empresa nesse ano?",
+              "alternativas": [
+                "1,5",
+                "2,0",
+                "2,9",
+                "3,0",
+                "5,5"
+              ],
+              "correta": "D",
+              "explicacao": "Só entram os meses com lucro: jan. 3, mar. 1, maio 5, jun. 3, jul. 2, set. 4, nov. 1 e dez. 4. Em ordem: 1, 1, 2, 3, 3, 4, 4, 5. A mediana é (3 + 3) ÷ 2 = 3.",
+              "fonte": "ENEM 2022 – Questão 138"
+            },
+            {
+              "id": "MAT-03-04",
+              "texto": "Em um colégio público, a admissão no primeiro ano se dá por sorteio. Neste ano há 55 candidatos, cujas inscrições são numeradas de 01 a 55. O sorteio de cada número de inscrição será realizado em etapas, utilizando-se duas urnas. Da primeira urna será sorteada uma bola, dentre bolas numeradas de 0 a 9, que representará o algarismo das unidades do número de inscrição a ser sorteado e, em seguida, da segunda urna, será sorteada uma bola para representar o algarismo das dezenas desse número. Depois do primeiro sorteio, e antes de se sortear o algarismo das dezenas, as bolas que estarão presentes na segunda urna serão apenas aquelas cujos números formam, com o algarismo já sorteado, um número de 01 a 55.",
+              "enunciado": "As probabilidades de os candidatos de inscrição número 50 e 02 serem sorteados são, respectivamente,",
+              "alternativas": [
+                "[[formula:2023-168-a.png]]",
+                "[[formula:2023-168-b.png]]",
+                "[[formula:2023-168-c.png]]",
+                "[[formula:2023-168-d.png]]",
+                "[[formula:2023-168-e.png]]"
+              ],
+              "correta": "A",
+              "explicacao": "Para o 50: a unidade 0 sai com chance 1/10 e restam as dezenas 1 a 5 (5 bolas), então 1/10 × 1/5 = 1/50. Para o 02: a unidade 2 sai com 1/10 e restam as dezenas 0 a 5 (6 bolas), então 1/10 × 1/6 = 1/60.",
+              "fonte": "ENEM 2023 – Questão 168"
+            },
+            {
+              "id": "MAT-03-05",
+              "texto": "Em um jogo de bingo, as cartelas contêm 16 quadrículas dispostas em linhas e colunas. Cada quadrícula tem impresso um número, dentre os inteiros de 1 a 50, sem repetição de número. Na primeira rodada, um número é sorteado, aleatoriamente, dentre os 50 possíveis. Em todas as rodadas, o número sorteado é descartado e não participa dos sorteios das rodadas seguintes. Caso o jogador tenha em sua cartela o número sorteado, ele o assinala na cartela. Ganha o jogador que primeiro conseguir preencher quatro quadrículas que formam uma linha, uma coluna ou uma diagonal, conforme os tipos de situações ilustradas na Figura 1.\n\n[[imagem:2022-141-t1.png]]\n\nO jogo inicia e, nas quatro primeiras rodadas, foram sorteados os seguintes números: 03, 27, 07 e 48. Ao final da quarta rodada, somente Pedro possuía uma cartela que continha esses quatro números sorteados, sendo que todos os demais jogadores conseguiram assinalar, no máximo, um desses números em suas cartelas. Observe na Figura 2 o cartão de Pedro após as quatro primeiras rodadas.\n\n[[imagem:2022-141-t2.png]]",
+              "enunciado": "A probabilidade de Pedro ganhar o jogo em uma das duas próximas rodadas é",
+              "alternativas": [
+                "[[formula:2022-141-a.png]]",
+                "[[formula:2022-141-b.png]]",
+                "[[formula:2022-141-c.png]]",
+                "[[formula:2022-141-d.png]]",
+                "[[formula:2022-141-e.png]]"
+              ],
+              "correta": "E",
+              "explicacao": "Restam 46 números. Na próxima rodada Pedro só ganha se sair o 12 (1/46). Na outra, ganha se sair o 12 depois de outro número (45 casos), ou 05 e 45, ou 11 e 19, em qualquer ordem (2 + 2 casos): 49/(46 × 45).",
+              "fonte": "ENEM 2022 – Questão 141"
+            }
+          ]
+        },
+        {
+          "id": "MAT-04",
+          "titulo": "Funções e gráficos",
+          "questoes": [
+            {
+              "id": "MAT-04-01",
+              "texto": "Uma empresa tem diversos funcionários. Um deles é o gerente, que recebe R$ 1000,00 por semana.\nOs outros funcionários são diaristas. Cada um trabalha 2 dias por semana, recebendo R$ 80,00 por dia trabalhado.",
+              "enunciado": "Chamando de X a quantidade total de funcionários da empresa, a quantia Y, em reais, que esta empresa gasta semanalmente para pagar seus funcionários é expressa por",
+              "alternativas": [
+                "Y = 80X + 920.",
+                "Y = 80X + 1000.",
+                "Y = 80X + 1080.",
+                "Y = 160X + 840.",
+                "Y = 160X + 1000."
+              ],
+              "correta": "D",
+              "explicacao": "Além do gerente, há X − 1 diaristas, e cada um recebe 2 × 80 = 160 reais por semana. Y = 1 000 + 160(X − 1) = 160X + 840.",
+              "fonte": "ENEM 2019 – Questão 168"
+            },
+            {
+              "id": "MAT-04-02",
+              "texto": "Um lava-rápido oferece dois tipos de lavagem de veículos: lavagem simples, ao preço de R$ 20,00, e lavagem completa, ao preço de R$35,00. Para cobrir as despesas com produtos e funcionários, e não ter prejuízos, o lava-rápido deve ter uma receita diária de, pelo menos, R$300,00.",
+              "enunciado": "Para não ter prejuízo, o menor número de lavagens diárias que o lava-rápido deve efetuar é",
+              "alternativas": [
+                "6",
+                "8",
+                "9",
+                "15",
+                "20"
+              ],
+              "correta": "C",
+              "explicacao": "O menor número de lavagens sai quando todas são completas: 300 ÷ 35 ≈ 8,6. Oito lavagens dão só 280 reais, então são necessárias 9.",
+              "fonte": "ENEM 2021 – Questão 173"
+            },
+            {
+              "id": "MAT-04-03",
+              "texto": "Uma empresa presta serviço de abastecimento de água em uma cidade. O valor mensal a pagar por esse serviço é determinado pela aplicação de tarifas, por faixas de consumo de água, sendo obtido pela adição dos valores correspondentes a cada faixa.\n\n• Faixa 1: para consumo de até 6 m³, valor fixo de R$12,00;\n\n• Faixa 2: para consumo superior a 6 m³ e até 10 m³, tarifa de R$ 3,00 por metro cúbico ao que exceder a 6m³;\n\n• Faixa 3: para consumo superior a 10 m³, tarifa de R$ 6,00 por metro cúbico ao que exceder a 10 m³.\n\nSabe-se que nessa cidade o consumo máximo de água por residência é de 15 m³ por mês.",
+              "enunciado": "O gráfico que melhor descreve o valor P, em real, a ser pago por mês, em função do volume V de água consumido, em metro cúbico, é",
+              "alternativas": [
+                "[[imagem:2019-139-a.png]]",
+                "[[imagem:2019-139-b.png]]",
+                "[[imagem:2019-139-c.png]]",
+                "[[imagem:2019-139-d.png]]",
+                "[[imagem:2019-139-e.png]]"
+              ],
+              "correta": "A",
+              "explicacao": "Até 6 m³ o valor é fixo (12 reais): trecho horizontal. De 6 a 10 m³ sobe 3 reais por m³ e, de 10 a 15 m³, 6 reais por m³, então o último trecho é o mais inclinado.",
+              "fonte": "ENEM 2019 – Questão 139"
+            },
+            {
+              "id": "MAT-04-04",
+              "texto": "O quadro representa a relação entre o preço de um produto (R) e seu respectivo imposto devido (I).\n\n[[imagem:2021-162-t1.png]]",
+              "enunciado": "O gráfico que melhor representa essa relação é",
+              "alternativas": [
+                "[[imagem:2021-162-a.png]]",
+                "[[imagem:2021-162-b.png]]",
+                "[[imagem:2021-162-c.png]]",
+                "[[imagem:2021-162-d.png]]",
+                "[[imagem:2021-162-e.png]]"
+              ],
+              "correta": "A",
+              "explicacao": "Até 5 000 o imposto é zero. Em 10 000 ele vale 10% de 5 000 = 500 e, em 15 000, 500 + 30% de 5 000 = 2 000. O segundo trecho de subida é bem mais íngreme.",
+              "fonte": "ENEM 2021 – Questão 162"
+            },
+            {
+              "id": "MAT-04-05",
+              "texto": "O álcool é um depressor do sistema nervoso central e age diretamente em diversos órgãos. A concentração de álcool no sangue pode ser entendida como a razão entre a quantidade q de álcool ingerido, medida em grama, e o volume de sangue, em litro, presente no organismo do indivíduo. Em geral, considera-se que esse volume corresponda ao valor numérico dado por 8% da massa corporal m desse indivíduo, medida em quilograma. De acordo com a Associação Médica Americana, uma concentração alcoólica superior a 0,4 grama por litro de sangue é capaz de trazer prejuízos à saúde do indivíduo.\n\nDisponível em: http://cisa.org.br. Acesso em: 1 dez. 2018 (adaptado).",
+              "enunciado": "A expressão relacionando q e m que representa a concentração alcoólica prejudicial à saúde do indivíduo, de acordo com a Associação Médica Americana, é",
+              "alternativas": [
+                "[[formula:2019-165-a.png]]",
+                "[[formula:2019-165-b.png]]",
+                "[[formula:2019-165-c.png]]",
+                "[[formula:2019-165-d.png]]",
+                "[[formula:2019-165-e.png]]"
+              ],
+              "correta": "E",
+              "explicacao": "O volume de sangue é 8% da massa, ou seja, 0,08m litros. A concentração é q ÷ 0,08m, e ela prejudica a saúde quando passa de 0,4.",
+              "fonte": "ENEM 2019 – Questão 165"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
