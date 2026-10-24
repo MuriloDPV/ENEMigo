@@ -29,6 +29,7 @@
             <enum name="comemorando" value="2" />
             <enum name="triste" value="3" />
             <enum name="pensando" value="4" />
+            <enum name="sem_vidas" value="5" />
         </attr>
     </declare-styleable>
 </resources>

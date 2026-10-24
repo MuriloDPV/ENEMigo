@@ -41,8 +41,8 @@ public final class Dialogos {
     }
 
     /**
-     * Diálogo de vidas com o Grifo triste e desbotado no topo, "sem tinta". Os botões ficam
-     * por conta de quem chama.
+     * Diálogo de vidas com a Lia sem energia no topo: orelhas caídas e desbotada. Os botões
+     * ficam por conta de quem chama.
      */
     // O título de um diálogo não tem pai na hora de inflar: quem posiciona é o próprio diálogo.
     @SuppressLint("InflateParams")
@@ -51,7 +51,7 @@ public final class Dialogos {
         View topo = LayoutInflater.from(activity).inflate(R.layout.dialogo_titulo_mascote, null);
         ((TextView) topo.findViewById(R.id.txt_titulo_dialogo)).setText(titulo);
         MascoteView mascote = topo.findViewById(R.id.mascote_dialogo);
-        mascote.setSemTinta(true);
+        mascote.setDesbotada(true);
         // Treme quando o diálogo aparece (o post espera a view entrar na tela).
         mascote.post(mascote::tremer);
         return new MaterialAlertDialogBuilder(activity, R.style.ThemeOverlay_ENEMigo_Dialogo_Icone)

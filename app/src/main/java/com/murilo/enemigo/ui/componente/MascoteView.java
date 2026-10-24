@@ -22,9 +22,10 @@ import androidx.appcompat.widget.AppCompatImageView;
 import com.murilo.enemigo.R;
 
 /**
- * O Grifo, mascote do app (um marca-texto). Mostra uma das 5 expressões e faz animações leves
- * com os animators do Android: balançar (esperando), pular (acerto e comemoração) e tremer (erro).
- * Os desenhos usam as cores da marca (mascote_* em colors.xml), então acompanham a troca de marca.
+ * A Lia, mascote do app (uma raposa). Mostra uma das expressões e faz animações leves com os
+ * animators do Android: balançar (esperando), pular (acerto e comemoração) e tremer (erro).
+ * Os desenhos usam as cores da marca (mascote_* em colors.xml), então acompanham a troca de marca;
+ * eles saem de tools/gerar_mascote.py.
  */
 public class MascoteView extends AppCompatImageView {
 
@@ -33,7 +34,9 @@ public class MascoteView extends AppCompatImageView {
         FELIZ(R.drawable.mascote_feliz),
         COMEMORANDO(R.drawable.mascote_comemorando),
         TRISTE(R.drawable.mascote_triste),
-        PENSANDO(R.drawable.mascote_pensando);
+        PENSANDO(R.drawable.mascote_pensando),
+        /** Orelhas caídas e olhos fechados; nos diálogos de vidas ainda fica desbotada. */
+        SEM_VIDAS(R.drawable.mascote_sem_vidas);
 
         private final int desenho;
 
@@ -141,9 +144,9 @@ public class MascoteView extends AppCompatImageView {
         setScaleY(1f);
     }
 
-    /** Sem vidas: fica desbotado, como um marca-texto sem tinta. */
-    public void setSemTinta(boolean semTinta) {
-        if (semTinta) {
+    /** Sem vidas: fica desbotada, sem energia. */
+    public void setDesbotada(boolean desbotada) {
+        if (desbotada) {
             ColorMatrix matriz = new ColorMatrix();
             matriz.setSaturation(0.15f);
             setColorFilter(new ColorMatrixColorFilter(matriz));

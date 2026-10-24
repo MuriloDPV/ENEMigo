@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Título dos diálogos de vidas: o Grifo em cima e o título embaixo (ver Dialogos). -->
+<!-- Título dos diálogos de vidas: a Lia em cima e o título embaixo (ver Dialogos). -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:id="@+id/mascote_dialogo"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        app:expressao="triste" />
+        app:expressao="sem_vidas" />
 
     <TextView
         android:id="@+id/txt_titulo_dialogo"
