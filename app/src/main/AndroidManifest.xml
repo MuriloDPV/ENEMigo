@@ -44,6 +44,12 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name=".ui.CelebracaoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ENEMigo.Celebracao" />
+
+        <activity
             android:name=".ui.ConfiguracoesActivity"
             android:exported="false"
             android:screenOrientation="portrait"

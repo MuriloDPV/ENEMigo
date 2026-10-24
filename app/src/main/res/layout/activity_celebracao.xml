@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Celebração em tela cheia (lição perfeita, ofensiva, nível ou conquista). O conteúdo de cada
+     uma entra pelo CelebracaoActivity; o confete fica por cima de tudo, sem pegar os toques. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/marca_primaria">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="24dp">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Destaque: raios girando atrás e o desenho da celebração -->
+        <FrameLayout
+            android:id="@+id/area_destaque"
+            android:layout_width="260dp"
+            android:layout_height="260dp">
+
+            <ImageView
+                android:id="@+id/img_raios"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:src="@drawable/celebracao_raios" />
+
+            <FrameLayout
+                android:id="@+id/circulo_destaque"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_circulo">
+
+                <ImageView
+                    android:id="@+id/img_destaque"
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no" />
+
+                <TextView
+                    android:id="@+id/txt_destaque"
+                    style="@style/Texto.Titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no"
+                    android:textSize="64sp" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/img_medalha"
+                android:layout_width="176dp"
+                android:layout_height="176dp"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txt_titulo"
+            style="@style/Texto.Titulo.Grande"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:accessibilityLiveRegion="polite"
+            android:gravity="center"
+            android:textColor="@color/marca_sobre_primaria" />
+
+        <TextView
+            android:id="@+id/txt_subtitulo"
+            style="@style/Texto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:alpha="0.9"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:textColor="@color/marca_sobre_primaria"
+            android:textSize="17sp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="16dp" />
+
+        <!-- O Grifo comemora e fala num balão -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.murilo.enemigo.ui.componente.MascoteView
+                android:id="@+id/mascote"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                app:expressao="comemorando" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txt_fala"
+                    style="@style/Texto.Destaque"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_balao"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/balao_ponta_esquerda" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <com.murilo.enemigo.ui.componente.BotaoRelevo
+            android:id="@+id/btn_continuar"
+            style="@style/Widget.ENEMigo.Botao.Claro"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/altura_botao"
+            android:layout_marginTop="20dp"
+            android:text="@string/btn_continuar" />
+    </LinearLayout>
+
+    <com.murilo.enemigo.ui.componente.ConfeteView
+        android:id="@+id/confete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

@@ -156,6 +156,22 @@
     <string name="stat_minutos_valor">%1$d min</string>
     <string name="stat_sem_valor">—</string>
 
+    <!-- Celebrações em tela cheia (a "fala" é do Grifo) -->
+    <string name="celebracao_perfeita_titulo">Lição perfeita!</string>
+    <string name="celebracao_perfeita_subtitulo">Você acertou todas as questões. +%1$d XP de bônus!</string>
+    <string name="celebracao_perfeita_fala">Gabaritou! Nem eu grifo tão certinho.</string>
+    <plurals name="celebracao_ofensiva_titulo">
+        <item quantity="one">Ofensiva de %1$d dia!</item>
+        <item quantity="other">Ofensiva de %1$d dias!</item>
+    </plurals>
+    <string name="celebracao_ofensiva_subtitulo">Você estudou hoje. Volte amanhã para manter o fogo aceso.</string>
+    <string name="celebracao_ofensiva_fala">Tá pegando fogo!</string>
+    <string name="celebracao_nivel_titulo">Você subiu de nível!</string>
+    <string name="celebracao_nivel_subtitulo">Agora você está no nível %1$d. Continue assim!</string>
+    <string name="celebracao_nivel_fala">Subiu, hein! Bora pro próximo.</string>
+    <string name="celebracao_conquista_titulo">Conquista nova!</string>
+    <string name="celebracao_conquista_fala">Mais uma pra coleção!</string>
+
     <!-- Configurações (C5) -->
     <string name="configuracoes_titulo">Configurações</string>
     <string name="config_secao_nome">Seu nome</string>

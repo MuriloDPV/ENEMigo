@@ -123,6 +123,12 @@
         <item name="corFace">@color/marca_acerto</item>
         <item name="corSombra">@color/marca_acerto_escuro</item>
     </style>
+    <!-- Botão branco sobre o azul (telas de celebração) -->
+    <style name="Widget.ENEMigo.Botao.Claro">
+        <item name="corFace">@color/texto_sobre_cor</item>
+        <item name="corSombra">@color/marca_primaria_escura</item>
+        <item name="android:textColor">@color/marca_primaria</item>
+    </style>
     <style name="Widget.ENEMigo.Botao.Erro">
         <item name="corFace">@color/marca_erro</item>
         <item name="corSombra">@color/marca_erro_escuro</item>

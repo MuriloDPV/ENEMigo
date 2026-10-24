@@ -64,6 +64,13 @@
         <item name="postSplashScreenTheme">@style/Theme.ENEMigo</item>
     </style>
 
+    <!-- Celebrações em tela cheia: tudo no azul da marca, inclusive as barras do sistema -->
+    <style name="Theme.ENEMigo.Celebracao">
+        <item name="android:windowBackground">@color/marca_primaria</item>
+        <item name="android:statusBarColor">@color/marca_primaria</item>
+        <item name="android:navigationBarColor">@color/marca_primaria</item>
+    </style>
+
     <!-- Figura ampliada (ImagemAmpliada): janela inteira sobre papel, sem barra de status -->
     <style name="Theme.ENEMigo.ImagemTelaCheia">
         <item name="android:windowFullscreen">true</item>

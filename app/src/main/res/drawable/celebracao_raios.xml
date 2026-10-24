@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Raios de luz atrás do destaque das celebrações (girando devagar, ver CelebracaoActivity). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path
+        android:fillAlpha="0.13"
+        android:fillColor="@color/texto_sobre_cor"
+        android:pathData="M100,100 L199.6,90.9 L199.6,109.1 Z M100,100 L195.5,129.7 L188.5,146.5 Z M100,100 L176.8,164.0 L164.0,176.8 Z M100,100 L146.5,188.5 L129.7,195.5 Z M100,100 L109.1,199.6 L90.9,199.6 Z M100,100 L70.3,195.5 L53.5,188.5 Z M100,100 L36.0,176.8 L23.2,164.0 Z M100,100 L11.5,146.5 L4.5,129.7 Z M100,100 L0.4,109.1 L0.4,90.9 Z M100,100 L4.5,70.3 L11.5,53.5 Z M100,100 L23.2,36.0 L36.0,23.2 Z M100,100 L53.5,11.5 L70.3,4.5 Z M100,100 L90.9,0.4 L109.1,0.4 Z M100,100 L129.7,4.5 L146.5,11.5 Z M100,100 L164.0,23.2 L176.8,36.0 Z M100,100 L188.5,53.5 L195.5,70.3 Z" />
+</vector>
