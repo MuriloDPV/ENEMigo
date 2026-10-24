@@ -33,6 +33,15 @@ public final class Constantes {
     public static final String CHAVE_VIBRACAO = "vibracao";
     public static final String CHAVE_SOM = "som";
     public static final String CHAVE_AVATAR = "avatar";
+    /** Versão do formato do progresso salvo: abaixo de VERSAO_PROGRESSO, roda a migração (RN35). */
+    public static final String CHAVE_VERSAO_PROGRESSO = "versao_progresso";
+    public static final int VERSAO_PROGRESSO = 2;
+    // Tempo real das questões (RN36): somas, para não guardar uma lista que cresce sem fim
+    public static final String CHAVE_TEMPO_TOTAL_MS = "tempo_total_ms";
+    public static final String CHAVE_TEMPO_QUESTOES = "tempo_questoes";
+    public static final String CHAVE_TEMPO_ESTIMADO_S = "tempo_estimado_s";
+    public static final String CHAVE_TEMPO_HOJE_MS = "tempo_hoje_ms";
+    public static final String CHAVE_DATA_TEMPO_HOJE = "data_tempo_hoje";
 
     // Extras das Intents
     public static final String EXTRA_AREA_ID = "EXTRA_AREA_ID";
@@ -59,10 +68,20 @@ public final class Constantes {
     public static final int XP_ACERTO_REVISAO = 5;
     public static final int VIDAS_MAX = 5;
     public static final int MINUTOS_RECARGA = 30;
-    public static final int ACERTOS_PARA_DESBLOQUEAR = 3;
-    public static final int QUESTOES_POR_LICAO = 5;
+    /** % de acertos que conclui a lição e libera a próxima (arredondado para cima: 2 de 3, 3 de 5). */
+    public static final int PERCENTUAL_PARA_CONCLUIR = 60;
+    public static final int MIN_QUESTOES_POR_LICAO = 3;
+    public static final int MAX_QUESTOES_POR_LICAO = 5;
     public static final int QUESTOES_POR_REVISAO = 5;
     public static final int XP_POR_NIVEL = 100;
+
+    // Tempo real (RN36/RN37)
+    /** Acima disso o aluno largou a questão: o tempo não é registrado. */
+    public static final long TEMPO_MAX_QUESTAO_MS = 10 * 60_000L;
+    /** Questões medidas antes de a trilha ajustar a estimativa ao ritmo do aluno. */
+    public static final int QUESTOES_PARA_RITMO = 10;
+    public static final double FATOR_RITMO_MIN = 0.5;
+    public static final double FATOR_RITMO_MAX = 2.0;
 
     // Metas diárias aceitas (RN02)
     public static final int META_CASUAL = 20;

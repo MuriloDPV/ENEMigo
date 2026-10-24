@@ -44,7 +44,13 @@
     <string name="resumo_trilha">%1$d de %2$d lições concluídas</string>
     <string name="unidade_titulo">Unidade %1$d</string>
     <string name="licao_numero">Lição %1$d</string>
+    <!-- Número da lição com o tempo estimado (o rótulo fica em caixa alta: "LIÇÃO 1 · ~4 MIN") -->
+    <string name="licao_numero_tempo">Lição %1$d · ~%2$d min</string>
     <string name="cd_licao">Lição %1$d: %2$s</string>
+    <plurals name="cd_tempo_estimado">
+        <item quantity="one">cerca de %1$d minuto</item>
+        <item quantity="other">cerca de %1$d minutos</item>
+    </plurals>
     <string name="area_nao_encontrada">Área não encontrada</string>
     <string name="trilha_vazia">Nenhuma lição disponível ainda</string>
     <string name="voltar">Voltar</string>
@@ -80,7 +86,7 @@
     </plurals>
     <string name="resultado_meta_batida">Meta diária batida!</string>
     <string name="resultado_desbloqueou">Próxima lição desbloqueada!</string>
-    <string name="resultado_faca_acertos">Faça 3 acertos para liberar a próxima lição</string>
+    <string name="resultado_faca_acertos">Para liberar a próxima lição, acerte %1$d de %2$d</string>
     <string name="resultado_revisao">Você tirou %1$s do caderno e recuperou %2$s</string>
     <string name="resultado_revisao_sem_vidas">Você tirou %1$s do caderno</string>
     <string name="resultado_revisao_nenhuma">Nenhuma questão saiu do caderno desta vez</string>
@@ -110,8 +116,8 @@
 
     <!-- Trilha: estados e vidas -->
     <string name="licao_melhor">Melhor: %1$d/%2$d</string>
-    <string name="licao_bloqueada">Faça 3 acertos na lição anterior</string>
-    <string name="licao_bloqueada_toast">Complete a lição anterior com pelo menos 3 acertos</string>
+    <string name="licao_bloqueada">Acerte %1$d%% na lição anterior</string>
+    <string name="licao_bloqueada_toast">Complete a lição anterior com pelo menos %1$d%% de acertos</string>
     <string name="sem_vidas_titulo">Sem vidas</string>
     <string name="sem_vidas_mensagem">Próxima vida em %1$d min. Revise seus erros para recuperar vidas agora!</string>
     <string name="btn_ir_revisao">Ir para Revisão</string>
@@ -144,6 +150,10 @@
     <string name="stat_respondidas">Questões respondidas</string>
     <string name="stat_taxa">Taxa de acerto</string>
     <string name="stat_taxa_valor">%1$d%%</string>
+    <string name="stat_tempo_medio">Tempo médio por questão</string>
+    <string name="stat_segundos_valor">%1$d s</string>
+    <string name="stat_minutos_hoje">Minutos estudados hoje</string>
+    <string name="stat_minutos_valor">%1$d min</string>
     <string name="stat_sem_valor">—</string>
 
     <!-- Configurações (C5) -->
@@ -176,7 +186,7 @@
     <string name="conquista_xp_500">Estudante dedicado</string>
     <string name="conquista_xp_500_desc">Alcance 500 XP</string>
     <string name="conquista_licao_perfeita">Gabaritou!</string>
-    <string name="conquista_licao_perfeita_desc">Acerte 5 de 5 numa lição</string>
+    <string name="conquista_licao_perfeita_desc">Acerte todas as questões de uma lição</string>
     <string name="conquista_matematica_primeira">Primeira conta</string>
     <string name="conquista_matematica_primeira_desc">Conclua uma lição de Matemática</string>
     <string name="conquista_matematica_completa">Fera dos números</string>

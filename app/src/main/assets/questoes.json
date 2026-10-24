@@ -1,5 +1,5 @@
 {
-  "versao": 1,
+  "versao": 2,
   "areas": [
     {
       "id": "LINGUAGENS",
@@ -21,25 +21,11 @@
               ],
               "correta": "C",
               "explicacao": "Para Lévy, a rede é um laço entre pessoas em que as comunidades ajudam seus membros a aprender. O saber só circula porque os próprios usuários contribuem com esforço, pesquisa e participação.",
-              "fonte": "ENEM 2019 – Questão 29"
+              "fonte": "ENEM 2019 – Questão 29",
+              "segundos_estimados": 63
             },
             {
               "id": "LIN-01-02",
-              "texto": "Quando quis agilizar o processo de seleção de novos alunos, a tradicional faculdade britânica de medicina St. George usou um software para definir quem deveria ser entrevistado. Ao reproduzir a forma como os funcionários faziam essa escolha, o programa eliminou, de cara, 60 de 2.000 candidatos. Só por causa do sexo ou da origem racial, numa dedução baseada em sobrenome e local de nascimento. Um estudo sobre o caso foi publicado em 1988, mas, 25 anos depois, outra pesquisa apontou que esse tipo de discriminação segue firme.\n\nO exemplo recente envolve o buscador do Google: ao digitar nomes comuns entre negros dos EUA, a chance de os anúncios automáticos oferecerem checagem de antecedentes criminais pode aumentar 25%. E pode piorar com a pergunta “detido?” logo após a palavra procurada.\n\nDisponível em: https://tab.uol.com.br. Acesso em: 11 ago. 2017 (adaptado).",
-              "enunciado": "O texto permite o desnudamento da sociedade ao relacionar as tecnologias de informação e comunicação com o(a)",
-              "alternativas": [
-                "Agilidade dos softwares.",
-                "Passar dos anos.",
-                "Linguagem.",
-                "Preconceito.",
-                "Educação."
-              ],
-              "correta": "D",
-              "explicacao": "Os exemplos (software que eliminou candidatos por sexo e origem, anúncios de antecedentes criminais para nomes comuns entre negros) mostram a tecnologia reproduzindo o preconceito que já existe na sociedade.",
-              "fonte": "ENEM 2020 – Questão 43"
-            },
-            {
-              "id": "LIN-01-03",
               "texto": "Ora, sempre que surge uma nova técnica, ela quer demonstrar que revogará as regras e coerções que presidiram o nascimento de todas as outras invenções do passado. Ela se pretende orgulhosa e única. Como se a nova técnica carreasse com ela, automaticamente, para seus novos usuários, uma propensão natural a fazer economia de qualquer aprendizagem. Como se ela se preparasse para varrer tudo que a precedeu, ao mesmo tempo transformando em analfabetos todos os que ousassem repeli-la.\n\nFui testemunha dessa mudança ao longo de toda a minha vida. Ao passo que, na realidade, é o contrário que acontece. Cada nova técnica exige uma longa iniciação numa nova linguagem, ainda mais longa na medida em que nosso espírito é formatado pela utilização das linguagens que precederam o  nascimento da recém-chegada.\n\nECO, U.; CARRIÈRE, J.-C. Não contem com o fim do livro. Rio de Janeiro: Record, 2010 (adaptado).",
               "enunciado": "O texto revela que, quando a sociedade promove o desenvolvimento de uma nova técnica, o que mais impacta seus usuários é a",
               "alternativas": [
@@ -51,10 +37,11 @@
               ],
               "correta": "A",
               "explicacao": "Os autores dizem que toda nova técnica exige “uma longa iniciação numa nova linguagem”. O maior impacto é a dificuldade de se apropriar dela, e não uma aprendizagem imediata.",
-              "fonte": "ENEM 2022 – Questão 11"
+              "fonte": "ENEM 2022 – Questão 11",
+              "segundos_estimados": 86
             },
             {
-              "id": "LIN-01-04",
+              "id": "LIN-01-03",
               "texto": "Na Idade Média, as notícias se propagavam com surpreendente eficácia. Segundo uma emérita professora de Sorbonne, um cavalo era capaz de percorrer 30 quilômetros por dia, mas o tempo podia se acelerar dependendo do interesse da notícia. As ordens mendicantes tinham um papel importante na disseminação de informações, assim como os jograis, os peregrinos e os vagabundos, porque todos eles percorriam grandes distâncias. As cidades também tinham correios organizados e selos para lacrar mensagens e tentar certificar a veracidade das correspondências. Graças a tudo isso, a circulação de boatos era intensa e politicamente relevante. Um exemplo clássico de fake news da era medieval é a história do rei que desaparece na batalha e reaparece muito depois, idoso e transformado.\n\nDisponível em: www.elpais.com.br. Acesso em: 18 jun. 2018 (adaptado)",
               "enunciado": "A propagação sistemática de informações é um fenômeno recorrente na história e no desenvolvimento das sociedades. No texto, a eficácia dessa propagação está diretamente relacionada ao (à)",
               "alternativas": [
@@ -66,22 +53,8 @@
               ],
               "correta": "E",
               "explicacao": "O texto cita cavalos, ordens mendicantes, jograis, peregrinos, vagabundos e correios organizados. A eficácia vinha da diversidade de meios disponíveis naquela época.",
-              "fonte": "ENEM 2023 – Questão 9"
-            },
-            {
-              "id": "LIN-01-05",
-              "texto": "A petição on-line criada por um cidadão paulista surtiu efeito: casado há três anos com seu companheiro, ele pedia a alteração da definição de “casamento” no tradicional dicionário Michaelis em português. Na definição anterior, casamento aparecia como “união legítima entre homem e mulher” e “união legal entre homem e mulher, para constituir família”.\n\nO novo verbete não traz em nenhum momento as palavras homem ou mulher — agora a definição de casamento se refere a “pessoas”.\n\nPara o diretor de comunicação do site onde a petição foi publicada, a iniciativa mostra a “eficiência da mobilização”. “Em dois dias, mudou-se uma definição que permanecia a mesma há décadas”, afirma. E conclui: “A plataforma serve para todos os tipos de causas, para as mudanças que importam para as pessoas.”.\n\nSENRA, R. Disponível em: www.bbc.com. Acesso em: 29 out. 2015.",
-              "enunciado": "A notícia trata da mudança ocorrida em um dicionário da língua portuguesa. Segundo o texto, essa mudança foi impulsionada pela",
-              "alternativas": [
-                "Inclusão de informações no verbete.",
-                "Relevância social da instituição casamento.",
-                "Utilização pública da petição pelos cidadãos.",
-                "Rapidez na disseminação digital do verbete.",
-                "Divulgação de plataformas para a criação de petição"
-              ],
-              "correta": "C",
-              "explicacao": "A definição mudou por causa de uma petição on-line criada por um cidadão e apoiada por outros. Foi o uso público da petição, a mobilização, que impulsionou a mudança.",
-              "fonte": "ENEM 2023 – Questão 39"
+              "fonte": "ENEM 2023 – Questão 9",
+              "segundos_estimados": 84
             }
           ]
         },
@@ -91,21 +64,6 @@
           "questoes": [
             {
               "id": "LIN-02-01",
-              "texto": "Blues da piedade\n\nVamos pedir piedade\nSenhor, piedade\nPra essa gente careta e covarde\nVamos pedir piedade\nSenhor, piedade\nLhes dê grandeza e um pouco de coragem\n\nCAZUZA. Cazuza: o poeta não morreu. Rio de Janeiro:\nUniversal Music, 2000 (fragmento).",
-              "enunciado": "Todo gênero apresenta elementos constitutivos que condicionam seu uso em sociedade. A letra de canção identifica-se com o gênero ladainha, essencialmente, pela utilização da sequência textual",
-              "alternativas": [
-                "Expositiva, por discorrer sobre um dado tema.",
-                "Narrativa, por apresentar uma cadeia de ações.",
-                "Injuntiva, por chamar o interlocutor à participação.",
-                "Descritiva, por enumerar características de um personagem.",
-                "Argumentativa, por incitar o leitor a uma tomada de atitude."
-              ],
-              "correta": "C",
-              "explicacao": "A ladainha é uma sequência de súplicas repetidas (“Vamos pedir piedade / Senhor, piedade”). O convite chama o interlocutor a participar da prece: é a sequência injuntiva.",
-              "fonte": "ENEM 2019 – Questão 24"
-            },
-            {
-              "id": "LIN-02-02",
               "texto": "Policarpo Quaresma, cidadão brasileiro, funcionário público, certo de que a língua portuguesa é emprestada ao Brasil; certo também de que, por esse fato, o falar e o escrever em geral, sobretudo no campo das letras, se veem na humilhante contingência de sofrer continuamente censuras ásperas dos proprietários da língua; sabendo, além, que, dentro do nosso país, os autores e os escritores, com especialidade os gramáticos, não se entendem no tocante à correção gramatical, vendo-se, diariamente, surgir azedas polêmicas entre os mais profundos estudiosos do nosso idioma — usando do direito que lhe confere a Constituição, vem pedir que o Congresso Nacional decrete o tupi-guarani como língua oficial e nacional do povo brasileiro.\n\nBARRETO. L. Triste fim de Policarpo Quaresma. Disponível em: www.dominiopublico.gov.br. Acesso em: 26 jun. 2012",
               "enunciado": "Nessa petição da pitoresca personagem do romance de Lima Barreto, o uso da norma-padrão justifica-se pela",
               "alternativas": [
@@ -117,25 +75,11 @@
               ],
               "correta": "A",
               "explicacao": "Policarpo escreve um requerimento formal ao Congresso. A norma-padrão é exigida por essa situação de comunicação (documento oficial), mesmo sendo o pedido tão pitoresco.",
-              "fonte": "ENEM 2020 – Questão 41"
+              "fonte": "ENEM 2020 – Questão 41",
+              "segundos_estimados": 78
             },
             {
-              "id": "LIN-02-03",
-              "texto": "Urgência emocional\n\nSe tudo é para ontem, se a vida engata uma primeira e sai em disparada, se não há mais tempo para paradas estratégicas, caímos fatalmente no vício de querer que os amores sejam igualmente resolvidos num átimo de segundo. Temos pressa para ouvir “eu te amo”. Não vemos a hora de que fiquem estabelecidas as regras de convívio: somos namorados, ficantes, casados, amantes? Urgência emocional. Uma cilada. Associamos diversas palavras ao AMOR: paixão, romance, sexo, adrenalina, palpitação. Esquecemos, no entanto, da palavra que viabiliza esse sentimento: “paciência”. Amor sem paciência não vinga. Amor não pode ser mastigado e engolido com emergência, com fome desesperada. É uma refeição que pode durar uma vida.\n\nMEDEIROS, M. Disponível em: http:/porumavidasimples.blogspot.com.br. Acesso em: 20 ago. 2017 (adaptado).",
-              "enunciado": "Nesse texto de opinião, as marcas linguísticas revelam uma situação distensa e de pouca formalidade, o que se evidencia pelo(a)",
-              "alternativas": [
-                "Impessoalização ao longo do texto, como em: “se não há mais tempo”.",
-                "Construção de uma atmosfera de urgência, em palavras como: “pressa”.",
-                "Repetição de uma determinada estrutura sintática, como em: “Se tudo é para ontem”.",
-                "Ênfase no emprego da hipérbole, como em: “uma refeição que pode durar uma vida”.",
-                "Emprego de metáforas, como em: “a vida engata uma primeira e sai em disparada”."
-              ],
-              "correta": "E",
-              "explicacao": "Metáforas do dia a dia, como “a vida engata uma primeira e sai em disparada”, aproximam o texto de uma conversa e criam o tom descontraído e pouco formal.",
-              "fonte": "ENEM 2022 – Questão 6"
-            },
-            {
-              "id": "LIN-02-04",
+              "id": "LIN-02-02",
               "texto": "TEXTO I\nA língua não é uma nomenclatura, que se apõe a uma realidade pré-categorizada, ela é que classifica a realidade. No léxico, percebe-se, de maneira mais imediata, o fato de que a língua condensa as experiências de um dado povo.\n\nFIORIN, J. L Língua, modernidade e tradição. Diversitas, n. 2. mar-set 2014\n\nTEXTO II\nAs expressões coloquiais ainda estão impregnadas de discriminação contra os negros. Basta recordar algumas delas, como passar um “dia negro”, ter um “lado negro”, ser a “ovelha negra” da família ou praticar “magia negra”.\n\nDisponível em: https://brasil.elpais.com Acesso em: 22 maio 2018.",
               "enunciado": "O Texto II exemplifica o que se afirma no Texto I, na medida em que defende a ideia de que as escolhas lexicais são resultantes de um",
               "alternativas": [
@@ -147,10 +91,11 @@
               ],
               "correta": "D",
               "explicacao": "O Texto I diz que o léxico guarda as experiências de um povo. O Texto II mostra expressões como “ovelha negra”, que carregam o preconceito racial presente na história da sociedade.",
-              "fonte": "ENEM 2022 – Questão 14"
+              "fonte": "ENEM 2022 – Questão 14",
+              "segundos_estimados": 86
             },
             {
-              "id": "LIN-02-05",
+              "id": "LIN-02-03",
               "texto": "",
               "enunciado": "Um grupo de pesquisadores da Universidade Federal do Ceará desenvolveu um dicionário para traduzir sintomas de doenças da linguagem popular para os termos médicos. Defruço, chanha e piloura, por exemplo, podem ser termos conhecidos para muitos, mas, durante uma consulta médica, o desconhecimento pode significar um diagnóstico errado.\n“Isso é um registro histórico e pode ser muito útil para estudos dessas comunidades, na abordagem médica delas. É de certa forma pioneiro no Brasil e, sem dúvida, um instrumento de trabalho importante, porque a comunicação é fundamental na relação médico-paciente”, avalia o reitor da instituição.\nDisponível em: https://gl.globo.com. Acesso em: 1 nov. 2021 (adaptado).\nAo registrarem usos regionais de termos da área médica, Pesquisadores",
               "alternativas": [
@@ -162,61 +107,49 @@
               ],
               "correta": "D",
               "explicacao": "O dicionário traduz termos populares (defruço, chanha, piloura) para termos médicos. Assim o médico entende melhor os sintomas que o paciente descreve.",
-              "fonte": "ENEM 2023 – Questão 21"
+              "fonte": "ENEM 2023 – Questão 21",
+              "segundos_estimados": 72
             }
           ]
         },
         {
           "id": "LIN-03",
-          "titulo": "Leitura literária",
+          "titulo": "Recursos de linguagem",
           "questoes": [
             {
               "id": "LIN-03-01",
-              "texto": "HELOÍSA: Faz versos?\n\nPINOTE: Sendo preciso… Quadrinhas… Acrósticos… Sonetos… Reclames.\n\nHELOÍSA: Futuristas?\n\nPINOTE: Não senhora! Eu já fui futurista. Cheguei a acreditar na independência… Mas foi uma tragédia! Começaram a me tratar de maluco. A me olhar de esguelha. A não me receber mais. As crianças choravam em casa. Tenho três filhos. No jornal também não pagavam, devido à crise. Precisei viver de bicos. Ah! Reneguei tudo. Arranjei aquele instrumento (Mostra a faca) e fiquei passadista.\n\nANDRADE, O. O rei da vela. São Paulo: Globo, 2003.",
-              "enunciado": "O fragmento da peça teatral de Oswald de Andrade ironiza a reação da sociedade brasileira dos anos 1930 diante de determinada vanguarda europeia. Nessa visão, atribui-se ao público leitor uma postura",
+              "texto": "Blues da piedade\n\nVamos pedir piedade\nSenhor, piedade\nPra essa gente careta e covarde\nVamos pedir piedade\nSenhor, piedade\nLhes dê grandeza e um pouco de coragem\n\nCAZUZA. Cazuza: o poeta não morreu. Rio de Janeiro:\nUniversal Music, 2000 (fragmento).",
+              "enunciado": "Todo gênero apresenta elementos constitutivos que condicionam seu uso em sociedade. A letra de canção identifica-se com o gênero ladainha, essencialmente, pela utilização da sequência textual",
               "alternativas": [
-                "Preconceituosa, ao evitar formas poéticas simplificadas.",
-                "Conservadora, ao optar por modelos consagrados.",
-                "Preciosista, ao preferir modelos literários eruditos.",
-                "Nacionalista, ao negar modelos estrangeiros.",
-                "Eclética, ao aceitar diversos estilos poéticos."
+                "Expositiva, por discorrer sobre um dado tema.",
+                "Narrativa, por apresentar uma cadeia de ações.",
+                "Injuntiva, por chamar o interlocutor à participação.",
+                "Descritiva, por enumerar características de um personagem.",
+                "Argumentativa, por incitar o leitor a uma tomada de atitude."
               ],
-              "correta": "B",
-              "explicacao": "Pinote foi rejeitado enquanto era futurista e só voltou a ser aceito quando virou “passadista”. A peça ironiza um público conservador, preso aos modelos consagrados.",
-              "fonte": "ENEM 2019 – Questão 13"
+              "correta": "C",
+              "explicacao": "A ladainha é uma sequência de súplicas repetidas (“Vamos pedir piedade / Senhor, piedade”). O convite chama o interlocutor a participar da prece: é a sequência injuntiva.",
+              "fonte": "ENEM 2019 – Questão 24",
+              "segundos_estimados": 55
             },
             {
               "id": "LIN-03-02",
-              "texto": "Na sua imaginação perturbada sentia a natureza toda agitando-se para sufocá-la. Aumentavam as sombras. No céu, nuvens colossais e túmidas rolavam para o abismo do horizonte… Na várzea, ao clarão indeciso do crepúsculo, os seres tomavam ares de monstros… As montanhas, subindo ameaçadoras da terra, perfilavam-se tenebrosas… Os caminhos, espreguiçando-se sobre os campos, animavam-se quais serpentes infinitas… As árvores soltas choravam ao vento, como carpideiras fantásticas da natureza morta… Os aflitivos pássaros noturnos gemiam agouros com pios fúnebres. Maria quis fugir, mas os membros cansados não acudiam aos ímpetos do medo e deixavam-na prostrada em uma angústia desesperada.\n\nARANHA, J. P. G. Canaã. São Paulo: Ática, 1997.",
-              "enunciado": "No trecho, o narrador mobiliza recursos de linguagem que geram uma expressividade centrada na percepção da",
+              "texto": "Urgência emocional\n\nSe tudo é para ontem, se a vida engata uma primeira e sai em disparada, se não há mais tempo para paradas estratégicas, caímos fatalmente no vício de querer que os amores sejam igualmente resolvidos num átimo de segundo. Temos pressa para ouvir “eu te amo”. Não vemos a hora de que fiquem estabelecidas as regras de convívio: somos namorados, ficantes, casados, amantes? Urgência emocional. Uma cilada. Associamos diversas palavras ao AMOR: paixão, romance, sexo, adrenalina, palpitação. Esquecemos, no entanto, da palavra que viabiliza esse sentimento: “paciência”. Amor sem paciência não vinga. Amor não pode ser mastigado e engolido com emergência, com fome desesperada. É uma refeição que pode durar uma vida.\n\nMEDEIROS, M. Disponível em: http:/porumavidasimples.blogspot.com.br. Acesso em: 20 ago. 2017 (adaptado).",
+              "enunciado": "Nesse texto de opinião, as marcas linguísticas revelam uma situação distensa e de pouca formalidade, o que se evidencia pelo(a)",
               "alternativas": [
-                "Relação entre a natureza opressiva e o desejo de libertação da personagem.",
-                "Confluência entre o estado emocional da personagem e a configuração da paisagem.",
-                "Prevalência do mundo natural em relação à fragilidade humana.",
-                "Depreciação do sentido da vida diante da consciência da morte iminente.",
-                "Instabilidade psicológica da personagem face à realidade hostil."
+                "Impessoalização ao longo do texto, como em: “se não há mais tempo”.",
+                "Construção de uma atmosfera de urgência, em palavras como: “pressa”.",
+                "Repetição de uma determinada estrutura sintática, como em: “Se tudo é para ontem”.",
+                "Ênfase no emprego da hipérbole, como em: “uma refeição que pode durar uma vida”.",
+                "Emprego de metáforas, como em: “a vida engata uma primeira e sai em disparada”."
               ],
-              "correta": "B",
-              "explicacao": "A paisagem ganha traços ameaçadores (sombras, monstros, serpentes, árvores que choram) que espelham o medo de Maria. O estado emocional da personagem e a paisagem se confundem.",
-              "fonte": "ENEM 2020 – Questão 11"
+              "correta": "E",
+              "explicacao": "Metáforas do dia a dia, como “a vida engata uma primeira e sai em disparada”, aproximam o texto de uma conversa e criam o tom descontraído e pouco formal.",
+              "fonte": "ENEM 2022 – Questão 6",
+              "segundos_estimados": 91
             },
             {
               "id": "LIN-03-03",
-              "texto": "Era o êxodo da seca de 1898. Uma ressurreição de cemitérios antigos — esqueletos redivivos, com o aspecto terroso e o fedor das covas podres.\n\nOs fantasmas estropiados como que iam dançando, de tão trôpegos e trêmulos, num passo arrastado de quem leva as pernas, em vez de ser levado por elas.\n\nAndavam devagar, olhando para trás, como quem quer voltar. Não tinham pressa em chegar, porque não sabiam aonde iam. Expulsos de seu paraíso por espadas de fogo, iam, ao acaso, em descaminhos, no arrastão dos maus fados.\n\nFugiam do sol e o sol guiava-os nesse forçado nomadismo.\n\nAdelgaçados na magreira cômica, cresciam, como se o vento os levantasse. E os braços afinados desciam-lhes aos joelhos, de mãos abanando.\n\nVinham escoteiros. Menos os hidrópicos — de ascite consecutiva à alimentação tóxica — com os fardos das barrigas alarmantes.\n\nNão tinham sexo, nem idade, nem condição nenhuma. Eram os retirantes. Nada mais.\n\nALMEIDA, J. A. A bagaceira. Rio de Janeiro: J. Olympio, 1978.",
-              "enunciado": "Os recursos composicionais que inserem a obra no chamado “Romance de 30” da literatura brasileira manifestam-se aqui no(a)",
-              "alternativas": [
-                "Desenho cru da realidade dramática dos retirantes.",
-                "Indefinição dos espaços para efeito de generalização.",
-                "Análise psicológica da reação dos personagens à seca.",
-                "Engajamento político do narrador ante as desigualdades.",
-                "Contemplação lírica da paisagem transformada em alegoria."
-              ],
-              "correta": "A",
-              "explicacao": "O Romance de 30 retrata com crueza a realidade social do Nordeste. Aqui os retirantes da seca aparecem como “esqueletos redivivos”, sem nenhuma idealização.",
-              "fonte": "ENEM 2022 – Questão 31"
-            },
-            {
-              "id": "LIN-03-04",
               "texto": "Notas\n\nSoluços, lágrimas, casa armada, veludo preto nos portais, um homem que veio vestir o cadáver, outro que tomou a medida do caixão, caixão, essa, tocheiros, convites, convidados que entravam, lentamente, a passo surdo, e apertavam a mão à família, alguns tristes, todos sérios e calados, padre e sacristão, rezas, aspersões d’água benta, o fechar do caixão a prego e martelo, seis pessoas que o tomam da essa, e o levantam, e o descem a custo pela escada, não obstante os gritos, soluços e novas lágrimas da família, e vão até o coche fúnebre, e o colocam em cima e traspassam e apertam as corrêas, o rodar do coche, o rodar dos carros, um a um… Isto que parece um simples inventário, eram notas que eu havia tomado para um capítulo triste e vulgar que não escrevo.\n\nASSIS, M. Memórias Póstumas de Brás Cubas. Disponível em: www.domíniopúblico.gov.br. Acesso em: 25 jul, 2022.",
               "enunciado": "O recurso linguístico que permite o Machado de Assis considerar o capítulo de Memórias Póstumas de Brás Cubas como inventário é a:",
               "alternativas": [
@@ -228,10 +161,65 @@
               ],
               "correta": "A",
               "explicacao": "O trecho é uma longa lista de objetos, pessoas e ações do funeral, separados por vírgulas. É essa enumeração que faz o narrador chamar o capítulo de “inventário”.",
-              "fonte": "ENEM 2022 – Questão 33"
+              "fonte": "ENEM 2022 – Questão 33",
+              "segundos_estimados": 89
+            }
+          ]
+        },
+        {
+          "id": "LIN-04",
+          "titulo": "Leitura literária",
+          "questoes": [
+            {
+              "id": "LIN-04-01",
+              "texto": "HELOÍSA: Faz versos?\n\nPINOTE: Sendo preciso… Quadrinhas… Acrósticos… Sonetos… Reclames.\n\nHELOÍSA: Futuristas?\n\nPINOTE: Não senhora! Eu já fui futurista. Cheguei a acreditar na independência… Mas foi uma tragédia! Começaram a me tratar de maluco. A me olhar de esguelha. A não me receber mais. As crianças choravam em casa. Tenho três filhos. No jornal também não pagavam, devido à crise. Precisei viver de bicos. Ah! Reneguei tudo. Arranjei aquele instrumento (Mostra a faca) e fiquei passadista.\n\nANDRADE, O. O rei da vela. São Paulo: Globo, 2003.",
+              "enunciado": "O fragmento da peça teatral de Oswald de Andrade ironiza a reação da sociedade brasileira dos anos 1930 diante de determinada vanguarda europeia. Nessa visão, atribui-se ao público leitor uma postura",
+              "alternativas": [
+                "Preconceituosa, ao evitar formas poéticas simplificadas.",
+                "Conservadora, ao optar por modelos consagrados.",
+                "Preciosista, ao preferir modelos literários eruditos.",
+                "Nacionalista, ao negar modelos estrangeiros.",
+                "Eclética, ao aceitar diversos estilos poéticos."
+              ],
+              "correta": "B",
+              "explicacao": "Pinote foi rejeitado enquanto era futurista e só voltou a ser aceito quando virou “passadista”. A peça ironiza um público conservador, preso aos modelos consagrados.",
+              "fonte": "ENEM 2019 – Questão 13",
+              "segundos_estimados": 69
             },
             {
-              "id": "LIN-03-05",
+              "id": "LIN-04-02",
+              "texto": "Na sua imaginação perturbada sentia a natureza toda agitando-se para sufocá-la. Aumentavam as sombras. No céu, nuvens colossais e túmidas rolavam para o abismo do horizonte… Na várzea, ao clarão indeciso do crepúsculo, os seres tomavam ares de monstros… As montanhas, subindo ameaçadoras da terra, perfilavam-se tenebrosas… Os caminhos, espreguiçando-se sobre os campos, animavam-se quais serpentes infinitas… As árvores soltas choravam ao vento, como carpideiras fantásticas da natureza morta… Os aflitivos pássaros noturnos gemiam agouros com pios fúnebres. Maria quis fugir, mas os membros cansados não acudiam aos ímpetos do medo e deixavam-na prostrada em uma angústia desesperada.\n\nARANHA, J. P. G. Canaã. São Paulo: Ática, 1997.",
+              "enunciado": "No trecho, o narrador mobiliza recursos de linguagem que geram uma expressividade centrada na percepção da",
+              "alternativas": [
+                "Relação entre a natureza opressiva e o desejo de libertação da personagem.",
+                "Confluência entre o estado emocional da personagem e a configuração da paisagem.",
+                "Prevalência do mundo natural em relação à fragilidade humana.",
+                "Depreciação do sentido da vida diante da consciência da morte iminente.",
+                "Instabilidade psicológica da personagem face à realidade hostil."
+              ],
+              "correta": "B",
+              "explicacao": "A paisagem ganha traços ameaçadores (sombras, monstros, serpentes, árvores que choram) que espelham o medo de Maria. O estado emocional da personagem e a paisagem se confundem.",
+              "fonte": "ENEM 2020 – Questão 11",
+              "segundos_estimados": 78
+            },
+            {
+              "id": "LIN-04-03",
+              "texto": "Era o êxodo da seca de 1898. Uma ressurreição de cemitérios antigos — esqueletos redivivos, com o aspecto terroso e o fedor das covas podres.\n\nOs fantasmas estropiados como que iam dançando, de tão trôpegos e trêmulos, num passo arrastado de quem leva as pernas, em vez de ser levado por elas.\n\nAndavam devagar, olhando para trás, como quem quer voltar. Não tinham pressa em chegar, porque não sabiam aonde iam. Expulsos de seu paraíso por espadas de fogo, iam, ao acaso, em descaminhos, no arrastão dos maus fados.\n\nFugiam do sol e o sol guiava-os nesse forçado nomadismo.\n\nAdelgaçados na magreira cômica, cresciam, como se o vento os levantasse. E os braços afinados desciam-lhes aos joelhos, de mãos abanando.\n\nVinham escoteiros. Menos os hidrópicos — de ascite consecutiva à alimentação tóxica — com os fardos das barrigas alarmantes.\n\nNão tinham sexo, nem idade, nem condição nenhuma. Eram os retirantes. Nada mais.\n\nALMEIDA, J. A. A bagaceira. Rio de Janeiro: J. Olympio, 1978.",
+              "enunciado": "Os recursos composicionais que inserem a obra no chamado “Romance de 30” da literatura brasileira manifestam-se aqui no(a)",
+              "alternativas": [
+                "Desenho cru da realidade dramática dos retirantes.",
+                "Indefinição dos espaços para efeito de generalização.",
+                "Análise psicológica da reação dos personagens à seca.",
+                "Engajamento político do narrador ante as desigualdades.",
+                "Contemplação lírica da paisagem transformada em alegoria."
+              ],
+              "correta": "A",
+              "explicacao": "O Romance de 30 retrata com crueza a realidade social do Nordeste. Aqui os retirantes da seca aparecem como “esqueletos redivivos”, sem nenhuma idealização.",
+              "fonte": "ENEM 2022 – Questão 31",
+              "segundos_estimados": 92
+            },
+            {
+              "id": "LIN-04-04",
               "texto": "Migalhas\n\nEntre a toalha branca e um bule de café\n\nseria inapropriado dizer\n\neu não te amo mais.\n\nEra necessário algo mais solene,\n\num jardim japonês para as perdas pensadas,\n\num noturno de tempestade para arrebentar de dor,\n\numa praia de pedras para chorar em silêncio,\n\numa cama alta para o incenso da despedida,\n\numa janela dando para o abismo.\n\nNo entanto você abaixa os olhos\n\ne recolhe lentamente as migalhas de pão\n\nsobre a mesa posta para dois.\n\nMARQUES, A. M. A vida submarina. São Paulo: Cia. das Letras, 2021.",
               "enunciado": "Nesse poema, a representação do sentimento amoroso recupera a tradição lírica, mas se ajusta à visão contemporânea ao",
               "alternativas": [
@@ -243,31 +231,17 @@
               ],
               "correta": "C",
               "explicacao": "O fim do amor, que pedia um cenário solene, acontece numa cena banal à mesa do café, recolhendo migalhas. A comoção do amor frustrado é diluída no cotidiano.",
-              "fonte": "ENEM 2023 – Questão 31"
+              "fonte": "ENEM 2023 – Questão 31",
+              "segundos_estimados": 69
             }
           ]
         },
         {
-          "id": "LIN-04",
+          "id": "LIN-05",
           "titulo": "Esporte e práticas corporais",
           "questoes": [
             {
-              "id": "LIN-04-01",
-              "texto": "Em 2000 tivemos a primeira experiência do futebol feminino em um jogo de videogame, o Mia Hamm Soccer. Doze anos depois, uma petição on-line pedia que a EA Sports incluísse o futebol feminino no Fifa 13. Contudo, só em 2015, com uma nova petição on-line, que arrecadou milhares de assinaturas, tivemos o futebol feminino incluído no Fifa 16. Vendo um nicho de mercado inexplorado, a EA Sports produziu o jogo com 12 seleções femininas e o apresentou como inovação. A empresa sabe que mais de 40% dos praticantes de futebol nos EUA são meninas. Para elas, ver o futebol feminino representado em um jogo de videogame é extremamente importante. Ter o futebol feminino no Fifa 16 é um grande passo para a sua popularização na luta pela igualdade de gênero, num contexto machista, sexista, misógino e homofóbico.\n\nDisponível em: www.ludopedio.com.br. Acesso em: 5 jun. 2018 (adaptado).",
-              "enunciado": "Os jogos eletrônicos presentes na cultura juvenil podem desempenhar uma relevante função na abordagem do futebol ao",
-              "alternativas": [
-                "Disseminarem uma modalidade, promovendo a igualdade de gênero.",
-                "Superarem jogos malsucedidos no mercado, lançados anteriormente.",
-                "Inovarem a modalidade com novas ofertas de jogos ao mercado.",
-                "Explorarem nichos de mercado antes ignorados, produzindo mais lucro.",
-                "Reforçarem estereótipos de gênero masculino ou feminino nos esportes."
-              ],
-              "correta": "A",
-              "explicacao": "O texto mostra que colocar seleções femininas no videogame ajuda a divulgar o futebol feminino, “um grande passo” na luta pela igualdade de gênero.",
-              "fonte": "ENEM 2020 – Questão 35"
-            },
-            {
-              "id": "LIN-04-02",
+              "id": "LIN-05-01",
               "texto": "LUTA: prática corporal imprevisível, caracterizada por determinado estado de contato proposital, que possibilita a duas ou mais pessoas se enfrentarem numa constante troca de ações ofensivas e/ou defensivas, regidas por regras, com o objetivo mútuo sobre um alvo móvel personificado no oponente.\n\nGOMES, M. S. P. et al. Ensino das lutas: dos princípios condicionais aos grupos situacionais.\n\nMovimento, n. 2, abr.-jun. 2010 (adaptado).",
               "enunciado": "De acordo com o texto, podemos identificar uma abordagem das lutas nas aulas de educação física quando o professor realiza uma proposta envolvendo",
               "alternativas": [
@@ -279,10 +253,11 @@
               ],
               "correta": "D",
               "explicacao": "Pela definição, luta tem contato proposital, troca de ações de ataque e defesa e regras. A proposta deve ser um combate intencional com ações regulamentadas, sem agressão e sem vencedor definido antes.",
-              "fonte": "ENEM 2020 – Questão 36"
+              "fonte": "ENEM 2020 – Questão 36",
+              "segundos_estimados": 64
             },
             {
-              "id": "LIN-04-03",
+              "id": "LIN-05-02",
               "texto": "O skate apareceu como forma de vivência no lazer em períodos de baixa nas ondas e ficou conhecido como “surfinho”. No início foram utilizados eixos e rodinhas de patins pregados numa madeira qualquer, para sua composição, sendo as rodas de borracha ou ferro. O grande marco na história do skate ocorreu em 1974, quando o engenheiro químico chamado Frank Nasworthy descobriu o uretano, material mais flexível, que oferecia mais aderência às rodas. A dependência dos skatistas em relação a esse novo material igualmente alavancou o surgimento de novas manobras e possibilitou a um maior número de pessoas inexperientes começar a prática dessa modalidade. O resultado foi a criação de campeonatos, marcas, fábricas e lojas especializadas.\n\nARMBRUST, I; LAURD, G, A, A. O skate e suas possibilidades educacionais. Motriz, jul-set, 2010 (adaptado).",
               "enunciado": "De acordo com o texto, diversos fatores ao longo do tempo",
               "alternativas": [
@@ -294,10 +269,11 @@
               ],
               "correta": "A",
               "explicacao": "As rodas de uretano deram aderência e facilitaram as manobras, e até iniciantes passaram a andar de skate. Com campeonatos, marcas e lojas, a prática se democratizou.",
-              "fonte": "ENEM 2021 – Questão 31"
+              "fonte": "ENEM 2021 – Questão 31",
+              "segundos_estimados": 79
             },
             {
-              "id": "LIN-04-04",
+              "id": "LIN-05-03",
               "texto": "",
               "enunciado": "A sessão do Comitê Olímpico Internacional (COI) aprovou uma mudança histórica e inédita no lema olímpico, criado em 1894 pelo Barão Pierre de Coubertin para expressar os valores e a excelência do esporte. Mais de 120 anos depois, o lema tem sua primeira alteração para ressaltar a solidariedade e incluir a palavra “juntos” mais rápido, mais alto, mais forte – juntos. A mudança foi aprovada por unanimidade pelos membros do COI e celebrada pelo presidente da entidade.\nDisponível em: https://ge.globo.com Acesso em: 10 nov. 2021 (adaptado)\nDe acordo com o texto, a alteração do lema olímpico teve como objetivo a",
               "alternativas": [
@@ -309,10 +285,11 @@
               ],
               "correta": "D",
               "explicacao": "A palavra “juntos” entrou no lema “para ressaltar a solidariedade”. O lema olímpico passou a se associar à cooperação.",
-              "fonte": "ENEM 2023 – Questão 6"
+              "fonte": "ENEM 2023 – Questão 6",
+              "segundos_estimados": 67
             },
             {
-              "id": "LIN-04-05",
+              "id": "LIN-05-04",
               "texto": "O acesso às Práticas Corporais/Atividades Físicas (PC/AF) é desigual no Brasil, à semelhança de outros indicadores sociais e de saúde. Em geral, PC/AF prazerosas, diversificadas, mais afeitas ao período de lazer estão concentradas nas populações mais abastadas. As atividades físicas de deslocamento, trajetos a pé ou de bicicleta para estudar ou trabalhar, por exemplo, são mais frequentes na classe social menos favorecida. Aqui, há uma relação inversa e perversa entre variáveis socioeconômicas de acesso às PC/AF. As maiores prevalências de inatividade física foram em mulheres, pessoas com 60 anos ou mais, negros, pessoas com autoavaliação de saúde ruim ou muito ruim, com renda familiar de até quatro salários mínimos por pessoa, pessoas que desconhecem programas públicos de PC/A e residentes em áreas sem locais públicos para a prática.\n\nKNUTH, A. G.; ANTUNES, P. C. Saúde e Sociedade, n. 2, 2021 (adaptado).",
               "enunciado": "O fator central que impacta a realização de práticas corporais/atividades fisicas no tempo de lazer no Brasil é a",
               "alternativas": [
@@ -324,7 +301,62 @@
               ],
               "correta": "E",
               "explicacao": "O lazer ativo se concentra nos mais ricos e a inatividade é maior entre quem tem menos renda. O fator central é a desigualdade entre classes sociais.",
-              "fonte": "ENEM 2023 – Questão 42"
+              "fonte": "ENEM 2023 – Questão 42",
+              "segundos_estimados": 82
+            }
+          ]
+        },
+        {
+          "id": "LIN-06",
+          "titulo": "Internet e igualdade",
+          "questoes": [
+            {
+              "id": "LIN-06-01",
+              "texto": "Quando quis agilizar o processo de seleção de novos alunos, a tradicional faculdade britânica de medicina St. George usou um software para definir quem deveria ser entrevistado. Ao reproduzir a forma como os funcionários faziam essa escolha, o programa eliminou, de cara, 60 de 2.000 candidatos. Só por causa do sexo ou da origem racial, numa dedução baseada em sobrenome e local de nascimento. Um estudo sobre o caso foi publicado em 1988, mas, 25 anos depois, outra pesquisa apontou que esse tipo de discriminação segue firme.\n\nO exemplo recente envolve o buscador do Google: ao digitar nomes comuns entre negros dos EUA, a chance de os anúncios automáticos oferecerem checagem de antecedentes criminais pode aumentar 25%. E pode piorar com a pergunta “detido?” logo após a palavra procurada.\n\nDisponível em: https://tab.uol.com.br. Acesso em: 11 ago. 2017 (adaptado).",
+              "enunciado": "O texto permite o desnudamento da sociedade ao relacionar as tecnologias de informação e comunicação com o(a)",
+              "alternativas": [
+                "Agilidade dos softwares.",
+                "Passar dos anos.",
+                "Linguagem.",
+                "Preconceito.",
+                "Educação."
+              ],
+              "correta": "D",
+              "explicacao": "Os exemplos (software que eliminou candidatos por sexo e origem, anúncios de antecedentes criminais para nomes comuns entre negros) mostram a tecnologia reproduzindo o preconceito que já existe na sociedade.",
+              "fonte": "ENEM 2020 – Questão 43",
+              "segundos_estimados": 77
+            },
+            {
+              "id": "LIN-06-02",
+              "texto": "A petição on-line criada por um cidadão paulista surtiu efeito: casado há três anos com seu companheiro, ele pedia a alteração da definição de “casamento” no tradicional dicionário Michaelis em português. Na definição anterior, casamento aparecia como “união legítima entre homem e mulher” e “união legal entre homem e mulher, para constituir família”.\n\nO novo verbete não traz em nenhum momento as palavras homem ou mulher — agora a definição de casamento se refere a “pessoas”.\n\nPara o diretor de comunicação do site onde a petição foi publicada, a iniciativa mostra a “eficiência da mobilização”. “Em dois dias, mudou-se uma definição que permanecia a mesma há décadas”, afirma. E conclui: “A plataforma serve para todos os tipos de causas, para as mudanças que importam para as pessoas.”.\n\nSENRA, R. Disponível em: www.bbc.com. Acesso em: 29 out. 2015.",
+              "enunciado": "A notícia trata da mudança ocorrida em um dicionário da língua portuguesa. Segundo o texto, essa mudança foi impulsionada pela",
+              "alternativas": [
+                "Inclusão de informações no verbete.",
+                "Relevância social da instituição casamento.",
+                "Utilização pública da petição pelos cidadãos.",
+                "Rapidez na disseminação digital do verbete.",
+                "Divulgação de plataformas para a criação de petição"
+              ],
+              "correta": "C",
+              "explicacao": "A definição mudou por causa de uma petição on-line criada por um cidadão e apoiada por outros. Foi o uso público da petição, a mobilização, que impulsionou a mudança.",
+              "fonte": "ENEM 2023 – Questão 39",
+              "segundos_estimados": 83
+            },
+            {
+              "id": "LIN-06-03",
+              "texto": "Em 2000 tivemos a primeira experiência do futebol feminino em um jogo de videogame, o Mia Hamm Soccer. Doze anos depois, uma petição on-line pedia que a EA Sports incluísse o futebol feminino no Fifa 13. Contudo, só em 2015, com uma nova petição on-line, que arrecadou milhares de assinaturas, tivemos o futebol feminino incluído no Fifa 16. Vendo um nicho de mercado inexplorado, a EA Sports produziu o jogo com 12 seleções femininas e o apresentou como inovação. A empresa sabe que mais de 40% dos praticantes de futebol nos EUA são meninas. Para elas, ver o futebol feminino representado em um jogo de videogame é extremamente importante. Ter o futebol feminino no Fifa 16 é um grande passo para a sua popularização na luta pela igualdade de gênero, num contexto machista, sexista, misógino e homofóbico.\n\nDisponível em: www.ludopedio.com.br. Acesso em: 5 jun. 2018 (adaptado).",
+              "enunciado": "Os jogos eletrônicos presentes na cultura juvenil podem desempenhar uma relevante função na abordagem do futebol ao",
+              "alternativas": [
+                "Disseminarem uma modalidade, promovendo a igualdade de gênero.",
+                "Superarem jogos malsucedidos no mercado, lançados anteriormente.",
+                "Inovarem a modalidade com novas ofertas de jogos ao mercado.",
+                "Explorarem nichos de mercado antes ignorados, produzindo mais lucro.",
+                "Reforçarem estereótipos de gênero masculino ou feminino nos esportes."
+              ],
+              "correta": "A",
+              "explicacao": "O texto mostra que colocar seleções femininas no videogame ajuda a divulgar o futebol feminino, “um grande passo” na luta pela igualdade de gênero.",
+              "fonte": "ENEM 2020 – Questão 35",
+              "segundos_estimados": 90
             }
           ]
         }
@@ -335,55 +367,26 @@
       "licoes": [
         {
           "id": "HUM-01",
-          "titulo": "História do Brasil",
+          "titulo": "Política e poder",
           "questoes": [
             {
               "id": "HUM-01-01",
-              "texto": "Porque todos confessamos não se poder viver sem alguns escravos, que busquem a lenha e a água, e façam cada dia o pão que se come, e outros serviços que não são possíveis poderem-se fazer pelos Irmãos Jesuítas, máxime sendo tão poucos, que seria necessário deixar as confissões e tudo mais. Parece-me que a Companhia de Jesus deve ter e adquirir escravos, justamente, por meios que as Constituições permitem, quando puder para nossos colégios e casas de meninos.\n\nLEITE, S. História da Companhia de Jesus no Brasil. Rio de Janeiro: Civilização Brasileira. 1938 (adaptado).",
-              "enunciado": "O texto explicita premissas da expansão ultramarina portuguesa ao buscar justificar a",
+              "texto": "Para Maquiavel, quando um homem decide dizer a verdade pondo em risco a própria integridade física, tal resolução diz respeito apenas a sua pessoa. Mas se esse mesmo homem é um chefe de Estado, os critérios pessoais não são mais adequados para decidir sobre ações cujas consequências se tornam tão amplas, já que o prejuízo não será apenas individual, mas coletivo. Nesse caso, conforme as circunstâncias e os fins a serem atingidos, pode-se decidir que o melhor para o bem comum seja mentir.\n\nARANHA, M. L. Maquiavel: a lógica da força. São Paulo: Moderna, 2006 (adaptado).",
+              "enunciado": "O texto aponta uma inovação na teoria política na época moderna expressa na distinção entre:",
               "alternativas": [
-                "Propagação do ideário cristão.",
-                "Valorização do trabalho braçal.",
-                "Adoção do cativeiro na Colônia.",
-                "Adesão ao ascetismo contemplativo.",
-                "Alfabetização dos indígenas nas Missões."
+                "Idealidade e efetividade da moral.",
+                "Nulidade e preservabilidade da liberdade.",
+                "Ilegalidade e legitimidade do governante.",
+                "Verificabilidade e possibilidade da verdade.",
+                "Objetividade e subjetividade do conhecimento."
               ],
-              "correta": "C",
-              "explicacao": "O jesuíta defende que a Companhia “deve ter e adquirir escravos” para os serviços dos colégios. O texto justifica o uso do trabalho escravo na Colônia.",
-              "fonte": "ENEM 2020 – Questão 81"
+              "correta": "A",
+              "explicacao": "Maquiavel separa a moral ideal (como se deveria agir) da moral efetiva (o que o governante precisa fazer). Pelo bem comum, o chefe de Estado pode até mentir.",
+              "fonte": "ENEM 2019 – Questão 65",
+              "segundos_estimados": 75
             },
             {
               "id": "HUM-01-02",
-              "texto": "A partir da segunda metade do século XVII, o número de escravos recém-chegados cresce no Rio e se estabiliza na Bahia. Nenhum lugar servia tão bem à recepção de escravos quanto o Rio de Janeiro.\n\nFRANÇA, R. O tamanho real da escravidão. O Globo, 5 abr. 2015 (adaptado).",
-              "enunciado": "Na matéria, o jornalista informa uma mudança na dinâmica do tráfico atlântico que está relacionada à seguinte atividade:",
-              "alternativas": [
-                "Coleta de drogas do sertão.",
-                "Extração de metais preciosos.",
-                "Adoção da pecuária extensiva.",
-                "Retirada de madeira do litoral.",
-                "Exploração da lavoura de tabaco."
-              ],
-              "correta": "B",
-              "explicacao": "No fim do século XVII começou a mineração em Minas Gerais. O Rio de Janeiro virou o principal porto de chegada dos escravizados levados para as minas de ouro.",
-              "fonte": "ENEM 2019 – Questão 81"
-            },
-            {
-              "id": "HUM-01-03",
-              "texto": "Durante os anos de 1854-55, o governo brasileiro – por meio de sua representação diplomática em Londres – e os livre-cambistas ingleses\n– nas colunas do Daily News e na Câmara dos Comuns – aumentaram a pressão pela revogação da Lei Aberdeen. O governo britânico, entretanto, ainda receava que, sem um tratado anglo-brasileiro satisfatório para substituí-la, não haveria nada que impedisse os brasileiros de um dia voltarem aos seus velhos hábitos.\n\nBETHELL, L. A abolição do comércio brasileiro de escravos.\nBrasília: Senado Federal, 2002 (adaptado).",
-              "enunciado": "As tensões diplomáticas expressas no texto indicam o interesse britânico em",
-              "alternativas": [
-                "Estabelecer jurisdição conciliadora.",
-                "Compartilhar negócios marítimos.",
-                "Fomentar políticas higienistas.",
-                "Manter a proibição comercial.",
-                "Promover o negócio familiar."
-              ],
-              "correta": "D",
-              "explicacao": "A Lei Aberdeen (1845) permitia à Inglaterra apreender navios negreiros. Os britânicos resistiam a revogá-la porque queriam manter proibido o tráfico de escravos para o Brasil.",
-              "fonte": "ENEM 2021 – Questão 52"
-            },
-            {
-              "id": "HUM-01-04",
               "texto": "Quando Getúlio Vargas se suicidou, em agosto de 1954, o país parecia à beira do caos. Acuado por uma grave crise política, o velho líder preferiu uma bala no peito à humilhação de aceitar uma nova deposição, como a que sofrera em outubro de 1945. Entretanto, ao contrário do que imaginavam os inimigos, ao ruído do estampido não se seguiu o silêncio que cerca a derrota.\n\nREIS FILHO, D. A. O Estado à sombra de Vargas.\nRevista Nossa História, n. 7, maio 2004.",
               "enunciado": "O evento analisado no texto teve como repercussão imediata na politica nacional a",
               "alternativas": [
@@ -395,10 +398,11 @@
               ],
               "correta": "A",
               "explicacao": "O suicídio de Vargas provocou enorme comoção e protestos populares contra seus adversários. Por isso o texto diz que ao tiro “não se seguiu o silêncio que cerca a derrota”.",
-              "fonte": "ENEM 2021 – Questão 73"
+              "fonte": "ENEM 2021 – Questão 73",
+              "segundos_estimados": 65
             },
             {
-              "id": "HUM-01-05",
+              "id": "HUM-01-03",
               "texto": "O Golpe Militar de 1964 foi implacável no combate ao que restava das Ligas Camponesas, generalizadas na década anterior. No entanto, em relação aos sindicatos, sua atitude foi ambígua. Por meio de acordos com os Estados Unidos, foram concebidos centros sindicais e cursos de liderança com base em princípios conservadores e ministrados por membros da Igreja Católica.\n\nDEL PRIORE, M.; VENÂNCIO, R. Uma história da vida rural no Brasil. Rio de Janeiro: Ediouro, 2006 (adaptado).",
               "enunciado": "Os sindicatos rurais foram tratados da forma descrita no texto porque o governo pretendia utiliza-los para",
               "alternativas": [
@@ -410,13 +414,14 @@
               ],
               "correta": "A",
               "explicacao": "O regime militar reprimiu as Ligas Camponesas e criou sindicatos rurais de orientação conservadora. O objetivo era controlar as tensões políticas no campo.",
-              "fonte": "ENEM 2023 – Questão 80"
+              "fonte": "ENEM 2023 – Questão 80",
+              "segundos_estimados": 68
             }
           ]
         },
         {
           "id": "HUM-02",
-          "titulo": "Filosofia",
+          "titulo": "Filosofia e conhecimento",
           "questoes": [
             {
               "id": "HUM-02-01",
@@ -431,7 +436,8 @@
               ],
               "correta": "C",
               "explicacao": "Os pré-socráticos buscavam a arché, o princípio que explica a origem e a ordem do cosmos. Empédocles faz isso com os quatro elementos movidos pelo Amor e pelo Ódio.",
-              "fonte": "ENEM 2022 – Questão 86"
+              "fonte": "ENEM 2022 – Questão 86",
+              "segundos_estimados": 66
             },
             {
               "id": "HUM-02-02",
@@ -446,25 +452,11 @@
               ],
               "correta": "B",
               "explicacao": "Sócrates conduz a conversa com perguntas para chegar à definição do que é a virtude. Esse jogo de perguntas e respostas é o método dialético.",
-              "fonte": "ENEM 2021 – Questão 82"
+              "fonte": "ENEM 2021 – Questão 82",
+              "segundos_estimados": 62
             },
             {
               "id": "HUM-02-03",
-              "texto": "Para Maquiavel, quando um homem decide dizer a verdade pondo em risco a própria integridade física, tal resolução diz respeito apenas a sua pessoa. Mas se esse mesmo homem é um chefe de Estado, os critérios pessoais não são mais adequados para decidir sobre ações cujas consequências se tornam tão amplas, já que o prejuízo não será apenas individual, mas coletivo. Nesse caso, conforme as circunstâncias e os fins a serem atingidos, pode-se decidir que o melhor para o bem comum seja mentir.\n\nARANHA, M. L. Maquiavel: a lógica da força. São Paulo: Moderna, 2006 (adaptado).",
-              "enunciado": "O texto aponta uma inovação na teoria política na época moderna expressa na distinção entre:",
-              "alternativas": [
-                "Idealidade e efetividade da moral.",
-                "Nulidade e preservabilidade da liberdade.",
-                "Ilegalidade e legitimidade do governante.",
-                "Verificabilidade e possibilidade da verdade.",
-                "Objetividade e subjetividade do conhecimento."
-              ],
-              "correta": "A",
-              "explicacao": "Maquiavel separa a moral ideal (como se deveria agir) da moral efetiva (o que o governante precisa fazer). Pelo bem comum, o chefe de Estado pode até mentir.",
-              "fonte": "ENEM 2019 – Questão 65"
-            },
-            {
-              "id": "HUM-02-04",
               "texto": "Adão, ainda que supuséssemos que suas faculdades racionais fossem inteiramente perfeitas desde o início, não poderia ter inferido da fluidez e transparência da água que ela o sufocaria, nem da luminosidade e calor do fogo que este poderia consumi-lo. Nenhum objeto jamais revela, pelas qualidades que aparecem aos sentidos, nem as causas que o produziram, nem os efeitos que dele provirão; e tampouco nossa razão é capaz de extrair, sem auxílio da experiência, qualquer conclusão referente à existência efetiva de coisas ou questões de fato.\n\nHUME, D. Uma investigação sobre o entendimento humano. São Paulo: Unesp, 2003.",
               "enunciado": "Segundo o autor, qual é a origem do conhecimento humano?",
               "alternativas": [
@@ -476,10 +468,11 @@
               ],
               "correta": "D",
               "explicacao": "Hume é empirista: a razão sozinha não conclui nada sobre os fatos, só a experiência mostra causas e efeitos. O conhecimento vem da vivência dos fenômenos.",
-              "fonte": "ENEM 2020 – Questão 89"
+              "fonte": "ENEM 2020 – Questão 89",
+              "segundos_estimados": 74
             },
             {
-              "id": "HUM-02-05",
+              "id": "HUM-02-04",
               "texto": "",
               "enunciado": "Eu poderia concluir que a raiva é um pensamento, que estar com raiva é pensar que alguém é detestável, e que esse pensamento, como todos os outros — assim como Descartes o mostrou —, não poderia residir em nenhum fragmento de matéria. A raiva seria, portanto, espírito. Porém, quando me volto para minha própria experiência da raiva, devo confessar que ela não estava fora do meu corpo, mas inexplicavelmente nele.\nMERLEAU-PONTY, M. Quinta conversa: o homem visto de fora. São Paulo: Martins Fontes, 1948 (adaptado).\nNo que se refere ao problema do corpo, a filosofia cartesiana apresenta-se como contraponto ao entendimento expresso no texto por",
               "alternativas": [
@@ -491,46 +484,65 @@
               ],
               "correta": "A",
               "explicacao": "Descartes separa a mente (pensamento) do corpo (matéria): é o dualismo. Merleau-Ponty se opõe a isso ao perceber a raiva dentro do próprio corpo.",
-              "fonte": "ENEM 2023 – Questão 54"
+              "fonte": "ENEM 2023 – Questão 54",
+              "segundos_estimados": 71
             }
           ]
         },
         {
           "id": "HUM-03",
-          "titulo": "Cidadania e direitos",
+          "titulo": "Escravidão e racismo",
           "questoes": [
             {
               "id": "HUM-03-01",
-              "texto": "A maior parte das agressões e manifestações discriminatórias contra as religiões de matrizes africanas ocorrem em locais públicos (57%). É na rua, na via pública, que tiveram lugar mais de 2/3 das agressões, geralmente em locais próximos às casas de culto dessas religiões. O transporte público também é apontado como um local em que os adeptos das religiões de matrizes africanas são discriminados, geralmente quando se encontram paramentados por conta dos preceitos religiosos.\n\nREGO, L. F.; FONSECA, D. P. R.; GIACOMINI, S. M. Cartografia social de terreiros no Rio de Janeiro. Rio de Janeiro: PUC-Rio, 2014.",
-              "enunciado": "As práticas descritas no texto são incompatíveis com a dinâmica de uma sociedade laica e democrática porque:",
+              "texto": "Porque todos confessamos não se poder viver sem alguns escravos, que busquem a lenha e a água, e façam cada dia o pão que se come, e outros serviços que não são possíveis poderem-se fazer pelos Irmãos Jesuítas, máxime sendo tão poucos, que seria necessário deixar as confissões e tudo mais. Parece-me que a Companhia de Jesus deve ter e adquirir escravos, justamente, por meios que as Constituições permitem, quando puder para nossos colégios e casas de meninos.\n\nLEITE, S. História da Companhia de Jesus no Brasil. Rio de Janeiro: Civilização Brasileira. 1938 (adaptado).",
+              "enunciado": "O texto explicita premissas da expansão ultramarina portuguesa ao buscar justificar a",
               "alternativas": [
-                "Asseguram as expressões multiculturais.",
-                "Promovem a diversidade de etnias.",
-                "Falseiam os dogmas teológicos.",
-                "Estimulam os rituais sincréticos.",
-                "Restringem a liberdade de credo."
+                "Propagação do ideário cristão.",
+                "Valorização do trabalho braçal.",
+                "Adoção do cativeiro na Colônia.",
+                "Adesão ao ascetismo contemplativo.",
+                "Alfabetização dos indígenas nas Missões."
               ],
-              "correta": "E",
-              "explicacao": "Num Estado laico e democrático, cada pessoa pode seguir a religião que quiser. Agredir adeptos das religiões de matriz africana restringe essa liberdade de credo.",
-              "fonte": "ENEM 2019 – Questão 62"
+              "correta": "C",
+              "explicacao": "O jesuíta defende que a Companhia “deve ter e adquirir escravos” para os serviços dos colégios. O texto justifica o uso do trabalho escravo na Colônia.",
+              "fonte": "ENEM 2020 – Questão 81",
+              "segundos_estimados": 73
             },
             {
               "id": "HUM-03-02",
-              "texto": "Houve crescimento de 74% da população brasileira encarcerada entre 2005 e 2012. As análises possibilitaram identificar o perfil da população que está nas prisões do país: homens, jovens (abaixo de 29 anos), negros, com ensino fundamental incompleto, acusados de crimes patrimoniais e, no caso dos presos adultos, condenados e cumprindo regime fechado e, majoritariamente, com penas de quatro até oito anos.\n\nBRASIL. Mapa do encarceramento: os jovens do Brasil.\nBrasília: Presidência da República, 2015.",
-              "enunciado": "Nesse contexto, as políticas públicas para minimizar a problemática descrita devem privilegiar a",
+              "texto": "A partir da segunda metade do século XVII, o número de escravos recém-chegados cresce no Rio e se estabiliza na Bahia. Nenhum lugar servia tão bem à recepção de escravos quanto o Rio de Janeiro.\n\nFRANÇA, R. O tamanho real da escravidão. O Globo, 5 abr. 2015 (adaptado).",
+              "enunciado": "Na matéria, o jornalista informa uma mudança na dinâmica do tráfico atlântico que está relacionada à seguinte atividade:",
               "alternativas": [
-                "Flexibilização do Código Civil.",
-                "Promoção da inclusão social.",
-                "Redução da maioridade penal.",
-                "Contenção da corrupção política.",
-                "Expansão do período de reclusão."
+                "Coleta de drogas do sertão.",
+                "Extração de metais preciosos.",
+                "Adoção da pecuária extensiva.",
+                "Retirada de madeira do litoral.",
+                "Exploração da lavoura de tabaco."
               ],
               "correta": "B",
-              "explicacao": "O perfil dos presos (jovens, negros, com pouca escolaridade) revela exclusão social. Políticas de inclusão, como educação e emprego, atacam a raiz do problema.",
-              "fonte": "ENEM 2021 – Questão 66"
+              "explicacao": "No fim do século XVII começou a mineração em Minas Gerais. O Rio de Janeiro virou o principal porto de chegada dos escravizados levados para as minas de ouro.",
+              "fonte": "ENEM 2019 – Questão 81",
+              "segundos_estimados": 60
             },
             {
               "id": "HUM-03-03",
+              "texto": "Durante os anos de 1854-55, o governo brasileiro – por meio de sua representação diplomática em Londres – e os livre-cambistas ingleses\n– nas colunas do Daily News e na Câmara dos Comuns – aumentaram a pressão pela revogação da Lei Aberdeen. O governo britânico, entretanto, ainda receava que, sem um tratado anglo-brasileiro satisfatório para substituí-la, não haveria nada que impedisse os brasileiros de um dia voltarem aos seus velhos hábitos.\n\nBETHELL, L. A abolição do comércio brasileiro de escravos.\nBrasília: Senado Federal, 2002 (adaptado).",
+              "enunciado": "As tensões diplomáticas expressas no texto indicam o interesse britânico em",
+              "alternativas": [
+                "Estabelecer jurisdição conciliadora.",
+                "Compartilhar negócios marítimos.",
+                "Fomentar políticas higienistas.",
+                "Manter a proibição comercial.",
+                "Promover o negócio familiar."
+              ],
+              "correta": "D",
+              "explicacao": "A Lei Aberdeen (1845) permitia à Inglaterra apreender navios negreiros. Os britânicos resistiam a revogá-la porque queriam manter proibido o tráfico de escravos para o Brasil.",
+              "fonte": "ENEM 2021 – Questão 52",
+              "segundos_estimados": 66
+            },
+            {
+              "id": "HUM-03-04",
               "texto": "Eu estava pagando o sapateiro e conversando com um preto que estava lendo um jornal. Ele estava revoltado com um guarda civil que espancou um preto e amarrou numa árvore. O guarda civil é branco. E há certos brancos que transforma o preto em bode expiatório. Quem sabe se guarda civil ignora que já foi extinta a escravidão e ainda estamos em regime de chibata?\n\nJESUS, C. M. Quarto de despejo: diário de uma favelada. São Paulo: Ática, 2014.",
               "enunciado": "O texto que guarda a grafia original da autora, expõe uma característica da sociedade brasileira, que é o(a):",
               "alternativas": [
@@ -542,10 +554,49 @@
               ],
               "correta": "A",
               "explicacao": "O relato mostra um guarda branco espancando e amarrando um homem negro, como no tempo da escravidão. É o racismo enraizado nas estruturas da sociedade.",
-              "fonte": "ENEM 2022 – Questão 48"
+              "fonte": "ENEM 2022 – Questão 48",
+              "segundos_estimados": 67
+            }
+          ]
+        },
+        {
+          "id": "HUM-04",
+          "titulo": "Cidadania e direitos",
+          "questoes": [
+            {
+              "id": "HUM-04-01",
+              "texto": "A maior parte das agressões e manifestações discriminatórias contra as religiões de matrizes africanas ocorrem em locais públicos (57%). É na rua, na via pública, que tiveram lugar mais de 2/3 das agressões, geralmente em locais próximos às casas de culto dessas religiões. O transporte público também é apontado como um local em que os adeptos das religiões de matrizes africanas são discriminados, geralmente quando se encontram paramentados por conta dos preceitos religiosos.\n\nREGO, L. F.; FONSECA, D. P. R.; GIACOMINI, S. M. Cartografia social de terreiros no Rio de Janeiro. Rio de Janeiro: PUC-Rio, 2014.",
+              "enunciado": "As práticas descritas no texto são incompatíveis com a dinâmica de uma sociedade laica e democrática porque:",
+              "alternativas": [
+                "Asseguram as expressões multiculturais.",
+                "Promovem a diversidade de etnias.",
+                "Falseiam os dogmas teológicos.",
+                "Estimulam os rituais sincréticos.",
+                "Restringem a liberdade de credo."
+              ],
+              "correta": "E",
+              "explicacao": "Num Estado laico e democrático, cada pessoa pode seguir a religião que quiser. Agredir adeptos das religiões de matriz africana restringe essa liberdade de credo.",
+              "fonte": "ENEM 2019 – Questão 62",
+              "segundos_estimados": 75
             },
             {
-              "id": "HUM-03-04",
+              "id": "HUM-04-02",
+              "texto": "Houve crescimento de 74% da população brasileira encarcerada entre 2005 e 2012. As análises possibilitaram identificar o perfil da população que está nas prisões do país: homens, jovens (abaixo de 29 anos), negros, com ensino fundamental incompleto, acusados de crimes patrimoniais e, no caso dos presos adultos, condenados e cumprindo regime fechado e, majoritariamente, com penas de quatro até oito anos.\n\nBRASIL. Mapa do encarceramento: os jovens do Brasil.\nBrasília: Presidência da República, 2015.",
+              "enunciado": "Nesse contexto, as políticas públicas para minimizar a problemática descrita devem privilegiar a",
+              "alternativas": [
+                "Flexibilização do Código Civil.",
+                "Promoção da inclusão social.",
+                "Redução da maioridade penal.",
+                "Contenção da corrupção política.",
+                "Expansão do período de reclusão."
+              ],
+              "correta": "B",
+              "explicacao": "O perfil dos presos (jovens, negros, com pouca escolaridade) revela exclusão social. Políticas de inclusão, como educação e emprego, atacam a raiz do problema.",
+              "fonte": "ENEM 2021 – Questão 66",
+              "segundos_estimados": 66
+            },
+            {
+              "id": "HUM-04-03",
               "texto": "Nascidas o Líbano, as duas irmãs não puderam ser registradas no país, porque lá é exigido que os nascidos sejam filhos de pais e mães libaneses. Seus pais, de nacionalidade síria, também não puderam registrá-las no país de origem. Na Síria, crianças só são registradas por pais oficialmente casados, o que não era o caso deles.\n\nDisponível em: https://agenciabrasi.ebc.com.br. Acesso em: 7 nov. 2021.",
               "enunciado": "Em situações como a apresentada no texto, as pessoas ao nascerem já se encontram na condição sociopolítica de",
               "alternativas": [
@@ -557,10 +608,11 @@
               ],
               "correta": "B",
               "explicacao": "Apátrida é a pessoa sem nacionalidade reconhecida por nenhum país. As irmãs não puderam ser registradas nem no Líbano, onde nasceram, nem na Síria, país dos pais.",
-              "fonte": "ENEM 2022 – Questão 83"
+              "fonte": "ENEM 2022 – Questão 83",
+              "segundos_estimados": 60
             },
             {
-              "id": "HUM-03-05",
+              "id": "HUM-04-04",
               "texto": "Negar o pedido por dinheiro indispensável para necessidades pessoais ou comprar bens usando o nome da pessoa sem o consentimento dela. Ameaçar o corte de recursos dependendo de atitudes pessoais, esconder documentos ou trocar senhas do banco sem avisar. Ou, ainda, proibir a pessoa de trabalhar ou destruir seus pertences. As histórias são comuns, mas às vezes não são reconhecidas como abuso. Mas é uma das cinco formas de conduta contra a mulher previstas na Lei Maria da Penha.\n\nLEWGOY. J. Conduta quase invisível destrói a vida de mulheres. Disponível em: https://valorinveste.globo.com. Acesso em: 23 out. 2021 (adaptado).",
               "enunciado": "O texto apresenta tipos de conduta sujeitos a punição, conforme previsto na Lei Maria da Penha, porque consistem em formas de",
               "alternativas": [
@@ -572,16 +624,17 @@
               ],
               "correta": "D",
               "explicacao": "Controlar o dinheiro, esconder documentos ou destruir pertences da mulher são formas de violência patrimonial, uma das previstas na Lei Maria da Penha.",
-              "fonte": "ENEM 2023 – Questão 60"
+              "fonte": "ENEM 2023 – Questão 60",
+              "segundos_estimados": 74
             }
           ]
         },
         {
-          "id": "HUM-04",
+          "id": "HUM-05",
           "titulo": "Geografia física",
           "questoes": [
             {
-              "id": "HUM-04-01",
+              "id": "HUM-05-01",
               "texto": "Os moradores de Utqiagvik passaram dois meses quase totalmente na escuridão\n\nOs habitantes desta pequena cidade no Alasca – o estado dos Estados Unidos mais ao norte – já estão acostumados a longas noites sem ver a luz do dia. Em 18 de novembro de 2018, seus pouco mais de 4 mil habitantes viram o último pôr do sol do ano. A oportunidade seguinte para ver a luz do dia ocorreu no dia 23 de janeiro de 2019, às 13h04 min (horário local).\n\nDisponível em: www.bbc.com. Acesso em: 16 maio 2019 (adaptado).",
               "enunciado": "O fenômeno descrito está relacionado ao fato de a cidade citada ter uma posição geográfica condicionada pela:",
               "alternativas": [
@@ -593,10 +646,11 @@
               ],
               "correta": "D",
               "explicacao": "Utqiagvik fica muito ao norte, acima do Círculo Polar Ártico. Nessa latitude, no inverno, o Sol passa semanas sem aparecer (é a noite polar).",
-              "fonte": "ENEM 2019 – Questão 89"
+              "fonte": "ENEM 2019 – Questão 89",
+              "segundos_estimados": 68
             },
             {
-              "id": "HUM-04-02",
+              "id": "HUM-05-02",
               "texto": "As cidades de Puebla, no México, e Legazpi, nas Filipinas, não têm quase nada em comum. Estão muito longe uma da outra e são habitadas por povos muito diferentes. O que as une é um trágico detalhe de sua geografia. Elas foram erguidas na vizinhança de alguns dos vulcões mais perigosos do mundo: o mexicano Popocatepéti e  filipino Mayon. Seus habitantes precisam estar prontos para correr a qualquer hora. Eles fazem parte dos 550 milhões de indivíduos que moram em zonas de risco vulcânico no mundo. Ao contrário do que seria sensato, continuam ali, indiferentes ao perigo que os espreita.\n\nANGELO, C. Disponível em http://super.abril.com.br. Acesso em: 24 out. 2015 (adaptado).",
               "enunciado": "A característica física que justifica a fixação do homem nos locais apresentados no texto é a ocorrência de",
               "alternativas": [
@@ -608,10 +662,11 @@
               ],
               "correta": "A",
               "explicacao": "As cinzas e lavas dos vulcões deixam o solo rico em minerais e muito fértil. Por isso as pessoas continuam morando perto deles, mesmo com o risco.",
-              "fonte": "ENEM 2020 – Questão 82"
+              "fonte": "ENEM 2020 – Questão 82",
+              "segundos_estimados": 78
             },
             {
-              "id": "HUM-04-03",
+              "id": "HUM-05-03",
               "texto": "A colisão entre uma placa continental e uma oceânica provocará a subducção desta última sob a placa continental, que, a exemplo dos arcos e ilhas, produzirá um arco magmático na borda do continente, composto por rochas vulcânicas acompanhado de deformações e metamorfismo tanto de rochas preexistentes como de parte das rochas formadas no processo.\n\nTEIXEIRA, W. et al. (Org.). Decifrando a Terra. São Paulo: Oficina de Textos, 2000.",
               "enunciado": "Qual feição fisiográfica é gerada pelo processo tectônico apresentado?",
               "alternativas": [
@@ -623,10 +678,11 @@
               ],
               "correta": "E",
               "explicacao": "Quando a placa oceânica mergulha sob a continental, as rochas são comprimidas e dobradas, formando cordilheiras jovens: os dobramentos modernos, como os Andes.",
-              "fonte": "ENEM 2020 – Questão 84"
+              "fonte": "ENEM 2020 – Questão 84",
+              "segundos_estimados": 59
             },
             {
-              "id": "HUM-04-04",
+              "id": "HUM-05-04",
               "texto": "Desde os primórdios da formação da crosta terrestre até os dias de hoje, as rochas formadas vêm sendo continuamente destruídas. Os produtos resultantes da destruição das rochas são transportados pela água, vento e gelo a toda superfície terrestre, acionados pelo calor e pela gravidade. Cessada a energia transportadora, são depositados nas regiões mais baixas da crosta, podendo formar pacotes rochosos.\n\nLEINZ, V. Geologia geral. São Paulo: Editora Nacional, 1989.",
               "enunciado": "As transformações na superfície terrestre, conforme descritas no texto, compõem o seguinte processo geomorfológico:",
               "alternativas": [
@@ -638,10 +694,11 @@
               ],
               "correta": "A",
               "explicacao": "Rochas são desgastadas, os fragmentos são transportados e depositados nas partes baixas, formando novas rochas. Esse caminho é o ciclo sedimentar.",
-              "fonte": "ENEM 2021 – Questão 71"
+              "fonte": "ENEM 2021 – Questão 71",
+              "segundos_estimados": 61
             },
             {
-              "id": "HUM-04-05",
+              "id": "HUM-05-05",
               "texto": "A cordilheira do Himalaia tem mais de 50 milhões de anos., sendo classificada como a maior cordilheira do planeta. Originário da língua sânscrito, comum na região, seu nome quer dizer “morada da neve”. É possível encontrar nessa cordilheira as quinze maiores montanhas do mundo. Ao todo, existem mais de cem picos, que contam com altitudes bem maiores que 7 000 m. O Everest, considerado o ponto mais alto da Terra, tem nada menos que 8 848 m de altitude, e continua crescendo, aproximadamente, 0,8 mm a cada ano.\n\nDisponível em: https://meioambiente.culturamix.com. Acesso em: 12 nov. 2021 (adaptado).",
               "enunciado": "Qual dinâmica natural é responsável pelo fenômeno apresentado?",
               "alternativas": [
@@ -653,7 +710,8 @@
               ],
               "correta": "B",
               "explicacao": "O Himalaia se formou, e ainda cresce, pelo choque entre as placas Indiana e Euroasiática. É o encontro de placas tectônicas.",
-              "fonte": "ENEM 2023 – Questão 53"
+              "fonte": "ENEM 2023 – Questão 53",
+              "segundos_estimados": 73
             }
           ]
         }
@@ -679,7 +737,8 @@
               ],
               "correta": "D",
               "explicacao": "Cutias da mesma espécie disputam o mesmo recurso, as sementes enterradas. Uma rouba a reserva da outra: é uma relação de competição.",
-              "fonte": "ENEM 2019 – Questão 97"
+              "fonte": "ENEM 2019 – Questão 97",
+              "segundos_estimados": 63
             },
             {
               "id": "NAT-01-02",
@@ -694,7 +753,8 @@
               ],
               "correta": "C",
               "explicacao": "Corredores ecológicos ligam os fragmentos de mata. Os animais voltam a circular e as populações se reencontram, o que evita a extinção nas “ilhas”.",
-              "fonte": "ENEM 2020 – Questão 95"
+              "fonte": "ENEM 2020 – Questão 95",
+              "segundos_estimados": 69
             },
             {
               "id": "NAT-01-03",
@@ -709,7 +769,8 @@
               ],
               "correta": "C",
               "explicacao": "As preguiças-gigantes comiam os frutos e espalhavam as sementes. Com a extinção delas, a dispersão das sementes diminuiu e a flora ficou mais restrita.",
-              "fonte": "ENEM 2021 – Questão 127"
+              "fonte": "ENEM 2021 – Questão 127",
+              "segundos_estimados": 60
             },
             {
               "id": "NAT-01-04",
@@ -724,7 +785,8 @@
               ],
               "correta": "A",
               "explicacao": "A jaqueira, espécie exótica, se espalha e ocupa o lugar da vegetação nativa. Ao substituir parte da flora original, reduz a biodiversidade.",
-              "fonte": "ENEM 2022 – Questão 99"
+              "fonte": "ENEM 2022 – Questão 99",
+              "segundos_estimados": 83
             },
             {
               "id": "NAT-01-05",
@@ -739,13 +801,14 @@
               ],
               "correta": "D",
               "explicacao": "As bombas de sementes fazem brotar plantas nativas com flores. Isso aumenta a oferta de néctar e pólen, que são o alimento das abelhas.",
-              "fonte": "ENEM 2023 – Questão 91"
+              "fonte": "ENEM 2023 – Questão 91",
+              "segundos_estimados": 70
             }
           ]
         },
         {
           "id": "NAT-02",
-          "titulo": "Genética e biotecnologia",
+          "titulo": "Hereditariedade",
           "questoes": [
             {
               "id": "NAT-02-01",
@@ -760,25 +823,11 @@
               ],
               "correta": "D",
               "explicacao": "Genes próximos no mesmo cromossomo tendem a ser herdados juntos (ligação gênica). Isso contraria a segregação independente proposta por Mendel.",
-              "fonte": "ENEM 2019 – Questão 110"
+              "fonte": "ENEM 2019 – Questão 110",
+              "segundos_estimados": 76
             },
             {
               "id": "NAT-02-02",
-              "texto": "Instituições acadêmicas e de pesquisa no mundo estão inserindo genes em genomas de plantas que possam codificar produtos de interesse farmacológico. No Brasil, está sendo desenvolvida uma variedade de soja com um viricida ou microbicida capaz de prevenir a contaminação pelo vírus causador da aids. Essa leguminosa está sendo induzida a produzir a enzima cianovirina-N, que tem eficiência comprovada contra o vírus.\n\n(OLIVEIRA, M. Remédio na planta. Pesquisa Fapesp, n. 206, abr. 2013.)",
-              "enunciado": "A técnica para gerar essa leguminosa é um exemplo de",
-              "alternativas": [
-                "Hibridismo.",
-                "Transgenia.",
-                "Conjugação.",
-                "Terapia gênica.",
-                "Melhoramento genético."
-              ],
-              "correta": "B",
-              "explicacao": "A soja recebeu um gene de outra espécie para produzir a cianovirina-N. Um organismo que recebe gene de outra espécie é transgênico.",
-              "fonte": "ENEM 2020 – Questão 115"
-            },
-            {
-              "id": "NAT-02-03",
               "texto": "A deficiência de lipase ácida lisossômica é uma doença hereditária associada a um gene do cromossomo 10. Os pais dos pacientes podem não saber que são portadores dos genes da doença até o nascimento do primeiro filho afetado. Quando ambos os progenitores são portadores, existe uma chance, em quatro, de que seu bebê possa nascer com essa doença.\n\nANDERSON, R. A. et. al. In: Situ Localization of the Genetic Locus Encoding the Lysosomal Acid Lipase/Cholesteryl Esterase (LIPA) Deficient in Wolman Disease to Chromosome 10q23.2-q23.3. Genomics, n. 1, jan, 1993 (adaptado).",
               "enunciado": "Essa é uma doença hereditária de caráter",
               "alternativas": [
@@ -790,25 +839,11 @@
               ],
               "correta": "A",
               "explicacao": "Pais sem a doença que são portadores têm 1 chance em 4 de ter filho afetado (Aa × Aa → 1/4 aa). Esse é o padrão da herança recessiva.",
-              "fonte": "ENEM 2021 – Questão 132"
+              "fonte": "ENEM 2021 – Questão 132",
+              "segundos_estimados": 65
             },
             {
-              "id": "NAT-02-04",
-              "texto": "A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou um produto de terapia gênica no país, indicado para o tratamento da distrofia hereditária da retina. O procedimento é recomendado para crianças acima de 12 meses e adultos com perda de visão causada pela mutação do gene humano RPE65. O produto, elaborado por engenharia genética, é composto por um vírus, no qual foi inserida uma cópia do gene normal humano RPE65 para corrigir o funcionamento das células da retina.\n\nANVISA. Disponível em: www.gov.br/anvisa. Acesso em: 4 dez. 2021 (adaptado)",
-              "enunciado": "O sucesso dessa terapia advém do fato de que o produto favorecerá a",
-              "alternativas": [
-                "Correção do código genético para a tradução da proteína.",
-                "Alteração do RNA ribossômico ligado à síntese da proteína.",
-                "Produção de mutações benéficas para a correção do problema.",
-                "Liberação imediata da proteína normal na região ocular humana.",
-                "Expressão do gene responsável pela produção da enzima normal."
-              ],
-              "correta": "E",
-              "explicacao": "O vírus leva uma cópia normal do gene RPE65 às células da retina. Elas passam a expressar esse gene e a produzir a enzima normal.",
-              "fonte": "ENEM 2022 – Questão 98"
-            },
-            {
-              "id": "NAT-02-05",
+              "id": "NAT-02-03",
               "texto": "Pais com síndrome de Down\n\nA síndrome de Down é uma alteração genética associada à trissomia do cromossomo 21, ou seja, o indivíduo possui três cromossomos 21 e não um par, como é normal. Isso ocorre pela união de um gameta contendo um cromossomo 21 com um gameta possuidor de dois cromossomos 21. Embora, normalmente, as mulheres com a síndrome sejam estéreis, em 2008, no interior de São Paulo, uma delas deu à luz uma menina sem a síndrome de Down\n\nMORENO, T. Três anos após dar à luz, mãe portadora de síndrome de Down revela detalhes de seu dia a dia. Disponível em: www.band.uol.com.br. Acesso em: 31 out. 2013 (adaptado).",
               "enunciado": "Sabendo disso, um jovem casal, ambos com essa síndrome, procura um médico especialista para aconselhamento genético porque querem ter um bebê.\nO médico informa ao casal que, com relação ao cromossomo 21, os zigotos formados serão",
               "alternativas": [
@@ -820,13 +855,14 @@
               ],
               "correta": "E",
               "explicacao": "Cada pessoa com trissomia forma gametas com um ou dois cromossomos 21. Juntando: 1+1 dá zigoto normal, 1+2 trissômico e 2+2 tetrassômico.",
-              "fonte": "ENEM 2023 – Questão 125"
+              "fonte": "ENEM 2023 – Questão 125",
+              "segundos_estimados": 86
             }
           ]
         },
         {
           "id": "NAT-03",
-          "titulo": "Física e química no cotidiano",
+          "titulo": "Física no cotidiano",
           "questoes": [
             {
               "id": "NAT-03-01",
@@ -841,7 +877,8 @@
               ],
               "correta": "B",
               "explicacao": "O fone capta o ruído e emite uma onda sonora oposta a ele. As duas ondas se somam e se anulam: é a interferência destrutiva.",
-              "fonte": "ENEM 2020 – Questão 111"
+              "fonte": "ENEM 2020 – Questão 111",
+              "segundos_estimados": 82
             },
             {
               "id": "NAT-03-02",
@@ -856,40 +893,11 @@
               ],
               "correta": "C",
               "explicacao": "A carcaça metálica do carro funciona como uma gaiola de Faraday. As cargas ficam na superfície externa e o campo elétrico lá dentro é nulo.",
-              "fonte": "ENEM 2020 – Questão 133"
+              "fonte": "ENEM 2020 – Questão 133",
+              "segundos_estimados": 69
             },
             {
               "id": "NAT-03-03",
-              "texto": "A simples atitude de não jogar direto no lixo ou no ralo da pia o óleo de cozinha usado pode contribuir para a redução da poluição ambiental. Mas o que fazer com o óleo vegetal que não será mais usado? Não existe um modelo ideal de descarte, mas uma alternativa simples tem sido reaproveitá-lo para fazer sabão. Para isso, são necessários, além do próprio óleo, água e soda cáustica.\n\nLOBO, I. Sabão feito com óleo de cozinha. Disponível em: http://pga.pgr.mpf.gov.br. Acesso em: 29 fev. 2012 (adaptado).",
-              "enunciado": "Com base no texto, a reação química que permite o reaproveitamento do óleo vegetal é denominada",
-              "alternativas": [
-                "Redução.",
-                "Epoxidação.",
-                "Substituição.",
-                "Esterificação.",
-                "Saponificação."
-              ],
-              "correta": "E",
-              "explicacao": "Óleo (um éster, triglicerídeo) reage com soda cáustica (base forte) e forma sabão e glicerol. Essa reação é a saponificação.",
-              "fonte": "ENEM 2021 – Questão 97"
-            },
-            {
-              "id": "NAT-03-04",
-              "texto": "A água bruta coletada de mananciais apresenta alto índice de sólidos suspensos, o que a deixa com um aspecto turvo. Para se obter uma água límpida e potável, ela deve passar por um processo de purificação numa estação de tratamento de água. Nesse processo, as principais etapas são, nesta ordem: coagulação, decantação, filtração, desinfecção e fluoretação.",
-              "enunciado": "Qual é a etapa de retirada de grande parte desses sólidos?",
-              "alternativas": [
-                "Coagulação.",
-                "Decantação.",
-                "Filtração.",
-                "Desinfecção.",
-                "Fluoretação."
-              ],
-              "correta": "B",
-              "explicacao": "Depois da coagulação, a sujeira forma flocos pesados que descem para o fundo dos tanques. É na decantação que sai a maior parte dos sólidos.",
-              "fonte": "ENEM 2022 – Questão 126"
-            },
-            {
-              "id": "NAT-03-05",
               "texto": "",
               "enunciado": "O fogão por indução funciona a partir do surgimento de uma corrente elétrica induzida no fundo da panela, com consequente transformação de energia elétrica em calor por efeito Joule. A principal vantagem desses fogões é a eficiência energética, que é substancialmente maior que a dos fogões convencionais.\nA corrente elétrica mencionada é induzida por",
               "alternativas": [
@@ -901,76 +909,49 @@
               ],
               "correta": "D",
               "explicacao": "A bobina do fogão gera um campo magnético variável, que induz corrente elétrica no fundo metálico da panela (indução eletromagnética).",
-              "fonte": "ENEM 2023 – Questão 108"
+              "fonte": "ENEM 2023 – Questão 108",
+              "segundos_estimados": 51
             }
           ]
         },
         {
           "id": "NAT-04",
-          "titulo": "Corpo humano e saúde",
+          "titulo": "Biotecnologia",
           "questoes": [
             {
               "id": "NAT-04-01",
-              "texto": "O “The Kidney Project” é um projeto realizado por cientistas que pretendem desenvolver um rim biônico que executará a maioria das funções biológicas do órgão. O rim biônico possuirá duas partes que incorporam recentes avanços de nanotecnologia, filtração de membrana e biologia celular. Esse projeto significará uma grande melhoria na qualidade de vida para aquelas pessoas que dependem da hemodiálise para sobrevivência.\n\nDisponível em: https://pharm.ucsf.edu. Acesso em: 26 abr. 2019 (adaptado).",
-              "enunciado": "O dispositivo criado promoverá diretamente a",
+              "texto": "Instituições acadêmicas e de pesquisa no mundo estão inserindo genes em genomas de plantas que possam codificar produtos de interesse farmacológico. No Brasil, está sendo desenvolvida uma variedade de soja com um viricida ou microbicida capaz de prevenir a contaminação pelo vírus causador da aids. Essa leguminosa está sendo induzida a produzir a enzima cianovirina-N, que tem eficiência comprovada contra o vírus.\n\n(OLIVEIRA, M. Remédio na planta. Pesquisa Fapesp, n. 206, abr. 2013.)",
+              "enunciado": "A técnica para gerar essa leguminosa é um exemplo de",
               "alternativas": [
-                "Remoção de ureia.",
-                "Excreção de lipídios.",
-                "Síntese de vasopressina.",
-                "Transformação de amônia.",
-                "Fabricação de aldosterona."
+                "Hibridismo.",
+                "Transgenia.",
+                "Conjugação.",
+                "Terapia gênica.",
+                "Melhoramento genético."
               ],
-              "correta": "A",
-              "explicacao": "O rim filtra o sangue e elimina a ureia, resíduo tóxico do metabolismo. É isso que a hemodiálise faz hoje e que o rim biônico fará.",
-              "fonte": "ENEM 2019 – Questão 133"
+              "correta": "B",
+              "explicacao": "A soja recebeu um gene de outra espécie para produzir a cianovirina-N. Um organismo que recebe gene de outra espécie é transgênico.",
+              "fonte": "ENEM 2020 – Questão 115",
+              "segundos_estimados": 60
             },
             {
               "id": "NAT-04-02",
-              "texto": "“Na indústria farmacêutica, é muito comum o emprego de substâncias de revestimento em medicamentos de uso oral, pois trazem uma série de benefícios como alteração de sabor em medicamentos que tenham gosto ruim, melhoria da assimilação do composto, entre outras ações. Alguns compostos poliméricos à base do polissacarídeo celulose são utilizados para garantir que o fármaco somente seja liberado quando em contato com soluções aquosas cujo pH se encontre próximo da faixa da neutralidade.”\n\n(BORTOLINI, K. et al. Análise de perfil de dissolução de cápsulas gastrorresistentes utilizando polímeros industriais com aplicação em farmácias magistrais, Revista da Unifebe, n. 12, 2013. Adaptado.)",
-              "enunciado": "Qual é a finalidade do uso desse revestimento à base de celulose?",
+              "texto": "A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou um produto de terapia gênica no país, indicado para o tratamento da distrofia hereditária da retina. O procedimento é recomendado para crianças acima de 12 meses e adultos com perda de visão causada pela mutação do gene humano RPE65. O produto, elaborado por engenharia genética, é composto por um vírus, no qual foi inserida uma cópia do gene normal humano RPE65 para corrigir o funcionamento das células da retina.\n\nANVISA. Disponível em: www.gov.br/anvisa. Acesso em: 4 dez. 2021 (adaptado)",
+              "enunciado": "O sucesso dessa terapia advém do fato de que o produto favorecerá a",
               "alternativas": [
-                "Diminuir a absorção do princípio ativo no intestino.",
-                "Impedir que o fármaco seja solubilizado no intestino.",
-                "Garantir que o fármaco não seja afetado pelas secreções gástricas.",
-                "Permitir a liberação do princípio ativo pela ação das amilases salivares.",
-                "Facilitar a liberação do fármaco pela ação dos sais biliares sobre o revestimento."
+                "Correção do código genético para a tradução da proteína.",
+                "Alteração do RNA ribossômico ligado à síntese da proteína.",
+                "Produção de mutações benéficas para a correção do problema.",
+                "Liberação imediata da proteína normal na região ocular humana.",
+                "Expressão do gene responsável pela produção da enzima normal."
               ],
-              "correta": "C",
-              "explicacao": "O revestimento só libera o remédio em pH perto do neutro. Assim ele atravessa intacto o estômago ácido e só se abre no intestino, sem ser afetado pelas secreções gástricas.",
-              "fonte": "ENEM 2020 – Questão 108"
+              "correta": "E",
+              "explicacao": "O vírus leva uma cópia normal do gene RPE65 às células da retina. Elas passam a expressar esse gene e a produzir a enzima normal.",
+              "fonte": "ENEM 2022 – Questão 98",
+              "segundos_estimados": 79
             },
             {
               "id": "NAT-04-03",
-              "texto": "Um dos exames clínicos mais tradicionais para medir a capacidade reflexa dos indivíduos é o exame do reflexo patelar. Esse exame consiste na estimulação da patela, um pequeno osso localizado na parte anterior da articulação do joelho, com um pequeno martelo. A resposta reflexa ao estímulo é caracterizada pelo levantamento da perna em que o estímulo foi aplicado.",
-              "enunciado": "Qual região específica do sistema nervoso coordena essa resposta?",
-              "alternativas": [
-                "Ponte.",
-                "Medula.",
-                "Cerebelo.",
-                "Hipotálamo.",
-                "Neuro-hipófise."
-              ],
-              "correta": "B",
-              "explicacao": "O reflexo patelar é um arco reflexo: o estímulo vai até a medula espinal, que manda a resposta direto ao músculo, sem passar pelo cérebro.",
-              "fonte": "ENEM 2021 – Questão 114"
-            },
-            {
-              "id": "NAT-04-04",
-              "texto": "Diversas substâncias são empregadas com a intenção de incrementar o desempenho esportivo de atletas de alto nível. O chamado doping sanguíneo, por exemplo, pela utilização da eritropoietina, é proibido pelas principais federações de esportes no mundo. A eritropoietina é um hormônio produzido pelos rins e fígado e sua principal ação é regular o processo de eritropoiese. Seu uso administrado intravenosamente em quantidades superiores àquelas presentes naturalmente no organismo permite que o indivíduo aumente a sua capacidade de realização de exercícios físicos.",
-              "enunciado": "Esse tipo de doping está diretamente relacionado ao aumento da",
-              "alternativas": [
-                "Frequência cardíaca.",
-                "Capacidade pulmonar.",
-                "Massa muscular do indivíduo.",
-                "Atividade anaeróbica da musculatura.",
-                "Taxa de transporte de oxigênio pelo sangue."
-              ],
-              "correta": "E",
-              "explicacao": "A eritropoietina estimula a produção de hemácias. Com mais hemácias, o sangue leva mais oxigênio aos músculos.",
-              "fonte": "ENEM 2022 – Questão 104"
-            },
-            {
-              "id": "NAT-04-05",
               "texto": "A tecnologia de vacinas de RNA mensageiro (RNAm) é investigada há anos. Avanços científicos em genética molecular permitiram desenvolver uma vacina para controle da pandemia da covid-19 causada pelo vírus de RNA SARS-CoV-2. A vacina de RNAm tem sequências de genes do vírus. Entretanto, por ser muito instável, o RNAm deve ser recoberto por uma capa de lipídios que evita sua degradação e favorece sua ação. Dessa forma, o RNAm desempenhará sua função especifica atuando no mesmo compartimento celular de sempre.\n\nDisponível em: https://sbim.org.br. Acesso em: 29 nov. 2021 (adaptado).",
               "enunciado": "A imunização produzida por esse tipo de vacina é alcançada por meio da",
               "alternativas": [
@@ -982,7 +963,116 @@
               ],
               "correta": "C",
               "explicacao": "O RNAm entra nas células e é traduzido pelos ribossomos em uma proteína do vírus. O sistema imune reconhece essa proteína como antígeno e cria defesas.",
-              "fonte": "ENEM 2023 – Questão 106"
+              "fonte": "ENEM 2023 – Questão 106",
+              "segundos_estimados": 83
+            }
+          ]
+        },
+        {
+          "id": "NAT-05",
+          "titulo": "Química no cotidiano",
+          "questoes": [
+            {
+              "id": "NAT-05-01",
+              "texto": "A simples atitude de não jogar direto no lixo ou no ralo da pia o óleo de cozinha usado pode contribuir para a redução da poluição ambiental. Mas o que fazer com o óleo vegetal que não será mais usado? Não existe um modelo ideal de descarte, mas uma alternativa simples tem sido reaproveitá-lo para fazer sabão. Para isso, são necessários, além do próprio óleo, água e soda cáustica.\n\nLOBO, I. Sabão feito com óleo de cozinha. Disponível em: http://pga.pgr.mpf.gov.br. Acesso em: 29 fev. 2012 (adaptado).",
+              "enunciado": "Com base no texto, a reação química que permite o reaproveitamento do óleo vegetal é denominada",
+              "alternativas": [
+                "Redução.",
+                "Epoxidação.",
+                "Substituição.",
+                "Esterificação.",
+                "Saponificação."
+              ],
+              "correta": "E",
+              "explicacao": "Óleo (um éster, triglicerídeo) reage com soda cáustica (base forte) e forma sabão e glicerol. Essa reação é a saponificação.",
+              "fonte": "ENEM 2021 – Questão 97",
+              "segundos_estimados": 67
+            },
+            {
+              "id": "NAT-05-02",
+              "texto": "A água bruta coletada de mananciais apresenta alto índice de sólidos suspensos, o que a deixa com um aspecto turvo. Para se obter uma água límpida e potável, ela deve passar por um processo de purificação numa estação de tratamento de água. Nesse processo, as principais etapas são, nesta ordem: coagulação, decantação, filtração, desinfecção e fluoretação.",
+              "enunciado": "Qual é a etapa de retirada de grande parte desses sólidos?",
+              "alternativas": [
+                "Coagulação.",
+                "Decantação.",
+                "Filtração.",
+                "Desinfecção.",
+                "Fluoretação."
+              ],
+              "correta": "B",
+              "explicacao": "Depois da coagulação, a sujeira forma flocos pesados que descem para o fundo dos tanques. É na decantação que sai a maior parte dos sólidos.",
+              "fonte": "ENEM 2022 – Questão 126",
+              "segundos_estimados": 54
+            },
+            {
+              "id": "NAT-05-03",
+              "texto": "“Na indústria farmacêutica, é muito comum o emprego de substâncias de revestimento em medicamentos de uso oral, pois trazem uma série de benefícios como alteração de sabor em medicamentos que tenham gosto ruim, melhoria da assimilação do composto, entre outras ações. Alguns compostos poliméricos à base do polissacarídeo celulose são utilizados para garantir que o fármaco somente seja liberado quando em contato com soluções aquosas cujo pH se encontre próximo da faixa da neutralidade.”\n\n(BORTOLINI, K. et al. Análise de perfil de dissolução de cápsulas gastrorresistentes utilizando polímeros industriais com aplicação em farmácias magistrais, Revista da Unifebe, n. 12, 2013. Adaptado.)",
+              "enunciado": "Qual é a finalidade do uso desse revestimento à base de celulose?",
+              "alternativas": [
+                "Diminuir a absorção do princípio ativo no intestino.",
+                "Impedir que o fármaco seja solubilizado no intestino.",
+                "Garantir que o fármaco não seja afetado pelas secreções gástricas.",
+                "Permitir a liberação do princípio ativo pela ação das amilases salivares.",
+                "Facilitar a liberação do fármaco pela ação dos sais biliares sobre o revestimento."
+              ],
+              "correta": "C",
+              "explicacao": "O revestimento só libera o remédio em pH perto do neutro. Assim ele atravessa intacto o estômago ácido e só se abre no intestino, sem ser afetado pelas secreções gástricas.",
+              "fonte": "ENEM 2020 – Questão 108",
+              "segundos_estimados": 84
+            }
+          ]
+        },
+        {
+          "id": "NAT-06",
+          "titulo": "Corpo humano e saúde",
+          "questoes": [
+            {
+              "id": "NAT-06-01",
+              "texto": "O “The Kidney Project” é um projeto realizado por cientistas que pretendem desenvolver um rim biônico que executará a maioria das funções biológicas do órgão. O rim biônico possuirá duas partes que incorporam recentes avanços de nanotecnologia, filtração de membrana e biologia celular. Esse projeto significará uma grande melhoria na qualidade de vida para aquelas pessoas que dependem da hemodiálise para sobrevivência.\n\nDisponível em: https://pharm.ucsf.edu. Acesso em: 26 abr. 2019 (adaptado).",
+              "enunciado": "O dispositivo criado promoverá diretamente a",
+              "alternativas": [
+                "Remoção de ureia.",
+                "Excreção de lipídios.",
+                "Síntese de vasopressina.",
+                "Transformação de amônia.",
+                "Fabricação de aldosterona."
+              ],
+              "correta": "A",
+              "explicacao": "O rim filtra o sangue e elimina a ureia, resíduo tóxico do metabolismo. É isso que a hemodiálise faz hoje e que o rim biônico fará.",
+              "fonte": "ENEM 2019 – Questão 133",
+              "segundos_estimados": 62
+            },
+            {
+              "id": "NAT-06-02",
+              "texto": "Um dos exames clínicos mais tradicionais para medir a capacidade reflexa dos indivíduos é o exame do reflexo patelar. Esse exame consiste na estimulação da patela, um pequeno osso localizado na parte anterior da articulação do joelho, com um pequeno martelo. A resposta reflexa ao estímulo é caracterizada pelo levantamento da perna em que o estímulo foi aplicado.",
+              "enunciado": "Qual região específica do sistema nervoso coordena essa resposta?",
+              "alternativas": [
+                "Ponte.",
+                "Medula.",
+                "Cerebelo.",
+                "Hipotálamo.",
+                "Neuro-hipófise."
+              ],
+              "correta": "B",
+              "explicacao": "O reflexo patelar é um arco reflexo: o estímulo vai até a medula espinal, que manda a resposta direto ao músculo, sem passar pelo cérebro.",
+              "fonte": "ENEM 2021 – Questão 114",
+              "segundos_estimados": 54
+            },
+            {
+              "id": "NAT-06-03",
+              "texto": "Diversas substâncias são empregadas com a intenção de incrementar o desempenho esportivo de atletas de alto nível. O chamado doping sanguíneo, por exemplo, pela utilização da eritropoietina, é proibido pelas principais federações de esportes no mundo. A eritropoietina é um hormônio produzido pelos rins e fígado e sua principal ação é regular o processo de eritropoiese. Seu uso administrado intravenosamente em quantidades superiores àquelas presentes naturalmente no organismo permite que o indivíduo aumente a sua capacidade de realização de exercícios físicos.",
+              "enunciado": "Esse tipo de doping está diretamente relacionado ao aumento da",
+              "alternativas": [
+                "Frequência cardíaca.",
+                "Capacidade pulmonar.",
+                "Massa muscular do indivíduo.",
+                "Atividade anaeróbica da musculatura.",
+                "Taxa de transporte de oxigênio pelo sangue."
+              ],
+              "correta": "E",
+              "explicacao": "A eritropoietina estimula a produção de hemácias. Com mais hemácias, o sangue leva mais oxigênio aos músculos.",
+              "fonte": "ENEM 2022 – Questão 104",
+              "segundos_estimados": 67
             }
           ]
         }
@@ -1008,7 +1098,8 @@
               ],
               "correta": "E",
               "explicacao": "O transporte custa um quinto do valor do objeto, ou seja, 20%. Para o gasto total não passar de 100% do valor, sobram no máximo 80% para a recompensa.",
-              "fonte": "ENEM 2019 – Questão 138"
+              "fonte": "ENEM 2019 – Questão 138",
+              "segundos_estimados": 125
             },
             {
               "id": "MAT-01-02",
@@ -1023,40 +1114,11 @@
               ],
               "correta": "B",
               "explicacao": "Em 60 dias há 60 × 1 440 = 86 400 minutos, o que dá 86 400 ÷ 48 = 1 800 acionamentos. Cada um libera 360 ÷ 1 800 = 0,2 mL.",
-              "fonte": "ENEM 2022 – Questão 164"
+              "fonte": "ENEM 2022 – Questão 164",
+              "segundos_estimados": 97
             },
             {
               "id": "MAT-01-03",
-              "texto": "Antônio, Joaquim e José são sócios de uma empresa cujo capital é dividido, entre os três, em partes proporcionais a: 4, 6 e 6, respectivamente. Com a intenção de igualar a participação dos três sócios no capital da empresa, Antônio pretende adquirir uma fração do capital de cada um dos outros dois sócios.",
-              "enunciado": "A fração do capital de cada sócio que Antônio deverá adquirir é",
-              "alternativas": [
-                "[[formula:2020-170-a.png]]",
-                "[[formula:2020-170-b.png]]",
-                "[[formula:2020-170-c.png]]",
-                "[[formula:2020-170-d.png]]",
-                "[[formula:2020-170-e.png]]"
-              ],
-              "correta": "C",
-              "explicacao": "São 4 + 6 + 6 = 16 partes, e cada sócio deve ficar com 16/3. Antônio precisa de 16/3 − 4 = 4/3 de parte, 2/3 vindos de cada sócio. Como cada um tem 6 partes, isso é (2/3) ÷ 6 = 1/9 do capital dele.",
-              "fonte": "ENEM 2020 – Questão 170"
-            },
-            {
-              "id": "MAT-01-04",
-              "texto": "Uma empresa de engenharia projetou uma casa com a forma de um retângulo para um de seus clientes. Esse cliente solicitou a inclusão de uma varanda em forma de L. A figura apresenta a planta baixa desenhada pela empresa, já com a varanda incluída, cujas medidas, indicadas em centímetro, representam os valores das dimensões da varanda na escala de 1 : 50.\n\n[[imagem:2022-161-t1.png]]",
-              "enunciado": "A medida real da área da varanda, em metro quadrado, é",
-              "alternativas": [
-                "33,40",
-                "66,80",
-                "89,24",
-                "133,60",
-                "534,40"
-              ],
-              "correta": "A",
-              "explicacao": "No desenho, a varanda tem 16 × 5 + 13,4 × 4 = 133,6 cm². Na escala 1 : 50, as áreas ficam 50² = 2 500 vezes maiores: 334 000 cm² = 33,4 m².",
-              "fonte": "ENEM 2022 – Questão 161"
-            },
-            {
-              "id": "MAT-01-05",
               "texto": "Uma loja vende seus produtos de duas formas: à vista ou financiado em três parcelas mensais iguais. Para definir o valor dessas parcelas nas vendas financiadas, a loja aumenta em 20% o valor do produto à vista e divide esse novo valor por 3. A primeira parcela deve ser paga no ato da compra, e as duas últimas, em 30 e 60 dias após a compra.\n\nUm cliente da loja decidiu comprar, de forma financiada, um produto cujo valor à vista é R$ 1 500,00.\n\nUtilize 5,29 como aproximação para √28.",
               "enunciado": "A taxa mensal de juros compostos praticada nesse financiamento é de",
               "alternativas": [
@@ -1068,16 +1130,33 @@
               ],
               "correta": "D",
               "explicacao": "Cada parcela é 1 800 ÷ 3 = 600, e a primeira é paga na hora. Sobram 900 financiados: 900 = 600/x + 600/x², com x = 1 + i. Daí 3x² − 2x − 2 = 0 e x = (2 + √28)/6 ≈ 1,215, ou seja, 21,5% ao mês.",
-              "fonte": "ENEM 2023 – Questão 161"
+              "fonte": "ENEM 2023 – Questão 161",
+              "segundos_estimados": 112
             }
           ]
         },
         {
           "id": "MAT-02",
-          "titulo": "Geometria",
+          "titulo": "Áreas e escala",
           "questoes": [
             {
               "id": "MAT-02-01",
+              "texto": "Uma empresa de engenharia projetou uma casa com a forma de um retângulo para um de seus clientes. Esse cliente solicitou a inclusão de uma varanda em forma de L. A figura apresenta a planta baixa desenhada pela empresa, já com a varanda incluída, cujas medidas, indicadas em centímetro, representam os valores das dimensões da varanda na escala de 1 : 50.\n\n[[imagem:2022-161-t1.png]]",
+              "enunciado": "A medida real da área da varanda, em metro quadrado, é",
+              "alternativas": [
+                "33,40",
+                "66,80",
+                "89,24",
+                "133,60",
+                "534,40"
+              ],
+              "correta": "A",
+              "explicacao": "No desenho, a varanda tem 16 × 5 + 13,4 × 4 = 133,6 cm². Na escala 1 : 50, as áreas ficam 50² = 2 500 vezes maiores: 334 000 cm² = 33,4 m².",
+              "fonte": "ENEM 2022 – Questão 161",
+              "segundos_estimados": 117
+            },
+            {
+              "id": "MAT-02-02",
               "texto": "Na planta baixa de um clube, a piscina é representada por um quadrado cuja área real mede 400 m². Ao redor dessa piscina, será construída uma calçada, de largura constante igual a 5 m.\n\n[[imagem:2023-155-t1.png]]",
               "enunciado": "Qual é a medida da área, em metro quadrado, ocupada pela calçada?",
               "alternativas": [
@@ -1089,10 +1168,11 @@
               ],
               "correta": "D",
               "explicacao": "A piscina tem lado √400 = 20 m. Com 5 m de calçada de cada lado, o quadrado todo tem 30 m de lado e 900 m². A calçada ocupa 900 − 400 = 500 m².",
-              "fonte": "ENEM 2023 – Questão 155"
+              "fonte": "ENEM 2023 – Questão 155",
+              "segundos_estimados": 107
             },
             {
-              "id": "MAT-02-02",
+              "id": "MAT-02-03",
               "texto": "Uma administração municipal encomendou a pintura de dez placas de sinalização para colocar em seu pátio de estacionamento.\n\nO profissional contratado para o serviço inicial pintará o fundo de dez placas e cobrará um valor de acordo com a área total dessas placas. O formato de cada placa é um círculo de diâmetro d = 40 cm, que tangencia lados de um retângulo, sendo que o comprimento total da placa é h = 60 cm, conforme ilustrado na figura. Use 3,14 como aproximação para π.\n\n[[imagem:2019-147-t1.png]]",
               "enunciado": "Qual é a soma das medidas das áreas, em centímetros quadrados, das dez placas?",
               "alternativas": [
@@ -1104,10 +1184,17 @@
               ],
               "correta": "B",
               "explicacao": "Cada placa é meio círculo de raio 20 cm sobre um quadrado de 40 cm de lado: 3,14 × 20² ÷ 2 + 40² = 628 + 1 600 = 2 228 cm². As dez placas somam 22 280 cm².",
-              "fonte": "ENEM 2019 – Questão 147"
-            },
+              "fonte": "ENEM 2019 – Questão 147",
+              "segundos_estimados": 126
+            }
+          ]
+        },
+        {
+          "id": "MAT-03",
+          "titulo": "Volumes e superfícies",
+          "questoes": [
             {
-              "id": "MAT-02-03",
+              "id": "MAT-03-01",
               "texto": "Uma loja de materiais de construção vende dois tipos de caixas-d’água: tipo A e tipo B. Ambas têm formato cilíndrico e possuem o mesmo volume, e a altura da caixa-d’água do tipo B é igual a 25% da altura da caixa-d’água do tipo A.",
               "enunciado": "Se R denota o raio da caixa-d’água do tipo A, então o raio da caixa-d’água do tipo B é",
               "alternativas": [
@@ -1119,10 +1206,11 @@
               ],
               "correta": "B",
               "explicacao": "Volumes iguais: πR²h = πr²(h/4). Então r² = 4R² e r = 2R. Altura quatro vezes menor pede um raio duas vezes maior.",
-              "fonte": "ENEM 2020 – Questão 161"
+              "fonte": "ENEM 2020 – Questão 161",
+              "segundos_estimados": 111
             },
             {
-              "id": "MAT-02-04",
+              "id": "MAT-03-02",
               "texto": "Uma pessoa comprou uma caneca para tomar sopa, conforme ilustração.\n\n[[imagem:2021-170-t1.png]]\n\nSabe-se que 1 cm³ = 1 mL e que o topo da caneca é uma circunferência de diâmetro (D) medindo 10 cm, e a base é um círculo de diâmetro (d) medindo 8 cm. Além disso, sabe-se que a altura (h) dessa caneca mede 12 cm (distância entre o centro das circunferências do topo e da base).\n\nUtilize 3 como aproximação para π.",
               "enunciado": "Qual é a capacidade volumétrica, em mililitro, dessa caneca?",
               "alternativas": [
@@ -1134,10 +1222,11 @@
               ],
               "correta": "C",
               "explicacao": "A caneca é um tronco de cone: V = πh(R² + Rr + r²)/3 = 3 × 12 × (25 + 20 + 16)/3 = 12 × 61 = 732 cm³, ou seja, 732 mL.",
-              "fonte": "ENEM 2021 – Questão 170"
+              "fonte": "ENEM 2021 – Questão 170",
+              "segundos_estimados": 119
             },
             {
-              "id": "MAT-02-05",
+              "id": "MAT-03-03",
               "texto": "A figura representa uma escada com três degraus, construída em concreto maciço, com suas medidas especificadas.\n\n[[imagem:2023-165-t1.png]]\n\nNessa escada, pisos e espelhos têm formato retangular, e as paredes laterais têm formato de um polígono cujos lados adjacentes são perpendiculares. Pisos, espelhos e paredes laterais serão revestidos em cerâmica.",
               "enunciado": "A área a ser revestida em cerâmica, em metro quadrado, mede",
               "alternativas": [
@@ -1149,61 +1238,33 @@
               ],
               "correta": "E",
               "explicacao": "Pisos: 3 × 1,0 × 0,25 = 0,75 m². Espelhos: 3 × 1,0 × 0,20 = 0,60 m². Cada parede lateral tem 0,25 × (0,60 + 0,40 + 0,20) = 0,30 m², e são duas. Total: 0,75 + 0,60 + 0,60 = 1,95 m².",
-              "fonte": "ENEM 2023 – Questão 165"
+              "fonte": "ENEM 2023 – Questão 165",
+              "segundos_estimados": 113
             }
           ]
         },
         {
-          "id": "MAT-03",
-          "titulo": "Estatística e probabilidade",
+          "id": "MAT-04",
+          "titulo": "Frações e probabilidade",
           "questoes": [
             {
-              "id": "MAT-03-01",
-              "texto": "Os 100 funcionários de uma empresa estão distribuídos em dois setores: Produção e Administração.\n\nOs funcionários de um mesmo setor recebem salários com valores iguais. O quadro apresenta a quantidade de funcionários por setor e seus respectivos salários.\n\n[[imagem:2023-137-t1.png]]",
-              "enunciado": "A média dos salários dos 100 funcionários dessa empresa, em real, é",
+              "id": "MAT-04-01",
+              "texto": "Antônio, Joaquim e José são sócios de uma empresa cujo capital é dividido, entre os três, em partes proporcionais a: 4, 6 e 6, respectivamente. Com a intenção de igualar a participação dos três sócios no capital da empresa, Antônio pretende adquirir uma fração do capital de cada um dos outros dois sócios.",
+              "enunciado": "A fração do capital de cada sócio que Antônio deverá adquirir é",
               "alternativas": [
-                "2.000,00.",
-                "2.500,00.",
-                "3.250,00.",
-                "4.500,00.",
-                "9.000,00."
+                "[[formula:2020-170-a.png]]",
+                "[[formula:2020-170-b.png]]",
+                "[[formula:2020-170-c.png]]",
+                "[[formula:2020-170-d.png]]",
+                "[[formula:2020-170-e.png]]"
               ],
               "correta": "C",
-              "explicacao": "Média ponderada pelo número de funcionários: (75 × 2 000 + 25 × 7 000) ÷ 100 = 325 000 ÷ 100 = 3 250 reais.",
-              "fonte": "ENEM 2023 – Questão 137"
+              "explicacao": "São 4 + 6 + 6 = 16 partes, e cada sócio deve ficar com 16/3. Antônio precisa de 16/3 − 4 = 4/3 de parte, 2/3 vindos de cada sócio. Como cada um tem 6 partes, isso é (2/3) ÷ 6 = 1/9 do capital dele.",
+              "fonte": "ENEM 2020 – Questão 170",
+              "segundos_estimados": 112
             },
             {
-              "id": "MAT-03-02",
-              "texto": "Uma das informações que pode auxiliar no dimensionamento do número de pediatras que devem atender em uma Unidade Básica de Saúde (UBS) é o número que representa a mediana da quantidade de crianças por família existente na região sob sua responsabilidade. O quadro mostra a distribuição das frequências do número de crianças por família na região de responsabilidade de uma UBS.\n\n[[imagem:2022-149-t1.png]]",
-              "enunciado": "O número que representa a mediana da quantidade de crianças por família nessa região é",
-              "alternativas": [
-                "1,0.",
-                "1,5.",
-                "1,9.",
-                "2,1.",
-                "2,5."
-              ],
-              "correta": "B",
-              "explicacao": "São 1 000 famílias, então a mediana é a média entre a 500ª e a 501ª. Acumulando, até 1 criança há exatamente 500 famílias, e a 501ª já tem 2. Mediana: (1 + 2) ÷ 2 = 1,5.",
-              "fonte": "ENEM 2022 – Questão 149"
-            },
-            {
-              "id": "MAT-03-03",
-              "texto": "O gráfico apresenta os totais de receitas e despesas de uma empresa, expressos em milhão de reais, no decorrer dos meses de um determinado ano. A empresa obtém lucro quando a diferença entre receita e despesa é positiva e tem prejuízo quando essa diferença é negativa.\n\n[[imagem:2022-138-t1.png]]",
-              "enunciado": "Qual é a mediana, em milhão de reais, dos valores dos lucros apurados pela empresa nesse ano?",
-              "alternativas": [
-                "1,5",
-                "2,0",
-                "2,9",
-                "3,0",
-                "5,5"
-              ],
-              "correta": "D",
-              "explicacao": "Só entram os meses com lucro: jan. 3, mar. 1, maio 5, jun. 3, jul. 2, set. 4, nov. 1 e dez. 4. Em ordem: 1, 1, 2, 3, 3, 4, 4, 5. A mediana é (3 + 3) ÷ 2 = 3.",
-              "fonte": "ENEM 2022 – Questão 138"
-            },
-            {
-              "id": "MAT-03-04",
+              "id": "MAT-04-02",
               "texto": "Em um colégio público, a admissão no primeiro ano se dá por sorteio. Neste ano há 55 candidatos, cujas inscrições são numeradas de 01 a 55. O sorteio de cada número de inscrição será realizado em etapas, utilizando-se duas urnas. Da primeira urna será sorteada uma bola, dentre bolas numeradas de 0 a 9, que representará o algarismo das unidades do número de inscrição a ser sorteado e, em seguida, da segunda urna, será sorteada uma bola para representar o algarismo das dezenas desse número. Depois do primeiro sorteio, e antes de se sortear o algarismo das dezenas, as bolas que estarão presentes na segunda urna serão apenas aquelas cujos números formam, com o algarismo já sorteado, um número de 01 a 55.",
               "enunciado": "As probabilidades de os candidatos de inscrição número 50 e 02 serem sorteados são, respectivamente,",
               "alternativas": [
@@ -1215,10 +1276,11 @@
               ],
               "correta": "A",
               "explicacao": "Para o 50: a unidade 0 sai com chance 1/10 e restam as dezenas 1 a 5 (5 bolas), então 1/10 × 1/5 = 1/50. Para o 02: a unidade 2 sai com 1/10 e restam as dezenas 0 a 5 (6 bolas), então 1/10 × 1/6 = 1/60.",
-              "fonte": "ENEM 2023 – Questão 168"
+              "fonte": "ENEM 2023 – Questão 168",
+              "segundos_estimados": 136
             },
             {
-              "id": "MAT-03-05",
+              "id": "MAT-04-03",
               "texto": "Em um jogo de bingo, as cartelas contêm 16 quadrículas dispostas em linhas e colunas. Cada quadrícula tem impresso um número, dentre os inteiros de 1 a 50, sem repetição de número. Na primeira rodada, um número é sorteado, aleatoriamente, dentre os 50 possíveis. Em todas as rodadas, o número sorteado é descartado e não participa dos sorteios das rodadas seguintes. Caso o jogador tenha em sua cartela o número sorteado, ele o assinala na cartela. Ganha o jogador que primeiro conseguir preencher quatro quadrículas que formam uma linha, uma coluna ou uma diagonal, conforme os tipos de situações ilustradas na Figura 1.\n\n[[imagem:2022-141-t1.png]]\n\nO jogo inicia e, nas quatro primeiras rodadas, foram sorteados os seguintes números: 03, 27, 07 e 48. Ao final da quarta rodada, somente Pedro possuía uma cartela que continha esses quatro números sorteados, sendo que todos os demais jogadores conseguiram assinalar, no máximo, um desses números em suas cartelas. Observe na Figura 2 o cartão de Pedro após as quatro primeiras rodadas.\n\n[[imagem:2022-141-t2.png]]",
               "enunciado": "A probabilidade de Pedro ganhar o jogo em uma das duas próximas rodadas é",
               "alternativas": [
@@ -1230,61 +1292,65 @@
               ],
               "correta": "E",
               "explicacao": "Restam 46 números. Na próxima rodada Pedro só ganha se sair o 12 (1/46). Na outra, ganha se sair o 12 depois de outro número (45 casos), ou 05 e 45, ou 11 e 19, em qualquer ordem (2 + 2 casos): 49/(46 × 45).",
-              "fonte": "ENEM 2022 – Questão 141"
+              "fonte": "ENEM 2022 – Questão 141",
+              "segundos_estimados": 150
             }
           ]
         },
         {
-          "id": "MAT-04",
-          "titulo": "Funções e gráficos",
+          "id": "MAT-05",
+          "titulo": "Tabelas e gráficos",
           "questoes": [
             {
-              "id": "MAT-04-01",
-              "texto": "Uma empresa tem diversos funcionários. Um deles é o gerente, que recebe R$ 1000,00 por semana.\nOs outros funcionários são diaristas. Cada um trabalha 2 dias por semana, recebendo R$ 80,00 por dia trabalhado.",
-              "enunciado": "Chamando de X a quantidade total de funcionários da empresa, a quantia Y, em reais, que esta empresa gasta semanalmente para pagar seus funcionários é expressa por",
+              "id": "MAT-05-01",
+              "texto": "Os 100 funcionários de uma empresa estão distribuídos em dois setores: Produção e Administração.\n\nOs funcionários de um mesmo setor recebem salários com valores iguais. O quadro apresenta a quantidade de funcionários por setor e seus respectivos salários.\n\n[[imagem:2023-137-t1.png]]",
+              "enunciado": "A média dos salários dos 100 funcionários dessa empresa, em real, é",
               "alternativas": [
-                "Y = 80X + 920.",
-                "Y = 80X + 1000.",
-                "Y = 80X + 1080.",
-                "Y = 160X + 840.",
-                "Y = 160X + 1000."
-              ],
-              "correta": "D",
-              "explicacao": "Além do gerente, há X − 1 diaristas, e cada um recebe 2 × 80 = 160 reais por semana. Y = 1 000 + 160(X − 1) = 160X + 840.",
-              "fonte": "ENEM 2019 – Questão 168"
-            },
-            {
-              "id": "MAT-04-02",
-              "texto": "Um lava-rápido oferece dois tipos de lavagem de veículos: lavagem simples, ao preço de R$ 20,00, e lavagem completa, ao preço de R$35,00. Para cobrir as despesas com produtos e funcionários, e não ter prejuízos, o lava-rápido deve ter uma receita diária de, pelo menos, R$300,00.",
-              "enunciado": "Para não ter prejuízo, o menor número de lavagens diárias que o lava-rápido deve efetuar é",
-              "alternativas": [
-                "6",
-                "8",
-                "9",
-                "15",
-                "20"
+                "2.000,00.",
+                "2.500,00.",
+                "3.250,00.",
+                "4.500,00.",
+                "9.000,00."
               ],
               "correta": "C",
-              "explicacao": "O menor número de lavagens sai quando todas são completas: 300 ÷ 35 ≈ 8,6. Oito lavagens dão só 280 reais, então são necessárias 9.",
-              "fonte": "ENEM 2021 – Questão 173"
+              "explicacao": "Média ponderada pelo número de funcionários: (75 × 2 000 + 25 × 7 000) ÷ 100 = 325 000 ÷ 100 = 3 250 reais.",
+              "fonte": "ENEM 2023 – Questão 137",
+              "segundos_estimados": 112
             },
             {
-              "id": "MAT-04-03",
-              "texto": "Uma empresa presta serviço de abastecimento de água em uma cidade. O valor mensal a pagar por esse serviço é determinado pela aplicação de tarifas, por faixas de consumo de água, sendo obtido pela adição dos valores correspondentes a cada faixa.\n\n• Faixa 1: para consumo de até 6 m³, valor fixo de R$12,00;\n\n• Faixa 2: para consumo superior a 6 m³ e até 10 m³, tarifa de R$ 3,00 por metro cúbico ao que exceder a 6m³;\n\n• Faixa 3: para consumo superior a 10 m³, tarifa de R$ 6,00 por metro cúbico ao que exceder a 10 m³.\n\nSabe-se que nessa cidade o consumo máximo de água por residência é de 15 m³ por mês.",
-              "enunciado": "O gráfico que melhor descreve o valor P, em real, a ser pago por mês, em função do volume V de água consumido, em metro cúbico, é",
+              "id": "MAT-05-02",
+              "texto": "Uma das informações que pode auxiliar no dimensionamento do número de pediatras que devem atender em uma Unidade Básica de Saúde (UBS) é o número que representa a mediana da quantidade de crianças por família existente na região sob sua responsabilidade. O quadro mostra a distribuição das frequências do número de crianças por família na região de responsabilidade de uma UBS.\n\n[[imagem:2022-149-t1.png]]",
+              "enunciado": "O número que representa a mediana da quantidade de crianças por família nessa região é",
               "alternativas": [
-                "[[imagem:2019-139-a.png]]",
-                "[[imagem:2019-139-b.png]]",
-                "[[imagem:2019-139-c.png]]",
-                "[[imagem:2019-139-d.png]]",
-                "[[imagem:2019-139-e.png]]"
+                "1,0.",
+                "1,5.",
+                "1,9.",
+                "2,1.",
+                "2,5."
               ],
-              "correta": "A",
-              "explicacao": "Até 6 m³ o valor é fixo (12 reais): trecho horizontal. De 6 a 10 m³ sobe 3 reais por m³ e, de 10 a 15 m³, 6 reais por m³, então o último trecho é o mais inclinado.",
-              "fonte": "ENEM 2019 – Questão 139"
+              "correta": "B",
+              "explicacao": "São 1 000 famílias, então a mediana é a média entre a 500ª e a 501ª. Acumulando, até 1 criança há exatamente 500 famílias, e a 501ª já tem 2. Mediana: (1 + 2) ÷ 2 = 1,5.",
+              "fonte": "ENEM 2022 – Questão 149",
+              "segundos_estimados": 119
             },
             {
-              "id": "MAT-04-04",
+              "id": "MAT-05-03",
+              "texto": "O gráfico apresenta os totais de receitas e despesas de uma empresa, expressos em milhão de reais, no decorrer dos meses de um determinado ano. A empresa obtém lucro quando a diferença entre receita e despesa é positiva e tem prejuízo quando essa diferença é negativa.\n\n[[imagem:2022-138-t1.png]]",
+              "enunciado": "Qual é a mediana, em milhão de reais, dos valores dos lucros apurados pela empresa nesse ano?",
+              "alternativas": [
+                "1,5",
+                "2,0",
+                "2,9",
+                "3,0",
+                "5,5"
+              ],
+              "correta": "D",
+              "explicacao": "Só entram os meses com lucro: jan. 3, mar. 1, maio 5, jun. 3, jul. 2, set. 4, nov. 1 e dez. 4. Em ordem: 1, 1, 2, 3, 3, 4, 4, 5. A mediana é (3 + 3) ÷ 2 = 3.",
+              "fonte": "ENEM 2022 – Questão 138",
+              "segundos_estimados": 114
+            },
+            {
+              "id": "MAT-05-04",
               "texto": "O quadro representa a relação entre o preço de um produto (R) e seu respectivo imposto devido (I).\n\n[[imagem:2021-162-t1.png]]",
               "enunciado": "O gráfico que melhor representa essa relação é",
               "alternativas": [
@@ -1296,10 +1362,65 @@
               ],
               "correta": "A",
               "explicacao": "Até 5 000 o imposto é zero. Em 10 000 ele vale 10% de 5 000 = 500 e, em 15 000, 500 + 30% de 5 000 = 2 000. O segundo trecho de subida é bem mais íngreme.",
-              "fonte": "ENEM 2021 – Questão 162"
+              "fonte": "ENEM 2021 – Questão 162",
+              "segundos_estimados": 99
+            }
+          ]
+        },
+        {
+          "id": "MAT-06",
+          "titulo": "Funções e inequações",
+          "questoes": [
+            {
+              "id": "MAT-06-01",
+              "texto": "Uma empresa tem diversos funcionários. Um deles é o gerente, que recebe R$ 1000,00 por semana.\nOs outros funcionários são diaristas. Cada um trabalha 2 dias por semana, recebendo R$ 80,00 por dia trabalhado.",
+              "enunciado": "Chamando de X a quantidade total de funcionários da empresa, a quantia Y, em reais, que esta empresa gasta semanalmente para pagar seus funcionários é expressa por",
+              "alternativas": [
+                "Y = 80X + 920.",
+                "Y = 80X + 1000.",
+                "Y = 80X + 1080.",
+                "Y = 160X + 840.",
+                "Y = 160X + 1000."
+              ],
+              "correta": "D",
+              "explicacao": "Além do gerente, há X − 1 diaristas, e cada um recebe 2 × 80 = 160 reais por semana. Y = 1 000 + 160(X − 1) = 160X + 840.",
+              "fonte": "ENEM 2019 – Questão 168",
+              "segundos_estimados": 101
             },
             {
-              "id": "MAT-04-05",
+              "id": "MAT-06-02",
+              "texto": "Um lava-rápido oferece dois tipos de lavagem de veículos: lavagem simples, ao preço de R$ 20,00, e lavagem completa, ao preço de R$35,00. Para cobrir as despesas com produtos e funcionários, e não ter prejuízos, o lava-rápido deve ter uma receita diária de, pelo menos, R$300,00.",
+              "enunciado": "Para não ter prejuízo, o menor número de lavagens diárias que o lava-rápido deve efetuar é",
+              "alternativas": [
+                "6",
+                "8",
+                "9",
+                "15",
+                "20"
+              ],
+              "correta": "C",
+              "explicacao": "O menor número de lavagens sai quando todas são completas: 300 ÷ 35 ≈ 8,6. Oito lavagens dão só 280 reais, então são necessárias 9.",
+              "fonte": "ENEM 2021 – Questão 173",
+              "segundos_estimados": 99
+            },
+            {
+              "id": "MAT-06-03",
+              "texto": "Uma empresa presta serviço de abastecimento de água em uma cidade. O valor mensal a pagar por esse serviço é determinado pela aplicação de tarifas, por faixas de consumo de água, sendo obtido pela adição dos valores correspondentes a cada faixa.\n\n• Faixa 1: para consumo de até 6 m³, valor fixo de R$12,00;\n\n• Faixa 2: para consumo superior a 6 m³ e até 10 m³, tarifa de R$ 3,00 por metro cúbico ao que exceder a 6m³;\n\n• Faixa 3: para consumo superior a 10 m³, tarifa de R$ 6,00 por metro cúbico ao que exceder a 10 m³.\n\nSabe-se que nessa cidade o consumo máximo de água por residência é de 15 m³ por mês.",
+              "enunciado": "O gráfico que melhor descreve o valor P, em real, a ser pago por mês, em função do volume V de água consumido, em metro cúbico, é",
+              "alternativas": [
+                "[[imagem:2019-139-a.png]]",
+                "[[imagem:2019-139-b.png]]",
+                "[[imagem:2019-139-c.png]]",
+                "[[imagem:2019-139-d.png]]",
+                "[[imagem:2019-139-e.png]]"
+              ],
+              "correta": "A",
+              "explicacao": "Até 6 m³ o valor é fixo (12 reais): trecho horizontal. De 6 a 10 m³ sobe 3 reais por m³ e, de 10 a 15 m³, 6 reais por m³, então o último trecho é o mais inclinado.",
+              "fonte": "ENEM 2019 – Questão 139",
+              "segundos_estimados": 139
+            },
+            {
+              "id": "MAT-06-04",
               "texto": "O álcool é um depressor do sistema nervoso central e age diretamente em diversos órgãos. A concentração de álcool no sangue pode ser entendida como a razão entre a quantidade q de álcool ingerido, medida em grama, e o volume de sangue, em litro, presente no organismo do indivíduo. Em geral, considera-se que esse volume corresponda ao valor numérico dado por 8% da massa corporal m desse indivíduo, medida em quilograma. De acordo com a Associação Médica Americana, uma concentração alcoólica superior a 0,4 grama por litro de sangue é capaz de trazer prejuízos à saúde do indivíduo.\n\nDisponível em: http://cisa.org.br. Acesso em: 1 dez. 2018 (adaptado).",
               "enunciado": "A expressão relacionando q e m que representa a concentração alcoólica prejudicial à saúde do indivíduo, de acordo com a Associação Médica Americana, é",
               "alternativas": [
@@ -1311,11 +1432,94 @@
               ],
               "correta": "E",
               "explicacao": "O volume de sangue é 8% da massa, ou seja, 0,08m litros. A concentração é q ÷ 0,08m, e ela prejudica a saúde quando passa de 0,4.",
-              "fonte": "ENEM 2019 – Questão 165"
+              "fonte": "ENEM 2019 – Questão 165",
+              "segundos_estimados": 135
             }
           ]
         }
       ]
     }
-  ]
+  ],
+  "ids_v1": {
+    "LIN-01-01": "LIN-01-01",
+    "LIN-01-02": "LIN-06-01",
+    "LIN-01-03": "LIN-01-02",
+    "LIN-01-04": "LIN-01-03",
+    "LIN-01-05": "LIN-06-02",
+    "LIN-02-01": "LIN-03-01",
+    "LIN-02-02": "LIN-02-01",
+    "LIN-02-03": "LIN-03-02",
+    "LIN-02-04": "LIN-02-02",
+    "LIN-02-05": "LIN-02-03",
+    "LIN-03-01": "LIN-04-01",
+    "LIN-03-02": "LIN-04-02",
+    "LIN-03-03": "LIN-04-03",
+    "LIN-03-04": "LIN-03-03",
+    "LIN-03-05": "LIN-04-04",
+    "LIN-04-01": "LIN-06-03",
+    "LIN-04-02": "LIN-05-01",
+    "LIN-04-03": "LIN-05-02",
+    "LIN-04-04": "LIN-05-03",
+    "LIN-04-05": "LIN-05-04",
+    "HUM-01-01": "HUM-03-01",
+    "HUM-01-02": "HUM-03-02",
+    "HUM-01-03": "HUM-03-03",
+    "HUM-01-04": "HUM-01-02",
+    "HUM-01-05": "HUM-01-03",
+    "HUM-02-01": "HUM-02-01",
+    "HUM-02-02": "HUM-02-02",
+    "HUM-02-03": "HUM-01-01",
+    "HUM-02-04": "HUM-02-03",
+    "HUM-02-05": "HUM-02-04",
+    "HUM-03-01": "HUM-04-01",
+    "HUM-03-02": "HUM-04-02",
+    "HUM-03-03": "HUM-03-04",
+    "HUM-03-04": "HUM-04-03",
+    "HUM-03-05": "HUM-04-04",
+    "HUM-04-01": "HUM-05-01",
+    "HUM-04-02": "HUM-05-02",
+    "HUM-04-03": "HUM-05-03",
+    "HUM-04-04": "HUM-05-04",
+    "HUM-04-05": "HUM-05-05",
+    "NAT-01-01": "NAT-01-01",
+    "NAT-01-02": "NAT-01-02",
+    "NAT-01-03": "NAT-01-03",
+    "NAT-01-04": "NAT-01-04",
+    "NAT-01-05": "NAT-01-05",
+    "NAT-02-01": "NAT-02-01",
+    "NAT-02-02": "NAT-04-01",
+    "NAT-02-03": "NAT-02-02",
+    "NAT-02-04": "NAT-04-02",
+    "NAT-02-05": "NAT-02-03",
+    "NAT-03-01": "NAT-03-01",
+    "NAT-03-02": "NAT-03-02",
+    "NAT-03-03": "NAT-05-01",
+    "NAT-03-04": "NAT-05-02",
+    "NAT-03-05": "NAT-03-03",
+    "NAT-04-01": "NAT-06-01",
+    "NAT-04-02": "NAT-05-03",
+    "NAT-04-03": "NAT-06-02",
+    "NAT-04-04": "NAT-06-03",
+    "NAT-04-05": "NAT-04-03",
+    "MAT-01-01": "MAT-01-01",
+    "MAT-01-02": "MAT-01-02",
+    "MAT-01-03": "MAT-04-01",
+    "MAT-01-04": "MAT-02-01",
+    "MAT-01-05": "MAT-01-03",
+    "MAT-02-01": "MAT-02-02",
+    "MAT-02-02": "MAT-02-03",
+    "MAT-02-03": "MAT-03-01",
+    "MAT-02-04": "MAT-03-02",
+    "MAT-02-05": "MAT-03-03",
+    "MAT-03-01": "MAT-05-01",
+    "MAT-03-02": "MAT-05-02",
+    "MAT-03-03": "MAT-05-03",
+    "MAT-03-04": "MAT-04-02",
+    "MAT-03-05": "MAT-04-03",
+    "MAT-04-01": "MAT-06-01",
+    "MAT-04-02": "MAT-06-02",
+    "MAT-04-03": "MAT-06-03",
+    "MAT-04-04": "MAT-05-04",
+    "MAT-04-05": "MAT-06-04"
+  }
 }

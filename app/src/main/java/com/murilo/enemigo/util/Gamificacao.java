@@ -70,17 +70,30 @@ public final class Gamificacao {
 
     // ---------------------------------------------------------------- Trilha e desbloqueio
 
+    /** RN06: acertos que concluem uma lição de {@code total} questões (60%, arredondado para cima). */
+    public static int acertosParaConcluir(int total) {
+        return (Math.max(0, total) * Constantes.PERCENTUAL_PARA_CONCLUIR + 99) / 100;
+    }
+
+    /** RN06: {@code acertos} de {@code total} conclui a lição? (-1 = nunca feita, não conclui) */
+    public static boolean concluiu(int acertos, int total) {
+        return total > 0 && acertos >= acertosParaConcluir(total);
+    }
+
     /**
      * RN05/RN06.
      *
      * @param melhor         melhor resultado desta lição (-1 = nunca feita)
+     * @param total          questões desta lição
      * @param melhorAnterior melhor resultado da lição anterior (ignorado se ordem == 0)
+     * @param totalAnterior  questões da lição anterior
      */
-    public static EstadoLicao calcularEstado(int ordem, int melhor, int melhorAnterior) {
-        if (melhor >= Constantes.ACERTOS_PARA_DESBLOQUEAR) {
+    public static EstadoLicao calcularEstado(int ordem, int melhor, int total,
+                                             int melhorAnterior, int totalAnterior) {
+        if (concluiu(melhor, total)) {
             return EstadoLicao.CONCLUIDA;
         }
-        if (ordem == 0 || melhorAnterior >= Constantes.ACERTOS_PARA_DESBLOQUEAR) {
+        if (ordem == 0 || concluiu(melhorAnterior, totalAnterior)) {
             return EstadoLicao.DISPONIVEL;
         }
         return EstadoLicao.BLOQUEADA;
@@ -92,10 +105,9 @@ public final class Gamificacao {
     }
 
     /** RN09: liberou a próxima lição pela primeira vez nesta sessão. */
-    public static boolean desbloqueouProxima(int melhorAnterior, int acertos, boolean existeSeguinte) {
-        return existeSeguinte
-                && melhorAnterior < Constantes.ACERTOS_PARA_DESBLOQUEAR
-                && acertos >= Constantes.ACERTOS_PARA_DESBLOQUEAR;
+    public static boolean desbloqueouProxima(int melhorAnterior, int acertos, int total,
+                                             boolean existeSeguinte) {
+        return existeSeguinte && !concluiu(melhorAnterior, total) && concluiu(acertos, total);
     }
 
     // ---------------------------------------------------------------- Ofensiva

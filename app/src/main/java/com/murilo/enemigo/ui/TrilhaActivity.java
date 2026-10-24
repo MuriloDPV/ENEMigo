@@ -110,7 +110,8 @@ public class TrilhaActivity extends AppCompatActivity {
 
     private void aoTocarLicao(Licao licao, EstadoLicao estado) {
         if (estado == EstadoLicao.BLOQUEADA) {
-            Toast.makeText(this, R.string.licao_bloqueada_toast, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.licao_bloqueada_toast,
+                    Constantes.PERCENTUAL_PARA_CONCLUIR), Toast.LENGTH_SHORT).show();
         } else if (progresso.getVidas() == 0) {
             Dialogos.mostrarSemVidas(this);
         } else {

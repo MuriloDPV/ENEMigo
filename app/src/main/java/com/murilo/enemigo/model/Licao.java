@@ -3,7 +3,7 @@ package com.murilo.enemigo.model;
 import java.util.List;
 
 /**
- * Uma lição da trilha de uma área, com 5 questões.
+ * Uma lição da trilha de uma área, com 3 a 5 questões.
  */
 public class Licao {
 
@@ -41,5 +41,14 @@ public class Licao {
 
     public List<Questao> getQuestoes() {
         return questoes;
+    }
+
+    /** Soma do tempo estimado das questões. */
+    public int getSegundosEstimados() {
+        int soma = 0;
+        for (Questao q : questoes) {
+            soma += q.getSegundosEstimados();
+        }
+        return soma;
     }
 }

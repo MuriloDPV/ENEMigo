@@ -23,6 +23,7 @@ import com.murilo.enemigo.ui.componente.CartaoRelevo;
 import com.murilo.enemigo.util.Celebracoes;
 import com.murilo.enemigo.util.Celebracoes.Celebracao;
 import com.murilo.enemigo.util.Constantes;
+import com.murilo.enemigo.util.Gamificacao;
 
 import java.util.List;
 
@@ -41,7 +42,8 @@ public class ResultadoActivity extends AppCompatActivity {
                 recebida.getStringExtra(Constantes.EXTRA_MODO));
         String licaoId = recebida.getStringExtra(Constantes.EXTRA_LICAO_ID);
         int acertos = recebida.getIntExtra(Constantes.EXTRA_ACERTOS, 0);
-        int total = recebida.getIntExtra(Constantes.EXTRA_TOTAL, Constantes.QUESTOES_POR_LICAO);
+        int total = recebida.getIntExtra(Constantes.EXTRA_TOTAL, 0);
+        boolean concluiu = Gamificacao.concluiu(acertos, total);
         int xp = recebida.getIntExtra(Constantes.EXTRA_XP, 0);
         int bonus = recebida.getIntExtra(Constantes.EXTRA_BONUS, 0);
         int ofensiva = recebida.getIntExtra(Constantes.EXTRA_OFENSIVA, 0);
@@ -55,7 +57,7 @@ public class ResultadoActivity extends AppCompatActivity {
             txtTitulo.setText(R.string.resultado_perfeito);
             mostrarSelo(R.drawable.ic_trofeu, R.color.marca_acento, R.color.marca_acento_suave,
                     R.color.marca_sobre_acento);
-        } else if (acertos >= Constantes.ACERTOS_PARA_DESBLOQUEAR) {
+        } else if (concluiu) {
             txtTitulo.setText(R.string.resultado_concluida);
             mostrarSelo(R.drawable.ic_check, R.color.marca_acerto, R.color.marca_acerto_suave,
                     R.color.texto_sobre_cor);
@@ -90,9 +92,10 @@ public class ResultadoActivity extends AppCompatActivity {
         } else if (desbloqueou) {
             adicionarMensagem(getString(R.string.resultado_desbloqueou), R.drawable.ic_cadeado_aberto,
                     R.color.marca_acerto);
-        } else if (acertos < Constantes.ACERTOS_PARA_DESBLOQUEAR && temProximaLicao(licaoId)) {
-            adicionarMensagem(getString(R.string.resultado_faca_acertos), R.drawable.ic_cadeado,
-                    R.color.texto_secundario);
+        } else if (!concluiu && temProximaLicao(licaoId)) {
+            adicionarMensagem(getString(R.string.resultado_faca_acertos,
+                            Gamificacao.acertosParaConcluir(total), total),
+                    R.drawable.ic_cadeado, R.color.texto_secundario);
         }
         // Aviso das conquistas novas (RN33), uma linha para cada
         List<Celebracao> celebracoes = Celebracoes.deTextos(

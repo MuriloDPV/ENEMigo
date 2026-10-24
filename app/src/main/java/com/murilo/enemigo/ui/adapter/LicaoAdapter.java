@@ -148,7 +148,10 @@ public class LicaoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         h.txtTitulo.setTextAlignment(alinhamento);
         h.txtDetalhe.setTextAlignment(alinhamento);
 
-        h.txtNumero.setText(c.getString(R.string.licao_numero, numero));
+        int minutos = progresso.getMinutosEstimados(licao);
+        h.txtNumero.setText(minutos > 0
+                ? c.getString(R.string.licao_numero_tempo, numero, minutos)
+                : c.getString(R.string.licao_numero, numero));
         h.txtTitulo.setText(licao.getTitulo());
 
         int face;
@@ -162,7 +165,7 @@ public class LicaoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             corIcone = cor(c, area.getCorSobreRes());
             icone = R.drawable.ic_check;
             detalhe = c.getString(R.string.licao_melhor, progresso.getMelhor(licao.getId()),
-                    Constantes.QUESTOES_POR_LICAO);
+                    licao.getQuestoes().size());
         } else if (estado == EstadoLicao.DISPONIVEL) {
             face = cor(c, area.getCorRes());
             sombra = cor(c, area.getCorEscuraRes());
@@ -174,7 +177,7 @@ public class LicaoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             sombra = cor(c, R.color.bloqueado_sombra);
             corIcone = cor(c, R.color.bloqueado_icone);
             icone = R.drawable.ic_cadeado;
-            detalhe = c.getString(R.string.licao_bloqueada);
+            detalhe = c.getString(R.string.licao_bloqueada, Constantes.PERCENTUAL_PARA_CONCLUIR);
         }
         h.no.setCorSombra(sombra);
         h.faceNo.setCardBackgroundColor(face);
@@ -194,6 +197,10 @@ public class LicaoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         // A linha pontilhada usa o estado para pintar o caminho já percorrido.
         h.no.setTag(R.id.tag_estado_licao, estado);
         String descricao = c.getString(R.string.cd_licao, numero, licao.getTitulo());
+        if (minutos > 0) {
+            descricao += ", " + c.getResources().getQuantityString(R.plurals.cd_tempo_estimado,
+                    minutos, minutos);
+        }
         h.no.setContentDescription(detalhe == null ? descricao : descricao + ". " + detalhe);
         h.no.setOnClickListener(v -> listener.onLicaoClick(licao, estado));
     }

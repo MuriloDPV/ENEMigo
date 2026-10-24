@@ -14,9 +14,11 @@ public class Questao {
     private final int correta;
     private final String explicacao;
     private final String fonte;
+    private final int segundosEstimados;
 
     public Questao(String id, Area area, String licaoId, String texto, String enunciado,
-                   String[] alternativas, int correta, String explicacao, String fonte) {
+                   String[] alternativas, int correta, String explicacao, String fonte,
+                   int segundosEstimados) {
         this.id = id;
         this.area = area;
         this.licaoId = licaoId;
@@ -26,6 +28,7 @@ public class Questao {
         this.correta = correta;
         this.explicacao = explicacao;
         this.fonte = fonte;
+        this.segundosEstimados = segundosEstimados;
     }
 
     public String getId() {
@@ -64,6 +67,11 @@ public class Questao {
 
     public String getFonte() {
         return fonte;
+    }
+
+    /** Tempo estimado para ler e responder (vem do JSON; 0 se não tiver). */
+    public int getSegundosEstimados() {
+        return segundosEstimados;
     }
 
     public boolean isCorreta(int indice) {

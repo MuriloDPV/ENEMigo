@@ -22,6 +22,7 @@ import java.util.Collections;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -42,6 +43,7 @@ public final class QuestaoRepository {
     private final Map<Area, List<Licao>> licoesPorArea = new EnumMap<>(Area.class);
     private final Map<String, Licao> licoesPorId = new HashMap<>();
     private final Map<String, Questao> questoesPorId = new HashMap<>();
+    private final Map<String, String> idsV1 = new HashMap<>();
     private boolean carregadoComSucesso;
 
     private QuestaoRepository(Context context) {
@@ -125,6 +127,7 @@ public final class QuestaoRepository {
                 }
             }
         }
+        lerIdsV1(raiz);
     }
 
     /** Devolve a lição montada, ou null se ela tiver que ser ignorada. */
@@ -148,7 +151,8 @@ public final class QuestaoRepository {
             }
         }
 
-        if (questoes.size() != Constantes.QUESTOES_POR_LICAO) {
+        if (questoes.size() < Constantes.MIN_QUESTOES_POR_LICAO
+                || questoes.size() > Constantes.MAX_QUESTOES_POR_LICAO) {
             Log.w(TAG, "Lição ignorada (" + questoes.size() + " questões válidas): " + id);
             return null;
         }
@@ -189,7 +193,24 @@ public final class QuestaoRepository {
                 alternativas,
                 letra.charAt(0) - 'A',
                 json.optString("explicacao", ""),
-                json.optString("fonte", ""));
+                json.optString("fonte", ""),
+                Math.max(0, json.optInt("segundos_estimados", 0)));
+    }
+
+    /** "ids_v1": id da questão na versão 1 do banco -> id atual (só para a migração). */
+    private void lerIdsV1(JSONObject raiz) {
+        JSONObject mapa = raiz.optJSONObject("ids_v1");
+        if (mapa == null) {
+            return;
+        }
+        Iterator<String> chaves = mapa.keys();
+        while (chaves.hasNext()) {
+            String antigo = chaves.next();
+            String atual = mapa.optString(antigo, "");
+            if (questoesPorId.containsKey(atual)) {
+                idsV1.put(antigo, atual);
+            }
+        }
     }
 
     private void limpar() {
@@ -198,6 +219,7 @@ public final class QuestaoRepository {
         }
         licoesPorId.clear();
         questoesPorId.clear();
+        idsV1.clear();
         carregadoComSucesso = false;
     }
 
@@ -226,6 +248,11 @@ public final class QuestaoRepository {
 
     public int getTotalLicoes(Area area) {
         return getLicoes(area).size();
+    }
+
+    /** Id de cada questão na versão 1 do banco -> id atual. Vazio se o banco não carregou. */
+    public Map<String, String> getIdsV1() {
+        return Collections.unmodifiableMap(idsV1);
     }
 
     /** false se o arquivo não existe ou tem erro de sintaxe. */
