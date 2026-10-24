@@ -1,2 +1,4 @@
 # Só para regerar as fórmulas de Matemática (tools/montar_questoes.py).
 matplotlib>=3.9
+# Só para regerar as fontes do app (tools/gerar_fontes.py).
+fonttools>=4.50
