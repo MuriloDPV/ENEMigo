@@ -16,12 +16,12 @@ public final class TempoEstudo {
         return Math.max(1, Math.round(segundos / 60f));
     }
 
-    /** RN37: a estimativa no ritmo do aluno (fator 1 = a estimativa do JSON). */
+    /** RN39: a estimativa no ritmo do aluno (fator 1 = a estimativa do JSON). */
     public static int minutosEstimados(int segundos, double fatorRitmo) {
         return minutosEstimados((int) Math.round(segundos * fatorRitmo));
     }
 
-    /** RN36: só vale tempo positivo e de até 10 min; mais que isso o aluno largou a questão. */
+    /** RN38: só vale tempo positivo e de até 10 min; mais que isso o aluno largou a questão. */
     public static boolean isTempoValido(long ms) {
         return ms > 0 && ms <= Constantes.TEMPO_MAX_QUESTAO_MS;
     }
@@ -35,7 +35,7 @@ public final class TempoEstudo {
     }
 
     /**
-     * RN37: quanto o aluno é mais lento (> 1) ou mais rápido (< 1) que a estimativa, entre 0,5 e 2.
+     * RN39: quanto o aluno é mais lento (> 1) ou mais rápido (< 1) que a estimativa, entre 0,5 e 2.
      * Vale 1 até ele ter {@link Constantes#QUESTOES_PARA_RITMO} questões medidas.
      *
      * @param totalMs   tempo real somado das questões medidas

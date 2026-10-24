@@ -45,7 +45,7 @@
 
 ### Descrição
 
-O ENEMigo é um aplicativo de estudo para o ENEM em formato de jogo. O conteúdo fica organizado nas quatro áreas da prova (Linguagens, Ciências Humanas, Ciências da Natureza e Matemática). Cada área tem uma **trilha de lições curtas**, e cada lição tem **5 questões de múltipla escolha** (A a E) retiradas de provas anteriores do ENEM ou escritas no estilo da prova. Depois de cada resposta o app mostra na hora se o aluno acertou e explica o porquê.
+O ENEMigo é um aplicativo de estudo para o ENEM em formato de jogo. O conteúdo fica organizado nas quatro áreas da prova (Linguagens, Ciências Humanas, Ciências da Natureza e Matemática). Cada área tem uma **trilha de lições curtas** (uns 4 minutos cada), e cada lição tem **de 3 a 5 questões de múltipla escolha** (A a E) retiradas de provas anteriores do ENEM ou escritas no estilo da prova. Depois de cada resposta o app mostra na hora se o aluno acertou e explica o porquê.
 
 Para incentivar o estudo diário, o app usa as mecânicas que tornaram o Duolingo conhecido: **XP**, **ofensiva diária** (dias seguidos estudando), **vidas**, **meta diária**, **níveis**, **desbloqueio progressivo** e **conquistas**. As questões erradas vão para um **caderno de erros**, onde o aluno pode revisá-las.
 
@@ -71,7 +71,7 @@ O ENEMigo quebra o estudo em partes pequenas, dá retorno imediato e usa recompe
 
 ### Diferenciais da ideia
 
-- **Lições de 5 questões**, que dá para fazer na fila, no ônibus ou no intervalo.
+- **Lições de uns 4 minutos** (3 a 5 questões), que dá para fazer na fila, no ônibus ou no intervalo. A trilha mostra o tempo estimado de cada uma.
 - **Feedback imediato com explicação** em cada questão, e não só o gabarito no final.
 - **Gamificação completa**: ofensiva, vidas, XP, níveis e conquistas, a mesma mecânica que prende as pessoas no Duolingo, aplicada ao ENEM.
 - **Caderno de erros automático**: o aluno revisa exatamente o que errou, e acertar na revisão devolve uma vida, o que transforma o erro em algo útil.
@@ -86,11 +86,11 @@ O ENEMigo quebra o estudo em partes pequenas, dá retorno imediato e usa recompe
 
 1. **Primeiro acesso:** o aluno informa o nome e escolhe uma meta diária de XP: Casual (20 XP), Regular (50 XP) ou Intenso (100 XP). Isso leva menos de 30 segundos.
 2. **Tela Início:** mostra no topo a ofensiva (🔥), o XP total (⭐) e as vidas (❤️). Abaixo, um cartão com o progresso da meta diária e os 4 cartões das áreas do ENEM.
-3. **Trilha da área:** ao tocar numa área, o aluno vê a lista de lições em sequência. A primeira fica liberada; as outras aparecem com cadeado até a anterior ser concluída com pelo menos 3 acertos.
-4. **Lição (Quiz):** 5 questões, uma por vez. O aluno toca numa alternativa e aperta **VERIFICAR**. Aparece um painel **verde** ("Mandou bem!") ou **vermelho** ("Resposta correta: C") com a explicação. O botão **CONTINUAR** leva à próxima questão. Cada erro tira 1 vida.
+3. **Trilha da área:** ao tocar numa área, o aluno vê a lista de lições em sequência, cada uma com o tempo estimado ("~4 min"). A primeira fica liberada; as outras aparecem com cadeado até a anterior ser concluída com pelo menos 60% de acertos.
+4. **Lição (Quiz):** de 3 a 5 questões, uma por vez. O aluno toca numa alternativa e aperta **VERIFICAR**. Aparece um painel **verde** ("Mandou bem!") ou **vermelho** ("Resposta correta: C") com a explicação. O botão **CONTINUAR** leva à próxima questão. Cada erro tira 1 vida.
 5. **Resultado:** ao terminar, o app mostra acertos, XP ganho, bônus de lição perfeita, se a próxima lição foi liberada, se a meta diária foi batida e as conquistas novas.
 6. **Revisão:** as questões erradas ficam guardadas no caderno de erros. Na aba Revisão o aluno refaz essas questões; acertar tira a questão do caderno e devolve 1 vida.
-7. **Perfil:** mostra nível, XP, ofensiva atual e recorde, lições concluídas, taxa de acerto e conquistas.
+7. **Perfil:** mostra nível, XP, ofensiva atual e recorde, lições concluídas, taxa de acerto, tempo médio por questão, minutos estudados hoje e conquistas.
 
 ### Experiência pretendida
 
@@ -123,12 +123,12 @@ As funcionalidades foram divididas para caber em 4 aulas. As **principais** faze
 |---|---|---|
 | P1 | Onboarding | Primeiro acesso: pede o nome e a meta diária (20/50/100 XP). Só aparece uma vez. |
 | P2 | Áreas do ENEM | Tela Início com as 4 áreas: Linguagens, Humanas, Natureza e Matemática. |
-| P3 | Trilha de lições | Lista de lições de cada área, em ordem, com os estados concluída, disponível e bloqueada. |
-| P4 | Desbloqueio sequencial | A próxima lição só abre quando a anterior tem 3 ou mais acertos em 5. |
-| P5 | Quiz da lição | 5 questões (A a E), com seleção de alternativa, VERIFICAR, painel de feedback verde ou vermelho com explicação e CONTINUAR. |
-| P6 | Barra de progresso da lição | Mostra em que questão o aluno está (1/5 a 5/5). |
+| P3 | Trilha de lições | Lista de lições de cada área, em ordem, com os estados concluída, disponível e bloqueada e o tempo estimado de cada uma ("~4 min"). |
+| P4 | Desbloqueio sequencial | A próxima lição só abre quando a anterior tem pelo menos 60% de acertos (2 de 3, 3 de 4, 3 de 5). |
+| P5 | Quiz da lição | 3 a 5 questões (A a E), com seleção de alternativa, VERIFICAR, painel de feedback verde ou vermelho com explicação e CONTINUAR. |
+| P6 | Barra de progresso da lição | Mostra em que questão o aluno está ("Questão 2 de 4"), com qualquer tamanho de lição. |
 | P7 | Resultado da lição | Acertos, XP ganho, bônus e se desbloqueou a próxima lição. |
-| P8 | XP e nível | +10 XP por acerto, +5 de bônus com 5/5. Nível = XP ÷ 100 + 1. |
+| P8 | XP e nível | +10 XP por acerto, +5 de bônus com 100% de acertos. Nível = XP ÷ 100 + 1. |
 | P9 | Vidas | 5 vidas. Cada erro na lição tira 1. Recupera 1 a cada 30 minutos. Sem vidas, não dá para iniciar uma lição. |
 | P10 | Ofensiva diária | Conta os dias seguidos em que o aluno terminou pelo menos uma sessão. Zera se ele pular um dia. |
 | P11 | Meta diária | Barra "XP de hoje / meta" na tela Início, zerada todo dia. |
@@ -142,7 +142,7 @@ As funcionalidades foram divididas para caber em 4 aulas. As **principais** faze
 | C1 | Caderno de erros | Toda questão errada numa lição é guardada (sem repetir). |
 | C2 | Modo Revisão | Aba Revisão: refaz até 5 questões do caderno. Acertar remove a questão do caderno, devolve +1 vida e dá +5 XP. Errar na revisão não tira vida. |
 | C3 | Conquistas | 6 conquistas: Primeira lição, Ofensiva de 3 dias, Ofensiva de 7 dias, 100 XP, 500 XP e Lição perfeita. |
-| C4 | Perfil com estatísticas | Nível, barra até o próximo nível, XP, ofensiva atual e recorde, lições concluídas, taxa de acerto e conquistas. |
+| C4 | Perfil com estatísticas | Nível, barra até o próximo nível, XP, ofensiva atual e recorde, lições concluídas, taxa de acerto, tempo médio por questão, minutos estudados hoje e conquistas. |
 | C5 | Configurações | Editar nome, trocar a meta diária, ver "Sobre" e **resetar o progresso** (com confirmação). |
 | C6 | Contagem da próxima vida | Mostra "Próxima vida em X min" quando o aluno tem menos de 5 vidas. |
 | C7 | Cartão "Continuar" | Na tela Início, um atalho para a próxima lição disponível da última área estudada. |
@@ -236,15 +236,15 @@ O app tem **9 telas**: 6 Activities e 3 Fragments dentro da MainActivity.
 
 - **Objetivo:** mostrar a sequência de lições de uma área e o estado de cada uma.
 - **Componentes:** MaterialToolbar (nome da área e botão voltar), barra de status (`layout_status`), TextView com o resumo "2 de 3 lições concluídas" e RecyclerView com os itens de lição.
-- **Informações exibidas (por lição):** número ("Lição 1"), título (ex.: "Porcentagem e juros"), estado e melhor resultado ("Melhor: 4/5").
-  - **Concluída** (melhor ≥ 3): círculo na cor da área com ✓.
+- **Informações exibidas (por lição):** número e tempo estimado ("Lição 1 · ~4 min", ver RN36), título (ex.: "Porcentagem e proporção"), estado e melhor resultado ("Melhor: 3/4").
+  - **Concluída** (melhor com 60% ou mais): círculo na cor da área com ✓.
   - **Disponível:** círculo na cor da área e o texto "Começar".
-  - **Bloqueada:** círculo cinza com 🔒 e o texto "Faça 3 acertos na lição anterior".
+  - **Bloqueada:** círculo cinza com 🔒 e o texto "Acerte 60% na lição anterior".
 - **Campos:** nenhum.
 - **Botões:** cada item da lista é clicável; seta de voltar na toolbar.
 - **Ações:**
   - Tocar numa lição disponível ou concluída: se tiver vidas, abre o Quiz.
-  - Tocar numa lição bloqueada: Toast "Complete a lição anterior com pelo menos 3 acertos".
+  - Tocar numa lição bloqueada: Toast "Complete a lição anterior com pelo menos 60% de acertos".
   - Tocar numa lição sem ter vidas: diálogo "Sem vidas 💔", com a opção de ir para a Revisão ou esperar ("Próxima vida em X min").
 - **Comportamentos:** a lista é recarregada no `onResume`. A cor da toolbar segue a cor da área. Lições concluídas podem ser refeitas para melhorar a nota.
 - **Navegação:** Trilha → Quiz; Voltar → Início.
@@ -254,9 +254,9 @@ O app tem **9 telas**: 6 Activities e 3 Fragments dentro da MainActivity.
 ### 4.5 Quiz (`QuizActivity`)
 
 - **Objetivo:** apresentar as questões e corrigir cada resposta. É a tela mais importante do app.
-- **Modos:** `LICAO` (5 questões de uma lição) ou `REVISAO` (até 5 questões do caderno de erros).
+- **Modos:** `LICAO` (as 3 a 5 questões de uma lição) ou `REVISAO` (até 5 questões do caderno de erros).
 - **Componentes:** ImageButton "X" (fechar), LinearProgressIndicator (progresso), TextView de vidas (❤️ 4), ScrollView com o conteúdo, MaterialCardView do texto-base (quando existir), TextView do enunciado, TextView da fonte, 5 alternativas (layout `item_alternativa` incluído 5 vezes), MaterialButton VERIFICAR, painel de feedback (LinearLayout escondido) com título, explicação e botão CONTINUAR.
-- **Informações exibidas:** texto-base, enunciado, fonte ("ENEM 2019"), alternativas A a E, progresso ("Questão 2 de 5"), vidas e, depois de verificar, o feedback com a explicação.
+- **Informações exibidas:** texto-base, enunciado, fonte ("ENEM 2019"), alternativas A a E, progresso ("Questão 2 de 4", com o total da lição), vidas e, depois de verificar, o feedback com a explicação.
 - **Campos:** seleção de uma alternativa (escolha única).
 - **Botões:** X, alternativas A a E, VERIFICAR, CONTINUAR.
 - **Ações:**
@@ -272,6 +272,7 @@ O app tem **9 telas**: 6 Activities e 3 Fragments dentro da MainActivity.
   - Se as vidas chegarem a 0 no modo LICAO, o CONTINUAR abre o diálogo "Suas vidas acabaram 💔" (Ir para Revisão / Sair). A lição termina sem salvar conclusão nem XP.
   - No modo REVISAO, errar não tira vida; acertar remove a questão do caderno, devolve +1 vida (até 5) e dá +5 XP.
   - A barra de progresso avança a cada CONTINUAR.
+  - Cada questão é cronometrada do momento em que aparece até o VERIFICAR, só com a tela aberta (RN38).
   - Opcional: vibração curta ao errar (C10).
 - **Navegação:** Quiz → Resultado (a QuizActivity se finaliza); X → volta para a tela anterior.
 
@@ -282,12 +283,12 @@ O app tem **9 telas**: 6 Activities e 3 Fragments dentro da MainActivity.
 - **Objetivo:** fechar a sessão com recompensa e motivação.
 - **Componentes:** TextView grande (emoji e título), TextView de acertos, cartões de XP/ofensiva/meta, TextView de mensagens (desbloqueio e conquistas), MaterialButton CONTINUAR e MaterialButton REFAZER (outlined).
 - **Informações exibidas:**
-  - Título conforme o desempenho: 5/5 "Perfeito! 🏆"; 3 ou 4 "Lição concluída! ✅"; 0 a 2 "Quase lá! 💪".
-  - "Você acertou 4 de 5".
-  - "+40 XP" (e "+5 bônus de lição perfeita" com 5/5).
+  - Título conforme o desempenho: 100% "Perfeito! 🏆"; 60% ou mais "Lição concluída! ✅"; menos de 60% "Quase lá! 💪".
+  - "Você acertou 3 de 4".
+  - "+30 XP" (e "+5 bônus de lição perfeita" com 100%).
   - "🔥 Ofensiva: 6 dias".
   - "Meta diária batida! 🎯" (só na sessão em que a meta foi atingida).
-  - "Próxima lição desbloqueada! 🔓" ou "Faça 3 acertos para liberar a próxima lição".
+  - "Próxima lição desbloqueada! 🔓" ou "Para liberar a próxima lição, acerte 3 de 4".
   - Conquistas novas: "🏅 Conquista desbloqueada: Lição perfeita".
   - No modo REVISAO: "Você tirou 3 questões do caderno e recuperou 3 vidas".
 - **Campos:** nenhum.
@@ -321,12 +322,12 @@ O app tem **9 telas**: 6 Activities e 3 Fragments dentro da MainActivity.
 - **Informações exibidas:**
   - Avatar com a inicial, nome e "Nível 4".
   - "35 / 100 XP para o nível 5".
-  - Estatísticas: XP total, ofensiva atual, maior ofensiva, lições concluídas, questões respondidas e taxa de acerto (%).
+  - Estatísticas: XP total, ofensiva atual, maior ofensiva, lições concluídas, questões respondidas, taxa de acerto (%), tempo médio por questão ("72 s") e minutos estudados hoje ("12 min"), medidos no Quiz (RN38).
   - Conquistas: emoji, título e descrição. As bloqueadas aparecem apagadas (transparência) com 🔒.
 - **Campos:** nenhum.
 - **Botões:** engrenagem (Configurações).
 - **Ações:** abrir a ConfiguracoesActivity.
-- **Comportamentos:** atualiza no `onResume`. Sem nenhuma questão respondida, a taxa de acerto mostra "—".
+- **Comportamentos:** atualiza no `onResume`. Sem nenhuma questão respondida, a taxa de acerto e o tempo médio mostram "—".
 - **Navegação:** Perfil → Configurações.
 
 ---
@@ -354,10 +355,10 @@ O app tem **9 telas**: 6 Activities e 3 Fragments dentro da MainActivity.
 2. Ele digita o nome ("Ana"), mantém a meta **Regular (50 XP/dia)** e toca em **COMEÇAR**.
 3. Cai na tela **Início**: 🔥 0, ⭐ 0, ❤️ 5. "Oi, Ana! Bora começar?". A meta mostra "0 / 50 XP hoje".
 4. Toca no cartão **Matemática**. A trilha mostra a Lição 1 disponível e as demais com cadeado.
-5. Toca na **Lição 1 — Porcentagem**. Abre o Quiz: barra de progresso vazia, ❤️ 5, a primeira questão.
+5. Toca na **Lição 1 — Porcentagem e proporção (~6 min)**. Abre o Quiz: barra de progresso vazia, ❤️ 5, a primeira das 3 questões.
 6. Toca na alternativa B, que fica azul, e aperta **VERIFICAR**. O painel verde sobe: "Mandou bem! 🎉 Descontos sucessivos se multiplicam...". Toca em **CONTINUAR**.
 7. Na questão 3 ela erra: a alternativa escolhida fica vermelha, a certa fica verde, e o painel vermelho mostra "Resposta correta: D" com a explicação. ❤️ cai para 4.
-8. Termina com **4/5**: "Lição concluída! ✅ +40 XP · 🔥 Ofensiva: 1 dia · Próxima lição desbloqueada! 🔓 · 🏅 Conquista: Primeira lição".
+8. Termina com **2/3**: "Lição concluída! ✅ +20 XP · 🔥 Ofensiva: 1 dia · Próxima lição desbloqueada! 🔓 · 🏅 Conquista: Primeira lição".
 9. Toca em **CONTINUAR**, volta para a trilha e a Lição 2 agora está aberta.
 
 ### Uso diário (3 a 5 minutos)
@@ -548,9 +549,9 @@ MaterialCardView
 └── LinearLayout (horizontal)
     ├── TextView  círculo 56dp com "✓", número ou "🔒" (fundo na cor da área ou cinza)
     └── LinearLayout (vertical)
-        ├── TextView  "Lição 2"
+        ├── TextView  "Lição 2 · ~4 min"
         ├── TextView  "Interpretação de gráficos" (negrito)
-        └── TextView  "Melhor: 4/5" | "Começar" | "Faça 3 acertos na lição anterior"
+        └── TextView  "Melhor: 3/4" | "Começar" | "Acerte 60% na lição anterior"
 ```
 
 **Quiz (`activity_quiz.xml`)**
@@ -559,11 +560,11 @@ MaterialCardView
 ConstraintLayout
 ├── LinearLayout (topo, horizontal)
 │   ├── ImageButton               "X" (ic_close)
-│   ├── LinearProgressIndicator   (peso 1, max 5, cantos arredondados)
+│   ├── LinearProgressIndicator   (peso 1, max = questões da lição, cantos arredondados)
 │   └── TextView                  "❤️ 4"  (GONE no modo REVISAO)
 ├── ScrollView (entre o topo e a área inferior)
 │   └── LinearLayout (vertical, padding 16dp)
-│       ├── TextView           "Questão 2 de 5"
+│       ├── TextView           "Questão 2 de 4"
 │       ├── MaterialCardView   texto-base (fundo cinza claro; GONE se vazio)
 │       │   └── TextView
 │       ├── TextView           enunciado (17sp)
@@ -587,7 +588,7 @@ ConstraintLayout
 LinearLayout (vertical, centralizado, padding 24dp)
 ├── TextView        "🏆" (64sp)
 ├── TextView        "Perfeito!" / "Lição concluída!" / "Quase lá!" (26sp, negrito)
-├── TextView        "Você acertou 4 de 5"
+├── TextView        "Você acertou 3 de 4"
 ├── LinearLayout (horizontal, 2 cartões)
 │   ├── MaterialCardView  "⭐ +45 XP"
 │   └── MaterialCardView  "🔥 6 dias"
@@ -692,8 +693,10 @@ As áreas são fixas, por isso viram um `enum`, e não uma classe comum.
 | `id` | String | Sim | Ex.: `MAT-01` (sigla + número de 2 dígitos) |
 | `area` | Area | Sim | Área a que a lição pertence |
 | `ordem` | int | Sim | Posição na trilha (0, 1, 2...), definida pela ordem no JSON |
-| `titulo` | String | Sim | Tema da lição, ex.: "Porcentagem e juros" |
-| `questoes` | List\<Questao\> | Sim | Exatamente 5 questões |
+| `titulo` | String | Sim | Tema da lição, ex.: "Porcentagem e proporção" |
+| `questoes` | List\<Questao\> | Sim | De 3 a 5 questões |
+
+`getSegundosEstimados()` soma a estimativa das questões; é o que a trilha mostra ("~4 min").
 
 ### 8.3 Questao (classe `Questao`)
 
@@ -708,6 +711,7 @@ As áreas são fixas, por isso viram um `enum`, e não uma classe comum.
 | `correta` | int | Sim | Índice da correta (0 = A ... 4 = E). No JSON é a letra ("C") e o repositório converte |
 | `explicacao` | String | Sim | Por que a alternativa correta está certa (1 a 3 frases) |
 | `fonte` | String | Sim | Origem: "ENEM 2019", "ENEM 2022 — 2º dia" ou "Autoral (estilo ENEM)" |
+| `segundosEstimados` | int | Não | Tempo estimado para ler e responder (ver 9.4). 0 se o JSON não tiver |
 
 ### 8.4 Conquista (enum Java `Conquista`)
 
@@ -727,7 +731,7 @@ Lista de conquistas:
 | `OFENSIVA_7` | 🌋 | Semana imbatível | Ofensiva de 7 dias |
 | `XP_100` | ⭐ | Cem na conta | 100 XP totais |
 | `XP_500` | 🌟 | Estudante dedicado | 500 XP totais |
-| `LICAO_PERFEITA` | 🏆 | Gabaritou! | Acertar 5/5 numa lição |
+| `LICAO_PERFEITA` | 🏆 | Gabaritou! | Acertar todas as questões de uma lição |
 
 ### 8.5 Progresso do aluno (gerenciado pela classe `ProgressoManager`)
 
@@ -749,11 +753,14 @@ Não precisa de uma classe de modelo: o `ProgressoManager` expõe *getters* e m�
 | `melhorPorLicao` | int (por lição) | Sim | Melhor número de acertos de cada lição (−1 = nunca feita) |
 | `cadernoErros` | Set\<String\> | Sim | Ids das questões erradas pendentes |
 | `conquistas` | Set\<String\> | Sim | Ids das conquistas desbloqueadas |
-| `licoesPerfeitas` | int | Sim | Quantas vezes fez 5/5 |
+| `licoesPerfeitas` | int | Sim | Quantas vezes acertou todas as questões de uma lição |
 | `totalRespondidas` | int | Sim | Total de questões respondidas (lições + revisão) |
 | `totalAcertos` | int | Sim | Total de acertos (lições + revisão) |
 | `ultimaAreaEstudada` | String | Não | Id da última área, usado no cartão Continuar |
 | `vibracaoAtiva` | boolean | Sim | Padrão `true` (opcional C10) |
+| `tempoTotalMs`, `tempoQuestoes`, `tempoEstimadoS` | long, int, long | Sim | Somas do tempo real medido, de quantas questões e da estimativa delas (RN38, RN39) |
+| `tempoHojeMs` + `dataTempoHoje` | long + String (data ISO) | Não | Tempo respondendo questões no dia atual |
+| `versaoProgresso` | int | Sim | Formato do progresso salvo; abaixo de 2, roda a migração (RN37) |
 
 ### 8.6 ResultadoSessao (classe `ResultadoSessao`)
 
@@ -763,7 +770,7 @@ Objeto simples devolvido pelo `ProgressoManager` quando uma sessão termina. A Q
 |---|---|---|---|
 | `modo` | String | Sim | `LICAO` ou `REVISAO` |
 | `acertos` | int | Sim | Acertos na sessão |
-| `total` | int | Sim | Questões respondidas (5 na lição; até 5 na revisão) |
+| `total` | int | Sim | Questões respondidas (as 3 a 5 da lição; até 5 na revisão) |
 | `xpGanho` | int | Sim | XP dos acertos (sem o bônus) |
 | `bonus` | int | Sim | 5 se foi lição perfeita, senão 0 |
 | `ofensiva` | int | Sim | Ofensiva depois da sessão |
@@ -775,7 +782,7 @@ Objeto simples devolvido pelo `ProgressoManager` quando uma sessão termina. A Q
 ### 8.7 Relacionamentos
 
 ```text
-Area (4) 1 ──── N Licao 1 ──── 5 Questao
+Area (4) 1 ──── N Licao 1 ──── 3..5 Questao
                   │                  │
                   │ id               │ id
                   ▼                  ▼
@@ -783,7 +790,7 @@ Area (4) 1 ──── N Licao 1 ──── 5 Questao
 ```
 
 - Uma **Area** tem várias **Lições**, e a ordem no JSON define a sequência da trilha.
-- Uma **Lição** tem exatamente **5 Questões**.
+- Uma **Lição** tem de **3 a 5 Questões**, agrupadas para dar uns 4 minutos (ver 9.4).
 - O progresso **não guarda objetos**, só ids. O `melhorPorLicao` é indexado pelo id da lição, e o caderno de erros guarda ids de questões. Para exibir, o app busca a questão completa no `QuestaoRepository` pelo id.
 - Os **estados da lição** (concluída, disponível, bloqueada) **não são salvos**: são calculados a partir do `melhorPorLicao` (ver RN05 e RN06). Assim não existe risco de o estado salvo contradizer o resultado.
 
@@ -818,24 +825,26 @@ O Room é a biblioteca oficial de banco de dados do Android, mas aqui ele traria
 
 ### 9.3 Formato do `questoes.json`
 
-Estrutura: um objeto raiz com `versao` e a lista `areas`. Cada área tem a lista `licoes`, e cada lição tem a lista `questoes`.
+Estrutura: um objeto raiz com `versao` (hoje `2`), a lista `areas` e o mapa `ids_v1`. Cada área tem a lista `licoes`, e cada lição tem a lista `questoes`.
 
 Regras do arquivo:
 
 - `id` da área deve ser um dos 4 valores do enum `Area`.
 - A ordem das lições no array é a ordem da trilha.
-- Cada lição deve ter **exatamente 5 questões**.
+- Cada lição deve ter **de 3 a 5 questões** (lição fora disso é ignorada pelo app).
+- `segundos_estimados` (inteiro) é o tempo estimado da questão, calculado pelo `montar_questoes.py` (ver 9.4). A trilha soma os da lição.
+- `ids_v1` leva o id de cada questão na versão 1 do banco (4 lições de 5 por área) ao id atual, ex.: `"LIN-01-02": "LIN-06-01"`. Só serve para migrar o progresso salvo (RN37).
 - `alternativas` deve ter **exatamente 5 textos**, sem a letra na frente (o app coloca "A", "B"...).
 - `correta` é uma letra de `"A"` a `"E"`.
 - `texto` pode ser `""` quando a questão não tem texto-base.
 - Aspas dentro de textos: use aspas tipográficas “assim” para não precisar escapar, ou escape com `\"`.
 - O arquivo deve ser salvo em **UTF-8**.
 
-**Exemplo reduzido** (3 áreas, 1 lição cada, **1 questão por lição** só para ilustrar; no arquivo real cada lição tem 5 questões e a área Humanas também aparece):
+**Exemplo reduzido** (3 áreas, 1 lição cada, **1 questão por lição** só para ilustrar; no arquivo real cada lição tem de 3 a 5 questões, a área Humanas também aparece e o `ids_v1` tem as 80 questões):
 
 ```json
 {
-  "versao": 1,
+  "versao": 2,
   "areas": [
     {
       "id": "LINGUAGENS",
@@ -857,7 +866,8 @@ Regras do arquivo:
               ],
               "correta": "D",
               "explicacao": "A linguagem deve ser adequada à situação de comunicação. Numa conversa entre colegas, o registro informal é o esperado e não atrapalha o entendimento. Seria inadequado usar gírias numa redação ou num documento oficial, não num grupo de amigos.",
-              "fonte": "Autoral (estilo ENEM)"
+              "fonte": "Autoral (estilo ENEM)",
+              "segundos_estimados": 52
             }
           ]
         }
@@ -883,7 +893,8 @@ Regras do arquivo:
               ],
               "correta": "C",
               "explicacao": "O ar contém vapor de água. Ao encostar na lata gelada, esse vapor perde calor e passa para o estado líquido (condensação). A água vem do ar, e não de dentro da lata, que é impermeável.",
-              "fonte": "Autoral (estilo ENEM)"
+              "fonte": "Autoral (estilo ENEM)",
+              "segundos_estimados": 58
             }
           ]
         }
@@ -909,13 +920,19 @@ Regras do arquivo:
               ],
               "correta": "B",
               "explicacao": "Descontos sucessivos se multiplicam: 250 × 0,80 = 200 e 200 × 0,90 = 180. O erro comum é somar os descontos (30%), o que daria R$ 175,00.",
-              "fonte": "Autoral (estilo ENEM)"
+              "fonte": "Autoral (estilo ENEM)",
+              "segundos_estimados": 92
             }
           ]
         }
       ]
     }
-  ]
+  ],
+  "ids_v1": {
+    "LIN-01-01": "LIN-01-01",
+    "NAT-01-01": "NAT-01-01",
+    "MAT-01-01": "MAT-01-01"
+  }
 }
 ```
 
@@ -930,6 +947,17 @@ Regras do arquivo:
 - Questões muito longas funcionam (a tela tem rolagem), mas lições curtas ficam mais agradáveis com textos-base menores.
 - Distribua bem as letras corretas (não deixe tudo "C").
 - Use ids consistentes: `SIGLA-LL-QQ` (ex.: `HUM-02-04`). Repetir um id quebra o caderno de erros.
+
+**Tempo estimado e tamanho das lições.** O banco é gerado pelo `tools/montar_questoes.py` e conferido pelo `tools/validar_questoes.py`. As constantes ficam no começo do `montar_questoes.py`:
+
+- `PALAVRAS_POR_MINUTO = 180`: leitura do texto-base + enunciado + alternativas (os marcadores de figura não contam como palavra).
+- `RESOLUCAO_S`: tempo para resolver, por área: Linguagens 20 s, Humanas 30 s, Natureza 30 s, Matemática 75 s.
+- `EXTRA_FIGURA_S = 15`: a mais, uma vez, quando a questão tem figura ou fórmula.
+- `ALVO_LICAO_S = 240` (4 min) e `MIN_QUESTOES, MAX_QUESTOES = 3, 5`.
+
+Tempo da questão = palavras × 60 ÷ 180 + resolução da área (+ 15 s), arredondado, gravado em `segundos_estimados`. As lições ficam em `AREAS`, escritas à mão para manter o tema no título, e o validador cobra: de 3 a 5 questões por lição; nenhuma lição acima de 6 min (`TETO_LICAO_S`); média da área no máximo 1 min acima do alvo (`FOLGA_MEDIA_S`); e a ordem da trilha seguindo a das lições da versão 1, para a migração (RN37) não deixar buraco. Quando nem com o máximo de lições a área chega perto do alvo (Matemática: 3 questões já passam de 5 min), as regras de tempo não se aplicam e a área fica com o maior número de lições possível, de 3 ou 4 questões.
+
+Mudou uma constante? Rode `python tools/montar_questoes.py` e `python tools/validar_questoes.py`: o validador aponta a lição que saiu do alvo e imprime o tempo mínimo e máximo de cada área. Hoje: Linguagens 6 lições (3,9 a 5,1 min), Humanas 5 (3,5 a 5,7), Natureza 6 (3,0 a 5,8) e Matemática 6 (5,6 a 7,9).
 
 ### 9.5 Chaves do SharedPreferences
 
@@ -956,6 +984,12 @@ Arquivo: `enemigo_prefs` (modo `Context.MODE_PRIVATE`). Todas as chaves ficam co
 | `total_acertos` | int | `0` |
 | `ultima_area` | String | `""` |
 | `vibracao` | boolean | `true` |
+| `versao_progresso` | int | `1` (sem a chave = progresso da versão 1, que é migrado e passa a `2`) |
+| `tempo_total_ms` | long | `0` |
+| `tempo_questoes` | int | `0` |
+| `tempo_estimado_s` | long | `0` |
+| `tempo_hoje_ms` | long | `0` |
+| `data_tempo_hoje` | String | `""` |
 
 > ⚠️ **Pegadinha importante do `getStringSet`:** o `Set` devolvido pelo SharedPreferences **não pode ser modificado diretamente**. Se você der `add()` nele e salvar de novo, o Android pode não gravar a mudança. Sempre crie uma cópia: `new HashSet<>(prefs.getStringSet(chave, new HashSet<>()))`, altere a cópia e salve a cópia.
 
@@ -977,15 +1011,16 @@ Não são usadas nesta versão. O app funciona 100% offline e não pede a permis
 **Conteúdo**
 
 - **RN03:** as lições de uma área aparecem na ordem do JSON. A primeira tem ordem 0.
-- **RN04:** cada lição tem exatamente 5 questões, exibidas na ordem do JSON. As alternativas **não** são embaralhadas (a letra faz parte da questão original).
+- **RN04:** cada lição tem de 3 a 5 questões, exibidas na ordem do JSON. As alternativas **não** são embaralhadas (a letra faz parte da questão original).
+- **RN36:** cada lição mira uns **4 minutos** pela estimativa (ver 9.4): leitura a 180 palavras/min + resolução por área (Linguagens 20 s, Humanas 30 s, Natureza 30 s, Matemática 75 s) + 15 s com figura ou fórmula. A trilha mostra a soma arredondada, "~4 min" (no mínimo 1 min).
 
 **Trilha e desbloqueio**
 
-- **RN05:** uma lição está **disponível** se for a primeira da área (ordem 0) **ou** se a lição anterior tiver `melhor ≥ 3`.
-- **RN06:** uma lição está **concluída** se `melhor ≥ 3`. Caso contrário, e se não estiver disponível, está **bloqueada**.
+- **RN05:** uma lição está **disponível** se for a primeira da área (ordem 0) **ou** se a lição anterior estiver concluída.
+- **RN06:** uma lição está **concluída** se o `melhor` dela tiver pelo menos **60% de acertos**, arredondado para cima: `melhor ≥ ⌈0,6 × questões⌉` (2 de 3, 3 de 4, 3 de 5). Caso contrário, e se não estiver disponível, está **bloqueada**.
 - **RN07:** o `melhor` de uma lição só é atualizado se o novo resultado for maior que o anterior.
 - **RN08:** lições concluídas podem ser refeitas quantas vezes o aluno quiser e dão XP normalmente.
-- **RN09:** "desbloqueou a próxima" é `true` quando o `melhor` anterior era menor que 3, o novo resultado é ≥ 3 e existe uma lição seguinte na área.
+- **RN09:** "desbloqueou a próxima" é `true` quando o `melhor` anterior não concluía a lição (RN06), o novo resultado conclui e existe uma lição seguinte na área.
 
 **Quiz**
 
@@ -996,7 +1031,7 @@ Não são usadas nesta versão. O app funciona 100% offline e não pede a permis
 
 **XP, nível e meta**
 
-- **RN14:** cada acerto em lição vale **+10 XP**. Lição com 5/5 ganha **+5 XP de bônus**. Uma lição vale no máximo 55 XP.
+- **RN14:** cada acerto em lição vale **+10 XP**. Lição com 100% de acertos ganha **+5 XP de bônus**. Uma lição de 3 vale no máximo 35 XP; uma de 5, 55 XP.
 - **RN15:** cada acerto na revisão vale **+5 XP**.
 - **RN16:** o XP é somado ao `xpTotal` e ao `xpHoje` **somente quando a sessão termina** (na hora de abrir o Resultado).
 - **RN17:** nível = `xpTotal / 100 + 1` (divisão inteira). XP dentro do nível = `xpTotal % 100`.
@@ -1018,7 +1053,7 @@ Não são usadas nesta versão. O app funciona 100% offline e não pede a permis
 
 **Ofensiva**
 
-- **RN26:** uma sessão conta como "estudou hoje" quando o aluno termina uma lição (as 5 questões, com qualquer nota) ou termina uma revisão.
+- **RN26:** uma sessão conta como "estudou hoje" quando o aluno termina uma lição (todas as questões, com qualquer nota) ou termina uma revisão.
 - **RN27:** ao terminar uma sessão:
   - se `ultimaDataEstudo` estiver vazia → ofensiva = 1;
   - se for hoje → ofensiva não muda;
@@ -1041,7 +1076,16 @@ Não são usadas nesta versão. O app funciona 100% offline e não pede a permis
 
 **Configurações**
 
-- **RN34:** o reset apaga **todas** as chaves do SharedPreferences (`edit().clear().apply()`) e volta para o onboarding. As questões (assets) não são afetadas.
+- **RN34:** o reset apaga **todas** as chaves do SharedPreferences (`edit().clear()`) e volta para o onboarding, gravando só `versao_progresso = 2` (senão a próxima abertura migraria o progresso novo como se fosse da versão 1). As questões (assets) não são afetadas.
+
+**Progresso salvo antes das lições curtas**
+
+- **RN37:** o progresso salvo com o banco da versão 1 (4 lições de 5 por área) é migrado uma vez, na primeira abertura (`versao_progresso` ausente ou menor que 2). Conta como **concluída** a lição nova cujas questões estavam **todas** em lições antigas concluídas (melhor ≥ 3), com o `melhor` mínimo para concluir (ex.: 2/3); as outras recomeçam. O caderno de erros troca cada id antigo pelo novo (`ids_v1` do JSON). As chaves `melhor_` antigas são apagadas; XP, ofensiva, vidas, totais e conquistas não mudam. Como a ordem das lições novas segue a das antigas, as concluídas sempre ficam em sequência, sem buraco na trilha.
+
+**Tempo real**
+
+- **RN38:** o Quiz mede cada questão do momento em que ela aparece até o VERIFICAR, nos dois modos. O cronômetro para quando a tela sai (`onPause`, app em segundo plano) e continua ao voltar; tempo acima de **10 minutos** é descartado. O app guarda só somas (tempo total, quantas questões, a estimativa delas e o tempo de hoje), e o Perfil mostra o **tempo médio por questão** e os **minutos estudados hoje** (zera ao mudar o dia, como o XP de hoje).
+- **RN39:** depois de **10 questões** medidas, o tempo da trilha segue o ritmo do aluno: estimativa × (tempo real ÷ estimativa das questões medidas), com o fator limitado entre 0,5 e 2.
 
 **Cartão Continuar (complementar)**
 
@@ -1058,7 +1102,7 @@ Não são usadas nesta versão. O app funciona 100% offline e não pede a permis
 | Nome | Máximo de 20 caracteres (também limitado no XML com `maxLength`) | "Use no máximo 20 caracteres" |
 | Nome | Só letras e espaços (aceita acentos) | "Use apenas letras" |
 | Meta diária | Um RadioButton marcado (20/50/100) | "Escolha uma meta diária" |
-| Abrir lição bloqueada | `melhor` da anterior ≥ 3 | Toast: "Complete a lição anterior com pelo menos 3 acertos" |
+| Abrir lição bloqueada | Anterior concluída (60% de acertos, RN06) | Toast: "Complete a lição anterior com pelo menos 60% de acertos" |
 | Abrir lição | Vidas ≥ 1 | Diálogo: "Sem vidas 💔 Próxima vida em X min. Revise seus erros para recuperar vidas agora!" |
 | VERIFICAR sem alternativa | Botão desabilitado até escolher | (não há mensagem; o botão fica cinza) |
 | Clique duplo em VERIFICAR | Botão desabilitado após o primeiro clique | (nenhuma) |
@@ -1068,7 +1112,7 @@ Não são usadas nesta versão. O app funciona 100% offline e não pede a permis
 | Vidas zeradas durante a lição | Encerrar a lição | "Suas vidas acabaram 💔 Revise seus erros para recuperar vidas." |
 | Salvar Configurações com sucesso | Nome válido | Toast: "Configurações salvas" |
 | Questão do JSON (ao carregar) | `enunciado` não vazio, 5 alternativas, `correta` de A a E, `id` único | Log de aviso; a questão é ignorada (ver seção 12) |
-| Lição do JSON (ao carregar) | Exatamente 5 questões válidas | Log de aviso; a lição é ignorada |
+| Lição do JSON (ao carregar) | De 3 a 5 questões válidas | Log de aviso; a lição é ignorada |
 
 > **Dica:** a regra "só letras e espaços" pode ser feita com a expressão regular `^[\p{L} ]+$` (`\p{L}` aceita qualquer letra, inclusive com acento).
 
@@ -1081,7 +1125,9 @@ Não são usadas nesta versão. O app funciona 100% offline e não pede a permis
 | `questoes.json` não existe ou não pode ser lido (`IOException`) | O repositório registra o erro com `Log.e`, devolve listas vazias e a tela Início mostra o aviso "Não foi possível carregar as questões." no lugar dos cartões. O app **não fecha** |
 | JSON com erro de sintaxe (`JSONException`) | Igual ao caso acima. Dica: valide o arquivo num validador de JSON antes de rodar |
 | Questão inválida (menos de 5 alternativas, `correta` fora de A–E, enunciado vazio, id repetido) | A questão é ignorada com `Log.w("QuestaoRepository", "Questão inválida: " + id)` |
-| Lição com menos de 5 questões válidas | A lição é ignorada (com log). As seguintes continuam na ordem |
+| Lição com menos de 3 ou mais de 5 questões válidas | A lição é ignorada (com log). As seguintes continuam na ordem |
+| Banco sem `ids_v1` ou que não carregou | A migração (RN37) não roda e tenta de novo na próxima abertura |
+| Tempo de questão absurdo (mais de 10 min ou relógio estranho) | Não é registrado (RN38) |
 | Área com id desconhecido no JSON | A área é ignorada (com log) |
 | Área sem lições | O cartão mostra "Em breve" e, ao tocar, a trilha exibe "Nenhuma lição disponível ainda" |
 | Intent sem o extra obrigatório (`AREA_ID`, `LICAO_ID`) ou com id inexistente | A Activity mostra o Toast "Lição não encontrada" e chama `finish()` |
@@ -1154,7 +1200,9 @@ app/
 │   │   │       └── ConquistaAdapter.java
 │   │   └── util/
 │   │       ├── Constantes.java           (chaves, extras, valores de XP/vidas)
-│   │       ├── Gamificacao.java          (cálculos puros: nível, vidas, ofensiva)
+│   │       ├── Gamificacao.java          (cálculos puros: nível, vidas, ofensiva, 60%)
+│   │       ├── TempoEstudo.java          (tempo estimado e tempo real, puros)
+│   │       ├── Migracao.java             (progresso da versão 1 -> lições atuais)
 │   │       └── DataUtil.java             (hoje, ontem, conversão de datas)
 │   └── res/
 │       ├── layout/
@@ -1262,22 +1310,27 @@ Arquitetura **em camadas simples**, sem MVVM, sem injeção de dependência e se
   - XP: `getXpTotal()`, `getXpHoje()`, `getNivel()`;
   - vidas: `getVidas()` (já aplica a recuperação), `perderVida()`, `ganharVida()`, `getMinutosParaProximaVida()`;
   - ofensiva: `getOfensivaAtual()`, `getMaiorOfensiva()`, `estudouHoje()`;
-  - lições: `getMelhor(licaoId)`, `getEstado(Licao)` (CONCLUIDA/DISPONIVEL/BLOQUEADA), `getLicoesConcluidas(Area)`;
+  - lições: `getMelhor(licaoId)`, `getEstado(Licao)` (CONCLUIDA/DISPONIVEL/BLOQUEADA), `getLicoesConcluidas(Area)`, `getMinutosEstimados(Licao)`;
   - caderno: `getCaderno()`, `adicionarAoCaderno(id)`, `removerDoCaderno(id)`;
+  - tempo: `registrarTempoQuestao(Questao, ms)`, `getTempoMedioSegundos()`, `getMinutosHoje()`, `getFatorRitmo()`;
+  - migração: `migrarProgresso()`, privado, chamado no construtor (RN37);
   - conquistas: `getConquistas()`;
   - sessões: **`registrarLicao(Licao, int acertos)`** e **`registrarRevisao(int acertos, int respondidas)`**, que aplicam todas as regras (XP, meta, ofensiva, melhor e conquistas) e devolvem um `ResultadoSessao`;
   - `resetarTudo()`.
 
 **util**
 
-- `Constantes`: nomes das chaves, dos extras e os números do jogo (`XP_ACERTO = 10`, `XP_BONUS_PERFEITA = 5`, `XP_ACERTO_REVISAO = 5`, `VIDAS_MAX = 5`, `MINUTOS_RECARGA = 30`, `ACERTOS_PARA_DESBLOQUEAR = 3`, `QUESTOES_POR_LICAO = 5`). Mudar a regra do jogo = mudar um número aqui.
+- `Constantes`: nomes das chaves, dos extras e os números do jogo (`XP_ACERTO = 10`, `XP_BONUS_PERFEITA = 5`, `XP_ACERTO_REVISAO = 5`, `VIDAS_MAX = 5`, `MINUTOS_RECARGA = 30`, `PERCENTUAL_PARA_CONCLUIR = 60`, `MIN_QUESTOES_POR_LICAO = 3`, `MAX_QUESTOES_POR_LICAO = 5`, `TEMPO_MAX_QUESTAO_MS` = 10 min, `QUESTOES_PARA_RITMO = 10`). Mudar a regra do jogo = mudar um número aqui. As constantes da estimativa de tempo ficam no `tools/montar_questoes.py` (ver 9.4).
 - `Gamificacao`: **funções estáticas puras**, que só recebem valores e devolvem resultados, sem Android, sem Context e sem SharedPreferences:
   - `calcularNivel(int xp)`;
   - `calcularXpLicao(int acertos)`;
+  - `acertosParaConcluir(int total)` e `concluiu(int acertos, int total)` (60%, RN06);
   - `calcularNovaOfensiva(LocalDate ultima, LocalDate hoje, int ofensivaAtual)`;
   - `calcularVidasRecuperadas(int vidas, long ultimaRecarga, long agora)`.
 
   Por serem puras, dá para testar com **JUnit** (pasta `test/`) sem abrir o emulador. É opcional, mas é um ótimo extra para a apresentação.
+- `TempoEstudo`: funções puras do tempo (minutos da trilha, tempo válido, média, fator de ritmo, tempo de hoje), testadas em `TempoEstudoTest`.
+- `Migracao`: funções puras da migração do progresso da versão 1 (RN37), testadas em `MigracaoTest`.
 - `DataUtil`: `hoje()`, `ontem()`, `paraTexto(LocalDate)` e `deTexto(String)` (devolve `null` se vazio ou inválido).
 
 **ui**
@@ -1299,6 +1352,8 @@ Arquitetura **em camadas simples**, sem MVVM, sem injeção de dependência e se
 ---
 
 ## 16. Plano de desenvolvimento em 4 aulas
+
+> **Nota:** as seções 16 e 17 são o roteiro original das aulas, de quando cada lição tinha 5 questões e liberava a próxima com 3 acertos. As regras atuais (lições de 3 a 5 questões, 60% de acertos, tempo estimado e medido) estão nas seções 9.3, 9.4 e 10.
 
 Cada aula termina com o app **compilando e rodando** no emulador ou no celular. Faça commits no Git (ou uma cópia do projeto zipada) ao fim de cada aula.
 
@@ -1839,7 +1894,7 @@ Faça os testes num emulador (ex.: Pixel com API 34 ou 35) **e**, se possível, 
 | T02 | Abrir o app depois do onboarding | Abre direto na aba Início |
 | T03 | Ver a tela Início | Status 🔥⭐❤️, saudação com o nome, meta diária e 4 cartões de área |
 | T04 | Abrir a trilha de cada uma das 4 áreas | Toolbar com o nome e a cor da área; lições na ordem do JSON |
-| T05 | Abrir uma lição | Questão 1 de 5, barra de progresso vazia, vidas no topo |
+| T05 | Abrir uma lição | "Questão 1 de N" (N = questões da lição), barra de progresso vazia, vidas no topo |
 | T06 | Questão sem texto-base | O cartão do texto-base não aparece |
 | T07 | Questão com texto longo | A tela rola e nada fica cortado |
 | T08 | Abrir a aba Revisão com o caderno vazio | Mensagem "Nenhum erro por aqui! 🎉" e botão desabilitado |
@@ -1878,10 +1933,10 @@ Faça os testes num emulador (ex.: Pixel com API 34 ou 35) **e**, se possível, 
 
 | ID | Teste | Resultado esperado |
 |---|---|---|
-| T29 | Acertar 4 de 5 | +40 XP, "Lição concluída!", próxima lição desbloqueada |
-| T30 | Acertar 5 de 5 | +50 XP +5 bônus = 55 XP, "Perfeito!", conquista "Gabaritou!" |
-| T31 | Acertar 2 de 5 | +20 XP, "Quase lá!", próxima lição continua bloqueada |
-| T32 | Tocar numa lição bloqueada | Toast "Complete a lição anterior com pelo menos 3 acertos" |
+| T29 | Acertar 2 de 3 (ou 3 de 4) | +20 XP (ou +30), "Lição concluída!", próxima lição desbloqueada |
+| T30 | Acertar todas de uma lição de 3 | +30 XP +5 bônus = 35 XP, "Perfeito!", conquista "Gabaritou!" |
+| T31 | Acertar 1 de 3 (ou 2 de 4) | +10 XP (ou +20), "Quase lá!", "Para liberar a próxima lição, acerte 2 de 3", próxima continua bloqueada |
+| T32 | Tocar numa lição bloqueada | Toast "Complete a lição anterior com pelo menos 60% de acertos" |
 | T33 | Refazer uma lição com nota menor que a anterior | O "Melhor" continua com a nota maior |
 | T34 | Errar uma questão numa lição | Vidas −1 na hora e a questão aparece na Revisão |
 | T35 | Errar a mesma questão duas vezes (em duas tentativas) | Aparece só uma vez no caderno |
@@ -1898,6 +1953,10 @@ Faça os testes num emulador (ex.: Pixel com API 34 ou 35) **e**, se possível, 
 | T46 | Mudar a data para amanhã | "XP hoje" volta para 0 |
 | T47 | Chegar a 100 XP | Nível 2 e conquista "Cem na conta" |
 | T48 | Trocar a meta para 20 nas Configurações | O cartão da meta mostra "/ 20 XP" |
+| T68 | Abrir a trilha de cada área | Cada nó mostra "LIÇÃO N · ~X MIN"; Linguagens, Humanas e Natureza entre ~3 e ~6 min, Matemática entre ~6 e ~8 |
+| T69 | Responder uma questão, mandar o app para segundo plano por 2 min e voltar | O tempo médio do Perfil não conta esses 2 min |
+| T70 | Fazer uma lição e abrir o Perfil | "Tempo médio por questão" com valor em segundos e "Minutos estudados hoje" maior que 0 |
+| T71 | Responder 10 questões bem mais devagar que a estimativa | Os tempos da trilha sobem (até o dobro) |
 
 ### 18.5 Testes de dados
 
@@ -1907,7 +1966,8 @@ Faça os testes num emulador (ex.: Pixel com API 34 ou 35) **e**, se possível, 
 | T50 | Reiniciar o emulador | Mesmo resultado do T49 |
 | T51 | Resetar o progresso | Volta para o Onboarding; depois dele, tudo zerado (XP 0, 5 vidas, lições bloqueadas) |
 | T52 | Conferir o gabarito de 10 questões do JSON com o gabarito oficial do INEP | Todos batem |
-| T53 | Conferir se todas as lições têm 5 questões (ver o Logcat com a tag QuestaoRepository) | Nenhum aviso de "lição ignorada" |
+| T53 | Conferir se todas as lições têm de 3 a 5 questões (`python tools/validar_questoes.py` e o Logcat com a tag QuestaoRepository) | Validador OK e nenhum aviso de "lição ignorada" |
+| T72 | Com lições concluídas na versão antiga (4 lições de 5), instalar a nova por cima | As lições novas formadas só por questões de lições concluídas aparecem concluídas, em sequência; o caderno continua com as mesmas questões; XP e ofensiva iguais |
 
 ### 18.6 Testes de situações inválidas
 
@@ -1915,7 +1975,7 @@ Faça os testes num emulador (ex.: Pixel com API 34 ou 35) **e**, se possível, 
 |---|---|---|
 | T54 | Colocar uma vírgula a mais no JSON (cópia de teste) e rodar | O app não fecha; o Início mostra "Não foi possível carregar as questões." |
 | T55 | Questão com `"correta": "F"` | Questão ignorada, aviso no Logcat |
-| T56 | Lição com 4 questões | Lição ignorada, aviso no Logcat |
+| T56 | Lição com 2 (ou 6) questões | Lição ignorada, aviso no Logcat |
 | T57 | Remover do JSON uma questão que está no caderno de erros | Ela some da Revisão sem travar |
 | T58 | Voltar a data do celular para o passado | Nenhuma vida extra e a ofensiva não aumenta |
 | T59 | Girar o celular em qualquer tela | A tela não gira |
@@ -1941,10 +2001,10 @@ Faça os testes num emulador (ex.: Pixel com API 34 ou 35) **e**, se possível, 
 
 - [ ] O app instala e abre sem travar no emulador **e** num celular real.
 - [ ] Onboarding aparece só no primeiro acesso e valida o nome.
-- [ ] As 4 áreas têm pelo menos 3 lições com 5 questões cada (60 questões).
+- [ ] As 4 áreas têm lições de 3 a 5 questões, de uns 4 minutos (80 questões; `validar_questoes.py` OK).
 - [ ] Quiz: seleção, VERIFICAR, feedback verde/vermelho com explicação, CONTINUAR e barra de progresso.
 - [ ] Resultado mostra acertos, XP, bônus, ofensiva, meta, desbloqueio e conquistas.
-- [ ] Desbloqueio sequencial com 3 acertos funcionando.
+- [ ] Desbloqueio sequencial com 60% de acertos funcionando.
 - [ ] Vidas: perde no erro, bloqueia sem vida e recupera com o tempo (`MINUTOS_RECARGA` voltou para **30**).
 - [ ] Ofensiva e meta diária corretas.
 - [ ] Caderno de erros e revisão funcionando (+1 vida no acerto).

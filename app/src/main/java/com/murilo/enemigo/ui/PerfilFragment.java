@@ -68,7 +68,7 @@ public class PerfilFragment extends Fragment {
                 taxa < 0 ? getString(R.string.stat_sem_valor) : getString(R.string.stat_taxa_valor, taxa),
                 R.string.stat_taxa, R.drawable.ic_alvo, R.color.marca_erro);
 
-        // Tempo real medido no quiz (RN36)
+        // Tempo real medido no quiz (RN38)
         int media = progresso.getTempoMedioSegundos();
         preencher(view, R.id.stat_tempo_medio,
                 media < 0 ? getString(R.string.stat_sem_valor) : getString(R.string.stat_segundos_valor, media),
