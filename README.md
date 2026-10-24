@@ -22,6 +22,15 @@ Feito como projeto da disciplina de Programação do meu curso técnico, em Java
 - Ofensiva diária (dias seguidos estudando) e meta diária
 - Caderno de erros: as questões que você errou vão para a aba Revisão, e acertar lá devolve uma vida
 - Perfil com nível, XP, ofensiva, recorde, lições concluídas e taxa de acerto
+- Visual "caderno de estudo", com modo claro e escuro (segue o tema do celular)
+
+## Visual
+
+- Tema DayNight: as cores mudam sozinhas com o modo escuro do celular.
+- Interface em **Plus Jakarta Sans** e texto-base das questões em **Literata**, as duas com licença OFL e guardadas dentro do app (funcionam offline).
+- Botões e cartões "em relevo", com uma sombra sólida embaixo, que afundam ao tocar (`ui/componente/`).
+- Trilha em zigue-zague, com a lição atual pulsando e as lições agrupadas em unidades.
+- O texto-base fica num cartão de papel, com a margem de caderno. No modo escuro esse papel, e as alternativas com figura ou fórmula, continuam claros: as figuras do ENEM são desenhadas com "multiplicar" e as fórmulas têm tinta escura, então sumiriam num fundo escuro. O teste `PapelModoEscuroTest` confere isso.
 
 ## Questões
 
@@ -58,11 +67,28 @@ python tools/validar_questoes.py
 app/src/main/java/com/murilo/enemigo/
 ├── data/    # leitura do questoes.json e progresso salvo (SharedPreferences)
 ├── model/   # Area, Licao, Questao, ResultadoSessao
-├── ui/      # Activities, Fragments e Adapters
+├── ui/      # Activities, Fragments, Adapters e os componentes em relevo (ui/componente)
 └── util/    # regras de gamificação (XP, vidas, ofensiva) e constantes
 ```
 
 As regras de gamificação ficam em `Gamificacao.java` e têm testes em `app/src/test`.
+
+## Personalizar a marca
+
+Dá para trocar a identidade visual sem mexer no código Java:
+
+- **Nome do app:** `app_name` em `app/src/main/res/values/strings.xml`. O nome aparece no ícone, no topo do Início e na boas-vindas.
+- **Cores:** `app/src/main/res/values/colors.xml` (modo claro) e `app/src/main/res/values-night/colors.xml` (modo escuro). Os nomes dizem a função da cor, então basta trocar os valores:
+  - `marca_primaria` (botões, seleção, links) e `marca_primaria_escura` (sombra dos botões)
+  - `marca_acento` (XP, meta diária, destaques)
+  - `marca_acerto` e `marca_erro` (feedback do quiz)
+  - `fundo`, `superficie`, `texto_principal`...
+  - `area_*` (cor de cada área, a versão `_escura` e a cor do texto `_sobre` ela)
+  - `papel*`: precisa continuar claro nos dois modos (o `PapelModoEscuroTest` avisa se não estiver).
+- **Fontes:** `app/src/main/res/font/marca_interface.xml` (interface), `marca_titulo.xml` (títulos) e `marca_leitura.xml` (texto-base). Para usar outra fonte do Google Fonts, ajuste e rode `tools/gerar_fontes.py`, que gera os arquivos de cada peso e recorta só os caracteres que o app usa.
+- **Ícone e abertura:** `app/src/main/res/drawable/ic_launcher_foreground.xml` (a abertura usa o mesmo desenho, sobre `marca_primaria`) e `marca_logo.xml` (logo dentro do app).
+
+Depois de trocar, rode `./gradlew test` e confira as telas nos dois modos.
 
 A especificação completa do app (telas, regras de negócio, plano das aulas) está em [`docs/PROJETO_APP_ANDROID.md`](docs/PROJETO_APP_ANDROID.md).
 
@@ -75,4 +101,5 @@ A especificação completa do app (telas, regras de negócio, plano das aulas) e
 ## Créditos e licença
 
 - Questões: provas do ENEM, elaboradas e publicadas pelo **INEP**. Obtidas pela API [enem.dev](https://enem.dev).
+- Fontes: [Plus Jakarta Sans](https://github.com/tokotype/PlusJakartaSans) e [Literata](https://github.com/googlefonts/literata), sob a SIL Open Font License 1.1 (textos das licenças em `app/src/main/assets/licencas/`).
 - O código do app está sob a licença MIT (veja [LICENSE](LICENSE)). A licença não se aplica às questões do ENEM, que continuam pertencendo ao INEP.

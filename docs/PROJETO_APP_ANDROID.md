@@ -413,6 +413,8 @@ Abertura do app
 
 ## 7. Interface
 
+> **Atualização (redesign visual):** a identidade visual foi refeita depois desta especificação. Hoje o app usa o tema "caderno de estudo" com **DayNight** (modo claro e escuro), as fontes **Plus Jakarta Sans** (interface) e **Literata** (texto-base), botões e cartões em relevo e ícones vetoriais próprios no lugar dos emojis 🔥⭐❤️. As cores têm nomes de função (`marca_primaria`, `marca_acento`...) em `values/colors.xml` e `values-night/colors.xml`. Veja "Personalizar a marca" no README. As seções 7.1 a 7.4 e 13 descrevem a versão original e ficam aqui como registro do projeto.
+
 ### 7.1 Diretrizes gerais
 
 - **Tema:** `Theme.Material3.Light.NoActionBar`. Use o tema **Light** fixo: com o DayNight padrão do Android Studio, o modo escuro do celular pode deixar texto escuro sobre fundo escuro, já que as cores são definidas à mão. O modo escuro fica como melhoria futura.
