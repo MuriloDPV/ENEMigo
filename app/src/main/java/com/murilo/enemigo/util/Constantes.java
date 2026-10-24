@@ -57,8 +57,10 @@ public final class Constantes {
     public static final int XP_ACERTO_REVISAO = 5;
     public static final int VIDAS_MAX = 5;
     public static final int MINUTOS_RECARGA = 30;
-    public static final int ACERTOS_PARA_DESBLOQUEAR = 3;
-    public static final int QUESTOES_POR_LICAO = 5;
+    /** % de acertos que conclui a lição e libera a próxima (arredondado para cima: 2 de 3, 3 de 5). */
+    public static final int PERCENTUAL_PARA_CONCLUIR = 60;
+    public static final int MIN_QUESTOES_POR_LICAO = 3;
+    public static final int MAX_QUESTOES_POR_LICAO = 5;
     public static final int QUESTOES_POR_REVISAO = 5;
     public static final int XP_POR_NIVEL = 100;
 

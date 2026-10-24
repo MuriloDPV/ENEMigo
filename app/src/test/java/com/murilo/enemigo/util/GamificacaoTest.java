@@ -164,37 +164,70 @@ public class GamificacaoTest {
     // ------------------------------------------------------------ Desbloqueio
 
     @Test
+    public void concluir_sessentaPorCentoArredondadoParaCima() {
+        assertEquals(2, Gamificacao.acertosParaConcluir(3));
+        assertEquals(3, Gamificacao.acertosParaConcluir(4));
+        assertEquals(3, Gamificacao.acertosParaConcluir(5));
+    }
+
+    @Test
+    public void concluir_nuncaFeitaOuSemQuestoes_naoConclui() {
+        assertFalse(Gamificacao.concluiu(-1, 3));
+        assertFalse(Gamificacao.concluiu(0, 0));
+    }
+
+    @Test
     public void desbloqueio_tresDeCinco_liberaProxima() {
-        assertEquals(EstadoLicao.DISPONIVEL, Gamificacao.calcularEstado(1, -1, 3));
-        assertTrue(Gamificacao.desbloqueouProxima(-1, 3, true));
+        assertEquals(EstadoLicao.DISPONIVEL, Gamificacao.calcularEstado(1, -1, 5, 3, 5));
+        assertTrue(Gamificacao.desbloqueouProxima(-1, 3, 5, true));
     }
 
     @Test
     public void desbloqueio_doisDeCinco_naoLibera() {
-        assertEquals(EstadoLicao.BLOQUEADA, Gamificacao.calcularEstado(1, -1, 2));
-        assertFalse(Gamificacao.desbloqueouProxima(-1, 2, true));
+        assertEquals(EstadoLicao.BLOQUEADA, Gamificacao.calcularEstado(1, -1, 5, 2, 5));
+        assertFalse(Gamificacao.desbloqueouProxima(-1, 2, 5, true));
+    }
+
+    @Test
+    public void desbloqueio_licaoDeTres_doisAcertosLiberam() {
+        // 2 de 3 = 67%; 1 de 3 = 33%.
+        assertEquals(EstadoLicao.DISPONIVEL, Gamificacao.calcularEstado(1, -1, 4, 2, 3));
+        assertEquals(EstadoLicao.BLOQUEADA, Gamificacao.calcularEstado(1, -1, 4, 1, 3));
+        assertTrue(Gamificacao.desbloqueouProxima(-1, 2, 3, true));
+        assertFalse(Gamificacao.desbloqueouProxima(-1, 1, 3, true));
+    }
+
+    @Test
+    public void desbloqueio_licaoDeQuatro_metadeNaoBasta() {
+        // 3 de 4 = 75%; 2 de 4 = 50%.
+        assertEquals(EstadoLicao.DISPONIVEL, Gamificacao.calcularEstado(2, -1, 3, 3, 4));
+        assertEquals(EstadoLicao.BLOQUEADA, Gamificacao.calcularEstado(2, -1, 3, 2, 4));
+        assertFalse(Gamificacao.desbloqueouProxima(-1, 2, 4, true));
     }
 
     @Test
     public void desbloqueio_primeiraLicao_sempreDisponivel() {
-        assertEquals(EstadoLicao.DISPONIVEL, Gamificacao.calcularEstado(0, -1, -1));
-        assertEquals(EstadoLicao.DISPONIVEL, Gamificacao.calcularEstado(0, 2, -1));
+        assertEquals(EstadoLicao.DISPONIVEL, Gamificacao.calcularEstado(0, -1, 4, -1, 0));
+        assertEquals(EstadoLicao.DISPONIVEL, Gamificacao.calcularEstado(0, 2, 5, -1, 0));
     }
 
     @Test
-    public void desbloqueio_melhorTresOuMais_concluida() {
-        assertEquals(EstadoLicao.CONCLUIDA, Gamificacao.calcularEstado(0, 3, -1));
-        assertEquals(EstadoLicao.CONCLUIDA, Gamificacao.calcularEstado(2, 5, 4));
+    public void desbloqueio_melhorComSessentaPorCento_concluida() {
+        assertEquals(EstadoLicao.CONCLUIDA, Gamificacao.calcularEstado(0, 3, 5, -1, 0));
+        assertEquals(EstadoLicao.CONCLUIDA, Gamificacao.calcularEstado(0, 2, 3, -1, 0));
+        // Concluída vale mesmo se a anterior não estiver (estado vem só do melhor).
+        assertEquals(EstadoLicao.CONCLUIDA, Gamificacao.calcularEstado(2, 4, 4, -1, 5));
     }
 
     @Test
     public void desbloqueio_jaLiberadaAntes_naoContaDeNovo() {
-        assertFalse(Gamificacao.desbloqueouProxima(4, 5, true));
+        assertFalse(Gamificacao.desbloqueouProxima(4, 5, 5, true));
+        assertFalse(Gamificacao.desbloqueouProxima(2, 3, 3, true));
     }
 
     @Test
     public void desbloqueio_ultimaLicao_naoTemProxima() {
-        assertFalse(Gamificacao.desbloqueouProxima(-1, 5, false));
+        assertFalse(Gamificacao.desbloqueouProxima(-1, 5, 5, false));
     }
 
     @Test
@@ -217,6 +250,14 @@ public class GamificacaoTest {
     public void xp_comBonusNaLicaoPerfeita() {
         int total = Gamificacao.calcularXpLicao(5) + Gamificacao.calcularBonus(5, 5);
         assertEquals(55, total);
+    }
+
+    @Test
+    public void bonus_soCom100PorCento_emQualquerTamanho() {
+        assertEquals(Constantes.XP_BONUS_PERFEITA, Gamificacao.calcularBonus(3, 3));
+        assertEquals(Constantes.XP_BONUS_PERFEITA, Gamificacao.calcularBonus(4, 4));
+        assertEquals(0, Gamificacao.calcularBonus(2, 3));
+        assertEquals(0, Gamificacao.calcularBonus(0, 0));
     }
 
     @Test

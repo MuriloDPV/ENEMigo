@@ -174,20 +174,23 @@ public final class ProgressoManager {
     /** RN05/RN06: calculado a partir do melhor, nunca salvo. */
     public EstadoLicao getEstado(Licao licao) {
         int melhorAnterior = -1;
+        int totalAnterior = 0;
         if (licao.getOrdem() > 0) {
             List<Licao> lista = repositorio.getLicoes(licao.getArea());
             int anterior = licao.getOrdem() - 1;
             if (anterior < lista.size()) {
                 melhorAnterior = getMelhor(lista.get(anterior).getId());
+                totalAnterior = lista.get(anterior).getQuestoes().size();
             }
         }
-        return Gamificacao.calcularEstado(licao.getOrdem(), getMelhor(licao.getId()), melhorAnterior);
+        return Gamificacao.calcularEstado(licao.getOrdem(), getMelhor(licao.getId()),
+                licao.getQuestoes().size(), melhorAnterior, totalAnterior);
     }
 
     public int getLicoesConcluidas(Area area) {
         int concluidas = 0;
         for (Licao licao : repositorio.getLicoes(area)) {
-            if (getMelhor(licao.getId()) >= Constantes.ACERTOS_PARA_DESBLOQUEAR) {
+            if (Gamificacao.concluiu(getMelhor(licao.getId()), licao.getQuestoes().size())) {
                 concluidas++;
             }
         }
@@ -235,7 +238,7 @@ public final class ProgressoManager {
 
     // ---------------------------------------------------------------- Sessões
 
-    /** Chamado ao terminar as 5 questões de uma lição. Aplica XP, meta, melhor e ofensiva. */
+    /** Chamado ao terminar todas as questões de uma lição. Aplica XP, meta, melhor e ofensiva. */
     public ResultadoSessao registrarLicao(Licao licao, int acertos) {
         int total = licao.getQuestoes().size();
         int xp = Gamificacao.calcularXpLicao(acertos);
@@ -255,7 +258,7 @@ public final class ProgressoManager {
         editor.putInt(Constantes.PREFIXO_MELHOR + licao.getId(),
                 Gamificacao.calcularNovoMelhor(melhorAnterior, acertos));
         resultado.setDesbloqueouProxima(Gamificacao.desbloqueouProxima(
-                melhorAnterior, acertos, repositorio.getLicaoSeguinte(licao) != null));
+                melhorAnterior, acertos, total, repositorio.getLicaoSeguinte(licao) != null));
 
         if (bonus > 0) {
             editor.putInt(Constantes.CHAVE_LICOES_PERFEITAS,

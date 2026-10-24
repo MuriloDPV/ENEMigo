@@ -78,7 +78,7 @@
     </plurals>
     <string name="resultado_meta_batida">Meta diária batida!</string>
     <string name="resultado_desbloqueou">Próxima lição desbloqueada!</string>
-    <string name="resultado_faca_acertos">Faça 3 acertos para liberar a próxima lição</string>
+    <string name="resultado_faca_acertos">Acerte %1$d de %2$d para liberar a próxima lição</string>
     <string name="resultado_revisao">Você tirou %1$s do caderno e recuperou %2$s</string>
     <string name="resultado_revisao_sem_vidas">Você tirou %1$s do caderno</string>
     <string name="resultado_revisao_nenhuma">Nenhuma questão saiu do caderno desta vez</string>
@@ -108,8 +108,8 @@
 
     <!-- Trilha: estados e vidas -->
     <string name="licao_melhor">Melhor: %1$d/%2$d</string>
-    <string name="licao_bloqueada">Faça 3 acertos na lição anterior</string>
-    <string name="licao_bloqueada_toast">Complete a lição anterior com pelo menos 3 acertos</string>
+    <string name="licao_bloqueada">Acerte %1$d%% na lição anterior</string>
+    <string name="licao_bloqueada_toast">Complete a lição anterior com pelo menos %1$d%% de acertos</string>
     <string name="sem_vidas_titulo">Sem vidas</string>
     <string name="sem_vidas_mensagem">Próxima vida em %1$d min. Revise seus erros para recuperar vidas agora!</string>
     <string name="btn_ir_revisao">Ir para Revisão</string>
@@ -156,7 +156,7 @@
     <string name="conquista_xp_500">Estudante dedicado</string>
     <string name="conquista_xp_500_desc">Alcance 500 XP</string>
     <string name="conquista_licao_perfeita">Gabaritou!</string>
-    <string name="conquista_licao_perfeita_desc">Acerte 5 de 5 numa lição</string>
+    <string name="conquista_licao_perfeita_desc">Acerte todas as questões de uma lição</string>
     <string name="conquista_matematica_primeira">Primeira conta</string>
     <string name="conquista_matematica_primeira_desc">Conclua uma lição de Matemática</string>
     <string name="conquista_matematica_completa">Fera dos números</string>

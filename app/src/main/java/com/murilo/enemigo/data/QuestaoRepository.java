@@ -148,7 +148,8 @@ public final class QuestaoRepository {
             }
         }
 
-        if (questoes.size() != Constantes.QUESTOES_POR_LICAO) {
+        if (questoes.size() < Constantes.MIN_QUESTOES_POR_LICAO
+                || questoes.size() > Constantes.MAX_QUESTOES_POR_LICAO) {
             Log.w(TAG, "Lição ignorada (" + questoes.size() + " questões válidas): " + id);
             return null;
         }

@@ -37,7 +37,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Quiz nos modos LICAO (5 questões da lição, erro tira vida) e REVISAO (até 5 questões do
+ * Quiz nos modos LICAO (as questões da lição, erro tira vida) e REVISAO (até 5 questões do
  * caderno de erros, acerto devolve vida). No fim registra a sessão e abre o Resultado.
  */
 public class QuizActivity extends AppCompatActivity {

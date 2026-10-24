@@ -162,7 +162,7 @@ public class LicaoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             corIcone = cor(c, area.getCorSobreRes());
             icone = R.drawable.ic_check;
             detalhe = c.getString(R.string.licao_melhor, progresso.getMelhor(licao.getId()),
-                    Constantes.QUESTOES_POR_LICAO);
+                    licao.getQuestoes().size());
         } else if (estado == EstadoLicao.DISPONIVEL) {
             face = cor(c, area.getCorRes());
             sombra = cor(c, area.getCorEscuraRes());
@@ -174,7 +174,7 @@ public class LicaoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             sombra = cor(c, R.color.bloqueado_sombra);
             corIcone = cor(c, R.color.bloqueado_icone);
             icone = R.drawable.ic_cadeado;
-            detalhe = c.getString(R.string.licao_bloqueada);
+            detalhe = c.getString(R.string.licao_bloqueada, Constantes.PERCENTUAL_PARA_CONCLUIR);
         }
         h.no.setCorSombra(sombra);
         h.faceNo.setCardBackgroundColor(face);

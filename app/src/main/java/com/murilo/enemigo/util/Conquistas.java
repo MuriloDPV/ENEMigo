@@ -39,13 +39,13 @@ public final class Conquistas {
             return this;
         }
 
-        /** Quantas vezes fez 5/5. */
+        /** Quantas vezes acertou todas as questões de uma lição. */
         public Estado licoesPerfeitas(int valor) {
             licoesPerfeitas = valor;
             return this;
         }
 
-        /** Lições de Matemática concluídas (3 acertos ou mais). */
+        /** Lições de Matemática concluídas (60% de acertos ou mais). */
         public Estado licoesMatematicaConcluidas(int valor) {
             licoesMatematicaConcluidas = valor;
             return this;
