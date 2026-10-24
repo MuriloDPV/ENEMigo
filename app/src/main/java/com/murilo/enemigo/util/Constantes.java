@@ -31,6 +31,8 @@ public final class Constantes {
     public static final String CHAVE_TOTAL_ACERTOS = "total_acertos";
     public static final String CHAVE_ULTIMA_AREA = "ultima_area";
     public static final String CHAVE_VIBRACAO = "vibracao";
+    public static final String CHAVE_SOM = "som";
+    public static final String CHAVE_AVATAR = "avatar";
 
     // Extras das Intents
     public static final String EXTRA_AREA_ID = "EXTRA_AREA_ID";
