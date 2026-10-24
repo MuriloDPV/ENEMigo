@@ -154,7 +154,7 @@ As funcionalidades foram divididas para caber em 4 aulas. As **principais** faze
 
 ### Possíveis funcionalidades futuras
 
-- Questões com imagem (gráficos, mapas, charges): hoje o app usa só questões de texto.
+- Questões com imagem em Linguagens, Humanas e Natureza (mapas, charges). Matemática já tem figuras e fórmulas (ver 9.3).
 - Banco de questões online (API ou Firebase), com novas questões sem precisar atualizar o app.
 - Notificação diária de lembrete ("Sua ofensiva está em risco! 🔥"), usando WorkManager.
 - Simulado cronometrado (ex.: 20 questões em 50 minutos).
@@ -702,7 +702,7 @@ As áreas são fixas, por isso viram um `enum`, e não uma classe comum.
 | `licaoId` | String | Sim | Lição a que pertence |
 | `texto` | String | Não | Texto-base (trecho, poema, notícia). Vazio se não houver |
 | `enunciado` | String | Sim | O comando da questão |
-| `alternativas` | String[5] | Sim | Textos das alternativas A, B, C, D e E, nessa ordem |
+| `alternativas` | String[5] | Sim | Textos das alternativas A, B, C, D e E, nessa ordem. Em `texto`, `enunciado` e `alternativas` podem aparecer os marcadores `[[imagem:arquivo.png]]` e `[[formula:arquivo.png]]` (arquivos em `assets/imagens/`, só em Matemática) |
 | `correta` | int | Sim | Índice da correta (0 = A ... 4 = E). No JSON é a letra ("C") e o repositório converte |
 | `explicacao` | String | Sim | Por que a alternativa correta está certa (1 a 3 frases) |
 | `fonte` | String | Sim | Origem: "ENEM 2019", "ENEM 2022 — 2º dia" ou "Autoral (estilo ENEM)" |
@@ -1988,7 +1988,7 @@ Faça os testes num emulador (ex.: Pixel com API 34 ou 35) **e**, se possível, 
 
 **Conteúdo**
 
-- Questões com imagem (gráficos, mapas, charges), com um campo `imagem` no JSON e o arquivo em `assets/imagens/`.
+- Questões com imagem também fora de Matemática (mapas, charges), usando os mesmos marcadores `[[imagem:...]]` e os arquivos em `assets/imagens/`.
 - Mais lições por área, organizadas por assunto (ex.: Matemática → Porcentagem, Funções, Geometria, Estatística).
 - Filtro por ano da prova ("só ENEM 2023").
 - Treino de redação: temas antigos, repertório e checklist das 5 competências.
