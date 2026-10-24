@@ -78,6 +78,35 @@
     <color name="mascote_brilho">@color/texto_sobre_cor</color>
     <color name="mascote_bochecha">@color/marca_erro</color>
 
+    <!--
+        Avatar. Pele e cabelo são cores de pessoa (não mudam com a marca nem no modo escuro);
+        o cabelo "colorido" e os fundos são apelidos das cores da marca. As peças vetoriais
+        (avatar_*) são brancas e recebem a cor no Java, com tint (ver AvatarDrawable).
+    -->
+    <color name="avatar_pele_1">#FFE0C7</color>
+    <color name="avatar_pele_2">#F7CFAE</color>
+    <color name="avatar_pele_3">#EDB98A</color>
+    <color name="avatar_pele_4">#D99E6A</color>
+    <color name="avatar_pele_5">#C38451</color>
+    <color name="avatar_pele_6">#A0673E</color>
+    <color name="avatar_pele_7">#7E4E2E</color>
+    <color name="avatar_pele_8">#5B3720</color>
+    <color name="avatar_cabelo_1">#2B2421</color>
+    <color name="avatar_cabelo_2">#5A3825</color>
+    <color name="avatar_cabelo_3">#8E5A33</color>
+    <color name="avatar_cabelo_4">#B8532C</color>
+    <color name="avatar_cabelo_5">#E6BE6A</color>
+    <color name="avatar_cabelo_6">@color/marca_primaria</color>
+    <color name="avatar_fundo_1">@color/marca_primaria_suave</color>
+    <color name="avatar_fundo_2">@color/marca_acento_suave</color>
+    <color name="avatar_fundo_3">@color/marca_acerto_suave</color>
+    <color name="avatar_fundo_4">@color/marca_erro_suave</color>
+    <color name="avatar_fundo_5">@color/marca_primaria</color>
+    <color name="avatar_fundo_6">@color/marca_acento</color>
+    <color name="avatar_fundo_7">@color/area_natureza</color>
+    <color name="avatar_fundo_8">@color/area_matematica</color>
+    <color name="avatar_camisa">@color/papel</color>
+
     <!-- Áreas do ENEM: cor do cartão, sombra/texto escuro e conteúdo sobre a cor -->
     <color name="area_linguagens">#F2594B</color>
     <color name="area_linguagens_escura">#C8402F</color>

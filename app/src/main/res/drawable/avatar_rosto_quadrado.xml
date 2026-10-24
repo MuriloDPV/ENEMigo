@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Avatar: Rosto quadrado com orelhas: tingido com a cor da pele.
+     Todas as peças usam o mesmo quadro de 120x120 e se encaixam umas nas outras (ver AvatarDrawable). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <group
+        android:pivotX="60"
+        android:pivotY="72"
+        android:scaleX="1.12"
+        android:scaleY="1.12">
+        <path
+            android:fillColor="@color/texto_sobre_cor"
+            android:pathData="M30,59 a5.5,5.5 0 1,0 11,0 a5.5,5.5 0 1,0 -11,0 Z M79,59 a5.5,5.5 0 1,0 11,0 a5.5,5.5 0 1,0 -11,0 Z M53,32 H67 A17,17 0 0 1 84,49 V71 A12,12 0 0 1 72,83 H48 A12,12 0 0 1 36,71 V49 A17,17 0 0 1 53,32 Z" />
+    </group>
+</vector>

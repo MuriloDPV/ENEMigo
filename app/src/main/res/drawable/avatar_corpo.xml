@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Avatar: Camiseta (cor fixa) com a gola no azul da marca.
+     Todas as peças usam o mesmo quadro de 120x120 e se encaixam umas nas outras (ver AvatarDrawable). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <group
+        android:pivotX="60"
+        android:pivotY="72"
+        android:scaleX="1.12"
+        android:scaleY="1.12">
+        <path
+            android:fillColor="@color/avatar_camisa"
+            android:pathData="M14,120 C14,103 27,94 45,90 Q60,99 75,90 C93,94 106,103 106,120 Z" />
+        <path
+            android:pathData="M45,90 Q60,99 75,90"
+            android:strokeColor="@color/marca_primaria"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="3" />
+    </group>
+</vector>

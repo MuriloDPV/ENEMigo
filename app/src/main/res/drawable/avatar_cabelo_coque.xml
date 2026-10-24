@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Avatar: Coque (frente): cabelo puxado para trás.
+     Todas as peças usam o mesmo quadro de 120x120 e se encaixam umas nas outras (ver AvatarDrawable). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <group
+        android:pivotX="60"
+        android:pivotY="72"
+        android:scaleX="1.12"
+        android:scaleY="1.12">
+        <path
+            android:fillColor="@color/texto_sobre_cor"
+            android:pathData="M35,57 C33.5,39.5 43.5,28 60,28 C76.5,28 86.5,39.5 85,57 C82.5,47 74.5,40.5 60,40.5 C45.5,40.5 37.5,47 35,57 Z" />
+    </group>
+</vector>

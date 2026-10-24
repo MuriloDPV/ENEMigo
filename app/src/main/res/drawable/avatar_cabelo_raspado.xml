@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Avatar: Cabelo raspado: só uma camada fina.
+     Todas as peças usam o mesmo quadro de 120x120 e se encaixam umas nas outras (ver AvatarDrawable). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <group
+        android:pivotX="60"
+        android:pivotY="72"
+        android:scaleX="1.12"
+        android:scaleY="1.12">
+        <path
+            android:fillColor="@color/texto_sobre_cor"
+            android:fillAlpha="0.9"
+            android:pathData="M36.5,52 C36.5,36.5 46.5,29 60,29 C73.5,29 83.5,36.5 83.5,52 C80,43.5 71.5,38.5 60,38.5 C48.5,38.5 40,43.5 36.5,52 Z" />
+    </group>
+</vector>

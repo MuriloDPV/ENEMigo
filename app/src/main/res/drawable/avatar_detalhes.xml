@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Avatar: Nariz, boca e bochechas (por cima de qualquer rosto).
+     Todas as peças usam o mesmo quadro de 120x120 e se encaixam umas nas outras (ver AvatarDrawable). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <group
+        android:pivotX="60"
+        android:pivotY="72"
+        android:scaleX="1.12"
+        android:scaleY="1.12">
+        <path
+            android:fillColor="@color/marca_erro"
+            android:fillAlpha="0.18"
+            android:pathData="M40.5,66 a4,2.4 0 1,0 8,0 a4,2.4 0 1,0 -8,0 Z" />
+        <path
+            android:fillColor="@color/marca_erro"
+            android:fillAlpha="0.18"
+            android:pathData="M71.5,66 a4,2.4 0 1,0 8,0 a4,2.4 0 1,0 -8,0 Z" />
+        <path
+            android:pathData="M58.2,63.5 Q60,65.6 61.8,63.5"
+            android:strokeColor="@color/papel_texto"
+            android:strokeAlpha="0.4"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="1.8" />
+        <path
+            android:pathData="M53.5,70 Q60,75.5 66.5,70"
+            android:strokeColor="@color/papel_texto"
+            android:strokeAlpha="0.85"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="2.4" />
+    </group>
+</vector>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Avatar: Óculos redondos.
+     Todas as peças usam o mesmo quadro de 120x120 e se encaixam umas nas outras (ver AvatarDrawable). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <group
+        android:pivotX="60"
+        android:pivotY="72"
+        android:scaleX="1.12"
+        android:scaleY="1.12">
+        <path
+            android:fillColor="@color/texto_sobre_cor"
+            android:fillAlpha="0.2"
+            android:pathData="M42.8,57 a7.2,7.2 0 1,0 14.4,0 a7.2,7.2 0 1,0 -14.4,0 Z" />
+        <path
+            android:fillColor="@color/texto_sobre_cor"
+            android:fillAlpha="0.2"
+            android:pathData="M62.8,57 a7.2,7.2 0 1,0 14.4,0 a7.2,7.2 0 1,0 -14.4,0 Z" />
+        <path
+            android:pathData="M42.8,57 a7.2,7.2 0 1,0 14.4,0 a7.2,7.2 0 1,0 -14.4,0"
+            android:strokeColor="@color/papel_texto"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="2.2" />
+        <path
+            android:pathData="M62.8,57 a7.2,7.2 0 1,0 14.4,0 a7.2,7.2 0 1,0 -14.4,0"
+            android:strokeColor="@color/papel_texto"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="2.2" />
+        <path
+            android:pathData="M57.2,56 Q60,54.4 62.8,56"
+            android:strokeColor="@color/papel_texto"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="2" />
+        <path
+            android:pathData="M42.8,55.5 L36,54 M77.2,55.5 L84,54"
+            android:strokeColor="@color/papel_texto"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="2" />
+    </group>
+</vector>

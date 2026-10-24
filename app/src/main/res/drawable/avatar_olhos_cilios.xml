@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Avatar: Olhos redondos com cílios.
+     Todas as peças usam o mesmo quadro de 120x120 e se encaixam umas nas outras (ver AvatarDrawable). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <group
+        android:pivotX="60"
+        android:pivotY="72"
+        android:scaleX="1.12"
+        android:scaleY="1.12">
+        <path
+            android:fillColor="@color/papel_texto"
+            android:pathData="M46.6,57 a3.4,4 0 1,0 6.8,0 a3.4,4 0 1,0 -6.8,0 Z" />
+        <path
+            android:fillColor="@color/papel_texto"
+            android:pathData="M66.6,57 a3.4,4 0 1,0 6.8,0 a3.4,4 0 1,0 -6.8,0 Z" />
+        <path
+            android:fillColor="@color/texto_sobre_cor"
+            android:pathData="M50,55.4 a1.2,1.2 0 1,0 2.4,0 a1.2,1.2 0 1,0 -2.4,0 Z" />
+        <path
+            android:fillColor="@color/texto_sobre_cor"
+            android:pathData="M70,55.4 a1.2,1.2 0 1,0 2.4,0 a1.2,1.2 0 1,0 -2.4,0 Z" />
+        <path
+            android:pathData="M46.8,54.4 L44.6,52.6 M48.4,53.2 L47.4,50.9"
+            android:strokeColor="@color/papel_texto"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="1.5" />
+        <path
+            android:pathData="M73.2,54.4 L75.4,52.6 M71.6,53.2 L72.6,50.9"
+            android:strokeColor="@color/papel_texto"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="1.5" />
+    </group>
+</vector>

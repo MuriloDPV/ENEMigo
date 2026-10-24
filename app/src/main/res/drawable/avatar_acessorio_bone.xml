@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Avatar: Boné no azul da marca, com um risco de marca-texto.
+     Todas as peças usam o mesmo quadro de 120x120 e se encaixam umas nas outras (ver AvatarDrawable). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <group
+        android:pivotX="60"
+        android:pivotY="72"
+        android:scaleX="1.12"
+        android:scaleY="1.12">
+        <path
+            android:fillColor="@color/marca_primaria"
+            android:pathData="M33.5,46 C33.5,30 45,22 60,22 C75,22 86.5,30 86.5,46 Z" />
+        <path
+            android:pathData="M60,22.5 V45"
+            android:strokeColor="@color/marca_primaria_escura"
+            android:strokeAlpha="0.5"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="1.2" />
+        <path
+            android:fillColor="@color/marca_primaria_escura"
+            android:pathData="M57.4,23 a2.6,2.6 0 1,0 5.2,0 a2.6,2.6 0 1,0 -5.2,0 Z" />
+        <path
+            android:fillColor="@color/marca_primaria_escura"
+            android:pathData="M28,46 Q60,38 92,46 Q60,53 28,46 Z" />
+        <path
+            android:pathData="M52.5,36 L67.5,32"
+            android:strokeColor="@color/marca_acento"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="3.2" />
+    </group>
+</vector>
