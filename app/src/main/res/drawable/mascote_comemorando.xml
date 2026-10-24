@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Grifo comemorando: braços para cima, boca bem aberta e estrelinhas riscadas no ar.
+     Cores: mascote_* em values/colors.xml (apelidos da marca). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Sombra no chão -->
+    <path
+        android:fillColor="@color/mascote_tinta"
+        android:fillAlpha="0.12"
+        android:pathData="M36,112 a24,4 0 1,0 48,0 a24,4 0 1,0 -48,0 Z" />
+    <!-- Pés -->
+    <path
+        android:fillColor="@color/mascote_tampa_sombra"
+        android:pathData="M43,107.5 a7,4.5 0 1,0 14,0 a7,4.5 0 1,0 -14,0 Z" />
+    <path
+        android:fillColor="@color/mascote_tampa_sombra"
+        android:pathData="M63,107.5 a7,4.5 0 1,0 14,0 a7,4.5 0 1,0 -14,0 Z" />
+    <!-- Braços (atrás do corpo) -->
+    <path
+        android:pathData="M43,77 Q32,70 28,58"
+        android:strokeColor="@color/mascote_tampa"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="4.2" />
+    <path
+        android:fillColor="@color/mascote_tampa"
+        android:pathData="M24.6,58 a3.4,3.4 0 1,0 6.8,0 a3.4,3.4 0 1,0 -6.8,0 Z" />
+    <path
+        android:pathData="M77,77 Q88,70 92,58"
+        android:strokeColor="@color/mascote_tampa"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="4.2" />
+    <path
+        android:fillColor="@color/mascote_tampa"
+        android:pathData="M88.6,58 a3.4,3.4 0 1,0 6.8,0 a3.4,3.4 0 1,0 -6.8,0 Z" />
+    <!-- Corpo amarelo, com sombra do lado direito e reflexo do plástico -->
+    <path
+        android:fillColor="@color/mascote_corpo"
+        android:pathData="M53,36 H67 A15,15 0 0 1 82,51 V91 A15,15 0 0 1 67,106 H53 A15,15 0 0 1 38,91 V51 A15,15 0 0 1 53,36 Z"
+        android:strokeColor="@color/mascote_corpo_sombra"
+        android:strokeWidth="2.5" />
+    <group>
+        <clip-path android:pathData="M53,36 H67 A15,15 0 0 1 82,51 V91 A15,15 0 0 1 67,106 H53 A15,15 0 0 1 38,91 V51 A15,15 0 0 1 53,36 Z" />
+        <path
+            android:fillColor="@color/mascote_corpo_sombra"
+            android:fillAlpha="0.4"
+            android:pathData="M74,30 Q70,70 74,110 H92 V30 Z" />
+    </group>
+    <path
+        android:pathData="M45.5,55 V82"
+        android:strokeColor="@color/mascote_brilho"
+        android:strokeAlpha="0.55"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="4" />
+    <!-- Tampa (azul da marca), com a ponta chanfrada do marca-texto por baixo -->
+    <group
+        android:pivotX="60"
+        android:pivotY="44"
+        android:rotation="0">
+        <path
+            android:fillColor="@color/mascote_tampa"
+            android:pathData="M40,19 L79,11.5 Q84,10.6 84,15.5 V39 A5,5 0 0 1 79,44 H41 A5,5 0 0 1 36,39 V23 Q36,19.8 40,19 Z" />
+        <path
+            android:fillColor="@color/mascote_tampa_sombra"
+            android:pathData="M36,36.5 H84 V39 A5,5 0 0 1 79,44 H41 A5,5 0 0 1 36,39 Z" />
+        <path
+            android:fillColor="@color/mascote_tampa_sombra"
+            android:pathData="M74,12.6 L79,11.7 V50 A2.5,2.5 0 0 1 74,50 Z" />
+        <path
+            android:pathData="M42,31 V25 Q42,22.6 44.4,22.1 L53,20.4"
+            android:strokeColor="@color/mascote_brilho"
+            android:strokeAlpha="0.4"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="3" />
+    </group>
+    <!-- Rosto -->
+    <path
+        android:pathData="M45.5,64.5 Q51,57.5 56.5,64.5"
+        android:strokeColor="@color/mascote_tinta"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="3.2" />
+    <path
+        android:pathData="M63.5,64.5 Q69,57.5 74.5,64.5"
+        android:strokeColor="@color/mascote_tinta"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="3.2" />
+    <path
+        android:fillColor="@color/mascote_bochecha"
+        android:fillAlpha="0.45"
+        android:pathData="M40.5,73 a4,2.6 0 1,0 8,0 a4,2.6 0 1,0 -8,0 Z" />
+    <path
+        android:fillColor="@color/mascote_bochecha"
+        android:fillAlpha="0.45"
+        android:pathData="M71.5,73 a4,2.6 0 1,0 8,0 a4,2.6 0 1,0 -8,0 Z" />
+    <path
+        android:fillColor="@color/mascote_tinta"
+        android:pathData="M51,72 Q60,73.8 69,72 Q68,86 60,86 Q52,86 51,72 Z" />
+    <path
+        android:fillColor="@color/mascote_bochecha"
+        android:pathData="M55,82 Q60,77.8 65,82 Q63,85.8 60,85.8 Q57,85.8 55,82 Z" />
+    <!-- Estrelinhas -->
+    <path
+        android:fillColor="@color/mascote_corpo"
+        android:pathData="M17,29 Q18.05,34.95 24,36 Q18.05,37.05 17,43 Q15.95,37.05 10,36 Q15.95,34.95 17,29 Z"
+        android:strokeColor="@color/mascote_corpo_sombra"
+        android:strokeLineJoin="round"
+        android:strokeWidth="1.3" />
+    <path
+        android:fillColor="@color/mascote_corpo"
+        android:pathData="M103,21 Q104.2,27.8 111,29 Q104.2,30.2 103,37 Q101.8,30.2 95,29 Q101.8,27.8 103,21 Z"
+        android:strokeColor="@color/mascote_corpo_sombra"
+        android:strokeLineJoin="round"
+        android:strokeWidth="1.3" />
+    <path
+        android:fillColor="@color/mascote_corpo"
+        android:pathData="M105,45.5 Q105.675,49.325 109.5,50 Q105.675,50.675 105,54.5 Q104.325,50.675 100.5,50 Q104.325,49.325 105,45.5 Z"
+        android:strokeColor="@color/mascote_corpo_sombra"
+        android:strokeLineJoin="round"
+        android:strokeWidth="1.3" />
+</vector>

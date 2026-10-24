@@ -65,6 +65,19 @@
     <color name="papel_acerto">#DDF6EE</color>
     <color name="papel_erro">#FDE6E7</color>
 
+    <!--
+        Mascote (Grifo, o marca-texto). São apelidos das cores da marca: trocando a marca, o
+        mascote acompanha, e no modo escuro ele usa as versões de values-night sozinho.
+        A tinta (olhos e boca) fica escura nos dois modos, porque é desenhada sobre o corpo claro.
+    -->
+    <color name="mascote_corpo">@color/marca_acento</color>
+    <color name="mascote_corpo_sombra">@color/marca_acento_escuro</color>
+    <color name="mascote_tampa">@color/marca_primaria</color>
+    <color name="mascote_tampa_sombra">@color/marca_primaria_escura</color>
+    <color name="mascote_tinta">@color/papel_texto</color>
+    <color name="mascote_brilho">@color/texto_sobre_cor</color>
+    <color name="mascote_bochecha">@color/marca_erro</color>
+
     <!-- Áreas do ENEM: cor do cartão, sombra/texto escuro e conteúdo sobre a cor -->
     <color name="area_linguagens">#F2594B</color>
     <color name="area_linguagens_escura">#C8402F</color>

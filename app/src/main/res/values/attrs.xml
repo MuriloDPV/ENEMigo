@@ -20,4 +20,15 @@
         <attr name="raio" />
         <attr name="relevo" />
     </declare-styleable>
+
+    <!-- Expressão inicial do mascote (ui/componente/MascoteView) -->
+    <declare-styleable name="MascoteView">
+        <attr name="expressao" format="enum">
+            <enum name="neutro" value="0" />
+            <enum name="feliz" value="1" />
+            <enum name="comemorando" value="2" />
+            <enum name="triste" value="3" />
+            <enum name="pensando" value="4" />
+        </attr>
+    </declare-styleable>
 </resources>
