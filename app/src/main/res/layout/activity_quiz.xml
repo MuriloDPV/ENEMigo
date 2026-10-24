@@ -198,26 +198,19 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <FrameLayout
-                    android:id="@+id/circulo_feedback"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:background="@drawable/bg_circulo">
-
-                    <ImageView
-                        android:id="@+id/img_feedback"
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
-                        android:layout_gravity="center"
-                        android:importantForAccessibility="no" />
-                </FrameLayout>
+                <!-- O Grifo reage: feliz e pulando no acerto, triste e tremendo no erro -->
+                <com.murilo.enemigo.ui.componente.MascoteView
+                    android:id="@+id/mascote_feedback"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="-6dp" />
 
                 <TextView
                     android:id="@+id/txt_feedback_titulo"
                     style="@style/Texto.Titulo"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="8dp"
                     android:layout_weight="1"
                     android:accessibilityLiveRegion="polite" />
             </LinearLayout>

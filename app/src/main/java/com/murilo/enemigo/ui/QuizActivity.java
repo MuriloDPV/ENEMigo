@@ -1,14 +1,12 @@
 package com.murilo.enemigo.ui;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +27,7 @@ import com.murilo.enemigo.model.Questao;
 import com.murilo.enemigo.model.ResultadoSessao;
 import com.murilo.enemigo.ui.componente.BotaoRelevo;
 import com.murilo.enemigo.ui.componente.CartaoRelevo;
+import com.murilo.enemigo.ui.componente.MascoteView;
 import com.murilo.enemigo.util.Celebracoes;
 import com.murilo.enemigo.util.Constantes;
 import com.murilo.enemigo.util.TextoRico;
@@ -86,8 +85,8 @@ public class QuizActivity extends AppCompatActivity {
     private BotaoRelevo btnVerificar;
     private View divisorInferior;
     private View painelFeedback;
-    private View circuloFeedback;
-    private ImageView imgFeedback;
+    private MascoteView mascoteFeedback;
+    private Retorno retorno;
     private TextView txtFeedbackTitulo;
     private TextView txtExplicacao;
     private BotaoRelevo btnContinuar;
@@ -133,8 +132,8 @@ public class QuizActivity extends AppCompatActivity {
         btnVerificar = findViewById(R.id.btn_verificar);
         divisorInferior = findViewById(R.id.divisor_inferior);
         painelFeedback = findViewById(R.id.painel_feedback);
-        circuloFeedback = findViewById(R.id.circulo_feedback);
-        imgFeedback = findViewById(R.id.img_feedback);
+        mascoteFeedback = findViewById(R.id.mascote_feedback);
+        retorno = new Retorno(this);
         txtFeedbackTitulo = findViewById(R.id.txt_feedback_titulo);
         txtExplicacao = findViewById(R.id.txt_explicacao);
         btnContinuar = findViewById(R.id.btn_continuar);
@@ -207,6 +206,15 @@ public class QuizActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         retomadoEm = SystemClock.elapsedRealtime();
+    }
+
+    @Override
+    protected void onDestroy() {
+        // Pode ser null se a tela fechou logo no começo (lição não encontrada, caderno vazio).
+        if (retorno != null) {
+            retorno.liberar();
+        }
+        super.onDestroy();
     }
 
     @Override
@@ -314,6 +322,7 @@ public class QuizActivity extends AppCompatActivity {
         }
 
         painelFeedback.setVisibility(View.GONE);
+        mascoteFeedback.parar();
         divisorInferior.setVisibility(View.VISIBLE);
         btnVerificar.setVisibility(View.VISIBLE);
         btnVerificar.setEnabled(false);
@@ -358,6 +367,12 @@ public class QuizActivity extends AppCompatActivity {
             progresso.adicionarAoCaderno(questao.getId());
             atualizarVidas();
         }
+        // Som de acerto ou de erro (o erro também vibra, C10), se estiverem ligados.
+        if (questao.isCorreta(selecionada)) {
+            retorno.acerto();
+        } else {
+            retorno.erro();
+        }
         mostrarFeedback(true);
     }
 
@@ -385,7 +400,7 @@ public class QuizActivity extends AppCompatActivity {
             corPainel = cor(R.color.marca_acerto_suave);
             corTitulo = cor(R.color.marca_acerto_texto);
             txtFeedbackTitulo.setText(R.string.feedback_acerto);
-            imgFeedback.setImageResource(R.drawable.ic_check);
+            mascoteFeedback.setExpressao(MascoteView.Expressao.FELIZ);
             btnContinuar.setCores(corForte, Color.TRANSPARENT, cor(R.color.marca_acerto_escuro));
         } else {
             pintar(selecionada, ERRADA);
@@ -393,13 +408,11 @@ public class QuizActivity extends AppCompatActivity {
             corPainel = cor(R.color.marca_erro_suave);
             corTitulo = cor(R.color.marca_erro_texto);
             txtFeedbackTitulo.setText(getString(R.string.feedback_erro, questao.getLetraCorreta()));
-            imgFeedback.setImageResource(R.drawable.ic_fechar);
+            mascoteFeedback.setExpressao(MascoteView.Expressao.TRISTE);
             btnContinuar.setCores(corForte, Color.TRANSPARENT, cor(R.color.marca_erro_escuro));
         }
 
         painelFeedback.setBackgroundColor(corPainel);
-        circuloFeedback.setBackgroundTintList(ColorStateList.valueOf(corForte));
-        imgFeedback.setImageTintList(ColorStateList.valueOf(cor(R.color.texto_sobre_cor)));
         txtFeedbackTitulo.setTextColor(corTitulo);
         txtExplicacao.setText(questao.getExplicacao());
 
@@ -407,13 +420,20 @@ public class QuizActivity extends AppCompatActivity {
         divisorInferior.setVisibility(View.GONE);
         painelFeedback.setVisibility(View.VISIBLE);
         if (animar) {
-            // O painel sobe de baixo da tela.
+            // O painel sobe de baixo da tela e, quando chega, o Grifo pula ou balança a cabeça.
             painelFeedback.post(() -> {
                 painelFeedback.setTranslationY(painelFeedback.getHeight());
                 painelFeedback.animate()
                         .translationY(0f)
                         .setDuration(260)
                         .setInterpolator(new DecelerateInterpolator(1.6f))
+                        .withEndAction(() -> {
+                            if (acertou) {
+                                mascoteFeedback.pular();
+                            } else {
+                                mascoteFeedback.tremer();
+                            }
+                        })
                         .start();
             });
         }
@@ -434,11 +454,10 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
+    /** O Grifo fica desbotado, "sem tinta", como as vidas. */
     private void mostrarVidasAcabaram() {
-        new MaterialAlertDialogBuilder(this, R.style.ThemeOverlay_ENEMigo_Dialogo_Icone)
-                .setIcon(R.drawable.ic_coracao)
-                .setTitle(R.string.vidas_acabaram_titulo)
-                .setMessage(R.string.vidas_acabaram_mensagem)
+        Dialogos.semVidas(this, getString(R.string.vidas_acabaram_titulo),
+                        getString(R.string.vidas_acabaram_mensagem))
                 .setCancelable(false)
                 .setPositiveButton(R.string.btn_ir_revisao, (dialog, which) -> {
                     Dialogos.abrirRevisao(this);
