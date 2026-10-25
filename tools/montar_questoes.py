@@ -70,21 +70,21 @@ AREAS = [
             ("2023-21", "D", "O dicionário traduz termos populares (defruço, chanha, piloura) para termos médicos. Assim o médico entende melhor os sintomas que o paciente descreve."),
         ]),
         ("Recursos de linguagem", [
-            ("2019-24", "C", "A ladainha é uma sequência de súplicas repetidas (“Vamos pedir piedade / Senhor, piedade”). O convite chama o interlocutor a participar da prece: é a sequência injuntiva."),
+            ("2019-24", "C", "A ladainha é uma oração feita de pedidos repetidos, e a canção imita essa forma. O convite “Vamos pedir piedade” e o pedido “Lhes dê grandeza” chamam o interlocutor a participar: é a sequência injuntiva."),
             ("2022-6", "E", "Metáforas do dia a dia, como “a vida engata uma primeira e sai em disparada”, aproximam o texto de uma conversa e criam o tom descontraído e pouco formal."),
-            ("2022-33", "A", "O trecho é uma longa lista de objetos, pessoas e ações do funeral, separados por vírgulas. É essa enumeração que faz o narrador chamar o capítulo de “inventário”."),
+            ("2022-33", "A", "O trecho é uma longa lista de objetos, pessoas e ações do funeral, separados por vírgulas. É essa enumeração que faz o próprio narrador dizer que aquilo “parece um simples inventário”."),
         ]),
         ("Leitura literária", [
             ("2019-13", "B", "Pinote foi rejeitado enquanto era futurista e só voltou a ser aceito quando virou “passadista”. A peça ironiza um público conservador, preso aos modelos consagrados."),
             ("2020-11", "B", "A paisagem ganha traços ameaçadores (sombras, monstros, serpentes, árvores que choram) que espelham o medo de Maria. O estado emocional da personagem e a paisagem se confundem."),
             ("2022-31", "A", "O Romance de 30 retrata com crueza a realidade social do Nordeste. Aqui os retirantes da seca aparecem como “esqueletos redivivos”, sem nenhuma idealização."),
-            ("2023-31", "C", "O fim do amor, que pedia um cenário solene, acontece numa cena banal à mesa do café, recolhendo migalhas. A comoção do amor frustrado é diluída no cotidiano."),
+            ("2023-31", "C", "O fim do amor pediria um cenário solene, como os da tradição lírica. Mas acontece numa cena banal, à mesa do café, enquanto o outro recolhe as migalhas de pão: a comoção do amor frustrado se dilui no cotidiano."),
         ]),
         ("Esporte e práticas corporais", [
             ("2020-36", "D", "Pela definição, luta tem contato proposital, troca de ações de ataque e defesa e regras. A proposta deve ser um combate intencional com ações regulamentadas, sem agressão e sem vencedor definido antes."),
-            ("2021-31", "A", "As rodas de uretano deram aderência e facilitaram as manobras, e até iniciantes passaram a andar de skate. Com campeonatos, marcas e lojas, a prática se democratizou."),
+            ("2021-31", "A", "As rodas de uretano deram mais aderência, trouxeram novas manobras e permitiram que até pessoas inexperientes começassem a praticar. O skate chegou a muito mais gente, e daí vieram campeonatos, marcas e lojas: é a democratização da prática."),
             ("2023-6", "D", "A palavra “juntos” entrou no lema “para ressaltar a solidariedade”. O lema olímpico passou a se associar à cooperação."),
-            ("2023-42", "E", "O lazer ativo se concentra nos mais ricos e a inatividade é maior entre quem tem menos renda. O fator central é a desigualdade entre classes sociais."),
+            ("2023-42", "E", "Segundo o texto, as práticas de lazer se concentram “nas populações mais abastadas”, e os mais pobres se exercitam sobretudo no deslocamento para estudar ou trabalhar. Gênero, idade e raça também aparecem, mas o eixo do texto é a “relação inversa e perversa” com as condições socioeconômicas: a desigualdade entre classes."),
         ]),
         ("Internet e igualdade", [
             ("2020-43", "D", "Os exemplos (software que eliminou candidatos por sexo e origem, anúncios de antecedentes criminais para nomes comuns entre negros) mostram a tecnologia reproduzindo o preconceito que já existe na sociedade."),
@@ -240,23 +240,70 @@ FORMULAS = {
 # grudado). Cada trecho antigo precisa aparecer exatamente uma vez no campo. O campo é
 # "context", "alternativesIntroduction" ou a letra da alternativa ("A" a "E").
 CORRECOES = {
+    "2019-24": [("context", "Rio de Janeiro:  \nUniversal Music", "Rio de Janeiro: Universal Music")],
+    "2019-29": [("context", "cultura_  \n_informática", "cultura informática")],
     "2019-139": [("context", "consumo de até 6 m²", "consumo de até 6 m³"),
                  ("context", "15 m² por mês", "15 m³ por mês"),
                  ("context", "a 10 m³. Sabe-se", "a 10 m³.\n\nSabe-se")],
     "2019-147": [("context", "seu patio", "seu pátio"),
                  ("context", "conforme lustrado", "conforme ilustrado")],
+    "2020-36": [("context", "regidas por regras", "regida por regras"),
+                ("context", "situacionais.\n\n**Movimento**", "situacionais. **Movimento**")],
+    "2020-41": [("context", "BARRETO. L.", "BARRETO, L."),
+                ("context", "26 jun. 2012", "26 jun. 2012.")],
+    "2020-43": [("context", "60 de 2.000", "60 de 2 000")],
+    "2021-31": [("context", "ARMBRUST, I; LAURD, G, A, A.", "ARMBRUST, I.; LAURO, F. A. A."),
+                ("context", "Motriz, jul-set, 2010", "Motriz, jul.-set. 2010")],
     "2021-162": [("context", "imposto devido (l)", "imposto devido (I)")],
     "2021-170": [("alternativesIntroduction", "em milimitro", "em mililitro")],
     "2021-173": [("alternativesIntroduction", "o lava rápido", "o lava-rápido")],
+    "2022-6": [("context", "http:/porumavidasimples", "http://porumavidasimples")],
+    "2022-11": [("context", "o\xa0 nascimento", "o nascimento")],
+    "2022-14": [("context", "FIORIN, J. L Língua", "FIORIN, J. L. Língua"),
+                ("context", "n. 2. mar-set 2014", "n. 2, mar.-set. 2014."),
+                ("context", "brasil.elpais.com Acesso", "brasil.elpais.com. Acesso")],
+    "2022-33": [("context", "caixão a prego", "caixão, a prego"),
+                ("context", "corrêas", "correias"),
+                ("context", "inventário, eram", "inventário eram"),
+                ("context", "Memórias Póstumas", "Memórias póstumas"),
+                ("context", "domíniopúblico", "dominiopublico"),
+                ("context", "25 jul, 2022", "25 jul. 2022"),
+                ("alternativesIntroduction", "permite o Machado de Assis considerar o capítulo de Memórias Póstumas",
+                 "permite a Machado de Assis considerar um capítulo de Memórias póstumas"),
+                ("alternativesIntroduction", "inventário é a:", "inventário é a")],
     "2022-138": [("context", "no  \ndecorrer", "no decorrer")],
+    "2023-6": [("alternativesIntroduction", "“juntos” mais rápido", "“juntos”: mais rápido"),
+               ("alternativesIntroduction", "forte – juntos", "forte — juntos"),
+               ("alternativesIntroduction", "ge.globo.com Acesso em: 10 nov. 2021 (adaptado)",
+                "ge.globo.com. Acesso em: 10 nov. 2021 (adaptado).")],
+    "2023-9": [("context", "18 jun. 2018 (adaptado)", "18 jun. 2018 (adaptado).")],
+    "2023-21": [("alternativesIntroduction", "gl.globo.com", "g1.globo.com"),
+                ("alternativesIntroduction", "médica, Pesquisadores", "médica, pesquisadores")],
+    # Na API cada verso virou parágrafo e alguns versos foram emendados; no caderno é um bloco só.
+    "2023-31": [("context", "Entre a toalha branca e um bule de café\n\nseria inapropriado dizer\n\neu não te amo mais."
+                 "\n\nEra necessário algo mais solene,\n\num jardim japonês para as perdas pensadas,\n\num noturno de "
+                 "tempestade para arrebentar de dor,\n\numa praia de pedras para chorar em silêncio,\n\numa cama alta "
+                 "para o incenso da despedida,\n\numa janela dando para o abismo.\n\nNo entanto você abaixa os olhos"
+                 "\n\ne recolhe lentamente as migalhas de pão\n\nsobre a mesa posta para dois.",
+                 "Entre a toalha branca e um bule de café\nseria inapropriado dizer\neu não te amo mais.\nEra "
+                 "necessário algo mais solene,\num jardim japonês\npara as perdas pensadas,\num noturno de tempestade"
+                 "\npara arrebentar de dor,\numa praia de pedras para chorar\nem silêncio, uma cama alta\npara o "
+                 "incenso da despedida,\numa janela\ndando para o abismo.\nNo entanto você abaixa os olhos\ne recolhe "
+                 "lentamente as migalhas de pão\nsobre a mesa posta para dois.")],
+    "2023-42": [("context", "PC/A e residentes", "PC/AF e residentes"),
+                ("alternativesIntroduction", "atividades fisicas", "atividades físicas")],
     "2023-161": [("context", "aproximação para 28.", "aproximação para √28.")],
 }
 
 # Alternativas que têm ponto final no caderno e vieram sem ele da API.
-SEM_PONTO = {}
+SEM_PONTO = {
+    "2022-33": "ABCDE",
+    "2023-39": "E",
+}
 
 # Pontuação que fecha o comando. Sem ela, o comando continua nas alternativas.
 FIM_DE_FRASE = (".", "?", "!", ":")
+
 
 def texto_puro(md):
     """Markdown da API -> texto puro, mantendo as quebras de linha."""
