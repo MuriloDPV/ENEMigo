@@ -372,13 +372,13 @@
             {
               "id": "HUM-01-01",
               "texto": "Para Maquiavel, quando um homem decide dizer a verdade pondo em risco a própria integridade física, tal resolução diz respeito apenas a sua pessoa. Mas se esse mesmo homem é um chefe de Estado, os critérios pessoais não são mais adequados para decidir sobre ações cujas consequências se tornam tão amplas, já que o prejuízo não será apenas individual, mas coletivo. Nesse caso, conforme as circunstâncias e os fins a serem atingidos, pode-se decidir que o melhor para o bem comum seja mentir.\n\nARANHA, M. L. Maquiavel: a lógica da força. São Paulo: Moderna, 2006 (adaptado).",
-              "enunciado": "O texto aponta uma inovação na teoria política na época moderna expressa na distinção entre:",
+              "enunciado": "O texto aponta uma inovação na teoria política na época moderna expressa na distinção entre",
               "alternativas": [
-                "Idealidade e efetividade da moral.",
-                "Nulidade e preservabilidade da liberdade.",
-                "Ilegalidade e legitimidade do governante.",
-                "Verificabilidade e possibilidade da verdade.",
-                "Objetividade e subjetividade do conhecimento."
+                "idealidade e efetividade da moral.",
+                "nulidade e preservabilidade da liberdade.",
+                "ilegalidade e legitimidade do governante.",
+                "verificabilidade e possibilidade da verdade.",
+                "objetividade e subjetividade do conhecimento."
               ],
               "correta": "A",
               "explicacao": "Maquiavel separa a moral ideal (como se deveria agir) da moral efetiva (o que o governante precisa fazer). Pelo bem comum, o chefe de Estado pode até mentir.",
@@ -387,8 +387,8 @@
             },
             {
               "id": "HUM-01-02",
-              "texto": "Quando Getúlio Vargas se suicidou, em agosto de 1954, o país parecia à beira do caos. Acuado por uma grave crise política, o velho líder preferiu uma bala no peito à humilhação de aceitar uma nova deposição, como a que sofrera em outubro de 1945. Entretanto, ao contrário do que imaginavam os inimigos, ao ruído do estampido não se seguiu o silêncio que cerca a derrota.\n\nREIS FILHO, D. A. O Estado à sombra de Vargas.\nRevista Nossa História, n. 7, maio 2004.",
-              "enunciado": "O evento analisado no texto teve como repercussão imediata na politica nacional a",
+              "texto": "Quando Getúlio Vargas se suicidou, em agosto de 1954, o país parecia à beira do caos. Acuado por uma grave crise política, o velho líder preferiu uma bala no peito à humilhação de aceitar uma nova deposição, como a que sofrera em outubro de 1945. Entretanto, ao contrário do que imaginavam os inimigos, ao ruído do estampido não se seguiu o silêncio que cerca a derrota.\n\nREIS FILHO, D. A. O Estado à sombra de Vargas. Revista Nossa História, n. 7, maio 2004.",
+              "enunciado": "O evento analisado no texto teve como repercussão imediata na política nacional a",
               "alternativas": [
                 "reação popular.",
                 "intervenção militar.",
@@ -404,7 +404,7 @@
             {
               "id": "HUM-01-03",
               "texto": "O Golpe Militar de 1964 foi implacável no combate ao que restava das Ligas Camponesas, generalizadas na década anterior. No entanto, em relação aos sindicatos, sua atitude foi ambígua. Por meio de acordos com os Estados Unidos, foram concebidos centros sindicais e cursos de liderança com base em princípios conservadores e ministrados por membros da Igreja Católica.\n\nDEL PRIORE, M.; VENÂNCIO, R. Uma história da vida rural no Brasil. Rio de Janeiro: Ediouro, 2006 (adaptado).",
-              "enunciado": "Os sindicatos rurais foram tratados da forma descrita no texto porque o governo pretendia utiliza-los para",
+              "enunciado": "Os sindicatos rurais foram tratados da forma descrita no texto porque o governo pretendia utilizá-los para",
               "alternativas": [
                 "controlar as tensões políticas.",
                 "limitar a legislação trabalhista.",
@@ -413,7 +413,7 @@
                 "estimular a oferta de mão de obra."
               ],
               "correta": "A",
-              "explicacao": "O regime militar reprimiu as Ligas Camponesas e criou sindicatos rurais de orientação conservadora. O objetivo era controlar as tensões políticas no campo.",
+              "explicacao": "O regime destruiu as Ligas Camponesas, mas tratou os sindicatos rurais de outro jeito: criou centros sindicais e cursos de liderança com princípios conservadores. Com lideranças sob sua influência, podia controlar as tensões políticas no campo.",
               "fonte": "ENEM 2023 – Questão 80",
               "segundos_estimados": 68
             }
@@ -425,7 +425,7 @@
           "questoes": [
             {
               "id": "HUM-02-01",
-              "texto": "Empédocles estabelece quatro elementos corporais – fogo, ar, água e terra –, que são eternos e que mudam aumentando e diminuindo mediante mistura e  separação; mas os princípios propriamente ditos, pelos quais são movidos, são o Amor e o Ódio. Pois é preciso que os elementos permaneçam alternadamente em movimento, sendo ora misturados pelo Amor, ora separados pelo Ódio.\n\nSIMPLÍCIO. Física, 25, 21. In: Os pré-socráticos. São Paulo: Nova Cultural, 1996.",
+              "texto": "Empédocles estabelece quatro elementos corporais – fogo, ar, água e terra –, que são eternos e que mudam aumentando e diminuindo mediante mistura e separação; mas os princípios propriamente ditos, pelos quais aqueles são movidos, são o Amor e o Ódio. Pois é preciso que os elementos permaneçam alternadamente em movimento, sendo ora misturados pelo Amor, ora separados pelo Ódio.\n\nSIMPLÍCIO. Física, 25, 21. In: Os pré-socráticos. São Paulo: Nova Cultural, 1996.",
               "enunciado": "O texto propõe uma reflexão sobre o entendimento de Empédocles acerca da arché, uma preocupação típica do pensamento pré-socrático, porque",
               "alternativas": [
                 "exalta a investigação filosófica.",
@@ -437,18 +437,18 @@
               "correta": "C",
               "explicacao": "Os pré-socráticos buscavam a arché, o princípio que explica a origem e a ordem do cosmos. Empédocles faz isso com os quatro elementos movidos pelo Amor e pelo Ódio.",
               "fonte": "ENEM 2022 – Questão 86",
-              "segundos_estimados": 66
+              "segundos_estimados": 67
             },
             {
               "id": "HUM-02-02",
-              "texto": "Sócrates: “Quem não sabe o que uma coisa é, como poderia saber de que tipo de coisa ela é? Ou te parece ser possível alguém que não conhece absolutamente quem é Mênon, esse alguém saber se ele é belo, se é rico e ainda se é nobre? Parece-te ser isso possível? Assim, Mênon, que coisa afirmas ser a virtude?”.\n\nPLATÃO. Mênon. Rio de Janeiro: PUC-RIO; São Paulo: Loyola, 2001 (adaptado).",
+              "texto": "Sócrates: “Quem não sabe o que uma coisa é, como poderia saber de que tipo de coisa ela é? Ou te parece ser possível alguém que não conhece absolutamente quem é Mênon, esse alguém saber se ele é belo, se é rico e ainda se é nobre? Parece-te ser isso possível? Assim, Mênon, que coisa afirmas ser a virtude?”.\n\nPLATÃO. Mênon. Rio de Janeiro: PUC-Rio; São Paulo: Loyola, 2001 (adaptado).",
               "enunciado": "A atitude apresentada na interlocução do filósofo com Mênon é um exemplo da utilização do(a)",
               "alternativas": [
-                "escrita epistolar",
-                "método dialético",
-                "linguagem trágica",
-                "explicação fisicalista",
-                "suspensão judicativa"
+                "escrita epistolar.",
+                "método dialético.",
+                "linguagem trágica.",
+                "explicação fisicalista.",
+                "suspensão judicativa."
               ],
               "correta": "B",
               "explicacao": "Sócrates conduz a conversa com perguntas para chegar à definição do que é a virtude. Esse jogo de perguntas e respostas é o método dialético.",
@@ -478,7 +478,7 @@
               "alternativas": [
                 "apresentar uma visão dualista.",
                 "confirmar uma tese naturalista.",
-                "demonstrar uma premissa relativa.",
+                "demonstrar uma premissa realista.",
                 "sustentar um argumento idealista.",
                 "defender uma posição intencionalista."
               ],
@@ -495,7 +495,7 @@
           "questoes": [
             {
               "id": "HUM-03-01",
-              "texto": "Porque todos confessamos não se poder viver sem alguns escravos, que busquem a lenha e a água, e façam cada dia o pão que se come, e outros serviços que não são possíveis poderem-se fazer pelos Irmãos Jesuítas, máxime sendo tão poucos, que seria necessário deixar as confissões e tudo mais. Parece-me que a Companhia de Jesus deve ter e adquirir escravos, justamente, por meios que as Constituições permitem, quando puder para nossos colégios e casas de meninos.\n\nLEITE, S. História da Companhia de Jesus no Brasil. Rio de Janeiro: Civilização Brasileira. 1938 (adaptado).",
+              "texto": "Porque todos confessamos não se poder viver sem alguns escravos, que busquem a lenha e a água, e façam cada dia o pão que se come, e outros serviços que não são possíveis poderem-se fazer pelos Irmãos Jesuítas, máxime sendo tão poucos, que seria necessário deixar as confissões e tudo mais. Parece-me que a Companhia de Jesus deve ter e adquirir escravos, justamente, por meios que as Constituições permitem, quando puder para nossos colégios e casas de meninos.\n\nLEITE, S. História da Companhia de Jesus no Brasil. Rio de Janeiro: Civilização Brasileira, 1938 (adaptado).",
               "enunciado": "O texto explicita premissas da expansão ultramarina portuguesa ao buscar justificar a",
               "alternativas": [
                 "propagação do ideário cristão.",
@@ -511,7 +511,7 @@
             },
             {
               "id": "HUM-03-02",
-              "texto": "A partir da segunda metade do século XVII, o número de escravos recém-chegados cresce no Rio e se estabiliza na Bahia. Nenhum lugar servia tão bem à recepção de escravos quanto o Rio de Janeiro.\n\nFRANÇA, R. O tamanho real da escravidão. O Globo, 5 abr. 2015 (adaptado).",
+              "texto": "A partir da segunda metade do século XVIII, o número de escravos recém-chegados cresce no Rio e se estabiliza na Bahia. Nenhum lugar servia tão bem à recepção de escravos quanto o Rio de Janeiro.\n\nFRANÇA, R. O tamanho real da escravidão. O Globo, 5 abr. 2015 (adaptado).",
               "enunciado": "Na matéria, o jornalista informa uma mudança na dinâmica do tráfico atlântico que está relacionada à seguinte atividade:",
               "alternativas": [
                 "Coleta de drogas do sertão.",
@@ -521,13 +521,13 @@
                 "Exploração da lavoura de tabaco."
               ],
               "correta": "B",
-              "explicacao": "No fim do século XVII começou a mineração em Minas Gerais. O Rio de Janeiro virou o principal porto de chegada dos escravizados levados para as minas de ouro.",
+              "explicacao": "No século XVIII, a mineração de ouro em Minas Gerais passou a exigir cada vez mais escravizados. O Rio de Janeiro, principal porto de ligação com as minas, virou a grande porta de entrada do tráfico, enquanto a Bahia se estabilizou.",
               "fonte": "ENEM 2019 – Questão 81",
               "segundos_estimados": 60
             },
             {
               "id": "HUM-03-03",
-              "texto": "Durante os anos de 1854-55, o governo brasileiro – por meio de sua representação diplomática em Londres – e os livre-cambistas ingleses\n– nas colunas do Daily News e na Câmara dos Comuns – aumentaram a pressão pela revogação da Lei Aberdeen. O governo britânico, entretanto, ainda receava que, sem um tratado anglo-brasileiro satisfatório para substituí-la, não haveria nada que impedisse os brasileiros de um dia voltarem aos seus velhos hábitos.\n\nBETHELL, L. A abolição do comércio brasileiro de escravos.\nBrasília: Senado Federal, 2002 (adaptado).",
+              "texto": "Durante os anos de 1854-55, o governo brasileiro – por meio de sua representação diplomática em Londres – e os livre-cambistas ingleses – nas colunas do Daily News e na Câmara dos Comuns – aumentaram a pressão pela revogação da Lei Aberdeen. O governo britânico, entretanto, ainda receava que, sem um tratado anglo-brasileiro satisfatório para substituí-la, não haveria nada que impedisse os brasileiros de um dia voltarem aos seus velhos hábitos.\n\nBETHELL, L. A abolição do comércio brasileiro de escravos. Brasília: Senado Federal, 2002 (adaptado).",
               "enunciado": "As tensões diplomáticas expressas no texto indicam o interesse britânico em",
               "alternativas": [
                 "estabelecer jurisdição conciliadora.",
@@ -543,8 +543,8 @@
             },
             {
               "id": "HUM-03-04",
-              "texto": "Eu estava pagando o sapateiro e conversando com um preto que estava lendo um jornal. Ele estava revoltado com um guarda civil que espancou um preto e amarrou numa árvore. O guarda civil é branco. E há certos brancos que transforma o preto em bode expiatório. Quem sabe se guarda civil ignora que já foi extinta a escravidão e ainda estamos em regime de chibata?\n\nJESUS, C. M. Quarto de despejo: diário de uma favelada. São Paulo: Ática, 2014.",
-              "enunciado": "O texto que guarda a grafia original da autora, expõe uma característica da sociedade brasileira, que é o(a):",
+              "texto": "Eu estava pagando o sapateiro e conversando com um preto que estava lendo um jornal. Ele estava revoltado com um guarda civil que espancou um preto e amarrou numa árvore. O guarda civil é branco. E há certos brancos que transforma preto em bode expiatório. Quem sabe se guarda civil ignora que já foi extinta a escravidão e ainda estamos no regime da chibata?\n\nJESUS, C. M. Quarto de despejo: diário de uma favelada. São Paulo: Ática, 2014.",
+              "enunciado": "O texto, que guarda a grafia original da autora, expõe uma característica da sociedade brasileira, que é o(a):",
               "alternativas": [
                 "Racismo estrutural.",
                 "Desemprego latente.",
@@ -555,7 +555,7 @@
               "correta": "A",
               "explicacao": "O relato mostra um guarda branco espancando e amarrando um homem negro, como no tempo da escravidão. É o racismo enraizado nas estruturas da sociedade.",
               "fonte": "ENEM 2022 – Questão 48",
-              "segundos_estimados": 67
+              "segundos_estimados": 66
             }
           ]
         },
@@ -566,13 +566,13 @@
             {
               "id": "HUM-04-01",
               "texto": "A maior parte das agressões e manifestações discriminatórias contra as religiões de matrizes africanas ocorrem em locais públicos (57%). É na rua, na via pública, que tiveram lugar mais de 2/3 das agressões, geralmente em locais próximos às casas de culto dessas religiões. O transporte público também é apontado como um local em que os adeptos das religiões de matrizes africanas são discriminados, geralmente quando se encontram paramentados por conta dos preceitos religiosos.\n\nREGO, L. F.; FONSECA, D. P. R.; GIACOMINI, S. M. Cartografia social de terreiros no Rio de Janeiro. Rio de Janeiro: PUC-Rio, 2014.",
-              "enunciado": "As práticas descritas no texto são incompatíveis com a dinâmica de uma sociedade laica e democrática porque:",
+              "enunciado": "As práticas descritas no texto são incompatíveis com a dinâmica de uma sociedade laica e democrática porque",
               "alternativas": [
-                "Asseguram as expressões multiculturais.",
-                "Promovem a diversidade de etnias.",
-                "Falseiam os dogmas teológicos.",
-                "Estimulam os rituais sincréticos.",
-                "Restringem a liberdade de credo."
+                "asseguram as expressões multiculturais.",
+                "promovem a diversidade de etnias.",
+                "falseiam os dogmas teológicos.",
+                "estimulam os rituais sincréticos.",
+                "restringem a liberdade de credo."
               ],
               "correta": "E",
               "explicacao": "Num Estado laico e democrático, cada pessoa pode seguir a religião que quiser. Agredir adeptos das religiões de matriz africana restringe essa liberdade de credo.",
@@ -581,7 +581,7 @@
             },
             {
               "id": "HUM-04-02",
-              "texto": "Houve crescimento de 74% da população brasileira encarcerada entre 2005 e 2012. As análises possibilitaram identificar o perfil da população que está nas prisões do país: homens, jovens (abaixo de 29 anos), negros, com ensino fundamental incompleto, acusados de crimes patrimoniais e, no caso dos presos adultos, condenados e cumprindo regime fechado e, majoritariamente, com penas de quatro até oito anos.\n\nBRASIL. Mapa do encarceramento: os jovens do Brasil.\nBrasília: Presidência da República, 2015.",
+              "texto": "Houve crescimento de 74% da população brasileira encarcerada entre 2005 e 2012. As análises possibilitaram identificar o perfil da população que está nas prisões do país: homens, jovens (abaixo de 29 anos), negros, com ensino fundamental incompleto, acusados de crimes patrimoniais e, no caso dos presos adultos, condenados e cumprindo regime fechado e, majoritariamente, com penas de quatro até oito anos.\n\nBRASIL. Mapa do encarceramento: os jovens do Brasil. Brasília: Presidência da República, 2015.",
               "enunciado": "Nesse contexto, as políticas públicas para minimizar a problemática descrita devem privilegiar a",
               "alternativas": [
                 "flexibilização do Código Civil.",
@@ -597,7 +597,7 @@
             },
             {
               "id": "HUM-04-03",
-              "texto": "Nascidas o Líbano, as duas irmãs não puderam ser registradas no país, porque lá é exigido que os nascidos sejam filhos de pais e mães libaneses. Seus pais, de nacionalidade síria, também não puderam registrá-las no país de origem. Na Síria, crianças só são registradas por pais oficialmente casados, o que não era o caso deles.\n\nDisponível em: https://agenciabrasi.ebc.com.br. Acesso em: 7 nov. 2021.",
+              "texto": "Nascidas no Líbano, as duas irmãs não puderam ser registradas no país, porque lá é exigido que os nascidos sejam filhos de pais e mães libaneses. Seus pais, de nacionalidade síria, também não puderam registrá-las no país de origem. Na Síria, crianças só são registradas por pais oficialmente casados, o que não era o caso deles.\n\nDisponível em: https://agenciabrasil.ebc.com.br. Acesso em: 7 nov. 2021.",
               "enunciado": "Em situações como a apresentada no texto, as pessoas ao nascerem já se encontram na condição sociopolítica de",
               "alternativas": [
                 "exiladas.",
@@ -613,7 +613,7 @@
             },
             {
               "id": "HUM-04-04",
-              "texto": "Negar o pedido por dinheiro indispensável para necessidades pessoais ou comprar bens usando o nome da pessoa sem o consentimento dela. Ameaçar o corte de recursos dependendo de atitudes pessoais, esconder documentos ou trocar senhas do banco sem avisar. Ou, ainda, proibir a pessoa de trabalhar ou destruir seus pertences. As histórias são comuns, mas às vezes não são reconhecidas como abuso. Mas é uma das cinco formas de conduta contra a mulher previstas na Lei Maria da Penha.\n\nLEWGOY. J. Conduta quase invisível destrói a vida de mulheres. Disponível em: https://valorinveste.globo.com. Acesso em: 23 out. 2021 (adaptado).",
+              "texto": "Negar o pedido por dinheiro indispensável para necessidades pessoais ou comprar bens usando o nome da pessoa sem o consentimento dela. Ameaçar o corte de recursos dependendo de atitudes pessoais, esconder documentos ou trocar senhas do banco sem avisar. Ou, ainda, proibir a pessoa de trabalhar ou destruir seus pertences. As histórias são comuns, mas às vezes não são reconhecidas como abuso. Mas é uma das cinco formas de conduta contra a mulher previstas na Lei Maria da Penha.\n\nLEWGOY, J. Conduta quase invisível destrói a vida de mulheres. Disponível em: https://valorinveste.globo.com. Acesso em: 23 out. 2021 (adaptado).",
               "enunciado": "O texto apresenta tipos de conduta sujeitos a punição, conforme previsto na Lei Maria da Penha, porque consistem em formas de",
               "alternativas": [
                 "ação difamatória.",
@@ -636,13 +636,13 @@
             {
               "id": "HUM-05-01",
               "texto": "Os moradores de Utqiagvik passaram dois meses quase totalmente na escuridão\n\nOs habitantes desta pequena cidade no Alasca – o estado dos Estados Unidos mais ao norte – já estão acostumados a longas noites sem ver a luz do dia. Em 18 de novembro de 2018, seus pouco mais de 4 mil habitantes viram o último pôr do sol do ano. A oportunidade seguinte para ver a luz do dia ocorreu no dia 23 de janeiro de 2019, às 13h04 min (horário local).\n\nDisponível em: www.bbc.com. Acesso em: 16 maio 2019 (adaptado).",
-              "enunciado": "O fenômeno descrito está relacionado ao fato de a cidade citada ter uma posição geográfica condicionada pela:",
+              "enunciado": "O fenômeno descrito está relacionado ao fato de a cidade citada ter uma posição geográfica condicionada pela",
               "alternativas": [
-                "Continentalidade.",
-                "Maritimidade.",
-                "Longitude.",
-                "Latitude.",
-                "Altitude."
+                "continentalidade.",
+                "maritimidade.",
+                "longitude.",
+                "latitude.",
+                "altitude."
               ],
               "correta": "D",
               "explicacao": "Utqiagvik fica muito ao norte, acima do Círculo Polar Ártico. Nessa latitude, no inverno, o Sol passa semanas sem aparecer (é a noite polar).",
@@ -651,7 +651,7 @@
             },
             {
               "id": "HUM-05-02",
-              "texto": "As cidades de Puebla, no México, e Legazpi, nas Filipinas, não têm quase nada em comum. Estão muito longe uma da outra e são habitadas por povos muito diferentes. O que as une é um trágico detalhe de sua geografia. Elas foram erguidas na vizinhança de alguns dos vulcões mais perigosos do mundo: o mexicano Popocatepéti e  filipino Mayon. Seus habitantes precisam estar prontos para correr a qualquer hora. Eles fazem parte dos 550 milhões de indivíduos que moram em zonas de risco vulcânico no mundo. Ao contrário do que seria sensato, continuam ali, indiferentes ao perigo que os espreita.\n\nANGELO, C. Disponível em http://super.abril.com.br. Acesso em: 24 out. 2015 (adaptado).",
+              "texto": "As cidades de Puebla, no México, e Legazpi, nas Filipinas, não têm quase nada em comum. Estão muito longe uma da outra e são habitadas por povos muito diferentes. O que as une é um trágico detalhe de sua geografia. Elas foram erguidas na vizinhança de alguns dos vulcões mais perigosos do mundo: o mexicano Popocatepétl e o filipino Mayon. Seus habitantes precisam estar prontos para correr a qualquer hora. Eles fazem parte dos 550 milhões de indivíduos que moram em zonas de risco vulcânico no mundo. Ao contrário do que seria sensato, continuam ali, indiferentes ao perigo que os espreita.\n\nANGELO, C. Disponível em: http://super.abril.com.br. Acesso em: 24 out. 2015 (adaptado).",
               "enunciado": "A característica física que justifica a fixação do homem nos locais apresentados no texto é a ocorrência de",
               "alternativas": [
                 "solo fértil.",
@@ -699,7 +699,7 @@
             },
             {
               "id": "HUM-05-05",
-              "texto": "A cordilheira do Himalaia tem mais de 50 milhões de anos., sendo classificada como a maior cordilheira do planeta. Originário da língua sânscrito, comum na região, seu nome quer dizer “morada da neve”. É possível encontrar nessa cordilheira as quinze maiores montanhas do mundo. Ao todo, existem mais de cem picos, que contam com altitudes bem maiores que 7 000 m. O Everest, considerado o ponto mais alto da Terra, tem nada menos que 8 848 m de altitude, e continua crescendo, aproximadamente, 0,8 mm a cada ano.\n\nDisponível em: https://meioambiente.culturamix.com. Acesso em: 12 nov. 2021 (adaptado).",
+              "texto": "A cordilheira do Himalaia tem mais de 50 milhões de anos, sendo classificada como a maior cordilheira do planeta. Originário da língua sânscrito, comum na região, seu nome quer dizer “morada da neve”. É possível encontrar nessa cordilheira as quinze maiores montanhas do mundo. Ao todo, existem mais de cem picos, que contam com altitudes bem maiores que 7 000 m. O Everest, considerado o ponto mais alto da Terra, tem nada menos que 8 848 m de altitude, e continua crescendo, aproximadamente, 0,8 mm a cada ano.\n\nDisponível em: https://meioambiente.culturamix.com. Acesso em: 12 nov. 2021 (adaptado).",
               "enunciado": "Qual dinâmica natural é responsável pelo fenômeno apresentado?",
               "alternativas": [
                 "Derrame de lava vulcânica.",

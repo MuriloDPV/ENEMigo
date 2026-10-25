@@ -96,7 +96,7 @@ AREAS = [
         ("Política e poder", [
             ("2019-65", "A", "Maquiavel separa a moral ideal (como se deveria agir) da moral efetiva (o que o governante precisa fazer). Pelo bem comum, o chefe de Estado pode até mentir."),
             ("2021-73", "A", "O suicídio de Vargas provocou enorme comoção e protestos populares contra seus adversários. Por isso o texto diz que ao tiro “não se seguiu o silêncio que cerca a derrota”."),
-            ("2023-80", "A", "O regime militar reprimiu as Ligas Camponesas e criou sindicatos rurais de orientação conservadora. O objetivo era controlar as tensões políticas no campo."),
+            ("2023-80", "A", "O regime destruiu as Ligas Camponesas, mas tratou os sindicatos rurais de outro jeito: criou centros sindicais e cursos de liderança com princípios conservadores. Com lideranças sob sua influência, podia controlar as tensões políticas no campo."),
         ]),
         ("Filosofia e conhecimento", [
             ("2022-86", "C", "Os pré-socráticos buscavam a arché, o princípio que explica a origem e a ordem do cosmos. Empédocles faz isso com os quatro elementos movidos pelo Amor e pelo Ódio."),
@@ -106,7 +106,7 @@ AREAS = [
         ]),
         ("Escravidão e racismo", [
             ("2020-81", "C", "O jesuíta defende que a Companhia “deve ter e adquirir escravos” para os serviços dos colégios. O texto justifica o uso do trabalho escravo na Colônia."),
-            ("2019-81", "B", "No fim do século XVII começou a mineração em Minas Gerais. O Rio de Janeiro virou o principal porto de chegada dos escravizados levados para as minas de ouro."),
+            ("2019-81", "B", "No século XVIII, a mineração de ouro em Minas Gerais passou a exigir cada vez mais escravizados. O Rio de Janeiro, principal porto de ligação com as minas, virou a grande porta de entrada do tráfico, enquanto a Bahia se estabilizou."),
             ("2021-52", "D", "A Lei Aberdeen (1845) permitia à Inglaterra apreender navios negreiros. Os britânicos resistiam a revogá-la porque queriam manter proibido o tráfico de escravos para o Brasil."),
             ("2022-48", "A", "O relato mostra um guarda branco espancando e amarrando um homem negro, como no tempo da escravidão. É o racismo enraizado nas estruturas da sociedade."),
         ]),
@@ -242,6 +242,10 @@ FORMULAS = {
 CORRECOES = {
     "2019-24": [("context", "Rio de Janeiro:  \nUniversal Music", "Rio de Janeiro: Universal Music")],
     "2019-29": [("context", "cultura_  \n_informática", "cultura informática")],
+    "2019-62": [("alternativesIntroduction", "democrática porque:", "democrática porque")],
+    "2019-65": [("alternativesIntroduction", "distinção entre:", "distinção entre")],
+    "2019-81": [("context", "século XVII,", "século XVIII,")],
+    "2019-89": [("alternativesIntroduction", "condicionada pela:", "condicionada pela")],
     "2019-139": [("context", "consumo de até 6 m²", "consumo de até 6 m³"),
                  ("context", "15 m² por mês", "15 m³ por mês"),
                  ("context", "a 10 m³. Sabe-se", "a 10 m³.\n\nSabe-se")],
@@ -252,8 +256,17 @@ CORRECOES = {
     "2020-41": [("context", "BARRETO. L.", "BARRETO, L."),
                 ("context", "26 jun. 2012", "26 jun. 2012.")],
     "2020-43": [("context", "60 de 2.000", "60 de 2 000")],
+    "2020-81": [("context", "Civilização Brasileira. 1938", "Civilização Brasileira, 1938")],
+    "2020-82": [("context", "Popocatepéti e\xa0 filipino", "Popocatepétl e o filipino"),
+                ("context", "Disponível em http", "Disponível em: http")],
     "2021-31": [("context", "ARMBRUST, I; LAURD, G, A, A.", "ARMBRUST, I.; LAURO, F. A. A."),
                 ("context", "Motriz, jul-set, 2010", "Motriz, jul.-set. 2010")],
+    "2021-52": [("context", "ingleses  \n– nas colunas", "ingleses – nas colunas"),
+                ("context", "escravos.  \nBrasília", "escravos. Brasília")],
+    "2021-66": [("context", "Brasil.  \nBrasília", "Brasil. Brasília")],
+    "2021-73": [("context", "Vargas.  \nRevista", "Vargas. Revista"),
+                ("alternativesIntroduction", "na politica nacional", "na política nacional")],
+    "2021-82": [("context", "PUC-RIO", "PUC-Rio")],
     "2021-162": [("context", "imposto devido (l)", "imposto devido (I)")],
     "2021-170": [("alternativesIntroduction", "em milimitro", "em mililitro")],
     "2021-173": [("alternativesIntroduction", "o lava rápido", "o lava-rápido")],
@@ -271,6 +284,14 @@ CORRECOES = {
                 ("alternativesIntroduction", "permite o Machado de Assis considerar o capítulo de Memórias Póstumas",
                  "permite a Machado de Assis considerar um capítulo de Memórias póstumas"),
                 ("alternativesIntroduction", "inventário é a:", "inventário é a")],
+    "2022-48": [("context", "transforma o preto", "transforma preto"),
+                ("context", "estamos em regime de chibata", "estamos no regime da chibata"),
+                ("alternativesIntroduction", "O texto que guarda a grafia original da autora, expõe",
+                 "O texto, que guarda a grafia original da autora, expõe")],
+    "2022-83": [("context", "Nascidas o Líbano", "Nascidas no Líbano"),
+                ("context", "agenciabrasi.ebc", "agenciabrasil.ebc")],
+    "2022-86": [("context", "pelos quais são", "pelos quais aqueles são"),
+                ("context", "mistura e\xa0 separação", "mistura e separação")],
     "2022-138": [("context", "no  \ndecorrer", "no decorrer")],
     "2023-6": [("alternativesIntroduction", "“juntos” mais rápido", "“juntos”: mais rápido"),
                ("alternativesIntroduction", "forte – juntos", "forte — juntos"),
@@ -292,11 +313,16 @@ CORRECOES = {
                  "lentamente as migalhas de pão\nsobre a mesa posta para dois.")],
     "2023-42": [("context", "PC/A e residentes", "PC/AF e residentes"),
                 ("alternativesIntroduction", "atividades fisicas", "atividades físicas")],
+    "2023-53": [("context", "anos., sendo", "anos, sendo")],
+    "2023-54": [("C", "premissa relativa", "premissa realista")],
+    "2023-60": [("context", "LEWGOY. J.", "LEWGOY, J.")],
+    "2023-80": [("alternativesIntroduction", "utiliza-los", "utilizá-los")],
     "2023-161": [("context", "aproximação para 28.", "aproximação para √28.")],
 }
 
 # Alternativas que têm ponto final no caderno e vieram sem ele da API.
 SEM_PONTO = {
+    "2021-82": "ABCDE",
     "2022-33": "ABCDE",
     "2023-39": "E",
 }
