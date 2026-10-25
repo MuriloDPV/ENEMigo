@@ -143,13 +143,14 @@ As funcionalidades foram divididas para caber em 4 aulas. As **principais** faze
 | C2 | Modo Revisão | Aba Revisão: refaz até 5 questões do caderno. Acertar remove a questão do caderno, devolve +1 vida e dá +5 XP. Errar na revisão não tira vida. |
 | C3 | Conquistas | 6 conquistas: Primeira lição, Ofensiva de 3 dias, Ofensiva de 7 dias, 100 XP, 500 XP e Lição perfeita. |
 | C4 | Perfil com estatísticas | Nível, barra até o próximo nível, XP, ofensiva atual e recorde, lições concluídas, taxa de acerto, tempo médio por questão, minutos estudados hoje e conquistas. |
-| C5 | Configurações | Editar nome, trocar a meta diária, ver "Sobre" e **resetar o progresso** (com confirmação). |
+| C5 | Configurações | Editar nome, trocar a meta diária e o tamanho da letra das questões, ver "Sobre" e **resetar o progresso** (com confirmação). |
 | C6 | Contagem da próxima vida | Mostra "Próxima vida em X min" quando o aluno tem menos de 5 vidas. |
 | C7 | Cartão "Continuar" | Na tela Início, um atalho para a próxima lição disponível da última área estudada. |
 | C8 | Fogo aceso/apagado | O ícone da ofensiva fica colorido se o aluno já estudou hoje e cinza se ainda não estudou (lembrete visual). |
 | C9 | Estados vazios | Mensagens amigáveis quando não há erros no caderno, conquistas ou questões. |
 | C10 | Vibração ao errar | Vibração curta ao errar, que pode ser desligada nas Configurações (opcional). |
 | C11 | Lembrete diário | Notificação no horário escolhido (padrão 19h), só se o aluno ainda não estudou no dia, com a Lia e a ofensiva em risco ("Sua ofensiva de 5 dias está em risco!"), em 6 frases que se revezam. WorkManager (sobrevive a reinício, sem internet e sem alarme exato); até 3 h de atraso, depois disso o aviso do dia é pulado. No Android 13+, a permissão é pedida depois da primeira lição concluída, com explicação antes, e uma recusa é respeitada. |
+| C12 | Leitura no celular | Letra das questões em 3 tamanhos (pequena, média e grande), escolhida no quiz (botão "Aa") ou nas Configurações e salva no aparelho; e texto-base recolhível: depois de ler, o aluno recolhe o texto e fica só com o comando e as alternativas, e um toque abre de novo. |
 
 **Se faltar tempo**, corte nesta ordem: C10 → C7 → C6 → C8 → C3. O caderno de erros (C1/C2) é o complementar mais importante, porque é o que faz o aluno aprender com o erro.
 
@@ -255,10 +256,13 @@ O app tem **9 telas**: 6 Activities e 3 Fragments dentro da MainActivity.
 
 - **Objetivo:** apresentar as questões e corrigir cada resposta. É a tela mais importante do app.
 - **Modos:** `LICAO` (as 3 a 5 questões de uma lição) ou `REVISAO` (até 5 questões do caderno de erros).
-- **Componentes:** ImageButton "X" (fechar), LinearProgressIndicator (progresso), TextView de vidas (❤️ 4), ScrollView com o conteúdo, MaterialCardView do texto-base (quando existir), TextView do enunciado, TextView da fonte, 5 alternativas (layout `item_alternativa` incluído 5 vezes), MaterialButton VERIFICAR, painel de feedback (LinearLayout escondido) com título, explicação e botão CONTINUAR.
+- **Componentes:** ImageButton "X" (fechar), LinearProgressIndicator (progresso), botão "Aa" (tamanho da letra), TextView de vidas (❤️ 4), ScrollView com o conteúdo, cartão de papel do texto-base (quando existir) com o botão "Recolher texto" no fim, TextView do enunciado, TextView da fonte, 5 alternativas (layout `item_alternativa` incluído 5 vezes), MaterialButton VERIFICAR, painel de feedback (LinearLayout escondido) com título, explicação e botão CONTINUAR.
 - **Informações exibidas:** texto-base, enunciado, fonte ("ENEM 2019"), alternativas A a E, progresso ("Questão 2 de 4", com o total da lição), vidas e, depois de verificar, o feedback com a explicação.
 - **Campos:** seleção de uma alternativa (escolha única).
-- **Botões:** X, alternativas A a E, VERIFICAR, CONTINUAR.
+- **Botões:** X, Aa, Recolher texto, alternativas A a E, VERIFICAR, CONTINUAR.
+- **Leitura no celular (C12):**
+  - "Aa" abre um menu com letra pequena, média e grande (0,875×, 1× e 1,25× o tamanho do layout; regra em `TamanhoLetra`). Muda na hora o texto-base, o enunciado, as alternativas e a explicação, e fica salvo para as próximas questões. As fórmulas acompanham (são escaladas pelo tamanho da fonte); as figuras continuam do mesmo tamanho e com zoom ao tocar.
+  - "Recolher texto", no fim do texto-base: o cartão vira uma faixa com o rótulo "Texto-base · toque para abrir" e a primeira linha do texto, e a tela volta ao topo, com o comando e as alternativas à vista. Tocar na faixa abre o texto de novo. Cada questão começa com o texto aberto; o estado sobrevive à rotação/troca de tema.
 - **Ações:**
   1. Tocar numa alternativa: ela fica destacada (azul) e o VERIFICAR é habilitado.
   2. VERIFICAR: compara com o gabarito.
@@ -335,9 +339,9 @@ O app tem **9 telas**: 6 Activities e 3 Fragments dentro da MainActivity.
 ### 4.9 Configurações (`ConfiguracoesActivity`)
 
 - **Objetivo:** permitir ajustes e o reset do progresso.
-- **Componentes:** MaterialToolbar com Voltar, TextInputLayout + TextInputEditText (nome), RadioGroup (meta), SwitchMaterial (vibração, opcional), MaterialSwitch (lembrete diário) com a linha do horário (MaterialTimePicker de 24 h), MaterialButton "SALVAR", MaterialButton "RESETAR PROGRESSO" (vermelho) e TextView "Sobre".
-- **Informações exibidas:** nome e meta atuais já preenchidos, e o texto Sobre (versão, fonte das questões e aviso de que o app não tem vínculo com o INEP).
-- **Campos:** nome (mesma validação do onboarding), meta diária (20/50/100), vibração (liga/desliga) e lembrete diário (liga/desliga e horário, padrão 19h). Com o lembrete ligado e as notificações bloqueadas no Android, aparece um aviso que pede a permissão de novo ou abre as configurações de notificação do app.
+- **Componentes:** MaterialToolbar com Voltar, TextInputLayout + TextInputEditText (nome), RadioGroup (meta), RadioGroup horizontal (tamanho da letra) com a prévia num cartão de papel, SwitchMaterial (vibração, opcional), MaterialSwitch (lembrete diário) com a linha do horário (MaterialTimePicker de 24 h), MaterialButton "SALVAR", MaterialButton "RESETAR PROGRESSO" (vermelho) e TextView "Sobre".
+- **Informações exibidas:** nome, meta e tamanho da letra atuais já preenchidos, e o texto Sobre (versão, fonte das questões e aviso de que o app não tem vínculo com o INEP).
+- **Campos:** nome (mesma validação do onboarding), meta diária (20/50/100), tamanho da letra das questões (Pequena/Média/Grande; a prévia muda na hora, e grava no SALVAR), vibração (liga/desliga) e lembrete diário (liga/desliga e horário, padrão 19h). Com o lembrete ligado e as notificações bloqueadas no Android, aparece um aviso que pede a permissão de novo ou abre as configurações de notificação do app.
 - **Botões:** SALVAR e RESETAR PROGRESSO.
 - **Ações:**
   - SALVAR: valida e grava. Toast "Configurações salvas" e volta ao Perfil.
@@ -760,9 +764,10 @@ Não precisa de uma classe de modelo: o `ProgressoManager` expõe *getters* e m�
 | `totalAcertos` | int | Sim | Total de acertos (lições + revisão) |
 | `ultimaAreaEstudada` | String | Não | Id da última área, usado no cartão Continuar |
 | `vibracaoAtiva` | boolean | Sim | Padrão `true` (opcional C10) |
+| `tamanhoLetra` | int | Sim | 0, 1 ou 2 (pequena, média, grande; C12). Padrão 1. Fica no `PreferenciasManager` |
 | `tempoTotalMs`, `tempoQuestoes`, `tempoEstimadoS` | long, int, long | Sim | Somas do tempo real medido, de quantas questões e da estimativa delas (RN38, RN39) |
 | `tempoHojeMs` + `dataTempoHoje` | long + String (data ISO) | Não | Tempo respondendo questões no dia atual |
-| `versaoProgresso` | int | Sim | Formato do progresso salvo; abaixo de 2, roda a migração (RN37) |
+| `versaoProgresso` | int | Sim | Versão do banco com que o progresso foi salvo; abaixo de 3, roda a migração (RN37) |
 
 ### 8.6 ResultadoSessao (classe `ResultadoSessao`)
 
@@ -827,7 +832,7 @@ O Room é a biblioteca oficial de banco de dados do Android, mas aqui ele traria
 
 ### 9.3 Formato do `questoes.json`
 
-Estrutura: um objeto raiz com `versao` (hoje `2`), a lista `areas` e o mapa `ids_v1`. Cada área tem a lista `licoes`, e cada lição tem a lista `questoes`.
+Estrutura: um objeto raiz com `versao` (hoje `3`), a lista `areas` e o mapa `ids_antigos`. Cada área tem a lista `licoes`, e cada lição tem a lista `questoes`.
 
 Regras do arquivo:
 
@@ -835,18 +840,18 @@ Regras do arquivo:
 - A ordem das lições no array é a ordem da trilha.
 - Cada lição deve ter **de 3 a 5 questões** (lição fora disso é ignorada pelo app).
 - `segundos_estimados` (inteiro) é o tempo estimado da questão, calculado pelo `montar_questoes.py` (ver 9.4). A trilha soma os da lição.
-- `ids_v1` leva o id de cada questão na versão 1 do banco (4 lições de 5 por área) ao id atual, ex.: `"LIN-01-02": "LIN-06-01"`. Só serve para migrar o progresso salvo (RN37).
+- `ids_antigos` tem, para cada versão antiga do banco (`"1"`: 4 lições de 5 por área; `"2"`: lições de 3 a 5, a release 1.0-demo), o id de cada questão naquela versão -> id atual, ou `""` se a questão saiu do banco, ex.: `"2": {"LIN-01-01": "", "HUM-02-02": "HUM-01-03"}`. Leva todas as questões de cada versão, para o app saber o tamanho das lições antigas. Só serve para migrar o progresso salvo (RN37).
 - `alternativas` deve ter **exatamente 5 textos**, sem a letra na frente (o app coloca "A", "B"...).
 - `correta` é uma letra de `"A"` a `"E"`.
 - `texto` pode ser `""` quando a questão não tem texto-base.
 - Aspas dentro de textos: use aspas tipográficas “assim” para não precisar escapar, ou escape com `\"`.
 - O arquivo deve ser salvo em **UTF-8**.
 
-**Exemplo reduzido** (3 áreas, 1 lição cada, **1 questão por lição** só para ilustrar; no arquivo real cada lição tem de 3 a 5 questões, a área Humanas também aparece e o `ids_v1` tem as 80 questões):
+**Exemplo reduzido** (3 áreas, 1 lição cada, **1 questão por lição** só para ilustrar; no arquivo real cada lição tem de 3 a 5 questões, a área Humanas também aparece e cada versão do `ids_antigos` tem as 80 questões dela):
 
 ```json
 {
-  "versao": 2,
+  "versao": 3,
   "areas": [
     {
       "id": "LINGUAGENS",
@@ -930,10 +935,9 @@ Regras do arquivo:
       ]
     }
   ],
-  "ids_v1": {
-    "LIN-01-01": "LIN-01-01",
-    "NAT-01-01": "NAT-01-01",
-    "MAT-01-01": "MAT-01-01"
+  "ids_antigos": {
+    "1": {"LIN-01-01": "LIN-01-01", "NAT-01-01": "", "MAT-01-01": "MAT-01-01"},
+    "2": {"LIN-01-01": "LIN-01-01", "NAT-01-01": "", "MAT-01-01": "MAT-01-01"}
   }
 }
 ```
@@ -946,7 +950,9 @@ Regras do arquivo:
 - **Fonte oficial:** as provas e gabaritos do ENEM são públicos no site do **INEP** (gov.br/inep → "Provas e gabaritos"). Escolha **apenas questões só de texto**, sem gráfico, mapa, tabela em imagem ou charge. Em Matemática, dê preferência a questões sem figura.
 - **Sempre** preencha `fonte` com o ano (ex.: "ENEM 2019") e **confira o gabarito no gabarito oficial** do INEP.
 - As explicações são escritas pelo aluno. Se usar IA para ajudar a redigir, **revise uma por uma**: a IA pode errar a justificativa.
-- Questões muito longas funcionam (a tela tem rolagem), mas lições curtas ficam mais agradáveis com textos-base menores.
+- **Tamanho:** no celular, questão longa cansa. Cada questão tem no máximo `LIMITE_PALAVRAS` palavras (texto-base + comando + alternativas, a mesma contagem do tempo estimado): 100 em Humanas, Natureza e Matemática e 140 em Linguagens, porque nessa área quase não há questão só de texto com menos que isso. O `montar_questoes.py` não grava e o validador acusa a questão acima do limite.
+- **Gabarito e anuladas:** a letra "cega" (a resposta dada antes de ver o gabarito), o gabarito oficial do INEP (`GABARITO_INEP`, do PDF do gabarito do caderno azul) e o da API precisam bater; a API erra alguns (ex.: 2021-15, 2021-139, 2022-143). Questões anuladas ou abandonadas na correção pela TRI (`IN_ITEM_ABAN` nos microdados do INEP, tabela ITENS_PROVA) ficam em `ANULADAS` e nunca entram.
+- **Texto igual ao caderno:** o texto da API vem com erros de OCR, maiúscula nas alternativas, ":" a mais no fim do comando, texto-base grudado no comando, versos virando parágrafos e ponto de milhar. Compare com a prova oficial (caderno azul) e corrija em `CORRECOES` e `SEM_PONTO`; nunca edite o JSON à mão.
 - Distribua bem as letras corretas (não deixe tudo "C").
 - Use ids consistentes: `SIGLA-LL-QQ` (ex.: `HUM-02-04`). Repetir um id quebra o caderno de erros.
 
@@ -957,9 +963,9 @@ Regras do arquivo:
 - `EXTRA_FIGURA_S = 15`: a mais, uma vez, quando a questão tem figura ou fórmula.
 - `ALVO_LICAO_S = 240` (4 min) e `MIN_QUESTOES, MAX_QUESTOES = 3, 5`.
 
-Tempo da questão = palavras × 60 ÷ 180 + resolução da área (+ 15 s), arredondado, gravado em `segundos_estimados`. As lições ficam em `AREAS`, escritas à mão para manter o tema no título, e o validador cobra: de 3 a 5 questões por lição; nenhuma lição acima de 6 min (`TETO_LICAO_S`); média da área no máximo 1 min acima do alvo (`FOLGA_MEDIA_S`); e a ordem da trilha seguindo a das lições da versão 1, para a migração (RN37) não deixar buraco. Quando nem com o máximo de lições a área chega perto do alvo (Matemática: 3 questões já passam de 5 min), as regras de tempo não se aplicam e a área fica com o maior número de lições possível, de 3 ou 4 questões.
+Tempo da questão = palavras × 60 ÷ 180 + resolução da área (+ 15 s), arredondado, gravado em `segundos_estimados`. As lições ficam em `AREAS`, escritas à mão para manter o tema no título, e o validador cobra: de 3 a 5 questões por lição; nenhuma lição acima de 6 min (`TETO_LICAO_S`); média da área no máximo 1 min acima do alvo (`FOLGA_MEDIA_S`); e o limite de palavras. Quando nem com o máximo de lições a área chega perto do alvo (Matemática: 3 questões já passam de 5 min), as regras de tempo não se aplicam e a área fica com o maior número de lições possível, de 3 ou 4 questões.
 
-Mudou uma constante? Rode `python tools/montar_questoes.py` e `python tools/validar_questoes.py`: o validador aponta a lição que saiu do alvo e imprime o tempo mínimo e máximo de cada área. Hoje: Linguagens 6 lições (3,9 a 5,1 min), Humanas 5 (3,5 a 5,7), Natureza 6 (3,0 a 5,8) e Matemática 6 (5,6 a 7,9).
+Mudou uma constante? Rode `python tools/montar_questoes.py` e `python tools/validar_questoes.py`: o validador aponta a lição que saiu do alvo e imprime o tempo mínimo e máximo de cada área. Hoje: Linguagens 5 lições (3,7 a 4,2 min), Humanas 5 (3,8 a 4,1), Natureza 5 (3,6 a 4,0) e Matemática 6 (5,0 a 7,4).
 
 ### 9.5 Chaves do SharedPreferences
 
@@ -986,7 +992,8 @@ Arquivo: `enemigo_prefs` (modo `Context.MODE_PRIVATE`). Todas as chaves ficam co
 | `total_acertos` | int | `0` |
 | `ultima_area` | String | `""` |
 | `vibracao` | boolean | `true` |
-| `versao_progresso` | int | `1` (sem a chave = progresso da versão 1, que é migrado e passa a `2`) |
+| `tamanho_letra` | int | `1` (0 pequena, 1 média, 2 grande; C12) |
+| `versao_progresso` | int | `1` (sem a chave = progresso da versão 1). Abaixo de `3`, a migração (RN37) roda e grava `3` |
 | `tempo_total_ms` | long | `0` |
 | `tempo_questoes` | int | `0` |
 | `tempo_estimado_s` | long | `0` |
@@ -1081,11 +1088,11 @@ Não são usadas nesta versão. O app funciona 100% offline e não pede a permis
 
 **Configurações**
 
-- **RN34:** o reset apaga **todas** as chaves do SharedPreferences (`edit().clear()`) e volta para o onboarding, gravando só `versao_progresso = 2` (senão a próxima abertura migraria o progresso novo como se fosse da versão 1). As questões (assets) não são afetadas.
+- **RN34:** o reset apaga **todas** as chaves do SharedPreferences (`edit().clear()`) e volta para o onboarding, gravando só `versao_progresso = 3` (senão a próxima abertura migraria o progresso novo como se fosse da versão 1). As questões (assets) não são afetadas.
 
 **Progresso salvo antes das lições curtas**
 
-- **RN37:** o progresso salvo com o banco da versão 1 (4 lições de 5 por área) é migrado uma vez, na primeira abertura (`versao_progresso` ausente ou menor que 2). Conta como **concluída** a lição nova cujas questões estavam **todas** em lições antigas concluídas (melhor ≥ 3), com o `melhor` mínimo para concluir (ex.: 2/3); as outras recomeçam. O caderno de erros troca cada id antigo pelo novo (`ids_v1` do JSON). As chaves `melhor_` antigas são apagadas; XP, ofensiva, vidas, totais e conquistas não mudam. Como a ordem das lições novas segue a das antigas, as concluídas sempre ficam em sequência, sem buraco na trilha.
+- **RN37:** o progresso salvo com um banco antigo (versão 1: 4 lições de 5 por área; versão 2: lições de 3 a 5, a release 1.0-demo) é migrado uma vez, na primeira abertura (`versao_progresso` ausente ou menor que 3), com o mapa daquela versão (`ids_antigos` do JSON). Uma questão conta como **vencida** se a lição antiga dela foi concluída (60% da lição antiga, ex.: 3 de 5 ou 2 de 3). Conta como **concluída** a lição atual cujas questões estão **todas** vencidas, com o `melhor` mínimo para concluir (ex.: 2/3), mas só até a primeira lição da trilha que não conclui (`Migracao.semBuracos`): a trilha nunca fica com uma lição concluída depois de uma que falta. Como o banco 3 trocou 54 das 80 questões, na prática quase toda lição tem questão nova e a trilha recomeça. O caderno de erros troca cada id antigo pelo atual, e as questões que saíram do banco saem do caderno. As chaves `melhor_` antigas são apagadas; XP, ofensiva, vidas, totais e conquistas não mudam.
 
 **Tempo real**
 
@@ -1131,7 +1138,7 @@ Não são usadas nesta versão. O app funciona 100% offline e não pede a permis
 | JSON com erro de sintaxe (`JSONException`) | Igual ao caso acima. Dica: valide o arquivo num validador de JSON antes de rodar |
 | Questão inválida (menos de 5 alternativas, `correta` fora de A–E, enunciado vazio, id repetido) | A questão é ignorada com `Log.w("QuestaoRepository", "Questão inválida: " + id)` |
 | Lição com menos de 3 ou mais de 5 questões válidas | A lição é ignorada (com log). As seguintes continuam na ordem |
-| Banco sem `ids_v1` ou que não carregou | A migração (RN37) não roda e tenta de novo na próxima abertura |
+| Banco sem `ids_antigos` da versão salva, ou que não carregou | A migração (RN37) não roda e tenta de novo na próxima abertura |
 | Tempo de questão absurdo (mais de 10 min ou relógio estranho) | Não é registrado (RN38) |
 | Área com id desconhecido no JSON | A área é ignorada (com log) |
 | Área sem lições | O cartão mostra "Em breve" e, ao tocar, a trilha exibe "Nenhuma lição disponível ainda" |
@@ -1207,7 +1214,7 @@ app/
 │   │       ├── Constantes.java           (chaves, extras, valores de XP/vidas)
 │   │       ├── Gamificacao.java          (cálculos puros: nível, vidas, ofensiva, 60%)
 │   │       ├── TempoEstudo.java          (tempo estimado e tempo real, puros)
-│   │       ├── Migracao.java             (progresso da versão 1 -> lições atuais)
+│   │       ├── Migracao.java             (progresso das versões 1 e 2 -> lições atuais)
 │   │       └── DataUtil.java             (hoje, ontem, conversão de datas)
 │   └── res/
 │       ├── layout/
@@ -1335,7 +1342,8 @@ Arquitetura **em camadas simples**, sem MVVM, sem injeção de dependência e se
 
   Por serem puras, dá para testar com **JUnit** (pasta `test/`) sem abrir o emulador. É opcional, mas é um ótimo extra para a apresentação.
 - `TempoEstudo`: funções puras do tempo (minutos da trilha, tempo válido, média, fator de ritmo, tempo de hoje), testadas em `TempoEstudoTest`.
-- `Migracao`: funções puras da migração do progresso da versão 1 (RN37), testadas em `MigracaoTest`.
+- `Migracao`: funções puras da migração do progresso das versões 1 e 2 (RN37), testadas em `MigracaoTest`.
+- `TamanhoLetra`: os 3 tamanhos de letra das questões (C12), testados em `TamanhoLetraTest`; o `LetraAjustavel` (ui) aplica o nível nos TextViews.
 - `DataUtil`: `hoje()`, `ontem()`, `paraTexto(LocalDate)` e `deTexto(String)` (devolve `null` se vazio ou inválido).
 
 **ui**
@@ -1971,6 +1979,8 @@ Faça os testes num emulador (ex.: Pixel com API 34 ou 35) **e**, se possível, 
 | T50 | Reiniciar o emulador | Mesmo resultado do T49 |
 | T51 | Resetar o progresso | Volta para o Onboarding; depois dele, tudo zerado (XP 0, 5 vidas, lições bloqueadas) |
 | T52 | Conferir o gabarito de 10 questões do JSON com o gabarito oficial do INEP | Todos batem |
+| T52b | No quiz, tocar em "Aa" e escolher letra grande; passar para a próxima questão e reabrir o app | Texto-base, enunciado, alternativas e explicação maiores, também nas próximas questões e depois de reabrir; fórmulas acompanham |
+| T52c | Numa questão com texto-base, tocar em "Recolher texto" no fim do texto | O texto vira uma faixa com a primeira linha, a tela volta ao topo e o comando e as alternativas ficam à vista; tocar na faixa abre o texto de novo |
 | T53 | Conferir se todas as lições têm de 3 a 5 questões (`python tools/validar_questoes.py` e o Logcat com a tag QuestaoRepository) | Validador OK e nenhum aviso de "lição ignorada" |
 | T72 | Com lições concluídas na versão antiga (4 lições de 5), instalar a nova por cima | As lições novas formadas só por questões de lições concluídas aparecem concluídas, em sequência; o caderno continua com as mesmas questões; XP e ofensiva iguais |
 

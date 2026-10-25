@@ -19,9 +19,10 @@ Feito como projeto da disciplina de Programação do meu curso técnico, em Java
 - **8 conquistas** com medalhas: primeira lição, ofensiva de 3 e de 7 dias, 100 e 500 XP, lição perfeita e duas de Matemática (concluir uma lição e concluir todas). No Perfil, as bloqueadas ficam em cinza
 - **Celebrações em tela cheia**, com confete: lição perfeita, ofensiva aumentada, nível novo e conquista nova
 - Sons de acerto, erro e lição concluída, e vibração curta ao errar
-- Configurações: editar o nome, trocar a meta, ligar ou desligar som, vibração e o lembrete (e escolher o horário dele) e resetar o progresso (com confirmação)
+- Configurações: editar o nome, trocar a meta e o tamanho da letra, ligar ou desligar som, vibração e o lembrete (e escolher o horário dele) e resetar o progresso (com confirmação)
 - Trilhas por área com lições concluídas, disponíveis e bloqueadas
 - Quiz com feedback imediato e explicação de cada questão
+- **Leitura no celular**: questões curtas, letra em 3 tamanhos (botão "Aa" no quiz ou nas Configurações, fica salva) e texto-base recolhível: depois de ler, "Recolher texto" deixa só o comando e as alternativas na tela, e um toque na faixa abre o texto de novo
 - Figuras e fórmulas nas questões de Matemática, com zoom ao tocar na figura
 - XP e níveis (+10 XP por acerto, +5 de bônus na lição perfeita, com 100% de acertos)
 - 5 vidas: cada erro tira uma, e uma volta a cada 30 minutos
@@ -54,7 +55,18 @@ Mascote, medalhas e avatar usam só cores com nome (`@color/...`), e o teste `Co
 
 ## Questões
 
-São **80 questões oficiais do ENEM (2019 a 2023)** em **23 lições**: Linguagens (6), Ciências Humanas (5), Ciências da Natureza (6) e Matemática (6). Cada questão mostra a fonte, por exemplo "ENEM 2019 – Questão 29". O gabarito é sempre o oficial.
+São **80 questões oficiais do ENEM (2011 a 2023)** em **21 lições**: Linguagens (5), Ciências Humanas (5), Ciências da Natureza (5) e Matemática (6). Cada questão mostra a fonte, por exemplo "ENEM 2019 – Questão 24".
+
+### Questões curtas, para ler no celular
+
+Questão longa cansa no celular. Por isso cada questão tem no máximo **100 palavras** (texto-base + comando + alternativas) em Humanas, Natureza e Matemática, e **140 em Linguagens**, onde quase não há questão só de texto mais curta que isso. O limite fica em `LIMITE_PALAVRAS`, no `montar_questoes.py`, que não grava o banco se uma questão passar dele (o validador também confere).
+
+### Gabarito oficial e anuladas
+
+- O gabarito de cada questão é conferido com o **gabarito oficial do INEP** (PDF do caderno azul), em `GABARITO_INEP`. A API enem.dev erra alguns gabaritos (ex.: 2021-15, 2021-139 e 2022-143), então a letra da API só vale quando bate com a do INEP.
+- Cada questão foi resolvida antes de ver o gabarito (a letra "cega" no script), e as três letras precisam bater.
+- Questões **anuladas** ou abandonadas pelo INEP na correção pela TRI (microdados, tabela ITENS_PROVA) ficam em `ANULADAS` e nunca entram no banco.
+- As explicações foram escritas para o app, sem copiar resoluções de cursinho.
 
 ### Lições de uns 4 minutos
 
@@ -64,21 +76,21 @@ O `montar_questoes.py` estima o tempo de cada questão e agrupa as lições para
 - mais o tempo de resolver: **Linguagens 20 s, Humanas 30 s, Natureza 30 s, Matemática 75 s**;
 - mais **15 s** se a questão tem figura ou fórmula.
 
-Os números são constantes no começo do script (`PALAVRAS_POR_MINUTO`, `RESOLUCAO_S`, `EXTRA_FIGURA_S`, `ALVO_LICAO_S`). Mudou algum? Rode o `montar_questoes.py` e o `validar_questoes.py`: o validador confere 3 a 5 questões por lição, o teto de 6 min, a média de cada área perto do alvo e imprime o tempo mínimo e máximo por área. Hoje as lições ficam entre 3 e 6 min, e as de Matemática entre 5,6 e 7,9 min (3 questões de conta já passam de 4 min).
+Os números são constantes no começo do script (`PALAVRAS_POR_MINUTO`, `RESOLUCAO_S`, `EXTRA_FIGURA_S`, `ALVO_LICAO_S`). Mudou algum? Rode o `montar_questoes.py` e o `validar_questoes.py`: o validador confere 3 a 5 questões por lição, o teto de 6 min, a média de cada área perto do alvo e imprime o tempo mínimo e máximo por área. Hoje as lições ficam entre 3,6 e 4,2 min, e as de Matemática entre 5,0 e 7,4 min (3 questões de conta já passam de 4 min).
 
-Quem já tinha progresso da versão antiga (4 lições de 5) não perde nada: na primeira abertura, cada lição nova cujas questões estavam todas em lições concluídas já aparece concluída, e o caderno de erros continua com as mesmas questões.
+Quem já tinha progresso de uma versão antiga do banco (a primeira, com 4 lições de 5, ou a 1.0-demo) é migrado na primeira abertura: cada lição atual cujas questões estavam todas em lições concluídas já aparece concluída, até a primeira que falta (a trilha não fica com buraco). O caderno de erros troca os ids antigos pelos atuais, e as questões que saíram do banco saem dele. XP, ofensiva e conquistas não mudam. Como 54 das 80 questões são novas, na prática quase toda lição recomeça.
 
 Em Matemática, as figuras (gráficos, tabelas, plantas) ficam dentro do app, em `app/src/main/assets/imagens/`, então tudo continua funcionando offline. A API entrega as fórmulas como imagens muito pequenas, que ficariam borradas no celular; por isso as alternativas que são fórmula foram redigitadas em LaTeX e renderizadas em alta resolução pelo script de montagem. Os gráficos que vieram ruins da API (baixa resolução ou um diferente dos outros, o que entregava a resposta) foram recortados da prova oficial do INEP.
 
-O texto das 80 questões foi conferido contra a prova oficial do INEP (caderno azul): o script de montagem corrige os erros de OCR da API e deixa as alternativas com a caixa e a pontuação do caderno.
+O texto das 80 questões foi conferido contra a prova oficial do INEP (caderno azul): o script de montagem corrige os erros de OCR da API (palavra trocada, ":" a mais no comando, texto-base grudado no comando, versos que viraram parágrafos, ponto de milhar) e deixa as alternativas com a caixa e a pontuação do caderno.
 
 As questões vêm da API pública [enem.dev](https://enem.dev), e os scripts que montam o banco ficam em [`tools/`](tools):
 
-- `baixar_enem.py`: baixa as provas da API para `tools/enem_raw/` (essa pasta não vai para o repositório)
+- `baixar_enem.py`: baixa as provas da API para `tools/enem_raw/` (essa pasta não vai para o repositório). Sem argumentos, baixa os anos que o banco usa (2011 e 2013 a 2023)
 - `filtrar_enem.py`: separa as questões aproveitáveis (100% texto nas três primeiras áreas; em Matemática, também as com figura ou fórmula)
 - `montar_questoes.py`: gera o `app/src/main/assets/questoes.json` (com o tempo estimado de cada questão e as lições), baixa as figuras e renderiza as fórmulas
 - `recortar_figuras.py`: recorta da prova oficial do INEP as figuras que vieram ruins da API e grava em `tools/figuras/`, que o `montar_questoes.py` usa no lugar do download (só precisa rodar de novo se mudar um recorte)
-- `validar_questoes.py`: confere o JSON, o tempo das lições e as imagens contra a especificação e contra o original da API
+- `validar_questoes.py`: confere o JSON, o gabarito do INEP, as anuladas, o limite de palavras, o tempo das lições e as imagens contra a especificação e contra o original da API
 - `gerar_sons.py`: gera os sons de acerto, erro e lição concluída em `app/src/main/res/raw/`
 
 ## Como rodar
@@ -117,7 +129,7 @@ app/src/main/java/com/murilo/enemigo/
 └── util/    # regras de gamificação (XP, vidas, ofensiva, conquistas, celebrações, lembrete) e constantes
 ```
 
-As regras de gamificação ficam em `Gamificacao.java`, as das conquistas em `Conquistas.java`, a fila de celebrações em `Celebracoes.java`, as de tempo em `TempoEstudo.java`, as do lembrete (notificar ou não) em `Lembrete.java` e a migração do progresso em `Migracao.java`, todas com testes em `app/src/test` (o `model/Avatar` também).
+As regras de gamificação ficam em `Gamificacao.java`, as das conquistas em `Conquistas.java`, a fila de celebrações em `Celebracoes.java`, as de tempo em `TempoEstudo.java`, as do lembrete (notificar ou não) em `Lembrete.java`, os tamanhos de letra em `TamanhoLetra.java` e a migração do progresso em `Migracao.java`, todas com testes em `app/src/test` (o `model/Avatar` também).
 
 ## Personalizar a marca
 

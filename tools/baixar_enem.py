@@ -42,5 +42,6 @@ def baixar(ano):
 
 if __name__ == "__main__":
     PASTA.mkdir(exist_ok=True)
-    for ano in sys.argv[1:] or ["2023", "2022", "2021", "2020", "2019"]:
+    # Sem argumentos, os anos que o banco usa (o montar_questoes.py precisa de todos).
+    for ano in sys.argv[1:] or ["2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2011"]:
         baixar(int(ano))
