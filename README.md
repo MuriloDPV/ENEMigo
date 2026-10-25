@@ -4,6 +4,8 @@ Um app Android no estilo Duolingo que, em vez de ensinar idiomas, treina para o 
 
 Feito como projeto da disciplina de Programação do meu curso técnico, em Java + XML no Android Studio.
 
+**📲 [Baixar o APK](https://github.com/MuriloDPV/ENEMigo/releases/latest)** · Android 8.0 ou mais novo. No celular, abra o arquivo e permita a instalação quando o Android pedir.
+
 ## Como funciona
 
 - O conteúdo é dividido nas áreas do ENEM, cada uma com uma **trilha de lições**.
