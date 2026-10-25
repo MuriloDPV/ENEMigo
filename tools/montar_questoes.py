@@ -71,7 +71,7 @@ LIMITE_PALAVRAS = {"LINGUAGENS": 140, "HUMANAS": 100, "NATUREZA": 100, "MATEMATI
 # Cada lição tem de 3 a 5 questões e mira ALVO_LICAO_S pela estimativa de tempo.
 AREAS = [
     ("LINGUAGENS", "LIN", [
-        ("Funções da linguagem", [
+        ("Funções e usos da linguagem", [
             ("2019-24", "C", "A ladainha é uma oração feita de pedidos repetidos, e a canção imita essa forma. O convite “Vamos pedir piedade” e o pedido “Lhes dê grandeza” chamam o interlocutor a participar: é a sequência injuntiva."),
             ("2023-28", "C", "O eu lírico fala da própria voz: o nó na garganta, o grito no lugar da fala e o “Calo.” do fim. O que ele expressa é a dificuldade de se comunicar."),
             ("2022-26", "C", "Na função emotiva, quem fala mostra o que sente, em primeira pessoa. Em “A cidade não mora mais em mim”, o eu lírico revela que já não se sente parte da cidade."),
