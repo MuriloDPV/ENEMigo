@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ícone da notificação do lembrete: silhueta da cabeça da Lia (só o alfa conta).
+     Gerado por tools/gerar_mascote.py: mude lá e rode de novo. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <group
+        android:pivotX="60"
+        android:pivotY="42.6"
+        android:scaleX="0.28"
+        android:scaleY="0.28"
+        android:translateX="-48"
+        android:translateY="-30.6">
+        <!-- Cabeça e orelhas, com olhos e máscara vazados -->
+        <path
+            android:fillColor="@color/texto_sobre_cor"
+            android:pathData="M30,40 L33,9 Q34,6 36.5,8 L56,28 Z M90,40 L64,28 L83.5,8 Q86,6 87,9 Z M60,78 C52,78 44,70 36,62 C28,54 24,46 26,38 C28,28 40,24 60,24 C80,24 92,28 94,38 C96,46 92,54 84,62 C76,70 68,78 60,78 Z M29,47 C31,55 39,62 47,69 C51,73 56,76.5 60,76.5 C64,76.5 69,73 73,69 C81,62 89,55 91,47 C80,45 68,50 60,59 C52,50 40,45 29,47 Z M42.5,42.3 Q46,38.4 49.5,42.3 L51.9,43.1 Q46,34.6 40.1,43.1 Z M70.5,42.3 Q74,38.4 77.5,42.3 L79.9,43.1 Q74,34.6 68.1,43.1 Z" />
+        <!-- Máscara a meia-tinta, com nariz e boca vazados -->
+        <path
+            android:fillColor="@color/texto_sobre_cor"
+            android:fillAlpha="0.55"
+            android:pathData="M29,47 C40,45 52,50 60,59 C68,50 80,45 91,47 C89,55 81,62 73,69 C69,73 64,76.5 60,76.5 C56,76.5 51,73 47,69 C39,62 31,55 29,47 Z M55.2,63.5 a4.8,3.5 0 1,0 9.6,0 a4.8,3.5 0 1,0 -9.6,0 Z M53.6,67.6 Q60,76 66.4,67.6 L64.6,68.6 Q60,73.2 55.4,68.6 Z" />
+    </group>
+</vector>

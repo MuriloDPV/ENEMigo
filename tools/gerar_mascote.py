@@ -10,7 +10,8 @@ Uso (da raiz do projeto):
 
 Saída (em app/src/main/res/drawable):
     mascote_neutro, mascote_feliz, mascote_comemorando, mascote_triste, mascote_pensando,
-    mascote_sem_vidas, ic_launcher_foreground, ic_launcher_monocromatico e marca_logo (.xml)
+    mascote_sem_vidas, ic_launcher_foreground, ic_launcher_monocromatico, ic_notificacao e
+    marca_logo (.xml)
 """
 from pathlib import Path
 
@@ -348,8 +349,13 @@ MASCARA_SEG = [(29, 47), ("C", (40, 45), (52, 50), (60, 59)), ("C", (68, 50), (8
                ("C", (56, 76.5), (51, 73), (47, 69)), ("C", (39, 62), (31, 55), (29, 47))]
 
 
-def monocromatico():
-    """Silhueta para o ícone temático do Android 13+: só o alfa conta.
+# Ícone de notificação (24dp): a mesma silhueta, das orelhas (y 7) ao queixo (y 78), com o centro
+# (60; 42,6) no meio do quadro e escala 0,28, para caber na área útil de 20dp.
+NOTIFICACAO = dict(pivotX=60, pivotY=42.6, scaleX=0.28, scaleY=0.28, translateX=-48, translateY=-30.6)
+
+
+def silhueta():
+    """Silhueta da cabeça em que só o alfa conta (ícone temático e de notificação).
     Cabeça e orelhas cheias, máscara a meia-tinta, e olhos, nariz e boca vazados
     (os furos são desenhados no sentido contrário, então a regra nonZero os deixa vazios)."""
     def olho(x, y=OLHOS_Y):
@@ -363,10 +369,20 @@ def monocromatico():
     cheio = " ".join([ORELHAS[0][0], orelha_dir, CABECA, furo_mascara, olho(OLHOS[0]), olho(OLHOS[1])])
     meia = " ".join([caminho(MASCARA_SEG), nariz, boca])
     branco = "@color/texto_sobre_cor"
-    return [grupo([
+    return [
         {"tipo": "path", "attrs": [("fillColor", branco), ("pathData", cheio)], "comentario": "Cabeça e orelhas, com olhos e máscara vazados"},
         {"tipo": "path", "attrs": [("fillColor", branco), ("fillAlpha", "0.55"), ("pathData", meia)], "comentario": "Máscara a meia-tinta, com nariz e boca vazados"},
-    ], **ICONE)]
+    ]
+
+
+def monocromatico():
+    """Ícone temático do Android 13+: a silhueta na zona segura do ícone adaptativo."""
+    return [grupo(silhueta(), **ICONE)]
+
+
+def notificacao():
+    """Ícone pequeno da notificação do lembrete: a silhueta ocupando o quadro de 24."""
+    return [grupo(silhueta(), **NOTIFICACAO)]
 
 
 def logo():
@@ -385,6 +401,8 @@ def main():
            "A abertura usa este mesmo desenho.", [cabeca_icone()], tamanho=108, viewport=108)
     salvar("ic_launcher_monocromatico", "Ícone temático (Android 13+): silhueta da cabeça da Lia.",
            monocromatico(), tamanho=108, viewport=108)
+    salvar("ic_notificacao", "Ícone da notificação do lembrete: silhueta da cabeça da Lia (só o alfa conta).",
+           notificacao(), tamanho=24, viewport=24)
     salvar("marca_logo", "Logo da marca dentro do app: a cabeça do ícone num quadrado arredondado.",
            logo(), tamanho=48, viewport=48)
 
