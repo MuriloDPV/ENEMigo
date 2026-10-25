@@ -3,6 +3,8 @@
 
     <!-- Vibração curta ao errar (C10), que pode ser desligada nas Configurações -->
     <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- Lembrete diário da ofensiva (pedida no Android 13+ depois da primeira lição) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"

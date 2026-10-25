@@ -239,6 +239,24 @@
     <string name="config_secao_sobre">Sobre</string>
     <string name="config_sobre">%1$s, versão %2$s. Questões retiradas das provas oficiais do ENEM, disponíveis publicamente no site do INEP. App educacional sem vínculo com o INEP.</string>
 
+    <!-- Lembrete diário da ofensiva (notificação) -->
+    <string name="lembrete_canal_nome">Lembrete diário</string>
+    <string name="lembrete_canal_descricao">Um aviso por dia no horário escolhido, só se você ainda não estudou</string>
+    <plurals name="lembrete_titulo_ofensiva">
+        <item quantity="one">Sua ofensiva de %1$d dia está em risco!</item>
+        <item quantity="other">Sua ofensiva de %1$d dias está em risco!</item>
+    </plurals>
+    <string name="lembrete_titulo">Sua lição de hoje está esperando</string>
+    <!-- Uma frase por dia, em rodízio. %1$s é o nome da mascote. -->
+    <string-array name="lembrete_frases">
+        <item>%1$s separou uma lição rapidinha pra você.</item>
+        <item>Uns 4 minutinhos e o dia de hoje já conta.</item>
+        <item>%1$s está de orelha em pé te esperando.</item>
+        <item>Uma lição por dia e o ENEM vai ficando menor.</item>
+        <item>Ainda dá tempo! %1$s guardou uma questão boa.</item>
+        <item>Bora? %1$s já deixou tudo pronto pra você.</item>
+    </string-array>
+
     <!-- Conquistas (C3) -->
     <string name="perfil_conquistas">Conquistas (%1$d/%2$d)</string>
     <string name="perfil_conquistas_vazio">Termine sua primeira lição para ganhar a primeira medalha.</string>

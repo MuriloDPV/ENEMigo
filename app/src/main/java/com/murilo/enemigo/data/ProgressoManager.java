@@ -166,6 +166,11 @@ public final class ProgressoManager {
         return Gamificacao.estudouHoje(lerUltimaDataEstudo(), DataUtil.hoje());
     }
 
+    /** Último dia com sessão concluída, ou null se nunca estudou (usado pelo lembrete). */
+    public LocalDate getUltimaDataEstudo() {
+        return lerUltimaDataEstudo();
+    }
+
     private LocalDate lerUltimaDataEstudo() {
         return DataUtil.deTexto(prefs.getString(Constantes.CHAVE_ULTIMA_DATA_ESTUDO, ""));
     }

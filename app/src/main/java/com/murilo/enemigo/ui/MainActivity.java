@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.murilo.enemigo.R;
 import com.murilo.enemigo.data.ProgressoManager;
+import com.murilo.enemigo.notificacao.AgendaLembrete;
 import com.murilo.enemigo.util.Constantes;
 
 /**
@@ -33,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
             finish();
             return;
         }
+
+        // Garante o lembrete diário agendado (o WorkManager já o refaz depois de reiniciar).
+        AgendaLembrete.sincronizar(this);
 
         setContentView(R.layout.activity_main);
 
