@@ -15,6 +15,12 @@ Imagens e fórmulas (Matemática):
 
 Lições: cada questão leva o tempo estimado em "segundos_estimados" (ver PALAVRAS_POR_MINUTO e
 RESOLUCAO_S), e as lições agrupam de 3 a 5 questões para dar uns 4 minutos (ALVO_LICAO_S).
+
+Texto como no caderno: o texto da API foi conferido contra a prova oficial do INEP (caderno azul).
+CORRECOES conserta os erros de OCR, SEM_PONTO devolve o ponto final que a API tirou de algumas
+alternativas, e ajustar_inicial() devolve a minúscula das alternativas que continuam a frase do
+comando (a API põe maiúscula em todas). Quando a API joga texto-base, fonte e comando todos no
+enunciado (context vazio), campos() separa: o último parágrafo é o comando.
 """
 import json
 import re
@@ -231,7 +237,8 @@ FORMULAS = {
 }
 
 # Erros de OCR da API (símbolo perdido, unidade trocada, palavra cortada, parágrafo
-# grudado). Cada trecho antigo precisa aparecer exatamente uma vez no campo.
+# grudado). Cada trecho antigo precisa aparecer exatamente uma vez no campo. O campo é
+# "context", "alternativesIntroduction" ou a letra da alternativa ("A" a "E").
 CORRECOES = {
     "2019-139": [("context", "consumo de até 6 m²", "consumo de até 6 m³"),
                  ("context", "15 m² por mês", "15 m³ por mês"),
@@ -245,6 +252,11 @@ CORRECOES = {
     "2023-161": [("context", "aproximação para 28.", "aproximação para √28.")],
 }
 
+# Alternativas que têm ponto final no caderno e vieram sem ele da API.
+SEM_PONTO = {}
+
+# Pontuação que fecha o comando. Sem ela, o comando continua nas alternativas.
+FIM_DE_FRASE = (".", "?", "!", ":")
 
 def texto_puro(md):
     """Markdown da API -> texto puro, mantendo as quebras de linha."""
@@ -271,14 +283,30 @@ def carregar_bruto():
 
 
 def corrigido(q, chave, campo):
-    """Campo do bruto com as CORRECOES de OCR aplicadas."""
-    valor = q.get(campo) or ""
+    """Campo do bruto (ou alternativa, pela letra) com as CORRECOES de OCR aplicadas."""
+    if campo in ("A", "B", "C", "D", "E"):
+        valor = q["alternatives"]["ABCDE".index(campo)].get("text") or ""
+    else:
+        valor = q.get(campo) or ""
     for c, antigo, novo in CORRECOES.get(chave, []):
         if c == campo:
             if valor.count(antigo) != 1:
                 raise ValueError(f"{chave}: correção {antigo!r} aparece {valor.count(antigo)} vez(es)")
             valor = valor.replace(antigo, novo)
     return valor
+
+
+def ajustar_inicial(alternativa, enunciado):
+    """Minúscula no começo da alternativa que continua a frase do comando, como no caderno.
+
+    Só muda palavra com maiúscula seguida de minúscula: sigla e "Y = 80X + 920" ficam como
+    estão. Uma alternativa que comece com nome próprio precisaria de exceção aqui.
+    """
+    if enunciado.rstrip().endswith(FIM_DE_FRASE) or len(alternativa) < 2:
+        return alternativa
+    if alternativa[0].isupper() and alternativa[1].islower():
+        return alternativa[0].lower() + alternativa[1:]
+    return alternativa
 
 
 def converter(md, nome_base, recursos):
@@ -305,13 +333,20 @@ def campos(q, chave):
     recursos = []
     texto = converter(corrigido(q, chave, "context"), f"{chave}-t", recursos)
     enunciado = converter(corrigido(q, chave, "alternativesIntroduction"), f"{chave}-e", recursos)
+    if not texto and "\n" in enunciado:
+        # Texto-base, fonte e comando vieram juntos no enunciado: o comando é o último parágrafo.
+        *paragrafos, enunciado = re.split(r"\n+", enunciado)
+        texto = "\n\n".join(paragrafos)
     formulas = FORMULAS.get(chave)
     alternativas = []
     for i, a in enumerate(q["alternatives"]):
         if not a.get("file"):
             if formulas:
                 raise ValueError(f"{chave}: FORMULAS para alternativa que já é texto")
-            alternativas.append(texto_puro(a["text"]))
+            alternativa = ajustar_inicial(texto_puro(corrigido(q, chave, a["letter"])), enunciado)
+            if a["letter"] in SEM_PONTO.get(chave, "") and not alternativa.endswith("."):
+                alternativa += "."
+            alternativas.append(alternativa)
         elif formulas:
             arquivo = f"{chave}-{a['letter'].lower()}.png"
             recursos.append(("formula", arquivo, formulas[i]))

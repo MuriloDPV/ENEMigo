@@ -14,7 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from montar_questoes import (ALVO_LICAO_S, AREAS as AREAS_MONTAGEM, CORRECOES, FORMULAS,  # noqa: E402
                              IMAGEM_MD, IMAGENS, LICOES_V1, MAX_QUESTOES, MIN_QUESTOES, SAIDA,
-                             campos, carregar_bruto, estimar_segundos, ids_v1)
+                             SEM_PONTO, campos, carregar_bruto, estimar_segundos, ids_v1)
 
 AREAS = {"LINGUAGENS": "LIN", "HUMANAS": "HUM", "NATUREZA": "NAT", "MATEMATICA": "MAT"}
 DISCIPLINAS = {"LIN": "linguagens", "HUM": "ciencias-humanas", "NAT": "ciencias-natureza",
@@ -199,9 +199,12 @@ orfas = sorted(p.name for p in IMAGENS.iterdir() if p.name not in arquivos_usado
 if orfas:
     erro(f"arquivos em {IMAGENS.name}/ que nenhuma questão usa: {orfas}")
 chaves_montagem = {c for _, _, licoes in AREAS_MONTAGEM for _, qs in licoes for c, _, _ in qs}
-for nome, tabela in (("FORMULAS", FORMULAS), ("CORRECOES", CORRECOES)):
+for nome, tabela in (("FORMULAS", FORMULAS), ("CORRECOES", CORRECOES), ("SEM_PONTO", SEM_PONTO)):
     for chave in sorted(set(tabela) - chaves_montagem):
         erro(f"{nome} tem {chave}, que não está no banco")
+for chave, letras in SEM_PONTO.items():
+    if not letras or set(letras) - set("ABCDE"):
+        erro(f"SEM_PONTO[{chave}] precisa de letras de A a E")
 for chave, lista in FORMULAS.items():
     if len(lista) != 5:
         erro(f"FORMULAS[{chave}] precisa de 5 fórmulas")
