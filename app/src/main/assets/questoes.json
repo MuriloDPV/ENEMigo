@@ -1,123 +1,15 @@
 {
-  "versao": 2,
+  "versao": 3,
   "areas": [
     {
       "id": "LINGUAGENS",
       "licoes": [
         {
           "id": "LIN-01",
-          "titulo": "Tecnologia e comunicação",
+          "titulo": "Funções da linguagem",
           "questoes": [
             {
               "id": "LIN-01-01",
-              "texto": "A rede é, antes de tudo, um instrumento de comunicação entre pessoas, um laço virtual em que as comunidades auxiliam seus membros a aprender o que querem saber. Os dados não representam senão a matéria-prima de um processo intelectual e social vivo, altamente elaborado. Enfim, toda inteligência coletiva do mundo jamais dispensará a inteligência pessoal, o esforço individual e o tempo necessário para aprender, pesquisar, avaliar e integrar-se a diversas comunidades, sejam elas virtuais ou não. A rede jamais pensará em seu lugar, fique tranquilo.\n\nLÉVY, P. A máquina universo: criação, cognição e cultura informática. Porto Alegre: Artmed, 1998.",
-              "enunciado": "No contexto das novas tecnologias de informação e comunicação, a circulação de saberes depende da",
-              "alternativas": [
-                "otimização do tempo.",
-                "confiabilidade dos sites.",
-                "contribuição dos usuários.",
-                "quantidade de informação.",
-                "colaboração de intelectuais."
-              ],
-              "correta": "C",
-              "explicacao": "Para Lévy, a rede é um laço entre pessoas em que as comunidades ajudam seus membros a aprender. O saber só circula porque os próprios usuários contribuem com esforço, pesquisa e participação.",
-              "fonte": "ENEM 2019 – Questão 29",
-              "segundos_estimados": 63
-            },
-            {
-              "id": "LIN-01-02",
-              "texto": "Ora, sempre que surge uma nova técnica, ela quer demonstrar que revogará as regras e coerções que presidiram o nascimento de todas as outras invenções do passado. Ela se pretende orgulhosa e única. Como se a nova técnica carreasse com ela, automaticamente, para seus novos usuários, uma propensão natural a fazer economia de qualquer aprendizagem. Como se ela se preparasse para varrer tudo que a precedeu, ao mesmo tempo transformando em analfabetos todos os que ousassem repeli-la.\n\nFui testemunha dessa mudança ao longo de toda a minha vida. Ao passo que, na realidade, é o contrário que acontece. Cada nova técnica exige uma longa iniciação numa nova linguagem, ainda mais longa na medida em que nosso espírito é formatado pela utilização das linguagens que precederam o nascimento da recém-chegada.\n\nECO, U.; CARRIÈRE, J.-C. Não contem com o fim do livro. Rio de Janeiro: Record, 2010 (adaptado).",
-              "enunciado": "O texto revela que, quando a sociedade promove o desenvolvimento de uma nova técnica, o que mais impacta seus usuários é a",
-              "alternativas": [
-                "dificuldade na apropriação da nova linguagem.",
-                "valorização da utilização da nova tecnologia.",
-                "recorrência das mudanças tecnológicas.",
-                "suplantação imediata dos conhecimentos prévios.",
-                "rapidez no aprendizado do manuseio das novas invenções."
-              ],
-              "correta": "A",
-              "explicacao": "Os autores dizem que toda nova técnica exige “uma longa iniciação numa nova linguagem”. O maior impacto é a dificuldade de se apropriar dela, e não uma aprendizagem imediata.",
-              "fonte": "ENEM 2022 – Questão 11",
-              "segundos_estimados": 86
-            },
-            {
-              "id": "LIN-01-03",
-              "texto": "Na Idade Média, as notícias se propagavam com surpreendente eficácia. Segundo uma emérita professora de Sorbonne, um cavalo era capaz de percorrer 30 quilômetros por dia, mas o tempo podia se acelerar dependendo do interesse da notícia. As ordens mendicantes tinham um papel importante na disseminação de informações, assim como os jograis, os peregrinos e os vagabundos, porque todos eles percorriam grandes distâncias. As cidades também tinham correios organizados e selos para lacrar mensagens e tentar certificar a veracidade das correspondências. Graças a tudo isso, a circulação de boatos era intensa e politicamente relevante. Um exemplo clássico de fake news da era medieval é a história do rei que desaparece na batalha e reaparece muito depois, idoso e transformado.\n\nDisponível em: www.elpais.com.br. Acesso em: 18 jun. 2018 (adaptado).",
-              "enunciado": "A propagação sistemática de informações é um fenômeno recorrente na história e no desenvolvimento das sociedades. No texto, a eficácia dessa propagação está diretamente relacionada ao (à)",
-              "alternativas": [
-                "velocidade de circulação das notícias.",
-                "nível de letramento da população marginalizada.",
-                "poder de censura por parte dos serviços públicos.",
-                "legitimidade da voz dos representantes da nobreza.",
-                "diversidade dos meios disponíveis em uma época histórica."
-              ],
-              "correta": "E",
-              "explicacao": "O texto cita cavalos, ordens mendicantes, jograis, peregrinos, vagabundos e correios organizados. A eficácia vinha da diversidade de meios disponíveis naquela época.",
-              "fonte": "ENEM 2023 – Questão 9",
-              "segundos_estimados": 84
-            }
-          ]
-        },
-        {
-          "id": "LIN-02",
-          "titulo": "Usos da língua",
-          "questoes": [
-            {
-              "id": "LIN-02-01",
-              "texto": "Policarpo Quaresma, cidadão brasileiro, funcionário público, certo de que a língua portuguesa é emprestada ao Brasil; certo também de que, por esse fato, o falar e o escrever em geral, sobretudo no campo das letras, se veem na humilhante contingência de sofrer continuamente censuras ásperas dos proprietários da língua; sabendo, além, que, dentro do nosso país, os autores e os escritores, com especialidade os gramáticos, não se entendem no tocante à correção gramatical, vendo-se, diariamente, surgir azedas polêmicas entre os mais profundos estudiosos do nosso idioma — usando do direito que lhe confere a Constituição, vem pedir que o Congresso Nacional decrete o tupi-guarani como língua oficial e nacional do povo brasileiro.\n\nBARRETO, L. Triste fim de Policarpo Quaresma. Disponível em: www.dominiopublico.gov.br. Acesso em: 26 jun. 2012.",
-              "enunciado": "Nessa petição da pitoresca personagem do romance de Lima Barreto, o uso da norma-padrão justifica-se pela",
-              "alternativas": [
-                "situação social de enunciação representada.",
-                "divergência teórica entre gramáticos e literatos.",
-                "pouca representatividade das línguas indígenas.",
-                "atitude irônica diante da língua dos colonizadores.",
-                "tentativa de solicitação do documento demandado."
-              ],
-              "correta": "A",
-              "explicacao": "Policarpo escreve um requerimento formal ao Congresso. A norma-padrão é exigida por essa situação de comunicação (documento oficial), mesmo sendo o pedido tão pitoresco.",
-              "fonte": "ENEM 2020 – Questão 41",
-              "segundos_estimados": 78
-            },
-            {
-              "id": "LIN-02-02",
-              "texto": "TEXTO I\nA língua não é uma nomenclatura, que se apõe a uma realidade pré-categorizada, ela é que classifica a realidade. No léxico, percebe-se, de maneira mais imediata, o fato de que a língua condensa as experiências de um dado povo.\n\nFIORIN, J. L. Língua, modernidade e tradição. Diversitas, n. 2, mar.-set. 2014.\n\nTEXTO II\nAs expressões coloquiais ainda estão impregnadas de discriminação contra os negros. Basta recordar algumas delas, como passar um “dia negro”, ter um “lado negro”, ser a “ovelha negra” da família ou praticar “magia negra”.\n\nDisponível em: https://brasil.elpais.com. Acesso em: 22 maio 2018.",
-              "enunciado": "O Texto II exemplifica o que se afirma no Texto I, na medida em que defende a ideia de que as escolhas lexicais são resultantes de um",
-              "alternativas": [
-                "expediente próprio do sistema linguístico que nos apresenta diferentes possibilidades para traduzir estados de coisas.",
-                "ato inventivo de nomear novas realidades que surgem diante de uma comunidade de falantes de uma língua.",
-                "mecanismo de apropriação de formas linguísticas que estão no acervo da formação do idioma nacional.",
-                "processo de incorporação de preconceitos que são recorrentes na história de uma sociedade.",
-                "recurso de expressão marcado pela objetividade que se requer na comunicação diária."
-              ],
-              "correta": "D",
-              "explicacao": "O Texto I diz que o léxico guarda as experiências de um povo. O Texto II mostra expressões como “ovelha negra”, que carregam o preconceito racial presente na história da sociedade.",
-              "fonte": "ENEM 2022 – Questão 14",
-              "segundos_estimados": 87
-            },
-            {
-              "id": "LIN-02-03",
-              "texto": "Um grupo de pesquisadores da Universidade Federal do Ceará desenvolveu um dicionário para traduzir sintomas de doenças da linguagem popular para os termos médicos. Defruço, chanha e piloura, por exemplo, podem ser termos conhecidos para muitos, mas, durante uma consulta médica, o desconhecimento pode significar um diagnóstico errado.\n\n“Isso é um registro histórico e pode ser muito útil para estudos dessas comunidades, na abordagem médica delas. É de certa forma pioneiro no Brasil e, sem dúvida, um instrumento de trabalho importante, porque a comunicação é fundamental na relação médico-paciente”, avalia o reitor da instituição.\n\nDisponível em: https://g1.globo.com. Acesso em: 1 nov. 2021 (adaptado).",
-              "enunciado": "Ao registrarem usos regionais de termos da área médica, pesquisadores",
-              "alternativas": [
-                "apontaram erros motivados pelo desconhecimento da variedade linguística local.",
-                "explicaram problemas provocados pela incapacidade de comunicação.",
-                "descobriram novos sintomas de doenças existentes na comunidade.",
-                "propiciaram melhor compreensão dos sintomas dos pacientes.",
-                "divulgaram um novo rol de doenças características da localidade."
-              ],
-              "correta": "D",
-              "explicacao": "O dicionário traduz termos populares (defruço, chanha, piloura) para termos médicos. Assim o médico entende melhor os sintomas que o paciente descreve.",
-              "fonte": "ENEM 2023 – Questão 21",
-              "segundos_estimados": 72
-            }
-          ]
-        },
-        {
-          "id": "LIN-03",
-          "titulo": "Recursos de linguagem",
-          "questoes": [
-            {
-              "id": "LIN-03-01",
               "texto": "Blues da piedade\n\nVamos pedir piedade\nSenhor, piedade\nPra essa gente careta e covarde\nVamos pedir piedade\nSenhor, piedade\nLhes dê grandeza e um pouco de coragem\n\nCAZUZA. Cazuza: o poeta não morreu. Rio de Janeiro: Universal Music, 2000 (fragmento).",
               "enunciado": "Todo gênero apresenta elementos constitutivos que condicionam seu uso em sociedade. A letra de canção identifica-se com o gênero ladainha, essencialmente, pela utilização da sequência textual",
               "alternativas": [
@@ -133,36 +25,192 @@
               "segundos_estimados": 55
             },
             {
-              "id": "LIN-03-02",
-              "texto": "Urgência emocional\n\nSe tudo é para ontem, se a vida engata uma primeira e sai em disparada, se não há mais tempo para paradas estratégicas, caímos fatalmente no vício de querer que os amores sejam igualmente resolvidos num átimo de segundo. Temos pressa para ouvir “eu te amo”. Não vemos a hora de que fiquem estabelecidas as regras de convívio: somos namorados, ficantes, casados, amantes? Urgência emocional. Uma cilada. Associamos diversas palavras ao AMOR: paixão, romance, sexo, adrenalina, palpitação. Esquecemos, no entanto, da palavra que viabiliza esse sentimento: “paciência”. Amor sem paciência não vinga. Amor não pode ser mastigado e engolido com emergência, com fome desesperada. É uma refeição que pode durar uma vida.\n\nMEDEIROS, M. Disponível em: http://porumavidasimples.blogspot.com.br. Acesso em: 20 ago. 2017 (adaptado).",
-              "enunciado": "Nesse texto de opinião, as marcas linguísticas revelam uma situação distensa e de pouca formalidade, o que se evidencia pelo(a)",
+              "id": "LIN-01-02",
+              "texto": "A garganta é a gruta que guarda o som\nA garganta está entre a mente e o coração\nVem coisa de cima, vem coisa de baixo e de\n[repente um nó (e o que eu quero dizer?)\nÀs vezes, acontece um negócio esquisito\nQuando eu quero falar eu grito, quando eu quero\n[gritar eu falo, o resultado\nCalo.\n\nESTRELA D’ALVA, R. Disponível em: https://claudia.abril.com.br. Acesso em: 23 nov. 2021 (fragmento).",
+              "enunciado": "A função emotiva presente no poema cumpre o propósito do eu lírico de",
               "alternativas": [
-                "impessoalização ao longo do texto, como em: “se não há mais tempo”.",
-                "construção de uma atmosfera de urgência, em palavras como: “pressa”.",
-                "repetição de uma determinada estrutura sintática, como em: “Se tudo é para ontem”.",
-                "ênfase no emprego da hipérbole, como em: “uma refeição que pode durar uma vida”.",
-                "emprego de metáforas, como em: “a vida engata uma primeira e sai em disparada”."
+                "revelar as desilusões amorosas.",
+                "refletir sobre a censura à sua voz.",
+                "expressar a dificuldade de comunicação.",
+                "ressaltar a existência de pressões externas.",
+                "manifestar as dores do processo de criação."
+              ],
+              "correta": "C",
+              "explicacao": "O eu lírico fala da própria voz: o nó na garganta, o grito no lugar da fala e o “Calo.” do fim. O que ele expressa é a dificuldade de se comunicar.",
+              "fonte": "ENEM 2023 – Questão 28",
+              "segundos_estimados": 59
+            },
+            {
+              "id": "LIN-01-03",
+              "texto": "Assentamento\n\nZanza daqui\nZanza pra acolá\nFim de feira, periferia afora\nA cidade não mora mais em mim\nFrancisco, Serafim\nVamos embora\n\nVer o capim\nVer o baobá\nVamos ver a campina quando flora\nA piracema, rios contravim\nBinho, Bel, Bia, Quim\nVamos embora\n\nQuando eu morrer\nCansado de guerra\nMorro de bem\nCom a minha terra:\nCana, caqui\nInhame, abóbora\nOnde só vento se semeava outrora\nAmplidão, nação, sertão sem fim\nÓ Manuel, Miguilim\nVamos embora\n\nBUARQUE, C. As cidades. Rio de Janeiro: RCA, 1998 (fragmento).",
+              "enunciado": "Nesse texto, predomina a função poética da linguagem. Entretanto, a função emotiva pode ser identificada no verso:",
+              "alternativas": [
+                "“Zanza pra acolá”.",
+                "“Fim de feira, periferia afora”.",
+                "“A cidade não mora mais em mim”.",
+                "“Onde só vento se semeava outrora”.",
+                "“Ó Manuel, Miguilim”."
+              ],
+              "correta": "C",
+              "explicacao": "Na função emotiva, quem fala mostra o que sente, em primeira pessoa. Em “A cidade não mora mais em mim”, o eu lírico revela que já não se sente parte da cidade.",
+              "fonte": "ENEM 2022 – Questão 26",
+              "segundos_estimados": 63
+            },
+            {
+              "id": "LIN-01-04",
+              "texto": "Até quando?\n\nNão adianta olhar pro céu\nCom muita fé e pouca luta\nLevanta aí que você tem muito protesto pra fazer\nE muita greve, você pode, você deve, pode crer\nNão adianta olhar pro chão\nVirar a cara pra não ver\nSe liga aí que te botaram numa cruz e só porque Jesus\nSofreu não quer dizer que você tenha que sofrer!\n\nGABRIEL, O PENSADOR. Seja você mesmo (mas não seja sempre o mesmo). Rio de Janeiro: Sony Music, 2001 (fragmento).",
+              "enunciado": "As escolhas linguísticas feitas pelo autor conferem ao texto",
+              "alternativas": [
+                "caráter atual, pelo uso de linguagem própria da internet.",
+                "cunho apelativo, pela predominância de imagens metafóricas.",
+                "tom de diálogo, pela recorrência de gírias.",
+                "espontaneidade, pelo uso da linguagem coloquial.",
+                "originalidade, pela concisão da linguagem."
+              ],
+              "correta": "D",
+              "explicacao": "“Pro céu”, “Levanta aí”, “Se liga aí” e “pode crer” são jeitos de falar do dia a dia. Essa linguagem coloquial deixa a letra espontânea, como uma conversa.",
+              "fonte": "ENEM 2013 – Questão 100",
+              "segundos_estimados": 62
+            }
+          ]
+        },
+        {
+          "id": "LIN-02",
+          "titulo": "Palavras e sentidos",
+          "questoes": [
+            {
+              "id": "LIN-02-01",
+              "texto": "Mandinga — Era a denominação que, no período das grandes navegações, os portugueses davam à costa ocidental da África. A palavra se tornou sinônimo de feitiçaria porque os exploradores lusitanos consideravam bruxos os africanos que ali habitavam — é que eles davam indicações sobre a existência de ouro na região. Em idioma nativo, manding designava terra de feiticeiros. A palavra acabou virando sinônimo de feitiço, sortilégio.\n\nCOTRIM, M. O pulo do gato 3. São Paulo: Geração Editorial, 2009 (fragmento).",
+              "enunciado": "No texto, evidencia-se que a construção do significado da palavra mandinga resulta de um(a)",
+              "alternativas": [
+                "contexto sócio-histórico.",
+                "diversidade étnica.",
+                "descoberta geográfica.",
+                "apropriação religiosa.",
+                "contraste cultural."
+              ],
+              "correta": "A",
+              "explicacao": "Mandinga passou a significar feitiçaria por causa de como os navegadores portugueses viam os africanos daquela costa. O sentido nasceu de um contexto histórico e social.",
+              "fonte": "ENEM 2016 – Questão 102",
+              "segundos_estimados": 54
+            },
+            {
+              "id": "LIN-02-02",
+              "texto": "Sítio Gerimum\nEste é o meu lugar [...]\nMeu Gerimum é com g\nVocê pode ter estranhado\nGerimum em abundância\nAqui era plantado\nE com a letra g\nMeu lugar foi registrado.\n\nOLIVEIRA, H. D. Língua Portuguesa, n. 88, fev. 2013 (fragmento).",
+              "enunciado": "Nos versos de um menino de 12 anos, o emprego da palavra “Gerimum” grafada com a letra “g” tem por objetivo",
+              "alternativas": [
+                "valorizar usos informais caracterizadores da norma nacional.",
+                "confirmar o uso da norma-padrão em contexto da linguagem poética.",
+                "enfatizar um processo recorrente na transformação da língua portuguesa.",
+                "registrar a diversidade étnica e linguística presente no território brasileiro.",
+                "reafirmar discursivamente a forte relação do falante com seu lugar de origem."
               ],
               "correta": "E",
-              "explicacao": "Metáforas do dia a dia, como “a vida engata uma primeira e sai em disparada”, aproximam o texto de uma conversa e criam o tom descontraído e pouco formal.",
-              "fonte": "ENEM 2022 – Questão 6",
-              "segundos_estimados": 91
+              "explicacao": "O menino escreve Gerimum com g porque foi assim que o lugar dele foi registrado. A grafia mostra o laço afetivo com a terra de origem, e não uma regra da norma.",
+              "fonte": "ENEM 2017 – Questão 15",
+              "segundos_estimados": 57
+            },
+            {
+              "id": "LIN-02-03",
+              "texto": "Nuances\n\nEuforia: alegria barulhenta. Felicidade: alegria silenciosa.\n\nGravar: quando o ator é de televisão. Filmar: quando ele quer deixar claro que não é de televisão.\n\nGrávida: em qualquer ocasião. Gestante: em filas e assentos preferenciais.\n\nGuardar: na gaveta. Salvar: no computador. Salvaguardar: no Exército.\n\nMenta: no sorvete, na bala ou no xarope. Hortelã: na horta ou no suco de abacaxi.\n\nPeça: quando você vai assistir. Espetáculo: quando você está em cartaz com ele.\n\nDUVIVIER, G. Folha de S. Paulo, 24 mar. 2014 (adaptado).",
+              "enunciado": "O texto trata da diferença de sentido entre vocábulos muito próximos. Essa diferença é apresentada considerando-se a(s)",
+              "alternativas": [
+                "alternâncias na sonoridade.",
+                "adequação às situações de uso.",
+                "marcação flexional das palavras.",
+                "grafia na norma-padrão da língua.",
+                "categorias gramaticais das palavras."
+              ],
+              "correta": "B",
+              "explicacao": "Cada par junta palavras quase iguais que servem para situações diferentes: “gestante” na fila preferencial, “salvar” no computador. A diferença está no uso de cada uma.",
+              "fonte": "ENEM 2017 – Questão 27",
+              "segundos_estimados": 61
+            },
+            {
+              "id": "LIN-02-04",
+              "texto": "Entre ideia e tecnologia\n\nO grande conceito por trás do Museu da Língua é apresentar o idioma como algo vivo e fundamental para o entendimento do que é ser brasileiro. Se nada nos define com clareza, a forma como falamos o português nas mais diversas situações cotidianas é talvez a melhor expressão da brasilidade.\n\nSCARDOVELI, E. Revista Língua Portuguesa. São Paulo: Segmento, Ano II, nº 6, 2006.",
+              "enunciado": "O texto propõe uma reflexão acerca da língua portuguesa, ressaltando para o leitor a",
+              "alternativas": [
+                "inauguração do museu e o grande investimento em cultura no país.",
+                "importância da língua para a construção da identidade nacional.",
+                "afetividade tão comum ao brasileiro, retratada através da língua.",
+                "relação entre o idioma e as políticas públicas na área de cultura.",
+                "diversidade étnica e linguística existente no território nacional."
+              ],
+              "correta": "B",
+              "explicacao": "Para o texto, o jeito de falar português é “a melhor expressão da brasilidade”. A língua aparece como parte central da identidade nacional.",
+              "fonte": "ENEM 2011 – Questão 125",
+              "segundos_estimados": 63
+            }
+          ]
+        },
+        {
+          "id": "LIN-03",
+          "titulo": "Gêneros e construção do texto",
+          "questoes": [
+            {
+              "id": "LIN-03-01",
+              "texto": "L.J.C.\n— 5 tiros?\n— É.\n— Brincando de pegador?\n— É. O PM pensou que…\n— Hoje?\n— Cedinho.\n\nCOELHO, M. In: FREIRE, M. (Org.). Os cem menores contos brasileiros do século. São Paulo: Ateliê Editorial, 2004.",
+              "enunciado": "Os sinais de pontuação são elementos com importantes funções para a progressão temática. Nesse miniconto, as reticências foram utilizadas para indicar",
+              "alternativas": [
+                "uma fala hesitante.",
+                "uma informação implícita.",
+                "uma situação incoerente.",
+                "a eliminação de uma ideia.",
+                "a interrupção de uma ação."
+              ],
+              "correta": "B",
+              "explicacao": "A frase “O PM pensou que…” fica sem fim, e o leitor completa o que não foi dito: o policial confundiu a brincadeira e atirou. As reticências marcam essa informação implícita.",
+              "fonte": "ENEM 2016 – Questão 135",
+              "segundos_estimados": 45
+            },
+            {
+              "id": "LIN-03-02",
+              "texto": "Dúvida\n\nDois compadres viajavam de carro por uma estrada de fazenda quando um bicho cruzou a frente do carro. Um dos compadres falou:\n— Passou um largato ali!\nO outro perguntou:\n— Lagarto ou largato?\nO primeiro respondeu:\n— Num sei não, o bicho passou muito rápido.\n\nPiadas coloridas. Rio de Janeiro: Gênero, 2006.",
+              "enunciado": "Na piada, a quebra de expectativa contribui para produzir o efeito de humor. Esse efeito ocorre porque um dos personagens",
+              "alternativas": [
+                "reconhece a espécie do animal avistado.",
+                "tem dúvida sobre a pronúncia do nome do réptil.",
+                "desconsidera o conteúdo linguístico da pergunta.",
+                "constata o fato de um bicho cruzar a frente do carro.",
+                "apresenta duas possibilidades de sentido para a mesma palavra."
+              ],
+              "correta": "C",
+              "explicacao": "A pergunta era sobre a palavra certa, “lagarto” ou “largato”. O compadre responde sobre o bicho, como se a dúvida fosse de visão, e ignora o sentido linguístico da pergunta.",
+              "fonte": "ENEM 2013 – Questão 132",
+              "segundos_estimados": 57
             },
             {
               "id": "LIN-03-03",
-              "texto": "Notas\n\nSoluços, lágrimas, casa armada, veludo preto nos portais, um homem que veio vestir o cadáver, outro que tomou a medida do caixão, caixão, essa, tocheiros, convites, convidados que entravam, lentamente, a passo surdo, e apertavam a mão à família, alguns tristes, todos sérios e calados, padre e sacristão, rezas, aspersões d’água benta, o fechar do caixão, a prego e martelo, seis pessoas que o tomam da essa, e o levantam, e o descem a custo pela escada, não obstante os gritos, soluços e novas lágrimas da família, e vão até o coche fúnebre, e o colocam em cima e traspassam e apertam as correias, o rodar do coche, o rodar dos carros, um a um… Isto que parece um simples inventário eram notas que eu havia tomado para um capítulo triste e vulgar que não escrevo.\n\nASSIS, M. Memórias póstumas de Brás Cubas. Disponível em: www.dominiopublico.gov.br. Acesso em: 25 jul. 2022.",
-              "enunciado": "O recurso linguístico que permite a Machado de Assis considerar um capítulo de Memórias póstumas de Brás Cubas como inventário é a",
+              "texto": "Quem procura a essência de um conto no espaço que fica entre a obra e seu autor comete um erro: é muito melhor procurar não no terreno que fica entre o escritor e sua obra, mas justamente no terreno que fica entre o texto e seu leitor.\n\nOZ, A. De amor e trevas. São Paulo: Cia. das Letras, 2005 (fragmento).",
+              "enunciado": "A progressão temática de um texto pode ser estruturada por meio de diferentes recursos coesivos, entre os quais se destaca a pontuação. Nesse texto, o emprego dos dois pontos caracteriza uma operação textual realizada com a finalidade de",
               "alternativas": [
-                "enumeração de objetos e fatos.",
-                "predominância de linguagem objetiva.",
-                "ocorrência de período longo no trecho.",
-                "combinação de verbos no presente e no pretérito.",
-                "presença de léxico do campo semântico de funerais."
+                "comparar elementos opostos.",
+                "relacionar informações gradativas.",
+                "intensificar um problema conceitual.",
+                "introduzir um argumento esclarecedor.",
+                "assinalar uma consequência hipotética."
+              ],
+              "correta": "D",
+              "explicacao": "Depois dos dois pontos vem a explicação do “erro”: a essência do conto está entre o texto e o leitor. Os dois pontos abrem um argumento que esclarece o que veio antes.",
+              "fonte": "ENEM 2016 – Questão 104",
+              "segundos_estimados": 59
+            },
+            {
+              "id": "LIN-03-04",
+              "texto": "Receita\n\nTome-se um poeta não cansado,\nUma nuvem de sonho e uma flor,\nTrês gotas de tristeza, um tom dourado,\nUma veia sangrando de pavor.\nQuando a massa já ferve e se retorce\nDeita-se a luz dum corpo de mulher,\nDuma pitada de morte se reforce,\nQue um amor de poeta assim requer.\n\nSARAMAGO, J. Os poemas possíveis. Alfragide: Caminho, 1997.",
+              "enunciado": "Os gêneros textuais caracterizam-se por serem relativamente estáveis e podem reconfigurar-se em função do propósito comunicativo. Esse texto constitui uma mescla de gêneros, pois",
+              "alternativas": [
+                "introduz procedimentos prescritivos na composição do poema.",
+                "explicita as etapas essenciais à preparação de uma receita.",
+                "explora elementos temáticos presentes em uma receita.",
+                "apresenta organização estrutural típica de um poema.",
+                "utiliza linguagem figurada na construção do poema."
               ],
               "correta": "A",
-              "explicacao": "O trecho é uma longa lista de objetos, pessoas e ações do funeral, separados por vírgulas. É essa enumeração que faz o próprio narrador dizer que aquilo “parece um simples inventário”.",
-              "fonte": "ENEM 2022 – Questão 33",
-              "segundos_estimados": 89
+              "explicacao": "O poema copia a forma de uma receita: “Tome-se”, “Deita-se”, ingredientes e quantidades. Ele leva o tom de instrução (prescritivo) da receita para dentro da poesia.",
+              "fonte": "ENEM 2016 – Questão 125",
+              "segundos_estimados": 61
             }
           ]
         },
@@ -172,191 +220,137 @@
           "questoes": [
             {
               "id": "LIN-04-01",
-              "texto": "HELOÍSA: Faz versos?\n\nPINOTE: Sendo preciso… Quadrinhas… Acrósticos… Sonetos… Reclames.\n\nHELOÍSA: Futuristas?\n\nPINOTE: Não senhora! Eu já fui futurista. Cheguei a acreditar na independência… Mas foi uma tragédia! Começaram a me tratar de maluco. A me olhar de esguelha. A não me receber mais. As crianças choravam em casa. Tenho três filhos. No jornal também não pagavam, devido à crise. Precisei viver de bicos. Ah! Reneguei tudo. Arranjei aquele instrumento (Mostra a faca) e fiquei passadista.\n\nANDRADE, O. O rei da vela. São Paulo: Globo, 2003.",
-              "enunciado": "O fragmento da peça teatral de Oswald de Andrade ironiza a reação da sociedade brasileira dos anos 1930 diante de determinada vanguarda europeia. Nessa visão, atribui-se ao público leitor uma postura",
+              "texto": "Hino à Bandeira\n\nEm teu seio formoso retratas\nEste céu de puríssimo azul,\nA verdura sem par destas matas,\nE o esplendor do Cruzeiro do Sul.\n\nContemplando o teu vulto sagrado,\nCompreendemos o nosso dever,\nE o Brasil por seus filhos amado,\nPoderoso e feliz há de ser!\n\nSobre a imensa Nação Brasileira,\nNos momentos de festa ou de dor,\nPaira sempre sagrada bandeira\nPavilhão da justiça e do amor!\n\nBILAC, O.; BRAGA, F. Disponível em: www2.planalto.gov.br. Acesso em: 10 dez. 2017 (fragmento).",
+              "enunciado": "No Hino à Bandeira, a descrição é um recurso utilizado para exaltar o símbolo nacional na medida em que",
               "alternativas": [
-                "preconceituosa, ao evitar formas poéticas simplificadas.",
-                "conservadora, ao optar por modelos consagrados.",
-                "preciosista, ao preferir modelos literários eruditos.",
-                "nacionalista, ao negar modelos estrangeiros.",
-                "eclética, ao aceitar diversos estilos poéticos."
+                "remete a um momento futuro.",
+                "promove a união dos cidadãos.",
+                "valoriza os seus elementos.",
+                "emprega termos religiosos.",
+                "recorre à sua história."
               ],
-              "correta": "B",
-              "explicacao": "Pinote foi rejeitado enquanto era futurista e só voltou a ser aceito quando virou “passadista”. A peça ironiza um público conservador, preso aos modelos consagrados.",
-              "fonte": "ENEM 2019 – Questão 13",
-              "segundos_estimados": 69
+              "correta": "C",
+              "explicacao": "O hino descreve o céu azul, as matas verdes e o Cruzeiro do Sul que estão na bandeira, com palavras como “formoso” e “puríssimo”. Descrever assim é valorizar esses elementos.",
+              "fonte": "ENEM 2020 – Questão 39",
+              "segundos_estimados": 62
             },
             {
               "id": "LIN-04-02",
-              "texto": "Na sua imaginação perturbada sentia a natureza toda agitando-se para sufocá-la. Aumentavam as sombras. No céu, nuvens colossais e túmidas rolavam para o abismo do horizonte… Na várzea, ao clarão indeciso do crepúsculo, os seres tomavam ares de monstros… As montanhas, subindo ameaçadoras da terra, perfilavam-se tenebrosas… Os caminhos, espreguiçando-se sobre os campos, animavam-se quais serpentes infinitas… As árvores soltas choravam ao vento, como carpideiras fantásticas da natureza morta… Os aflitivos pássaros noturnos gemiam agouros com pios fúnebres. Maria quis fugir, mas os membros cansados não acudiam aos ímpetos do medo e deixavam-na prostrada em uma angústia desesperada.\n\nARANHA, J. P. G. Canaã. São Paulo: Ática, 1997.",
-              "enunciado": "No trecho, o narrador mobiliza recursos de linguagem que geram uma expressividade centrada na percepção da",
+              "texto": "O correr da vida embrulha tudo. A vida é assim: esquenta e esfria, aperta e daí afrouxa, sossega e depois desinquieta. O que ela quer da gente é coragem.\n\nROSA, J. G. Grande sertão: veredas. Rio de Janeiro: Nova Fronteira, 1986.",
+              "enunciado": "No romance Grande sertão: veredas, o protagonista Riobaldo narra sua trajetória de jagunço. A leitura do trecho permite identificar que o desabafo de Riobaldo se aproxima de um(a)",
               "alternativas": [
-                "relação entre a natureza opressiva e o desejo de libertação da personagem.",
-                "confluência entre o estado emocional da personagem e a configuração da paisagem.",
-                "prevalência do mundo natural em relação à fragilidade humana.",
-                "depreciação do sentido da vida diante da consciência da morte iminente.",
-                "instabilidade psicológica da personagem face à realidade hostil."
+                "diário, por trazer lembranças pessoais.",
+                "fábula, por apresentar uma lição de moral.",
+                "notícia, por informar sobre um acontecimento.",
+                "aforismo, por expor uma máxima em poucas palavras.",
+                "crônica, por tratar de fatos do cotidiano."
               ],
-              "correta": "B",
-              "explicacao": "A paisagem ganha traços ameaçadores (sombras, monstros, serpentes, árvores que choram) que espelham o medo de Maria. O estado emocional da personagem e a paisagem se confundem.",
-              "fonte": "ENEM 2020 – Questão 11",
-              "segundos_estimados": 78
+              "correta": "D",
+              "explicacao": "“O que ela quer da gente é coragem” é uma frase curta que resume uma verdade sobre a vida. É assim que funciona um aforismo.",
+              "fonte": "ENEM 2014 – Questão 100",
+              "segundos_estimados": 54
             },
             {
               "id": "LIN-04-03",
-              "texto": "Era o êxodo da seca de 1898. Uma ressurreição de cemitérios antigos — esqueletos redivivos, com o aspecto terroso e o fedor das covas podres.\n\nOs fantasmas estropiados como que iam dançando, de tão trôpegos e trêmulos, num passo arrastado de quem leva as pernas, em vez de ser levado por elas.\n\nAndavam devagar, olhando para trás, como quem quer voltar. Não tinham pressa em chegar, porque não sabiam aonde iam. Expulsos de seu paraíso por espadas de fogo, iam, ao acaso, em descaminhos, no arrastão dos maus fados.\n\nFugiam do sol e o sol guiava-os nesse forçado nomadismo.\n\nAdelgaçados na magreira cômica, cresciam, como se o vento os levantasse. E os braços afinados desciam-lhes aos joelhos, de mãos abanando.\n\nVinham escoteiros. Menos os hidrópicos — de ascite consecutiva à alimentação tóxica — com os fardos das barrigas alarmantes.\n\nNão tinham sexo, nem idade, nem condição nenhuma. Eram os retirantes. Nada mais.\n\nALMEIDA, J. A. A bagaceira. Rio de Janeiro: J. Olympio, 1978.",
-              "enunciado": "Os recursos composicionais que inserem a obra no chamado “Romance de 30” da literatura brasileira manifestam-se aqui no(a)",
+              "texto": "Contranarciso\n\nem mim\neu vejo o outro\ne outro\ne outro\nenfim dezenas\ntrens passando\nvagões cheios de gente\ncentenas\n\no outro\nque há em mim\né você\nvocê\ne você\n\nassim como\neu estou em você\neu estou nele\nem nós\ne só quando\nestamos em nós\nestamos em paz\nmesmo que estejamos a sós\n\nLEMINSKI, P. Toda poesia. São Paulo: Cia. das Letras, 2013.",
+              "enunciado": "A busca pela identidade constitui uma faceta da tradição literária, redimensionada pelo olhar contemporâneo. No poema, essa nova dimensão revela a",
               "alternativas": [
-                "desenho cru da realidade dramática dos retirantes.",
-                "indefinição dos espaços para efeito de generalização.",
-                "análise psicológica da reação dos personagens à seca.",
-                "engajamento político do narrador ante as desigualdades.",
-                "contemplação lírica da paisagem transformada em alegoria."
+                "ausência de traços identitários.",
+                "angústia com a solidão em público.",
+                "valorização da descoberta do “eu” autêntico.",
+                "percepção da empatia como fator de autoconhecimento.",
+                "impossibilidade de vivenciar experiências de pertencimento."
               ],
-              "correta": "A",
-              "explicacao": "O Romance de 30 retrata com crueza a realidade social do Nordeste. Aqui os retirantes da seca aparecem como “esqueletos redivivos”, sem nenhuma idealização.",
-              "fonte": "ENEM 2022 – Questão 31",
-              "segundos_estimados": 92
+              "correta": "D",
+              "explicacao": "O eu lírico se vê nos outros e diz que só “estamos em paz” quando estamos “em nós”. A identidade se forma na relação com o outro, colocando-se no lugar dele: é a empatia.",
+              "fonte": "ENEM 2017 – Questão 30",
+              "segundos_estimados": 59
             },
             {
               "id": "LIN-04-04",
-              "texto": "Migalhas\n\nEntre a toalha branca e um bule de café\nseria inapropriado dizer\neu não te amo mais.\nEra necessário algo mais solene,\num jardim japonês\npara as perdas pensadas,\num noturno de tempestade\npara arrebentar de dor,\numa praia de pedras para chorar\nem silêncio, uma cama alta\npara o incenso da despedida,\numa janela\ndando para o abismo.\nNo entanto você abaixa os olhos\ne recolhe lentamente as migalhas de pão\nsobre a mesa posta para dois.\n\nMARQUES, A. M. A vida submarina. São Paulo: Cia. das Letras, 2021.",
-              "enunciado": "Nesse poema, a representação do sentimento amoroso recupera a tradição lírica, mas se ajusta à visão contemporânea ao",
+              "texto": "O rio que fazia uma volta atrás de nossa casa era a\nimagem de um vidro mole que fazia uma volta atrás\nde casa.\nPassou um homem e disse: Essa volta que o\nrio faz por trás de sua casa se chama enseada.\nNão era mais a imagem de uma cobra de vidro que\nfazia uma volta atrás de casa.\nEra uma enseada.\nAcho que o nome empobreceu a imagem.\n\nBARROS, M. O livro das ignorãças. Rio de Janeiro: Best Seller, 2008.",
+              "enunciado": "O sujeito poético questiona o uso do vocábulo “enseada” porque a",
               "alternativas": [
-                "invocar o interlocutor para uma tomada de posição.",
-                "questionar a validade do envolvimento romântico.",
-                "diluir em banalidade a comoção de um amor frustrado.",
-                "transformar em paz as emoções conflituosas do casal.",
-                "condicionar a existência da paixão a espaços idealizados."
+                "terminologia mencionada é incorreta.",
+                "nomeação minimiza a percepção subjetiva.",
+                "palavra é aplicada a outro espaço geográfico.",
+                "designação atribuída ao termo é desconhecida.",
+                "definição modifica o significado do termo no dicionário."
               ],
-              "correta": "C",
-              "explicacao": "O fim do amor pediria um cenário solene, como os da tradição lírica. Mas acontece numa cena banal, à mesa do café, enquanto o outro recolhe as migalhas de pão: a comoção do amor frustrado se dilui no cotidiano.",
-              "fonte": "ENEM 2023 – Questão 31",
-              "segundos_estimados": 69
+              "correta": "B",
+              "explicacao": "Para o eu lírico, a volta do rio era a imagem de “uma cobra de vidro”. Com o nome técnico, enseada, essa imagem pessoal se perdeu: “o nome empobreceu a imagem”.",
+              "fonte": "ENEM 2018 – Questão 36",
+              "segundos_estimados": 61
             }
           ]
         },
         {
           "id": "LIN-05",
-          "titulo": "Esporte e práticas corporais",
+          "titulo": "Corpo, arte e cultura",
           "questoes": [
             {
               "id": "LIN-05-01",
-              "texto": "LUTA: prática corporal imprevisível, caracterizada por determinado estado de contato proposital, que possibilita a duas ou mais pessoas se enfrentarem numa constante troca de ações ofensivas e/ou defensivas, regida por regras, com o objetivo mútuo sobre um alvo móvel personificado no oponente.\n\nGOMES, M. S. P. et al. Ensino das lutas: dos princípios condicionais aos grupos situacionais. Movimento, n. 2, abr.-jun. 2010 (adaptado).",
-              "enunciado": "De acordo com o texto, podemos identificar uma abordagem das lutas nas aulas de educação física quando o professor realiza uma proposta envolvendo",
+              "texto": "O jogo é uma atividade ou ocupação voluntária, exercida dentro de certos e determinados limites de tempo e de espaço, segundo regras livremente consentidas, mas absolutamente obrigatórias, dotado de um fim em si mesmo, acompanhado de um sentimento de tensão e de alegria e de uma consciência de ser diferente da “vida quotidiana”.\n\nHUIZINGA, J. Homo ludens: o jogo como elemento da cultura. São Paulo: Perspectiva, 2004.",
+              "enunciado": "Segundo o texto, o jogo comporta a possibilidade de fruição. Do ponto de vista das práticas corporais, essa fruição se estabelece por meio do(a)",
               "alternativas": [
-                "contato corporal intenso entre o aluno e seu oponente.",
-                "contenda entre os alunos que se agridem fisicamente.",
-                "confronto corporal em que os vencedores são previamente identificados.",
-                "combate corporal intencional com ações regulamentadas entre os oponentes.",
-                "conflito resolvido pelos alunos por meio de regras previamente estabelecidas."
+                "fixação de táticas, que define a padronização para maior alcance popular.",
+                "competitividade, que impulsiona o interesse pelo sucesso.",
+                "refinamento técnico, que gera resultados satisfatórios.",
+                "caráter lúdico, que permite experiências inusitadas.",
+                "uso tecnológico, que amplia as opções de lazer."
               ],
               "correta": "D",
-              "explicacao": "Pela definição, luta tem contato proposital, troca de ações de ataque e defesa e regras. A proposta deve ser um combate intencional com ações regulamentadas, sem agressão e sem vencedor definido antes.",
-              "fonte": "ENEM 2020 – Questão 36",
-              "segundos_estimados": 64
+              "explicacao": "Huizinga define o jogo como algo com fim em si mesmo, cheio de tensão e alegria e diferente da vida comum. A fruição vem desse caráter lúdico, e não da competição ou da técnica.",
+              "fonte": "ENEM 2013 – Questão 97",
+              "segundos_estimados": 63
             },
             {
               "id": "LIN-05-02",
-              "texto": "O skate apareceu como forma de vivência no lazer em períodos de baixa nas ondas e ficou conhecido como “surfinho”. No início foram utilizados eixos e rodinhas de patins pregados numa madeira qualquer, para sua composição, sendo as rodas de borracha ou ferro. O grande marco na história do skate ocorreu em 1974, quando o engenheiro químico chamado Frank Nasworthy descobriu o uretano, material mais flexível, que oferecia mais aderência às rodas. A dependência dos skatistas em relação a esse novo material igualmente alavancou o surgimento de novas manobras e possibilitou a um maior número de pessoas inexperientes começar a prática dessa modalidade. O resultado foi a criação de campeonatos, marcas, fábricas e lojas especializadas.\n\nARMBRUST, I.; LAURO, F. A. A. O skate e suas possibilidades educacionais. Motriz, jul.-set. 2010 (adaptado).",
-              "enunciado": "De acordo com o texto, diversos fatores ao longo do tempo",
+              "texto": "No Brasil, a disseminação de uma expectativa de corpo com base na estética da magreza é bastante grande e apresenta uma enorme repercussão, especialmente, se considerada do ponto de vista da realização pessoal. Em pesquisa feita na cidade de São Paulo, aparecem os percentuais de 90% entre as mulheres pesquisadas que se dizem preocupadas com seu peso corporal, sendo que 95% se sentem insatisfeitas com “seu próprio corpo”.\n\nSILVA, A. M. Corpo, ciência e mercado: reflexões acerca da gestação de um novo arquétipo da felicidade. Campinas: Autores Associados; Florianópolis: UFSC, 2001.",
+              "enunciado": "A preocupação excessiva com o “peso” corporal pode provocar o desenvolvimento de distúrbios associados diretamente à imagem do corpo, tais como",
               "alternativas": [
-                "contribuíram para a democratização do skate.",
-                "evidenciaram as demandas comerciais dos skatistas.",
-                "definiram a carreira de skatista profissional.",
-                "permitiram que a prática social do skate substituísse o surfe.",
-                "indicaram a autonomia dos praticantes de skate."
+                "anorexia e bulimia.",
+                "ortorexia e vigorexia.",
+                "ansiedade e depressão.",
+                "sobrepeso e fobia social.",
+                "sedentarismo e obesidade."
               ],
               "correta": "A",
-              "explicacao": "As rodas de uretano deram mais aderência, trouxeram novas manobras e permitiram que até pessoas inexperientes começassem a praticar. O skate chegou a muito mais gente, e daí vieram campeonatos, marcas e lojas: é a democratização da prática.",
-              "fonte": "ENEM 2021 – Questão 31",
-              "segundos_estimados": 79
+              "explicacao": "Anorexia e bulimia são transtornos alimentares ligados ao medo de engordar e a uma imagem distorcida do próprio corpo. Elas nascem justamente da preocupação exagerada com o peso.",
+              "fonte": "ENEM 2019 – Questão 35",
+              "segundos_estimados": 63
             },
             {
               "id": "LIN-05-03",
-              "texto": "A sessão do Comitê Olímpico Internacional (COI) aprovou uma mudança histórica e inédita no lema olímpico, criado em 1894 pelo Barão Pierre de Coubertin para expressar os valores e a excelência do esporte. Mais de 120 anos depois, o lema tem sua primeira alteração para ressaltar a solidariedade e incluir a palavra “juntos”: mais rápido, mais alto, mais forte — juntos. A mudança foi aprovada por unanimidade pelos membros do COI e celebrada pelo presidente da entidade.\n\nDisponível em: https://ge.globo.com. Acesso em: 10 nov. 2021 (adaptado).",
-              "enunciado": "De acordo com o texto, a alteração do lema olímpico teve como objetivo a",
+              "texto": "Por onde houve colonização portuguesa, a música popular se desenvolveu basicamente com o mesmo instrumental. Podemos ver cavaquinho e violão atuarem juntos aqui, em Cabo Verde, em Jacarta, na Indonésia, ou em Goa. O caráter nostálgico, sentimental, é outro ponto comum da música das colônias portuguesas em todo o mundo. O kronjong, a música típica de Jacarta, é uma espécie de lundu mais lento, tocado comumente com flauta, cavaquinho e violão. Em Goa não é muito diferente.",
+              "enunciado": "De acordo com o texto de Henrique Cazes, grande parte da música popular desenvolvida nos países colonizados por Portugal compartilham um instrumental, destacando-se o cavaquinho e o violão. No Brasil, são exemplos de música popular que empregam esses mesmos instrumentos:",
               "alternativas": [
-                "unificação do lema anterior ao atual.",
-                "aproximação entre o lema olímpico e o COI.",
-                "junção do lema olímpico com os princípios esportivos.",
-                "associação entre o lema olímpico e a cooperatividade.",
-                "vinculação entre o lema olímpico e os eventos atléticos."
+                "Maracatu e ciranda.",
+                "Carimbó e baião.",
+                "Choro e samba.",
+                "Chula e siriri.",
+                "Xote e frevo."
               ],
-              "correta": "D",
-              "explicacao": "A palavra “juntos” entrou no lema “para ressaltar a solidariedade”. O lema olímpico passou a se associar à cooperação.",
-              "fonte": "ENEM 2023 – Questão 6",
-              "segundos_estimados": 67
+              "correta": "C",
+              "explicacao": "O choro e o samba têm o cavaquinho e o violão na base. Nos outros pares mandam a percussão, a sanfona ou os metais.",
+              "fonte": "ENEM 2014 – Questão 123",
+              "segundos_estimados": 64
             },
             {
               "id": "LIN-05-04",
-              "texto": "O acesso às Práticas Corporais/Atividades Físicas (PC/AF) é desigual no Brasil, à semelhança de outros indicadores sociais e de saúde. Em geral, PC/AF prazerosas, diversificadas, mais afeitas ao período de lazer estão concentradas nas populações mais abastadas. As atividades físicas de deslocamento, trajetos a pé ou de bicicleta para estudar ou trabalhar, por exemplo, são mais frequentes na classe social menos favorecida. Aqui, há uma relação inversa e perversa entre variáveis socioeconômicas de acesso às PC/AF. As maiores prevalências de inatividade física foram em mulheres, pessoas com 60 anos ou mais, negros, pessoas com autoavaliação de saúde ruim ou muito ruim, com renda familiar de até quatro salários mínimos por pessoa, pessoas que desconhecem programas públicos de PC/AF e residentes em áreas sem locais públicos para a prática.\n\nKNUTH, A. G.; ANTUNES, P. C. Saúde e Sociedade, n. 2, 2021 (adaptado).",
-              "enunciado": "O fator central que impacta a realização de práticas corporais/atividades físicas no tempo de lazer no Brasil é a",
+              "texto": "Com o enredo que homenageou o centenário do Rei do Baião, Luiz Gonzaga, a Unidos da Tijuca foi coroada no Carnaval 2012.\n\nA penúltima escola a entrar na Sapucaí, na segunda noite de desfiles, mergulhou no universo do cantor e compositor brasileiro e trouxe a cultura nordestina com criatividade para a Avenida, com o enredo O dia em que toda a realeza desembarcou na Avenida para coroar o Rei Luiz do Sertão.\n\nDisponível em: www.cultura.rj.gov.br. Acesso em: 15 maio 2012 (adaptado).",
+              "enunciado": "A notícia relata um evento cultural que marca a",
               "alternativas": [
-                "diferença entre homens e mulheres.",
-                "inexistência de políticas públicas.",
-                "diversidade de faixa etária.",
-                "variação de condição étnica.",
-                "desigualdade entre classes sociais."
+                "primazia do samba sobre a música nordestina.",
+                "inter-relação entre dois gêneros musicais brasileiros.",
+                "valorização das origens oligárquicas da cultura nordestina.",
+                "proposta de resgate de antigos gêneros musicais brasileiros.",
+                "criatividade em compor um samba-enredo em homenagem a uma pessoa."
               ],
-              "correta": "E",
-              "explicacao": "Segundo o texto, as práticas de lazer se concentram “nas populações mais abastadas”, e os mais pobres se exercitam sobretudo no deslocamento para estudar ou trabalhar. Gênero, idade e raça também aparecem, mas o eixo do texto é a “relação inversa e perversa” com as condições socioeconômicas: a desigualdade entre classes.",
-              "fonte": "ENEM 2023 – Questão 42",
-              "segundos_estimados": 82
-            }
-          ]
-        },
-        {
-          "id": "LIN-06",
-          "titulo": "Internet e igualdade",
-          "questoes": [
-            {
-              "id": "LIN-06-01",
-              "texto": "Quando quis agilizar o processo de seleção de novos alunos, a tradicional faculdade britânica de medicina St. George usou um software para definir quem deveria ser entrevistado. Ao reproduzir a forma como os funcionários faziam essa escolha, o programa eliminou, de cara, 60 de 2 000 candidatos. Só por causa do sexo ou da origem racial, numa dedução baseada em sobrenome e local de nascimento. Um estudo sobre o caso foi publicado em 1988, mas, 25 anos depois, outra pesquisa apontou que esse tipo de discriminação segue firme.\n\nO exemplo recente envolve o buscador do Google: ao digitar nomes comuns entre negros dos EUA, a chance de os anúncios automáticos oferecerem checagem de antecedentes criminais pode aumentar 25%. E pode piorar com a pergunta “detido?” logo após a palavra procurada.\n\nDisponível em: https://tab.uol.com.br. Acesso em: 11 ago. 2017 (adaptado).",
-              "enunciado": "O texto permite o desnudamento da sociedade ao relacionar as tecnologias de informação e comunicação com o(a)",
-              "alternativas": [
-                "agilidade dos softwares.",
-                "passar dos anos.",
-                "linguagem.",
-                "preconceito.",
-                "educação."
-              ],
-              "correta": "D",
-              "explicacao": "Os exemplos (software que eliminou candidatos por sexo e origem, anúncios de antecedentes criminais para nomes comuns entre negros) mostram a tecnologia reproduzindo o preconceito que já existe na sociedade.",
-              "fonte": "ENEM 2020 – Questão 43",
-              "segundos_estimados": 77
-            },
-            {
-              "id": "LIN-06-02",
-              "texto": "A petição on-line criada por um cidadão paulista surtiu efeito: casado há três anos com seu companheiro, ele pedia a alteração da definição de “casamento” no tradicional dicionário Michaelis em português. Na definição anterior, casamento aparecia como “união legítima entre homem e mulher” e “união legal entre homem e mulher, para constituir família”.\n\nO novo verbete não traz em nenhum momento as palavras homem ou mulher — agora a definição de casamento se refere a “pessoas”.\n\nPara o diretor de comunicação do site onde a petição foi publicada, a iniciativa mostra a “eficiência da mobilização”. “Em dois dias, mudou-se uma definição que permanecia a mesma há décadas”, afirma. E conclui: “A plataforma serve para todos os tipos de causas, para as mudanças que importam para as pessoas.”.\n\nSENRA, R. Disponível em: www.bbc.com. Acesso em: 29 out. 2015.",
-              "enunciado": "A notícia trata da mudança ocorrida em um dicionário da língua portuguesa. Segundo o texto, essa mudança foi impulsionada pela",
-              "alternativas": [
-                "inclusão de informações no verbete.",
-                "relevância social da instituição casamento.",
-                "utilização pública da petição pelos cidadãos.",
-                "rapidez na disseminação digital do verbete.",
-                "divulgação de plataformas para a criação de petição."
-              ],
-              "correta": "C",
-              "explicacao": "A definição mudou por causa de uma petição on-line criada por um cidadão e apoiada por outros. Foi o uso público da petição, a mobilização, que impulsionou a mudança.",
-              "fonte": "ENEM 2023 – Questão 39",
-              "segundos_estimados": 83
-            },
-            {
-              "id": "LIN-06-03",
-              "texto": "Em 2000 tivemos a primeira experiência do futebol feminino em um jogo de videogame, o Mia Hamm Soccer. Doze anos depois, uma petição on-line pedia que a EA Sports incluísse o futebol feminino no Fifa 13. Contudo, só em 2015, com uma nova petição on-line, que arrecadou milhares de assinaturas, tivemos o futebol feminino incluído no Fifa 16. Vendo um nicho de mercado inexplorado, a EA Sports produziu o jogo com 12 seleções femininas e o apresentou como inovação. A empresa sabe que mais de 40% dos praticantes de futebol nos EUA são meninas. Para elas, ver o futebol feminino representado em um jogo de videogame é extremamente importante. Ter o futebol feminino no Fifa 16 é um grande passo para a sua popularização na luta pela igualdade de gênero, num contexto machista, sexista, misógino e homofóbico.\n\nDisponível em: www.ludopedio.com.br. Acesso em: 5 jun. 2018 (adaptado).",
-              "enunciado": "Os jogos eletrônicos presentes na cultura juvenil podem desempenhar uma relevante função na abordagem do futebol ao",
-              "alternativas": [
-                "disseminarem uma modalidade, promovendo a igualdade de gênero.",
-                "superarem jogos malsucedidos no mercado, lançados anteriormente.",
-                "inovarem a modalidade com novas ofertas de jogos ao mercado.",
-                "explorarem nichos de mercado antes ignorados, produzindo mais lucro.",
-                "reforçarem estereótipos de gênero masculino ou feminino nos esportes."
-              ],
-              "correta": "A",
-              "explicacao": "O texto mostra que colocar seleções femininas no videogame ajuda a divulgar o futebol feminino, “um grande passo” na luta pela igualdade de gênero.",
-              "fonte": "ENEM 2020 – Questão 35",
-              "segundos_estimados": 90
+              "correta": "B",
+              "explicacao": "Uma escola de samba desfilou em homenagem ao Rei do Baião. O evento junta dois gêneros brasileiros: o samba-enredo e o baião.",
+              "fonte": "ENEM 2019 – Questão 25",
+              "segundos_estimados": 64
             }
           ]
         }
@@ -367,80 +361,42 @@
       "licoes": [
         {
           "id": "HUM-01",
-          "titulo": "Política e poder",
+          "titulo": "Filosofia e ética",
           "questoes": [
             {
               "id": "HUM-01-01",
-              "texto": "Para Maquiavel, quando um homem decide dizer a verdade pondo em risco a própria integridade física, tal resolução diz respeito apenas a sua pessoa. Mas se esse mesmo homem é um chefe de Estado, os critérios pessoais não são mais adequados para decidir sobre ações cujas consequências se tornam tão amplas, já que o prejuízo não será apenas individual, mas coletivo. Nesse caso, conforme as circunstâncias e os fins a serem atingidos, pode-se decidir que o melhor para o bem comum seja mentir.\n\nARANHA, M. L. Maquiavel: a lógica da força. São Paulo: Moderna, 2006 (adaptado).",
-              "enunciado": "O texto aponta uma inovação na teoria política na época moderna expressa na distinção entre",
+              "texto": "A quem não basta pouco, nada basta.\n\nEPICURO. Os pensadores. São Paulo: Abril Cultural, 1985.",
+              "enunciado": "Remanescente do período helenístico, a máxima apresentada valoriza a seguinte virtude:",
               "alternativas": [
-                "idealidade e efetividade da moral.",
-                "nulidade e preservabilidade da liberdade.",
-                "ilegalidade e legitimidade do governante.",
-                "verificabilidade e possibilidade da verdade.",
-                "objetividade e subjetividade do conhecimento."
+                "Esperança, tida como confiança no porvir.",
+                "Justiça, interpretada como retidão de caráter.",
+                "Temperança, marcada pelo domínio da vontade.",
+                "Coragem, definida como fortitude na dificuldade.",
+                "Prudência, caracterizada pelo correto uso da razão."
               ],
-              "correta": "A",
-              "explicacao": "Maquiavel separa a moral ideal (como se deveria agir) da moral efetiva (o que o governante precisa fazer). Pelo bem comum, o chefe de Estado pode até mentir.",
-              "fonte": "ENEM 2019 – Questão 65",
-              "segundos_estimados": 75
+              "correta": "C",
+              "explicacao": "Para Epicuro, quem não se contenta com pouco nunca fica satisfeito. A máxima valoriza a temperança: dominar os desejos e ficar com o necessário.",
+              "fonte": "ENEM 2018 – Questão 79",
+              "segundos_estimados": 49
             },
             {
               "id": "HUM-01-02",
-              "texto": "Quando Getúlio Vargas se suicidou, em agosto de 1954, o país parecia à beira do caos. Acuado por uma grave crise política, o velho líder preferiu uma bala no peito à humilhação de aceitar uma nova deposição, como a que sofrera em outubro de 1945. Entretanto, ao contrário do que imaginavam os inimigos, ao ruído do estampido não se seguiu o silêncio que cerca a derrota.\n\nREIS FILHO, D. A. O Estado à sombra de Vargas. Revista Nossa História, n. 7, maio 2004.",
-              "enunciado": "O evento analisado no texto teve como repercussão imediata na política nacional a",
+              "texto": "Entretanto, nosso amigo Basso tem o ânimo alegre. Isso resulta da filosofia: estar alegre diante da morte, forte e contente qualquer que seja o estado do corpo, sem desfalecer, ainda que desfaleça.\n\nSÊNECA, L. Cartas morais. Lisboa: Calouste Gulbenkian, 1990.",
+              "enunciado": "O excerto refere-se a uma carta de Sêneca na qual se apresenta como um bem fundamental da filosofia promover a",
               "alternativas": [
-                "reação popular.",
-                "intervenção militar.",
-                "abertura democrática.",
-                "campanha anticomunista.",
-                "radicalização oposicionista."
+                "valorização de disputas dialógicas.",
+                "rejeição das convenções sociais.",
+                "inspiração de natureza religiosa.",
+                "exaltação do sofrimento.",
+                "moderação das paixões."
               ],
-              "correta": "A",
-              "explicacao": "O suicídio de Vargas provocou enorme comoção e protestos populares contra seus adversários. Por isso o texto diz que ao tiro “não se seguiu o silêncio que cerca a derrota”.",
-              "fonte": "ENEM 2021 – Questão 73",
-              "segundos_estimados": 65
+              "correta": "E",
+              "explicacao": "Para Sêneca, a filosofia ensina a manter o ânimo firme até diante da morte e da doença. Isso só é possível controlando as emoções: é a moderação das paixões.",
+              "fonte": "ENEM 2022 – Questão 88",
+              "segundos_estimados": 56
             },
             {
               "id": "HUM-01-03",
-              "texto": "O Golpe Militar de 1964 foi implacável no combate ao que restava das Ligas Camponesas, generalizadas na década anterior. No entanto, em relação aos sindicatos, sua atitude foi ambígua. Por meio de acordos com os Estados Unidos, foram concebidos centros sindicais e cursos de liderança com base em princípios conservadores e ministrados por membros da Igreja Católica.\n\nDEL PRIORE, M.; VENÂNCIO, R. Uma história da vida rural no Brasil. Rio de Janeiro: Ediouro, 2006 (adaptado).",
-              "enunciado": "Os sindicatos rurais foram tratados da forma descrita no texto porque o governo pretendia utilizá-los para",
-              "alternativas": [
-                "controlar as tensões políticas.",
-                "limitar a legislação trabalhista.",
-                "divulgar o programa populista.",
-                "regularizar a propriedade da terra.",
-                "estimular a oferta de mão de obra."
-              ],
-              "correta": "A",
-              "explicacao": "O regime destruiu as Ligas Camponesas, mas tratou os sindicatos rurais de outro jeito: criou centros sindicais e cursos de liderança com princípios conservadores. Com lideranças sob sua influência, podia controlar as tensões políticas no campo.",
-              "fonte": "ENEM 2023 – Questão 80",
-              "segundos_estimados": 68
-            }
-          ]
-        },
-        {
-          "id": "HUM-02",
-          "titulo": "Filosofia e conhecimento",
-          "questoes": [
-            {
-              "id": "HUM-02-01",
-              "texto": "Empédocles estabelece quatro elementos corporais – fogo, ar, água e terra –, que são eternos e que mudam aumentando e diminuindo mediante mistura e separação; mas os princípios propriamente ditos, pelos quais aqueles são movidos, são o Amor e o Ódio. Pois é preciso que os elementos permaneçam alternadamente em movimento, sendo ora misturados pelo Amor, ora separados pelo Ódio.\n\nSIMPLÍCIO. Física, 25, 21. In: Os pré-socráticos. São Paulo: Nova Cultural, 1996.",
-              "enunciado": "O texto propõe uma reflexão sobre o entendimento de Empédocles acerca da arché, uma preocupação típica do pensamento pré-socrático, porque",
-              "alternativas": [
-                "exalta a investigação filosófica.",
-                "transcende ao mundo sensível.",
-                "evoca a discussão cosmogônica.",
-                "fundamenta as paixões humanas.",
-                "corresponde à explicação mitológica."
-              ],
-              "correta": "C",
-              "explicacao": "Os pré-socráticos buscavam a arché, o princípio que explica a origem e a ordem do cosmos. Empédocles faz isso com os quatro elementos movidos pelo Amor e pelo Ódio.",
-              "fonte": "ENEM 2022 – Questão 86",
-              "segundos_estimados": 67
-            },
-            {
-              "id": "HUM-02-02",
               "texto": "Sócrates: “Quem não sabe o que uma coisa é, como poderia saber de que tipo de coisa ela é? Ou te parece ser possível alguém que não conhece absolutamente quem é Mênon, esse alguém saber se ele é belo, se é rico e ainda se é nobre? Parece-te ser isso possível? Assim, Mênon, que coisa afirmas ser a virtude?”.\n\nPLATÃO. Mênon. Rio de Janeiro: PUC-Rio; São Paulo: Loyola, 2001 (adaptado).",
               "enunciado": "A atitude apresentada na interlocução do filósofo com Mênon é um exemplo da utilização do(a)",
               "alternativas": [
@@ -456,61 +412,99 @@
               "segundos_estimados": 62
             },
             {
-              "id": "HUM-02-03",
-              "texto": "Adão, ainda que supuséssemos que suas faculdades racionais fossem inteiramente perfeitas desde o início, não poderia ter inferido da fluidez e transparência da água que ela o sufocaria, nem da luminosidade e calor do fogo que este poderia consumi-lo. Nenhum objeto jamais revela, pelas qualidades que aparecem aos sentidos, nem as causas que o produziram, nem os efeitos que dele provirão; e tampouco nossa razão é capaz de extrair, sem auxílio da experiência, qualquer conclusão referente à existência efetiva de coisas ou questões de fato.\n\nHUME, D. Uma investigação sobre o entendimento humano. São Paulo: Unesp, 2003.",
-              "enunciado": "Segundo o autor, qual é a origem do conhecimento humano?",
+              "id": "HUM-01-04",
+              "texto": "Sentimos que toda satisfação de nossos desejos advinda do mundo assemelha-se à esmola que mantém hoje o mendigo vivo, porém prolonga amanhã a sua fome. A resignação, ao contrário, assemelha-se à fortuna herdada: livra o herdeiro para sempre de todas as preocupações.\n\nSCHOPENHAUER, A. Aforismo para a sabedoria da vida. São Paulo: Martins Fontes, 2005.",
+              "enunciado": "O trecho destaca uma ideia remanescente de uma tradição filosófica ocidental, segundo a qual a felicidade se mostra indissociavelmente ligada à",
               "alternativas": [
-                "A potência inata da mente.",
-                "A revelação da inspiração divina.",
-                "O estudo das tradições filosóficas.",
-                "A vivência dos fenômenos do mundo.",
-                "O desenvolvimento do raciocínio abstrato."
+                "consagração de relacionamentos afetivos.",
+                "administração da independência interior.",
+                "fugacidade do conhecimento empírico.",
+                "liberdade de expressão religiosa.",
+                "busca de prazeres efêmeros."
               ],
-              "correta": "D",
-              "explicacao": "Hume é empirista: a razão sozinha não conclui nada sobre os fatos, só a experiência mostra causas e efeitos. O conhecimento vem da vivência dos fenômenos.",
-              "fonte": "ENEM 2020 – Questão 89",
-              "segundos_estimados": 74
+              "correta": "B",
+              "explicacao": "Para Schopenhauer, satisfazer um desejo é como dar esmola: alivia hoje, e a fome volta amanhã. A felicidade está na resignação, em não depender do mundo de fora: a independência interior.",
+              "fonte": "ENEM 2016 – Questão 1",
+              "segundos_estimados": 62
+            }
+          ]
+        },
+        {
+          "id": "HUM-02",
+          "titulo": "Política e cidadania",
+          "questoes": [
+            {
+              "id": "HUM-02-01",
+              "texto": "A soberania dos cidadãos dotados de plenos direitos era imprescindível para a existência da cidade-estado. Segundo os regimes políticos, a proporção desses cidadãos em relação à população total dos homens livres podia variar muito, sendo bastante pequena nas aristocracias e oligarquias e maior nas democracias.\n\nCARDOSO, C. F. A cidade-estado clássica. São Paulo: Ática, 1985.",
+              "enunciado": "Nas cidades-estado da Antiguidade Clássica, a proporção de cidadãos descrita no texto é explicada pela adoção do seguinte critério para a participação política:",
+              "alternativas": [
+                "Controle da terra.",
+                "Liberdade de culto.",
+                "Igualdade de gênero.",
+                "Exclusão dos militares.",
+                "Exigência da alfabetização."
+              ],
+              "correta": "A",
+              "explicacao": "Nas cidades-estado antigas, ser cidadão com plenos direitos dependia da posse de terra. Onde poucos eram donos de terra, como nas aristocracias e oligarquias, havia poucos cidadãos.",
+              "fonte": "ENEM 2019 – Questão 79",
+              "segundos_estimados": 61
+            },
+            {
+              "id": "HUM-02-02",
+              "texto": "Na Grécia, o conceito de povo abrange tão somente aqueles indivíduos considerados cidadãos. Assim é possível perceber que o conceito de povo era muito restritivo. Mesmo tendo isso em conta, a forma democrática vivenciada e experimentada pelos gregos atenienses nos séculos IV e V a.C. pode ser caracterizada, fundamentalmente, como direta.\n\nMANDUCO, A. Ciência política. São Paulo: Saraiva, 2011.",
+              "enunciado": "Naquele contexto, a emergência do sistema de governo mencionado no excerto promoveu o(a)",
+              "alternativas": [
+                "competição para a escolha de representantes.",
+                "campanha pela revitalização das oligarquias.",
+                "estabelecimento de mandatos temporários.",
+                "declínio da sociedade civil organizada.",
+                "participação no exercício do poder."
+              ],
+              "correta": "E",
+              "explicacao": "Na democracia direta de Atenas, os próprios cidadãos decidiam na assembleia, sem eleger representantes. O sistema abriu a eles a participação no exercício do poder.",
+              "fonte": "ENEM 2020 – Questão 87",
+              "segundos_estimados": 63
+            },
+            {
+              "id": "HUM-02-03",
+              "texto": "Uma norma só deve pretender validez quando todos os que possam ser concernidos por ela cheguem (ou possam chegar), enquanto participantes de um discurso prático, a um acordo quanto à validade dessa norma.\n\nHABERMAS, J. Consciência moral e agir comunicativo. Rio de Janeiro: Tempo Brasileiro, 1989.",
+              "enunciado": "Segundo Habermas, a validez de uma norma deve ser estabelecida pelo(a)",
+              "alternativas": [
+                "liberdade humana, que consagra a vontade.",
+                "razão comunicativa, que requer um consenso.",
+                "conhecimento filosófico, que expressa a verdade.",
+                "técnica científica, que aumenta o poder do homem.",
+                "poder político, que se concentra no sistema partidário."
+              ],
+              "correta": "B",
+              "explicacao": "Para Habermas, uma norma só vale se todos os afetados por ela chegarem a um acordo num diálogo. É a razão comunicativa, que exige consenso.",
+              "fonte": "ENEM 2014 – Questão 14",
+              "segundos_estimados": 61
             },
             {
               "id": "HUM-02-04",
-              "texto": "Eu poderia concluir que a raiva é um pensamento, que estar com raiva é pensar que alguém é detestável, e que esse pensamento, como todos os outros — assim como Descartes o mostrou —, não poderia residir em nenhum fragmento de matéria. A raiva seria, portanto, espírito. Porém, quando me volto para minha própria experiência da raiva, devo confessar que ela não estava fora do meu corpo, mas inexplicavelmente nele.\n\nMERLEAU-PONTY, M. Quinta conversa: o homem visto de fora. São Paulo: Martins Fontes, 1948 (adaptado).",
-              "enunciado": "No que se refere ao problema do corpo, a filosofia cartesiana apresenta-se como contraponto ao entendimento expresso no texto por",
+              "texto": "Nascidas no Líbano, as duas irmãs não puderam ser registradas no país, porque lá é exigido que os nascidos sejam filhos de pais e mães libaneses. Seus pais, de nacionalidade síria, também não puderam registrá-las no país de origem. Na Síria, crianças só são registradas por pais oficialmente casados, o que não era o caso deles.\n\nDisponível em: https://agenciabrasil.ebc.com.br. Acesso em: 7 nov. 2021.",
+              "enunciado": "Em situações como a apresentada no texto, as pessoas ao nascerem já se encontram na condição sociopolítica de",
               "alternativas": [
-                "apresentar uma visão dualista.",
-                "confirmar uma tese naturalista.",
-                "demonstrar uma premissa realista.",
-                "sustentar um argumento idealista.",
-                "defender uma posição intencionalista."
+                "exiladas.",
+                "apátridas.",
+                "foragidas.",
+                "refugiadas.",
+                "clandestinas."
               ],
-              "correta": "A",
-              "explicacao": "Descartes separa a mente (pensamento) do corpo (matéria): é o dualismo. Merleau-Ponty se opõe a isso ao perceber a raiva dentro do próprio corpo.",
-              "fonte": "ENEM 2023 – Questão 54",
-              "segundos_estimados": 71
+              "correta": "B",
+              "explicacao": "Apátrida é a pessoa sem nacionalidade reconhecida por nenhum país. As irmãs não puderam ser registradas nem no Líbano, onde nasceram, nem na Síria, país dos pais.",
+              "fonte": "ENEM 2022 – Questão 83",
+              "segundos_estimados": 60
             }
           ]
         },
         {
           "id": "HUM-03",
-          "titulo": "Escravidão e racismo",
+          "titulo": "Terra, trabalho e Estado no Brasil",
           "questoes": [
             {
               "id": "HUM-03-01",
-              "texto": "Porque todos confessamos não se poder viver sem alguns escravos, que busquem a lenha e a água, e façam cada dia o pão que se come, e outros serviços que não são possíveis poderem-se fazer pelos Irmãos Jesuítas, máxime sendo tão poucos, que seria necessário deixar as confissões e tudo mais. Parece-me que a Companhia de Jesus deve ter e adquirir escravos, justamente, por meios que as Constituições permitem, quando puder para nossos colégios e casas de meninos.\n\nLEITE, S. História da Companhia de Jesus no Brasil. Rio de Janeiro: Civilização Brasileira, 1938 (adaptado).",
-              "enunciado": "O texto explicita premissas da expansão ultramarina portuguesa ao buscar justificar a",
-              "alternativas": [
-                "propagação do ideário cristão.",
-                "valorização do trabalho braçal.",
-                "adoção do cativeiro na Colônia.",
-                "adesão ao ascetismo contemplativo.",
-                "alfabetização dos indígenas nas Missões."
-              ],
-              "correta": "C",
-              "explicacao": "O jesuíta defende que a Companhia “deve ter e adquirir escravos” para os serviços dos colégios. O texto justifica o uso do trabalho escravo na Colônia.",
-              "fonte": "ENEM 2020 – Questão 81",
-              "segundos_estimados": 73
-            },
-            {
-              "id": "HUM-03-02",
               "texto": "A partir da segunda metade do século XVIII, o número de escravos recém-chegados cresce no Rio e se estabiliza na Bahia. Nenhum lugar servia tão bem à recepção de escravos quanto o Rio de Janeiro.\n\nFRANÇA, R. O tamanho real da escravidão. O Globo, 5 abr. 2015 (adaptado).",
               "enunciado": "Na matéria, o jornalista informa uma mudança na dinâmica do tráfico atlântico que está relacionada à seguinte atividade:",
               "alternativas": [
@@ -526,147 +520,77 @@
               "segundos_estimados": 60
             },
             {
-              "id": "HUM-03-03",
-              "texto": "Durante os anos de 1854-55, o governo brasileiro – por meio de sua representação diplomática em Londres – e os livre-cambistas ingleses – nas colunas do Daily News e na Câmara dos Comuns – aumentaram a pressão pela revogação da Lei Aberdeen. O governo britânico, entretanto, ainda receava que, sem um tratado anglo-brasileiro satisfatório para substituí-la, não haveria nada que impedisse os brasileiros de um dia voltarem aos seus velhos hábitos.\n\nBETHELL, L. A abolição do comércio brasileiro de escravos. Brasília: Senado Federal, 2002 (adaptado).",
-              "enunciado": "As tensões diplomáticas expressas no texto indicam o interesse britânico em",
+              "id": "HUM-03-02",
+              "texto": "Com a Lei de Terras de 1850, o acesso à terra só passou a ser possível por meio da compra com pagamento em dinheiro. Isso limitava, ou mesmo praticamente impedia, o acesso à terra para os trabalhadores escravos que conquistavam a liberdade.\n\nOLIVEIRA, A. U. Agricultura brasileira: transformações recentes. In: ROSS, J. L. S. Geografia do Brasil. São Paulo: Edusp, 2009.",
+              "enunciado": "O fato legal evidenciado no texto acentuou o processo de",
               "alternativas": [
-                "estabelecer jurisdição conciliadora.",
-                "compartilhar negócios marítimos.",
-                "fomentar políticas higienistas.",
-                "manter a proibição comercial.",
-                "promover o negócio familiar."
+                "reforma agrária.",
+                "expansão mercantil.",
+                "concentração fundiária.",
+                "desruralização da elite.",
+                "mecanização da produção."
+              ],
+              "correta": "C",
+              "explicacao": "Depois da Lei de Terras, só quem tinha dinheiro podia ter terra. Ex-escravizados e pobres ficaram de fora, e a terra continuou nas mãos de poucos: a concentração fundiária.",
+              "fonte": "ENEM 2017 – Questão 80",
+              "segundos_estimados": 58
+            },
+            {
+              "id": "HUM-03-03",
+              "texto": "A Revolta da Vacina (1904) mostrou claramente o aspecto defensivo, desorganizado, fragmentado da ação popular. Não se negava o Estado, não se reivindicava participação nas decisões políticas; defendiam-se valores e direitos considerados acima da intervenção do Estado.\n\nCARVALHO, J. M. Os bestializados: o Rio de Janeiro e a República que não foi. São Paulo: Cia. das Letras, 1987 (adaptado).",
+              "enunciado": "A mobilização analisada representou um alerta, na medida em que a ação popular questionava",
+              "alternativas": [
+                "a alta de preços.",
+                "a política clientelista.",
+                "as reformas urbanas.",
+                "o arbítrio governamental.",
+                "as práticas eleitorais."
               ],
               "correta": "D",
-              "explicacao": "A Lei Aberdeen (1845) permitia à Inglaterra apreender navios negreiros. Os britânicos resistiam a revogá-la porque queriam manter proibido o tráfico de escravos para o Brasil.",
-              "fonte": "ENEM 2021 – Questão 52",
-              "segundos_estimados": 66
+              "explicacao": "Na Revolta da Vacina, o povo reagiu à vacinação obrigatória imposta sem diálogo, com agentes entrando nas casas. Questionava o arbítrio do governo sobre a vida das pessoas.",
+              "fonte": "ENEM 2019 – Questão 80",
+              "segundos_estimados": 60
             },
             {
               "id": "HUM-03-04",
-              "texto": "Eu estava pagando o sapateiro e conversando com um preto que estava lendo um jornal. Ele estava revoltado com um guarda civil que espancou um preto e amarrou numa árvore. O guarda civil é branco. E há certos brancos que transforma preto em bode expiatório. Quem sabe se guarda civil ignora que já foi extinta a escravidão e ainda estamos no regime da chibata?\n\nJESUS, C. M. Quarto de despejo: diário de uma favelada. São Paulo: Ática, 2014.",
-              "enunciado": "O texto, que guarda a grafia original da autora, expõe uma característica da sociedade brasileira, que é o(a):",
+              "texto": "Art. 231. São reconhecidos aos índios sua organização social, costumes, línguas, crenças e tradições, e os direitos originários sobre as terras que tradicionalmente ocupam, competindo à União demarcá-las, proteger e fazer respeitar todos os seus bens.\n\nBRASIL. Constituição da República Federativa do Brasil de 1988. Disponível em: www.planalto.gov.br. Acesso em: 27 abr. 2017.",
+              "enunciado": "A persistência das reivindicações relativas à aplicação desse preceito normativo tem em vista a vinculação histórica fundamental entre",
               "alternativas": [
-                "Racismo estrutural.",
-                "Desemprego latente.",
-                "Concentração de renda.",
-                "Exclusão informacional.",
-                "Precariedade da educação."
+                "etnia e miscigenação racial.",
+                "sociedade e igualdade jurídica.",
+                "espaço e sobrevivência cultural.",
+                "progresso e educação ambiental.",
+                "bem-estar e modernização econômica."
               ],
-              "correta": "A",
-              "explicacao": "O relato mostra um guarda branco espancando e amarrando um homem negro, como no tempo da escravidão. É o racismo enraizado nas estruturas da sociedade.",
-              "fonte": "ENEM 2022 – Questão 48",
-              "segundos_estimados": 66
+              "correta": "C",
+              "explicacao": "Para os povos indígenas, a terra é a base do modo de vida, da língua e das tradições. Por isso a luta pela demarcação liga o território à sobrevivência da cultura.",
+              "fonte": "ENEM 2017 – Questão 50",
+              "segundos_estimados": 61
             }
           ]
         },
         {
           "id": "HUM-04",
-          "titulo": "Cidadania e direitos",
-          "questoes": [
-            {
-              "id": "HUM-04-01",
-              "texto": "A maior parte das agressões e manifestações discriminatórias contra as religiões de matrizes africanas ocorrem em locais públicos (57%). É na rua, na via pública, que tiveram lugar mais de 2/3 das agressões, geralmente em locais próximos às casas de culto dessas religiões. O transporte público também é apontado como um local em que os adeptos das religiões de matrizes africanas são discriminados, geralmente quando se encontram paramentados por conta dos preceitos religiosos.\n\nREGO, L. F.; FONSECA, D. P. R.; GIACOMINI, S. M. Cartografia social de terreiros no Rio de Janeiro. Rio de Janeiro: PUC-Rio, 2014.",
-              "enunciado": "As práticas descritas no texto são incompatíveis com a dinâmica de uma sociedade laica e democrática porque",
-              "alternativas": [
-                "asseguram as expressões multiculturais.",
-                "promovem a diversidade de etnias.",
-                "falseiam os dogmas teológicos.",
-                "estimulam os rituais sincréticos.",
-                "restringem a liberdade de credo."
-              ],
-              "correta": "E",
-              "explicacao": "Num Estado laico e democrático, cada pessoa pode seguir a religião que quiser. Agredir adeptos das religiões de matriz africana restringe essa liberdade de credo.",
-              "fonte": "ENEM 2019 – Questão 62",
-              "segundos_estimados": 75
-            },
-            {
-              "id": "HUM-04-02",
-              "texto": "Houve crescimento de 74% da população brasileira encarcerada entre 2005 e 2012. As análises possibilitaram identificar o perfil da população que está nas prisões do país: homens, jovens (abaixo de 29 anos), negros, com ensino fundamental incompleto, acusados de crimes patrimoniais e, no caso dos presos adultos, condenados e cumprindo regime fechado e, majoritariamente, com penas de quatro até oito anos.\n\nBRASIL. Mapa do encarceramento: os jovens do Brasil. Brasília: Presidência da República, 2015.",
-              "enunciado": "Nesse contexto, as políticas públicas para minimizar a problemática descrita devem privilegiar a",
-              "alternativas": [
-                "flexibilização do Código Civil.",
-                "promoção da inclusão social.",
-                "redução da maioridade penal.",
-                "contenção da corrupção política.",
-                "expansão do período de reclusão."
-              ],
-              "correta": "B",
-              "explicacao": "O perfil dos presos (jovens, negros, com pouca escolaridade) revela exclusão social. Políticas de inclusão, como educação e emprego, atacam a raiz do problema.",
-              "fonte": "ENEM 2021 – Questão 66",
-              "segundos_estimados": 66
-            },
-            {
-              "id": "HUM-04-03",
-              "texto": "Nascidas no Líbano, as duas irmãs não puderam ser registradas no país, porque lá é exigido que os nascidos sejam filhos de pais e mães libaneses. Seus pais, de nacionalidade síria, também não puderam registrá-las no país de origem. Na Síria, crianças só são registradas por pais oficialmente casados, o que não era o caso deles.\n\nDisponível em: https://agenciabrasil.ebc.com.br. Acesso em: 7 nov. 2021.",
-              "enunciado": "Em situações como a apresentada no texto, as pessoas ao nascerem já se encontram na condição sociopolítica de",
-              "alternativas": [
-                "exiladas.",
-                "apátridas.",
-                "foragidas.",
-                "refugiadas.",
-                "clandestinas."
-              ],
-              "correta": "B",
-              "explicacao": "Apátrida é a pessoa sem nacionalidade reconhecida por nenhum país. As irmãs não puderam ser registradas nem no Líbano, onde nasceram, nem na Síria, país dos pais.",
-              "fonte": "ENEM 2022 – Questão 83",
-              "segundos_estimados": 60
-            },
-            {
-              "id": "HUM-04-04",
-              "texto": "Negar o pedido por dinheiro indispensável para necessidades pessoais ou comprar bens usando o nome da pessoa sem o consentimento dela. Ameaçar o corte de recursos dependendo de atitudes pessoais, esconder documentos ou trocar senhas do banco sem avisar. Ou, ainda, proibir a pessoa de trabalhar ou destruir seus pertences. As histórias são comuns, mas às vezes não são reconhecidas como abuso. Mas é uma das cinco formas de conduta contra a mulher previstas na Lei Maria da Penha.\n\nLEWGOY, J. Conduta quase invisível destrói a vida de mulheres. Disponível em: https://valorinveste.globo.com. Acesso em: 23 out. 2021 (adaptado).",
-              "enunciado": "O texto apresenta tipos de conduta sujeitos a punição, conforme previsto na Lei Maria da Penha, porque consistem em formas de",
-              "alternativas": [
-                "ação difamatória.",
-                "desvio comportamental.",
-                "expressão preconceituosa.",
-                "violência patrimonial.",
-                "desentendimento matrimonial."
-              ],
-              "correta": "D",
-              "explicacao": "Controlar o dinheiro, esconder documentos ou destruir pertences da mulher são formas de violência patrimonial, uma das previstas na Lei Maria da Penha.",
-              "fonte": "ENEM 2023 – Questão 60",
-              "segundos_estimados": 74
-            }
-          ]
-        },
-        {
-          "id": "HUM-05",
           "titulo": "Geografia física",
           "questoes": [
             {
-              "id": "HUM-05-01",
-              "texto": "Os moradores de Utqiagvik passaram dois meses quase totalmente na escuridão\n\nOs habitantes desta pequena cidade no Alasca – o estado dos Estados Unidos mais ao norte – já estão acostumados a longas noites sem ver a luz do dia. Em 18 de novembro de 2018, seus pouco mais de 4 mil habitantes viram o último pôr do sol do ano. A oportunidade seguinte para ver a luz do dia ocorreu no dia 23 de janeiro de 2019, às 13h04 min (horário local).\n\nDisponível em: www.bbc.com. Acesso em: 16 maio 2019 (adaptado).",
-              "enunciado": "O fenômeno descrito está relacionado ao fato de a cidade citada ter uma posição geográfica condicionada pela",
+              "id": "HUM-04-01",
+              "texto": "Quando é meio-dia nos Estados Unidos, o Sol, todo mundo sabe, está se deitando na França. Bastaria ir à França num minuto para assistir ao pôr do sol.\n\nSAINT-EXUPÉRY, A. O Pequeno Príncipe. Rio de Janeiro: Agir, 1996.",
+              "enunciado": "A diferença espacial citada é causada por qual característica física da Terra?",
               "alternativas": [
-                "continentalidade.",
-                "maritimidade.",
-                "longitude.",
-                "latitude.",
-                "altitude."
+                "Achatamento de suas regiões polares.",
+                "Movimento em torno de seu próprio eixo.",
+                "Arredondamento de sua forma geométrica.",
+                "Variação periódica de sua distância do Sol.",
+                "Inclinação em relação ao seu plano de órbita."
               ],
-              "correta": "D",
-              "explicacao": "Utqiagvik fica muito ao norte, acima do Círculo Polar Ártico. Nessa latitude, no inverno, o Sol passa semanas sem aparecer (é a noite polar).",
-              "fonte": "ENEM 2019 – Questão 89",
-              "segundos_estimados": 68
+              "correta": "B",
+              "explicacao": "Meio-dia nos Estados Unidos e pôr do sol na França ao mesmo tempo: são os fusos horários. Eles existem porque a Terra gira em torno do próprio eixo, a rotação.",
+              "fonte": "ENEM 2014 – Questão 13",
+              "segundos_estimados": 57
             },
             {
-              "id": "HUM-05-02",
-              "texto": "As cidades de Puebla, no México, e Legazpi, nas Filipinas, não têm quase nada em comum. Estão muito longe uma da outra e são habitadas por povos muito diferentes. O que as une é um trágico detalhe de sua geografia. Elas foram erguidas na vizinhança de alguns dos vulcões mais perigosos do mundo: o mexicano Popocatepétl e o filipino Mayon. Seus habitantes precisam estar prontos para correr a qualquer hora. Eles fazem parte dos 550 milhões de indivíduos que moram em zonas de risco vulcânico no mundo. Ao contrário do que seria sensato, continuam ali, indiferentes ao perigo que os espreita.\n\nANGELO, C. Disponível em: http://super.abril.com.br. Acesso em: 24 out. 2015 (adaptado).",
-              "enunciado": "A característica física que justifica a fixação do homem nos locais apresentados no texto é a ocorrência de",
-              "alternativas": [
-                "solo fértil.",
-                "encosta íngreme.",
-                "vegetação diversificada.",
-                "drenagem eficiente.",
-                "clima ameno."
-              ],
-              "correta": "A",
-              "explicacao": "As cinzas e lavas dos vulcões deixam o solo rico em minerais e muito fértil. Por isso as pessoas continuam morando perto deles, mesmo com o risco.",
-              "fonte": "ENEM 2020 – Questão 82",
-              "segundos_estimados": 78
-            },
-            {
-              "id": "HUM-05-03",
+              "id": "HUM-04-02",
               "texto": "A colisão entre uma placa continental e uma oceânica provocará a subducção desta última sob a placa continental, que, a exemplo dos arcos e ilhas, produzirá um arco magmático na borda do continente, composto por rochas vulcânicas acompanhado de deformações e metamorfismo tanto de rochas preexistentes como de parte das rochas formadas no processo.\n\nTEIXEIRA, W. et al. (Org.). Decifrando a Terra. São Paulo: Oficina de Textos, 2000.",
               "enunciado": "Qual feição fisiográfica é gerada pelo processo tectônico apresentado?",
               "alternativas": [
@@ -682,7 +606,7 @@
               "segundos_estimados": 59
             },
             {
-              "id": "HUM-05-04",
+              "id": "HUM-04-03",
               "texto": "Desde os primórdios da formação da crosta terrestre até os dias de hoje, as rochas formadas vêm sendo continuamente destruídas. Os produtos resultantes da destruição das rochas são transportados pela água, vento e gelo a toda superfície terrestre, acionados pelo calor e pela gravidade. Cessada a energia transportadora, são depositados nas regiões mais baixas da crosta, podendo formar pacotes rochosos.\n\nLEINZ, V. Geologia geral. São Paulo: Editora Nacional, 1989.",
               "enunciado": "As transformações na superfície terrestre, conforme descritas no texto, compõem o seguinte processo geomorfológico:",
               "alternativas": [
@@ -698,20 +622,90 @@
               "segundos_estimados": 61
             },
             {
-              "id": "HUM-05-05",
-              "texto": "A cordilheira do Himalaia tem mais de 50 milhões de anos, sendo classificada como a maior cordilheira do planeta. Originário da língua sânscrito, comum na região, seu nome quer dizer “morada da neve”. É possível encontrar nessa cordilheira as quinze maiores montanhas do mundo. Ao todo, existem mais de cem picos, que contam com altitudes bem maiores que 7 000 m. O Everest, considerado o ponto mais alto da Terra, tem nada menos que 8 848 m de altitude, e continua crescendo, aproximadamente, 0,8 mm a cada ano.\n\nDisponível em: https://meioambiente.culturamix.com. Acesso em: 12 nov. 2021 (adaptado).",
-              "enunciado": "Qual dinâmica natural é responsável pelo fenômeno apresentado?",
+              "id": "HUM-04-04",
+              "texto": "Os movimentos de massa constituem-se no deslocamento de material (solo e rocha) vertente abaixo pela influência da gravidade. As condições que favorecem os movimentos de massa dependem principalmente da estrutura geológica, da declividade da vertente, do regime de chuvas, da perda de vegetação e da atividade antrópica.\n\nBIGARELLA, J. J. Estrutura e origem das paisagens tropicais e subtropicais. Florianópolis: UFSC, 2003 (adaptado).",
+              "enunciado": "Em relação ao processo descrito, sua ocorrência é minimizada em locais onde há",
               "alternativas": [
-                "Derrame de lava vulcânica.",
-                "Encontro de placas tectônicas.",
-                "Ação do intemperismo químico.",
-                "Sedimentação de erosão eólica.",
-                "Derretimento de geleiras glaciais."
+                "exposição do solo.",
+                "drenagem eficiente.",
+                "rocha matriz resistente.",
+                "agricultura mecanizada.",
+                "média pluviométrica elevada."
               ],
               "correta": "B",
-              "explicacao": "O Himalaia se formou, e ainda cresce, pelo choque entre as placas Indiana e Euroasiática. É o encontro de placas tectônicas.",
-              "fonte": "ENEM 2023 – Questão 53",
-              "segundos_estimados": 73
+              "explicacao": "A água da chuva acumulada no solo deixa a encosta mais pesada e instável. Onde a drenagem é eficiente, a água escoa e o deslizamento fica menos provável.",
+              "fonte": "ENEM 2015 – Questão 30",
+              "segundos_estimados": 59
+            }
+          ]
+        },
+        {
+          "id": "HUM-05",
+          "titulo": "Sociedade e economia",
+          "questoes": [
+            {
+              "id": "HUM-05-01",
+              "texto": "O toyotismo, a partir dos anos 1970, teve grande impacto no mundo ocidental, quando se mostrou para os países avançados como uma opção possível para a superação de uma crise de acumulação.\n\nANTUNES, R. Os sentidos do trabalho: ensaio sobre a afirmação e a negação do trabalho. São Paulo: Boitempo, 2009 (adaptado).",
+              "enunciado": "A característica organizacional do modelo em questão, requerida no contexto de crise, foi o(a)",
+              "alternativas": [
+                "expansão dos grandes estoques.",
+                "incremento da fabricação em massa.",
+                "adequação da produção à demanda.",
+                "aumento da mecanização do trabalho.",
+                "centralização das etapas de planejamento."
+              ],
+              "correta": "C",
+              "explicacao": "O toyotismo produz só o que o mercado pede, sem grandes estoques (o just in time). Ajustar a produção à demanda cortava custos num momento de crise.",
+              "fonte": "ENEM 2020 – Questão 78",
+              "segundos_estimados": 60
+            },
+            {
+              "id": "HUM-05-02",
+              "texto": "O bônus demográfico é caracterizado pelo período em que, por causa da redução do número de filhos por mulher, a estrutura populacional fica favorável ao crescimento econômico. Isso acontece porque há proporcionalmente menos crianças na população, e o percentual de idosos ainda não é alto.\n\nGOIS, A. O Globo, 5 abr. 2015 (adaptado).",
+              "enunciado": "A ação estatal que contribui para o aproveitamento do bônus demográfico é o estímulo à",
+              "alternativas": [
+                "atração de imigrantes.",
+                "elevação da carga tributária.",
+                "qualificação da mão de obra.",
+                "admissão de exilados políticos.",
+                "concessão de aposentadorias."
+              ],
+              "correta": "C",
+              "explicacao": "No bônus demográfico, há muita gente em idade de trabalhar. Para aproveitar essa fase, o Estado precisa investir na qualificação da mão de obra.",
+              "fonte": "ENEM 2019 – Questão 88",
+              "segundos_estimados": 59
+            },
+            {
+              "id": "HUM-05-03",
+              "texto": "O processo de concentração urbana no Brasil em determinados locais teve momentos de maior intensidade e, ao que tudo indica, atualmente passa por uma desaceleração no ritmo de crescimento populacional nos grandes centros urbanos.\n\nBAENINGER, R. Cidades e metrópoles: a desaceleração no crescimento populacional e novos arranjos regionais. Disponível em: www.sbsociologia.com.br. Acesso em: 12 dez. 2012 (adaptado).",
+              "enunciado": "Uma causa para o processo socioespacial mencionado no texto é o(a)",
+              "alternativas": [
+                "carência de matérias-primas.",
+                "degradação da rede rodoviária.",
+                "aumento do crescimento vegetativo.",
+                "centralização do poder político.",
+                "realocação da atividade industrial."
+              ],
+              "correta": "E",
+              "explicacao": "Muitas indústrias saíram das grandes metrópoles atrás de custos menores em outras cidades e regiões. Os empregos foram junto, e o crescimento dos grandes centros desacelerou.",
+              "fonte": "ENEM 2015 – Questão 12",
+              "segundos_estimados": 60
+            },
+            {
+              "id": "HUM-05-04",
+              "texto": "Txai Suruí, liderança da Juventude Indígena, profere seu discurso na abertura da COP-26\n\n“O clima está esquentando, os animais estão desaparecendo, os rios estão morrendo e nossas plantações não florescem como no passado. A Terra está falando: ela nos diz que não temos mais tempo.”\n\nVICK, M. Quais são as conquistas do movimento indígena na COP-26. Disponível em: www.nexojornal.com.br. Acesso em: 10 nov. 2021 (adaptado).",
+              "enunciado": "O discurso da líder indígena explicita um problema global relacionado ao(à)",
+              "alternativas": [
+                "manejo tradicional.",
+                "reciclagem residual.",
+                "consumo consciente.",
+                "exploração predatória.",
+                "reaproveitamento energético."
+              ],
+              "correta": "D",
+              "explicacao": "Ela fala do clima esquentando, dos animais sumindo e dos rios morrendo. São efeitos da exploração predatória da natureza, um problema que atinge o mundo todo.",
+              "fonte": "ENEM 2023 – Questão 64",
+              "segundos_estimados": 60
             }
           ]
         }
@@ -726,6 +720,22 @@
           "questoes": [
             {
               "id": "NAT-01-01",
+              "texto": "Estudos de fluxo de energia em ecossistemas demonstram que a alta produtividade nos manguezais está diretamente relacionada às taxas de produção primária líquida e à rápida reciclagem dos nutrientes. Como exemplo de seres vivos encontrados nesse ambiente, temos: aves, caranguejos, insetos, peixes e algas.",
+              "enunciado": "Dos grupos de seres vivos citados, os que contribuem diretamente para a manutenção dessa produtividade no referido ecossistema são",
+              "alternativas": [
+                "aves.",
+                "algas.",
+                "peixes.",
+                "insetos.",
+                "caranguejos."
+              ],
+              "correta": "B",
+              "explicacao": "As algas fazem fotossíntese: são os produtores do manguezal. A produção primária, que sustenta o resto do ecossistema, depende delas.",
+              "fonte": "ENEM 2013 – Questão 80",
+              "segundos_estimados": 53
+            },
+            {
+              "id": "NAT-01-02",
               "texto": "As cutias, pequenos roedores das zonas tropicais, transportam pela boca as sementes que caem das árvores, mas, em vez de comê-las, enterram-nas em outro lugar. Esse procedimento lhes permite salvar a maioria de suas sementes enterradas para as épocas mais secas, quando não há frutos maduros disponíveis. Cientistas descobriram que as cutias roubam as sementes enterradas por outras, e esse comportamento de “ladroagem” faz com que uma mesma semente possa ser enterrada dezenas de vezes.\n\nDisponível em: http://chc.cienciahoje.uol.com.br. Acesso em: 30 jul. 2012.",
               "enunciado": "Essa “ladroagem” está associada à relação de",
               "alternativas": [
@@ -739,22 +749,6 @@
               "explicacao": "Cutias da mesma espécie disputam o mesmo recurso, as sementes enterradas. Uma rouba a reserva da outra: é uma relação de competição.",
               "fonte": "ENEM 2019 – Questão 97",
               "segundos_estimados": 63
-            },
-            {
-              "id": "NAT-01-02",
-              "texto": "A fragmentação dos hábitats é caracterizada pela formação de ilhas da paisagem original, circundadas por áreas transformadas. Esse tipo de interferência no ambiente ameaça a biodiversidade. Imagine que uma população de onças foi isolada em uma mata pequena. Elas se extinguiriam mesmo sem terem sido abatidas. Diversos componentes da ilha de hábitat, como o tamanho, a heterogeneidade, o seu entorno, a sua conectividade e o efeito de borda são determinantes para a persistência ou não das espécies originais.",
-              "enunciado": "Uma medida que auxilia na conservação da biodiversidade nas ilhas mencionadas no texto compreende a",
-              "alternativas": [
-                "formação de micro-hábitats.",
-                "ampliação do efeito de borda.",
-                "construção de corredores ecológicos.",
-                "promoção da sucessão ecológica.",
-                "introdução de novas espécies de animais e vegetais."
-              ],
-              "correta": "C",
-              "explicacao": "Corredores ecológicos ligam os fragmentos de mata. Os animais voltam a circular e as populações se reencontram, o que evita a extinção nas “ilhas”.",
-              "fonte": "ENEM 2020 – Questão 95",
-              "segundos_estimados": 69
             },
             {
               "id": "NAT-01-03",
@@ -774,130 +768,60 @@
             },
             {
               "id": "NAT-01-04",
-              "texto": "A extinção de espécies é uma ameaça real que afeta diversas regiões do país. A introdução de espécies exóticas pode ser considerada um fator maximizador desse processo. A jaqueira (Artocarpus heterophyllus), por exemplo, é uma árvore originária da Índia e de regiões do Sudeste Asiático que foi introduzida ainda na era colonial e se aclimatou muito bem em praticamente todo o território nacional.",
-              "enunciado": "Casos como o dessa árvore podem provocar a redução da biodiversidade, pois elas",
+              "texto": "Os botos-cinza (Sotalia guianensis), mamíferos da família dos golfinhos, são excelentes indicadores da poluição das áreas em que vivem, pois passam toda a sua vida — cerca de 30 anos — na mesma região. Além disso, a espécie acumula mais contaminantes em seu organismo, como o mercúrio, do que outros animais da sua cadeia alimentar.\n\nMARCOLINO, B. Sentinelas do mar. Disponível em: http://cienciahoje.uol.com.br. Acesso em: 1 ago. 2012 (adaptado).",
+              "enunciado": "Os botos-cinza acumulam maior concentração dessas substâncias porque",
               "alternativas": [
-                "ocupam áreas de vegetação nativa e substituem parcialmente a flora original.",
-                "estimulam a competição por seus frutos entre animais típicos da região e eliminam as espécies perdedoras.",
-                "alteram os nichos e aumentam o número de possibilidades de relações entre os seres vivos daquele ambiente.",
-                "apresentam alta taxa de reprodução e se mantêm com um número de indivíduos superior à capacidade suporte do ambiente.",
-                "diminuem a relação de competição entre os polinizadores e facilitam a ação de dispersores de sementes de espécies nativas."
+                "são animais herbívoros.",
+                "são animais detritívoros.",
+                "são animais de grande porte.",
+                "digerem o alimento lentamente.",
+                "estão no topo da cadeia alimentar."
               ],
-              "correta": "A",
-              "explicacao": "A jaqueira, espécie exótica, se espalha e ocupa o lugar da vegetação nativa. Ao substituir parte da flora original, reduz a biodiversidade.",
-              "fonte": "ENEM 2022 – Questão 99",
-              "segundos_estimados": 83
-            },
-            {
-              "id": "NAT-01-05",
-              "texto": "O número de abelhas encontra-se em declínio em várias regiões do mundo, inclusive no Brasil, sendo que vários fatores contribuem para o colapso de suas colmeias. Nos Estados Unidos, bombas de sementes de espécies vegetais nativas têm sido utilizadas para combater o desaparecimento desses insetos. Elas são pequenas bolinhas recheadas com sementes, adubo e argila. Quando são arremessadas e ficam expostas ao sol e à chuva, germinam até mesmo em solo pouco fértil.\n\nDARAYA, V. Disponível em: http://planetasustentavel.abril.com.br. Acesso em: 2 fev. 2015 (adaptado).",
-              "enunciado": "Esse método contribui para a preservação das abelhas porque",
-              "alternativas": [
-                "reduz sua predação.",
-                "reduz o uso de pesticidas.",
-                "reduz a competição por abrigo.",
-                "aumenta a oferta de alimento.",
-                "aumenta os locais de reprodução."
-              ],
-              "correta": "D",
-              "explicacao": "As bombas de sementes fazem brotar plantas nativas com flores. Isso aumenta a oferta de néctar e pólen, que são o alimento das abelhas.",
-              "fonte": "ENEM 2023 – Questão 91",
-              "segundos_estimados": 70
+              "correta": "E",
+              "explicacao": "O mercúrio não é eliminado e vai se acumulando a cada nível da cadeia alimentar. Os botos estão no topo, então concentram mais: é a bioacumulação.",
+              "fonte": "ENEM 2017 – Questão 111",
+              "segundos_estimados": 63
             }
           ]
         },
         {
           "id": "NAT-02",
-          "titulo": "Hereditariedade",
-          "questoes": [
-            {
-              "id": "NAT-02-01",
-              "texto": "Com base nos experimentos de plantas de Mendel, foram estabelecidos três princípios básicos, que são conhecidos como leis da uniformidade, segregação e distribuição independente. A lei da distribuição independente refere-se ao fato de que os membros de pares diferentes de genes segregam-se independentemente, uns dos outros, para a prole.\n\nTURNPENNY, P. D. Genética médica. Rio de Janeiro: Elsevier, 2009 (adaptado).",
-              "enunciado": "Hoje, sabe-se que isso nem sempre é verdade. Por quê?",
-              "alternativas": [
-                "A distribuição depende do caráter de dominância ou recessividade do gene.",
-                "Os organismos nem sempre herdam cada um dos genes de cada um dos genitores.",
-                "As alterações cromossômicas podem levar a falhas na segregação durante a meiose.",
-                "Os genes localizados fisicamente próximos no mesmo cromossomo tendem a ser herdados juntos.",
-                "O cromossomo que contém dois determinados genes pode não sofrer a disjunção na primeira fase da meiose."
-              ],
-              "correta": "D",
-              "explicacao": "A distribuição independente vale para genes em cromossomos diferentes. Genes próximos no mesmo cromossomo tendem a ir juntos para o mesmo gameto e só se separam quando há permutação (crossing-over): é a ligação gênica.",
-              "fonte": "ENEM 2019 – Questão 110",
-              "segundos_estimados": 76
-            },
-            {
-              "id": "NAT-02-02",
-              "texto": "A deficiência de lipase ácida lisossômica é uma doença hereditária associada a um gene do cromossomo 10. Os pais dos pacientes podem não saber que são portadores dos genes da doença até o nascimento do primeiro filho afetado. Quando ambos os progenitores são portadores, existe uma chance, em quatro, de que seu bebê possa nascer com essa doença.\n\nANDERSON, R. A. et. al. In: Situ Localization of the Genetic Locus Encoding the Lysosomal Acid Lipase/Cholesteryl Esterase (LIPA) Deficient in Wolman Disease to Chromosome 10q23.2-q23.3. Genomics, n. 1, jan. 1993 (adaptado).",
-              "enunciado": "Essa é uma doença hereditária de caráter",
-              "alternativas": [
-                "recessivo.",
-                "dominante.",
-                "codominante.",
-                "poligênico.",
-                "polialélico."
-              ],
-              "correta": "A",
-              "explicacao": "Pais sem a doença que são portadores têm 1 chance em 4 de ter filho afetado (Aa × Aa → 1/4 aa). Esse é o padrão da herança recessiva.",
-              "fonte": "ENEM 2021 – Questão 132",
-              "segundos_estimados": 65
-            },
-            {
-              "id": "NAT-02-03",
-              "texto": "Pais com síndrome de Down\n\nA síndrome de Down é uma alteração genética associada à trissomia do cromossomo 21, ou seja, o indivíduo possui três cromossomos 21 e não um par, como é normal. Isso ocorre pela união de um gameta contendo um cromossomo 21 com um gameta possuidor de dois cromossomos 21. Embora, normalmente, as mulheres com a síndrome sejam estéreis, em 2008, no interior de São Paulo, uma delas deu à luz uma menina sem a síndrome de Down.\n\nMORENO, T. Três anos após dar à luz, mãe portadora de síndrome de Down revela detalhes de seu dia a dia. Disponível em: www.band.uol.com.br. Acesso em: 31 out. 2013 (adaptado).",
-              "enunciado": "Sabendo disso, um jovem casal, ambos com essa síndrome, procura um médico especialista para aconselhamento genético porque querem ter um bebê.\nO médico informa ao casal que, com relação ao cromossomo 21, os zigotos formados serão",
-              "alternativas": [
-                "todos normais.",
-                "todos tetrassômicos.",
-                "apenas normais ou tetrassômicos.",
-                "apenas trissômicos ou tetrassômicos.",
-                "normais, trissômicos ou tetrassômicos."
-              ],
-              "correta": "E",
-              "explicacao": "Cada pessoa com trissomia forma gametas com um ou dois cromossomos 21. Juntando: 1+1 dá zigoto normal, 1+2 trissômico e 2+2 tetrassômico.",
-              "fonte": "ENEM 2023 – Questão 125",
-              "segundos_estimados": 86
-            }
-          ]
-        },
-        {
-          "id": "NAT-03",
           "titulo": "Física no cotidiano",
           "questoes": [
             {
-              "id": "NAT-03-01",
-              "texto": "Os fones de ouvido tradicionais transmitem a música diretamente para os nossos ouvidos. Já os modelos dotados de tecnologia redutora de ruído — Cancelamento de Ruído (CR) — além de transmitirem música, também reduzem todo ruído inconsistente à nossa volta, como o barulho de turbinas de avião e aspiradores de pó. Os fones de ouvido CR não reduzem realmente barulhos irregulares como discursos e choros de bebês. Mesmo assim, a supressão do ronco das turbinas do avião contribui para reduzir a “fadiga de ruído”, um cansaço persistente provocado pela exposição a um barulho alto por horas a fio. Esses aparelhos também permitem que nós ouçamos músicas ou assistamos a vídeos no trem ou no avião a um volume muito menor (e mais seguro).\n\nDisponível em: http://tecnologia.uol.com.br. Acesso em: 21 abr. 2015 (adaptado).",
-              "enunciado": "A tecnologia redutora de ruído CR utilizada na produção de fones de ouvido baseia-se em qual fenômeno ondulatório?",
+              "id": "NAT-02-01",
+              "texto": "Ao ouvir uma flauta e um piano emitindo a mesma nota musical, consegue-se diferenciar esses instrumentos um do outro.",
+              "enunciado": "Essa diferenciação se deve principalmente ao(à)",
               "alternativas": [
-                "Absorção.",
-                "Interferência.",
-                "Polarização.",
-                "Reflexão.",
-                "Difração."
+                "intensidade sonora do som de cada instrumento musical.",
+                "potência sonora do som emitido pelos diferentes instrumentos musicais.",
+                "diferente velocidade de propagação do som emitido por cada instrumento musical.",
+                "timbre do som, que faz com que os formatos das ondas de cada instrumento sejam diferentes.",
+                "altura do som, que possui diferentes frequências para diferentes instrumentos musicais."
               ],
-              "correta": "B",
-              "explicacao": "O fone capta o ruído e emite uma onda sonora de mesma frequência e amplitude, mas invertida (em oposição de fase). As duas se sobrepõem e se anulam: é a interferência destrutiva.",
-              "fonte": "ENEM 2020 – Questão 111",
-              "segundos_estimados": 82
+              "correta": "D",
+              "explicacao": "A mesma nota tem a mesma frequência. O que diferencia a flauta do piano é o timbre, ou seja, a forma da onda de cada instrumento.",
+              "fonte": "ENEM 2015 – Questão 86",
+              "segundos_estimados": 57
             },
             {
-              "id": "NAT-03-02",
-              "texto": "Há muitos mitos em relação a como se proteger de raios, cobrir espelhos e não pegar em facas, garfos e outros objetos metálicos, por exemplo. Mas, de fato, se houver uma tempestade com raios, alguns cuidados são importantes, como evitar ambientes abertos. Um bom abrigo para proteção é o interior de um automóvel, desde que este não seja conversível.\n\nOLIVEIRA, A. Raios nas tempestades de verão. Disponível em: http://cienciahoje.uol.com.br. Acesso em: 10 dez. 2014 (adaptado).",
-              "enunciado": "Qual o motivo físico da proteção fornecida pelos automóveis, conforme citado no texto?",
+              "id": "NAT-02-02",
+              "texto": "Em viagens de avião, é solicitado aos passageiros o desligamento de todos os aparelhos cujo funcionamento envolva a emissão ou a recepção de ondas eletromagnéticas. O procedimento é utilizado para eliminar fontes de radiação que possam interferir nas comunicações via rádio dos pilotos com a torre de controle.",
+              "enunciado": "A propriedade das ondas emitidas que justifica o procedimento adotado é o fato de",
               "alternativas": [
-                "Isolamento elétrico dos pneus.",
-                "Efeito de para-raios da antena.",
-                "Blindagem pela carcaça metálica.",
-                "Escoamento da água pela lataria.",
-                "Aterramento pelo fio terra da bateria."
+                "terem fases opostas.",
+                "serem ambas audíveis.",
+                "terem intensidades inversas.",
+                "serem de mesma amplitude.",
+                "terem frequências próximas."
               ],
-              "correta": "C",
-              "explicacao": "A carcaça metálica do carro funciona como uma gaiola de Faraday. As cargas ficam na superfície externa e o campo elétrico lá dentro é nulo.",
-              "fonte": "ENEM 2020 – Questão 133",
-              "segundos_estimados": 69
+              "correta": "E",
+              "explicacao": "Os aparelhos eletrônicos emitem ondas de frequência próxima à do rádio do avião. Ondas de frequências próximas podem interferir na comunicação dos pilotos.",
+              "fonte": "ENEM 2013 – Questão 52",
+              "segundos_estimados": 56
             },
             {
-              "id": "NAT-03-03",
+              "id": "NAT-02-03",
               "texto": "O fogão por indução funciona a partir do surgimento de uma corrente elétrica induzida no fundo da panela, com consequente transformação de energia elétrica em calor por efeito Joule. A principal vantagem desses fogões é a eficiência energética, que é substancialmente maior que a dos fogões convencionais.",
               "enunciado": "A corrente elétrica mencionada é induzida por",
               "alternativas": [
@@ -911,12 +835,98 @@
               "explicacao": "A bobina do fogão gera um campo magnético variável, que induz corrente elétrica no fundo metálico da panela (indução eletromagnética).",
               "fonte": "ENEM 2023 – Questão 108",
               "segundos_estimados": 51
+            },
+            {
+              "id": "NAT-02-04",
+              "texto": "As panelas de pressão reduzem o tempo de cozimento dos alimentos por elevar a temperatura de ebulição da água. Os usuários conhecedores do utensílio normalmente abaixam a intensidade do fogo em panelas de pressão após estas iniciarem a saída dos vapores.",
+              "enunciado": "Ao abaixar o fogo, reduz-se a chama, pois assim evita-se o(a)",
+              "alternativas": [
+                "aumento da pressão interna e os riscos de explosão.",
+                "dilatação da panela e a desconexão com sua tampa.",
+                "perda da qualidade nutritiva do alimento.",
+                "deformação da borracha de vedação.",
+                "consumo de gás desnecessário."
+              ],
+              "correta": "E",
+              "explicacao": "Na panela de pressão, a temperatura da água depende da pressão, que a válvula mantém. Com o vapor já saindo, fogo alto não esquenta mais: só gasta gás à toa.",
+              "fonte": "ENEM 2020 – Questão 109",
+              "segundos_estimados": 59
+            }
+          ]
+        },
+        {
+          "id": "NAT-03",
+          "titulo": "Química no cotidiano",
+          "questoes": [
+            {
+              "id": "NAT-03-01",
+              "texto": "Entre as substâncias usadas para o tratamento de água está o sulfato de alumínio que, em meio alcalino, forma partículas em suspensão na água, às quais as impurezas presentes no meio se aderem.",
+              "enunciado": "O método de separação comumente usado para retirar o sulfato de alumínio com as impurezas aderidas é a",
+              "alternativas": [
+                "flotação.",
+                "levigação.",
+                "ventilação.",
+                "peneiração.",
+                "centrifugação."
+              ],
+              "correta": "A",
+              "explicacao": "As impurezas grudam nas partículas e formam flocos leves. Na flotação, bolhas de ar levam esses flocos até a superfície, de onde são retirados.",
+              "fonte": "ENEM 2013 – Questão 81",
+              "segundos_estimados": 49
+            },
+            {
+              "id": "NAT-03-02",
+              "texto": "A água bruta coletada de mananciais apresenta alto índice de sólidos suspensos, o que a deixa com um aspecto turvo. Para se obter uma água límpida e potável, ela deve passar por um processo de purificação numa estação de tratamento de água. Nesse processo, as principais etapas são, nesta ordem: coagulação, decantação, filtração, desinfecção e fluoretação.",
+              "enunciado": "Qual é a etapa de retirada de grande parte desses sólidos?",
+              "alternativas": [
+                "Coagulação.",
+                "Decantação.",
+                "Filtração.",
+                "Desinfecção.",
+                "Fluoretação."
+              ],
+              "correta": "B",
+              "explicacao": "Depois da coagulação, a sujeira forma flocos pesados que descem para o fundo dos tanques. É na decantação que sai a maior parte dos sólidos.",
+              "fonte": "ENEM 2022 – Questão 126",
+              "segundos_estimados": 54
+            },
+            {
+              "id": "NAT-03-03",
+              "texto": "A enorme quantidade de resíduos gerados pelo consumo crescente da sociedade traz para a humanidade uma preocupação socioambiental, em especial pela quantidade de lixo produzido. Além da reciclagem e do reúso, pode-se melhorar ainda mais a qualidade de vida, substituindo polímeros convencionais por polímeros biodegradáveis.",
+              "enunciado": "Esses polímeros têm grandes vantagens socioambientais em relação aos convencionais porque",
+              "alternativas": [
+                "não são tóxicos.",
+                "não precisam ser reciclados.",
+                "não causam poluição ambiental quando descartados.",
+                "são degradados em um tempo bastante menor que os convencionais.",
+                "apresentam propriedades mecânicas semelhantes aos convencionais."
+              ],
+              "correta": "D",
+              "explicacao": "Os polímeros biodegradáveis são decompostos por microrganismos em pouco tempo. Os convencionais levam centenas de anos para se degradar no ambiente.",
+              "fonte": "ENEM 2020 – Questão 92",
+              "segundos_estimados": 58
+            },
+            {
+              "id": "NAT-03-04",
+              "texto": "Os mais antigos cozinhavam o feijão na panela de ferro a fim de acabar com a palidez de seus filhos. Alguns chegavam até a colocar um prego enferrujado nesse cozimento para liberar o ferro contido nele. Sabe-se que esse elemento pode ser encontrado na sua forma metálica ou iônica, sendo essencial para a manutenção da vida humana.",
+              "enunciado": "As estratégias citadas eram utilizadas com o objetivo de",
+              "alternativas": [
+                "tratar a diarreia.",
+                "prevenir a anemia.",
+                "evitar as verminoses.",
+                "remediar o raquitismo.",
+                "combater a febre amarela."
+              ],
+              "correta": "B",
+              "explicacao": "A palidez é sinal de anemia, muitas vezes por falta de ferro. A panela de ferro e o prego soltavam ferro no feijão, o que ajudava a evitar a doença.",
+              "fonte": "ENEM 2023 – Questão 92",
+              "segundos_estimados": 57
             }
           ]
         },
         {
           "id": "NAT-04",
-          "titulo": "Biotecnologia",
+          "titulo": "Genética e biotecnologia",
           "questoes": [
             {
               "id": "NAT-04-01",
@@ -936,98 +946,60 @@
             },
             {
               "id": "NAT-04-02",
-              "texto": "A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou um produto de terapia gênica no país, indicado para o tratamento da distrofia hereditária da retina. O procedimento é recomendado para crianças acima de 12 meses e adultos com perda de visão causada pela mutação do gene humano RPE65. O produto, elaborado por engenharia genética, é composto por um vírus, no qual foi inserida uma cópia do gene normal humano RPE65 para corrigir o funcionamento das células da retina.\n\nANVISA. Disponível em: www.gov.br/anvisa. Acesso em: 4 dez. 2021 (adaptado).",
-              "enunciado": "O sucesso dessa terapia advém do fato de que o produto favorecerá a",
+              "texto": "A palavra “biotecnologia” surgiu no século XX, quando o cientista Herbert Boyer introduziu a informação responsável pela fabricação da insulina humana em uma bactéria, para que ela passasse a produzir a substância.\n\nDisponível em: www.brasil.gov.br. Acesso em: 28 jul. 2012 (adaptado).",
+              "enunciado": "As bactérias modificadas por Herbert Boyer passaram a produzir insulina humana porque receberam",
               "alternativas": [
-                "correção do código genético para a tradução da proteína.",
-                "alteração do RNA ribossômico ligado à síntese da proteína.",
-                "produção de mutações benéficas para a correção do problema.",
-                "liberação imediata da proteína normal na região ocular humana.",
-                "expressão do gene responsável pela produção da enzima normal."
+                "a sequência de DNA codificante de insulina humana.",
+                "a proteína sintetizada por células humanas.",
+                "um RNA recombinante de insulina humana.",
+                "o RNA mensageiro de insulina humana.",
+                "um cromossomo da espécie humana."
               ],
-              "correta": "E",
-              "explicacao": "O vírus leva uma cópia normal do gene RPE65 às células da retina. Elas passam a expressar esse gene e a produzir a enzima normal.",
-              "fonte": "ENEM 2022 – Questão 98",
-              "segundos_estimados": 79
+              "correta": "A",
+              "explicacao": "Boyer colocou na bactéria o trecho de DNA humano com a receita da insulina. A bactéria passou a ler esse gene e a fabricar a proteína.",
+              "fonte": "ENEM 2015 – Questão 74",
+              "segundos_estimados": 59
             },
             {
               "id": "NAT-04-03",
-              "texto": "A tecnologia de vacinas de RNA mensageiro (RNAm) é investigada há anos. Avanços científicos em genética molecular permitiram desenvolver uma vacina para controle da pandemia da covid-19 causada pelo vírus de RNA SARS-CoV-2. A vacina de RNAm tem sequências de genes do vírus. Entretanto, por ser muito instável, o RNAm deve ser recoberto por uma capa de lipídios que evita sua degradação e favorece sua ação. Dessa forma, o RNAm desempenhará sua função específica atuando no mesmo compartimento celular de sempre.\n\nDisponível em: https://sbim.org.br. Acesso em: 29 nov. 2021 (adaptado).",
-              "enunciado": "A imunização produzida por esse tipo de vacina é alcançada por meio da",
+              "texto": "A cariotipagem é um método que analisa células de um indivíduo para determinar seu padrão cromossômico. Essa técnica consiste na montagem fotográfica, em sequência, dos pares de cromossomos e permite identificar um indivíduo normal (46, XX ou 46, XY) ou com alguma alteração cromossômica. A investigação do cariótipo de uma criança do sexo masculino com alterações morfológicas e comprometimento cognitivo verificou que ela apresentava fórmula cariotípica 47, XY, +18.",
+              "enunciado": "A alteração cromossômica da criança pode ser classificada como",
               "alternativas": [
-                "estimulação de leucócitos induzida pela capa lipídica contendo RNAm.",
-                "atuação do RNAm como sequestrador do vírus para o meio extracelular.",
-                "tradução do RNAm em proteína viral, desencadeando a resposta antigênica.",
-                "competição entre o RNAm vacinal e o RNA viral pelos sítios dos ribossomos.",
-                "incorporação do RNAm viral ao genoma do hospedeiro, gerando novo fenótipo."
+                "estrutural, do tipo deleção.",
+                "numérica, do tipo euploidia.",
+                "numérica, do tipo poliploidia.",
+                "estrutural, do tipo duplicação.",
+                "numérica, do tipo aneuploidia."
               ],
-              "correta": "C",
-              "explicacao": "O RNAm entra nas células e é traduzido pelos ribossomos em uma proteína do vírus. O sistema imune reconhece essa proteína como antígeno e cria defesas.",
-              "fonte": "ENEM 2023 – Questão 106",
-              "segundos_estimados": 83
+              "correta": "E",
+              "explicacao": "O cariótipo tem 47 cromossomos, com um 18 a mais. Quando sobra ou falta um cromossomo, a alteração é numérica, do tipo aneuploidia.",
+              "fonte": "ENEM 2015 – Questão 66",
+              "segundos_estimados": 63
+            },
+            {
+              "id": "NAT-04-04",
+              "texto": "Na década de 1990, células do cordão umbilical de recém-nascidos humanos começaram a ser guardadas por criopreservação, uma vez que apresentam alto potencial terapêutico em consequência de suas características peculiares.",
+              "enunciado": "O poder terapêutico dessas células baseia-se em sua capacidade de",
+              "alternativas": [
+                "multiplicação lenta.",
+                "comunicação entre células.",
+                "adesão a diferentes tecidos.",
+                "diferenciação em células especializadas.",
+                "reconhecimento de células semelhantes."
+              ],
+              "correta": "D",
+              "explicacao": "As células do cordão umbilical são células-tronco. Elas podem se diferenciar em vários tipos de células especializadas, o que permite recuperar tecidos.",
+              "fonte": "ENEM 2014 – Questão 89",
+              "segundos_estimados": 49
             }
           ]
         },
         {
           "id": "NAT-05",
-          "titulo": "Química no cotidiano",
-          "questoes": [
-            {
-              "id": "NAT-05-01",
-              "texto": "A simples atitude de não jogar direto no lixo ou no ralo da pia o óleo de cozinha usado pode contribuir para a redução da poluição ambiental. Mas o que fazer com o óleo vegetal que não será mais usado? Não existe um modelo ideal de descarte, mas uma alternativa simples tem sido reaproveitá-lo para fazer sabão. Para isso, são necessários, além do próprio óleo, água e soda cáustica.\n\nLOBO, I. Sabão feito com óleo de cozinha. Disponível em: http://pga.pgr.mpf.gov.br. Acesso em: 29 fev. 2012 (adaptado).",
-              "enunciado": "Com base no texto, a reação química que permite o reaproveitamento do óleo vegetal é denominada",
-              "alternativas": [
-                "redução.",
-                "epoxidação.",
-                "substituição.",
-                "esterificação.",
-                "saponificação."
-              ],
-              "correta": "E",
-              "explicacao": "Óleo (um éster, triglicerídeo) reage com soda cáustica (base forte) e forma sabão e glicerol. Essa reação é a saponificação.",
-              "fonte": "ENEM 2021 – Questão 97",
-              "segundos_estimados": 67
-            },
-            {
-              "id": "NAT-05-02",
-              "texto": "A água bruta coletada de mananciais apresenta alto índice de sólidos suspensos, o que a deixa com um aspecto turvo. Para se obter uma água límpida e potável, ela deve passar por um processo de purificação numa estação de tratamento de água. Nesse processo, as principais etapas são, nesta ordem: coagulação, decantação, filtração, desinfecção e fluoretação.",
-              "enunciado": "Qual é a etapa de retirada de grande parte desses sólidos?",
-              "alternativas": [
-                "Coagulação.",
-                "Decantação.",
-                "Filtração.",
-                "Desinfecção.",
-                "Fluoretação."
-              ],
-              "correta": "B",
-              "explicacao": "Depois da coagulação, a sujeira forma flocos pesados que descem para o fundo dos tanques. É na decantação que sai a maior parte dos sólidos.",
-              "fonte": "ENEM 2022 – Questão 126",
-              "segundos_estimados": 54
-            },
-            {
-              "id": "NAT-05-03",
-              "texto": "Na indústria farmacêutica, é muito comum o emprego de substâncias de revestimento em medicamentos de uso oral, pois trazem uma série de benefícios como alteração de sabor em medicamentos que tenham gosto ruim, melhoria da assimilação do composto, entre outras ações. Alguns compostos poliméricos à base do polissacarídeo celulose são utilizados para garantir que o fármaco somente seja liberado quando em contato com soluções aquosas cujo pH se encontre próximo da faixa da neutralidade.\n\nBORTOLINI, K. et al. Análise de perfil de dissolução de cápsulas gastrorresistentes utilizando polímeros industriais com aplicação em farmácias magistrais. Revista da Unifebe, n. 12, 2013 (adaptado).",
-              "enunciado": "Qual é a finalidade do uso desse revestimento à base de celulose?",
-              "alternativas": [
-                "Diminuir a absorção do princípio ativo no intestino.",
-                "Impedir que o fármaco seja solubilizado no intestino.",
-                "Garantir que o fármaco não seja afetado pelas secreções gástricas.",
-                "Permitir a liberação do princípio ativo pela ação das amilases salivares.",
-                "Facilitar a liberação do fármaco pela ação dos sais biliares sobre o revestimento."
-              ],
-              "correta": "C",
-              "explicacao": "O revestimento só libera o remédio em pH perto do neutro. Assim ele atravessa intacto o estômago ácido e só se abre no intestino, sem ser afetado pelas secreções gástricas.",
-              "fonte": "ENEM 2020 – Questão 108",
-              "segundos_estimados": 84
-            }
-          ]
-        },
-        {
-          "id": "NAT-06",
           "titulo": "Corpo humano e saúde",
           "questoes": [
             {
-              "id": "NAT-06-01",
+              "id": "NAT-05-01",
               "texto": "O “The Kidney Project” é um projeto realizado por cientistas que pretendem desenvolver um rim biônico que executará a maioria das funções biológicas do órgão. O rim biônico possuirá duas partes que incorporam recentes avanços de nanotecnologia, filtração de membrana e biologia celular. Esse projeto significará uma grande melhoria na qualidade de vida para aquelas pessoas que dependem da hemodiálise para sobrevivência.\n\nDisponível em: https://pharm.ucsf.edu. Acesso em: 26 abr. 2019 (adaptado).",
               "enunciado": "O dispositivo criado promoverá diretamente a",
               "alternativas": [
@@ -1043,7 +1015,7 @@
               "segundos_estimados": 62
             },
             {
-              "id": "NAT-06-02",
+              "id": "NAT-05-02",
               "texto": "Um dos exames clínicos mais tradicionais para medir a capacidade reflexa dos indivíduos é o exame do reflexo patelar. Esse exame consiste na estimulação da patela, um pequeno osso localizado na parte anterior da articulação do joelho, com um pequeno martelo. A resposta reflexa ao estímulo é caracterizada pelo levantamento da perna em que o estímulo foi aplicado.",
               "enunciado": "Qual região específica do sistema nervoso coordena essa resposta?",
               "alternativas": [
@@ -1059,20 +1031,36 @@
               "segundos_estimados": 54
             },
             {
-              "id": "NAT-06-03",
-              "texto": "Diversas substâncias são empregadas com a intenção de incrementar o desempenho esportivo de atletas de alto nível. O chamado doping sanguíneo, por exemplo, pela utilização da eritropoietina, é proibido pelas principais federações de esportes no mundo. A eritropoietina é um hormônio produzido pelos rins e fígado e sua principal ação é regular o processo de eritropoiese. Seu uso administrado intravenosamente em quantidades superiores àquelas presentes naturalmente no organismo permite que o indivíduo aumente a sua capacidade de realização de exercícios físicos.",
-              "enunciado": "Esse tipo de doping está diretamente relacionado ao aumento da",
+              "id": "NAT-05-03",
+              "texto": "Durante uma expedição, um grupo de estudantes perdeu-se de seu guia. Ao longo do dia em que esse grupo estava perdido, sem água e debaixo de sol, os estudantes passaram a sentir cada vez mais sede. Consequentemente, o sistema excretor desses indivíduos teve um acréscimo em um dos seus processos funcionais.",
+              "enunciado": "Nessa situação o sistema excretor dos estudantes",
               "alternativas": [
-                "frequência cardíaca.",
-                "capacidade pulmonar.",
-                "massa muscular do indivíduo.",
-                "atividade anaeróbica da musculatura.",
-                "taxa de transporte de oxigênio pelo sangue."
+                "aumentou a filtração glomerular.",
+                "produziu maior volume de urina.",
+                "produziu urina com menos ureia.",
+                "produziu urina com maior concentração de sais.",
+                "reduziu a reabsorção de glicose e aminoácidos."
               ],
-              "correta": "E",
-              "explicacao": "A eritropoietina estimula a produção de hemácias. Com mais hemácias, o sangue leva mais oxigênio aos músculos.",
-              "fonte": "ENEM 2022 – Questão 104",
-              "segundos_estimados": 67
+              "correta": "D",
+              "explicacao": "Com sede e sem água, o corpo libera mais ADH e os rins reabsorvem mais água. Sai menos urina, e ela fica mais concentrada em sais.",
+              "fonte": "ENEM 2015 – Questão 67",
+              "segundos_estimados": 59
+            },
+            {
+              "id": "NAT-05-04",
+              "texto": "Para serem absorvidos pelas células do intestino humano, os lipídios ingeridos precisam ser primeiramente emulsificados. Nessa etapa da digestão, torna-se necessária a ação dos ácidos biliares, visto que os lipídios apresentam uma natureza apolar e são insolúveis em água.",
+              "enunciado": "Esses ácidos atuam no processo de modo a",
+              "alternativas": [
+                "hidrolisar os lipídios.",
+                "agir como detergentes.",
+                "tornar os lipídios anfifílicos.",
+                "promover a secreção de lipases.",
+                "estimular o trânsito intestinal dos lipídios."
+              ],
+              "correta": "B",
+              "explicacao": "Os ácidos biliares têm uma parte que se liga à água e outra que se liga à gordura. Como um detergente, quebram a gordura em gotinhas, o que facilita a digestão.",
+              "fonte": "ENEM 2018 – Questão 96",
+              "segundos_estimados": 53
             }
           ]
         }
@@ -1083,26 +1071,10 @@
       "licoes": [
         {
           "id": "MAT-01",
-          "titulo": "Porcentagem, proporção e juros",
+          "titulo": "Porcentagem e proporção",
           "questoes": [
             {
               "id": "MAT-01-01",
-              "texto": "Uma pessoa, que perdeu um objeto pessoal quando visitou uma cidade, pretende divulgar nos meios de comunicação informações a respeito da perda desse objeto e de seu contato para eventual devolução. No entanto, ela lembra que, de acordo com o Art. 1 234 do Código Civil, poderá ter que pagar pelas despesas do transporte desse objeto até sua cidade e poderá ter que recompensar a pessoa que lhe restituir o objeto em, pelo menos, 5% do valor do objeto.\n\nEla sabe que o custo com transporte será de um quinto do valor atual do objeto e, como ela tem muito interesse em reavê-lo, pretende ofertar o maior percentual possível de recompensa, desde que o gasto total com as despesas não ultrapasse o valor atual do objeto.",
-              "enunciado": "Nessas condições, o percentual sobre o valor do objeto, dado como recompensa, que ela deverá ofertar é igual a",
-              "alternativas": [
-                "20%",
-                "25%",
-                "40%",
-                "60%",
-                "80%"
-              ],
-              "correta": "E",
-              "explicacao": "O transporte custa um quinto do valor do objeto, ou seja, 20%. Para o gasto total não passar de 100% do valor, sobram no máximo 80% para a recompensa.",
-              "fonte": "ENEM 2019 – Questão 138",
-              "segundos_estimados": 125
-            },
-            {
-              "id": "MAT-01-02",
               "texto": "Um borrifador de atuação automática libera, a cada acionamento, uma mesma quantidade de inseticida. O recipiente desse produto, quando cheio, contém 360 mL de inseticida, que duram 60 dias se o borrifador permanecer ligado ininterruptamente e for acionado a cada 48 minutos.",
               "enunciado": "A quantidade de inseticida que é liberada a cada acionamento do borrifador, em mililitro, é",
               "alternativas": [
@@ -1118,20 +1090,36 @@
               "segundos_estimados": 97
             },
             {
-              "id": "MAT-01-03",
-              "texto": "Uma loja vende seus produtos de duas formas: à vista ou financiado em três parcelas mensais iguais. Para definir o valor dessas parcelas nas vendas financiadas, a loja aumenta em 20% o valor do produto à vista e divide esse novo valor por 3. A primeira parcela deve ser paga no ato da compra, e as duas últimas, em 30 e 60 dias após a compra.\n\nUm cliente da loja decidiu comprar, de forma financiada, um produto cujo valor à vista é R$ 1 500,00.\n\nUtilize 5,29 como aproximação para √28.",
-              "enunciado": "A taxa mensal de juros compostos praticada nesse financiamento é de",
+              "id": "MAT-01-02",
+              "texto": "Um automóvel apresenta um desempenho médio de 16 km/L. Um engenheiro desenvolveu um novo motor a combustão que economiza, em relação ao consumo do motor anterior, 0,1 L de combustível a cada 20 km percorridos.",
+              "enunciado": "O valor do desempenho médio do automóvel com o novo motor, em quilômetro por litro, expresso com uma casa decimal, é",
               "alternativas": [
-                "6,7%",
-                "10%",
-                "20%",
-                "21,5%",
-                "23,3%"
+                "15,9.",
+                "16,1.",
+                "16,4.",
+                "17,4.",
+                "18,0."
               ],
               "correta": "D",
-              "explicacao": "A prazo, o produto custa 1 500 × 1,2 = 1 800, em três parcelas de 600; como a primeira é paga na compra, ficam financiados 1 500 − 600 = 900. Com x = 1 + i, as outras duas parcelas valem 900 na data da compra: 900 = 600/x + 600/x², ou 3x² − 2x − 2 = 0. Daí x = (2 + √28)/6 ≈ (2 + 5,29)/6 = 1,215: juros de 21,5% ao mês.",
-              "fonte": "ENEM 2023 – Questão 161",
-              "segundos_estimados": 112
+              "explicacao": "A cada 20 km o carro gastava 20 ÷ 16 = 1,25 L. Com o motor novo gasta 1,25 − 0,1 = 1,15 L, e 20 ÷ 1,15 ≈ 17,4 km/L.",
+              "fonte": "ENEM 2021 – Questão 165",
+              "segundos_estimados": 98
+            },
+            {
+              "id": "MAT-01-03",
+              "texto": "Uma cozinheira produz docinhos especiais por encomenda. Usando uma receita-base de massa, ela prepara uma porção, com a qual produz 50 docinhos maciços de formato esférico, com 2 cm de diâmetro. Um cliente encomenda 150 desses docinhos, mas pede que cada um tenha formato esférico com 4 cm de diâmetro. A cozinheira pretende preparar o número exato de porções da receita-base de massa necessário para produzir os docinhos dessa encomenda.",
+              "enunciado": "Quantas porções da receita-base de massa ela deve preparar para atender esse cliente?",
+              "alternativas": [
+                "2",
+                "3",
+                "6",
+                "12",
+                "24"
+              ],
+              "correta": "E",
+              "explicacao": "Com o dobro do diâmetro, o volume fica 2³ = 8 vezes maior. Os 150 docinhos grandes valem 150 × 8 = 1 200 pequenos, ou 1 200 ÷ 50 = 24 porções.",
+              "fonte": "ENEM 2022 – Questão 178",
+              "segundos_estimados": 104
             }
           ]
         },
@@ -1173,19 +1161,19 @@
             },
             {
               "id": "MAT-02-03",
-              "texto": "Uma administração municipal encomendou a pintura de dez placas de sinalização para colocar em seu pátio de estacionamento.\n\nO profissional contratado para o serviço inicial pintará o fundo de dez placas e cobrará um valor de acordo com a área total dessas placas. O formato de cada placa é um círculo de diâmetro d = 40 cm, que tangencia lados de um retângulo, sendo que o comprimento total da placa é h = 60 cm, conforme ilustrado na figura. Use 3,14 como aproximação para π.\n\n[[imagem:2019-147-t1.png]]",
-              "enunciado": "Qual é a soma das medidas das áreas, em centímetros quadrados, das dez placas?",
+              "texto": "A caixa-d’água de um edifício terá a forma de um paralelepípedo retângulo reto com volume igual a 28 080 litros. Em uma maquete que representa o edifício, a caixa-d’água tem dimensões 2 cm × 3,51 cm × 4 cm.\n\nDado: 1 dm³ = 1 L.",
+              "enunciado": "A escala usada pelo arquiteto foi",
               "alternativas": [
-                "16 628",
-                "22 280",
-                "28 560",
-                "41 120",
-                "66 240"
+                "1 : 10",
+                "1 : 100",
+                "1 : 1 000",
+                "1 : 10 000",
+                "1 : 100 000"
               ],
               "correta": "B",
-              "explicacao": "Cada placa é um semicírculo de raio 20 cm sobre um retângulo de 40 cm de largura e 60 − 20 = 40 cm de altura. Área de uma placa: 3,14 × 20² ÷ 2 + 40 × 40 = 628 + 1 600 = 2 228 cm². As dez placas somam 22 280 cm².",
-              "fonte": "ENEM 2019 – Questão 147",
-              "segundos_estimados": 126
+              "explicacao": "A caixa real tem 28 080 L = 28 080 000 cm³, e a da maquete, 2 × 3,51 × 4 = 28,08 cm³. O volume real é 1 000 000 = 100³ vezes maior, então as medidas são 100 vezes maiores: escala 1 : 100.",
+              "fonte": "ENEM 2020 – Questão 138",
+              "segundos_estimados": 96
             }
           ]
         },
@@ -1245,7 +1233,7 @@
         },
         {
           "id": "MAT-04",
-          "titulo": "Frações e probabilidade",
+          "titulo": "Frações e contagem",
           "questoes": [
             {
               "id": "MAT-04-01",
@@ -1265,35 +1253,35 @@
             },
             {
               "id": "MAT-04-02",
-              "texto": "Em um colégio público, a admissão no primeiro ano se dá por sorteio. Neste ano há 55 candidatos, cujas inscrições são numeradas de 01 a 55. O sorteio de cada número de inscrição será realizado em etapas, utilizando-se duas urnas. Da primeira urna será sorteada uma bola, dentre bolas numeradas de 0 a 9, que representará o algarismo das unidades do número de inscrição a ser sorteado e, em seguida, da segunda urna, será sorteada uma bola para representar o algarismo das dezenas desse número. Depois do primeiro sorteio, e antes de se sortear o algarismo das dezenas, as bolas que estarão presentes na segunda urna serão apenas aquelas cujos números formam, com o algarismo já sorteado, um número de 01 a 55.",
-              "enunciado": "As probabilidades de os candidatos de inscrição número 50 e 02 serem sorteados são, respectivamente,",
+              "texto": "Durante suas férias, oito amigos, dos quais dois são canhotos, decidem realizar um torneio de vôlei de praia. Eles precisam formar quatro duplas para a realização do torneio. Nenhuma dupla pode ser formada por dois jogadores canhotos.",
+              "enunciado": "De quantas maneiras diferentes podem ser formadas essas quatro duplas?",
               "alternativas": [
-                "[[formula:2023-168-a.png]]",
-                "[[formula:2023-168-b.png]]",
-                "[[formula:2023-168-c.png]]",
-                "[[formula:2023-168-d.png]]",
-                "[[formula:2023-168-e.png]]"
+                "69",
+                "70",
+                "90",
+                "104",
+                "105"
               ],
-              "correta": "A",
-              "explicacao": "Para o 50: a unidade 0 sai com chance 1/10 e restam as dezenas 1 a 5 (5 bolas), então 1/10 × 1/5 = 1/50. Para o 02: a unidade 2 sai com 1/10 e restam as dezenas 0 a 5 (6 bolas), então 1/10 × 1/6 = 1/60.",
-              "fonte": "ENEM 2023 – Questão 168",
-              "segundos_estimados": 136
+              "correta": "C",
+              "explicacao": "Oito pessoas formam 7 × 5 × 3 × 1 = 105 conjuntos de quatro duplas. Com os dois canhotos juntos, sobram 6 pessoas para 5 × 3 × 1 = 15 arranjos. Sem canhotos na mesma dupla: 105 − 15 = 90.",
+              "fonte": "ENEM 2019 – Questão 156",
+              "segundos_estimados": 92
             },
             {
               "id": "MAT-04-03",
-              "texto": "Em um jogo de bingo, as cartelas contêm 16 quadrículas dispostas em linhas e colunas. Cada quadrícula tem impresso um número, dentre os inteiros de 1 a 50, sem repetição de número. Na primeira rodada, um número é sorteado, aleatoriamente, dentre os 50 possíveis. Em todas as rodadas, o número sorteado é descartado e não participa dos sorteios das rodadas seguintes. Caso o jogador tenha em sua cartela o número sorteado, ele o assinala na cartela. Ganha o jogador que primeiro conseguir preencher quatro quadrículas que formam uma linha, uma coluna ou uma diagonal, conforme os tipos de situações ilustradas na Figura 1.\n\n[[imagem:2022-141-t1.png]]\n\nO jogo inicia e, nas quatro primeiras rodadas, foram sorteados os seguintes números: 03, 27, 07 e 48. Ao final da quarta rodada, somente Pedro possuía uma cartela que continha esses quatro números sorteados, sendo que todos os demais jogadores conseguiram assinalar, no máximo, um desses números em suas cartelas. Observe na Figura 2 o cartão de Pedro após as quatro primeiras rodadas.\n\n[[imagem:2022-141-t2.png]]",
-              "enunciado": "A probabilidade de Pedro ganhar o jogo em uma das duas próximas rodadas é",
+              "texto": "Um hotel de 3 andares está sendo construído. Cada andar terá 100 quartos. Os quartos serão numerados de 100 a 399 e cada um terá seu número afixado à porta. Cada número será composto por peças individuais, cada uma simbolizando um único algarismo.",
+              "enunciado": "Qual a quantidade mínima de peças, simbolizando o algarismo 2, necessárias para identificar o número de todos os quartos?",
               "alternativas": [
-                "[[formula:2022-141-a.png]]",
-                "[[formula:2022-141-b.png]]",
-                "[[formula:2022-141-c.png]]",
-                "[[formula:2022-141-d.png]]",
-                "[[formula:2022-141-e.png]]"
+                "160",
+                "157",
+                "130",
+                "120",
+                "60"
               ],
-              "correta": "E",
-              "explicacao": "Restam 46 números, e só o 12 fecha uma linha na hora: Pedro ganha na 5ª rodada com chance 1/46. Se não, ganha na 6ª com o 12 depois de outro número (45 casos) ou com 05 e 45 (4ª coluna) ou 11 e 19 (diagonal), em qualquer ordem (4 casos), entre 46 × 45 sequências possíveis. Somando: 1/46 + 49/(46 × 45).",
-              "fonte": "ENEM 2022 – Questão 141",
-              "segundos_estimados": 150
+              "correta": "A",
+              "explicacao": "De 200 a 299, o 2 aparece na centena 100 vezes. Na dezena (x20 a x29) e na unidade (x02, x12…) ele aparece 10 vezes em cada uma das 3 centenas: 30 + 30 = 60. Total: 160 peças.",
+              "fonte": "ENEM 2020 – Questão 141",
+              "segundos_estimados": 97
             }
           ]
         },
@@ -1369,7 +1357,7 @@
         },
         {
           "id": "MAT-06",
-          "titulo": "Funções e inequações",
+          "titulo": "Funções e equações",
           "questoes": [
             {
               "id": "MAT-06-01",
@@ -1405,121 +1393,205 @@
             },
             {
               "id": "MAT-06-03",
-              "texto": "Uma empresa presta serviço de abastecimento de água em uma cidade. O valor mensal a pagar por esse serviço é determinado pela aplicação de tarifas, por faixas de consumo de água, sendo obtido pela adição dos valores correspondentes a cada faixa.\n\n• Faixa 1: para consumo de até 6 m³, valor fixo de R$ 12,00;\n\n• Faixa 2: para consumo superior a 6 m³ e até 10 m³, tarifa de R$ 3,00 por metro cúbico ao que exceder a 6 m³;\n\n• Faixa 3: para consumo superior a 10 m³, tarifa de R$ 6,00 por metro cúbico ao que exceder a 10 m³.\n\nSabe-se que nessa cidade o consumo máximo de água por residência é de 15 m³ por mês.",
-              "enunciado": "O gráfico que melhor descreve o valor P, em real, a ser pago por mês, em função do volume V de água consumido, em metro cúbico, é",
+              "texto": "Para concretar a laje de sua residência, uma pessoa contratou uma construtora. Tal empresa informa que o preço y do concreto bombeado é composto de duas partes: uma fixa, chamada de taxa de bombeamento, e uma variável, que depende do volume x de concreto utilizado. Sabe-se que a taxa de bombeamento custa R$ 500,00 e que o metro cúbico do concreto bombeado é de R$ 250,00.",
+              "enunciado": "A expressão que representa o preço y em função do volume x, em metro cúbico, é",
               "alternativas": [
-                "[[imagem:2019-139-a.png]]",
-                "[[imagem:2019-139-b.png]]",
-                "[[imagem:2019-139-c.png]]",
-                "[[imagem:2019-139-d.png]]",
-                "[[imagem:2019-139-e.png]]"
+                "y = 250x",
+                "y = 500x",
+                "y = 750x",
+                "y = 250x + 500",
+                "y = 500x + 250"
               ],
-              "correta": "A",
-              "explicacao": "Até 6 m³ o valor é fixo (12 reais): trecho horizontal. De 6 a 10 m³ sobe 3 reais por m³ e, de 10 a 15 m³, 6 reais por m³, então o último trecho é o mais inclinado.",
-              "fonte": "ENEM 2019 – Questão 139",
-              "segundos_estimados": 139
+              "correta": "D",
+              "explicacao": "A parte fixa é 500, e cada metro cúbico custa 250, então x metros cúbicos custam 250x. Somando: y = 250x + 500.",
+              "fonte": "ENEM 2023 – Questão 162",
+              "segundos_estimados": 107
             },
             {
               "id": "MAT-06-04",
-              "texto": "O álcool é um depressor do sistema nervoso central e age diretamente em diversos órgãos. A concentração de álcool no sangue pode ser entendida como a razão entre a quantidade q de álcool ingerido, medida em grama, e o volume de sangue, em litro, presente no organismo do indivíduo. Em geral, considera-se que esse volume corresponda ao valor numérico dado por 8% da massa corporal m desse indivíduo, medida em quilograma. De acordo com a Associação Médica Americana, uma concentração alcoólica superior a 0,4 grama por litro de sangue é capaz de trazer prejuízos à saúde do indivíduo.\n\nDisponível em: http://cisa.org.br. Acesso em: 1 dez. 2018 (adaptado).",
-              "enunciado": "A expressão relacionando q e m que representa a concentração alcoólica prejudicial à saúde do indivíduo, de acordo com a Associação Médica Americana, é",
+              "texto": "O metrô de um município oferece dois tipos de tíquetes com colorações diferentes, azul e vermelha, sendo vendidos em cartelas, cada qual com nove tíquetes da mesma cor e mesmo valor unitário. Duas cartelas de tíquetes azuis e uma cartela de tíquetes vermelhos são vendidas por R$ 32,40. Sabe-se que o preço de um tíquete azul menos o preço de um tíquete vermelho é igual ao preço de um tíquete vermelho mais cinco centavos.",
+              "enunciado": "Qual o preço, em real, de uma cartela de tíquetes vermelhos?",
               "alternativas": [
-                "[[formula:2019-165-a.png]]",
-                "[[formula:2019-165-b.png]]",
-                "[[formula:2019-165-c.png]]",
-                "[[formula:2019-165-d.png]]",
-                "[[formula:2019-165-e.png]]"
+                "4,68",
+                "6,30",
+                "9,30",
+                "10,50",
+                "10,65"
               ],
-              "correta": "E",
-              "explicacao": "O volume de sangue é 8% da massa: 0,08m litros. A concentração é q/(0,08m), e ela prejudica a saúde quando passa de 0,4: q/(0,08m) > 0,4.",
-              "fonte": "ENEM 2019 – Questão 165",
-              "segundos_estimados": 135
+              "correta": "B",
+              "explicacao": "Com o tíquete azul a e o vermelho v: 18a + 9v = 32,40 e a − v = v + 0,05, ou seja, a = 2v + 0,05. Daí 45v + 0,90 = 32,40 e v = 0,70: a cartela vermelha custa 9 × 0,70 = 6,30.",
+              "fonte": "ENEM 2023 – Questão 175",
+              "segundos_estimados": 107
             }
           ]
         }
       ]
     }
   ],
-  "ids_v1": {
-    "LIN-01-01": "LIN-01-01",
-    "LIN-01-02": "LIN-06-01",
-    "LIN-01-03": "LIN-01-02",
-    "LIN-01-04": "LIN-01-03",
-    "LIN-01-05": "LIN-06-02",
-    "LIN-02-01": "LIN-03-01",
-    "LIN-02-02": "LIN-02-01",
-    "LIN-02-03": "LIN-03-02",
-    "LIN-02-04": "LIN-02-02",
-    "LIN-02-05": "LIN-02-03",
-    "LIN-03-01": "LIN-04-01",
-    "LIN-03-02": "LIN-04-02",
-    "LIN-03-03": "LIN-04-03",
-    "LIN-03-04": "LIN-03-03",
-    "LIN-03-05": "LIN-04-04",
-    "LIN-04-01": "LIN-06-03",
-    "LIN-04-02": "LIN-05-01",
-    "LIN-04-03": "LIN-05-02",
-    "LIN-04-04": "LIN-05-03",
-    "LIN-04-05": "LIN-05-04",
-    "HUM-01-01": "HUM-03-01",
-    "HUM-01-02": "HUM-03-02",
-    "HUM-01-03": "HUM-03-03",
-    "HUM-01-04": "HUM-01-02",
-    "HUM-01-05": "HUM-01-03",
-    "HUM-02-01": "HUM-02-01",
-    "HUM-02-02": "HUM-02-02",
-    "HUM-02-03": "HUM-01-01",
-    "HUM-02-04": "HUM-02-03",
-    "HUM-02-05": "HUM-02-04",
-    "HUM-03-01": "HUM-04-01",
-    "HUM-03-02": "HUM-04-02",
-    "HUM-03-03": "HUM-03-04",
-    "HUM-03-04": "HUM-04-03",
-    "HUM-03-05": "HUM-04-04",
-    "HUM-04-01": "HUM-05-01",
-    "HUM-04-02": "HUM-05-02",
-    "HUM-04-03": "HUM-05-03",
-    "HUM-04-04": "HUM-05-04",
-    "HUM-04-05": "HUM-05-05",
-    "NAT-01-01": "NAT-01-01",
-    "NAT-01-02": "NAT-01-02",
-    "NAT-01-03": "NAT-01-03",
-    "NAT-01-04": "NAT-01-04",
-    "NAT-01-05": "NAT-01-05",
-    "NAT-02-01": "NAT-02-01",
-    "NAT-02-02": "NAT-04-01",
-    "NAT-02-03": "NAT-02-02",
-    "NAT-02-04": "NAT-04-02",
-    "NAT-02-05": "NAT-02-03",
-    "NAT-03-01": "NAT-03-01",
-    "NAT-03-02": "NAT-03-02",
-    "NAT-03-03": "NAT-05-01",
-    "NAT-03-04": "NAT-05-02",
-    "NAT-03-05": "NAT-03-03",
-    "NAT-04-01": "NAT-06-01",
-    "NAT-04-02": "NAT-05-03",
-    "NAT-04-03": "NAT-06-02",
-    "NAT-04-04": "NAT-06-03",
-    "NAT-04-05": "NAT-04-03",
-    "MAT-01-01": "MAT-01-01",
-    "MAT-01-02": "MAT-01-02",
-    "MAT-01-03": "MAT-04-01",
-    "MAT-01-04": "MAT-02-01",
-    "MAT-01-05": "MAT-01-03",
-    "MAT-02-01": "MAT-02-02",
-    "MAT-02-02": "MAT-02-03",
-    "MAT-02-03": "MAT-03-01",
-    "MAT-02-04": "MAT-03-02",
-    "MAT-02-05": "MAT-03-03",
-    "MAT-03-01": "MAT-05-01",
-    "MAT-03-02": "MAT-05-02",
-    "MAT-03-03": "MAT-05-03",
-    "MAT-03-04": "MAT-04-02",
-    "MAT-03-05": "MAT-04-03",
-    "MAT-04-01": "MAT-06-01",
-    "MAT-04-02": "MAT-06-02",
-    "MAT-04-03": "MAT-06-03",
-    "MAT-04-04": "MAT-05-04",
-    "MAT-04-05": "MAT-06-04"
+  "ids_antigos": {
+    "1": {
+      "LIN-01-01": "",
+      "LIN-01-02": "",
+      "LIN-01-03": "",
+      "LIN-01-04": "",
+      "LIN-01-05": "",
+      "LIN-02-01": "LIN-01-01",
+      "LIN-02-02": "",
+      "LIN-02-03": "",
+      "LIN-02-04": "",
+      "LIN-02-05": "",
+      "LIN-03-01": "",
+      "LIN-03-02": "",
+      "LIN-03-03": "",
+      "LIN-03-04": "",
+      "LIN-03-05": "",
+      "LIN-04-01": "",
+      "LIN-04-02": "",
+      "LIN-04-03": "",
+      "LIN-04-04": "",
+      "LIN-04-05": "",
+      "HUM-01-01": "",
+      "HUM-01-02": "HUM-03-01",
+      "HUM-01-03": "",
+      "HUM-01-04": "",
+      "HUM-01-05": "",
+      "HUM-02-01": "",
+      "HUM-02-02": "HUM-01-03",
+      "HUM-02-03": "",
+      "HUM-02-04": "",
+      "HUM-02-05": "",
+      "HUM-03-01": "",
+      "HUM-03-02": "",
+      "HUM-03-03": "",
+      "HUM-03-04": "HUM-02-04",
+      "HUM-03-05": "",
+      "HUM-04-01": "",
+      "HUM-04-02": "",
+      "HUM-04-03": "HUM-04-02",
+      "HUM-04-04": "HUM-04-03",
+      "HUM-04-05": "",
+      "NAT-01-01": "NAT-01-02",
+      "NAT-01-02": "",
+      "NAT-01-03": "NAT-01-03",
+      "NAT-01-04": "",
+      "NAT-01-05": "",
+      "NAT-02-01": "",
+      "NAT-02-02": "NAT-04-01",
+      "NAT-02-03": "",
+      "NAT-02-04": "",
+      "NAT-02-05": "",
+      "NAT-03-01": "",
+      "NAT-03-02": "",
+      "NAT-03-03": "",
+      "NAT-03-04": "NAT-03-02",
+      "NAT-03-05": "NAT-02-03",
+      "NAT-04-01": "NAT-05-01",
+      "NAT-04-02": "",
+      "NAT-04-03": "NAT-05-02",
+      "NAT-04-04": "",
+      "NAT-04-05": "",
+      "MAT-01-01": "",
+      "MAT-01-02": "MAT-01-01",
+      "MAT-01-03": "MAT-04-01",
+      "MAT-01-04": "MAT-02-01",
+      "MAT-01-05": "",
+      "MAT-02-01": "MAT-02-02",
+      "MAT-02-02": "",
+      "MAT-02-03": "MAT-03-01",
+      "MAT-02-04": "MAT-03-02",
+      "MAT-02-05": "MAT-03-03",
+      "MAT-03-01": "MAT-05-01",
+      "MAT-03-02": "MAT-05-02",
+      "MAT-03-03": "MAT-05-03",
+      "MAT-03-04": "",
+      "MAT-03-05": "",
+      "MAT-04-01": "MAT-06-01",
+      "MAT-04-02": "MAT-06-02",
+      "MAT-04-03": "",
+      "MAT-04-04": "MAT-05-04",
+      "MAT-04-05": ""
+    },
+    "2": {
+      "LIN-01-01": "",
+      "LIN-01-02": "",
+      "LIN-01-03": "",
+      "LIN-02-01": "",
+      "LIN-02-02": "",
+      "LIN-02-03": "",
+      "LIN-03-01": "LIN-01-01",
+      "LIN-03-02": "",
+      "LIN-03-03": "",
+      "LIN-04-01": "",
+      "LIN-04-02": "",
+      "LIN-04-03": "",
+      "LIN-04-04": "",
+      "LIN-05-01": "",
+      "LIN-05-02": "",
+      "LIN-05-03": "",
+      "LIN-05-04": "",
+      "LIN-06-01": "",
+      "LIN-06-02": "",
+      "LIN-06-03": "",
+      "HUM-01-01": "",
+      "HUM-01-02": "",
+      "HUM-01-03": "",
+      "HUM-02-01": "",
+      "HUM-02-02": "HUM-01-03",
+      "HUM-02-03": "",
+      "HUM-02-04": "",
+      "HUM-03-01": "",
+      "HUM-03-02": "HUM-03-01",
+      "HUM-03-03": "",
+      "HUM-03-04": "",
+      "HUM-04-01": "",
+      "HUM-04-02": "",
+      "HUM-04-03": "HUM-02-04",
+      "HUM-04-04": "",
+      "HUM-05-01": "",
+      "HUM-05-02": "",
+      "HUM-05-03": "HUM-04-02",
+      "HUM-05-04": "HUM-04-03",
+      "HUM-05-05": "",
+      "NAT-01-01": "NAT-01-02",
+      "NAT-01-02": "",
+      "NAT-01-03": "NAT-01-03",
+      "NAT-01-04": "",
+      "NAT-01-05": "",
+      "NAT-02-01": "",
+      "NAT-02-02": "",
+      "NAT-02-03": "",
+      "NAT-03-01": "",
+      "NAT-03-02": "",
+      "NAT-03-03": "NAT-02-03",
+      "NAT-04-01": "NAT-04-01",
+      "NAT-04-02": "",
+      "NAT-04-03": "",
+      "NAT-05-01": "",
+      "NAT-05-02": "NAT-03-02",
+      "NAT-05-03": "",
+      "NAT-06-01": "NAT-05-01",
+      "NAT-06-02": "NAT-05-02",
+      "NAT-06-03": "",
+      "MAT-01-01": "",
+      "MAT-01-02": "MAT-01-01",
+      "MAT-01-03": "",
+      "MAT-02-01": "MAT-02-01",
+      "MAT-02-02": "MAT-02-02",
+      "MAT-02-03": "",
+      "MAT-03-01": "MAT-03-01",
+      "MAT-03-02": "MAT-03-02",
+      "MAT-03-03": "MAT-03-03",
+      "MAT-04-01": "MAT-04-01",
+      "MAT-04-02": "",
+      "MAT-04-03": "",
+      "MAT-05-01": "MAT-05-01",
+      "MAT-05-02": "MAT-05-02",
+      "MAT-05-03": "MAT-05-03",
+      "MAT-05-04": "MAT-05-04",
+      "MAT-06-01": "MAT-06-01",
+      "MAT-06-02": "MAT-06-02",
+      "MAT-06-03": "",
+      "MAT-06-04": ""
+    }
   }
 }

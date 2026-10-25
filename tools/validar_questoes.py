@@ -1,7 +1,8 @@
 """Valida app/src/main/assets/questoes.json contra a spec (seção 9.3) e contra o bruto da API.
 
-Também confere as imagens e fórmulas de Matemática em app/src/main/assets/imagens/, o tempo
-estimado de cada lição e o mapa "ids_v1" usado para migrar o progresso salvo.
+Também confere o gabarito oficial do INEP, as anuladas, o limite de palavras, as imagens e
+fórmulas de Matemática em app/src/main/assets/imagens/, o tempo estimado de cada lição e o mapa
+"ids_antigos" usado para migrar o progresso salvo.
 
 Uso: python tools/validar_questoes.py   (sai com código 1 se houver erro)
 """
@@ -12,15 +13,15 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from montar_questoes import (ALVO_LICAO_S, AREAS as AREAS_MONTAGEM, CORRECOES, FIGURAS,  # noqa: E402
-                             FORMULAS, IMAGEM_MD, IMAGENS, LICOES_V1, MAX_QUESTOES, MIN_QUESTOES,
-                             SAIDA, SEM_PONTO, campos, carregar_bruto, estimar_segundos, ids_v1)
+from montar_questoes import (ALVO_LICAO_S, ANULADAS, AREAS as AREAS_MONTAGEM, CORRECOES,  # noqa: E402
+                             FIGURAS, FORMULAS, GABARITO_INEP, IMAGEM_MD, IMAGENS, LIMITE_PALAVRAS,
+                             MAX_QUESTOES, MIN_QUESTOES, SAIDA, SEM_PONTO, VERSAO, VERSOES_ANTIGAS,
+                             campos, carregar_bruto, contar_palavras, estimar_segundos, ids_antigos)
 
 AREAS = {"LINGUAGENS": "LIN", "HUMANAS": "HUM", "NATUREZA": "NAT", "MATEMATICA": "MAT"}
 DISCIPLINAS = {"LIN": "linguagens", "HUM": "ciencias-humanas", "NAT": "ciencias-natureza",
                "MAT": "matematica"}
 TOTAL = 80
-VERSAO = 2
 CAMPOS = {"id", "texto", "enunciado", "alternativas", "correta", "explicacao", "fonte",
           "segundos_estimados"}
 # Tempo das lições (pela estimativa). Nenhuma passa do teto, e a média da área fica perto do
@@ -54,7 +55,7 @@ if raw_bytes.startswith(b"\xef\xbb\xbf"):
 dados = json.loads(raw_bytes.decode("utf-8"))  # falha aqui = JSON inválido
 bruto = carregar_bruto()
 
-if set(dados) != {"versao", "areas", "ids_v1"}:
+if set(dados) != {"versao", "areas", "ids_antigos"}:
     erro(f"raiz com chaves inesperadas: {set(dados)}")
 if dados.get("versao") != VERSAO:
     erro(f"versao {dados.get('versao')!r} (esperado {VERSAO})")
@@ -94,6 +95,8 @@ for area in dados["areas"]:
                 erro(f"{qid}: precisa de 5 alternativas não vazias")
             if q["correta"] not in list("ABCDE"):
                 erro(f"{qid}: correta inválida {q['correta']!r}")
+            if contar_palavras(q) > LIMITE_PALAVRAS[area["id"]]:
+                erro(f"{qid}: {contar_palavras(q)} palavras (máximo {LIMITE_PALAVRAS[area['id']]})")
 
             # Marcadores de imagem/fórmula: só em Matemática, e cada arquivo tem que existir.
             for valor in (q["texto"], q["enunciado"], *q["alternativas"]):
@@ -128,8 +131,12 @@ for area in dados["areas"]:
                 erro(f"{qid}: bruto é de língua estrangeira")
             if sigla != "MAT" and (b.get("files") or any(a.get("file") for a in b["alternatives"])):
                 erro(f"{qid}: bruto tem arquivo fora de Matemática")
+            if q["correta"] != GABARITO_INEP.get(chave):
+                erro(f"{qid}: gabarito {q['correta']} ≠ INEP {GABARITO_INEP.get(chave)}")
             if q["correta"] != b["correctAlternative"]:
-                erro(f"{qid}: gabarito {q['correta']} ≠ oficial {b['correctAlternative']}")
+                erro(f"{qid}: gabarito {q['correta']} ≠ API {b['correctAlternative']}")
+            if chave in ANULADAS:
+                erro(f"{qid}: {chave} foi anulada ou abandonada pela TRI")
             certa = [a["letter"] for a in b["alternatives"] if a["isCorrect"]]
             if certa != [q["correta"]]:
                 erro(f"{qid}: isCorrect do bruto aponta {certa}")
@@ -171,26 +178,20 @@ for area in dados["areas"]:
         resumo.append(f"  {area['id']}: {len(tempos)} lições, {min(tempos) / 60:.1f} a "
                       f"{max(tempos) / 60:.1f} min (média {media / 60:.1f})")
 
-    # A trilha segue a ordem das lições da versão 1 (cada lição depende só de lições antigas até
-    # a da anterior), para a migração (ver ProgressoManager) só concluir lições em sequência.
-    antiga = {chave: li for li, chaves in enumerate(LICOES_V1.get(sigla, [])) for chave in chaves}
-    ultima = -1
-    for licao in area["licoes"]:
-        chaves = [f"{m.group(1)}-{m.group(2)}" for m in (FONTE.match(q["fonte"]) for q in licao["questoes"]) if m]
-        depende = max((antiga.get(c, 99) for c in chaves), default=99)
-        if depende < ultima:
-            erro(f"{licao['id']}: fora da ordem das lições da versão 1 (migração deixaria buraco)")
-        ultima = max(ultima, depende)
-
-# Mapa da migração: id da versão 1 -> id atual, cobrindo as 80 questões uma vez cada.
-mapa = dados.get("ids_v1", {})
-if mapa != ids_v1():
-    erro("ids_v1 diferente do que o montar_questoes.py gera a partir de LICOES_V1")
-if len(mapa) != TOTAL or set(mapa.values()) != ids_questao:
-    erro("ids_v1 precisa levar cada questão antiga a uma questão atual diferente")
-for sigla, licoes in LICOES_V1.items():
-    if len(licoes) != 4 or any(len(chaves) != 5 for chaves in licoes):
-        erro(f"LICOES_V1[{sigla}] precisa ter as 4 lições de 5 da versão 1")
+# Mapa da migração: em cada versão antiga, todas as questões dela, cada uma levada a uma questão
+# atual diferente ou a "" (saiu do banco).
+mapa = dados.get("ids_antigos", {})
+if mapa != ids_antigos():
+    erro("ids_antigos diferente do que o montar_questoes.py gera a partir de VERSOES_ANTIGAS")
+for versao, ids in mapa.items():
+    atuais = [atual for atual in ids.values() if atual]
+    if len(atuais) != len(set(atuais)) or not set(atuais) <= ids_questao:
+        erro(f"ids_antigos[{versao}] leva duas questões antigas à mesma atual ou a uma que não existe")
+    tamanho = sum(len(chaves) for licoes in VERSOES_ANTIGAS[versao].values() for chaves in licoes)
+    if len(ids) != tamanho:
+        erro(f"ids_antigos[{versao}] tem {len(ids)} questões; a versão {versao} tinha {tamanho}")
+if set(mapa) != {str(v) for v in range(1, VERSAO)}:
+    erro(f"ids_antigos precisa ter as versões 1 a {VERSAO - 1}")
 
 if total != TOTAL:
     erro(f"total de questões {total} (esperado {TOTAL})")
@@ -205,7 +206,8 @@ for figura in sorted(FIGURAS.glob("*.png")) if FIGURAS.is_dir() else []:
     elif (IMAGENS / figura.name).read_bytes() != figura.read_bytes():
         erro(f"{figura.name} no app difere de tools/figuras/ (rode o montar_questoes.py)")
 chaves_montagem = {c for _, _, licoes in AREAS_MONTAGEM for _, qs in licoes for c, _, _ in qs}
-for nome, tabela in (("FORMULAS", FORMULAS), ("CORRECOES", CORRECOES), ("SEM_PONTO", SEM_PONTO)):
+for nome, tabela in (("FORMULAS", FORMULAS), ("CORRECOES", CORRECOES), ("SEM_PONTO", SEM_PONTO),
+                     ("GABARITO_INEP", GABARITO_INEP)):
     for chave in sorted(set(tabela) - chaves_montagem):
         erro(f"{nome} tem {chave}, que não está no banco")
 for chave, letras in SEM_PONTO.items():
@@ -220,6 +222,6 @@ if erros:
     print("\n".join(erros))
     sys.exit(1)
 print(f"OK: {total} questões, {len(ids_licao)} lições, {len({k[:4] for k in fontes})} anos, "
-      f"{len(arquivos_usados)} imagens/fórmulas; gabaritos e alternativas conferem com o bruto da API.")
+      f"{len(arquivos_usados)} imagens/fórmulas; gabaritos conferem com o INEP e a API, e o texto com o bruto.")
 print("Tempo estimado por lição:")
 print("\n".join(resumo))

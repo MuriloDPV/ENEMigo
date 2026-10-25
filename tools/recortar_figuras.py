@@ -18,8 +18,6 @@ MARGEM_PX = 12
 BRANCO = 245  # pixel mais claro que isso conta como fundo
 
 URL_PROVAS = {
-    "2019_PV_impresso_D2_CD7.pdf":
-        "https://download.inep.gov.br/educacao_basica/enem/provas/2019/2019_PV_impresso_D2_CD7.pdf",
     "2021_PV_impresso_D2_CD7.pdf":
         "https://download.inep.gov.br/enem/provas_e_gabaritos/2021_PV_impresso_D2_CD7.pdf",
 }
@@ -35,12 +33,6 @@ RECORTES = {
     "2021-162-c.png": ("2021_PV_impresso_D2_CD7.pdf", 27, (50, 596, 212, 700)),
     "2021-162-d.png": ("2021_PV_impresso_D2_CD7.pdf", 27, (302, 196, 467, 358)),
     "2021-162-e.png": ("2021_PV_impresso_D2_CD7.pdf", 27, (302, 429, 467, 533)),
-    # 2019-139: gráficos da API com uns 200 x 260 px, que borravam esticados no card da alternativa.
-    "2019-139-a.png": ("2019_PV_impresso_D2_CD7.pdf", 18, (44, 225, 208, 393)),
-    "2019-139-b.png": ("2019_PV_impresso_D2_CD7.pdf", 18, (44, 397, 208, 563)),
-    "2019-139-c.png": ("2019_PV_impresso_D2_CD7.pdf", 18, (44, 567, 208, 735)),
-    "2019-139-d.png": ("2019_PV_impresso_D2_CD7.pdf", 18, (288, 225, 455, 393)),
-    "2019-139-e.png": ("2019_PV_impresso_D2_CD7.pdf", 18, (288, 397, 455, 563)),
 }
 
 
