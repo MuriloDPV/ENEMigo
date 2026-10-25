@@ -98,7 +98,7 @@ AREAS = [
         ("Corpo, arte e cultura", [
             ("2013-97", "D", "Huizinga define o jogo como algo com fim em si mesmo, cheio de tensão e alegria e diferente da vida comum. A fruição vem desse caráter lúdico, e não da competição ou da técnica."),
             ("2019-35", "A", "Anorexia e bulimia são transtornos alimentares ligados ao medo de engordar e a uma imagem distorcida do próprio corpo. Elas nascem justamente da preocupação exagerada com o peso."),
-            ("2014-123", "C", "O choro e o samba têm o cavaquinho e o violão na base. Nos outros pares mandam a percussão, a sanfona ou os metais."),
+            ("2014-123", "C", "No choro e no samba, o cavaquinho e o violão são a base do conjunto. Nos outros pares, a música se apoia em outros instrumentos, como os tambores do maracatu e do carimbó, a sanfona do baião e do xote e os metais do frevo."),
             ("2019-25", "B", "Uma escola de samba desfilou em homenagem ao Rei do Baião. O evento junta dois gêneros brasileiros: o samba-enredo e o baião."),
         ]),
     ]),
@@ -107,7 +107,7 @@ AREAS = [
             ("2018-79", "C", "Para Epicuro, quem não se contenta com pouco nunca fica satisfeito. A máxima valoriza a temperança: dominar os desejos e ficar com o necessário."),
             ("2022-88", "E", "Para Sêneca, a filosofia ensina a manter o ânimo firme até diante da morte e da doença. Isso só é possível controlando as emoções: é a moderação das paixões."),
             ("2021-82", "B", "Sócrates conduz a conversa com perguntas para chegar à definição do que é a virtude. Esse jogo de perguntas e respostas é o método dialético."),
-            ("2016-1", "B", "Para Schopenhauer, satisfazer um desejo é como dar esmola: alivia hoje, e a fome volta amanhã. A felicidade está na resignação, em não depender do mundo de fora: a independência interior."),
+            ("2016-1", "B", "Para Schopenhauer, satisfazer um desejo é como a esmola dada ao mendigo: alivia hoje, e a fome volta amanhã. A felicidade está na resignação, em não depender do mundo de fora: a independência interior."),
         ]),
         ("Política e cidadania", [
             ("2019-79", "A", "Nas cidades-estado antigas, ser cidadão com plenos direitos dependia da posse de terra. Onde poucos eram donos de terra, como nas aristocracias e oligarquias, havia poucos cidadãos."),
@@ -139,7 +139,7 @@ AREAS = [
             ("2013-80", "B", "As algas fazem fotossíntese: são os produtores do manguezal. A produção primária, que sustenta o resto do ecossistema, depende delas."),
             ("2019-97", "D", "Cutias da mesma espécie disputam o mesmo recurso, as sementes enterradas. Uma rouba a reserva da outra: é uma relação de competição."),
             ("2021-127", "C", "As preguiças-gigantes comiam os frutos e espalhavam as sementes. Com a extinção delas, a dispersão das sementes diminuiu e a flora ficou mais restrita."),
-            ("2017-111", "E", "O mercúrio não é eliminado e vai se acumulando a cada nível da cadeia alimentar. Os botos estão no topo, então concentram mais: é a bioacumulação."),
+            ("2017-111", "E", "O mercúrio não é eliminado e vai se acumulando a cada nível da cadeia alimentar. Os botos estão no topo, então concentram mais: é a biomagnificação (ou magnificação trófica)."),
         ]),
         ("Física no cotidiano", [
             ("2015-86", "D", "A mesma nota tem a mesma frequência. O que diferencia a flauta do piano é o timbre, ou seja, a forma da onda de cada instrumento."),
@@ -148,7 +148,7 @@ AREAS = [
             ("2020-109", "E", "Na panela de pressão, a temperatura da água depende da pressão, que a válvula mantém. Com o vapor já saindo, fogo alto não esquenta mais: só gasta gás à toa."),
         ]),
         ("Química no cotidiano", [
-            ("2013-81", "A", "As impurezas grudam nas partículas e formam flocos leves. Na flotação, bolhas de ar levam esses flocos até a superfície, de onde são retirados."),
+            ("2013-81", "A", "As impurezas grudam nas partículas de sulfato de alumínio, que ficam suspensas na água. Das alternativas, só a flotação separa esse material: bolhas de ar se prendem aos flocos e os levam até a superfície, de onde são retirados."),
             ("2022-126", "B", "Depois da coagulação, a sujeira forma flocos pesados que descem para o fundo dos tanques. É na decantação que sai a maior parte dos sólidos."),
             ("2020-92", "D", "Os polímeros biodegradáveis são decompostos por microrganismos em pouco tempo. Os convencionais levam centenas de anos para se degradar no ambiente."),
             ("2023-92", "B", "A palidez é sinal de anemia, muitas vezes por falta de ferro. A panela de ferro e o prego soltavam ferro no feijão, o que ajudava a evitar a doença."),
@@ -184,7 +184,7 @@ AREAS = [
         ]),
         ("Frações e contagem", [
             ("2020-170", "C", "São 4 + 6 + 6 = 16 partes, e cada sócio deve ficar com 16/3. Antônio precisa de 16/3 − 4 = 4/3 de parte, 2/3 vindos de cada sócio. Como cada um tem 6 partes, isso é (2/3) ÷ 6 = 1/9 do capital dele."),
-            ("2019-156", "C", "Oito pessoas formam 7 × 5 × 3 × 1 = 105 conjuntos de quatro duplas. Com os dois canhotos juntos, sobram 6 pessoas para 5 × 3 × 1 = 15 arranjos. Sem canhotos na mesma dupla: 105 − 15 = 90."),
+            ("2019-156", "C", "Cada canhoto precisa de um parceiro destro: o primeiro tem 6 opções e o segundo, 5. Os 4 que sobram formam duas duplas de 3 jeitos: um deles escolhe o parceiro entre 3, e os outros dois ficam juntos. Total: 6 × 5 × 3 = 90."),
             ("2020-141", "A", "De 200 a 299, o 2 aparece na centena 100 vezes. Na dezena (x20 a x29) e na unidade (x02, x12…) ele aparece 10 vezes em cada uma das 3 centenas: 30 + 30 = 60. Total: 160 peças."),
         ]),
         ("Tabelas e gráficos", [
@@ -197,7 +197,7 @@ AREAS = [
             ("2019-168", "D", "Além do gerente, há X − 1 diaristas, e cada um recebe 2 × 80 = 160 reais por semana. Y = 1 000 + 160(X − 1) = 160X + 840."),
             ("2021-173", "C", "O menor número de lavagens sai quando todas são completas: 300 ÷ 35 ≈ 8,6. Oito lavagens dão só 280 reais, então são necessárias 9."),
             ("2023-162", "D", "A parte fixa é 500, e cada metro cúbico custa 250, então x metros cúbicos custam 250x. Somando: y = 250x + 500."),
-            ("2023-175", "B", "Com o tíquete azul a e o vermelho v: 18a + 9v = 32,40 e a − v = v + 0,05, ou seja, a = 2v + 0,05. Daí 45v + 0,90 = 32,40 e v = 0,70: a cartela vermelha custa 9 × 0,70 = 6,30."),
+            ("2023-175", "B", "Seja a o preço do tíquete azul e v o do vermelho. Duas cartelas azuis e uma vermelha têm 18 tíquetes azuis e 9 vermelhos: 18a + 9v = 32,40. E a − v = v + 0,05 dá a = 2v + 0,05. Substituindo: 36v + 0,90 + 9v = 32,40, então 45v = 31,50 e v = 0,70. A cartela vermelha custa 9 × 0,70 = 6,30."),
         ]),
     ]),
 ]

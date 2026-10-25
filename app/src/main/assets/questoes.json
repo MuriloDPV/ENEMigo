@@ -332,7 +332,7 @@
                 "Xote e frevo."
               ],
               "correta": "C",
-              "explicacao": "O choro e o samba têm o cavaquinho e o violão na base. Nos outros pares mandam a percussão, a sanfona ou os metais.",
+              "explicacao": "No choro e no samba, o cavaquinho e o violão são a base do conjunto. Nos outros pares, a música se apoia em outros instrumentos, como os tambores do maracatu e do carimbó, a sanfona do baião e do xote e os metais do frevo.",
               "fonte": "ENEM 2014 – Questão 123",
               "segundos_estimados": 64
             },
@@ -423,7 +423,7 @@
                 "busca de prazeres efêmeros."
               ],
               "correta": "B",
-              "explicacao": "Para Schopenhauer, satisfazer um desejo é como dar esmola: alivia hoje, e a fome volta amanhã. A felicidade está na resignação, em não depender do mundo de fora: a independência interior.",
+              "explicacao": "Para Schopenhauer, satisfazer um desejo é como a esmola dada ao mendigo: alivia hoje, e a fome volta amanhã. A felicidade está na resignação, em não depender do mundo de fora: a independência interior.",
               "fonte": "ENEM 2016 – Questão 1",
               "segundos_estimados": 62
             }
@@ -778,7 +778,7 @@
                 "estão no topo da cadeia alimentar."
               ],
               "correta": "E",
-              "explicacao": "O mercúrio não é eliminado e vai se acumulando a cada nível da cadeia alimentar. Os botos estão no topo, então concentram mais: é a bioacumulação.",
+              "explicacao": "O mercúrio não é eliminado e vai se acumulando a cada nível da cadeia alimentar. Os botos estão no topo, então concentram mais: é a biomagnificação (ou magnificação trófica).",
               "fonte": "ENEM 2017 – Questão 111",
               "segundos_estimados": 63
             }
@@ -870,7 +870,7 @@
                 "centrifugação."
               ],
               "correta": "A",
-              "explicacao": "As impurezas grudam nas partículas e formam flocos leves. Na flotação, bolhas de ar levam esses flocos até a superfície, de onde são retirados.",
+              "explicacao": "As impurezas grudam nas partículas de sulfato de alumínio, que ficam suspensas na água. Das alternativas, só a flotação separa esse material: bolhas de ar se prendem aos flocos e os levam até a superfície, de onde são retirados.",
               "fonte": "ENEM 2013 – Questão 81",
               "segundos_estimados": 49
             },
@@ -1263,7 +1263,7 @@
                 "105"
               ],
               "correta": "C",
-              "explicacao": "Oito pessoas formam 7 × 5 × 3 × 1 = 105 conjuntos de quatro duplas. Com os dois canhotos juntos, sobram 6 pessoas para 5 × 3 × 1 = 15 arranjos. Sem canhotos na mesma dupla: 105 − 15 = 90.",
+              "explicacao": "Cada canhoto precisa de um parceiro destro: o primeiro tem 6 opções e o segundo, 5. Os 4 que sobram formam duas duplas de 3 jeitos: um deles escolhe o parceiro entre 3, e os outros dois ficam juntos. Total: 6 × 5 × 3 = 90.",
               "fonte": "ENEM 2019 – Questão 156",
               "segundos_estimados": 92
             },
@@ -1419,7 +1419,7 @@
                 "10,65"
               ],
               "correta": "B",
-              "explicacao": "Com o tíquete azul a e o vermelho v: 18a + 9v = 32,40 e a − v = v + 0,05, ou seja, a = 2v + 0,05. Daí 45v + 0,90 = 32,40 e v = 0,70: a cartela vermelha custa 9 × 0,70 = 6,30.",
+              "explicacao": "Seja a o preço do tíquete azul e v o do vermelho. Duas cartelas azuis e uma vermelha têm 18 tíquetes azuis e 9 vermelhos: 18a + 9v = 32,40. E a − v = v + 0,05 dá a = 2v + 0,05. Substituindo: 36v + 0,90 + 9v = 32,40, então 45v = 31,50 e v = 0,70. A cartela vermelha custa 9 × 0,70 = 6,30.",
               "fonte": "ENEM 2023 – Questão 175",
               "segundos_estimados": 107
             }
