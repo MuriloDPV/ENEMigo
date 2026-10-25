@@ -12,9 +12,9 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from montar_questoes import (ALVO_LICAO_S, AREAS as AREAS_MONTAGEM, CORRECOES, FORMULAS,  # noqa: E402
-                             IMAGEM_MD, IMAGENS, LICOES_V1, MAX_QUESTOES, MIN_QUESTOES, SAIDA,
-                             SEM_PONTO, campos, carregar_bruto, estimar_segundos, ids_v1)
+from montar_questoes import (ALVO_LICAO_S, AREAS as AREAS_MONTAGEM, CORRECOES, FIGURAS,  # noqa: E402
+                             FORMULAS, IMAGEM_MD, IMAGENS, LICOES_V1, MAX_QUESTOES, MIN_QUESTOES,
+                             SAIDA, SEM_PONTO, campos, carregar_bruto, estimar_segundos, ids_v1)
 
 AREAS = {"LINGUAGENS": "LIN", "HUMANAS": "HUM", "NATUREZA": "NAT", "MATEMATICA": "MAT"}
 DISCIPLINAS = {"LIN": "linguagens", "HUM": "ciencias-humanas", "NAT": "ciencias-natureza",
@@ -198,6 +198,12 @@ if total != TOTAL:
 orfas = sorted(p.name for p in IMAGENS.iterdir() if p.name not in arquivos_usados) if IMAGENS.is_dir() else []
 if orfas:
     erro(f"arquivos em {IMAGENS.name}/ que nenhuma questão usa: {orfas}")
+# Figuras recortadas da prova oficial: cada uma substitui uma figura usada e tem que estar no app.
+for figura in sorted(FIGURAS.glob("*.png")) if FIGURAS.is_dir() else []:
+    if figura.name not in arquivos_usados:
+        erro(f"tools/figuras/{figura.name} não substitui nenhuma figura do banco")
+    elif (IMAGENS / figura.name).read_bytes() != figura.read_bytes():
+        erro(f"{figura.name} no app difere de tools/figuras/ (rode o montar_questoes.py)")
 chaves_montagem = {c for _, _, licoes in AREAS_MONTAGEM for _, qs in licoes for c, _, _ in qs}
 for nome, tabela in (("FORMULAS", FORMULAS), ("CORRECOES", CORRECOES), ("SEM_PONTO", SEM_PONTO)):
     for chave in sorted(set(tabela) - chaves_montagem):

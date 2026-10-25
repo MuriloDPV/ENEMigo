@@ -2,3 +2,5 @@
 matplotlib>=3.9
 # Só para regerar as fontes do app (tools/gerar_fontes.py).
 fonttools>=4.50
+# Só para recortar figuras da prova oficial do INEP (tools/recortar_figuras.py).
+pymupdf>=1.24

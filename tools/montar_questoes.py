@@ -7,7 +7,9 @@ o script avisa quando ela diverge do gabarito oficial e não grava nada nesse ca
 
 Imagens e fórmulas (Matemática):
 - As figuras da API são baixadas para app/src/main/assets/imagens/ e o texto ganha
-  um marcador [[imagem:arquivo.png]] no lugar delas.
+  um marcador [[imagem:arquivo.png]] no lugar delas. As que vieram ruins da API foram
+  recortadas da prova oficial por recortar_figuras.py e ficam em tools/figuras/: essas
+  são copiadas no lugar do download.
 - A API não tem LaTeX: as fórmulas vêm como PNGs minúsculos (uns 90 x 70 px) que
   ficam borrados no celular. Por isso as alternativas que são fórmula foram
   redigitadas em LaTeX (FORMULAS) e são renderizadas aqui em alta resolução com o
@@ -24,12 +26,14 @@ enunciado (context vazio), campos() separa: o último parágrafo é o comando.
 """
 import json
 import re
+import shutil
 import sys
 import urllib.request
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 RAW = Path(__file__).parent / "enem_raw"
+FIGURAS = Path(__file__).parent / "figuras"  # recortes da prova oficial (recortar_figuras.py)
 ASSETS = RAIZ / "app" / "src" / "main" / "assets"
 SAIDA = ASSETS / "questoes.json"
 IMAGENS = ASSETS / "imagens"
@@ -159,25 +163,25 @@ AREAS = [
         ]),
     ]),
     ("MATEMATICA", "MAT", [
-        ("Porcentagem e proporção", [
+        ("Porcentagem, proporção e juros", [
             ("2019-138", "E", "O transporte custa um quinto do valor do objeto, ou seja, 20%. Para o gasto total não passar de 100% do valor, sobram no máximo 80% para a recompensa."),
-            ("2022-164", "B", "Em 60 dias há 60 × 1 440 = 86 400 minutos, o que dá 86 400 ÷ 48 = 1 800 acionamentos. Cada um libera 360 ÷ 1 800 = 0,2 mL."),
-            ("2023-161", "D", "Cada parcela é 1 800 ÷ 3 = 600, e a primeira é paga na hora. Sobram 900 financiados: 900 = 600/x + 600/x², com x = 1 + i. Daí 3x² − 2x − 2 = 0 e x = (2 + √28)/6 ≈ 1,215, ou seja, 21,5% ao mês."),
+            ("2022-164", "B", "Um dia tem 24 × 60 = 1 440 minutos, então 60 dias têm 86 400 minutos, ou 86 400 ÷ 48 = 1 800 acionamentos. Cada um libera 360 ÷ 1 800 = 0,2 mL."),
+            ("2023-161", "D", "A prazo, o produto custa 1 500 × 1,2 = 1 800, em três parcelas de 600; como a primeira é paga na compra, ficam financiados 1 500 − 600 = 900. Com x = 1 + i, as outras duas parcelas valem 900 na data da compra: 900 = 600/x + 600/x², ou 3x² − 2x − 2 = 0. Daí x = (2 + √28)/6 ≈ (2 + 5,29)/6 = 1,215: juros de 21,5% ao mês."),
         ]),
         ("Áreas e escala", [
-            ("2022-161", "A", "No desenho, a varanda tem 16 × 5 + 13,4 × 4 = 133,6 cm². Na escala 1 : 50, as áreas ficam 50² = 2 500 vezes maiores: 334 000 cm² = 33,4 m²."),
+            ("2022-161", "A", "No desenho, o L se divide em dois retângulos: 16 × 5 = 80 cm² e 4 × (18,4 − 5) = 4 × 13,4 = 53,6 cm², total de 133,6 cm². Na escala 1 : 50, as áreas ficam 50² = 2 500 vezes maiores: 133,6 × 2 500 = 334 000 cm². Como 1 m² = 10 000 cm², são 33,4 m²."),
             ("2023-155", "D", "A piscina tem lado √400 = 20 m. Com 5 m de calçada de cada lado, o quadrado todo tem 30 m de lado e 900 m². A calçada ocupa 900 − 400 = 500 m²."),
-            ("2019-147", "B", "Cada placa é meio círculo de raio 20 cm sobre um quadrado de 40 cm de lado: 3,14 × 20² ÷ 2 + 40² = 628 + 1 600 = 2 228 cm². As dez placas somam 22 280 cm²."),
+            ("2019-147", "B", "Cada placa é um semicírculo de raio 20 cm sobre um retângulo de 40 cm de largura e 60 − 20 = 40 cm de altura. Área de uma placa: 3,14 × 20² ÷ 2 + 40 × 40 = 628 + 1 600 = 2 228 cm². As dez placas somam 22 280 cm²."),
         ]),
         ("Volumes e superfícies", [
-            ("2020-161", "B", "Volumes iguais: πR²h = πr²(h/4). Então r² = 4R² e r = 2R. Altura quatro vezes menor pede um raio duas vezes maior."),
-            ("2021-170", "C", "A caneca é um tronco de cone: V = πh(R² + Rr + r²)/3 = 3 × 12 × (25 + 20 + 16)/3 = 12 × 61 = 732 cm³, ou seja, 732 mL."),
-            ("2023-165", "E", "Pisos: 3 × 1,0 × 0,25 = 0,75 m². Espelhos: 3 × 1,0 × 0,20 = 0,60 m². Cada parede lateral tem 0,25 × (0,60 + 0,40 + 0,20) = 0,30 m², e são duas. Total: 0,75 + 0,60 + 0,60 = 1,95 m²."),
+            ("2020-161", "B", "A altura de B é 25%, ou um quarto, da de A. Volumes iguais: πR²h = πr²(h/4), então r² = 4R² e r = 2R: com um quarto da altura, o raio precisa dobrar."),
+            ("2021-170", "C", "A caneca é um tronco de cone de raios R = 5 cm e r = 4 cm (metade dos diâmetros). V = πh(R² + Rr + r²)/3 = 3 × 12 × (25 + 20 + 16)/3 = 12 × 61 = 732 cm³, ou seja, 732 mL."),
+            ("2023-165", "E", "Pisos e espelhos somam 3 × 1,0 × 0,25 + 3 × 1,0 × 0,20 = 0,75 + 0,60 = 1,35 m². Cada parede lateral é uma escadinha de três colunas de 0,25 m de largura e 0,20, 0,40 e 0,60 m de altura: 0,25 × 1,20 = 0,30 m², e há uma de cada lado. Total: 1,35 + 2 × 0,30 = 1,95 m²."),
         ]),
         ("Frações e probabilidade", [
             ("2020-170", "C", "São 4 + 6 + 6 = 16 partes, e cada sócio deve ficar com 16/3. Antônio precisa de 16/3 − 4 = 4/3 de parte, 2/3 vindos de cada sócio. Como cada um tem 6 partes, isso é (2/3) ÷ 6 = 1/9 do capital dele."),
             ("2023-168", "A", "Para o 50: a unidade 0 sai com chance 1/10 e restam as dezenas 1 a 5 (5 bolas), então 1/10 × 1/5 = 1/50. Para o 02: a unidade 2 sai com 1/10 e restam as dezenas 0 a 5 (6 bolas), então 1/10 × 1/6 = 1/60."),
-            ("2022-141", "E", "Restam 46 números. Na próxima rodada Pedro só ganha se sair o 12 (1/46). Na outra, ganha se sair o 12 depois de outro número (45 casos), ou 05 e 45, ou 11 e 19, em qualquer ordem (2 + 2 casos): 49/(46 × 45)."),
+            ("2022-141", "E", "Restam 46 números, e só o 12 fecha uma linha na hora: Pedro ganha na 5ª rodada com chance 1/46. Se não, ganha na 6ª com o 12 depois de outro número (45 casos) ou com 05 e 45 (4ª coluna) ou 11 e 19 (diagonal), em qualquer ordem (4 casos), entre 46 × 45 sequências possíveis. Somando: 1/46 + 49/(46 × 45)."),
         ]),
         ("Tabelas e gráficos", [
             ("2023-137", "C", "Média ponderada pelo número de funcionários: (75 × 2 000 + 25 × 7 000) ÷ 100 = 325 000 ÷ 100 = 3 250 reais."),
@@ -189,7 +193,7 @@ AREAS = [
             ("2019-168", "D", "Além do gerente, há X − 1 diaristas, e cada um recebe 2 × 80 = 160 reais por semana. Y = 1 000 + 160(X − 1) = 160X + 840."),
             ("2021-173", "C", "O menor número de lavagens sai quando todas são completas: 300 ÷ 35 ≈ 8,6. Oito lavagens dão só 280 reais, então são necessárias 9."),
             ("2019-139", "A", "Até 6 m³ o valor é fixo (12 reais): trecho horizontal. De 6 a 10 m³ sobe 3 reais por m³ e, de 10 a 15 m³, 6 reais por m³, então o último trecho é o mais inclinado."),
-            ("2019-165", "E", "O volume de sangue é 8% da massa, ou seja, 0,08m litros. A concentração é q ÷ 0,08m, e ela prejudica a saúde quando passa de 0,4."),
+            ("2019-165", "E", "O volume de sangue é 8% da massa: 0,08m litros. A concentração é q/(0,08m), e ela prejudica a saúde quando passa de 0,4: q/(0,08m) > 0,4."),
         ]),
     ]),
 ]
@@ -250,9 +254,16 @@ CORRECOES = {
     "2019-110": [("context", "ELsevier", "Elsevier")],
     "2019-139": [("context", "consumo de até 6 m²", "consumo de até 6 m³"),
                  ("context", "15 m² por mês", "15 m³ por mês"),
-                 ("context", "a 10 m³. Sabe-se", "a 10 m³.\n\nSabe-se")],
+                 ("context", "a 10 m³. Sabe-se", "a 10 m³.\n\nSabe-se"),
+                 ("context", "R$12,00", "R$ 12,00"),
+                 ("context", "a 6m³", "a 6 m³")],
     "2019-147": [("context", "seu patio", "seu pátio"),
                  ("context", "conforme lustrado", "conforme ilustrado")],
+    "2019-168": [("context", "R$ 1000,00 por semana.  \nOs outros", "R$ 1 000,00 por semana.\n\nOs outros"),
+                 ("context", "Cada um trabalha", "Cada um deles trabalha"),
+                 ("B", "80X + 1000", "80X + 1 000"),
+                 ("C", "80X + 1080", "80X + 1 080"),
+                 ("E", "160X + 1000", "160X + 1 000")],
     "2020-36": [("context", "regidas por regras", "regida por regras"),
                 ("context", "situacionais.\n\n**Movimento**", "situacionais. **Movimento**")],
     "2020-41": [("context", "BARRETO. L.", "BARRETO, L."),
@@ -281,8 +292,12 @@ CORRECOES = {
                  ("D", "quantidade de semente por", "quantidade de sementes por")],
     "2021-132": [("context", "jan, 1993", "jan. 1993")],
     "2021-162": [("context", "imposto devido (l)", "imposto devido (I)")],
-    "2021-170": [("alternativesIntroduction", "em milimitro", "em mililitro")],
-    "2021-173": [("alternativesIntroduction", "o lava rápido", "o lava-rápido")],
+    "2021-170": [("alternativesIntroduction", "em milimitro", "em mililitro"),
+                 ("D", "2196", "2 196"),
+                 ("E", "2928", "2 928")],
+    "2021-173": [("alternativesIntroduction", "o lava rápido", "o lava-rápido"),
+                 ("context", "R$35,00", "R$ 35,00"),
+                 ("context", "R$300,00", "R$ 300,00")],
     "2022-6": [("context", "http:/porumavidasimples", "http://porumavidasimples")],
     "2022-11": [("context", "o\xa0 nascimento", "o nascimento")],
     "2022-14": [("context", "FIORIN, J. L Língua", "FIORIN, J. L. Língua"),
@@ -335,6 +350,12 @@ CORRECOES = {
     "2023-106": [("context", "função especifica", "função específica"),
                  ("E", "hospedeiro. gerando", "hospedeiro, gerando")],
     "2023-125": [("context", "síndrome de Down\n\nMORENO", "síndrome de Down.\n\nMORENO")],
+    "2023-137": [("A", "2.000,00", "2 000,00"),
+                 ("B", "2.500,00", "2 500,00"),
+                 ("C", "3.250,00", "3 250,00"),
+                 ("D", "4.500,00", "4 500,00"),
+                 ("E", "9.000,00", "9 000,00")],
+    "2023-155": [("A", "1.000", "1 000")],
     "2023-161": [("context", "aproximação para 28.", "aproximação para √28.")],
 }
 
@@ -342,6 +363,7 @@ CORRECOES = {
 SEM_PONTO = {
     "2021-82": "ABCDE",
     "2022-33": "ABCDE",
+    "2022-161": "ABCDE",
     "2023-39": "E",
     "2023-91": "ADE",
     "2023-125": "CD",
@@ -472,6 +494,14 @@ def ids_v1():
             for qi, chave in enumerate(chaves, start=1)}
 
 
+def copiar_figura(origem, destino):
+    """Figura recortada da prova oficial no lugar da que a API entrega."""
+    if destino.exists() and destino.read_bytes() == origem.read_bytes():
+        return
+    shutil.copyfile(origem, destino)
+    print(f"  copiada {destino.name} (prova oficial)")
+
+
 def baixar_imagem(url, destino):
     if destino.exists():
         return
@@ -529,7 +559,9 @@ def main():
         sys.exit(1)
     IMAGENS.mkdir(exist_ok=True)
     for tipo, arquivo, origem in recursos:
-        if tipo == "imagem":
+        if tipo == "imagem" and (FIGURAS / arquivo).exists():
+            copiar_figura(FIGURAS / arquivo, IMAGENS / arquivo)
+        elif tipo == "imagem":
             baixar_imagem(origem, IMAGENS / arquivo)
         else:
             renderizar_formula(origem, IMAGENS / arquivo)

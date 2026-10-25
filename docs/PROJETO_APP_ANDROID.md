@@ -236,7 +236,7 @@ O app tem **9 telas**: 6 Activities e 3 Fragments dentro da MainActivity.
 
 - **Objetivo:** mostrar a sequência de lições de uma área e o estado de cada uma.
 - **Componentes:** MaterialToolbar (nome da área e botão voltar), barra de status (`layout_status`), TextView com o resumo "2 de 3 lições concluídas" e RecyclerView com os itens de lição.
-- **Informações exibidas (por lição):** número e tempo estimado ("Lição 1 · ~4 min", ver RN36), título (ex.: "Porcentagem e proporção"), estado e melhor resultado ("Melhor: 3/4").
+- **Informações exibidas (por lição):** número e tempo estimado ("Lição 1 · ~4 min", ver RN36), título (ex.: "Porcentagem, proporção e juros"), estado e melhor resultado ("Melhor: 3/4").
   - **Concluída** (melhor com 60% ou mais): círculo na cor da área com ✓.
   - **Disponível:** círculo na cor da área e o texto "Começar".
   - **Bloqueada:** círculo cinza com 🔒 e o texto "Acerte 60% na lição anterior".
@@ -355,7 +355,7 @@ O app tem **9 telas**: 6 Activities e 3 Fragments dentro da MainActivity.
 2. Ele digita o nome ("Ana"), mantém a meta **Regular (50 XP/dia)** e toca em **COMEÇAR**.
 3. Cai na tela **Início**: 🔥 0, ⭐ 0, ❤️ 5. "Oi, Ana! Bora começar?". A meta mostra "0 / 50 XP hoje".
 4. Toca no cartão **Matemática**. A trilha mostra a Lição 1 disponível e as demais com cadeado.
-5. Toca na **Lição 1 — Porcentagem e proporção (~6 min)**. Abre o Quiz: barra de progresso vazia, ❤️ 5, a primeira das 3 questões.
+5. Toca na **Lição 1 — Porcentagem, proporção e juros (~6 min)**. Abre o Quiz: barra de progresso vazia, ❤️ 5, a primeira das 3 questões.
 6. Toca na alternativa B, que fica azul, e aperta **VERIFICAR**. O painel verde sobe: "Mandou bem! 🎉 Descontos sucessivos se multiplicam...". Toca em **CONTINUAR**.
 7. Na questão 3 ela erra: a alternativa escolhida fica vermelha, a certa fica verde, e o painel vermelho mostra "Resposta correta: D" com a explicação. ❤️ cai para 4.
 8. Termina com **2/3**: "Lição concluída! ✅ +20 XP · 🔥 Ofensiva: 1 dia · Próxima lição desbloqueada! 🔓 · 🏅 Conquista: Primeira lição".
@@ -695,7 +695,7 @@ As áreas são fixas, por isso viram um `enum`, e não uma classe comum.
 | `id` | String | Sim | Ex.: `MAT-01` (sigla + número de 2 dígitos) |
 | `area` | Area | Sim | Área a que a lição pertence |
 | `ordem` | int | Sim | Posição na trilha (0, 1, 2...), definida pela ordem no JSON |
-| `titulo` | String | Sim | Tema da lição, ex.: "Porcentagem e proporção" |
+| `titulo` | String | Sim | Tema da lição, ex.: "Porcentagem, proporção e juros" |
 | `questoes` | List\<Questao\> | Sim | De 3 a 5 questões |
 
 `getSegundosEstimados()` soma a estimativa das questões; é o que a trilha mostra ("~4 min").

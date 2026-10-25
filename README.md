@@ -68,13 +68,16 @@ Os números são constantes no começo do script (`PALAVRAS_POR_MINUTO`, `RESOLU
 
 Quem já tinha progresso da versão antiga (4 lições de 5) não perde nada: na primeira abertura, cada lição nova cujas questões estavam todas em lições concluídas já aparece concluída, e o caderno de erros continua com as mesmas questões.
 
-Em Matemática, as figuras (gráficos, tabelas, plantas) ficam dentro do app, em `app/src/main/assets/imagens/`, então tudo continua funcionando offline. A API entrega as fórmulas como imagens muito pequenas, que ficariam borradas no celular; por isso as alternativas que são fórmula foram redigitadas em LaTeX e renderizadas em alta resolução pelo script de montagem.
+Em Matemática, as figuras (gráficos, tabelas, plantas) ficam dentro do app, em `app/src/main/assets/imagens/`, então tudo continua funcionando offline. A API entrega as fórmulas como imagens muito pequenas, que ficariam borradas no celular; por isso as alternativas que são fórmula foram redigitadas em LaTeX e renderizadas em alta resolução pelo script de montagem. Os gráficos que vieram ruins da API (baixa resolução ou um diferente dos outros, o que entregava a resposta) foram recortados da prova oficial do INEP.
+
+O texto das 80 questões foi conferido contra a prova oficial do INEP (caderno azul): o script de montagem corrige os erros de OCR da API e deixa as alternativas com a caixa e a pontuação do caderno.
 
 As questões vêm da API pública [enem.dev](https://enem.dev), e os scripts que montam o banco ficam em [`tools/`](tools):
 
 - `baixar_enem.py`: baixa as provas da API para `tools/enem_raw/` (essa pasta não vai para o repositório)
 - `filtrar_enem.py`: separa as questões aproveitáveis (100% texto nas três primeiras áreas; em Matemática, também as com figura ou fórmula)
 - `montar_questoes.py`: gera o `app/src/main/assets/questoes.json` (com o tempo estimado de cada questão e as lições), baixa as figuras e renderiza as fórmulas
+- `recortar_figuras.py`: recorta da prova oficial do INEP as figuras que vieram ruins da API e grava em `tools/figuras/`, que o `montar_questoes.py` usa no lugar do download (só precisa rodar de novo se mudar um recorte)
 - `validar_questoes.py`: confere o JSON, o tempo das lições e as imagens contra a especificação e contra o original da API
 - `gerar_sons.py`: gera os sons de acerto, erro e lição concluída em `app/src/main/res/raw/`
 
