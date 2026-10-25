@@ -141,6 +141,22 @@
     </style>
 
     <!-- Opção da meta diária no onboarding: cartão em relevo com a bolinha à direita -->
+    <!-- Opção do tamanho da letra nas Configurações: três lado a lado, no mesmo relevo da meta -->
+    <style name="Widget.ENEMigo.OpcaoLetra" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/bg_opcao</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:fontFamily">@font/marca_leitura</item>
+        <item name="android:textColor">@color/texto_principal</item>
+    </style>
     <style name="Widget.ENEMigo.OpcaoMeta" parent="">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

@@ -84,6 +84,55 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:text="@string/config_secao_leitura" />
+
+            <!-- Tamanho da letra das questões (TamanhoLetra), com a prévia no papel logo abaixo -->
+            <RadioGroup
+                android:id="@+id/rg_letra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_letra_pequena"
+                    style="@style/Widget.ENEMigo.OpcaoLetra"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/config_letra_pequena"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_letra_media"
+                    style="@style/Widget.ENEMigo.OpcaoLetra"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/config_letra_media"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_letra_grande"
+                    style="@style/Widget.ENEMigo.OpcaoLetra"
+                    android:text="@string/config_letra_grande"
+                    android:textSize="19sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_previa_letra"
+                style="@style/Texto.Leitura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_papel"
+                android:paddingStart="28dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="14dp"
+                android:text="@string/config_letra_previa" />
+
+            <TextView
+                style="@style/Texto.Rotulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="@string/config_secao_som" />
 
             <!-- Som e vibração num cartão, separados por uma linha -->

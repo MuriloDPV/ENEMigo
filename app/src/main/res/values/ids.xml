@@ -4,4 +4,6 @@
     <item name="tag_texto_rico" type="id" />
     <!-- Estado da lição guardado no nó da trilha (ver LinhaTrilha) -->
     <item name="tag_estado_licao" type="id" />
+    <!-- Tamanho do texto que veio do layout, antes do ajuste de letra (ver LetraAjustavel) -->
+    <item name="tag_tamanho_base" type="id" />
 </resources>

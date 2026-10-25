@@ -35,22 +35,28 @@ import com.murilo.enemigo.notificacao.AgendaLembrete;
 import com.murilo.enemigo.notificacao.NotificacaoLembrete;
 import com.murilo.enemigo.util.Constantes;
 import com.murilo.enemigo.util.Lembrete;
+import com.murilo.enemigo.util.TamanhoLetra;
 import com.murilo.enemigo.util.ValidacaoUtil;
 
 import java.time.LocalTime;
 
 /**
- * Configurações (C5): nome, meta diária, som, vibração, lembrete diário e o reset do progresso.
+ * Configurações (C5): nome, meta diária, tamanho da letra, som, vibração, lembrete diário e o
+ * reset do progresso.
  * Nada muda até o SALVAR; sair sem salvar deixa tudo como estava.
  */
 public class ConfiguracoesActivity extends AppCompatActivity {
 
     private static final String ESTADO_HORARIO = "horario_lembrete";
     private static final String TAG_RELOGIO = "relogio_lembrete";
+    /** Opções do tamanho da letra, na ordem dos níveis de TamanhoLetra (pequena, média, grande). */
+    private static final int[] ID_LETRA = {R.id.rb_letra_pequena, R.id.rb_letra_media, R.id.rb_letra_grande};
 
     private TextInputLayout tilNome;
     private TextInputEditText edtNome;
     private RadioGroup rgMeta;
+    private RadioGroup rgLetra;
+    private TextView txtPreviaLetra;
     private MaterialSwitch switchSom;
     private MaterialSwitch switchVibracao;
     private MaterialSwitch switchLembrete;
@@ -69,6 +75,8 @@ public class ConfiguracoesActivity extends AppCompatActivity {
         tilNome = findViewById(R.id.til_nome);
         edtNome = findViewById(R.id.edt_nome);
         rgMeta = findViewById(R.id.rg_meta);
+        rgLetra = findViewById(R.id.rg_letra);
+        txtPreviaLetra = findViewById(R.id.txt_previa_letra);
         switchSom = findViewById(R.id.switch_som);
         switchVibracao = findViewById(R.id.switch_vibracao);
         switchLembrete = findViewById(R.id.switch_lembrete);
@@ -84,6 +92,7 @@ public class ConfiguracoesActivity extends AppCompatActivity {
             PreferenciasManager preferencias = PreferenciasManager.getInstance(this);
             edtNome.setText(progresso.getNome());
             OpcoesMeta.marcar(rgMeta, progresso.getMetaDiaria());
+            rgLetra.check(ID_LETRA[preferencias.getTamanhoLetra()]);
             switchSom.setChecked(preferencias.isSomAtivo());
             switchVibracao.setChecked(preferencias.isVibracaoAtiva());
             switchLembrete.setChecked(preferencias.isLembreteAtivo());
@@ -93,6 +102,9 @@ public class ConfiguracoesActivity extends AppCompatActivity {
         }
 
         switchLembrete.setOnCheckedChangeListener((botao, ligado) -> atualizarLembrete());
+        // A prévia acompanha a opção marcada (também quando a tela é recriada).
+        rgLetra.setOnCheckedChangeListener((grupo, id) -> LetraAjustavel.aplicar(letraMarcada(), txtPreviaLetra));
+        LetraAjustavel.aplicar(letraMarcada(), txtPreviaLetra);
         linhaHorario.setOnClickListener(v -> escolherHorario());
         txtNotificacoesBloqueadas.setOnClickListener(v -> permitirNotificacoes());
         // O relógio aberto sobrevive à recriação da tela, mas o ouvinte dele não.
@@ -136,6 +148,17 @@ public class ConfiguracoesActivity extends AppCompatActivity {
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(ESTADO_HORARIO, horarioLembrete);
+    }
+
+    /** Nível de TamanhoLetra da opção marcada (o padrão, se nenhuma estiver). */
+    private int letraMarcada() {
+        int marcada = rgLetra.getCheckedRadioButtonId();
+        for (int nivel = 0; nivel < ID_LETRA.length; nivel++) {
+            if (ID_LETRA[nivel] == marcada) {
+                return nivel;
+            }
+        }
+        return TamanhoLetra.PADRAO;
     }
 
     /** Horário apagado com o lembrete desligado; o aviso de bloqueio só aparece com ele ligado. */
@@ -203,6 +226,7 @@ public class ConfiguracoesActivity extends AppCompatActivity {
         PreferenciasManager preferencias = PreferenciasManager.getInstance(this);
         preferencias.setSomAtivo(switchSom.isChecked());
         preferencias.setVibracaoAtiva(switchVibracao.isChecked());
+        preferencias.setTamanhoLetra(letraMarcada());
         preferencias.setLembreteAtivo(switchLembrete.isChecked());
         preferencias.setHorarioLembrete(horarioLembrete);
         // Remarca no horário novo (ou cancela, se desligou).

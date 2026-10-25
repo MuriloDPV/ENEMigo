@@ -37,6 +37,19 @@
             app:trackCornerRadius="5dp"
             app:trackThickness="10dp" />
 
+        <!-- Tamanho da letra das questões: abre o menu com pequena, média e grande -->
+        <TextView
+            android:id="@+id/btn_tamanho_letra"
+            style="@style/Texto.Titulo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/quiz_tamanho_letra"
+            android:gravity="center"
+            android:text="@string/quiz_botao_letra"
+            android:textColor="@color/texto_secundario"
+            android:textSize="18sp" />
+
         <TextView
             android:id="@+id/txt_vidas_quiz"
             style="@style/Texto.Status"
@@ -94,24 +107,92 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <!-- Texto-base no cartão de papel (claro também no modo escuro) -->
-            <FrameLayout
+            <!-- Texto-base no cartão de papel (claro também no modo escuro). Depois de ler, o
+                 aluno recolhe o texto e fica só com o comando e as alternativas; recolhido, o
+                 cartão vira uma faixa com a primeira linha, e um toque abre de novo. -->
+            <LinearLayout
                 android:id="@+id/card_texto_base"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
+                android:animateLayoutChanges="true"
                 android:background="@drawable/bg_papel"
+                android:foreground="?attr/selectableItemBackground"
+                android:orientation="vertical"
                 android:paddingStart="28dp"
                 android:paddingTop="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="16dp">
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp">
 
                 <TextView
                     android:id="@+id/txt_texto_base"
                     style="@style/Texto.Leitura"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </FrameLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/btn_recolher_texto"
+                    style="@style/Texto.Destaque"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="4dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:minHeight="48dp"
+                    android:paddingHorizontal="8dp"
+                    android:text="@string/quiz_recolher_texto"
+                    android:textColor="@color/papel_texto_secundario"
+                    android:textSize="14sp"
+                    app:drawableEndCompat="@drawable/ic_seta_cima"
+                    app:drawableTint="@color/papel_texto_secundario" />
+
+                <!-- Faixa do texto recolhido: rótulo, a primeira linha e a seta para abrir -->
+                <LinearLayout
+                    android:id="@+id/faixa_texto_recolhido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Texto.Rotulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/quiz_texto_recolhido"
+                            android:textColor="@color/papel_texto_secundario" />
+
+                        <TextView
+                            android:id="@+id/txt_texto_recolhido"
+                            style="@style/Texto.Leitura"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/papel_texto_secundario"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:importantForAccessibility="no"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_seta_baixo"
+                        app:tint="@color/papel_texto_secundario" />
+                </LinearLayout>
+            </LinearLayout>
 
             <!-- Só aparece quando a questão tem figura -->
             <TextView

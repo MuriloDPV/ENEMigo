@@ -5,8 +5,10 @@ import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.view.Menu;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.PopupMenu;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +22,7 @@ import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.murilo.enemigo.R;
+import com.murilo.enemigo.data.PreferenciasManager;
 import com.murilo.enemigo.data.ProgressoManager;
 import com.murilo.enemigo.data.QuestaoRepository;
 import com.murilo.enemigo.model.Licao;
@@ -49,6 +52,9 @@ public class QuizActivity extends AppCompatActivity {
     private static final String ESTADO_IDS_REVISAO = "ids_revisao";
     private static final String ESTADO_VIDAS_RECUPERADAS = "vidas_recuperadas";
     private static final String ESTADO_TEMPO_QUESTAO = "tempo_questao";
+    private static final String ESTADO_TEXTO_RECOLHIDO = "texto_recolhido";
+    /** Itens do menu do "Aa", na ordem dos níveis de TamanhoLetra (pequena, média, grande). */
+    private static final int[] ITENS_LETRA = {R.id.letra_pequena, R.id.letra_media, R.id.letra_grande};
 
     // Estados visuais de uma alternativa
     private static final int NORMAL = 0;
@@ -57,10 +63,12 @@ public class QuizActivity extends AppCompatActivity {
     private static final int ERRADA = 3;
 
     private final CartaoRelevo[] cardsAlternativas = new CartaoRelevo[5];
+    private final TextView[] textosAlternativas = new TextView[5];
     /** Alternativas com figura ou fórmula ficam sempre em "papel" claro (inclusive no modo escuro). */
     private final boolean[] alternativaEmPapel = new boolean[5];
 
     private ProgressoManager progresso;
+    private PreferenciasManager preferencias;
     private boolean modoRevisao;
     private Licao licao;
     private List<Questao> questoes;
@@ -69,6 +77,8 @@ public class QuizActivity extends AppCompatActivity {
     private int acertos;
     private boolean verificada;
     private int vidasRecuperadas;
+    /** O aluno recolheu o texto-base desta questão (a próxima começa com ele aberto). */
+    private boolean textoRecolhido;
     // Cronômetro da questão atual (RN38): só conta com a tela aberta e para no VERIFICAR.
     private long tempoQuestaoMs;
     private long retomadoEm = -1;
@@ -79,6 +89,9 @@ public class QuizActivity extends AppCompatActivity {
     private TextView txtVidas;
     private View cardTextoBase;
     private TextView txtTextoBase;
+    private View btnRecolherTexto;
+    private View faixaTextoRecolhido;
+    private TextView txtTextoRecolhido;
     private TextView txtDicaFigura;
     private TextView txtEnunciado;
     private TextView txtFonte;
@@ -97,6 +110,7 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         progresso = ProgressoManager.getInstance(this);
+        preferencias = PreferenciasManager.getInstance(this);
         modoRevisao = Constantes.MODO_REVISAO.equals(getIntent().getStringExtra(Constantes.EXTRA_MODO));
 
         if (modoRevisao) {
@@ -126,6 +140,9 @@ public class QuizActivity extends AppCompatActivity {
         txtVidas = findViewById(R.id.txt_vidas_quiz);
         cardTextoBase = findViewById(R.id.card_texto_base);
         txtTextoBase = findViewById(R.id.txt_texto_base);
+        btnRecolherTexto = findViewById(R.id.btn_recolher_texto);
+        faixaTextoRecolhido = findViewById(R.id.faixa_texto_recolhido);
+        txtTextoRecolhido = findViewById(R.id.txt_texto_recolhido);
         txtDicaFigura = findViewById(R.id.txt_dica_figura);
         txtEnunciado = findViewById(R.id.txt_enunciado);
         txtFonte = findViewById(R.id.txt_fonte);
@@ -151,10 +168,14 @@ public class QuizActivity extends AppCompatActivity {
             final int indice = i;
             card.setOnClickListener(v -> selecionar(indice));
             cardsAlternativas[i] = card;
+            textosAlternativas[i] = card.findViewById(R.id.txt_texto);
         }
+        aplicarTamanhoLetra();
 
         btnVerificar.setOnClickListener(v -> verificar());
         btnContinuar.setOnClickListener(v -> continuar());
+        btnRecolherTexto.setOnClickListener(v -> recolherTexto(true));
+        findViewById(R.id.btn_tamanho_letra).setOnClickListener(this::escolherTamanhoLetra);
         findViewById(R.id.btn_fechar).setOnClickListener(v -> confirmarSaida());
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
@@ -171,6 +192,7 @@ public class QuizActivity extends AppCompatActivity {
             int salvaSelecionada = savedInstanceState.getInt(ESTADO_SELECIONADA, -1);
             boolean salvaVerificada = savedInstanceState.getBoolean(ESTADO_VERIFICADA, false);
             mostrarQuestao();
+            recolherTexto(savedInstanceState.getBoolean(ESTADO_TEXTO_RECOLHIDO, false));
             tempoQuestaoMs = savedInstanceState.getLong(ESTADO_TEMPO_QUESTAO, 0L);
             if (salvaSelecionada >= 0) {
                 selecionar(salvaSelecionada);
@@ -193,6 +215,7 @@ public class QuizActivity extends AppCompatActivity {
         outState.putBoolean(ESTADO_VERIFICADA, verificada);
         outState.putInt(ESTADO_VIDAS_RECUPERADAS, vidasRecuperadas);
         outState.putLong(ESTADO_TEMPO_QUESTAO, tempoDaQuestao());
+        outState.putBoolean(ESTADO_TEXTO_RECOLHIDO, textoRecolhido);
         if (modoRevisao && questoes != null) {
             ArrayList<String> ids = new ArrayList<>();
             for (Questao q : questoes) {
@@ -287,7 +310,10 @@ public class QuizActivity extends AppCompatActivity {
         } else {
             cardTextoBase.setVisibility(View.VISIBLE);
             TextoComImagens.exibir(txtTextoBase, questao.getTexto(), false);
+            txtTextoRecolhido.setText(primeiraLinha(questao.getTexto()));
         }
+        textoRecolhido = false;
+        recolherTexto(false);
         TextoComImagens.exibir(txtEnunciado, questao.getEnunciado(), false);
         // Enunciado com figura/fórmula também vai para o papel, para a tinta escura aparecer.
         if (TextoRico.temMarcador(questao.getEnunciado())) {
@@ -300,9 +326,6 @@ public class QuizActivity extends AppCompatActivity {
             txtEnunciado.setTextColor(cor(R.color.texto_principal));
             txtEnunciado.setPadding(0, 0, 0, 0);
         }
-        boolean temFigura = TextoRico.temFigura(questao.getTexto())
-                || TextoRico.temFigura(questao.getEnunciado());
-        txtDicaFigura.setVisibility(temFigura ? View.VISIBLE : View.GONE);
         if (questao.getFonte().isEmpty()) {
             txtFonte.setVisibility(View.GONE);
         } else {
@@ -315,7 +338,7 @@ public class QuizActivity extends AppCompatActivity {
         for (int i = 0; i < cardsAlternativas.length; i++) {
             CartaoRelevo card = cardsAlternativas[i];
             alternativaEmPapel[i] = TextoRico.temMarcador(alternativas[i]);
-            TextoComImagens.exibir(card.findViewById(R.id.txt_texto), alternativas[i], true);
+            TextoComImagens.exibir(textosAlternativas[i], alternativas[i], true);
             pintar(i, NORMAL);
             card.setAlpha(1f);
             card.setClickable(true);
@@ -328,6 +351,71 @@ public class QuizActivity extends AppCompatActivity {
         btnVerificar.setEnabled(false);
         btnContinuar.setEnabled(true);
         scroll.scrollTo(0, 0);
+    }
+
+    /**
+     * Recolhe o texto-base (fica só a faixa com a primeira linha, e um toque no cartão abre de
+     * novo) ou abre. Ao recolher, volta ao topo para o comando e as alternativas aparecerem.
+     */
+    private void recolherTexto(boolean recolher) {
+        boolean mudou = recolher != textoRecolhido;
+        textoRecolhido = recolher;
+        txtTextoBase.setVisibility(recolher ? View.GONE : View.VISIBLE);
+        btnRecolherTexto.setVisibility(recolher ? View.GONE : View.VISIBLE);
+        faixaTextoRecolhido.setVisibility(recolher ? View.VISIBLE : View.GONE);
+        if (recolher) {
+            cardTextoBase.setOnClickListener(v -> recolherTexto(false));
+            cardTextoBase.setContentDescription(
+                    getString(R.string.cd_texto_recolhido, txtTextoRecolhido.getText()));
+            if (mudou) {
+                scroll.post(() -> scroll.smoothScrollTo(0, 0));
+            }
+        } else {
+            cardTextoBase.setOnClickListener(null);
+            cardTextoBase.setClickable(false);
+            cardTextoBase.setContentDescription(null);
+        }
+        // A dica da figura só faz sentido com a figura à vista.
+        Questao questao = questoes.get(indiceAtual);
+        boolean temFigura = (!recolher && TextoRico.temFigura(questao.getTexto()))
+                || TextoRico.temFigura(questao.getEnunciado());
+        txtDicaFigura.setVisibility(temFigura ? View.VISIBLE : View.GONE);
+    }
+
+    /** Primeira linha com texto do texto-base, para a faixa do texto recolhido. */
+    private static String primeiraLinha(String texto) {
+        for (String linha : TextoRico.semMarcadores(texto).split("\n")) {
+            if (!linha.trim().isEmpty()) {
+                return linha.trim();
+            }
+        }
+        return "";
+    }
+
+    /** Menu do "Aa": a letra muda na hora e fica salva para as próximas questões. */
+    private void escolherTamanhoLetra(View botao) {
+        PopupMenu menu = new PopupMenu(this, botao);
+        menu.inflate(R.menu.menu_tamanho_letra);
+        Menu itens = menu.getMenu();
+        itens.findItem(ITENS_LETRA[preferencias.getTamanhoLetra()]).setChecked(true);
+        menu.setOnMenuItemClickListener(item -> {
+            for (int nivel = 0; nivel < ITENS_LETRA.length; nivel++) {
+                if (ITENS_LETRA[nivel] == item.getItemId()) {
+                    preferencias.setTamanhoLetra(nivel);
+                    aplicarTamanhoLetra();
+                    return true;
+                }
+            }
+            return false;
+        });
+        menu.show();
+    }
+
+    /** Texto-base, enunciado, alternativas e explicação no tamanho escolhido (TamanhoLetra). */
+    private void aplicarTamanhoLetra() {
+        int nivel = preferencias.getTamanhoLetra();
+        LetraAjustavel.aplicar(nivel, txtTextoBase, txtEnunciado, txtExplicacao);
+        LetraAjustavel.aplicar(nivel, textosAlternativas);
     }
 
     /** Destaca a alternativa escolhida e volta as outras ao normal. */
@@ -529,8 +617,7 @@ public class QuizActivity extends AppCompatActivity {
         faceAlt.setStrokeColor(borda);
         card.setCorSombra(borda);
 
-        ((TextView) card.findViewById(R.id.txt_texto))
-                .setTextColor(cor(papel ? R.color.papel_texto : R.color.texto_principal));
+        textosAlternativas[indice].setTextColor(cor(papel ? R.color.papel_texto : R.color.texto_principal));
 
         // Letra: círculo vazado no normal, preenchido com a cor do estado nos outros.
         TextView letra = card.findViewById(R.id.txt_letra);

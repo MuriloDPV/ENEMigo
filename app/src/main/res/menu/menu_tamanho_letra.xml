@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tamanho da letra no quiz (botão "Aa"). A ordem segue TamanhoLetra: pequena, média, grande. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/letra_pequena"
+            android:title="@string/letra_pequena" />
+        <item
+            android:id="@+id/letra_media"
+            android:title="@string/letra_media" />
+        <item
+            android:id="@+id/letra_grande"
+            android:title="@string/letra_grande" />
+    </group>
+</menu>

@@ -60,6 +60,14 @@
     <string name="quiz_contador">Questão %1$d de %2$d</string>
     <string name="quiz_fonte">Fonte: %1$s</string>
     <string name="quiz_dica_figura">Toque na figura para ampliar</string>
+    <string name="quiz_recolher_texto">Recolher texto</string>
+    <string name="quiz_texto_recolhido">Texto-base · toque para abrir</string>
+    <string name="cd_texto_recolhido">Texto-base recolhido: %1$s. Toque duas vezes para abrir.</string>
+    <string name="quiz_tamanho_letra">Tamanho da letra</string>
+    <string name="quiz_botao_letra" translatable="false">Aa</string>
+    <string name="letra_pequena">Letra pequena</string>
+    <string name="letra_media">Letra média</string>
+    <string name="letra_grande">Letra grande</string>
     <string name="imagem_ampliada">Figura da questão ampliada</string>
     <string name="imagem_dica_zoom">Afaste dois dedos ou toque duas vezes para dar zoom</string>
     <string name="licao_nao_encontrada">Lição não encontrada</string>
@@ -229,6 +237,11 @@
     <string name="config_som_desc">Acerto, erro e lição concluída</string>
     <string name="config_vibracao">Vibrar ao errar</string>
     <string name="config_vibracao_desc">Uma vibração curta quando a resposta está errada</string>
+    <string name="config_secao_leitura">Leitura das questões</string>
+    <string name="config_letra_pequena">Pequena</string>
+    <string name="config_letra_media">Média</string>
+    <string name="config_letra_grande">Grande</string>
+    <string name="config_letra_previa">O texto-base, o enunciado e as alternativas ficam deste tamanho. No quiz, o botão Aa também muda a letra.</string>
     <string name="config_secao_lembrete">Lembrete diário</string>
     <string name="config_lembrete">Lembrete da ofensiva</string>
     <string name="config_lembrete_desc">Uma notificação por dia, só se você ainda não estudou</string>

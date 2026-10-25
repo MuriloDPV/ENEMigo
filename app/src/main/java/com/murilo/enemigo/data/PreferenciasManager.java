@@ -6,9 +6,10 @@ import android.content.SharedPreferences;
 import com.murilo.enemigo.model.Avatar;
 import com.murilo.enemigo.util.Constantes;
 import com.murilo.enemigo.util.Lembrete;
+import com.murilo.enemigo.util.TamanhoLetra;
 
 /**
- * Preferências do aluno que não são progresso: som, vibração, lembrete e o avatar.
+ * Preferências do aluno que não são progresso: som, vibração, lembrete, tamanho da letra e o avatar.
  * Ficam no mesmo SharedPreferences do ProgressoManager, então o "resetar progresso" (RN34)
  * também volta tudo ao padrão. Singleton: use getInstance(context).
  */
@@ -73,6 +74,15 @@ public final class PreferenciasManager {
 
     public void marcarNotificacaoPedida() {
         prefs.edit().putBoolean(Constantes.CHAVE_NOTIFICACAO_PEDIDA, true).apply();
+    }
+
+    /** Tamanho da letra das questões (TamanhoLetra.PEQUENA, MEDIA ou GRANDE). Padrão: média. */
+    public int getTamanhoLetra() {
+        return TamanhoLetra.limitar(prefs.getInt(Constantes.CHAVE_TAMANHO_LETRA, TamanhoLetra.PADRAO));
+    }
+
+    public void setTamanhoLetra(int nivel) {
+        prefs.edit().putInt(Constantes.CHAVE_TAMANHO_LETRA, TamanhoLetra.limitar(nivel)).apply();
     }
 
     /** O avatar montado; sem nenhum salvo (pulou no primeiro acesso), o padrão. */

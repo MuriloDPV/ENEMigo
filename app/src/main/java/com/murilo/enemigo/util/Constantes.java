@@ -33,6 +33,7 @@ public final class Constantes {
     public static final String CHAVE_VIBRACAO = "vibracao";
     public static final String CHAVE_SOM = "som";
     public static final String CHAVE_AVATAR = "avatar";
+    public static final String CHAVE_TAMANHO_LETRA = "tamanho_letra";
     /** Versão do formato do progresso salvo: abaixo de VERSAO_PROGRESSO, roda a migração (RN37). */
     public static final String CHAVE_VERSAO_PROGRESSO = "versao_progresso";
     public static final int VERSAO_PROGRESSO = 3;
