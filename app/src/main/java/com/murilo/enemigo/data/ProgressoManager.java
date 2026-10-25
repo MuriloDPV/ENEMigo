@@ -440,27 +440,32 @@ public final class ProgressoManager {
     // ---------------------------------------------------------------- Migração
 
     /**
-     * RN37: o progresso salvo com o banco da versão 1 (4 lições de 5) passa para as lições atuais.
-     * Conta como concluída a lição nova cujas questões estavam todas em lições concluídas, com a
-     * nota mínima (ex.: 2/3); o caderno troca os ids antigos pelos novos. Roda uma vez só.
+     * RN37: o progresso salvo com um banco antigo (versão 1: 4 lições de 5; versão 2: lições de
+     * 3 a 5) passa para as lições atuais. Conta como concluída a lição atual cujas questões
+     * estavam todas em lições concluídas, até a primeira que falta (a trilha não fica com buraco),
+     * com a nota mínima (ex.: 2/3). O caderno troca os ids antigos pelos atuais, e as questões que
+     * saíram do banco saem dele. XP, ofensiva e conquistas não mudam. Roda uma vez só.
      */
     private void migrarProgresso() {
-        if (prefs.getInt(Constantes.CHAVE_VERSAO_PROGRESSO, 1) >= Constantes.VERSAO_PROGRESSO) {
+        int versaoSalva = prefs.getInt(Constantes.CHAVE_VERSAO_PROGRESSO, 1);
+        if (versaoSalva >= Constantes.VERSAO_PROGRESSO) {
             return;
         }
-        Map<String, String> idsV1 = repositorio.getIdsV1();
-        if (idsV1.isEmpty()) {
+        Map<String, String> idsAntigos = repositorio.getIdsAntigos(versaoSalva);
+        if (idsAntigos.isEmpty()) {
             return; // o banco não carregou: tenta de novo na próxima abertura
         }
-        Map<String, Integer> melhorV1 = new HashMap<>();
-        for (String licao : Migracao.licoesV1(idsV1)) {
+        Map<String, Integer> melhorAntigo = new HashMap<>();
+        for (String licao : Migracao.licoesAntigas(idsAntigos)) {
             if (prefs.contains(Constantes.PREFIXO_MELHOR + licao)) {
-                melhorV1.put(licao, prefs.getInt(Constantes.PREFIXO_MELHOR + licao, -1));
+                melhorAntigo.put(licao, prefs.getInt(Constantes.PREFIXO_MELHOR + licao, -1));
             }
         }
         Map<String, Licao> licoes = new HashMap<>();
         Map<String, List<String>> questoesPorLicao = new HashMap<>();
+        List<List<String>> trilhas = new ArrayList<>();
         for (Area area : Area.values()) {
+            List<String> trilha = new ArrayList<>();
             for (Licao licao : repositorio.getLicoes(area)) {
                 List<String> ids = new ArrayList<>();
                 for (Questao q : licao.getQuestoes()) {
@@ -468,22 +473,25 @@ public final class ProgressoManager {
                 }
                 licoes.put(licao.getId(), licao);
                 questoesPorLicao.put(licao.getId(), ids);
+                trilha.add(licao.getId());
             }
+            trilhas.add(trilha);
         }
 
         // No mesmo editor vale a última operação de cada chave: os remove() vêm antes, então uma
         // lição nova com o mesmo id de uma antiga ("LIN-01") fica com o valor do put().
         SharedPreferences.Editor editor = prefs.edit();
-        for (String licao : melhorV1.keySet()) {
+        for (String licao : Migracao.licoesAntigas(idsAntigos)) {
             editor.remove(Constantes.PREFIXO_MELHOR + licao);
         }
-        for (String id : Migracao.licoesConcluidas(idsV1, melhorV1, questoesPorLicao)) {
+        Set<String> concluidas = Migracao.licoesConcluidas(idsAntigos, melhorAntigo, questoesPorLicao);
+        for (String id : Migracao.semBuracos(concluidas, trilhas)) {
             editor.putInt(Constantes.PREFIXO_MELHOR + id,
                     Gamificacao.acertosParaConcluir(licoes.get(id).getQuestoes().size()));
         }
         Set<String> caderno = getCaderno();
         if (!caderno.isEmpty()) {
-            editor.putStringSet(Constantes.CHAVE_CADERNO_ERROS, Migracao.converterCaderno(caderno, idsV1));
+            editor.putStringSet(Constantes.CHAVE_CADERNO_ERROS, Migracao.converterCaderno(caderno, idsAntigos));
         }
         editor.putInt(Constantes.CHAVE_VERSAO_PROGRESSO, Constantes.VERSAO_PROGRESSO);
         editor.apply();

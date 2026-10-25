@@ -35,7 +35,7 @@ public final class Constantes {
     public static final String CHAVE_AVATAR = "avatar";
     /** Versão do formato do progresso salvo: abaixo de VERSAO_PROGRESSO, roda a migração (RN37). */
     public static final String CHAVE_VERSAO_PROGRESSO = "versao_progresso";
-    public static final int VERSAO_PROGRESSO = 2;
+    public static final int VERSAO_PROGRESSO = 3;
     // Tempo real das questões (RN38): somas, para não guardar uma lista que cresce sem fim
     public static final String CHAVE_TEMPO_TOTAL_MS = "tempo_total_ms";
     public static final String CHAVE_TEMPO_QUESTOES = "tempo_questoes";
