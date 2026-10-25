@@ -19,13 +19,14 @@ Feito como projeto da disciplina de Programação do meu curso técnico, em Java
 - **8 conquistas** com medalhas: primeira lição, ofensiva de 3 e de 7 dias, 100 e 500 XP, lição perfeita e duas de Matemática (concluir uma lição e concluir todas). No Perfil, as bloqueadas ficam em cinza
 - **Celebrações em tela cheia**, com confete: lição perfeita, ofensiva aumentada, nível novo e conquista nova
 - Sons de acerto, erro e lição concluída, e vibração curta ao errar
-- Configurações: editar o nome, trocar a meta, ligar ou desligar som e vibração e resetar o progresso (com confirmação)
+- Configurações: editar o nome, trocar a meta, ligar ou desligar som, vibração e o lembrete (e escolher o horário dele) e resetar o progresso (com confirmação)
 - Trilhas por área com lições concluídas, disponíveis e bloqueadas
 - Quiz com feedback imediato e explicação de cada questão
 - Figuras e fórmulas nas questões de Matemática, com zoom ao tocar na figura
 - XP e níveis (+10 XP por acerto, +5 de bônus na lição perfeita, com 100% de acertos)
 - 5 vidas: cada erro tira uma, e uma volta a cada 30 minutos
 - Ofensiva diária (dias seguidos estudando) e meta diária
+- **Lembrete diário** por notificação (padrão 19h), só nos dias em que você ainda não estudou: a Lia avisa quando a ofensiva está em risco, numa frase diferente a cada dia. Funciona offline e continua depois de reiniciar o celular (WorkManager). No Android 13+, a permissão é pedida depois da primeira lição concluída, com explicação antes
 - Caderno de erros: as questões que você errou vão para a aba Revisão, e acertar lá devolve uma vida
 - Perfil com nível, XP, ofensiva, recorde, lições concluídas, taxa de acerto, tempo médio por questão e minutos estudados hoje (o tempo é medido no quiz, só com a tela aberta)
 - Depois de 10 questões, o tempo da trilha se ajusta ao seu ritmo
@@ -108,11 +109,12 @@ Sem o `keystore.properties` o build gera um APK sem assinatura. O release não i
 app/src/main/java/com/murilo/enemigo/
 ├── data/    # leitura do questoes.json, progresso e preferências salvos (SharedPreferences)
 ├── model/   # Area, Licao, Questao, ResultadoSessao, Conquista e Avatar
+├── notificacao/ # lembrete diário: agenda no WorkManager, o worker e a notificação
 ├── ui/      # Activities, Fragments, Adapters e componentes (ui/componente: relevo, mascote, avatar, confete)
-└── util/    # regras de gamificação (XP, vidas, ofensiva, conquistas, celebrações) e constantes
+└── util/    # regras de gamificação (XP, vidas, ofensiva, conquistas, celebrações, lembrete) e constantes
 ```
 
-As regras de gamificação ficam em `Gamificacao.java`, as das conquistas em `Conquistas.java`, a fila de celebrações em `Celebracoes.java`, as de tempo em `TempoEstudo.java` e a migração do progresso em `Migracao.java`, todas com testes em `app/src/test` (o `model/Avatar` também).
+As regras de gamificação ficam em `Gamificacao.java`, as das conquistas em `Conquistas.java`, a fila de celebrações em `Celebracoes.java`, as de tempo em `TempoEstudo.java`, as do lembrete (notificar ou não) em `Lembrete.java` e a migração do progresso em `Migracao.java`, todas com testes em `app/src/test` (o `model/Avatar` também).
 
 ## Personalizar a marca
 

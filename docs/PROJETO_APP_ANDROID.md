@@ -149,6 +149,7 @@ As funcionalidades foram divididas para caber em 4 aulas. As **principais** faze
 | C8 | Fogo aceso/apagado | O ícone da ofensiva fica colorido se o aluno já estudou hoje e cinza se ainda não estudou (lembrete visual). |
 | C9 | Estados vazios | Mensagens amigáveis quando não há erros no caderno, conquistas ou questões. |
 | C10 | Vibração ao errar | Vibração curta ao errar, que pode ser desligada nas Configurações (opcional). |
+| C11 | Lembrete diário | Notificação no horário escolhido (padrão 19h), só se o aluno ainda não estudou no dia, com a Lia e a ofensiva em risco ("Sua ofensiva de 5 dias está em risco!"), em 6 frases que se revezam. WorkManager (sobrevive a reinício, sem internet e sem alarme exato); até 3 h de atraso, depois disso o aviso do dia é pulado. No Android 13+, a permissão é pedida depois da primeira lição concluída, com explicação antes, e uma recusa é respeitada. |
 
 **Se faltar tempo**, corte nesta ordem: C10 → C7 → C6 → C8 → C3. O caderno de erros (C1/C2) é o complementar mais importante, porque é o que faz o aluno aprender com o erro.
 
@@ -156,7 +157,6 @@ As funcionalidades foram divididas para caber em 4 aulas. As **principais** faze
 
 - Questões com imagem em Linguagens, Humanas e Natureza (mapas, charges). Matemática já tem figuras e fórmulas (ver 9.3).
 - Banco de questões online (API ou Firebase), com novas questões sem precisar atualizar o app.
-- Notificação diária de lembrete ("Sua ofensiva está em risco! 🔥"), usando WorkManager.
 - Simulado cronometrado (ex.: 20 questões em 50 minutos).
 - Ligas e ranking semanal entre amigos (exige login e servidor).
 - Login e sincronização entre aparelhos.
@@ -335,9 +335,9 @@ O app tem **9 telas**: 6 Activities e 3 Fragments dentro da MainActivity.
 ### 4.9 Configurações (`ConfiguracoesActivity`)
 
 - **Objetivo:** permitir ajustes e o reset do progresso.
-- **Componentes:** MaterialToolbar com Voltar, TextInputLayout + TextInputEditText (nome), RadioGroup (meta), SwitchMaterial (vibração, opcional), MaterialButton "SALVAR", MaterialButton "RESETAR PROGRESSO" (vermelho) e TextView "Sobre".
+- **Componentes:** MaterialToolbar com Voltar, TextInputLayout + TextInputEditText (nome), RadioGroup (meta), SwitchMaterial (vibração, opcional), MaterialSwitch (lembrete diário) com a linha do horário (MaterialTimePicker de 24 h), MaterialButton "SALVAR", MaterialButton "RESETAR PROGRESSO" (vermelho) e TextView "Sobre".
 - **Informações exibidas:** nome e meta atuais já preenchidos, e o texto Sobre (versão, fonte das questões e aviso de que o app não tem vínculo com o INEP).
-- **Campos:** nome (mesma validação do onboarding), meta diária (20/50/100) e vibração (liga/desliga).
+- **Campos:** nome (mesma validação do onboarding), meta diária (20/50/100), vibração (liga/desliga) e lembrete diário (liga/desliga e horário, padrão 19h). Com o lembrete ligado e as notificações bloqueadas no Android, aparece um aviso que pede a permissão de novo ou abre as configurações de notificação do app.
 - **Botões:** SALVAR e RESETAR PROGRESSO.
 - **Ações:**
   - SALVAR: valida e grava. Toast "Configurações salvas" e volta ao Perfil.
@@ -992,6 +992,9 @@ Arquivo: `enemigo_prefs` (modo `Context.MODE_PRIVATE`). Todas as chaves ficam co
 | `tempo_estimado_s` | long | `0` |
 | `tempo_hoje_ms` | long | `0` |
 | `data_tempo_hoje` | String | `""` |
+| `lembrete_ativo` | boolean | `true` |
+| `lembrete_horario` | int (minutos desde a meia-noite) | `1140` (19h) |
+| `notificacao_pedida` | boolean | `false` (a Lia já pediu a permissão de notificações) |
 
 > ⚠️ **Pegadinha importante do `getStringSet`:** o `Set` devolvido pelo SharedPreferences **não pode ser modificado diretamente**. Se você der `add()` nele e salvar de novo, o Android pode não gravar a mudança. Sempre crie uma cópia: `new HashSet<>(prefs.getStringSet(chave, new HashSet<>()))`, altere a cópia e salve a cópia.
 
@@ -2060,7 +2063,6 @@ Faça os testes num emulador (ex.: Pixel com API 34 ou 35) **e**, se possível, 
 
 **Engajamento**
 
-- Notificação diária de lembrete no horário escolhido pelo aluno (WorkManager + NotificationCompat).
 - "Congelar ofensiva": item comprado com XP que protege a ofensiva por um dia.
 - Baús de recompensa a cada 5 lições.
 - Animações de comemoração (Lottie) e sons de acerto e erro (SoundPool).
