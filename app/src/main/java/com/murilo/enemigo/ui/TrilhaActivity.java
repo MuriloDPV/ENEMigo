@@ -36,11 +36,13 @@ public class TrilhaActivity extends AppCompatActivity {
     private List<Licao> licoes;
     private ProgressoManager progresso;
     private LicaoAdapter adapter;
+    private PedidoNotificacoes pedidoNotificacoes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trilha);
+        pedidoNotificacoes = new PedidoNotificacoes(this);
 
         area = Area.fromId(getIntent().getStringExtra(Constantes.EXTRA_AREA_ID));
         if (area == null) {
@@ -98,6 +100,8 @@ public class TrilhaActivity extends AppCompatActivity {
         progressTrilha.setProgressCompat(concluidas, true);
         // Os estados podem ter mudado depois de uma lição.
         adapter.notifyItemRangeChanged(0, adapter.getItemCount());
+        // Voltando da primeira lição concluída, a Lia pede para lembrar (Android 13+).
+        pedidoNotificacoes.talvezPedir();
     }
 
     @Override

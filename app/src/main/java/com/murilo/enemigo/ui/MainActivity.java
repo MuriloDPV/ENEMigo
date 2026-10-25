@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNav;
     private boolean abrirRevisaoPendente;
+    private PedidoNotificacoes pedidoNotificacoes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         AgendaLembrete.sincronizar(this);
 
         setContentView(R.layout.activity_main);
+        pedidoNotificacoes = new PedidoNotificacoes(this);
 
         bottomNav = findViewById(R.id.bottom_nav);
 
@@ -83,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
             abrirRevisaoPendente = false;
             bottomNav.setSelectedItemId(R.id.nav_revisao);
         }
+        // Se ele fechou o app logo depois da primeira lição, o pedido aparece aqui.
+        pedidoNotificacoes.talvezPedir();
     }
 
     /** Troca de aba por código (ex.: o avatar do Início abre o Perfil). */

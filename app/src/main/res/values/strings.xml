@@ -256,6 +256,11 @@
         <item>Ainda dá tempo! %1$s guardou uma questão boa.</item>
         <item>Bora? %1$s já deixou tudo pronto pra você.</item>
     </string-array>
+    <!-- Pedido da permissão de notificações (Android 13+), depois da primeira lição concluída -->
+    <string name="notificacao_pedido_titulo">Posso te lembrar?</string>
+    <string name="notificacao_pedido_mensagem">Nos dias em que você ainda não tiver estudado, %1$s te chama às %2$s para a ofensiva não se perder. No máximo uma notificação por dia, e dá para mudar o horário ou desligar nas Configurações.</string>
+    <string name="notificacao_pedido_sim">Pode lembrar</string>
+    <string name="notificacao_pedido_nao">Agora não</string>
 
     <!-- Conquistas (C3) -->
     <string name="perfil_conquistas">Conquistas (%1$d/%2$d)</string>

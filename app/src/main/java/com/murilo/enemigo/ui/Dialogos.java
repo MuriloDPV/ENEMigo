@@ -44,16 +44,35 @@ public final class Dialogos {
      * Diálogo de vidas com a Lia sem energia no topo: orelhas caídas e desbotada. Os botões
      * ficam por conta de quem chama.
      */
-    // O título de um diálogo não tem pai na hora de inflar: quem posiciona é o próprio diálogo.
-    @SuppressLint("InflateParams")
     public static MaterialAlertDialogBuilder semVidas(Activity activity, CharSequence titulo,
                                                       CharSequence mensagem) {
-        View topo = LayoutInflater.from(activity).inflate(R.layout.dialogo_titulo_mascote, null);
-        ((TextView) topo.findViewById(R.id.txt_titulo_dialogo)).setText(titulo);
+        View topo = topoComLia(activity, titulo);
         MascoteView mascote = topo.findViewById(R.id.mascote_dialogo);
         mascote.setDesbotada(true);
         // Treme quando o diálogo aparece (o post espera a view entrar na tela).
         mascote.post(mascote::tremer);
+        return comTopo(activity, topo, mensagem);
+    }
+
+    /** Diálogo com a Lia de bom humor no topo, dando um pulinho. Os botões ficam por conta de quem chama. */
+    public static MaterialAlertDialogBuilder comLia(Activity activity, MascoteView.Expressao expressao,
+                                                    CharSequence titulo, CharSequence mensagem) {
+        View topo = topoComLia(activity, titulo);
+        MascoteView mascote = topo.findViewById(R.id.mascote_dialogo);
+        mascote.setExpressao(expressao);
+        mascote.post(mascote::pular);
+        return comTopo(activity, topo, mensagem);
+    }
+
+    // O título de um diálogo não tem pai na hora de inflar: quem posiciona é o próprio diálogo.
+    @SuppressLint("InflateParams")
+    private static View topoComLia(Activity activity, CharSequence titulo) {
+        View topo = LayoutInflater.from(activity).inflate(R.layout.dialogo_titulo_mascote, null);
+        ((TextView) topo.findViewById(R.id.txt_titulo_dialogo)).setText(titulo);
+        return topo;
+    }
+
+    private static MaterialAlertDialogBuilder comTopo(Activity activity, View topo, CharSequence mensagem) {
         return new MaterialAlertDialogBuilder(activity, R.style.ThemeOverlay_ENEMigo_Dialogo_Icone)
                 .setCustomTitle(topo)
                 .setMessage(mensagem);
