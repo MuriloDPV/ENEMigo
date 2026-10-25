@@ -93,6 +93,15 @@ python tools/montar_questoes.py
 python tools/validar_questoes.py
 ```
 
+## Gerar o APK de release
+
+1. Crie uma keystore **fora** do repositório com o `keytool` (vem no JDK), por exemplo com o alias `enemigo`.
+2. Copie `keystore.properties.example` para `keystore.properties` na raiz e preencha caminho, alias e senhas. Esse arquivo e os `.jks`/`.keystore` são ignorados pelo git: nunca os commite.
+3. Rode `./gradlew assembleRelease`. O APK sai em `app/build/outputs/apk/release/app-release.apk`.
+4. Confira a assinatura com `apksigner verify --print-certs` (fica no `build-tools` do Android SDK).
+
+Sem o `keystore.properties` o build gera um APK sem assinatura. O release não instala por cima de um build debug (assinaturas diferentes): desinstale o debug antes.
+
 ## Estrutura
 
 ```text

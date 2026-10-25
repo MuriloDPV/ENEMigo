@@ -14,4 +14,5 @@ tools/enem_raw/
 # Chaves de assinatura e builds de release (nunca publicar)
 *.jks
 *.keystore
+keystore.properties
 /app/release/
