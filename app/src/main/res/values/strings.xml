@@ -229,6 +229,12 @@
     <string name="config_som_desc">Acerto, erro e lição concluída</string>
     <string name="config_vibracao">Vibrar ao errar</string>
     <string name="config_vibracao_desc">Uma vibração curta quando a resposta está errada</string>
+    <string name="config_secao_lembrete">Lembrete diário</string>
+    <string name="config_lembrete">Lembrete da ofensiva</string>
+    <string name="config_lembrete_desc">Uma notificação por dia, só se você ainda não estudou</string>
+    <string name="config_lembrete_horario">Horário</string>
+    <string name="config_lembrete_relogio">Horário do lembrete</string>
+    <string name="config_notificacoes_bloqueadas">As notificações do app estão bloqueadas no Android. Toque aqui para permitir.</string>
     <string name="config_salvas">Configurações salvas</string>
     <string name="config_secao_progresso">Progresso</string>
     <string name="config_reset_explicacao">Apaga XP, ofensiva, lições, conquistas e o seu avatar. O app volta para o primeiro acesso.</string>

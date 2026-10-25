@@ -136,6 +136,86 @@
                     android:textSize="13sp" />
             </LinearLayout>
 
+            <TextView
+                style="@style/Texto.Rotulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/config_secao_lembrete" />
+
+            <!-- Lembrete diário: liga/desliga e o horário, separados por uma linha -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_contorno"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="6dp">
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switch_lembrete"
+                    style="@style/Texto.Destaque"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/config_lembrete" />
+
+                <TextView
+                    style="@style/Texto.Secundario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="64dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/config_lembrete_desc"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/largura_borda"
+                    android:background="@color/superficie_borda" />
+
+                <!-- Tocar na linha abre o relógio -->
+                <LinearLayout
+                    android:id="@+id/linha_horario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:minHeight="48dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Texto.Destaque"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/config_lembrete_horario" />
+
+                    <TextView
+                        android:id="@+id/txt_horario"
+                        style="@style/Texto.Destaque"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/marca_primaria_texto" />
+                </LinearLayout>
+
+                <!-- Só aparece com o lembrete ligado e as notificações bloqueadas no Android -->
+                <TextView
+                    android:id="@+id/txt_notificacoes_bloqueadas"
+                    style="@style/Texto.Secundario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:minHeight="48dp"
+                    android:text="@string/config_notificacoes_bloqueadas"
+                    android:textColor="@color/marca_erro_texto"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
             <com.murilo.enemigo.ui.componente.BotaoRelevo
                 android:id="@+id/btn_salvar"
                 style="@style/Widget.ENEMigo.Botao.Primario"
