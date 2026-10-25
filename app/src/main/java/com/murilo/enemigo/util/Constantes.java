@@ -42,6 +42,10 @@ public final class Constantes {
     public static final String CHAVE_TEMPO_ESTIMADO_S = "tempo_estimado_s";
     public static final String CHAVE_TEMPO_HOJE_MS = "tempo_hoje_ms";
     public static final String CHAVE_DATA_TEMPO_HOJE = "data_tempo_hoje";
+    // Lembrete diário da ofensiva
+    public static final String CHAVE_LEMBRETE_ATIVO = "lembrete_ativo";
+    public static final String CHAVE_LEMBRETE_HORARIO = "lembrete_horario";
+    public static final String CHAVE_NOTIFICACAO_PEDIDA = "notificacao_pedida";
 
     // Extras das Intents
     public static final String EXTRA_AREA_ID = "EXTRA_AREA_ID";
@@ -82,6 +86,12 @@ public final class Constantes {
     public static final int QUESTOES_PARA_RITMO = 10;
     public static final double FATOR_RITMO_MIN = 0.5;
     public static final double FATOR_RITMO_MAX = 2.0;
+
+    // Lembrete diário
+    /** Horário padrão do lembrete, em minutos desde a meia-noite (19h). */
+    public static final int LEMBRETE_HORARIO_PADRAO = 19 * 60;
+    /** Atrasou mais que isso (celular desligado, economia de bateria): o lembrete do dia é pulado. */
+    public static final int LEMBRETE_TOLERANCIA_HORAS = 3;
 
     // Metas diárias aceitas (RN02)
     public static final int META_CASUAL = 20;
